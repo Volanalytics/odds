@@ -5,6 +5,16 @@ name: poll-odds
 # timing, point an external scheduler (cron-job.org, free) at the
 # workflow_dispatch API every 5 minutes.
 on:
+  push:
+    branches: [main]
+    # Only code changes should rebuild. The workflow commits to data/ and site/
+    # every run, and while pushes made with GITHUB_TOKEN don't re-trigger
+    # workflows, filtering here makes that guarantee explicit rather than
+    # depending on it.
+    paths-ignore:
+      - "data/**"
+      - "site/**"
+      - "README.md"
   schedule:
     - cron: "*/5 * * * *"
   workflow_dispatch:
@@ -54,6 +64,13 @@ jobs:
           ARGS=""
           if [ "${{ github.event.inputs.force }}" = "true" ]; then ARGS="--force"; fi
           python odds_poller.py --mode "$MODE" $ARGS
+
+      # Free: MLB Stats API needs no key and doesn't touch the odds quota.
+      # Never fail the run over it -- a missing mlb.json degrades the board to
+      # odds-only rather than losing the prices we already paid for.
+      - name: Pitchers and live scores
+        continue-on-error: true
+        run: python mlb_enrich.py
 
       - name: Build site
         env:
