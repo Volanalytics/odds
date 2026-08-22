@@ -176,6 +176,7 @@ def build(days_shown=2, history_days=4):
         start = parse_iso(ev["commence_time"]).astimezone(LOCAL_TZ)
         games.append({
             "event_id":  eid,
+            "start_iso": ev["commence_time"],
             "slate":     start.strftime("%Y-%m-%d"),
             "slate_lbl": start.strftime("%A, %B %d").replace(" 0", " "),
             "date":      start.strftime("%m/%d"),
@@ -187,7 +188,9 @@ def build(days_shown=2, history_days=4):
             "markets":   markets,
         })
 
-    games.sort(key=lambda g: (g["slate"], g["date"], g["time"]))
+    # Sort on the ISO UTC timestamp, never on the formatted display time:
+    # "10:11 pm" sorts before "4:11 pm" as a string.
+    games.sort(key=lambda g: g["start_iso"])
     return {
         "generated": datetime.now(LOCAL_TZ).strftime("%a %b %d, %Y %I:%M:%S %p"),
         "tz":        str(LOCAL_TZ),
