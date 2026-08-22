@@ -116,14 +116,22 @@ def load_mlb():
         return {}
 
 
-def build(days_shown=2, history_days=4):
+def build(days_shown=2, history_days=4, keep_hours=12):
     with open(os.path.join(DATA_DIR, "events.json"), encoding="utf-8") as f:
         index = json.load(f)
     mlb = load_mlb()
 
     today   = datetime.now(LOCAL_TZ).date()
-    horizon = (today + timedelta(days=days_shown - 1)).isoformat()
-    cutoff  = today.isoformat()
+    horizon = today + timedelta(days=days_shown - 1)
+
+    # Games drop off keep_hours after first pitch, not at a date boundary.
+    #
+    # The old filter compared events.json's game_date, which the poller stores
+    # as the UTC date. A 10:11pm Central start is 03:11Z the NEXT day, so it
+    # files under tomorrow and passed a ">= today" check forever. Late games
+    # never aged out while early ones did -- inconsistent and confusing.
+    # Elapsed time since start sidesteps the whole UTC/local mismatch.
+    keep_from = datetime.now(timezone.utc) - timedelta(hours=keep_hours)
 
     # Read a few days back: a game tonight may have opened days ago, and the
     # opener column should reach that far.
@@ -137,7 +145,10 @@ def build(days_shown=2, history_days=4):
     now, games = datetime.now(timezone.utc), []
 
     for eid, ev in index.items():
-        if not (cutoff <= ev["game_date"] <= horizon):
+        start_utc = parse_iso(ev["commence_time"])
+        if start_utc < keep_from:                    # long finished
+            continue
+        if start_utc.astimezone(LOCAL_TZ).date() > horizon:   # too far out
             continue
         rows = by_event.get(eid, [])
         if not rows:
@@ -184,7 +195,7 @@ def build(days_shown=2, history_days=4):
             v.sort(key=lambda s: s["label"])
 
         m = mlb.get(eid, {})
-        start = parse_iso(ev["commence_time"]).astimezone(LOCAL_TZ)
+        start = start_utc.astimezone(LOCAL_TZ)
         games.append({
             "game_pk":  m.get("game_pk"),
             "status":   m.get("status"),
@@ -217,6 +228,7 @@ def build(days_shown=2, history_days=4):
     # "10:11 pm" sorts before "4:11 pm" as a string.
     games.sort(key=lambda g: g["start_iso"])
     return {
+        "keep_h":    keep_hours,
         "generated": datetime.now(LOCAL_TZ).strftime("%a %b %d, %Y %I:%M:%S %p"),
         "tz":        str(LOCAL_TZ),
         "book":      "BetOnline.ag",
@@ -230,9 +242,12 @@ def main():
     ap.add_argument("--outdir", default="site")
     ap.add_argument("--days", type=int, default=2,
                     help="slates to show: 1 = today, 2 = today + tomorrow")
+    ap.add_argument("--keep-hours", type=int,
+                    default=int(os.environ.get("ODDS_KEEP_HOURS", 12)),
+                    help="hours after first pitch to keep a game on the board")
     args = ap.parse_args()
 
-    payload = build(days_shown=args.days)
+    payload = build(days_shown=args.days, keep_hours=args.keep_hours)
     os.makedirs(args.outdir, exist_ok=True)
     with open(os.path.join(args.outdir, "data.json"), "w", encoding="utf-8") as f:
         json.dump(payload, f, separators=(",", ":"))
@@ -244,9 +259,12 @@ def main():
 
     moves  = sum(g["moves"] for g in payload["games"])
     slates = sorted({g["slate"] for g in payload["games"]})
+    done   = sum(1 for g in payload["games"] if g.get("final"))
     print(f"  {len(payload['games'])} games across {len(slates)} slate(s) "
           f"({', '.join(slates) or 'none'})")
-    print(f"  {moves} sides with recorded movement -> {args.outdir}/data.json")
+    print(f"  {moves} sides with movement, {done} final "
+          f"(dropping {args.keep_hours}h after first pitch)"
+          f" -> {args.outdir}/data.json")
 
 
 if __name__ == "__main__":
