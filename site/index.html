@@ -32,6 +32,7 @@ header{position:sticky;top:0;z-index:20;background:var(--field);
 .run{color:var(--m10);font-weight:700}
 .st{font-size:10px;color:var(--dim)}
 .st.live{color:var(--m5);font-weight:500}
+.st.warm{color:var(--m10)}
 .side{color:var(--dim);font-size:11px;display:inline-block;min-width:36px;text-align:left}
 .mv{border-radius:2px;padding:0 3px;color:#0A1518;font-weight:500}
 .mv2{background:var(--m2)} .mv5{background:var(--m5)} .mv10{background:var(--m10)}
@@ -92,9 +93,25 @@ tr.det td{background:#061014;padding:0;text-align:left}
 @media (max-width:900px){
   table{display:none}
   #cards{display:block}
-  .legend{font-size:9px}
-  .legend div{padding:3px 1px}
-  .bar h1{font-size:13px}
+  .legend{font-size:10px}
+  .legend div{padding:4px 1px}
+  .bar h1{font-size:14px}
+  .bar .meta{font-size:11px}
+
+  /* Phone-only type scale. Desktop keeps the denser sizes above, since the
+     table has to fit eleven columns and this layout only has two. */
+  body{font-size:14px}
+  .card .team{font-size:15px}
+  .pit{font-size:11px}
+  .st{font-size:11px}
+  .cmeta{font-size:12px}
+  .slab{font-size:13px}
+  .mklbl{font-size:11px}
+  .mkln{font-size:13px}
+  .side{font-size:12px;min-width:40px}
+  .chist .dhead{font-size:12px}
+  .chist .hrow{font-size:12px;padding:2px 0}
+  .mk{padding:7px 8px;min-height:58px}
 }
 </style>
 </head>
@@ -135,8 +152,9 @@ function mvClass(min, changed){
 const pit = (n, h) => `<div class="pit">${n ? n + (h ? "-" + h : "") : "&mdash;"}</div>`;
 
 function statusLine(g){
-  if(g.live)  return `<div class="st live">${g.half || ""} ${g.inning || ""} &middot; ${g.outs ?? 0} out</div>`;
-  if(g.final) return '<div class="st">Final</div>';
+  if(g.live)   return `<div class="st live">${g.half || ""} ${g.inning || ""} &middot; ${g.outs ?? 0} out</div>`;
+  if(g.final)  return '<div class="st">Final</div>';
+  if(g.warmup) return '<div class="st warm">Warmup</div>';
   return "";
 }
 
