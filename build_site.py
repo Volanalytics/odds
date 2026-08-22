@@ -188,7 +188,8 @@ def build(days_shown=2, history_days=4):
         games.append({
             "game_pk":  m.get("game_pk"),
             "status":   m.get("status"),
-            "live":     m.get("abstract") == "Live",
+            "live":     bool(m.get("in_play")),
+            "warmup":   bool(m.get("warmup")),
             "final":    m.get("abstract") == "Final",
             "away_p":   m.get("away_p"), "away_ph": m.get("away_p_hand"),
             "home_p":   m.get("home_p"), "home_ph": m.get("home_p_hand"),
@@ -201,7 +202,10 @@ def build(days_shown=2, history_days=4):
             "slate_lbl": start.strftime("%A, %B %d").replace(" 0", " "),
             "date":      start.strftime("%m/%d"),
             "time":      start.strftime("%I:%M %p").lstrip("0").lower(),
-            "started":   (m.get("abstract") in ("Live", "Final")
+            # Warmup is deliberately NOT "started": MLB flips abstractGameState
+            # to Live during warmups, which would red-flag a game whose lines
+            # are still very much open.
+            "started":   ((m.get("in_play") or m.get("abstract") == "Final")
                           if m else start < datetime.now(LOCAL_TZ)),
             "away":      ev["away"], "home": ev["home"],
             "away_rot":  ev.get("away_rot"), "home_rot": ev.get("home_rot"),

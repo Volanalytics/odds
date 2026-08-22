@@ -29,6 +29,7 @@ import requests
 
 DATA_DIR = os.environ.get("ODDS_DATA_DIR", "data")
 API      = "https://statsapi.mlb.com/api/v1/schedule"
+PEOPLE   = "https://statsapi.mlb.com/api/v1/people"
 
 TEAM_CODE = {
     "Arizona Diamondbacks": "AZ", "Atlanta Braves": "ATL",
@@ -59,6 +60,34 @@ def code(name):
     return TEAM_CODE.get(name, name)
 
 
+def fetch_hands(ids):
+    """
+    Handedness in one batched call.
+
+    The schedule endpoint's probablePitcher hydration returns id, fullName and
+    link but NOT pitchHand, which is why the -L/-R suffix was always blank.
+    /people accepts comma-separated personIds, so every starter on the slate
+    costs a single extra request. Still free, still no key.
+    """
+    ids = [str(i) for i in ids if i]
+    if not ids:
+        return {}
+    out = {}
+    for i in range(0, len(ids), 60):          # keep the URL sane
+        chunk = ids[i:i + 60]
+        try:
+            r = requests.get(PEOPLE, timeout=30,
+                             params={"personIds": ",".join(chunk)})
+            r.raise_for_status()
+            for p in r.json().get("people", []):
+                code_ = (p.get("pitchHand") or {}).get("code")
+                if code_:
+                    out[p["id"]] = code_
+        except requests.RequestException as e:
+            print(f"  handedness lookup failed ({e}); names will render bare")
+    return out
+
+
 def fetch(start, end):
     r = requests.get(API, timeout=30, params={
         "sportId": 1, "startDate": start, "endDate": end,
@@ -71,21 +100,54 @@ def fetch(start, end):
     return out
 
 
-def summarize(g):
+def fetch_hands(games):
+    """
+    probablePitcher hydration returns a stub (id, fullName, link) with no
+    pitchHand, so handedness needs a second lookup. One batched /people call
+    covers the whole slate -- still free, still one extra request.
+    """
+    ids = set()
+    for g in games:
+        for side in ("away", "home"):
+            p = ((g.get("teams", {}).get(side) or {}).get("probablePitcher") or {})
+            if p.get("id"):
+                ids.add(p["id"])
+    if not ids:
+        return {}
+    try:
+        r = requests.get("https://statsapi.mlb.com/api/v1/people", timeout=30,
+                         params={"personIds": ",".join(str(i) for i in sorted(ids))})
+        r.raise_for_status()
+        return {p["id"]: (p.get("pitchHand") or {}).get("code")
+                for p in r.json().get("people", [])}
+    except requests.RequestException as e:
+        print(f"  handedness lookup failed ({e}); names only")
+        return {}
+
+
+def summarize(g, hands):
     ls  = g.get("linescore") or {}
     tms = g.get("teams", {})
 
     def pitcher(side):
         p = (tms.get(side) or {}).get("probablePitcher") or {}
-        return p.get("fullName"), p.get("pitchHand", {}).get("code")
+        return p.get("fullName"), hands.get(p.get("id"))
 
     ap, ah = pitcher("away")
     hp, hh = pitcher("home")
 
+    detailed = (g.get("status") or {}).get("detailedState")
+    abstract = (g.get("status") or {}).get("abstractGameState")
+
     return {
         "game_pk":     g.get("gamePk"),
-        "status":      (g.get("status") or {}).get("detailedState"),
-        "abstract":    (g.get("status") or {}).get("abstractGameState"),
+        "status":      detailed,
+        "abstract":    abstract,
+        # MLB flips abstractGameState to Live during warmups, well before first
+        # pitch. Split it out so the board can label warmup without painting
+        # the row as an in-progress game.
+        "warmup":      detailed in ("Warmup", "Pre-Game"),
+        "in_play":     abstract == "Live" and detailed not in ("Warmup", "Pre-Game"),
         "away_p": ap, "away_p_hand": ah,
         "home_p": hp, "home_p_hand": hh,
         "away_r": (ls.get("teams", {}).get("away") or {}).get("runs"),
@@ -110,7 +172,9 @@ def main():
     end   = (datetime.strptime(dates[-1], "%Y-%m-%d") + timedelta(days=1)).strftime("%Y-%m-%d")
 
     games = fetch(start, end)
-    print(f"  {len(games)} MLB games {start}..{end} (cost 0)")
+    hands = fetch_hands(games)
+    print(f"  {len(games)} MLB games {start}..{end}, "
+          f"{len(hands)} pitcher hands (cost 0)")
 
     # Bucket by matchup; doubleheaders leave two entries under one key, so the
     # start time breaks the tie rather than whichever happened to come first.
@@ -130,7 +194,7 @@ def main():
         target = parse_iso(ev["commence_time"])
         best = min(cands, key=lambda g: abs(
             (parse_iso(g["gameDate"].replace(".000Z", "Z")) - target).total_seconds()))
-        out[eid] = summarize(best)
+        out[eid] = summarize(best, hands)
 
     os.makedirs(DATA_DIR, exist_ok=True)
     tmp = os.path.join(DATA_DIR, "mlb.json.tmp")
@@ -138,7 +202,7 @@ def main():
         json.dump(out, f, indent=1, sort_keys=True)
     os.replace(tmp, os.path.join(DATA_DIR, "mlb.json"))
 
-    live = sum(1 for v in out.values() if v["abstract"] == "Live")
+    live = sum(1 for v in out.values() if v["in_play"])
     pitch = sum(1 for v in out.values() if v["away_p"] and v["home_p"])
     print(f"  matched {len(out)}/{len(index)} events, {pitch} with both starters, {live} live")
     if missed:
