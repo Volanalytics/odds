@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>BetOnline MLB odds</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --field:#08161B; --panel:#0D2028; --panel2:#112932; --line:#1D3A44;
+  --ink:#DCE6E4; --dim:#7B968F; --chalk:#F2F7F5;
+  --m2:#E24B4A; --m5:#EFC24B; --m10:#5DCAA5; --live:#5A1414;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--field);color:var(--ink);
+     font-family:"Roboto Mono",ui-monospace,monospace;font-size:13px}
+header{position:sticky;top:0;z-index:20;background:var(--field);
+       border-bottom:1px solid var(--line)}
+.legend{display:flex;font-size:11px;font-weight:500}
+.legend div{flex:1;text-align:center;padding:4px 2px;color:#0A1518}
+.bar{display:flex;justify-content:space-between;align-items:baseline;padding:8px 14px}
+.bar h1{margin:0;font-size:15px;font-weight:700;color:var(--chalk);letter-spacing:.5px}
+.bar .meta{font-size:11px;color:var(--dim)}
+table{width:100%;border-collapse:collapse}
+thead th{position:sticky;top:52px;background:var(--panel2);color:var(--dim);
+         font-size:11px;font-weight:500;text-align:center;padding:5px 6px;
+         border-bottom:1px solid var(--line);white-space:nowrap}
+thead th.l{text-align:left}
+td{padding:3px 6px;border-bottom:1px solid rgba(29,58,68,.5);
+   text-align:center;white-space:nowrap;vertical-align:top}
+td.l{text-align:left}
+tr.g0{background:var(--panel)} tr.g1{background:var(--panel2)}
+tr.started td{background:var(--live)}
+.team{color:var(--chalk);font-weight:500}
+.time{color:var(--dim);font-size:11px}
+.open{color:var(--dim)}
+.side{color:var(--dim);font-size:11px;display:inline-block;min-width:36px;text-align:left}
+.cur{color:var(--ink)}
+.mv{border-radius:2px;padding:0 3px;color:#0A1518;font-weight:500}
+.mv2{background:var(--m2)} .mv5{background:var(--m5)} .mv10{background:var(--m10)}
+td.hot{cursor:pointer}
+td.hot:hover{outline:1px solid var(--m10);outline-offset:-1px}
+td.sel{outline:1px solid var(--chalk);outline-offset:-1px}
+.dot{color:var(--m10);font-size:10px;margin-left:3px}
+tr.det td{background:#061014;padding:0;text-align:left}
+.dwrap{padding:10px 16px}
+.dhead{color:var(--chalk);font-weight:500;margin-bottom:6px;font-size:12px}
+.dwrap table{width:auto;min-width:360px}
+.dwrap td{border:0;padding:2px 18px 2px 0;font-size:11px;background:none}
+.dts{color:var(--dim)}
+.dnow{color:var(--m10)}
+tr.slate td{background:var(--field);color:var(--chalk);font-weight:700;
+            font-size:12px;letter-spacing:1px;text-align:left;padding:8px 14px 5px;
+            border-bottom:1px solid var(--line)}
+.empty{padding:40px;text-align:center;color:var(--dim)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="legend">
+    <div style="background:#E24B4A">Line move in last 2 minutes</div>
+    <div style="background:#EFC24B">Line move in last 2-5 minutes</div>
+    <div style="background:#5DCAA5">Line move in last 5-10 minutes</div>
+    <div style="background:#B9C6C2">No line move in last 10 minutes</div>
+    <div style="background:#5A1414;color:#F2F7F5">Game has started</div>
+  </div>
+  <div class="bar">
+    <h1>BETONLINE.AG &mdash; MLB</h1>
+    <div class="meta" id="meta">loading&hellip;</div>
+  </div>
+</header>
+
+<table>
+  <thead><tr id="head"></tr></thead>
+  <tbody id="body"></tbody>
+</table>
+
+<script>
+const REFRESH_MS = 30000;
+let DATA = null, OPEN = null;
+
+function mvClass(min, changed){
+  if(!changed) return "";
+  if(min < 2)  return "mv mv2";
+  if(min < 5)  return "mv mv5";
+  if(min < 10) return "mv mv10";
+  return "";
+}
+
+function cell(sides, which, gi, key){
+  if(!sides || !sides.length) return "<td>&mdash;</td>";
+  const any = sides.some(s => s.changed);
+  const cls = (which === "cur" && any ? "hot" : "")
+            + (OPEN && OPEN[0] === gi && OPEN[1] === key ? " sel" : "");
+  const click = which === "cur" && any ? ` onclick="det(${gi},'${key}')"` : "";
+  const body = sides.map(s => {
+    const v = s[which] || "&mdash;";
+    const k = which === "cur" ? mvClass(s.moved_min, s.changed) : "";
+    const d = which === "cur" && s.changed ? '<span class="dot">&#9679;</span>' : "";
+    return `<div><span class="side">${s.label}</span>`
+         + `<span class="${which === "cur" ? "cur " + k : "open"}">${v}</span>${d}</div>`;
+  }).join("");
+  return `<td class="${cls}"${click}>${body}</td>`;
+}
+
+function detailRow(gi, key){
+  const g = DATA.games[gi];
+  const label = DATA.columns.find(c => c.key === key).label;
+  const blocks = (g.markets[key] || []).map(s => {
+    const rows = (s.hist || [{ts: s.opened_at, line: s.cur}])
+      .map((h, i) => `<tr><td class="dts">${h.ts}</td>`
+                   + `<td class="${i ? "" : "dnow"}">${h.line}</td></tr>`).join("");
+    return `<div style="display:inline-block;vertical-align:top;margin-right:36px">
+              <div class="dhead">${g.away} @ ${g.home} &mdash; ${label} &mdash; ${s.label}</div>
+              <table>${rows}</table></div>`;
+  }).join("");
+  return `<tr class="det"><td colspan="${DATA.columns.length + 3}">
+            <div class="dwrap">${blocks}</div></td></tr>`;
+}
+
+function render(){
+  const d = DATA;
+  const moved = d.games.reduce((a, g) => a + g.moves, 0);
+  document.getElementById("meta").textContent =
+    `${d.games.length} games \u00b7 ${moved} sides moved \u00b7 updated ${d.generated}`;
+
+  document.getElementById("head").innerHTML =
+      '<th class="l">Time</th><th class="l">Teams</th><th>Opener</th>'
+    + d.columns.map(c => `<th>${c.label}</th>`).join("");
+
+  document.getElementById("body").innerHTML = d.games.map((g, i) => {
+    const band = i % 2 ? "g1" : "g0";
+    const rot  = g.away_rot ? `<div class="time">${g.away_rot}<br>${g.home_rot}</div>` : "";
+    const prev = i ? d.games[i - 1] : null;
+    const sep  = (!prev || g.slate !== prev.slate) && g.slate_lbl
+      ? `<tr class="slate"><td colspan="${d.columns.length + 3}">${g.slate_lbl}</td></tr>`
+      : "";
+    const row  = `<tr class="${band}${g.started ? " started" : ""}">
+        <td class="l time">${g.date}<br>${g.time}${rot}</td>
+        <td class="l team">${g.away}<br>${g.home}</td>
+        ${cell(g.markets.h2h, "open", i, "h2h")}
+        ${d.columns.map(c => cell(g.markets[c.key], "cur", i, c.key)).join("")}
+      </tr>`;
+    return sep + row + (OPEN && OPEN[0] === i ? detailRow(i, OPEN[1]) : "");
+  }).join("") || '<tr><td class="empty" colspan="12">No games. Run the poller.</td></tr>';
+}
+
+function det(gi, key){
+  OPEN = (OPEN && OPEN[0] === gi && OPEN[1] === key) ? null : [gi, key];
+  render();
+}
+
+async function load(){
+  let d;
+  try{
+    const r = await fetch("data.json?t=" + Date.now());
+    if(!r.ok) throw new Error("HTTP " + r.status);
+    d = await r.json();
+  }catch(e){
+    document.getElementById("meta").textContent =
+      "data.json not loaded \u2014 " + e.message;
+    return;
+  }
+  // Render failures are a separate problem from fetch failures. Reporting them
+  // as "unreadable" sends you hunting for a file that loaded fine.
+  try{
+    DATA = d;
+    render();
+  }catch(e){
+    document.getElementById("meta").textContent = "render error \u2014 " + e.message;
+    console.error("render failed:", e);
+    console.log("first game:", d.games && d.games[0]);
+  }
+}
+load();
+setInterval(load, REFRESH_MS);
+</script>
+</body>
+</html>
