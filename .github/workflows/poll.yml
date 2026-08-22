@@ -1,0 +1,90 @@
+name: poll-odds
+
+# GitHub's scheduler is best-effort: 5-minute minimum, and delays of 15-30
+# minutes are routine at peak. The cron below is a safety net. For dependable
+# timing, point an external scheduler (cron-job.org, free) at the
+# workflow_dispatch API every 5 minutes.
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "skeleton | main | deep"
+        required: false
+        default: "main"
+      force:
+        description: "ignore cadence table"
+        required: false
+        default: "false"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# Runs mutate committed data, so overlapping runs would race on the push.
+# Queue them instead; never cancel, or a poll's records are lost.
+concurrency:
+  group: poll-odds
+  cancel-in-progress: false
+
+jobs:
+  poll:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install requests tzdata
+
+      - name: Refresh event index
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: python odds_poller.py --mode skeleton
+
+      - name: Poll odds
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: |
+          MODE="${{ github.event.inputs.mode || 'main' }}"
+          ARGS=""
+          if [ "${{ github.event.inputs.force }}" = "true" ]; then ARGS="--force"; fi
+          python odds_poller.py --mode "$MODE" $ARGS
+
+      - name: Build site
+        env:
+          ODDS_TZ: America/New_York
+        run: python build_site.py --outdir site
+
+      - name: Commit
+        run: |
+          git config user.name  "odds-bot"
+          git config user.email "odds-bot@users.noreply.github.com"
+          git add data site
+          # Nothing changed on a cadence-skipped run; an empty commit would
+          # add noise and burn a Pages build for no reason.
+          if git diff --staged --quiet; then
+            echo "no changes"
+          else
+            git commit -m "odds $(date -u +'%Y-%m-%d %H:%M')"
+            git pull --rebase --autostash origin ${{ github.ref_name }}
+            git push
+          fi
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: poll
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
