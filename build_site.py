@@ -71,15 +71,27 @@ def fmt_price(p):
     return "" if p is None else (f"+{p}" if p > 0 else str(p))
 
 
-def fmt_point(v):
-    """Half lines print as 8.5, whole numbers as 8. Moneylines have no point."""
+SPREAD_MARKETS = {"spreads", "spreads_1st_5_innings"}
+
+
+def fmt_point(v, market=None):
+    """
+    Half lines print as 8.5, whole numbers as 8. Moneylines have no point.
+
+    Run lines get an explicit + on the underdog so both rows carry a sign and
+    the column aligns: +1.5 above -1.5 rather than 1.5 above -1.5. Totals are
+    left unsigned -- "Over +8" would be nonsense.
+    """
     if v is None:
         return ""
-    return str(int(v)) if float(v).is_integer() else f"{v:g}"
+    txt = str(int(v)) if float(v).is_integer() else f"{v:g}"
+    if market in SPREAD_MARKETS and v > 0:
+        txt = "+" + txt
+    return txt
 
 
 def fmt_line(r):
-    return f"{fmt_point(r['point'])} {fmt_price(r['price'])}".strip()
+    return f"{fmt_point(r['point'], r.get('market'))} {fmt_price(r['price'])}".strip()
 
 
 def side_order(label, away, home):
