@@ -107,9 +107,19 @@ def load_records(days):
     return out
 
 
+def load_mlb():
+    """Optional: absent on a first run, so the board degrades to odds only."""
+    try:
+        with open(os.path.join(DATA_DIR, "mlb.json"), encoding="utf-8") as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {}
+
+
 def build(days_shown=2, history_days=4):
     with open(os.path.join(DATA_DIR, "events.json"), encoding="utf-8") as f:
         index = json.load(f)
+    mlb = load_mlb()
 
     today   = datetime.now(LOCAL_TZ).date()
     horizon = (today + timedelta(days=days_shown - 1)).isoformat()
@@ -173,15 +183,26 @@ def build(days_shown=2, history_days=4):
         for v in markets.values():
             v.sort(key=lambda s: s["label"])
 
+        m = mlb.get(eid, {})
         start = parse_iso(ev["commence_time"]).astimezone(LOCAL_TZ)
         games.append({
+            "game_pk":  m.get("game_pk"),
+            "status":   m.get("status"),
+            "live":     m.get("abstract") == "Live",
+            "final":    m.get("abstract") == "Final",
+            "away_p":   m.get("away_p"), "away_ph": m.get("away_p_hand"),
+            "home_p":   m.get("home_p"), "home_ph": m.get("home_p_hand"),
+            "away_r":   m.get("away_r"), "home_r": m.get("home_r"),
+            "inning":   m.get("inning"), "half": m.get("half"),
+            "outs":     m.get("outs"),
             "event_id":  eid,
             "start_iso": ev["commence_time"],
             "slate":     start.strftime("%Y-%m-%d"),
             "slate_lbl": start.strftime("%A, %B %d").replace(" 0", " "),
             "date":      start.strftime("%m/%d"),
             "time":      start.strftime("%I:%M %p").lstrip("0").lower(),
-            "started":   start < datetime.now(LOCAL_TZ),
+            "started":   (m.get("abstract") in ("Live", "Final")
+                          if m else start < datetime.now(LOCAL_TZ)),
             "away":      ev["away"], "home": ev["home"],
             "away_rot":  ev.get("away_rot"), "home_rot": ev.get("home_rot"),
             "moves":     moves,

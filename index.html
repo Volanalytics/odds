@@ -31,6 +31,10 @@ td.l{text-align:left}
 tr.g0{background:var(--panel)} tr.g1{background:var(--panel2)}
 tr.started td{background:var(--live)}
 .team{color:var(--chalk);font-weight:500}
+.pit{color:var(--dim);font-size:10px;line-height:1.35;margin-bottom:1px}
+.run{color:var(--m10);font-weight:700}
+.st{font-size:10px;color:var(--dim);margin-top:2px}
+.st.live{color:var(--m5);font-weight:500}
 .time{color:var(--dim);font-size:11px}
 .open{color:var(--dim)}
 .side{color:var(--dim);font-size:11px;display:inline-block;min-width:36px;text-align:left}
@@ -131,13 +135,23 @@ function render(){
   document.getElementById("body").innerHTML = d.games.map((g, i) => {
     const band = i % 2 ? "g1" : "g0";
     const rot  = g.away_rot ? `<div class="time">${g.away_rot}<br>${g.home_rot}</div>` : "";
+    const p    = (n, h) => n ? `<div class="pit">${n}${h ? "-" + h : ""}</div>`
+                             : '<div class="pit">&mdash;</div>';
+    const sc   = (g.away_r === null || g.away_r === undefined)
+      ? `<td class="l"><span class="team">${g.away}</span>${p(g.away_p, g.away_ph)}
+         <span class="team">${g.home}</span>${p(g.home_p, g.home_ph)}</td>`
+      : `<td class="l"><span class="team">${g.away}</span> <span class="run">${g.away_r}</span>${p(g.away_p, g.away_ph)}
+         <span class="team">${g.home}</span> <span class="run">${g.home_r}</span>${p(g.home_p, g.home_ph)}</td>`;
+    const st   = g.live
+      ? `<div class="st live">${g.half || ""} ${g.inning || ""} \u00b7 ${g.outs ?? 0} out</div>`
+      : (g.final ? '<div class="st">Final</div>' : "");
     const prev = i ? d.games[i - 1] : null;
     const sep  = (!prev || g.slate !== prev.slate) && g.slate_lbl
       ? `<tr class="slate"><td colspan="${d.columns.length + 3}">${g.slate_lbl}</td></tr>`
       : "";
     const row  = `<tr class="${band}${g.started ? " started" : ""}">
-        <td class="l time">${g.date}<br>${g.time}${rot}</td>
-        <td class="l team">${g.away}<br>${g.home}</td>
+        <td class="l time">${g.date}<br>${g.time}${rot}${st}</td>
+        ${sc}
         ${cell(g.markets.h2h, "open", i, "h2h")}
         ${d.columns.map(c => cell(g.markets[c.key], "cur", i, c.key)).join("")}
       </tr>`;
