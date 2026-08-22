@@ -82,6 +82,21 @@ def fmt_line(r):
     return f"{fmt_point(r['point'])} {fmt_price(r['price'])}".strip()
 
 
+def side_order(label, away, home):
+    """
+    Sort key putting sides in the same order as the Teams column: away above
+    home, Over above Under. Sorting alphabetically inverts any matchup whose
+    home team sorts first (NYY before TOR), which reads as flipped odds.
+    """
+    parts = label.split()
+    if len(parts) == 2:                      # team_totals: "ATL Over"
+        team, ou = parts
+        return (0 if team == away else 1, 0 if ou == "Over" else 1)
+    if label in ("Over", "Under"):
+        return (0 if label == "Over" else 1, 0)
+    return (0 if label == away else 1, 0)    # h2h / spreads: team code
+
+
 def side_label(r):
     """
     h2h / spreads -> team code (outcome holds the club name)
@@ -190,9 +205,9 @@ def build(days_shown=2, history_days=4, keep_hours=12):
                                 for r in reversed(seq)]
             markets.setdefault(market, []).append(side)
 
-        # Stable column order within each cell.
+        # Match the Teams column: away first, then home; Over before Under.
         for v in markets.values():
-            v.sort(key=lambda s: s["label"])
+            v.sort(key=lambda s: side_order(s["label"], ev["away"], ev["home"]))
 
         m = mlb.get(eid, {})
         start = start_utc.astimezone(LOCAL_TZ)
