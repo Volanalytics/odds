@@ -20,9 +20,9 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "skeleton | main | deep"
+        description: "leave blank for both; 'main' to skip period markets"
         required: false
-        default: "main"
+        default: ""
       force:
         description: "ignore cadence table"
         required: false
@@ -56,14 +56,28 @@ jobs:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: python odds_poller.py --mode skeleton
 
-      - name: Poll odds
+      # Featured markets: 3 credits for the whole slate.
+      - name: Poll main lines
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: |
-          MODE="${{ github.event.inputs.mode || 'main' }}"
           ARGS=""
           if [ "${{ github.event.inputs.force }}" = "true" ]; then ARGS="--force"; fi
-          python odds_poller.py --mode "$MODE" $ARGS
+          python odds_poller.py --mode main $ARGS
+
+      # F5 + team totals, ~4 credits per game. This MUST run on its own step:
+      # keying the mode off github.event.inputs meant scheduled runs always got
+      # 'main' and deep never fired at all. EVENT_CADENCE throttles it to about
+      # one sweep per game per 30-60 min, so running it every invocation is
+      # cheap -- most calls are skipped before any HTTP happens.
+      - name: Poll period markets
+        if: github.event.inputs.mode != 'main'
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: |
+          ARGS=""
+          if [ "${{ github.event.inputs.force }}" = "true" ]; then ARGS="--force"; fi
+          python odds_poller.py --mode deep $ARGS
 
       # Free: MLB Stats API needs no key and doesn't touch the odds quota.
       # Never fail the run over it -- a missing mlb.json degrades the board to
@@ -74,8 +88,34 @@ jobs:
 
       - name: Build site
         env:
-          ODDS_TZ: America/New_York
+          ODDS_TZ: America/Chicago
+          # Hours after first pitch a finished game stays on the board.
+          ODDS_KEEP_HOURS: "12"
         run: python build_site.py --outdir site
+
+      # Reads the NDJSON we already have; costs no odds credits.
+      - name: Check for alert-worthy moves
+        id: alerts
+        env:
+          ODDS_TZ: America/Chicago
+        run: python alerts.py
+
+      # Gmail needs an APP PASSWORD (Google account -> Security -> 2-Step
+      # Verification -> App passwords). Your normal password will be rejected.
+      - name: Send alert email
+        if: steps.alerts.outputs.count != '0' && steps.alerts.outputs.count != ''
+        continue-on-error: true
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          from: MLB odds board
+          to: ${{ secrets.MAIL_TO }}
+          subject: "Line moves: ${{ steps.alerts.outputs.subject }}"
+          body: file://data/alert_body.txt
 
       - name: Commit
         run: |
