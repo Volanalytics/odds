@@ -33,6 +33,11 @@ header{position:sticky;top:0;z-index:20;background:var(--field);
 .st{font-size:10px;color:var(--dim)}
 .st.live{color:var(--m5);font-weight:500}
 .st.warm{color:var(--m10)}
+.rank{color:var(--m5);font-size:10px;font-weight:700;margin-right:3px;
+      vertical-align:top}
+.neu{display:inline-block;margin-top:3px;font-size:10px;font-weight:700;
+     letter-spacing:.5px;color:#04161A;background:var(--m10);
+     border-radius:3px;padding:1px 5px}
 .side{color:var(--dim);font-size:11px;display:inline-block;min-width:36px;text-align:left}
 /* Highlight chip. The colour is !important on purpose: .mv is a state class
    that has to win over whatever text colour the surrounding cell sets, and
@@ -47,6 +52,15 @@ header{position:sticky;top:0;z-index:20;background:var(--field);
 /* The trailing dot sits outside the chip, so it keeps card colour. */
 .mv+.dot{color:var(--m10)}
 .dot{color:var(--m10);font-size:10px;margin-left:3px}
+.tabs{display:flex;gap:0;border-bottom:1px solid var(--line);
+      overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tabs button{flex:0 0 auto;background:none;border:0;border-bottom:2px solid transparent;
+  color:var(--dim);font-family:inherit;font-size:13px;font-weight:500;
+  letter-spacing:.5px;padding:9px 18px;cursor:pointer;white-space:nowrap}
+.tabs button:hover{color:var(--ink)}
+.tabs button.on{color:var(--chalk);border-bottom-color:var(--m10)}
+.tabs .n{color:var(--dim);font-weight:400;margin-left:6px;font-size:11px}
+.tabs button.on .n{color:var(--m10)}
 .empty{padding:40px;text-align:center;color:var(--dim)}
 
 /* ── desktop table ───────────────────────────────────────────── */
@@ -135,6 +149,7 @@ tr.det td{background:#061014;padding:0;text-align:left}
     <div style="background:#B9C6C2">no move</div>
     <div style="background:#5A1414;color:#F2F7F5">started</div>
   </div>
+  <nav class="tabs" id="tabs"></nav>
   <div class="bar">
     <h1>BETONLINE.AG</h1>
     <div class="meta" id="meta">loading&hellip;</div>
@@ -149,7 +164,15 @@ tr.det td{background:#061014;padding:0;text-align:left}
 
 <script>
 const REFRESH_MS = 30000;
-let DATA = null, OPEN = null;
+let DATA = null, OPEN = null, SPORTS = [], SPORT = null;
+const CACHE = {};
+
+/* Remembering the tab in the URL means a phone bookmark or a refresh lands
+   where you left off, and the wall monitor can be pinned to one sport. */
+function initialSport(){
+  const q = new URLSearchParams(location.search).get("s");
+  return q || null;
+}
 
 function mvClass(min, changed){
   if(!changed) return "";
@@ -161,10 +184,23 @@ function mvClass(min, changed){
 
 const pit = (n, h) => `<div class="pit">${n ? n + (h ? "-" + h : "") : "&mdash;"}</div>`;
 
+/* AP rank prefix, e.g. "1 ALA". Absent for MLB and unranked teams. */
+const rk = n => (n && n > 0 && n <= 25) ? `<span class="rank">${n}</span>` : "";
+
+/* Neutral site is the thing you can't infer from the odds feed: home/away is
+   arbitrary for those games. Venue only shown when it's neutral -- otherwise
+   it's just the home team's stadium and adds noise. */
+function venueLine(g){
+  if(!g.neutral) return "";
+  const where = [g.city, g.state].filter(Boolean).join(", ");
+  return `<div class="neu">NEUTRAL${where ? " \u00b7 " + where : ""}</div>`;
+}
+
 function statusLine(g){
   if(g.live)   return `<div class="st live">${g.half || ""} ${g.inning || ""} &middot; ${g.outs ?? 0} out</div>`;
   if(g.final)  return '<div class="st">Final</div>';
   if(g.warmup) return '<div class="st warm">Warmup</div>';
+  if(g.period)  return `<div class="st live">Q${g.period} ${g.clock || ""}</div>`;
   return "";
 }
 
@@ -236,8 +272,9 @@ function card(g, gi){
   return `<div class="card${g.started ? " started" : ""}">
     <div class="chead">
       <div>
-        <div class="crow"><span class="team">${g.away}</span>${ar}${pit(g.away_p, g.away_ph)}</div>
-        <div class="crow"><span class="team">${g.home}</span>${hr}${pit(g.home_p, g.home_ph)}</div>
+        <div class="crow">${rk(g.away_rank)}<span class="team">${g.away}</span>${ar}${g.away_p ? pit(g.away_p, g.away_ph) : ""}</div>
+        <div class="crow">${rk(g.home_rank)}<span class="team">${g.home}</span>${hr}${g.home_p ? pit(g.home_p, g.home_ph) : ""}</div>
+        ${venueLine(g)}
       </div>
       <div class="cmeta">${g.time}${g.away_rot ? `<br>${g.away_rot}/${g.home_rot}` : ""}
         ${statusLine(g)}</div>
@@ -248,11 +285,27 @@ function card(g, gi){
 }
 
 /* ── render ──────────────────────────────────────────────────── */
+function renderTabs(){
+  document.getElementById("tabs").innerHTML = SPORTS.map(s =>
+    `<button class="${s.sport === SPORT ? "on" : ""}" onclick="pick('${s.sport}')">`
+    + `${s.label}<span class="n">${s.games}</span></button>`).join("");
+}
+
+async function pick(sport){
+  if(sport === SPORT) return;
+  SPORT = sport;
+  OPEN = null;                      // an open history panel belongs to the old sport
+  history.replaceState(null, "", "?s=" + sport);
+  renderTabs();
+  await loadSport();
+}
+
 function render(){
   const d = DATA;
   const moved = d.games.reduce((a, g) => a + g.moves, 0);
   document.getElementById("meta").textContent =
     `${d.games.length} games \u00b7 ${moved} moved \u00b7 ${d.generated}`;
+  document.title = `${d.label || "MLB"} odds \u2014 BetOnline`;
 
   document.getElementById("head").innerHTML =
       '<th class="l">Time</th><th class="l">Teams</th><th>Opener</th>'
@@ -270,8 +323,9 @@ function render(){
     rows.push(`<tr class="${i % 2 ? "g1" : "g0"}${g.started ? " started" : ""}">
         <td class="l time">${g.date}<br>${g.time}${rot}${statusLine(g)}</td>
         <td class="l">
-          <span class="team">${g.away}</span>${(g.away_r ?? null) !== null ? ` <span class="run">${g.away_r}</span>` : ""}${pit(g.away_p, g.away_ph)}
-          <span class="team">${g.home}</span>${(g.home_r ?? null) !== null ? ` <span class="run">${g.home_r}</span>` : ""}${pit(g.home_p, g.home_ph)}
+          ${rk(g.away_rank)}<span class="team">${g.away}</span>${(g.away_r ?? null) !== null ? ` <span class="run">${g.away_r}</span>` : ""}${g.away_p ? pit(g.away_p, g.away_ph) : ""}
+          ${rk(g.home_rank)}<span class="team">${g.home}</span>${(g.home_r ?? null) !== null ? ` <span class="run">${g.home_r}</span>` : ""}${g.home_p ? pit(g.home_p, g.home_ph) : ""}
+          ${venueLine(g)}
         </td>
         ${cell(g.markets.h2h, "open", i, "h2h")}
         ${d.columns.map(c => cell(g.markets[c.key], "cur", i, c.key)).join("")}
@@ -291,17 +345,25 @@ function det(gi, key){
   render();
 }
 
-async function load(){
+async function loadSport(){
+  const entry = SPORTS.find(s => s.sport === SPORT);
+  if(!entry){
+    document.getElementById("meta").textContent = "unknown sport " + SPORT;
+    return;
+  }
   let d;
   try{
-    const r = await fetch("data.json?t=" + Date.now());
+    const r = await fetch(entry.file + "?t=" + Date.now());
     if(!r.ok) throw new Error("HTTP " + r.status);
     d = await r.json();
   }catch(e){
-    document.getElementById("meta").textContent = "data.json not loaded \u2014 " + e.message;
+    document.getElementById("meta").textContent = entry.file + " not loaded \u2014 " + e.message;
     return;
   }
+  /* Render failures are a separate problem from fetch failures; reporting them
+     as "not loaded" sends you hunting for a file that arrived fine. */
   try{
+    CACHE[SPORT] = d;
     DATA = d;
     render();
   }catch(e){
@@ -309,6 +371,26 @@ async function load(){
     console.error("render failed:", e);
     console.log("first game:", d.games && d.games[0]);
   }
+}
+
+async function load(){
+  try{
+    const r = await fetch("sports.json?t=" + Date.now());
+    if(!r.ok) throw new Error("HTTP " + r.status);
+    SPORTS = (await r.json()).sports || [];
+  }catch(e){
+    document.getElementById("meta").textContent = "sports.json not loaded \u2014 " + e.message;
+    return;
+  }
+  if(!SPORTS.length) return;
+  if(!SPORT || !SPORTS.some(s => s.sport === SPORT)){
+    /* Prefer the URL, then the first sport that actually has games -- landing
+       on an empty NCAAF board in June looks broken. */
+    SPORT = initialSport()
+         || (SPORTS.find(s => s.games > 0) || SPORTS[0]).sport;
+  }
+  renderTabs();
+  await loadSport();
 }
 load();
 setInterval(load, REFRESH_MS);

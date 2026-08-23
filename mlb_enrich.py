@@ -159,7 +159,7 @@ def summarize(g, hands):
 
 
 def main():
-    with open(os.path.join(DATA_DIR, "events.json"), encoding="utf-8") as f:
+    with open(os.path.join(DATA_DIR, "mlb", "events.json"), encoding="utf-8") as f:
         index = json.load(f)
     if not index:
         print("  events.json is empty -- run the poller first")
@@ -196,11 +196,11 @@ def main():
             (parse_iso(g["gameDate"].replace(".000Z", "Z")) - target).total_seconds()))
         out[eid] = summarize(best, hands)
 
-    os.makedirs(DATA_DIR, exist_ok=True)
-    tmp = os.path.join(DATA_DIR, "mlb.json.tmp")
+    os.makedirs(os.path.join(DATA_DIR, "mlb"), exist_ok=True)
+    tmp = os.path.join(DATA_DIR, "mlb", "enrich.json.tmp")
     with open(tmp, "w", encoding="utf-8") as f:
         json.dump(out, f, indent=1, sort_keys=True)
-    os.replace(tmp, os.path.join(DATA_DIR, "mlb.json"))
+    os.replace(tmp, os.path.join(DATA_DIR, "mlb", "enrich.json"))
 
     live = sum(1 for v in out.values() if v["in_play"])
     pitch = sum(1 for v in out.values() if v["away_p"] and v["home_p"])

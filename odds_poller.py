@@ -1,6 +1,14 @@
 """
-odds_poller.py  --  BetOnline MLB odds, append-only NDJSON store
-================================================================
+odds_poller.py  --  BetOnline odds, append-only NDJSON store
+=============================================================
+Multi-sport. Markets, cadence and team handling all come from sports.py, so
+adding a league needs no change here.
+
+    python odds_poller.py --sport mlb   --mode main
+    python odds_poller.py --sport ncaaf --mode deep
+
+Storage is per sport: data/<sport>/odds/YYYY-MM-DD.ndjson, one JSON object per
+line, one line per GENUINE price change.
 Storage is one JSON object per line in data/odds/YYYY-MM-DD.ndjson, one line per
 GENUINE price change.
 
@@ -44,60 +52,30 @@ from datetime import datetime, timedelta, timezone
 
 import requests
 
+import sports
+
 API_KEY  = os.environ.get("ODDS_API_KEY", "")
 DATA_DIR = os.environ.get("ODDS_DATA_DIR", "data")
 BOOK     = "betonlineag"
-SPORT    = "baseball_mlb"
+
+# Set by main() from sports.py. Nothing below hardcodes a league any more.
+SPORT     = None       # api key, e.g. "baseball_mlb"
+SPORT_ID  = None       # short id, e.g. "mlb" -- also the storage folder
+CFG       = None
 HOST     = "https://api.the-odds-api.com"
 
-SLATE_MARKETS = ["h2h", "spreads", "totals"]
-EVENT_MARKETS = [
-    "h2h_1st_5_innings",
-    "spreads_1st_5_innings",
-    "totals_1st_5_innings",
-    "team_totals",
-]
 
-# (hours_to_first_pitch_at_or_below, min_seconds_between_polls). None = skip.
-# The workflow fires every 5 minutes; these tables decide which of those
-# invocations actually spend credits.
-SLATE_CADENCE = [(3, 300), (6, 900), (12, 1800), (999, 21600)]
-EVENT_CADENCE = [(1, 1800), (3, 3600), (6, 7200), (999, None)]
 
 BUDGET_FLOOR    = 300
 CHUNK           = 10
 REQUEST_SPACING = 0.35
 
-TEAM_CODE = {
-    "Arizona Diamondbacks": "AZ", "Atlanta Braves": "ATL",
-    "Baltimore Orioles": "BAL", "Boston Red Sox": "BOS",
-    "Chicago Cubs": "CHC", "Chicago White Sox": "CWS",
-    "Cincinnati Reds": "CIN", "Cleveland Guardians": "CLE",
-    "Colorado Rockies": "COL", "Detroit Tigers": "DET",
-    "Houston Astros": "HOU", "Kansas City Royals": "KC",
-    "Los Angeles Angels": "LAA", "Los Angeles Dodgers": "LAD",
-    "Miami Marlins": "MIA", "Milwaukee Brewers": "MIL",
-    "Minnesota Twins": "MIN", "New York Mets": "NYM",
-    "New York Yankees": "NYY", "Athletics": "ATH",
-    "Philadelphia Phillies": "PHI", "Pittsburgh Pirates": "PIT",
-    "San Diego Padres": "SD", "San Francisco Giants": "SF",
-    "Seattle Mariners": "SEA", "St. Louis Cardinals": "STL",
-    "Tampa Bay Rays": "TB", "Texas Rangers": "TEX",
-    "Toronto Blue Jays": "TOR", "Washington Nationals": "WSH",
-}
-assert len(set(TEAM_CODE.values())) == 30, "team map must cover exactly 30 clubs"
 
-ALIASES = {
-    "Oakland Athletics": "ATH", "Las Vegas Athletics": "ATH",
-    "St Louis Cardinals": "STL", "Cleveland Indians": "CLE",
-}
 
 
 def to_code(name):
-    code = TEAM_CODE.get(name) or ALIASES.get(name)
-    if code is None:
-        raise KeyError(f"unmapped team name from API: {name!r}")
-    return code
+    """Short code where the sport has a hard map; the full name where it doesn't."""
+    return sports.to_code(CFG, name)
 
 
 # ═════════════════════════════════════════════════════════════════════════════
@@ -116,16 +94,20 @@ def parse_iso(s):
     return datetime.strptime(s, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
 
 
+def sport_dir():
+    return os.path.join(DATA_DIR, SPORT_ID)
+
+
 def odds_path(day):
-    return os.path.join(DATA_DIR, "odds", f"{day}.ndjson")
+    return os.path.join(sport_dir(), "odds", f"{day}.ndjson")
 
 
 def events_path():
-    return os.path.join(DATA_DIR, "events.json")
+    return os.path.join(sport_dir(), "events.json")
 
 
 def state_path():
-    return os.path.join(DATA_DIR, "poll_state.json")
+    return os.path.join(sport_dir(), "poll_state.json")
 
 
 def read_json(path, default):
@@ -341,12 +323,12 @@ def mode_main(index, state, force=False):
         print("  no upcoming events -- run --mode skeleton first")
         return
     soonest = events[0][1]["commence_time"]
-    if not force and not is_due(state, "slate", "main", soonest, SLATE_CADENCE):
+    if not force and not is_due(state, "slate", "main", soonest, CFG["slate_cadence"]):
         print("  not due yet (slate cadence)")
         return
 
     data = api_get(f"/v4/sports/{SPORT}/odds", bookmakers=BOOK,
-                   markets=",".join(SLATE_MARKETS), oddsFormat="american",
+                   markets=",".join(CFG["slate"]), oddsFormat="american",
                    includeRotationNumbers="true")
     if not data:
         print("  no odds returned")
@@ -370,9 +352,10 @@ def mode_deep(index, state, dry_run=False, force=False, date=None):
         est = 0
         for eid, e in events:
             hrs = (parse_iso(e["commence_time"]) - now()).total_seconds() / 3600
-            due = force or is_due(state, eid, "deep", e["commence_time"], EVENT_CADENCE)
-            est += len(EVENT_MARKETS) if due else 0
-            note = f"~{len(EVENT_MARKETS)} credits" if due else "not due"
+            due = force or is_due(state, eid, "deep", e["commence_time"], CFG["event_cadence"])
+            est += len(CFG["event"]) if due else 0
+            n_mk = len(CFG["event"])
+            note = f"~{n_mk} credits" if due else "not due"
             print(f"  {e['away']}@{e['home']}  T-{hrs:5.1f}h  {note}")
         print(f"\n  ESTIMATED SWEEP COST: ~{est} credits (upper bound)")
         return
@@ -385,14 +368,14 @@ def mode_deep(index, state, dry_run=False, force=False, date=None):
         if not BUDGET.ok():
             print(f"  BUDGET FLOOR hit ({BUDGET.remaining} left) -- stopping")
             break
-        if not force and not is_due(state, eid, "deep", e["commence_time"], EVENT_CADENCE):
+        if not force and not is_due(state, eid, "deep", e["commence_time"], CFG["event_cadence"]):
             continue
 
         n = 0
-        for i in range(0, len(EVENT_MARKETS), CHUNK):
+        for i in range(0, len(CFG["event"]), CHUNK):
             data = api_get(f"/v4/sports/{SPORT}/events/{eid}/odds",
                            bookmakers=BOOK,
-                           markets=",".join(EVENT_MARKETS[i:i + CHUNK]),
+                           markets=",".join(CFG["event"][i:i + CHUNK]),
                            oddsFormat="american")
             if data:
                 n += store_odds(data, last, day)
@@ -406,13 +389,21 @@ def mode_deep(index, state, dry_run=False, force=False, date=None):
 # ═════════════════════════════════════════════════════════════════════════════
 
 def main():
+    global SPORT, SPORT_ID, CFG
+
     ap = argparse.ArgumentParser()
+    ap.add_argument("--sport", default="mlb", choices=list(sports.SPORTS),
+                    help="which league to poll; also the storage folder")
     ap.add_argument("--mode", required=True, choices=["skeleton", "main", "deep"])
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--force", action="store_true")
     ap.add_argument("--date", default=None, metavar="YYYY-MM-DD")
     ap.add_argument("--tomorrow", action="store_true")
     args = ap.parse_args()
+
+    SPORT_ID = args.sport
+    CFG      = sports.cfg(SPORT_ID)
+    SPORT    = CFG["key"]
 
     if args.tomorrow:
         args.date = (now() + timedelta(days=1)).strftime("%Y-%m-%d")
@@ -424,7 +415,8 @@ def main():
 
     scope = f"  slate={args.date}" if args.date else ""
     print("=" * 62)
-    print(f"  BetOnline MLB poller  --  mode={args.mode}{scope}  {now_iso()}")
+    print(f"  BetOnline {CFG['label']} poller  --  "
+          f"mode={args.mode}{scope}  {now_iso()}")
     print("=" * 62)
 
     if args.mode == "skeleton":
@@ -437,7 +429,8 @@ def main():
 
     if not args.dry_run:
         # Drop long-finished events so the index stays small and its diffs
-        # stay readable in the commit log.
+        # stay readable in the commit log. game_date is the UTC date, so this
+        # is deliberately generous rather than exact.
         cut = (now() - timedelta(days=2)).strftime("%Y-%m-%d")
         for eid in [k for k, v in index.items() if v["game_date"] < cut]:
             del index[eid]

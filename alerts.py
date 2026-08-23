@@ -39,6 +39,7 @@ from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
 DATA_DIR = os.environ.get("ODDS_DATA_DIR", "data")
+SPORT    = os.environ.get("ODDS_SPORT", "mlb")
 LOCAL_TZ = ZoneInfo(os.environ.get("ODDS_TZ", "America/Chicago"))
 
 CENT_THRESHOLD = 10        # moneyline cents that count as a real move
@@ -141,7 +142,7 @@ def load_records():
             for k in range(LOOKBACK_DAYS, -2, -1)]
     out = []
     for d in days:
-        p = os.path.join(DATA_DIR, "odds", f"{d}.ndjson")
+        p = os.path.join(DATA_DIR, SPORT, "odds", f"{d}.ndjson")
         try:
             with open(p, encoding="utf-8") as f:
                 out += [json.loads(l) for l in f if l.strip()]
@@ -177,13 +178,13 @@ def main():
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
-    index = read_json(os.path.join(DATA_DIR, "events.json"), {})
+    index = read_json(os.path.join(DATA_DIR, SPORT, "events.json"), {})
     wl    = read_json(os.path.join(DATA_DIR, "watchlist.json"),
                       {"teams": [], "events": []})
     wl_teams  = set(wl.get("teams", []))
     wl_events = set(wl.get("events", []))
 
-    state_path = os.path.join(DATA_DIR, "alert_state.json")
+    state_path = os.path.join(DATA_DIR, SPORT, "alert_state.json")
     state      = read_json(state_path, None)
     seeding    = state is None          # first run: record, don't send
     state      = state or {}

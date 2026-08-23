@@ -1,15 +1,34 @@
-# BetOnline MLB odds board
+# BetOnline odds board
 
-Static odds board, updated by GitHub Actions, served from GitHub Pages.
-No model output — prices only.
+Static multi-sport odds board, updated by GitHub Actions, served from GitHub
+Pages. No model output — prices only.
+
+Sports and their markets are defined in `sports.py`; adding a league needs no
+change anywhere else.
 
 ## Layout
 
-    odds_poller.py     fetch + append price changes to data/odds/*.ndjson
-    build_site.py      read the store -> site/data.json
-    index.html         the board
-    data/events.json   event index (ids, teams, rotations, start times)
-    data/poll_state.json  last-polled marks, drives the cadence tables
+    sports.py            market lists, columns, cadence per league
+    odds_poller.py       --sport <id> --mode skeleton|main|deep
+    build_site.py        -> site/data-<sport>.json + site/sports.json
+    mlb_enrich.py        probable pitchers, live scores (free, MLB Stats API)
+    espn_cfb_enrich.py   venue, NEUTRAL SITE flag, ranks (free, ESPN)
+    alerts.py            ODDS_SPORT=<id>, emails on meaningful moves
+    index.html           the board (tabs read sports.json)
+
+    data/<sport>/odds/*.ndjson   append-only price changes
+    data/<sport>/events.json     event index
+    data/<sport>/poll_state.json cadence marks
+    data/<sport>/enrich.json     free-API extras
+
+## Migrating from the single-sport layout
+
+    python migrate_to_sports.py --dry-run
+    python migrate_to_sports.py
+
+Moves data/odds, data/events.json and data/poll_state.json into data/mlb/.
+Idempotent; nothing is deleted. Commit the result — the workflow runs against
+the checked-out copy, so an unmigrated repo starts the history over.
 
 ## Setup
 

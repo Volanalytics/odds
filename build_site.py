@@ -22,41 +22,25 @@ from collections import defaultdict
 from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
+import sports
+
 DATA_DIR = os.environ.get("ODDS_DATA_DIR", "data")
+
+# Set from sports.py in main(); nothing below hardcodes a league.
+SPORT_ID = None
+CFG      = None
 
 # Display zone for game times and the build stamp. The Actions runner is UTC,
 # so this must be set explicitly or every time on the board will be wrong.
 LOCAL_TZ = ZoneInfo(os.environ.get("ODDS_TZ", "America/New_York"))
 
-MARKETS = [
-    ("h2h",                   "ML"),
-    ("spreads",               "RL"),
-    ("totals",                "Total"),
-    ("h2h_1st_5_innings",     "F5 ML"),
-    ("spreads_1st_5_innings", "F5 RL"),
-    ("totals_1st_5_innings",  "F5 Tot"),
-    ("team_totals",           "TT"),
-]
 
-TEAM_CODE = {
-    "Arizona Diamondbacks": "AZ", "Atlanta Braves": "ATL",
-    "Baltimore Orioles": "BAL", "Boston Red Sox": "BOS",
-    "Chicago Cubs": "CHC", "Chicago White Sox": "CWS",
-    "Cincinnati Reds": "CIN", "Cleveland Guardians": "CLE",
-    "Colorado Rockies": "COL", "Detroit Tigers": "DET",
-    "Houston Astros": "HOU", "Kansas City Royals": "KC",
-    "Los Angeles Angels": "LAA", "Los Angeles Dodgers": "LAD",
-    "Miami Marlins": "MIA", "Milwaukee Brewers": "MIL",
-    "Minnesota Twins": "MIN", "New York Mets": "NYM",
-    "New York Yankees": "NYY", "Athletics": "ATH",
-    "Philadelphia Phillies": "PHI", "Pittsburgh Pirates": "PIT",
-    "San Diego Padres": "SD", "San Francisco Giants": "SF",
-    "Seattle Mariners": "SEA", "St. Louis Cardinals": "STL",
-    "Tampa Bay Rays": "TB", "Texas Rangers": "TEX",
-    "Toronto Blue Jays": "TOR", "Washington Nationals": "WSH",
-    "Oakland Athletics": "ATH", "Las Vegas Athletics": "ATH",
-    "St Louis Cardinals": "STL", "Cleveland Indians": "CLE",
-}
+
+
+def code(name):
+    """Short code where the sport has a map, full name where it doesn't."""
+    teams = CFG.get("teams")
+    return (teams.get(name, name) if teams else name)
 
 
 def parse_iso(s):
@@ -71,9 +55,6 @@ def fmt_price(p):
     return "" if p is None else (f"+{p}" if p > 0 else str(p))
 
 
-SPREAD_MARKETS = {"spreads", "spreads_1st_5_innings"}
-
-
 def fmt_point(v, market=None):
     """
     Half lines print as 8.5, whole numbers as 8. Moneylines have no point.
@@ -85,7 +66,7 @@ def fmt_point(v, market=None):
     if v is None:
         return ""
     txt = str(int(v)) if float(v).is_integer() else f"{v:g}"
-    if market in SPREAD_MARKETS and v > 0:
+    if market in CFG["spread_markets"] and v > 0:
         txt = "+" + txt
     return txt
 
@@ -116,16 +97,16 @@ def side_label(r):
     team_totals   -> team code + Over/Under (the TEAM lives in desc)
     """
     if r["market"] == "team_totals":
-        return f"{TEAM_CODE.get(r['desc'], r['desc'])} {r['outcome']}"
+        return f"{code(r["desc"])} {r['outcome']}"
     if r["outcome"] in ("Over", "Under"):
         return r["outcome"]
-    return TEAM_CODE.get(r["outcome"], r["outcome"])
+    return code(r["outcome"])
 
 
 def load_records(days):
     out = []
     for d in days:
-        path = os.path.join(DATA_DIR, "odds", f"{d}.ndjson")
+        path = os.path.join(DATA_DIR, SPORT_ID, "odds", f"{d}.ndjson")
         try:
             with open(path, encoding="utf-8") as f:
                 out += [json.loads(l) for l in f if l.strip()]
@@ -137,14 +118,14 @@ def load_records(days):
 def load_mlb():
     """Optional: absent on a first run, so the board degrades to odds only."""
     try:
-        with open(os.path.join(DATA_DIR, "mlb.json"), encoding="utf-8") as f:
+        with open(os.path.join(DATA_DIR, SPORT_ID, "enrich.json"), encoding="utf-8") as f:
             return json.load(f)
     except (FileNotFoundError, json.JSONDecodeError):
         return {}
 
 
 def build(days_shown=2, history_days=4, keep_hours=12):
-    with open(os.path.join(DATA_DIR, "events.json"), encoding="utf-8") as f:
+    with open(os.path.join(DATA_DIR, SPORT_ID, "events.json"), encoding="utf-8") as f:
         index = json.load(f)
     mlb = load_mlb()
 
@@ -220,8 +201,13 @@ def build(days_shown=2, history_days=4, keep_hours=12):
         # Match the Teams column: away first, then home; Over before Under.
         for v in markets.values():
             v.sort(key=lambda s: side_order(s["label"], ev["away"], ev["home"]))
+        # note: labels still carry the raw names, so ordering uses ev[] above
 
         m = mlb.get(eid, {})
+        # College has no hard team map, so ESPN's abbreviation is the only way
+        # to get "Georgia Bulldogs" down to something a column can hold.
+        away_code = m.get("away_abbr") or ev["away"]
+        home_code = m.get("home_abbr") or ev["home"]
         start = start_utc.astimezone(LOCAL_TZ)
         games.append({
             "game_pk":  m.get("game_pk"),
@@ -245,7 +231,17 @@ def build(days_shown=2, history_days=4, keep_hours=12):
             # are still very much open.
             "started":   ((m.get("in_play") or m.get("abstract") == "Final")
                           if m else start < datetime.now(LOCAL_TZ)),
-            "away":      ev["away"], "home": ev["home"],
+            "away":      away_code, "home": home_code,
+            "away_full": ev["away"], "home_full": ev["home"],
+            # Football extras; absent for MLB and simply not rendered.
+            "neutral":   bool(m.get("neutral")),
+            "venue":     m.get("venue"),
+            "city":      m.get("city"),
+            "state":     m.get("state"),
+            "away_rank": m.get("away_rank"),
+            "home_rank": m.get("home_rank"),
+            "period":    m.get("period"),
+            "clock":     m.get("clock"),
             "away_rot":  ev.get("away_rot"), "home_rot": ev.get("home_rot"),
             "moves":     moves,
             "markets":   markets,
@@ -259,39 +255,79 @@ def build(days_shown=2, history_days=4, keep_hours=12):
         "generated": datetime.now(LOCAL_TZ).strftime("%a %b %d, %Y %I:%M:%S %p"),
         "tz":        str(LOCAL_TZ),
         "book":      "BetOnline.ag",
-        "columns":   [{"key": k, "label": l} for k, l in MARKETS],
+        "columns":   [{"key": k, "label": l} for k, l in CFG["columns"]],
         "games":     games,
     }
+
+
+def build_one(sport, outdir, days, keep_hours):
+    """
+    Emit data-<sport>.json and return a manifest entry for the tab bar.
+
+    A sport with no data yet is not an error -- NCAAF has an empty index all
+    summer. It still gets a tab, just an empty board.
+    """
+    global SPORT_ID, CFG
+    SPORT_ID = sport
+    CFG      = sports.cfg(sport)
+
+    try:
+        payload = build(days_shown=days,
+                        keep_hours=keep_hours or CFG.get("keep_hours", 12))
+    except FileNotFoundError:
+        payload = {"generated": datetime.now(LOCAL_TZ).strftime("%a %b %d, %Y %I:%M:%S %p"),
+                   "book": "BetOnline.ag", "games": [],
+                   "columns": [{"key": k, "label": l} for k, l in CFG["columns"]]}
+
+    payload["sport"] = sport
+    payload["label"] = CFG["label"]
+
+    with open(os.path.join(outdir, f"data-{sport}.json"), "w", encoding="utf-8") as f:
+        json.dump(payload, f, separators=(",", ":"))
+
+    games  = payload["games"]
+    moves  = sum(g["moves"] for g in games)
+    slates = sorted({g["slate"] for g in games})
+    done   = sum(1 for g in games if g.get("final"))
+    print(f"  {CFG['label']:<7} {len(games):>3} games, {moves:>3} sides moved, "
+          f"{done} final  ({', '.join(slates) or 'no slates'})")
+
+    return {"sport": sport, "label": CFG["label"], "games": len(games),
+            "moves": moves, "file": f"data-{sport}.json"}
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--outdir", default="site")
+    ap.add_argument("--sport", default=None, choices=list(sports.SPORTS),
+                    help="build one sport; default builds all")
     ap.add_argument("--days", type=int, default=2,
                     help="slates to show: 1 = today, 2 = today + tomorrow")
-    ap.add_argument("--keep-hours", type=int,
-                    default=int(os.environ.get("ODDS_KEEP_HOURS", 12)),
-                    help="hours after first pitch to keep a game on the board")
+    ap.add_argument("--keep-hours", type=int, default=None,
+                    help="hours after start to keep a game (default: per sport)")
     args = ap.parse_args()
 
-    payload = build(days_shown=args.days, keep_hours=args.keep_hours)
+    env_keep = os.environ.get("ODDS_KEEP_HOURS")
+    keep = args.keep_hours if args.keep_hours is not None else (
+        int(env_keep) if env_keep else None)
+
     os.makedirs(args.outdir, exist_ok=True)
-    with open(os.path.join(args.outdir, "data.json"), "w", encoding="utf-8") as f:
-        json.dump(payload, f, separators=(",", ":"))
+    wanted = [args.sport] if args.sport else list(sports.DEFAULT_ORDER)
+
+    manifest = [build_one(s, args.outdir, args.days, keep) for s in wanted]
+
+    # The page reads this first to draw tabs, so it must list every sport even
+    # when one is out of season and has nothing to show.
+    with open(os.path.join(args.outdir, "sports.json"), "w", encoding="utf-8") as f:
+        json.dump({"generated": datetime.now(LOCAL_TZ).strftime("%a %b %d, %Y %I:%M:%S %p"),
+                   "sports": manifest}, f, separators=(",", ":"))
 
     src = os.path.join(os.path.dirname(os.path.abspath(__file__)), "index.html")
     dst = os.path.join(args.outdir, "index.html")
     if os.path.exists(src) and os.path.abspath(src) != os.path.abspath(dst):
         shutil.copy2(src, dst)
 
-    moves  = sum(g["moves"] for g in payload["games"])
-    slates = sorted({g["slate"] for g in payload["games"]})
-    done   = sum(1 for g in payload["games"] if g.get("final"))
-    print(f"  {len(payload['games'])} games across {len(slates)} slate(s) "
-          f"({', '.join(slates) or 'none'})")
-    print(f"  {moves} sides with movement, {done} final "
-          f"(dropping {args.keep_hours}h after first pitch)"
-          f" -> {args.outdir}/data.json")
+    print(f"  -> {args.outdir}/  ({len(manifest)} sport file(s) + sports.json)")
 
 
 if __name__ == "__main__":
