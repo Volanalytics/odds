@@ -60,6 +60,10 @@ SPORTS = {
         "event_cadence": [(1, 1800), (3, 3600), (6, 7200), (999, None)],
         "spread_markets": {"spreads", "spreads_1st_5_innings"},
         "teams":  MLB_TEAMS,
+        # Daily sport: today plus tomorrow is the whole picture.
+        "days_shown": 2,
+        # Hours after first pitch to keep a finished game on the board.
+        "keep_hours": 12,
         "enrich": "mlb",
     },
 
@@ -93,6 +97,12 @@ SPORTS = {
         # No hard map: 130+ FBS schools plus whatever FCS games BetOnline
         # prices. Full names are shown until ESPN supplies abbreviations.
         "teams":  None,
+        # Weekly sport. Lines post ~a week out and the slate is one or two
+        # days; a 2-day window would hide everything for most of the week.
+        "days_shown": 9,
+        # Football runs long and late kickoffs finish after midnight; 12h would
+        # clear a Saturday night game before Sunday morning.
+        "keep_hours": 16,
         "enrich": "espn_cfb",
     },
 }

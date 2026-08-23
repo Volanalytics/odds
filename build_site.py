@@ -261,6 +261,7 @@ def build(days_shown=2, history_days=4, keep_hours=12):
 
 
 def build_one(sport, outdir, days, keep_hours):
+    """days=None means use the sport's own window from sports.py."""
     """
     Emit data-<sport>.json and return a manifest entry for the tab bar.
 
@@ -272,7 +273,7 @@ def build_one(sport, outdir, days, keep_hours):
     CFG      = sports.cfg(sport)
 
     try:
-        payload = build(days_shown=days,
+        payload = build(days_shown=days or CFG.get("days_shown", 2),
                         keep_hours=keep_hours or CFG.get("keep_hours", 12))
     except FileNotFoundError:
         payload = {"generated": datetime.now(LOCAL_TZ).strftime("%a %b %d, %Y %I:%M:%S %p"),
@@ -301,8 +302,8 @@ def main():
     ap.add_argument("--outdir", default="site")
     ap.add_argument("--sport", default=None, choices=list(sports.SPORTS),
                     help="build one sport; default builds all")
-    ap.add_argument("--days", type=int, default=2,
-                    help="slates to show: 1 = today, 2 = today + tomorrow")
+    ap.add_argument("--days", type=int, default=None,
+                    help="days of slate to show (default: per sport)")
     ap.add_argument("--keep-hours", type=int, default=None,
                     help="hours after start to keep a game (default: per sport)")
     args = ap.parse_args()
