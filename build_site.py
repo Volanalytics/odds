@@ -90,17 +90,24 @@ def side_order(label, away, home):
     return (0 if label == away else 1, 0)    # h2h / spreads: team code
 
 
-def side_label(r):
+def side_label(r, names=None):
     """
-    h2h / spreads -> team code (outcome holds the club name)
-    totals        -> Over / Under
-    team_totals   -> team code + Over/Under (the TEAM lives in desc)
+    h2h / spreads   -> team code (outcome holds the club name)
+    totals          -> Over / Under
+    team_totals*    -> team code + Over/Under (the TEAM lives in desc)
+
+    `names` maps full club names to display codes for this game. College has no
+    hard team map, so without it a side renders as "North Carolina Tar
+    Heels +245" and overflows a phone card. startswith() catches the 1H variant
+    as well as the full-game key.
     """
-    if r["market"] == "team_totals":
-        return f"{code(r["desc"])} {r['outcome']}"
+    names = names or {}
+    if r["market"].startswith("team_totals"):
+        team = names.get(r["desc"]) or code(r["desc"])
+        return f"{team} {r['outcome']}"
     if r["outcome"] in ("Over", "Under"):
         return r["outcome"]
-    return code(r["outcome"])
+    return names.get(r["outcome"]) or code(r["outcome"])
 
 
 def load_records(days):
@@ -162,6 +169,17 @@ def build(days_shown=2, history_days=4, keep_hours=12):
         if not rows:
             continue
 
+        m = mlb.get(eid, {})
+        # College has no hard team map, so ESPN's abbreviation is the only way
+        # to get "Georgia Bulldogs" down to something a column can hold.
+        away_code = m.get("away_abbr") or ev["away"]
+        home_code = m.get("home_abbr") or ev["home"]
+        # Market outcomes carry the full club name. Without this map a college
+        # side renders as "North Carolina Tar Heels+245", which overflows a
+        # phone card and gets clipped.
+        name_map = {ev["away_team"]: away_code, ev["home_team"]: home_code,
+                    ev["away"]: away_code, ev["home"]: home_code}
+
         # A "side" is one bettable option tracked over time. point is
         # deliberately NOT in the key -- a total moving 8.5 -> 9 is the same
         # Over changing price, not a new market. Key on point and every move
@@ -186,7 +204,7 @@ def build(days_shown=2, history_days=4, keep_hours=12):
                     newest = moved_at
 
             side = {
-                "label":     side_label(last),
+                "label":     side_label(last, name_map),
                 "open":      fmt_line(first),
                 "cur":       fmt_line(last),
                 "changed":   changed,
@@ -200,14 +218,8 @@ def build(days_shown=2, history_days=4, keep_hours=12):
 
         # Match the Teams column: away first, then home; Over before Under.
         for v in markets.values():
-            v.sort(key=lambda s: side_order(s["label"], ev["away"], ev["home"]))
-        # note: labels still carry the raw names, so ordering uses ev[] above
+            v.sort(key=lambda s: side_order(s["label"], away_code, home_code))
 
-        m = mlb.get(eid, {})
-        # College has no hard team map, so ESPN's abbreviation is the only way
-        # to get "Georgia Bulldogs" down to something a column can hold.
-        away_code = m.get("away_abbr") or ev["away"]
-        home_code = m.get("home_abbr") or ev["home"]
         start = start_utc.astimezone(LOCAL_TZ)
         games.append({
             "game_pk":  m.get("game_pk"),
@@ -217,7 +229,10 @@ def build(days_shown=2, history_days=4, keep_hours=12):
             "final":    m.get("abstract") == "Final",
             "away_p":   m.get("away_p"), "away_ph": m.get("away_p_hand"),
             "home_p":   m.get("home_p"), "home_ph": m.get("home_p_hand"),
-            "away_r":   m.get("away_r"), "home_r": m.get("home_r"),
+            # ESPN returns "0" for scheduled games, so gate on game state --
+            # a green 0-0 on a game six days out reads as a live score.
+            "away_r":   m.get("away_r") if (m.get("in_play") or m.get("final")) else None,
+            "home_r":   m.get("home_r") if (m.get("in_play") or m.get("final")) else None,
             "inning":   m.get("inning"), "half": m.get("half"),
             "outs":     m.get("outs"),
             "event_id":  eid,

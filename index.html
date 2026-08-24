@@ -102,13 +102,16 @@ tr.det td{background:#061014;padding:0;text-align:left}
        gap:8px;padding:8px 10px;border-bottom:1px solid var(--line)}
 .crow{display:flex;align-items:baseline;gap:6px;line-height:1.5}
 .cmeta{text-align:right;font-size:11px;color:var(--dim);white-space:nowrap}
-.mkts{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line)}
-.mk{background:var(--panel2);padding:6px 8px;min-height:52px}
+.mkts{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+      gap:1px;background:var(--line)}
+.mk{background:var(--panel2);padding:6px 8px;min-height:52px;
+    min-width:0;overflow:hidden}
 .card.started .mk{background:#4A1111}
 .mk.hot{cursor:pointer}
 .mk.sel{outline:1px solid var(--chalk);outline-offset:-1px}
 .mklbl{color:var(--dim);font-size:10px;letter-spacing:.5px;margin-bottom:2px}
-.mkln{font-size:12px;line-height:1.5;white-space:nowrap}
+.mkln{font-size:12px;line-height:1.5;white-space:nowrap;
+      overflow:hidden;text-overflow:ellipsis}
 .chist{background:#061014;padding:8px 10px}
 .chist .dhead{font-size:11px}
 .chist .hrow{display:flex;justify-content:space-between;font-size:11px;
@@ -133,6 +136,10 @@ tr.det td{background:#061014;padding:0;text-align:left}
   .mklbl{font-size:12px}
   .mkln{font-size:14px}
   .side{font-size:13px;min-width:44px}
+  @media (max-width:400px){
+    .mkln{font-size:13px}
+    .side{min-width:38px;font-size:12px}
+  }
   .chist .dhead{font-size:13px}
   .chist .hrow{font-size:13px;padding:2px 0}
   .mk{padding:8px 8px;min-height:64px}
