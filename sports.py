@@ -56,8 +56,18 @@ SPORTS = {
             ("team_totals",           "TT"),
         ],
         # (hours_to_start_at_or_below, min_seconds_between_polls). None = skip.
-        "slate_cadence": [(3, 300), (6, 900), (12, 1800), (999, 21600)],
-        "event_cadence": [(1, 1800), (3, 3600), (6, 7200), (999, None)],
+        # FLAT, deliberately. The slate endpoint returns every posted game for
+        # 3 credits, so proximity tiers buy nothing here: with first pitches
+        # every ~30 min there is always a game imminent, the near tier fires
+        # all day, and spend runs ~470/day instead of ~280. Worse, the tier
+        # keys off the SOONEST game -- once the last game starts, "soonest"
+        # becomes tomorrow ~19h out and a far tier silently throttles the whole
+        # board overnight while tomorrow's lines move. A single interval is
+        # both cheaper and predictable. ~279 credits/day.
+        "slate_cadence": [(999, 900)],
+        # Per-game, so this is where MLB spend concentrates: 4 markets x 15
+        # games. ~180 credits/day at these intervals.
+        "event_cadence": [(1, 3600), (6, 10800), (999, None)],
         "spread_markets": {"spreads", "spreads_1st_5_innings"},
         "teams":  MLB_TEAMS,
         # Daily sport: today plus tomorrow is the whole picture.
@@ -91,7 +101,13 @@ SPORTS = {
             ("team_totals_h1", "1H TT"),
         ],
         # Slates are huge and mostly Saturday, so sweep sparingly.
-        "slate_cadence": [(3, 300), (6, 1800), (24, 7200), (999, 43200)],
+        # Tiers DO earn their keep here: football games cluster on one day, so
+        # "soonest game" is a real signal rather than always-imminent. Midweek
+        # costs ~72/day, Saturday ~309/day.
+        "slate_cadence": [(3, 600), (24, 1800), (999, 3600)],
+        # 8 keys x 60 games is ~480 credits for ONE full pass, so period
+        # markets only sweep inside 6h of kickoff and a Saturday clears in
+        # waves. ~384 credits per Saturday.
         "event_cadence": [(2, 7200), (6, 21600), (999, None)],
         "spread_markets": {"spreads", "spreads_h1", "spreads_q1"},
         # No hard map: 130+ FBS schools plus whatever FCS games BetOnline
