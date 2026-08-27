@@ -51,42 +51,25 @@ jobs:
 
       - run: pip install requests tzdata
 
-      # One-time layout change, safe to leave here forever: moves the flat
-      # data/odds + data/events.json into data/mlb/. Idempotent -- prints
-      # "nothing to migrate" on every run after the first. Keeping it in the
-      # workflow means the repo migrates itself without a local clone.
-      - name: Migrate storage layout if needed
-        run: python migrate_to_sports.py
-
-      # Free endpoint, so refresh every sport's index every run.
-      - name: Refresh event indexes
+      - name: Refresh event index
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
-        run: |
-          for S in mlb ncaaf; do
-            python odds_poller.py --sport "$S" --mode skeleton
-          done
+        run: python odds_poller.py --mode skeleton
 
-      # Featured markets: 3 credits per sport for the whole slate, however
-      # many games. Cheap enough to run for every sport every invocation --
-      # the cadence tables skip most of these before any HTTP happens.
+      # Featured markets: 3 credits for the whole slate.
       - name: Poll main lines
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: |
           ARGS=""
           if [ "${{ github.event.inputs.force }}" = "true" ]; then ARGS="--force"; fi
-          for S in mlb ncaaf; do
-            python odds_poller.py --sport "$S" --mode main $ARGS
-          done
+          python odds_poller.py --mode main $ARGS
 
-      # Period markets, billed PER GAME: ~4 credits for MLB's 15, but ~8 keys
-      # x 60 games on an NCAAF Saturday is ~480 a sweep. event_cadence in
-      # sports.py is what keeps that affordable -- NCAAF only sweeps inside 6
-      # hours of kickoff, so a Saturday clears in waves rather than one burst.
-      #
-      # This MUST be its own step: keying the mode off github.event.inputs
-      # meant scheduled runs always got 'main' and deep never fired at all.
+      # F5 + team totals, ~4 credits per game. This MUST run on its own step:
+      # keying the mode off github.event.inputs meant scheduled runs always got
+      # 'main' and deep never fired at all. EVENT_CADENCE throttles it to about
+      # one sweep per game per 30-60 min, so running it every invocation is
+      # cheap -- most calls are skipped before any HTTP happens.
       - name: Poll period markets
         if: github.event.inputs.mode != 'main'
         env:
@@ -94,23 +77,14 @@ jobs:
         run: |
           ARGS=""
           if [ "${{ github.event.inputs.force }}" = "true" ]; then ARGS="--force"; fi
-          for S in mlb ncaaf; do
-            python odds_poller.py --sport "$S" --mode deep $ARGS
-          done
+          python odds_poller.py --mode deep $ARGS
 
       # Free: MLB Stats API needs no key and doesn't touch the odds quota.
       # Never fail the run over it -- a missing mlb.json degrades the board to
       # odds-only rather than losing the prices we already paid for.
-      # Both are free public APIs, neither touches the odds quota. Never fail
-      # the run over them: a missing enrich file degrades a board to odds-only
-      # rather than losing prices we already paid credits for.
-      - name: Pitchers and live scores (MLB)
+      - name: Pitchers and live scores
         continue-on-error: true
         run: python mlb_enrich.py
-
-      - name: Venues, neutral sites and scores (NCAAF)
-        continue-on-error: true
-        run: python espn_cfb_enrich.py
 
       - name: Build site
         env:
