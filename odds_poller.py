@@ -305,11 +305,23 @@ def live_events(index, date=None):
     return sorted(items, key=lambda kv: kv[1]["commence_time"])
 
 
-def mode_skeleton(index):
+# The slate does not change every five minutes. The endpoint is free in
+# credits but not in seconds, and it runs for every sport on every invocation.
+SKELETON_MIN_SECONDS = 1800
+
+
+def mode_skeleton(index, state, force=False):
+    prev = state.get("skeleton:slate")
+    if not force and prev:
+        age = (now() - parse_iso(prev)).total_seconds()
+        if age < SKELETON_MIN_SECONDS:
+            print(f"  index refreshed {age/60:.0f} min ago -- skipping")
+            return
     data = api_get(f"/v4/sports/{SPORT}/events", includeRotationNumbers="true")
     if not data:
         print("  no events returned")
         return
+    state["skeleton:slate"] = now_iso()
     print(f"  {store_events(data, index)} events on the board (cost 0)")
 
 
@@ -420,7 +432,7 @@ def main():
     print("=" * 62)
 
     if args.mode == "skeleton":
-        mode_skeleton(index)
+        mode_skeleton(index, state, force=args.force)
     elif args.mode == "main":
         mode_main(index, state, force=args.force)
     elif args.mode == "deep":

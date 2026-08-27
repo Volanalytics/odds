@@ -146,7 +146,12 @@ def summarize(g, hands):
         # MLB flips abstractGameState to Live during warmups, well before first
         # pitch. Split it out so the board can label warmup without painting
         # the row as an in-progress game.
-        "warmup":      detailed in ("Warmup", "Pre-Game"),
+        # MLB sets Pre-Game hours before first pitch, so labelling it "Warmup"
+        # puts a warmup badge on a game three hours out. Only the real Warmup
+        # state means players are on the field.
+        "warmup":      detailed == "Warmup",
+        # abstractGameState flips to Live during warmups too, well before the
+        # first pitch, so a game in either pre-state must not read as in play.
         "in_play":     abstract == "Live" and detailed not in ("Warmup", "Pre-Game"),
         "away_p": ap, "away_p_hand": ah,
         "home_p": hp, "home_p_hand": hh,
