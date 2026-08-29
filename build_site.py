@@ -37,6 +37,36 @@ LOCAL_TZ = ZoneInfo(os.environ.get("ODDS_TZ", "America/New_York"))
 
 
 
+def status_text(m, sport):
+    """
+    One display string for game state, decided here rather than in the page.
+
+    The page previously had only a baseball branch, so a live football game
+    took it and rendered an empty inning plus a default of zero outs.
+    """
+    if not m:
+        return None
+    if m.get("final") or m.get("abstract") == "Final":
+        return "Final"
+    if m.get("in_play"):
+        if sport == "mlb":
+            half, inn = m.get("half") or "", m.get("inning") or ""
+            txt = f"{half} {inn}".strip()
+            if m.get("outs") is not None:
+                txt = f"{txt} \u00b7 {m['outs']} out".strip(" \u00b7")
+            return txt or "Live"
+        # ESPN's shortDetail beats rebuilding it: it covers halftime and
+        # end-of-quarter, which period+clock alone cannot express.
+        if m.get("detail"):
+            return m["detail"]
+        if m.get("period"):
+            return f"Q{m['period']} {m.get('clock') or ''}".strip()
+        return "Live"
+    if m.get("warmup"):
+        return "Warmup"
+    return None
+
+
 def code(name):
     """Short code where the sport has a map, full name where it doesn't."""
     teams = CFG.get("teams")
@@ -226,7 +256,10 @@ def build(days_shown=2, history_days=4, keep_hours=12):
             "status":   m.get("status"),
             "live":     bool(m.get("in_play")),
             "warmup":   bool(m.get("warmup")),
-            "final":    m.get("abstract") == "Final",
+            # MLB enrichment reports Final via abstract; ESPN via a flag.
+            # Checking only abstract meant football games never went final.
+            "final":    bool(m.get("final") or m.get("abstract") == "Final"),
+            "status_text": status_text(m, SPORT_ID),
             "away_p":   m.get("away_p"), "away_ph": m.get("away_p_hand"),
             "home_p":   m.get("home_p"), "home_ph": m.get("home_p_hand"),
             # ESPN returns "0" for scheduled games, so gate on game state --
@@ -244,7 +277,8 @@ def build(days_shown=2, history_days=4, keep_hours=12):
             # Warmup is deliberately NOT "started": MLB flips abstractGameState
             # to Live during warmups, which would red-flag a game whose lines
             # are still very much open.
-            "started":   ((m.get("in_play") or m.get("abstract") == "Final")
+            "started":   ((m.get("in_play") or m.get("final")
+                           or m.get("abstract") == "Final")
                           if m else start < datetime.now(LOCAL_TZ)),
             "away":      away_code, "home": home_code,
             "away_full": ev["away"], "home_full": ev["home"],

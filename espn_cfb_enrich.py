@@ -82,6 +82,10 @@ def summarize(ev):
 
     detailed = status.get("description") or status.get("name")
     state = status.get("state")          # pre | in | post
+    # ESPN already formats the game clock the way a scoreboard reads it --
+    # "14:15 - 2nd", "Halftime", "End of 3rd" -- including the cases a
+    # period+clock pair can't express on its own.
+    short = status.get("shortDetail")
 
     return {
         "espn_id":  ev.get("id"),
@@ -91,6 +95,7 @@ def summarize(ev):
         "city":     addr.get("city"),
         "state":    addr.get("state"),
         "status":   detailed,
+        "detail":   short,
         "in_play":  state == "in",
         "final":    state == "post",
         "period":   comp.get("status", {}).get("period"),
