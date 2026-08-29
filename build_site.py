@@ -289,6 +289,7 @@ def build_one(sport, outdir, days, keep_hours):
 
     try:
         payload = build(days_shown=days or CFG.get("days_shown", 2),
+                        history_days=CFG.get("history_days", 4),
                         keep_hours=keep_hours or CFG.get("keep_hours", 12))
     except FileNotFoundError:
         payload = {"generated": datetime.now(LOCAL_TZ).strftime("%a %b %d, %Y %I:%M:%S %p"),

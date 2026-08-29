@@ -72,6 +72,11 @@ SPORTS = {
         "teams":  MLB_TEAMS,
         # Daily sport: today plus tomorrow is the whole picture.
         "days_shown": 2,
+        # Day files to read back. A side's record lives in the file for the day
+        # its price last CHANGED, so this must reach back to when lines opened
+        # or unmoved sides silently vanish from the board. Baseball posts a day
+        # or two ahead, so 4 is ample.
+        "history_days": 4,
         # Hours after first pitch to keep a finished game on the board.
         "keep_hours": 12,
         "enrich": "mlb",
@@ -116,6 +121,11 @@ SPORTS = {
         # Weekly sport. Lines post ~a week out and the slate is one or two
         # days; a 2-day window would hide everything for most of the week.
         "days_shown": 9,
+        # Football posts about a week out and a line can sit untouched for
+        # days. With history_days=4 a Week 1 price written on the 22nd stopped
+        # being read on the 26th and the game went blank. Must comfortably
+        # exceed days_shown.
+        "history_days": 14,
         # Football runs long and late kickoffs finish after midnight; 12h would
         # clear a Saturday night game before Sunday morning.
         "keep_hours": 16,
