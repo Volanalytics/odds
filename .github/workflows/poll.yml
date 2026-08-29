@@ -42,34 +42,60 @@ concurrency:
 jobs:
   poll:
     runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          # A commit per poll makes full history pointless to fetch.
+          fetch-depth: 1
 
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: pip
 
-      - run: pip install requests tzdata
+      # tzdata is NOT installed: zoneinfo reads the system tz database on
+      # Linux runners. The pip package is only needed on Windows, where it was
+      # in the local instructions.
+      - run: pip install -r requirements.txt
 
-      - name: Refresh event index
+      # One-time layout change, safe to leave here forever: moves the flat
+      # data/odds + data/events.json into data/mlb/. Idempotent -- prints
+      # "nothing to migrate" on every run after the first. Keeping it in the
+      # workflow means the repo migrates itself without a local clone.
+      - name: Migrate storage layout if needed
+        run: python migrate_to_sports.py
+
+      # Free endpoint, so refresh every sport's index every run.
+      - name: Refresh event indexes
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
-        run: python odds_poller.py --mode skeleton
+        run: |
+          for S in mlb ncaaf; do
+            python odds_poller.py --sport "$S" --mode skeleton
+          done
 
-      # Featured markets: 3 credits for the whole slate.
+      # Featured markets: 3 credits per sport for the whole slate, however
+      # many games. Cheap enough to run for every sport every invocation --
+      # the cadence tables skip most of these before any HTTP happens.
       - name: Poll main lines
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: |
           ARGS=""
           if [ "${{ github.event.inputs.force }}" = "true" ]; then ARGS="--force"; fi
-          python odds_poller.py --mode main $ARGS
+          for S in mlb ncaaf; do
+            python odds_poller.py --sport "$S" --mode main $ARGS
+          done
 
-      # F5 + team totals, ~4 credits per game. This MUST run on its own step:
-      # keying the mode off github.event.inputs meant scheduled runs always got
-      # 'main' and deep never fired at all. EVENT_CADENCE throttles it to about
-      # one sweep per game per 30-60 min, so running it every invocation is
-      # cheap -- most calls are skipped before any HTTP happens.
+      # Period markets, billed PER GAME: ~4 credits for MLB's 15, but ~8 keys
+      # x 60 games on an NCAAF Saturday is ~480 a sweep. event_cadence in
+      # sports.py is what keeps that affordable -- NCAAF only sweeps inside 6
+      # hours of kickoff, so a Saturday clears in waves rather than one burst.
+      #
+      # This MUST be its own step: keying the mode off github.event.inputs
+      # meant scheduled runs always got 'main' and deep never fired at all.
       - name: Poll period markets
         if: github.event.inputs.mode != 'main'
         env:
@@ -77,14 +103,23 @@ jobs:
         run: |
           ARGS=""
           if [ "${{ github.event.inputs.force }}" = "true" ]; then ARGS="--force"; fi
-          python odds_poller.py --mode deep $ARGS
+          for S in mlb ncaaf; do
+            python odds_poller.py --sport "$S" --mode deep $ARGS
+          done
 
       # Free: MLB Stats API needs no key and doesn't touch the odds quota.
       # Never fail the run over it -- a missing mlb.json degrades the board to
       # odds-only rather than losing the prices we already paid for.
-      - name: Pitchers and live scores
+      # Both are free public APIs, neither touches the odds quota. Never fail
+      # the run over them: a missing enrich file degrades a board to odds-only
+      # rather than losing prices we already paid credits for.
+      - name: Pitchers and live scores (MLB)
         continue-on-error: true
         run: python mlb_enrich.py
+
+      - name: Venues, neutral sites and scores (NCAAF)
+        continue-on-error: true
+        run: python espn_cfb_enrich.py
 
       - name: Build site
         env:
@@ -118,6 +153,7 @@ jobs:
           body: file://data/alert_body.txt
 
       - name: Commit
+        id: commit
         run: |
           git config user.name  "odds-bot"
           git config user.email "odds-bot@users.noreply.github.com"
@@ -126,18 +162,25 @@ jobs:
           # add noise and burn a Pages build for no reason.
           if git diff --staged --quiet; then
             echo "no changes"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "odds $(date -u +'%Y-%m-%d %H:%M')"
             git pull --rebase --autostash origin ${{ github.ref_name }}
             git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
 
+      # Uploading and deploying an unchanged site costs a second runner
+      # allocation (~70s of the ~110s total) to publish bytes identical to
+      # what is already live. Skip both when nothing moved.
       - uses: actions/upload-pages-artifact@v3
+        if: steps.commit.outputs.changed == 'true'
         with:
           path: site
 
   deploy:
     needs: poll
+    if: needs.poll.outputs.changed == 'true'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
