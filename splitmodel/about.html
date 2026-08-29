@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>MLB Form &middot; About</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --field:#08161B; --panel:#102A31; --panel-2:#173A44;
+  --line:#1F5058;
+  --chalk:#EAF0F6; --muted:#8199B0; --accent:#3FD0C9;
+  --gain:#8CC63F; --loss:#E8615C;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--field);color:var(--chalk);
+  font-family:"Roboto Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  font-size:14px;line-height:1.55;-webkit-text-size-adjust:100%;
+  font-variant-numeric:tabular-nums}
+a{color:var(--accent);text-decoration:none}
+header{border-bottom:1px solid var(--line);background:var(--panel);
+  position:sticky;top:0;z-index:5}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+.brand{display:flex;align-items:baseline;gap:12px;padding:14px 0 0}
+.brand h1{font-weight:700;font-size:22px;letter-spacing:.14em;
+  text-transform:uppercase;margin:0}
+.brand .stamp{font-size:11px;color:var(--muted);letter-spacing:.08em}
+nav{display:flex;gap:4px;padding:10px 0 0}
+nav a{padding:8px 14px;border-radius:6px 6px 0 0;font-size:13px;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
+  font-weight:500}
+nav a.on{background:var(--field);color:var(--chalk);
+  box-shadow:inset 0 2px 0 var(--accent)}
+main{padding:22px 0 60px}
+.note{color:var(--muted);font-size:13px;margin:0 0 18px;max-width:70ch}
+h2{font-weight:700;font-size:16px;letter-spacing:.12em;
+  text-transform:uppercase;margin:26px 0 10px;color:var(--chalk)}
+h2:first-of-type{margin-top:0}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{font-weight:500;font-size:11px;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--muted);
+  text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);
+  white-space:nowrap;background:var(--field)}
+td{padding:9px 10px;border-bottom:1px solid rgba(36,64,92,.5)}
+tbody tr:hover{background:var(--panel)}
+.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.team{font-weight:500}
+.fav{color:var(--accent)}
+.date{color:var(--muted);font-size:13px}
+.pos{color:var(--gain)} .neg{color:var(--loss)}
+.pill{display:inline-block;padding:1px 7px;border-radius:99px;font-size:10px;
+  letter-spacing:.08em;text-transform:uppercase;background:var(--panel-2);
+  color:var(--muted)}
+.board{display:none}
+.game{background:var(--panel);border:1px solid var(--line);border-radius:10px;
+  margin:0 0 10px;overflow:hidden}
+.game .kick{padding:7px 12px;background:var(--panel-2);font-size:11px;
+  letter-spacing:.08em;color:var(--muted);
+  display:flex;justify-content:space-between;align-items:center}
+.game .side{display:flex;justify-content:space-between;align-items:center;
+  padding:10px 12px}
+.game .side + .side{border-top:1px solid rgba(36,64,92,.6)}
+.game .side .nm{font-weight:500;font-size:14px}
+.game .side .sc{font-weight:700;font-size:26px;line-height:1;
+  font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.game .side.win .sc{color:var(--accent)}
+.game .foot{padding:7px 12px;border-top:1px solid rgba(36,64,92,.6);
+  font-size:11px;color:var(--muted);display:flex;gap:14px;
+  letter-spacing:.06em}
+@media(max-width:760px){
+  .tbl{display:none}
+  .board{display:block}
+  .wrap{padding:0 12px}
+}
+th[data-t]{cursor:pointer;user-select:none;position:relative}
+th[data-t]:hover{color:var(--chalk)}
+th[data-t]::after{content:"";opacity:.35;margin-left:6px;font-size:10px}
+th[data-t][data-dir="asc"]::after{content:"\2191";opacity:1;color:var(--accent)}
+th[data-t][data-dir="desc"]::after{content:"\2193";opacity:1;color:var(--accent)}
+th[data-t]:not([data-dir])::after{content:"\2195"}
+.tools{display:flex;gap:8px;align-items:center;margin:0 0 14px}
+.tools input{flex:1;background:var(--panel);color:var(--chalk);
+  border:1px solid var(--line);border-radius:6px;padding:9px 11px;
+  font-family:inherit;font-size:13px}
+.tools input::placeholder{color:var(--muted)}
+.tools .count{font-size:11px;color:var(--muted);letter-spacing:.08em;
+  white-space:nowrap}
+tr.row{cursor:pointer}
+tr.row td:first-child{position:relative;padding-left:22px}
+tr.row td:first-child::before{content:"\203A";position:absolute;left:8px;
+  color:var(--muted);transition:transform .12s;display:inline-block}
+tr.row.open td:first-child::before{transform:rotate(90deg);color:var(--accent)}
+tr.det{display:none}
+tr.det.show{display:table-row}
+tr.det > td{background:var(--panel);padding:14px 16px}
+.mx{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.mx h4{margin:0 0 8px;font-size:12px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--accent);font-weight:500}
+.mx table{font-size:12px}
+.mx td{padding:3px 6px;border:0}
+.mx .k{color:var(--muted)}
+.mx .v{text-align:right;font-variant-numeric:tabular-nums}
+table.wingrid{font-size:12px;margin-top:4px}
+table.wingrid th{padding:4px 8px;background:transparent;border-bottom:1px solid var(--line)}
+table.wingrid th.v{text-align:right}
+table.wingrid td{padding:4px 8px;border-bottom:1px solid rgba(36,64,92,.35)}
+table.wingrid td.k{color:var(--muted);text-align:left;white-space:nowrap}
+table.wingrid td.v{text-align:right;font-variant-numeric:tabular-nums}
+table.wingrid tr.shared td{color:var(--muted)}
+table.wingrid tr.shared td.v{color:var(--chalk)}
+.game .det2{display:none;padding:12px;border-top:1px solid var(--line);
+  background:var(--panel-2)}
+.game.open .det2{display:block}
+.game .kick{cursor:pointer}
+@media(max-width:760px){.mx{grid-template-columns:1fr}}
+/* Wide tables scroll sideways instead of being clipped. The first column is
+   pinned so the team name stays visible while the numbers move under it -
+   without that, a horizontally scrolled row is unreadable. */
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;
+  scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+.scroll > table{min-width:max-content}
+.scroll::-webkit-scrollbar{height:6px}
+.scroll::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}
+.pin th:first-child,.pin td:first-child{position:sticky;left:0;z-index:2;
+  background:var(--field)}
+.pin tbody tr:hover td:first-child{background:var(--panel)}
+tr.det .pin th:first-child,tr.det .pin td:first-child,
+.det2 .pin th:first-child,.det2 .pin td:first-child{background:var(--panel)}
+.det2 .pin th:first-child,.det2 .pin td:first-child{background:var(--panel-2)}
+.scroll{max-width:100%}
+.wingrid.pin td.k,.wingrid.pin th.k{position:sticky;left:0;z-index:2;
+  background:var(--panel);min-width:104px}
+.det2 .wingrid.pin td.k,.det2 .wingrid.pin th.k{background:var(--panel-2)}
+.wingrid th.v,.wingrid td.v{min-width:56px}
+@media(max-width:760px){
+  th[data-t]{padding:11px 10px}   /* larger tap target for sorting */
+  tr.det > td{padding:12px 10px}
+  .mx{gap:12px}
+  .wingrid{font-size:11px}
+  .wingrid th,.wingrid td{padding:4px 6px}
+}
+.swipe{display:none;font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted);margin:0 0 4px}
+@media(max-width:760px){.swipe{display:block}}
+.sorter{display:none;margin:0 0 12px;gap:8px;align-items:center}
+.sorter label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--muted)}
+.sorter select{background:var(--panel);color:var(--chalk);
+  border:1px solid var(--line);border-radius:6px;padding:7px 9px;
+  font-family:inherit;font-size:13px;flex:1}
+.sorter button{background:var(--panel);color:var(--chalk);
+  border:1px solid var(--line);border-radius:6px;padding:7px 11px;
+  font-family:inherit;font-size:13px;cursor:pointer}
+@media(max-width:760px){.sorter{display:flex}}
+.prose{max-width:78ch}
+.prose h3{font-size:14px;letter-spacing:.1em;text-transform:uppercase;
+  margin:28px 0 8px;color:var(--accent);font-weight:500}
+.prose p{margin:0 0 12px;color:#C4D2DF}
+.prose code{background:var(--panel);padding:1px 5px;border-radius:4px;
+  font-size:12px;color:var(--chalk)}
+.prose ul{margin:0 0 14px;padding-left:18px;color:#C4D2DF}
+.prose li{margin:0 0 6px}
+.toc{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 20px}
+.toc a{background:var(--panel);border:1px solid var(--line);border-radius:6px;
+  padding:5px 10px;font-size:12px;color:var(--chalk)}
+.toc a:hover{border-color:var(--accent)}
+.hit{color:var(--gain)} .miss{color:var(--loss)}
+.big{display:flex;gap:22px;flex-wrap:wrap;margin:0 0 20px}
+.big div{background:var(--panel);border:1px solid var(--line);
+  border-radius:8px;padding:12px 16px;min-width:120px}
+.big .n{font-size:24px;font-weight:700;font-variant-numeric:tabular-nums}
+.big .l{font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted);margin-top:2px}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:12px;
+  padding:16px 0 40px}
+header .wrap{position:relative}
+.portal{position:absolute;right:16px;bottom:9px;
+  display:inline-flex;align-items:center;gap:7px;
+  background:#3FD0C9;color:#08161B;
+  font-family:inherit;font-size:12px;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;
+  padding:8px 14px;border-radius:8px;white-space:nowrap;
+  box-shadow:0 3px 14px rgba(63,208,201,.30),0 1px 0 rgba(255,255,255,.10);
+  transition:transform .12s,box-shadow .12s,filter .12s}
+.portal:hover{color:#08161B;transform:translateY(-2px);filter:brightness(1.08);
+  box-shadow:0 6px 20px rgba(63,208,201,.42),0 1px 0 rgba(255,255,255,.14)}
+.portal:active{transform:translateY(0)}
+.portal:focus-visible{outline:2px solid var(--chalk);outline-offset:3px}
+.portal .ar{font-size:13px;line-height:1}
+@media(min-width:761px){.brand{padding-right:170px;flex-wrap:wrap}}
+@media(max-width:760px){
+  .portal{position:static;margin:10px 0 2px;font-size:11px;padding:7px 12px}
+}
+</style></head>
+<body><header><div class="wrap">
+<div class="brand"><h1>MLB Projections &middot; Form</h1>
+<span class="stamp">MLB &middot; built Aug 29, 2026 13:41</span></div>
+<nav><a href="index.html" class="">Games</a><a href="about.html" class="on">About</a></nav>
+<a class="portal" href="https://volanalytics.github.io/Portal/"><span class="ar">&#8592;</span> All Models</a>
+</div></header>
+<main><div class="wrap">
+<h2>What this page is</h2>
+<p class="note">These are the same games as the main model, priced from a
+different reading of recent form. Everything downstream of the rates - the
+regression, log5, the base-out simulator, advancement, park and umpire
+handling - is shared code. Only the plate appearances feeding the rates
+change.</p>
+
+<h2>Windows are games, not days</h2>
+<p class="note">The main model looks back a fixed number of days. A calendar
+window hands every player the same number of days and a wildly different number
+of plate appearances: over seven days a regular gets around thirty, a platoon
+bat gets nine, a starter gets one outing or two depending on where his turn
+fell, and a player who sat with a tight hamstring gets zero and quietly reverts
+to league average. These windows are the last 15, 7 and 3 <em>games
+played</em>, which equalises the sample the regression actually cares about.</p>
+
+<h2>Each player is read from today's side</h2>
+<p class="note">A player starting on the road is rated from his road games
+only, and a player at home from his home games. That reaches back further in
+calendar time than it sounds: teams travel in series, so a hitter's last three
+road games are usually four to eight days back, and his last fifteen are most
+of six weeks. For a starting pitcher, who works every fifth day and splits his
+turns between home and road, fifteen road starts is close to a full season.</p>
+
+<h2>Park factors are removed before they are applied</h2>
+<p class="note">A home split is built entirely from one park, so the observed
+rates already carry it. Applying the park factor again on top would count it
+twice, which at the extreme parks is worth real runs. Every rate here is
+divided by the plate-appearance-weighted park factor of the games it was built
+from before the simulator applies today's park. The correction acts on the
+observed counts alone, not on the blend, because the regression anchor is
+already park-neutral.</p>
+
+<h2>Anchors are season-long on purpose</h2>
+<p class="note">The target a short window is regressed toward is always built
+from season-to-date data. Anchoring a twelve-plate-appearance sample to a
+twelve-plate-appearance estimate of where it should be anchored is not
+regression; it is noise regressed toward itself.</p>
+
+<h2>These numbers are not backtested</h2>
+<p class="note">The calibration constants and the backtest figures on the main
+site were both measured on season rates. Neither carries over to these windows.
+Expect the short windows to show <em>less</em> spread between games than the
+season column, not more: every rate is regressed by sample size, so a
+three-game window hands most of the weight to the anchor and the teams
+converge. A form column wider than the season column is a symptom of a
+problem, not a sign of sharper reads.</p>
+</div></main>
+<script>
+(function(){
+  var val=function(el,t){
+    var s=(el.getAttribute('data-v')!==null)?el.getAttribute('data-v'):el.textContent;
+    s=s.trim();
+    if(t==='num'){var n=parseFloat(s.replace(/[^0-9.+-]/g,''));return isNaN(n)?-Infinity:n;}
+    return s.toLowerCase();
+  };
+  document.querySelectorAll('table').forEach(function(tb){
+    var heads=tb.querySelectorAll('thead th');
+    heads.forEach(function(th,i){
+      if(!th.hasAttribute('data-t'))return;
+      th.setAttribute('tabindex','0');
+      var go=function(){
+        var t=th.getAttribute('data-t');
+        var dir=th.getAttribute('data-dir')==='asc'?'desc':'asc';
+        heads.forEach(function(h){h.removeAttribute('data-dir');});
+        th.setAttribute('data-dir',dir);
+        var body=tb.querySelector('tbody');
+        var all=Array.prototype.slice.call(body.querySelectorAll('tr'));
+        var rows=all.filter(function(r){return !r.classList.contains('det');});
+        var dets={};
+        all.forEach(function(r){
+          if(r.classList.contains('det'))dets[r.getAttribute('data-g')]=r;
+        });
+        rows.sort(function(a,b){
+          var x=val(a.cells[i],t),y=val(b.cells[i],t);
+          if(x<y)return dir==='asc'?-1:1;
+          if(x>y)return dir==='asc'?1:-1;
+          return 0;
+        });
+        rows.forEach(function(r){
+          body.appendChild(r);
+          var g=r.getAttribute('data-g');
+          if(g!==null&&dets[g])body.appendChild(dets[g]);
+        });
+      };
+      th.addEventListener('click',go);
+      th.addEventListener('keydown',function(ev){
+        if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();go();}
+      });
+    });
+  });
+  var tbl=document.querySelector('table'),
+      tb=tbl?tbl.querySelector('tbody'):null;
+  if(tb){
+    tb.addEventListener('click',function(ev){
+      var tr=ev.target.closest('tr.row');
+      if(!tr)return;
+      var g=tr.getAttribute('data-g');
+      var d=tb.querySelector("tr.det[data-g='"+g+"']");
+      if(!d)return;
+      var open=d.classList.toggle('show');
+      tr.classList.toggle('open',open);
+    });
+  }
+  var bd=document.querySelector('.board');
+  if(bd){
+    bd.addEventListener('click',function(ev){
+      var c=ev.target.closest('.game');
+      if(c&&c.querySelector('.det2'))c.classList.toggle('open');
+    });
+  }
+  var q=document.getElementById('q'),qn=document.getElementById('qn');
+  if(q){
+    var filter=function(){
+      var v=q.value.trim().toLowerCase(),shown=0,total=0;
+      if(tb){
+        tb.querySelectorAll('tr.row, tr:not(.det):not(.row)').forEach(function(tr){
+          total++;
+          var hit=!v||tr.textContent.toLowerCase().indexOf(v)>-1;
+          tr.style.display=hit?'':'none';
+          if(hit)shown++;
+          var g=tr.getAttribute('data-g');
+          if(g!==null){
+            var d=tb.querySelector("tr.det[data-g='"+g+"']");
+            if(d&&!hit){d.classList.remove('show');tr.classList.remove('open');}
+          }
+        });
+      }
+      if(bd){
+        bd.querySelectorAll('.game').forEach(function(c){
+          var hit=!v||c.textContent.toLowerCase().indexOf(v)>-1;
+          c.style.display=hit?'':'none';
+          if(!hit)c.classList.remove('open');
+        });
+      }
+      if(qn)qn.textContent=v?shown+' / '+total:'';
+    };
+    q.addEventListener('input',filter);
+    q.addEventListener('keydown',function(ev){
+      if(ev.key==='Escape'){q.value='';filter();}
+    });
+  }
+  var board=document.querySelector('.board'),sel=document.getElementById('bsort'),
+      btn=document.getElementById('bdir');
+  if(board&&sel){
+    var asc=true;
+    var apply=function(){
+      var k=sel.value,t=sel.options[sel.selectedIndex].getAttribute('data-t');
+      var cards=Array.prototype.slice.call(board.querySelectorAll('.game'));
+      cards.sort(function(a,b){
+        var x=a.getAttribute('data-'+k),y=b.getAttribute('data-'+k);
+        if(t==='num'){x=parseFloat(x);y=parseFloat(y);}
+        else{x=(x||'').toLowerCase();y=(y||'').toLowerCase();}
+        if(x<y)return asc?-1:1;
+        if(x>y)return asc?1:-1;
+        return 0;
+      });
+      cards.forEach(function(c){board.appendChild(c);});
+      btn.textContent=asc?'\u2191':'\u2193';
+    };
+    sel.addEventListener('change',apply);
+    btn.addEventListener('click',function(){asc=!asc;apply();});
+  }
+})();
+</script>
+<footer><div class="wrap">Model output, not advice. Held-out error is about 3.7 runs a game and the model does not yet beat a league-average constant — treat every number as a wide estimate.</div></footer>
+</body></html>
