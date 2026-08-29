@@ -155,20 +155,49 @@ jobs:
       - name: Commit
         id: commit
         run: |
+          set -u
           git config user.name  "odds-bot"
           git config user.email "odds-bot@users.noreply.github.com"
+
+          # alert_body.txt is scratch for the mail step, rewritten every run.
+          # Committing it achieved nothing and guaranteed an add/add conflict
+          # whenever two writers overlapped.
           git add data site
+          git reset -q data/alert_body.txt 2>/dev/null || true
+
           # Nothing changed on a cadence-skipped run; an empty commit would
           # add noise and burn a Pages build for no reason.
           if git diff --staged --quiet; then
             echo "no changes"
             echo "changed=false" >> "$GITHUB_OUTPUT"
-          else
-            git commit -m "odds $(date -u +'%Y-%m-%d %H:%M')"
-            git pull --rebase --autostash origin ${{ github.ref_name }}
-            git push
-            echo "changed=true" >> "$GITHUB_OUTPUT"
+            exit 0
           fi
+
+          git commit -q -m "odds $(date -u +'%Y-%m-%d %H:%M')"
+
+          # Push with retry. Everything under data/ and site/ is generated, so
+          # there is no sensible three-way merge -- "-X ours" keeps this run's
+          # freshly built output while still replaying onto whatever landed on
+          # origin (a file upload, another run). Without it a human commit
+          # during a run leaves the rebase half-applied and fails the job.
+          for attempt in 1 2 3; do
+            if git push -q origin HEAD:${{ github.ref_name }}; then
+              echo "pushed on attempt $attempt"
+              echo "changed=true" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            echo "push rejected, rebasing (attempt $attempt)"
+            git fetch -q origin ${{ github.ref_name }}
+            if ! git rebase -q -X ours FETCH_HEAD; then
+              git rebase --abort || true
+              echo "rebase failed; leaving origin untouched"
+              echo "changed=false" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+          done
+
+          echo "could not push after 3 attempts"
+          echo "changed=false" >> "$GITHUB_OUTPUT"
 
       # Uploading and deploying an unchanged site costs a second runner
       # allocation (~70s of the ~110s total) to publish bytes identical to
