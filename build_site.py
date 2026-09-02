@@ -200,6 +200,8 @@ def build(days_shown=2, history_days=4, keep_hours=12):
             continue
 
         m = mlb.get(eid, {})
+        is_final = bool(m.get("final") or m.get("abstract") == "Final")
+        show_score = bool(m.get("in_play") or is_final)
         # College has no hard team map, so ESPN's abbreviation is the only way
         # to get "Georgia Bulldogs" down to something a column can hold.
         away_code = m.get("away_abbr") or ev["away"]
@@ -258,14 +260,16 @@ def build(days_shown=2, history_days=4, keep_hours=12):
             "warmup":   bool(m.get("warmup")),
             # MLB enrichment reports Final via abstract; ESPN via a flag.
             # Checking only abstract meant football games never went final.
-            "final":    bool(m.get("final") or m.get("abstract") == "Final"),
+            "final":    is_final,
             "status_text": status_text(m, SPORT_ID),
             "away_p":   m.get("away_p"), "away_ph": m.get("away_p_hand"),
             "home_p":   m.get("home_p"), "home_ph": m.get("home_p_hand"),
             # ESPN returns "0" for scheduled games, so gate on game state --
-            # a green 0-0 on a game six days out reads as a live score.
-            "away_r":   m.get("away_r") if (m.get("in_play") or m.get("final")) else None,
-            "home_r":   m.get("home_r") if (m.get("in_play") or m.get("final")) else None,
+            # a green 0-0 on a game six days out reads as a live score. The old
+            # gate used m["final"], which MLB never sets, so baseball scores
+            # disappeared the moment a game went final.
+            "away_r":   m.get("away_r") if show_score else None,
+            "home_r":   m.get("home_r") if show_score else None,
             "inning":   m.get("inning"), "half": m.get("half"),
             "outs":     m.get("outs"),
             "event_id":  eid,
@@ -277,8 +281,7 @@ def build(days_shown=2, history_days=4, keep_hours=12):
             # Warmup is deliberately NOT "started": MLB flips abstractGameState
             # to Live during warmups, which would red-flag a game whose lines
             # are still very much open.
-            "started":   ((m.get("in_play") or m.get("final")
-                           or m.get("abstract") == "Final")
+            "started":   ((m.get("in_play") or is_final)
                           if m else start < datetime.now(LOCAL_TZ)),
             "away":      away_code, "home": home_code,
             "away_full": ev["away"], "home_full": ev["home"],

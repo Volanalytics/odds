@@ -40,6 +40,35 @@ def parse_iso(s):
     return datetime.strptime(s, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
 
 
+# Schools the two feeds spell differently enough that normalisation alone
+# won't bridge them. Keys and values are both normalised forms.
+ALIAS = {
+    "umass": "massachusetts", "uconn": "connecticut",
+    "ucf": "central florida", "usf": "south florida",
+    "utsa": "texas san antonio", "utep": "texas el paso",
+    "unlv": "nevada las vegas", "usc": "southern california",
+    "ole miss": "mississippi", "app state": "appalachian state",
+    "fiu": "florida international", "fau": "florida atlantic",
+    "southern miss": "southern mississippi",
+    "ul monroe": "louisiana monroe", "ull": "louisiana",
+    "louisiana lafayette": "louisiana",
+    "middle tennessee": "middle tennessee state",
+    "sam houston": "sam houston state",
+    "nc state": "north carolina state",
+    "pitt": "pittsburgh", "ul lafayette": "louisiana",
+}
+
+
+def canon(s):
+    """Fold a normalised name onto a single spelling both feeds agree on."""
+    s = ALIAS.get(s, s)
+    for k, v in ALIAS.items():
+        # Also catch "umass minutemen" -> "massachusetts minutemen"
+        if s.startswith(k + " "):
+            return v + s[len(k):]
+    return s
+
+
 def norm(s):
     """
     Squash a school name to something comparable across two feeds.
@@ -53,7 +82,7 @@ def norm(s):
     s = s.lower().replace("&", " and ")
     s = re.sub(r"\bst\.?\b", "saint", s)
     s = re.sub(r"[^a-z0-9 ]", "", s)
-    return re.sub(r"\s+", " ", s).strip()
+    return canon(re.sub(r"\s+", " ", s).strip())
 
 
 def fetch_day(day):
