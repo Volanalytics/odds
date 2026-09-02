@@ -55,18 +55,31 @@ ALIAS = {
     "southern miss": "southern mississippi",
     "ul monroe": "louisiana monroe", "ull": "louisiana",
     "louisiana lafayette": "louisiana",
-    "middle tennessee": "middle tennessee state",
-    "sam houston": "sam houston state",
+    "middle tennessee state": "middle tennessee",
     "nc state": "north carolina state",
     "pitt": "pittsburgh", "ul lafayette": "louisiana",
+    # FCS schools BetOnline prices against FBS hosts, where the two feeds
+    # disagree on the school name or ESPN uses the post-rename form.
+    "houston baptist": "houston christian",
+    "liu": "long island university",
+    "albany": "ualbany",
+    "citadel": "the citadel",
+    "nicholls state": "nicholls",
+    "sam houston state": "sam houston",
 }
 
 
 def canon(s):
-    """Fold a normalised name onto a single spelling both feeds agree on."""
-    s = ALIAS.get(s, s)
+    """
+    Fold a normalised name onto one spelling both feeds agree on.
+
+    Returns on the FIRST hit. The earlier version kept scanning after a
+    substitution, so "sam houston state bearkats" matched the "sam houston"
+    prefix and became "sam houston state state bearkats".
+    """
+    if s in ALIAS:
+        return ALIAS[s]
     for k, v in ALIAS.items():
-        # Also catch "umass minutemen" -> "massachusetts minutemen"
         if s.startswith(k + " "):
             return v + s[len(k):]
     return s
@@ -83,8 +96,16 @@ def norm(s):
     s = unicodedata.normalize("NFKD", s or "")
     s = "".join(c for c in s if not unicodedata.combining(c))
     s = s.lower().replace("&", " and ")
-    s = re.sub(r"\bst\.?\b", "saint", s)
-    s = re.sub(r"[^a-z0-9 ]", "", s)
+    # "St" is Saint at the start of a name (St. John's) and State anywhere
+    # else (Youngstown St). Expanding it to "saint" everywhere is why the FCS
+    # visitors failed to match.
+    s = re.sub(r"^st\.?\b", "saint", s)
+    s = re.sub(r"\bst\.?\b", "state", s)
+    # Apostrophes are deleted so "John's" -> "johns" (matching ESPN's
+    # "Johns"); every other separator becomes a space so "Arkansas-Pine Bluff"
+    # keeps its word break instead of collapsing to "arkansaspine".
+    s = s.replace("'", "").replace("\u2019", "")
+    s = re.sub(r"[^a-z0-9]+", " ", s)
     return canon(re.sub(r"\s+", " ", s).strip())
 
 
@@ -146,6 +167,7 @@ def summarize(ev):
         "away_r":   (teams.get("away") or {}).get("score"),
         "home_r":   (teams.get("home") or {}).get("score"),
         "_names":   {k: [v.get("name"), v.get("short")] for k, v in teams.items()},
+        "_start":   ev.get("date"),
     }
 
 
@@ -190,19 +212,38 @@ def main():
                     lookup.setdefault(norm(n), set()).add(id(s))
     by_id = {id(s): s for s in summaries}
 
+    # ESPN kickoff times, for the single-team fallback below.
+    when = {}
+    for s_ in summaries:
+        try:
+            when[id(s_)] = parse_iso(s_["_start"].replace(".000Z", "Z"))
+        except Exception:
+            pass
+
     out, missed = {}, []
     for eid, ev in index.items():
-        a, h = lookup.get(norm(ev["away_team"])), lookup.get(norm(ev["home_team"]))
-        both = (a & h) if (a and h) else set()
-        if not both:
+        a = lookup.get(norm(ev["away_team"])) or set()
+        h = lookup.get(norm(ev["home_team"])) or set()
+        target = parse_iso(ev["commence_time"])
+
+        cands = [by_id[i] for i in (a & h)]
+        if not cands:
+            # Fall back to ONE side matching. An FCS visitor at an FBS host is
+            # the common case: the host always matches, the visitor often
+            # doesn't, and a given team plays once a day -- so the host plus a
+            # kickoff within a few hours identifies the game unambiguously.
+            near = [by_id[i] for i in (a | h)
+                    if id(by_id[i]) in when
+                    and abs((when[id(by_id[i])] - target).total_seconds()) < 4 * 3600]
+            cands = near
+
+        if not cands:
             missed.append(f"{ev['away_team']} @ {ev['home_team']}")
             continue
-        # A pairing can theoretically repeat (neutral-site doubleheaders are
-        # not a thing, but rescheduled games are); take the closest kickoff.
-        cands = [by_id[i] for i in both]
-        best = cands[0]
-        rec = {k: v for k, v in best.items() if not k.startswith("_")}
-        out[eid] = rec
+
+        best = min(cands, key=lambda g: abs(
+            (when.get(id(g), target) - target).total_seconds()))
+        out[eid] = {k: v for k, v in best.items() if not k.startswith("_")}
 
     os.makedirs(os.path.join(DATA_DIR, SPORT), exist_ok=True)
     dst = os.path.join(DATA_DIR, SPORT, "enrich.json")
