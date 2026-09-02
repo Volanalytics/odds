@@ -207,12 +207,16 @@ function venueLine(g){
   return `<div class="neu">NEUTRAL${where ? " \u00b7 " + where : ""}</div>`;
 }
 
+/* The builder decides the wording per sport (build_site.status_text); the page
+   only picks a colour. The old version had a baseball branch first, so a live
+   football game took it and rendered an empty inning plus "0 out". */
 function statusLine(g){
-  if(g.live)   return `<div class="st live">${g.half || ""} ${g.inning || ""} &middot; ${g.outs ?? 0} out</div>`;
-  if(g.final)  return '<div class="st">Final</div>';
-  if(g.warmup) return '<div class="st warm">Warmup</div>';
-  if(g.period)  return `<div class="st live">Q${g.period} ${g.clock || ""}</div>`;
-  return "";
+  if(!g.status_text) return "";
+  const cls = g.live   ? "st live"
+            : g.warmup ? "st warm"
+            : g.final  ? "st fin"
+            : "st";
+  return `<div class="${cls}">${g.status_text}</div>`;
 }
 
 function sideHTML(s, which){
