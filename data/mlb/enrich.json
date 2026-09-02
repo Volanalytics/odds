@@ -44,7 +44,7 @@
   "in_play": false,
   "inning": null,
   "outs": null,
-  "status": "Scheduled",
+  "status": "Pre-Game",
   "warmup": false
  },
  "0d8e1807210d19a49240ad01d066fb7f": {
@@ -121,11 +121,11 @@
   "home_p": "Brad Lord",
   "home_p_hand": "R",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "outs": 0,
-  "status": "Warmup",
-  "warmup": true
+  "status": "In Progress",
+  "warmup": false
  },
  "181d022629a9f3260d9dac6c16488626": {
   "abstract": "Final",
@@ -483,15 +483,15 @@
   "abstract": "Preview",
   "away_p": "Andrew Painter",
   "away_p_hand": "R",
-  "away_r": null,
+  "away_r": 0,
   "game_pk": 825037,
-  "half": null,
+  "half": "Top",
   "home_p": "Taylor Clarke",
   "home_p_hand": "R",
-  "home_r": null,
+  "home_r": 0,
   "in_play": false,
-  "inning": null,
-  "outs": null,
+  "inning": 1,
+  "outs": 0,
   "status": "Pre-Game",
   "warmup": false
  },
@@ -667,7 +667,7 @@
   "home_r": 0,
   "in_play": true,
   "inning": 2,
-  "outs": 0,
+  "outs": 2,
   "status": "In Progress",
   "warmup": false
  }
