@@ -33,12 +33,15 @@ header{position:sticky;top:0;z-index:20;background:var(--field);
 .st{font-size:10px;color:var(--dim)}
 .st.live{color:var(--m5);font-weight:500}
 .st.warm{color:var(--m10)}
+.st.fin{color:var(--m10);font-weight:700}
 .rank{color:var(--m5);font-size:10px;font-weight:700;margin-right:3px;
       vertical-align:top}
 .neu{display:inline-block;margin-top:3px;font-size:10px;font-weight:700;
      letter-spacing:.5px;color:#04161A;background:var(--m10);
      border-radius:3px;padding:1px 5px}
-.side{color:var(--dim);font-size:11px;display:inline-block;min-width:36px;text-align:left}
+.side{color:var(--dim);font-size:11px;display:inline-block;min-width:36px;
+      max-width:92px;text-align:left;overflow:hidden;text-overflow:ellipsis;
+      white-space:nowrap;vertical-align:bottom}
 /* Highlight chip. The colour is !important on purpose: .mv is a state class
    that has to win over whatever text colour the surrounding cell sets, and
    relying on declaration order broke once already (pale ink on yellow at
@@ -139,7 +142,7 @@ tr.det td{background:#061014;padding:0;text-align:left}
   .side{font-size:13px;min-width:44px}
   @media (max-width:400px){
     .mkln{font-size:13px}
-    .side{min-width:38px;font-size:12px}
+    .side{min-width:38px;max-width:74px;font-size:12px}
   }
   .chist .dhead{font-size:13px}
   .chist .hrow{font-size:13px;padding:2px 0}
