@@ -31,8 +31,11 @@ SPORT    = "ncaaf"
 API      = ("https://site.api.espn.com/apis/site/v2/sports/"
             "football/college-football/scoreboard")
 
-# groups=80 is FBS. Left off deliberately: BetOnline prices some FCS games and
-# omitting the filter returns all divisions.
+# ESPN's college football scoreboard defaults to FBS. Omitting the filter does
+# NOT return everything -- FCS games simply never appear, so BetOnline's
+# Arkansas Pine Bluff / Missouri type matchups could never match and fell back
+# to full school names in the odds cells. 80 = FBS, 81 = FCS.
+GROUPS = ["80", "81"]
 PARAMS = {"limit": 300}
 
 
@@ -86,10 +89,17 @@ def norm(s):
 
 
 def fetch_day(day):
-    p = dict(PARAMS, dates=day)
-    r = requests.get(API, params=p, timeout=30)
-    r.raise_for_status()
-    return r.json().get("events", [])
+    """All divisions for one date. Free, so the extra request costs nothing."""
+    out, seen = [], set()
+    for grp in GROUPS:
+        p = dict(PARAMS, dates=day, groups=grp)
+        r = requests.get(API, params=p, timeout=30)
+        r.raise_for_status()
+        for ev in r.json().get("events", []):
+            if ev.get("id") not in seen:
+                seen.add(ev.get("id"))
+                out.append(ev)
+    return out
 
 
 def summarize(ev):
