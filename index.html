@@ -90,6 +90,8 @@ td.hot:hover{outline:1px solid var(--m10);outline-offset:-1px}
 td.sel{outline:1px solid var(--chalk);outline-offset:-1px}
 .time{color:var(--dim);font-size:11px}
 .open{color:var(--dim)}
+/* Opening price, shown under the current one on sides that moved. */
+.opn{color:var(--dim);font-size:10px;line-height:1.3;opacity:.75}
 .cur{color:var(--ink)}
 tr.det td{background:#061014;padding:0;text-align:left}
 .dwrap{padding:10px 16px}
@@ -143,6 +145,7 @@ tr.det td{background:#061014;padding:0;text-align:left}
   .slab{font-size:14px}
   .mklbl{font-size:12px}
   .mkln{font-size:14px}
+  .opn{font-size:11px}
   .side{font-size:13px;min-width:44px}
   @media (max-width:400px){
     .mkln{font-size:13px}
@@ -227,8 +230,12 @@ function sideHTML(s, which){
   const v = s[which] || "&mdash;";
   const k = which === "cur" ? mvClass(s.moved_min, s.changed) : "";
   const d = which === "cur" && s.changed ? '<span class="dot">&#9679;</span>' : "";
-  return `<span class="side">${s.label}</span>`
-       + `<span class="${which === "cur" ? "cur " + k : "open"}">${v}</span>${d}`;
+  let out = `<span class="side">${s.label}</span>`
+          + `<span class="${which === "cur" ? "cur " + k : "open"}">${v}</span>${d}`;
+  if(which === "cur" && s.changed && s.open && s.open !== s.cur){
+    out += `<div class="opn"><span class="side"></span>${s.open}</div>`;
+  }
+  return out;
 }
 
 /* ── desktop ─────────────────────────────────────────────────── */
@@ -255,7 +262,7 @@ function detailRow(gi, key){
     `<div style="display:inline-block;vertical-align:top;margin-right:36px">
        <div class="dhead">${g.away} @ ${g.home} &mdash; ${label} &mdash; ${s.label}</div>
        <table>${histRows(s)}</table></div>`).join("");
-  return `<tr class="det"><td colspan="${DATA.columns.length + 3}">
+  return `<tr class="det"><td colspan="${DATA.columns.length + 2}">
             <div class="dwrap">${blocks}</div></td></tr>`;
 }
 
@@ -327,7 +334,7 @@ function render(){
   document.title = `${d.label || "MLB"} odds \u2014 BetOnline`;
 
   document.getElementById("head").innerHTML =
-      '<th class="l">Time</th><th class="l">Teams</th><th>Opener</th>'
+      '<th class="l">Time</th><th class="l">Teams</th>'
     + d.columns.map(c => `<th>${c.label}</th>`).join("");
 
   const rows = [], cards = [];
@@ -335,7 +342,7 @@ function render(){
     const prev = i ? d.games[i - 1] : null;
     const newSlate = (!prev || g.slate !== prev.slate) && g.slate_lbl;
     if(newSlate){
-      rows.push(`<tr class="slate"><td colspan="${d.columns.length + 3}">${g.slate_lbl}</td></tr>`);
+      rows.push(`<tr class="slate"><td colspan="${d.columns.length + 2}">${g.slate_lbl}</td></tr>`);
       cards.push(`<div class="slab">${g.slate_lbl}</div>`);
     }
     const rot = g.away_rot ? `<div class="time">${g.away_rot}<br>${g.home_rot}</div>` : "";
@@ -348,7 +355,6 @@ function render(){
           ${g.home_p ? pit(g.home_p, g.home_ph) : ""}
           ${venueLine(g)}
         </td>
-        ${cell(g.markets.h2h, "open", i, "h2h")}
         ${d.columns.map(c => cell(g.markets[c.key], "cur", i, c.key)).join("")}
       </tr>`);
     if(OPEN && OPEN[0] === i) rows.push(detailRow(i, OPEN[1]));
