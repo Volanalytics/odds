@@ -70,6 +70,13 @@ SPORTS = {
         "event_cadence": [(1, 3600), (6, 10800), (999, None)],
         "spread_markets": {"spreads", "spreads_1st_5_innings"},
         "teams":  MLB_TEAMS,
+        # Alerting. cents = moneyline move worth reporting; keys = numbers
+        # whose crossing matters more than the distance moved.
+        "alerts": {
+            "cents": 10,
+            "keys":  {"totals": [7, 7.5, 8, 8.5, 9],
+                      "spreads": [1.5]},
+        },
         # Daily sport: today plus tomorrow is the whole picture.
         "days_shown": 2,
         # Day files to read back. A side's record lives in the file for the day
@@ -118,6 +125,15 @@ SPORTS = {
         # No hard map: 130+ FBS schools plus whatever FCS games BetOnline
         # prices. Full names are shown until ESPN supplies abbreviations.
         "teams":  None,
+        # Football prices run far longer than baseball's, so a 10-cent rule
+        # would fire constantly on heavy favourites. The signal in football is
+        # the spread crossing 3 or 7 -- the two most common margins of victory.
+        "alerts": {
+            "cents": 20,
+            "keys":  {"spreads": [3, 7, 10, 14],
+                      "spreads_h1": [3, 7],
+                      "totals": [41, 44, 47, 51]},
+        },
         # Weekly sport. Lines post ~a week out and the slate is one or two
         # days; a 2-day window would hide everything for most of the week.
         "days_shown": 9,
