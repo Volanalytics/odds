@@ -23,20 +23,35 @@ reset it whenever one fires.
 On the FIRST run it seeds silently -- otherwise you'd get one mail containing
 every move ever recorded.
 
-WATCHLIST: data/watchlist.json, optional
-    {"teams": ["MIL", "NYY"], "events": []}
+WATCHLIST: data/watchlist.json, optional. Two modes:
+
+    "add"  (default) -- global rules apply everywhere, PLUS any move at all on
+                        a selected game. Use when you want broad coverage but
+                        extra sensitivity on a few games.
+    "only"           -- nothing alerts except selected games. Use when you only
+                        care about a short list.
+
+    {
+      "mode": "only",
+      "mlb":   {"teams": ["MIL"], "games": ["ATL@MIL"]},
+      "ncaaf": {"teams": [], "games": ["UNC@TCU"]}
+    }
+
+  Teams use the codes shown on the board. Games use AWAY@HOME exactly as the
+  board prints them, which is why they are matched case-insensitively.
 
   python alerts.py                 # writes data/alert_body.txt if anything fired
   python alerts.py --dry-run       # print, change nothing
 """
 
 import argparse
-import glob
 import json
 import os
 from collections import defaultdict
 from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
+
+import sports
 
 DATA_DIR = os.environ.get("ODDS_DATA_DIR", "data")
 SPORT    = os.environ.get("ODDS_SPORT", "mlb")
@@ -46,16 +61,29 @@ CENT_THRESHOLD = 10        # moneyline cents that count as a real move
 LOOKBACK_DAYS  = 2         # day files to scan
 MAX_ALERTS     = 40        # cap one email; beyond this something is wrong
 
-POINT_MARKETS = {"totals", "spreads",
-                 "totals_1st_5_innings", "spreads_1st_5_innings",
-                 "team_totals"}
-MONEY_MARKETS = {"h2h", "h2h_1st_5_innings"}
+def market_kind(market):
+    """
+    Point market or money market, derived from the key rather than a list.
 
-LABEL = {
-    "h2h": "ML", "spreads": "RL", "totals": "Total",
-    "h2h_1st_5_innings": "F5 ML", "spreads_1st_5_innings": "F5 RL",
-    "totals_1st_5_innings": "F5 Tot", "team_totals": "TT",
-}
+    The old hardcoded sets named only baseball keys, so spreads_h1, totals_q1
+    and team_totals_h1 matched nothing and football never alerted at all.
+    """
+    if market.startswith("h2h"):
+        return "money"
+    if market.startswith(("spreads", "totals", "team_totals")):
+        return "point"
+    return None
+
+def labels_for(sport):
+    return {k: v for k, v in sports.cfg(sport)["columns"]}
+
+
+def crossed(keys, a, b):
+    """Key numbers strictly between the two prices, i.e. actually crossed."""
+    if a is None or b is None:
+        return [k for k in keys if False]
+    lo, hi = sorted((abs(a), abs(b)))
+    return [k for k in keys if lo < k < hi or (lo == k != hi) or (hi == k != lo)]
 
 TEAM_CODE = {
     "Arizona Diamondbacks": "AZ", "Atlanta Braves": "ATL",
@@ -128,6 +156,40 @@ def label_for(rec):
     return TEAM_CODE.get(rec["outcome"], rec["outcome"])
 
 
+def load_watchlist():
+    """
+    Per-sport selections, tolerating the flat legacy shape.
+
+    Sport-scoped lists matter because codes collide: "MIL" is a baseball team
+    and could match something unrelated in another league.
+    """
+    wl = read_json(os.path.join(DATA_DIR, "watchlist.json"), {}) or {}
+    mode = (wl.get("mode") or "add").lower()
+    if mode not in ("add", "only"):
+        mode = "add"
+
+    per = {}
+    for sp in sports.SPORTS:
+        node = wl.get(sp) or {}
+        per[sp] = {
+            "teams": {t.upper() for t in node.get("teams", [])},
+            "games": {g.upper().replace(" ", "") for g in node.get("games", [])},
+            "events": set(node.get("events", [])),
+        }
+        # Legacy flat lists applied to every sport.
+        per[sp]["teams"] |= {t.upper() for t in wl.get("teams", [])}
+        per[sp]["events"] |= set(wl.get("events", []))
+    return mode, per
+
+
+def is_watched(sel, event_id, ev):
+    if event_id in sel["events"]:
+        return True
+    if sel["teams"] & {ev["away"].upper(), ev["home"].upper()}:
+        return True
+    return f"{ev['away']}@{ev['home']}".upper() in sel["games"]
+
+
 def read_json(path, default):
     try:
         with open(path, encoding="utf-8") as f:
@@ -136,13 +198,13 @@ def read_json(path, default):
         return default
 
 
-def load_records():
+def load_records(sport):
     today = datetime.now(timezone.utc).date()
     days = [(today - timedelta(days=k)).isoformat()
             for k in range(LOOKBACK_DAYS, -2, -1)]
     out = []
     for d in days:
-        p = os.path.join(DATA_DIR, SPORT, "odds", f"{d}.ndjson")
+        p = os.path.join(DATA_DIR, sport, "odds", f"{d}.ndjson")
         try:
             with open(p, encoding="utf-8") as f:
                 out += [json.loads(l) for l in f if l.strip()]
@@ -151,20 +213,25 @@ def load_records():
     return out
 
 
-def classify(anchor, cur, watched):
+def classify(anchor, cur, watched, conf):
     """
     Reason string, or None. `anchor` is the last price we reported on this
     side -- not necessarily the previous record -- so slow drift accumulates
     instead of being reset by every intermediate tick.
     """
     market = cur["market"]
+    kind = market_kind(market)
 
-    if market in POINT_MARKETS and anchor["point"] != cur["point"]:
-        return "LINE"
+    if kind == "point" and anchor["point"] != cur["point"]:
+        hits = crossed(conf["keys"].get(market, []),
+                       anchor["point"], cur["point"])
+        # Crossing 3 or 7 in football, or a whole run in baseball, is worth
+        # separating from a line drifting half a point inside the same range.
+        return f"KEY {hits[0]:g}" if hits else "LINE"
 
-    if market in MONEY_MARKETS:
+    if kind == "money":
         a, b = cents(anchor["price"]), cents(cur["price"])
-        if a is not None and b is not None and abs(b - a) >= CENT_THRESHOLD:
+        if a is not None and b is not None and abs(b - a) >= conf["cents"]:
             return f"{abs(b - a):.0f}c"
 
     if watched and (anchor["point"] != cur["point"]
@@ -173,24 +240,22 @@ def classify(anchor, cur, watched):
     return None
 
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--dry-run", action="store_true")
-    args = ap.parse_args()
+def scan(sport, dry_run=False):
+    """Alerts for one sport. Returns (list, seeding_flag)."""
+    conf   = sports.cfg(sport)["alerts"]
+    LABEL  = labels_for(sport)
+    index = read_json(os.path.join(DATA_DIR, sport, "events.json"), {})
+    mode, sel = load_watchlist()
+    sel = sel[sport]
+    has_selection = bool(sel["teams"] or sel["games"] or sel["events"])
 
-    index = read_json(os.path.join(DATA_DIR, SPORT, "events.json"), {})
-    wl    = read_json(os.path.join(DATA_DIR, "watchlist.json"),
-                      {"teams": [], "events": []})
-    wl_teams  = set(wl.get("teams", []))
-    wl_events = set(wl.get("events", []))
-
-    state_path = os.path.join(DATA_DIR, SPORT, "alert_state.json")
+    state_path = os.path.join(DATA_DIR, sport, "alert_state.json")
     state      = read_json(state_path, None)
     seeding    = state is None          # first run: record, don't send
     state      = state or {}
 
     by_side = defaultdict(list)
-    for r in load_records():
+    for r in load_records(sport):
         by_side[(r["event_id"], r["market"], r["outcome"], r["desc"])].append(r)
 
     alerts, new_state = [], dict(state)
@@ -213,8 +278,14 @@ def main():
         ev = index.get(key[0])
         if not ev:
             continue
-        watched = (key[0] in wl_events
-                   or ev["away"] in wl_teams or ev["home"] in wl_teams)
+        watched = is_watched(sel, key[0], ev)
+        # "only" mode with an empty list would silence everything, which is
+        # almost certainly a mistake rather than an instruction.
+        if mode == "only" and has_selection and not watched:
+            new_state[skey] = {"ts": seq[-1]["ts"],
+                               "point": seq[-1]["point"],
+                               "price": seq[-1]["price"]}
+            continue
 
         # Anchor: the last price reported, falling back to the oldest record
         # we hold when this side has never alerted.
@@ -226,63 +297,92 @@ def main():
             if last_seen and cur["ts"] <= last_seen:
                 anchor = {"point": cur["point"], "price": cur["price"]}
                 continue
-            why = classify(anchor, cur, watched)
+            why = classify(anchor, cur, watched, conf)
             if why:
                 alerts.append({
-                    "ts": cur["ts"], "why": why,
+                    "ts": cur["ts"], "why": why, "sport": sports.cfg(sport)["label"],
                     "game": f"{ev['away']}@{ev['home']}",
                     "start": ev["commence_time"],
                     "market": LABEL.get(cur["market"], cur["market"]),
                     "side": label_for(cur),
-                    "from": fmt(anchor), "to": fmt(cur),
+                    # anchor carries no market, so pass it explicitly or a
+                    # spread's "from" loses its sign: "2.5 -> +3.5".
+                    "from": fmt(anchor, cur["market"]), "to": fmt(cur),
                 })
                 anchor = {"point": cur["point"], "price": cur["price"]}
 
         new_state[skey] = {"ts": seq[-1]["ts"],
                            "point": anchor["point"], "price": anchor["price"]}
 
-    if not args.dry_run:
-        os.makedirs(DATA_DIR, exist_ok=True)
+    if not dry_run:
+        os.makedirs(os.path.join(DATA_DIR, sport), exist_ok=True)
         tmp = state_path + ".tmp"
         with open(tmp, "w", encoding="utf-8") as f:
             json.dump(new_state, f, indent=0, sort_keys=True)
         os.replace(tmp, state_path)
 
-    if seeding:
-        print(f"  seeded {len(new_state)} sides -- no mail on the first run")
-        return
+    return alerts, seeding
 
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--sport", default=None, choices=list(sports.SPORTS),
+                    help="scan one sport; default scans all")
+    args = ap.parse_args()
+
+    wanted = [args.sport] if args.sport else list(sports.DEFAULT_ORDER)
+    alerts, seeded = [], []
+
+    for sp in wanted:
+        try:
+            found, seeding = scan(sp, dry_run=args.dry_run)
+        except FileNotFoundError:
+            print(f"  {sp}: no data yet")
+            continue
+        if seeding:
+            seeded.append(sp)
+            print(f"  {sp}: seeded -- no mail on the first run")
+            continue
+        print(f"  {sp}: {len(found)} alert(s)")
+        alerts += found
+
+    # One email covering every sport rather than one per league; a stream of
+    # single-sport mails is how an alert channel gets muted.
     alerts.sort(key=lambda a: a["ts"], reverse=True)
     truncated = len(alerts) > MAX_ALERTS
     shown = alerts[:MAX_ALERTS]
 
-    print(f"  {len(alerts)} alert(s)")
     for a in shown:
-        print(f"    [{a['why']:>5}] {a['game']:<9} {a['market']:<7} "
-              f"{a['side']:<10} {a['from']} -> {a['to']}")
+        print(f"    [{a['why']:>6}] {a['sport']:<6} {a['game']:<12} "
+              f"{a['market']:<7} {a['side']:<12} {a['from']} -> {a['to']}")
 
     body_path = os.path.join(DATA_DIR, "alert_body.txt")
     if os.path.exists(body_path) and not args.dry_run:
         os.remove(body_path)
 
     if not shown or args.dry_run:
-        emit_count(0 if not shown else len(shown), "" if not shown else "dry")
+        emit_count(0, "")
         return
 
     lines = []
     for a in shown:
         lines.append(
-            f"[{a['why']}] {a['game']}  {a['market']} {a['side']}\n"
+            f"[{a['why']}] {a['sport']}  {a['game']}  {a['market']} {a['side']}\n"
             f"        {a['from']}  ->  {a['to']}    at {local(a['ts'])}"
-            f"    (first pitch {local(a['start'])})\n")
+            f"    (start {local(a['start'])})\n")
     if truncated:
         lines.append(f"\n...and {len(alerts) - MAX_ALERTS} more, not shown.\n")
 
     with open(body_path, "w", encoding="utf-8") as f:
         f.write("\n".join(lines))
 
-    games = len({a["game"] for a in shown})
-    emit_count(len(shown), f"{len(shown)} line moves, {games} game(s)")
+    games = len({(a["sport"], a["game"]) for a in shown})
+    keys  = sum(1 for a in shown if a["why"].startswith("KEY"))
+    subj  = f"{len(shown)} moves, {games} game(s)"
+    if keys:
+        subj = f"{keys} KEY + " + subj
+    emit_count(len(shown), subj)
 
 
 def emit_count(n, subject):
