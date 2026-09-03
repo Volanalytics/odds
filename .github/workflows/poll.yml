@@ -147,7 +147,7 @@ jobs:
           secure: true
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
-          from: MLB odds board
+          from: Odds Board
           to: ${{ secrets.MAIL_TO }}
           subject: "Line moves: ${{ steps.alerts.outputs.subject }}"
           body: file://data/alert_body.txt
