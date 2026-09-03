@@ -148,12 +148,22 @@ def fmt(rec, market=None):
     return f"{fmt_point(rec['point'], mkt)} {fmt_price(rec['price'])}".strip()
 
 
-def label_for(rec):
-    if rec["market"] == "team_totals":
-        return f"{TEAM_CODE.get(rec['desc'], rec['desc'])} {rec['outcome']}"
+def label_for(rec, names=None):
+    """
+    Side label, abbreviated where possible.
+
+    `names` maps full club names to short codes for this game; without it a
+    college side reads "North Carolina Tar Heels" in the alert body while the
+    subject shows UNC, which looks like two different games.
+    """
+    names = names or {}
+    if rec["market"].startswith("team_totals"):
+        team = names.get(rec["desc"]) or TEAM_CODE.get(rec["desc"], rec["desc"])
+        return f"{team} {rec['outcome']}"
     if rec["outcome"] in ("Over", "Under"):
         return rec["outcome"]
-    return TEAM_CODE.get(rec["outcome"], rec["outcome"])
+    return (names.get(rec["outcome"])
+            or TEAM_CODE.get(rec["outcome"], rec["outcome"]))
 
 
 def load_watchlist():
@@ -180,6 +190,22 @@ def load_watchlist():
         per[sp]["teams"] |= {t.upper() for t in wl.get("teams", [])}
         per[sp]["events"] |= set(wl.get("events", []))
     return mode, per
+
+
+def short_codes(sport):
+    """
+    event_id -> (away, home) display codes.
+
+    events.json holds the full club name for sports without a hard team map,
+    so college alerts would otherwise read "North Carolina Tar Heels@TCU Horned
+    Frogs". The ESPN abbreviations live in the enrichment file.
+    """
+    enrich = read_json(os.path.join(DATA_DIR, sport, "enrich.json"), {}) or {}
+    out = {}
+    for eid, m in enrich.items():
+        if m.get("away_abbr") and m.get("home_abbr"):
+            out[eid] = (m["away_abbr"], m["home_abbr"])
+    return out
 
 
 def is_watched(sel, event_id, ev):
@@ -247,6 +273,7 @@ def scan(sport, dry_run=False):
     index = read_json(os.path.join(DATA_DIR, sport, "events.json"), {})
     mode, sel = load_watchlist()
     sel = sel[sport]
+    codes = short_codes(sport)
     has_selection = bool(sel["teams"] or sel["games"] or sel["events"])
 
     state_path = os.path.join(DATA_DIR, sport, "alert_state.json")
@@ -299,12 +326,15 @@ def scan(sport, dry_run=False):
                 continue
             why = classify(anchor, cur, watched, conf)
             if why:
+                away, home = codes.get(key[0], (ev["away"], ev["home"]))
+                nmap = {ev["away_team"]: away, ev["home_team"]: home,
+                        ev["away"]: away, ev["home"]: home}
                 alerts.append({
                     "ts": cur["ts"], "why": why, "sport": sports.cfg(sport)["label"],
-                    "game": f"{ev['away']}@{ev['home']}",
+                    "game": f"{away}@{home}",
                     "start": ev["commence_time"],
                     "market": LABEL.get(cur["market"], cur["market"]),
-                    "side": label_for(cur),
+                    "side": label_for(cur, nmap),
                     # anchor carries no market, so pass it explicitly or a
                     # spread's "from" loses its sign: "2.5 -> +3.5".
                     "from": fmt(anchor, cur["market"]), "to": fmt(cur),
@@ -377,12 +407,25 @@ def main():
     with open(body_path, "w", encoding="utf-8") as f:
         f.write("\n".join(lines))
 
-    games = len({(a["sport"], a["game"]) for a in shown})
-    keys  = sum(1 for a in shown if a["why"].startswith("KEY"))
-    subj  = f"{len(shown)} moves, {games} game(s)"
-    if keys:
-        subj = f"{keys} KEY + " + subj
-    emit_count(len(shown), subj)
+    # Subject is the games themselves: scanning "ATL@MIL, UNC@TCU" on a phone
+    # lock screen tells you whether to open it; "7 moves, 4 games" does not.
+    seen, names = set(), []
+    for a in shown:                       # already newest-first
+        if a["game"] not in seen:
+            seen.add(a["game"])
+            names.append(a["game"])
+
+    subj, shown_names = "", []
+    for n in names:
+        trial = ", ".join(shown_names + [n])
+        if len(trial) > 60:               # keep it readable in a mail list
+            break
+        shown_names.append(n)
+        subj = trial
+    extra = len(names) - len(shown_names)
+    if extra:
+        subj = f"{subj} +{extra} more" if subj else f"{extra} games"
+    emit_count(len(shown), subj or "line moves")
 
 
 def emit_count(n, subject):
