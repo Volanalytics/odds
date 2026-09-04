@@ -129,9 +129,11 @@ def summarize(ev):
     addr = venue.get("address") or {}
     status = (ev.get("status") or {}).get("type") or {}
 
-    teams = {}
+    teams, ids = {}, {}
     for c in comp.get("competitors", []):
         t = c.get("team") or {}
+        if t.get("id"):
+            ids[str(t["id"])] = c.get("homeAway")
         teams[c.get("homeAway")] = {
             "abbr":  t.get("abbreviation"),
             "name":  t.get("displayName"),
@@ -147,8 +149,17 @@ def summarize(ev):
     # period+clock pair can't express on its own.
     short = status.get("shortDetail")
 
+    # Live drive state. Only present while a game is in progress; possession
+    # is a team id, so it has to be resolved against the competitor list.
+    sit = comp.get("situation") or {}
+    poss = ids.get(str(sit.get("possession"))) if sit.get("possession") else None
+
     return {
         "espn_id":  ev.get("id"),
+        "poss":     poss,                          # "away" | "home" | None
+        "down":     sit.get("downDistanceText"),   # "2nd & 7"
+        "spot":     sit.get("possessionText"),     # "RUTG 35"
+        "redzone":  bool(sit.get("isRedZone")),
         "neutral":  bool(comp.get("neutralSite")),
         "conf_comp": bool(comp.get("conferenceCompetition")),
         "venue":    venue.get("fullName"),

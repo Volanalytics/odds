@@ -34,6 +34,11 @@ header{position:sticky;top:0;z-index:20;background:var(--field);
 .st.live{color:var(--m5);font-weight:500}
 .st.warm{color:var(--m10)}
 .st.fin{color:var(--m10);font-weight:700}
+/* Possession dot, in the same amber as the live clock so the two read as one
+   piece of live state. */
+.ball{color:var(--m5);font-size:9px;margin-right:4px;vertical-align:middle}
+.drv{font-size:10px;color:var(--dim);line-height:1.3;white-space:nowrap}
+.drv.rz{color:var(--m2);font-weight:700}
 .rank{color:var(--m5);font-size:10px;font-weight:700;margin-right:3px;
       vertical-align:top}
 .neu{display:inline-block;margin-top:3px;font-size:10px;font-weight:700;
@@ -141,6 +146,8 @@ tr.det td{background:#061014;padding:0;text-align:left}
   .card .team{font-size:17px}
   .pit{font-size:12px}
   .st{font-size:12px}
+  .drv{font-size:11px}
+  .ball{font-size:10px}
   .cmeta{font-size:13px}
   .slab{font-size:14px}
   .mklbl{font-size:12px}
@@ -201,6 +208,20 @@ function mvClass(min, changed){
 }
 
 const pit = (n, h) => `<div class="pit">${n ? n + (h ? "-" + h : "") : "&mdash;"}</div>`;
+
+/* Possession marker. Only meaningful while a game is live, so it is gated on
+   that rather than on the field being present -- ESPN leaves stale situation
+   data on a game that has just ended. */
+const poss = (g, side) =>
+  (g.live && g.poss === side) ? '<span class="ball">&#9679;</span>' : "";
+
+/* Down, distance and field position. One short line, shown under the clock. */
+function drive(g){
+  if(!g.live) return "";
+  const bits = [g.down, g.spot].filter(Boolean);
+  if(!bits.length) return "";
+  return `<div class="drv${g.redzone ? " rz" : ""}">${bits.join(" \u00b7 ")}</div>`;
+}
 
 /* AP rank prefix, e.g. "1 ALA". Absent for MLB and unranked teams. */
 const rk = n => (n && n > 0 && n <= 25) ? `<span class="rank">${n}</span>` : "";
@@ -298,12 +319,12 @@ function card(g, gi){
   return `<div class="card${g.started ? " started" : ""}">
     <div class="chead">
       <div>
-        <div class="crow">${rk(g.away_rank)}<span class="team">${g.away_full || g.away}</span>${ar}${g.away_p ? pit(g.away_p, g.away_ph) : ""}</div>
-        <div class="crow">${rk(g.home_rank)}<span class="team">${g.home_full || g.home}</span>${hr}${g.home_p ? pit(g.home_p, g.home_ph) : ""}</div>
+        <div class="crow">${poss(g, "away")}${rk(g.away_rank)}<span class="team">${g.away_full || g.away}</span>${ar}${g.away_p ? pit(g.away_p, g.away_ph) : ""}</div>
+        <div class="crow">${poss(g, "home")}${rk(g.home_rank)}<span class="team">${g.home_full || g.home}</span>${hr}${g.home_p ? pit(g.home_p, g.home_ph) : ""}</div>
         ${venueLine(g)}
       </div>
       <div class="cmeta">${g.time}${g.away_rot ? `<br>${g.away_rot}/${g.home_rot}` : ""}
-        ${statusLine(g)}</div>
+        ${statusLine(g)}${drive(g)}</div>
     </div>
     <div class="mkts">${DATA.columns.map(c => mkBlock(g, gi, c)).join("")}</div>
     ${OPEN && OPEN[0] === gi ? cardHist(gi, OPEN[1]) : ""}
@@ -347,11 +368,11 @@ function render(){
     }
     const rot = g.away_rot ? `<div class="time">${g.away_rot}<br>${g.home_rot}</div>` : "";
     rows.push(`<tr class="${i % 2 ? "g1" : "g0"}${g.started ? " started" : ""}">
-        <td class="l time">${g.date}<br>${g.time}${rot}${statusLine(g)}</td>
+        <td class="l time">${g.date}<br>${g.time}${rot}${statusLine(g)}${drive(g)}</td>
         <td class="l">
-          <div class="trow">${rk(g.away_rank)}<span class="team">${g.away_full || g.away}</span>${(g.away_r ?? null) !== null ? ` <span class="run">${g.away_r}</span>` : ""}</div>
+          <div class="trow">${poss(g, "away")}${rk(g.away_rank)}<span class="team">${g.away_full || g.away}</span>${(g.away_r ?? null) !== null ? ` <span class="run">${g.away_r}</span>` : ""}</div>
           ${g.away_p ? pit(g.away_p, g.away_ph) : ""}
-          <div class="trow">${rk(g.home_rank)}<span class="team">${g.home_full || g.home}</span>${(g.home_r ?? null) !== null ? ` <span class="run">${g.home_r}</span>` : ""}</div>
+          <div class="trow">${poss(g, "home")}${rk(g.home_rank)}<span class="team">${g.home_full || g.home}</span>${(g.home_r ?? null) !== null ? ` <span class="run">${g.home_r}</span>` : ""}</div>
           ${g.home_p ? pit(g.home_p, g.home_ph) : ""}
           ${venueLine(g)}
         </td>

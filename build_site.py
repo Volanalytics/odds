@@ -294,6 +294,11 @@ def build(days_shown=2, history_days=4, keep_hours=12):
             "home_rank": m.get("home_rank"),
             "period":    m.get("period"),
             "clock":     m.get("clock"),
+            # Live drive state; absent for MLB and simply not rendered.
+            "poss":      m.get("poss"),
+            "down":      m.get("down"),
+            "spot":      m.get("spot"),
+            "redzone":   bool(m.get("redzone")),
             "away_rot":  ev.get("away_rot"), "home_rot": ev.get("home_rot"),
             "moves":     moves,
             "markets":   markets,
