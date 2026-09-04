@@ -173,6 +173,10 @@ def summarize(ev):
         "clock":    comp.get("status", {}).get("displayClock"),
         "away_abbr": (teams.get("away") or {}).get("abbr"),
         "home_abbr": (teams.get("home") or {}).get("abbr"),
+        # School without the mascot -- "UMass", "Wake Forest". Reads better on
+        # a phone than a four-letter code, and far better than the full name.
+        "away_short": (teams.get("away") or {}).get("short"),
+        "home_short": (teams.get("home") or {}).get("short"),
         "away_rank": (teams.get("away") or {}).get("rank"),
         "home_rank": (teams.get("home") or {}).get("rank"),
         "away_r":   (teams.get("away") or {}).get("score"),

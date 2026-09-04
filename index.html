@@ -343,8 +343,8 @@ function card(g, gi){
   return `<div class="card${g.started ? " started" : ""}">
     <div class="chead">
       <div>
-        <div class="crow"><span class="tname">${poss(g, "away")}${rk(g.away_rank)}<span class="team">${g.away_full || g.away}</span>${g.away_p ? pit(g.away_p, g.away_ph) : ""}</span>${ar}</div>
-        <div class="crow"><span class="tname">${poss(g, "home")}${rk(g.home_rank)}<span class="team">${g.home_full || g.home}</span>${g.home_p ? pit(g.home_p, g.home_ph) : ""}</span>${hr}</div>
+        <div class="crow"><span class="tname">${poss(g, "away")}${rk(g.away_rank)}<span class="team">${g.away_short || g.away}</span>${g.away_p ? pit(g.away_p, g.away_ph) : ""}</span>${ar}</div>
+        <div class="crow"><span class="tname">${poss(g, "home")}${rk(g.home_rank)}<span class="team">${g.home_short || g.home}</span>${g.home_p ? pit(g.home_p, g.home_ph) : ""}</span>${hr}</div>
         ${venueLine(g)}
       </div>
       <div class="cmeta">${g.time}${g.away_rot ? `<br>${g.away_rot}/${g.home_rot}` : ""}
