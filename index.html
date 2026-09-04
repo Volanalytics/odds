@@ -37,8 +37,16 @@ header{position:sticky;top:0;z-index:20;background:var(--field);
 /* Possession dot, in the same amber as the live clock so the two read as one
    piece of live state. */
 .ball{color:var(--m5);font-size:9px;margin-right:4px;vertical-align:middle}
+/* Same colour as the game time above it -- the drive line is context, not an
+   alert, so the RZ badge carries the emphasis instead of the whole string. */
 .drv{font-size:10px;color:var(--dim);line-height:1.3;white-space:nowrap}
-.drv.rz{color:var(--m2);font-weight:700}
+/* Red fill with a yellow outline: a started game already has a dark red row
+   background, so red-on-red needs the border to separate it. The outline
+   clears 6:1 against both the red row and the normal panel. */
+.rzb{display:inline-block;background:#D93A38;color:#FFFFFF;
+     border:1px solid var(--m5);border-radius:3px;
+     padding:0 3px;margin-right:4px;font-size:9px;font-weight:700;
+     letter-spacing:.5px;vertical-align:1px}
 .rank{color:var(--m5);font-size:10px;font-weight:700;margin-right:3px;
       vertical-align:top}
 .neu{display:inline-block;margin-top:3px;font-size:10px;font-weight:700;
@@ -147,6 +155,7 @@ tr.det td{background:#061014;padding:0;text-align:left}
   .pit{font-size:12px}
   .st{font-size:12px}
   .drv{font-size:11px}
+  .rzb{font-size:10px}
   .ball{font-size:10px}
   .cmeta{font-size:13px}
   .slab{font-size:14px}
@@ -220,7 +229,8 @@ function drive(g){
   if(!g.live) return "";
   const bits = [g.down, g.spot].filter(Boolean);
   if(!bits.length) return "";
-  return `<div class="drv${g.redzone ? " rz" : ""}">${bits.join(" \u00b7 ")}</div>`;
+  const rz = g.redzone ? '<span class="rzb">RZ</span>' : "";
+  return `<div class="drv">${rz}${bits.join(" \u00b7 ")}</div>`;
 }
 
 /* AP rank prefix, e.g. "1 ALA". Absent for MLB and unranked teams. */
