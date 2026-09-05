@@ -562,6 +562,97 @@ async function loadSport(){
   }
 }
 
+/* ── live game state, fetched by the browser ──────────────────────────────
+   Odds refresh on the build cycle (5 min, bounded by what the odds feed
+   itself publishes). Game state doesn't need to ride that clock: both MLB's
+   and ESPN's APIs are unauthenticated and update within seconds, so the page
+   calls them directly and patches scores in place.
+
+   Deliberately fail-quiet. If CORS blocks these, LIVE_OK flips off and the
+   board carries on with build-cycle data -- a broken live overlay must never
+   take the odds board down with it. */
+const LIVE_MS = 30000;
+let LIVE_OK = true, LIVE_TIMER = null;
+
+function patch(g, o){
+  for(const k in o) if(o[k] !== undefined && o[k] !== null) g[k] = o[k];
+}
+
+async function liveMLB(games){
+  const days = [...new Set(games.map(g => g.slate))];
+  for(const d of days){
+    const r = await fetch("https://statsapi.mlb.com/api/v1/schedule"
+      + `?sportId=1&date=${d}&hydrate=linescore`);
+    if(!r.ok) throw new Error("HTTP " + r.status);
+    const j = await r.json();
+    const by = {};
+    for(const day of (j.dates || []))
+      for(const gm of (day.games || [])) by[gm.gamePk] = gm;
+
+    for(const g of games){
+      const gm = by[g.game_pk];
+      if(!gm) continue;
+      const ls = gm.linescore || {}, st = gm.status || {};
+      const inPlay = st.abstractGameState === "Live"
+                  && !["Warmup", "Pre-Game"].includes(st.detailedState);
+      const half = ls.inningHalf || "", inn = ls.currentInning || "";
+      patch(g, {
+        away_r: (ls.teams?.away || {}).runs,
+        home_r: (ls.teams?.home || {}).runs,
+        cur_pitcher: (ls.defense?.pitcher || {}).fullName,
+        live: inPlay, final: st.abstractGameState === "Final",
+        status_text: st.abstractGameState === "Final" ? "Final"
+                   : inPlay ? `${half} ${inn} \u00b7 ${ls.outs ?? 0} out`.trim()
+                   : g.status_text,
+      });
+    }
+  }
+}
+
+async function liveCFB(games){
+  const r = await fetch("https://site.api.espn.com/apis/site/v2/sports/"
+    + "football/college-football/scoreboard?limit=300");
+  if(!r.ok) throw new Error("HTTP " + r.status);
+  const j = await r.json();
+  const by = {};
+  for(const ev of (j.events || [])) by[ev.id] = ev;
+
+  for(const g of games){
+    const ev = by[g.espn_id];
+    if(!ev) continue;
+    const comp = (ev.competitions || [{}])[0];
+    const st = (ev.status || {}).type || {};
+    const sit = comp.situation || {};
+    const side = {};
+    for(const c of (comp.competitors || [])) side[c.homeAway] = c;
+    const poss = Object.keys(side).find(
+      k => String((side[k].team || {}).id) === String(sit.possession));
+    patch(g, {
+      away_r: (side.away || {}).score, home_r: (side.home || {}).score,
+      live: st.state === "in", final: st.state === "post",
+      status_text: st.shortDetail || g.status_text,
+      poss: poss, down: sit.downDistanceText, spot: sit.possessionText,
+      redzone: !!sit.isRedZone,
+    });
+  }
+}
+
+async function refreshLive(){
+  if(!LIVE_OK || !DATA || document.hidden) return;
+  const live = DATA.games.filter(g => g.live);
+  if(!live.length) return;
+  try{
+    if(DATA.sport === "mlb")        await liveMLB(live);
+    else if(DATA.sport === "ncaaf") await liveCFB(live);
+    else return;
+    render();
+  }catch(e){
+    // Almost certainly CORS. Stop retrying rather than erroring every 30s.
+    LIVE_OK = false;
+    console.warn("live refresh disabled:", e.message);
+  }
+}
+
 async function load(){
   try{
     const r = await fetch("sports.json?t=" + Date.now());
@@ -583,6 +674,12 @@ async function load(){
 }
 load();
 setInterval(load, REFRESH_MS);
+LIVE_TIMER = setInterval(refreshLive, LIVE_MS);
+/* Catch up immediately when a backgrounded tab comes forward, rather than
+   showing stale scores until the next tick. */
+document.addEventListener("visibilitychange", () => {
+  if(!document.hidden) refreshLive();
+});
 </script>
 </body>
 </html>
