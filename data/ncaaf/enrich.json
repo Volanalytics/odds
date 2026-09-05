@@ -3164,10 +3164,10 @@
   "away_rank": 7,
   "away_short": "Miami",
   "city": "Stanford",
-  "clock": "5:12",
+  "clock": "5:04",
   "conf_comp": true,
-  "detail": "5:12 - 4th",
-  "down": "4th & 6 at STAN 23",
+  "detail": "5:04 - 4th",
+  "down": "1st & 10 at MIA 37",
   "espn_id": "401858206",
   "final": false,
   "home_abbr": "STAN",
@@ -3179,7 +3179,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "28/32, 423 YDS, 5 TD, 1 INT",
+    "val": "27/31, 412 YDS, 5 TD, 1 INT",
     "who": "D. Mensah"
    },
    {
@@ -3209,9 +3209,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "STAN 23",
+  "spot": "MIA 37",
   "state": "CA",
   "status": "In Progress",
   "venue": "Stanford Stadium"
@@ -3233,7 +3233,26 @@
   "home_rank": 99,
   "home_short": "Kansas",
   "in_play": false,
-  "leaders": [],
+  "leaders": [
+   {
+    "cat": "PASS",
+    "team": "home",
+    "val": "14/19, 246 YDS, 2 TD",
+    "who": "I. Marshall"
+   },
+   {
+    "cat": "RUSH",
+    "team": "home",
+    "val": "11 CAR, 72 YDS, 2 TD",
+    "who": "Y. Willis"
+   },
+   {
+    "cat": "REC",
+    "team": "home",
+    "val": "6 REC, 130 YDS, 1 TD",
+    "who": "N. McMillan"
+   }
+  ],
   "line_away": [
    0.0,
    0.0,
@@ -5067,17 +5086,17 @@
   "away_rank": 99,
   "away_short": "Fresno St",
   "city": "Los Angeles",
-  "clock": "0:41",
+  "clock": "0:00",
   "conf_comp": false,
-  "detail": "0:41 - 4th",
-  "down": "4th & Goal at USC 8",
+  "detail": "Final",
+  "down": null,
   "espn_id": "401858436",
-  "final": false,
+  "final": true,
   "home_abbr": "USC",
   "home_r": "39",
   "home_rank": 14,
   "home_short": "USC",
-  "in_play": true,
+  "in_play": false,
   "leaders": [
    {
     "cat": "PASS",
@@ -5112,11 +5131,11 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
-  "redzone": true,
-  "spot": "USC 8",
+  "poss": null,
+  "redzone": false,
+  "spot": null,
   "state": "CA",
-  "status": "In Progress",
+  "status": "Final",
   "venue": "Los Angeles Memorial Coliseum"
  },
  "a7c7e0143d5131ee3e2d78f356f0089d": {
