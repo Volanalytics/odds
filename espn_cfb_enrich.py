@@ -129,11 +129,14 @@ def summarize(ev):
     addr = venue.get("address") or {}
     status = (ev.get("status") or {}).get("type") or {}
 
-    teams, ids = {}, {}
+    teams, ids, lines = {}, {}, {}
     for c in comp.get("competitors", []):
         t = c.get("team") or {}
         if t.get("id"):
             ids[str(t["id"])] = c.get("homeAway")
+        # Per-quarter scoring, for the box score panel.
+        lines[c.get("homeAway")] = [
+            ls.get("value") for ls in (c.get("linescores") or [])]
         teams[c.get("homeAway")] = {
             "abbr":  t.get("abbreviation"),
             "name":  t.get("displayName"),
@@ -154,8 +157,25 @@ def summarize(ev):
     sit = comp.get("situation") or {}
     poss = ids.get(str(sit.get("possession"))) if sit.get("possession") else None
 
+    # Statistical leaders. ESPN pre-formats displayValue ("312 YDS, 3 TD"),
+    # which is exactly what a compact panel wants.
+    leaders = []
+    for cat in (comp.get("leaders") or []):
+        top = (cat.get("leaders") or [{}])[0]
+        ath = top.get("athlete") or {}
+        if ath.get("shortName") and top.get("displayValue"):
+            leaders.append({
+                "cat":  cat.get("shortDisplayName") or cat.get("name"),
+                "who":  ath["shortName"],
+                "team": ids.get(str((top.get("team") or {}).get("id"))),
+                "val":  top["displayValue"],
+            })
+
     return {
         "espn_id":  ev.get("id"),
+        "line_away": lines.get("away") or [],
+        "line_home": lines.get("home") or [],
+        "leaders":   leaders[:4],
         "poss":     poss,                          # "away" | "home" | None
         "down":     sit.get("downDistanceText"),   # "2nd & 7"
         "spot":     sit.get("possessionText"),     # "RUTG 35"

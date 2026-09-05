@@ -303,6 +303,15 @@ def build(days_shown=2, history_days=4, keep_hours=12):
             "down":      m.get("down"),
             "spot":      m.get("spot"),
             "redzone":   bool(m.get("redzone")),
+            # Box score payload. Shape differs by sport, so the page picks a
+            # renderer from "kind" rather than guessing.
+            "box": ({"kind": "innings", "innings": m.get("innings") or [],
+                     "rhe": [m.get("rhe_away"), m.get("rhe_home")]}
+                    if m.get("innings") else
+                    {"kind": "periods", "away": m.get("line_away") or [],
+                     "home": m.get("line_home") or [],
+                     "leaders": m.get("leaders") or []}
+                    if (m.get("line_away") or m.get("leaders")) else None),
             "away_rot":  ev.get("away_rot"), "home_rot": ev.get("home_rot"),
             "moves":     moves,
             "markets":   markets,

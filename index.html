@@ -78,6 +78,21 @@ header{position:sticky;top:0;z-index:20;background:var(--field);
 .tabs button.on{color:var(--chalk);border-bottom-color:var(--m10)}
 .tabs .n{color:var(--dim);font-weight:400;margin-left:6px;font-size:11px}
 .tabs button.on .n{color:var(--m10)}
+.boxable{cursor:pointer}
+.boxable:hover{outline:1px solid var(--m10);outline-offset:-1px}
+table.box{width:auto;border-collapse:collapse;font-size:11px;margin-bottom:6px}
+table.box th{position:static;background:none;border:0;padding:2px 7px;
+             color:var(--dim);font-weight:500;text-align:right;font-size:10px}
+table.box td{border:0;padding:2px 7px;text-align:right;background:none;
+             color:var(--ink)}
+table.box .bt{text-align:left;color:var(--chalk);font-weight:500;padding-right:14px}
+table.box .tot{color:var(--m10);font-weight:700}
+.leads{display:flex;flex-wrap:wrap;gap:4px 22px;margin-top:4px}
+.lead{font-size:10px;white-space:nowrap}
+.lcat{color:var(--dim);margin-right:6px}
+.lwho{color:var(--chalk);margin-right:6px}
+.lval{color:var(--ink)}
+.bmsg{color:var(--dim);font-size:11px}
 .empty{padding:40px;text-align:center;color:var(--dim)}
 
 /* ── desktop table ───────────────────────────────────────────── */
@@ -236,6 +251,49 @@ const BALL = '<svg class="ball" viewBox="0 0 22 13" aria-hidden="true">'
 
 const poss = (g, side) => (g.live && g.poss === side) ? BALL : "";
 
+/* Box score panel. Reuses the OPEN mechanism the odds history uses, with a
+   reserved key, so opening a box closes any open history and vice versa --
+   two panels under one game would push the row apart. */
+const BOX = "__box";
+
+function boxTable(g){
+  const b = g.box;
+  if(!b) return '<div class="bmsg">No box score yet.</div>';
+  const A = g.away_short || g.away, H = g.home_short || g.home;
+
+  if(b.kind === "innings"){
+    const inn = b.innings || [];
+    if(!inn.length) return '<div class="bmsg">Game has not started.</div>';
+    const head = inn.map(i => `<th>${i.n}</th>`).join("")
+               + '<th class="tot">R</th><th class="tot">H</th><th class="tot">E</th>';
+    const row = (name, key, rhe) =>
+      `<tr><td class="bt">${name}</td>`
+      + inn.map(i => `<td>${i[key] ?? "-"}</td>`).join("")
+      + (rhe || []).map(v => `<td class="tot">${v ?? "-"}</td>`).join("") + "</tr>";
+    return `<table class="box"><thead><tr><th></th>${head}</tr></thead><tbody>`
+         + row(A, "a", b.rhe[0]) + row(H, "h", b.rhe[1]) + "</tbody></table>";
+  }
+
+  // periods
+  const n = Math.max(b.away.length, b.home.length);
+  if(!n) return '<div class="bmsg">Game has not started.</div>';
+  const lbl = i => i < 4 ? "Q" + (i + 1) : (n === 5 ? "OT" : "OT" + (i - 3));
+  const sum = a => a.reduce((x, y) => x + (Number(y) || 0), 0);
+  const head = Array.from({length: n}, (_, i) => `<th>${lbl(i)}</th>`).join("")
+             + '<th class="tot">T</th>';
+  const row = (name, arr) =>
+    `<tr><td class="bt">${name}</td>`
+    + Array.from({length: n}, (_, i) => `<td>${arr[i] ?? "-"}</td>`).join("")
+    + `<td class="tot">${sum(arr)}</td></tr>`;
+  const lead = (b.leaders || []).map(l =>
+    `<div class="lead"><span class="lcat">${l.cat}</span>`
+    + `<span class="lwho">${l.who}${l.team ? " (" + (l.team === "away" ? A : H) + ")" : ""}</span>`
+    + `<span class="lval">${l.val}</span></div>`).join("");
+  return `<table class="box"><thead><tr><th></th>${head}</tr></thead><tbody>`
+       + row(A, b.away) + row(H, b.home) + "</tbody></table>"
+       + (lead ? `<div class="leads">${lead}</div>` : "");
+}
+
 /* Down, distance and field position. One short line, shown under the clock. */
 function drive(g){
   if(!g.live) return "";
@@ -302,6 +360,10 @@ function histRows(s){
 
 function detailRow(gi, key){
   const g = DATA.games[gi];
+  if(key === BOX){
+    return `<tr class="det"><td colspan="${DATA.columns.length + 2}">
+              <div class="dwrap">${boxTable(g)}</div></td></tr>`;
+  }
   const label = DATA.columns.find(c => c.key === key).label;
   const blocks = (g.markets[key] || []).map(s =>
     `<div style="display:inline-block;vertical-align:top;margin-right:36px">
@@ -328,6 +390,7 @@ function mkBlock(g, gi, col){
 
 function cardHist(gi, key){
   const g = DATA.games[gi];
+  if(key === BOX) return `<div class="chist">${boxTable(g)}</div>`;
   const label = DATA.columns.find(c => c.key === key).label;
   return '<div class="chist">' + (g.markets[key] || []).map(s =>
     `<div class="dhead">${label} &mdash; ${s.label}</div>`
@@ -341,7 +404,7 @@ function card(g, gi){
   const ar = (g.away_r ?? null) !== null ? ` <span class="run">${g.away_r}</span>` : "";
   const hr = (g.home_r ?? null) !== null ? ` <span class="run">${g.home_r}</span>` : "";
   return `<div class="card${g.started ? " started" : ""}">
-    <div class="chead">
+    <div class="chead${g.box ? " boxable" : ""}"${g.box ? ` onclick="det(${gi},'${BOX}')"` : ""}>
       <div>
         <div class="crow"><span class="tname">${poss(g, "away")}${rk(g.away_rank)}<span class="team">${g.away_short || g.away}</span>${g.away_p ? pit(g.away_p, g.away_ph) : ""}</span>${ar}</div>
         <div class="crow"><span class="tname">${poss(g, "home")}${rk(g.home_rank)}<span class="team">${g.home_short || g.home}</span>${g.home_p ? pit(g.home_p, g.home_ph) : ""}</span>${hr}</div>
@@ -393,7 +456,7 @@ function render(){
     const rot = g.away_rot ? `<div class="time">${g.away_rot}<br>${g.home_rot}</div>` : "";
     rows.push(`<tr class="${i % 2 ? "g1" : "g0"}${g.started ? " started" : ""}">
         <td class="l time">${g.date}<br>${g.time}${rot}${statusLine(g)}${drive(g)}</td>
-        <td class="l">
+        <td class="l${g.box ? " boxable" : ""}"${g.box ? ` onclick="det(${i},'${BOX}')"` : ""}>
           <div class="trow"><span class="tname">${poss(g, "away")}${rk(g.away_rank)}<span class="team">${g.away_full || g.away}</span></span>${(g.away_r ?? null) !== null ? `<span class="run">${g.away_r}</span>` : ""}</div>
           ${g.away_p ? pit(g.away_p, g.away_ph) : ""}
           <div class="trow"><span class="tname">${poss(g, "home")}${rk(g.home_rank)}<span class="team">${g.home_full || g.home}</span></span>${(g.home_r ?? null) !== null ? `<span class="run">${g.home_r}</span>` : ""}</div>

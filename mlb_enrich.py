@@ -139,8 +139,18 @@ def summarize(g, hands):
     detailed = (g.get("status") or {}).get("detailedState")
     abstract = (g.get("status") or {}).get("abstractGameState")
 
+    # Inning-by-inning plus R/H/E, for the box score panel.
+    innings = [{"n": i.get("num"),
+                "a": (i.get("away") or {}).get("runs"),
+                "h": (i.get("home") or {}).get("runs")}
+               for i in (ls.get("innings") or [])]
+    lt = ls.get("teams") or {}
+
     return {
         "game_pk":     g.get("gamePk"),
+        "innings":     innings,
+        "rhe_away":    [(lt.get("away") or {}).get(k) for k in ("runs","hits","errors")],
+        "rhe_home":    [(lt.get("home") or {}).get(k) for k in ("runs","hits","errors")],
         "status":      detailed,
         "abstract":    abstract,
         # MLB flips abstractGameState to Live during warmups, well before first
