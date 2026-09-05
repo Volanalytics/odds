@@ -29,6 +29,7 @@ import requests
 
 DATA_DIR = os.environ.get("ODDS_DATA_DIR", "data")
 API      = "https://statsapi.mlb.com/api/v1/schedule"
+CONTEXT  = "https://statsapi.mlb.com/api/v1/game/{pk}/contextMetrics"
 PEOPLE   = "https://statsapi.mlb.com/api/v1/people"
 
 TEAM_CODE = {
@@ -88,9 +89,35 @@ def fetch_hands(ids):
     return out
 
 
+def fetch_win_prob(pks):
+    """
+    Current win probability per team, one call per LIVE game.
+
+    contextMetrics is the light endpoint -- the full winProbability endpoint
+    returns every play of the game, which is a lot of payload for one number.
+    Only live games are fetched: a scheduled game has no probability worth
+    reading and a final one has collapsed to 0/100.
+    """
+    out = {}
+    for pk in pks:
+        try:
+            r = requests.get(CONTEXT.format(pk=pk), timeout=20)
+            r.raise_for_status()
+            d = r.json() or {}
+            home = d.get("homeWinProbability")
+            away = d.get("awayWinProbability")
+            if home is not None or away is not None:
+                out[pk] = {"home": home, "away": away}
+        except requests.RequestException:
+            continue          # never fail the run over a nice-to-have
+    return out
+
+
 def fetch(start, end):
     r = requests.get(API, timeout=30, params={
         "sportId": 1, "startDate": start, "endDate": end,
+        # linescore carries offense/defense, which is where the CURRENT
+        # pitcher and batter live -- probablePitcher is only the starter.
         "hydrate": "probablePitcher,linescore,team",
     })
     r.raise_for_status()
@@ -146,8 +173,16 @@ def summarize(g, hands):
                for i in (ls.get("innings") or [])]
     lt = ls.get("teams") or {}
 
+    # Who is actually on the mound right now, as opposed to who started.
+    dfn = ls.get("defense") or {}
+    off = ls.get("offense") or {}
+    cur_p = (dfn.get("pitcher") or {}).get("fullName")
+    cur_b = (off.get("batter") or {}).get("fullName")
+
     return {
         "game_pk":     g.get("gamePk"),
+        "cur_pitcher": cur_p,
+        "cur_batter":  cur_b,
         "innings":     innings,
         "rhe_away":    [(lt.get("away") or {}).get(k) for k in ("runs","hits","errors")],
         "rhe_home":    [(lt.get("home") or {}).get(k) for k in ("runs","hits","errors")],
@@ -217,9 +252,43 @@ def main():
         json.dump(out, f, indent=1, sort_keys=True)
     os.replace(tmp, os.path.join(DATA_DIR, "mlb", "enrich.json"))
 
+    # Win probability for live games only, and a diff against the previous
+    # poll so a pitching change is visible rather than inferred.
+    live_pks = [v["game_pk"] for v in out.values() if v["in_play"] and v["game_pk"]]
+    wp = fetch_win_prob(live_pks)
+
+    prev_path = os.path.join(DATA_DIR, "mlb", "live_state.json")
+    try:
+        with open(prev_path, encoding="utf-8") as f:
+            prev = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        prev = {}
+
+    now_state = {}
+    for eid, v in out.items():
+        pk = str(v.get("game_pk"))
+        if v.get("game_pk") in wp:
+            v["wp_home"] = wp[v["game_pk"]]["home"]
+            v["wp_away"] = wp[v["game_pk"]]["away"]
+        if v.get("cur_pitcher"):
+            now_state[pk] = v["cur_pitcher"]
+            was = prev.get(pk)
+            # A name change means the previous pitcher left. MLB does not say
+            # why -- injury, matchup and pitch count look identical here.
+            if was and was != v["cur_pitcher"]:
+                v["pitcher_changed"] = True
+                v["prev_pitcher"] = was
+
+    tmp = prev_path + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as f:
+        json.dump(now_state, f, sort_keys=True)
+    os.replace(tmp, prev_path)
+
     live = sum(1 for v in out.values() if v["in_play"])
+    changed = sum(1 for v in out.values() if v.get("pitcher_changed"))
     pitch = sum(1 for v in out.values() if v["away_p"] and v["home_p"])
-    print(f"  matched {len(out)}/{len(index)} events, {pitch} with both starters, {live} live")
+    print(f"  matched {len(out)}/{len(index)} events, {pitch} with both starters, "
+          f"{live} live, {len(wp)} with win prob, {changed} pitching change(s)")
     if missed:
         print(f"  unmatched: {', '.join(missed)}")
 

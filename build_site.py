@@ -299,6 +299,14 @@ def build(days_shown=2, history_days=4, keep_hours=12):
             "period":    m.get("period"),
             "clock":     m.get("clock"),
             # Live drive state; absent for MLB and simply not rendered.
+            # Baseball live state. Current pitcher differs from the starter
+            # once a change is made; wp is win probability for the home side.
+            "cur_pitcher": m.get("cur_pitcher"),
+            "cur_batter":  m.get("cur_batter"),
+            "wp_home":     m.get("wp_home"),
+            "wp_away":     m.get("wp_away"),
+            "pitcher_changed": bool(m.get("pitcher_changed")),
+            "prev_pitcher":    m.get("prev_pitcher"),
             "poss":      m.get("poss"),
             "down":      m.get("down"),
             "spot":      m.get("spot"),

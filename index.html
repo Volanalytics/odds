@@ -5,7 +5,7 @@
 <!-- Without this, phones assume a ~980px layout and scale the whole page down. -->
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#08161B">
-<title>BetOnline Odds</title>
+<title>BetOnline MLB odds</title>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -41,6 +41,11 @@ header{position:sticky;top:0;z-index:20;background:var(--field);
 /* Same colour as the game time above it -- the drive line is context, not an
    alert, so the RZ badge carries the emphasis instead of the whole string. */
 .drv{font-size:10px;color:var(--m5);line-height:1.3;white-space:nowrap}
+.lp{font-size:10px;color:var(--m5);line-height:1.35;white-space:nowrap}
+.wp{font-size:10px;color:var(--m10);line-height:1.35;white-space:nowrap}
+/* A pitching change is the one live event that reliably moves a total. */
+.chg{background:var(--m2);color:#04161A;border-radius:3px;padding:0 3px;
+     margin-right:4px;font-size:9px;font-weight:700}
 /* Red fill with a yellow outline: a started game already has a dark red row
    background, so red-on-red needs the border to separate it. The outline
    clears 6:1 against both the red row and the normal panel. */
@@ -191,6 +196,7 @@ tr.det td{background:#061014;padding:0;text-align:left}
   .pit{font-size:12px}
   .st{font-size:12px}
   .drv{font-size:11px}
+  .lp,.wp{font-size:11px}
   .rzb{font-size:10px}
   .ball{width:15px;height:9px}
   .cmeta{font-size:13px}
@@ -305,6 +311,25 @@ function boxTable(g){
   return `<table class="box"><thead><tr><th></th>${head}</tr></thead><tbody>`
        + row(A, b.away) + row(H, b.home) + "</tbody></table>"
        + (lead ? `<div class="leads">${lead}</div>` : "");
+}
+
+/* Live baseball state: who is pitching now, and the market-independent win
+   probability. Shown only while in play -- a final game's WP is 0/100 and a
+   scheduled game has none. */
+function livemlb(g){
+  if(!g.live) return "";
+  const bits = [];
+  if(g.cur_pitcher){
+    const chg = g.pitcher_changed ? '<span class="chg">NEW</span>' : "";
+    bits.push(`<div class="lp">${chg}P: ${g.cur_pitcher}</div>`);
+  }
+  if(g.wp_home !== null && g.wp_home !== undefined){
+    const hi = g.wp_home >= 50;
+    const side = hi ? (g.home_short || g.home) : (g.away_short || g.away);
+    const pct  = hi ? g.wp_home : g.wp_away;
+    bits.push(`<div class="wp">WP ${side} ${Math.round(pct)}%</div>`);
+  }
+  return bits.join("");
 }
 
 /* Down, distance and field position. One short line, shown under the clock. */
@@ -440,7 +465,7 @@ function card(g, gi){
         ${venueLine(g)}
       </div>
       <div class="cmeta">${g.time}${g.away_rot ? `<br>${g.away_rot}/${g.home_rot}` : ""}
-        ${statusLine(g)}${drive(g)}</div>
+        ${statusLine(g)}${drive(g)}${livemlb(g)}</div>
     </div>
     ${open === BOX ? cardHist(gi, BOX) : ""}
     <div class="mkts">${cells.join("")}</div>
@@ -468,7 +493,7 @@ function render(){
   const moved = d.games.reduce((a, g) => a + g.moves, 0);
   document.getElementById("meta").textContent =
     `${d.games.length} games \u00b7 ${moved} moved \u00b7 ${d.generated}`;
-  document.title = `${d.label || "BetOnline"} odds \u2014 BetOnline`;
+  document.title = `${d.label || "MLB"} odds \u2014 BetOnline`;
 
   document.getElementById("head").innerHTML =
       '<th class="l">Time</th><th class="l">Teams</th>'
@@ -484,7 +509,7 @@ function render(){
     }
     const rot = g.away_rot ? `<div class="time">${g.away_rot}<br>${g.home_rot}</div>` : "";
     rows.push(`<tr class="${i % 2 ? "g1" : "g0"}${g.started ? " started" : ""}">
-        <td class="l time">${g.date}<br>${g.time}${rot}${statusLine(g)}${drive(g)}</td>
+        <td class="l time">${g.date}<br>${g.time}${rot}${statusLine(g)}${drive(g)}${livemlb(g)}</td>
         <td class="l${g.box ? " boxable" : ""}"${g.box ? ` onclick="det(${i},'${BOX}')"` : ""}>
           <div class="trow"><span class="tname">${poss(g, "away")}${rk(g.away_rank)}<span class="team">${g.away_full || g.away}</span></span>${(g.away_r ?? null) !== null ? `<span class="run">${g.away_r}</span>` : ""}</div>
           ${g.away_p ? pit(g.away_p, g.away_ph) : ""}
