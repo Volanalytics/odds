@@ -164,6 +164,8 @@ tr.det td{background:#061014;padding:0;text-align:left}
 .mklbl{color:var(--dim);font-size:10px;letter-spacing:.5px;margin-bottom:2px}
 .mkln{font-size:12px;line-height:1.5;white-space:nowrap;
       overflow:hidden;text-overflow:ellipsis}
+/* Full-width row inside the two-column market grid. */
+.cpanel{grid-column:1 / -1}
 .chist{background:#061014;padding:8px 10px;overflow-x:auto;
        -webkit-overflow-scrolling:touch}
 /* R/H/E pinned to the right edge so the totals stay visible while the innings
@@ -414,6 +416,22 @@ function cardHist(gi, key){
 function card(g, gi){
   const ar = (g.away_r ?? null) !== null ? ` <span class="run">${g.away_r}</span>` : "";
   const hr = (g.home_r ?? null) !== null ? ` <span class="run">${g.home_r}</span>` : "";
+  const open = (OPEN && OPEN[0] === gi) ? OPEN[1] : null;
+  const cols = DATA.columns;
+  const cells = cols.map(c => mkBlock(g, gi, c));
+
+  /* Drop the history panel into the grid immediately below the tapped cell
+     rather than at the foot of the card. The grid is two columns, so the row
+     containing cell i ends at i+1 when i is even and at i when it's odd --
+     inserting mid-row would push its neighbour down a line. */
+  if(open && open !== BOX){
+    const i = cols.findIndex(c => c.key === open);
+    if(i >= 0){
+      const endOfRow = (i % 2 === 0) ? i + 1 : i;
+      cells.splice(Math.min(endOfRow, cells.length - 1) + 1, 0,
+                   `<div class="cpanel">${cardHist(gi, open)}</div>`);
+    }
+  }
   return `<div class="card${g.started ? " started" : ""}">
     <div class="chead${g.box ? " boxable" : ""}"${g.box ? ` onclick="det(${gi},'${BOX}')"` : ""}>
       <div>
@@ -424,8 +442,8 @@ function card(g, gi){
       <div class="cmeta">${g.time}${g.away_rot ? `<br>${g.away_rot}/${g.home_rot}` : ""}
         ${statusLine(g)}${drive(g)}</div>
     </div>
-    <div class="mkts">${DATA.columns.map(c => mkBlock(g, gi, c)).join("")}</div>
-    ${OPEN && OPEN[0] === gi ? cardHist(gi, OPEN[1]) : ""}
+    ${open === BOX ? cardHist(gi, BOX) : ""}
+    <div class="mkts">${cells.join("")}</div>
   </div>`;
 }
 
