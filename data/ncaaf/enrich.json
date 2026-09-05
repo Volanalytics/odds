@@ -478,10 +478,10 @@
   "away_rank": 99,
   "away_short": "Ohio",
   "city": "Lincoln",
-  "clock": "0:03",
+  "clock": "0:02",
   "conf_comp": false,
-  "detail": "0:03 - 2nd",
-  "down": "4th & 1 at NEB 46",
+  "detail": "0:02 - 2nd",
+  "down": null,
   "espn_id": "401858430",
   "final": false,
   "home_abbr": "NEB",
@@ -499,7 +499,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "5 CAR, 37 YDS",
+    "val": "6 CAR, 38 YDS",
     "who": "N. Poulos"
    },
    {
@@ -519,9 +519,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "NEB 46",
+  "spot": null,
   "state": "NE",
   "status": "In Progress",
   "venue": "Memorial Stadium (Lincoln, NE)"
@@ -638,10 +638,10 @@
   "away_rank": 99,
   "away_short": "SE Missouri",
   "city": "Ames",
-  "clock": "13:52",
+  "clock": "12:28",
   "conf_comp": false,
-  "detail": "13:52 - 1st",
-  "down": "3rd & 5 at ISU 47",
+  "detail": "12:28 - 1st",
+  "down": null,
   "espn_id": "401856779",
   "final": false,
   "home_abbr": "ISU",
@@ -653,7 +653,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "1, 0 YDS",
+    "val": "2, 0 YDS",
     "who": "J. Raynor"
    },
    {
@@ -671,9 +671,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "ISU 47",
+  "spot": null,
   "state": "IA",
   "status": "In Progress",
   "venue": "Jack Trice Stadium"
@@ -2360,23 +2360,23 @@
   "away_rank": 99,
   "away_short": "Oregon St",
   "city": "Houston",
-  "clock": "0:38",
+  "clock": "0:09",
   "conf_comp": false,
-  "detail": "0:38 - 2nd",
-  "down": null,
+  "detail": "0:09 - 2nd",
+  "down": "3rd & 10 at HOU 40",
   "espn_id": "401856778",
   "final": false,
   "home_abbr": "HOU",
-  "home_r": "16",
+  "home_r": "19",
   "home_rank": 23,
   "home_short": "Houston",
   "in_play": true,
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "12/19, 144 YDS, 1 TD",
-    "who": "C. Weigman"
+    "team": "away",
+    "val": "12/18, 166 YDS",
+    "who": "B. Atkinson"
    },
    {
     "cat": "RUSH",
@@ -2397,13 +2397,13 @@
   ],
   "line_home": [
    9.0,
-   7.0
+   10.0
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "HOU 40",
   "state": "TX",
   "status": "In Progress",
   "venue": "TDECU Stadium"
@@ -2626,10 +2626,10 @@
   "away_rank": 99,
   "away_short": "Bryant",
   "city": "West Point",
-  "clock": "0:01",
+  "clock": "0:00",
   "conf_comp": false,
-  "detail": "0:01 - 2nd",
-  "down": null,
+  "detail": "Halftime",
+  "down": "2nd & 10 at BRY 37",
   "espn_id": "401862701",
   "final": false,
   "home_abbr": "ARMY",
@@ -2669,9 +2669,9 @@
   "period": 2,
   "poss": null,
   "redzone": false,
-  "spot": null,
+  "spot": "BRY 37",
   "state": "NY",
-  "status": "In Progress",
+  "status": "Halftime",
   "venue": "Michie Stadium"
  },
  "4f0e1900bdc8d12bf0cc91ae291c104e": {
@@ -3757,10 +3757,10 @@
   "away_rank": 99,
   "away_short": "Youngstown St",
   "city": "Lexington",
-  "clock": "0:45",
+  "clock": "0:00",
   "conf_comp": false,
-  "detail": "0:45 - 1st",
-  "down": "4th & 6 at UK 40",
+  "detail": "End of 1st",
+  "down": "2nd & 10 at 50",
   "espn_id": "401856659",
   "final": false,
   "home_abbr": "UK",
@@ -3796,11 +3796,11 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "UK 40",
+  "spot": "50",
   "state": "KY",
-  "status": "In Progress",
+  "status": "End of Period",
   "venue": "Kroger Field"
  },
  "6dbd3546b178b91878131862fd719e1e": {
@@ -4117,10 +4117,10 @@
   "away_rank": 99,
   "away_short": "Lafayette",
   "city": "East Hartford",
-  "clock": "1:15",
+  "clock": "0:42",
   "conf_comp": false,
-  "detail": "1:15 - 2nd",
-  "down": "3rd & 8 at LAF 43",
+  "detail": "0:42 - 2nd",
+  "down": "1st & 10 at CONN 34",
   "espn_id": "401861962",
   "final": false,
   "home_abbr": "CONN",
@@ -4132,13 +4132,13 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "15/21, 192 YDS, 2 TD, 1 INT",
+    "val": "17/23, 200 YDS, 2 TD, 1 INT",
     "who": "K. Osborne"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "5 CAR, 59 YDS, 1 TD",
+    "val": "6 CAR, 66 YDS, 1 TD",
     "who": "K. Osborne"
    },
    {
@@ -4158,9 +4158,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "LAF 43",
+  "spot": "CONN 34",
   "state": "CT",
   "status": "In Progress",
   "venue": "Pratt & Whitney Stadium"
@@ -4999,10 +4999,10 @@
   "away_rank": 99,
   "away_short": "Kent State",
   "city": "Columbia",
-  "clock": "12:42",
+  "clock": "10:14",
   "conf_comp": false,
-  "detail": "12:42 - 2nd",
-  "down": null,
+  "detail": "10:14 - 2nd",
+  "down": "1st & 10 at SC 46",
   "espn_id": "401856665",
   "final": false,
   "home_abbr": "SC",
@@ -5040,9 +5040,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
-  "redzone": true,
-  "spot": null,
+  "poss": "away",
+  "redzone": false,
+  "spot": "SC 46",
   "state": "SC",
   "status": "In Progress",
   "venue": "Williams-Brice Stadium"
@@ -5056,7 +5056,7 @@
   "clock": "3:59",
   "conf_comp": false,
   "detail": "3:59 - 2nd",
-  "down": "1st & 10 at BALL 25",
+  "down": null,
   "espn_id": "401858432",
   "final": false,
   "home_abbr": "OSU",
@@ -5094,9 +5094,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "BALL 25",
+  "spot": null,
   "state": "OH",
   "status": "In Progress",
   "venue": "Ohio Stadium"
@@ -5546,13 +5546,13 @@
  },
  "ab601e833e1494159df16e0331dd02d4": {
   "away_abbr": "M-OH",
-  "away_r": "0",
+  "away_r": "6",
   "away_rank": 99,
   "away_short": "Miami OH",
   "city": "Pittsburgh",
-  "clock": "11:30",
+  "clock": "10:29",
   "conf_comp": false,
-  "detail": "11:30 - 2nd",
+  "detail": "10:29 - 2nd",
   "down": null,
   "espn_id": "401858207",
   "final": false,
@@ -5583,7 +5583,7 @@
   ],
   "line_away": [
    0.0,
-   0.0
+   7.0
   ],
   "line_home": [
    21.0,
@@ -5592,7 +5592,7 @@
   "neutral": false,
   "period": 2,
   "poss": null,
-  "redzone": false,
+  "redzone": true,
   "spot": null,
   "state": "PA",
   "status": "In Progress",
@@ -5681,10 +5681,10 @@
   "away_rank": 99,
   "away_short": "Liberty",
   "city": "Harrisonburg",
-  "clock": "1:53",
+  "clock": "0:03",
   "conf_comp": false,
-  "detail": "1:53 - 2nd",
-  "down": "1st & 10 at LIB 40",
+  "detail": "0:03 - 2nd",
+  "down": "4th & 10 at JMU 24",
   "espn_id": "401869960",
   "final": false,
   "home_abbr": "JMU",
@@ -5695,9 +5695,9 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "6/7, 55 YDS, 1 TD",
-    "who": "J. Evans"
+    "team": "away",
+    "val": "9/12, 82 YDS",
+    "who": "D. Purdie"
    },
    {
     "cat": "RUSH",
@@ -5707,9 +5707,9 @@
    },
    {
     "cat": "REC",
-    "team": "home",
-    "val": "1 REC, 30 YDS",
-    "who": "C. Keller"
+    "team": "away",
+    "val": "2 REC, 32 YDS",
+    "who": "B. Randolph"
    }
   ],
   "line_away": [
@@ -5724,7 +5724,7 @@
   "period": 2,
   "poss": "away",
   "redzone": false,
-  "spot": "LIB 40",
+  "spot": "JMU 24",
   "state": "VA",
   "status": "In Progress",
   "venue": "Bridgeforth Stadium"
@@ -5783,14 +5783,14 @@
   "away_rank": 99,
   "away_short": "East Carolina",
   "city": "Tuscaloosa",
-  "clock": "0:33",
+  "clock": "0:14",
   "conf_comp": false,
-  "detail": "0:33 - 2nd",
-  "down": "1st & Goal at ECU 4",
+  "detail": "0:14 - 2nd",
+  "down": "1st & 10 at ECU 25",
   "espn_id": "401856634",
   "final": false,
   "home_abbr": "ALA",
-  "home_r": "31",
+  "home_r": "38",
   "home_rank": 13,
   "home_short": "Alabama",
   "in_play": true,
@@ -5798,13 +5798,13 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "10/16, 177 YDS",
+    "val": "11/18, 178 YDS",
     "who": "K. Russell"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "7 CAR, 55 YDS",
+    "val": "8 CAR, 58 YDS, 1 TD",
     "who": "K. Russell"
    },
    {
@@ -5820,13 +5820,13 @@
   ],
   "line_home": [
    10.0,
-   21.0
+   28.0
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
-  "redzone": true,
-  "spot": "ECU 4",
+  "poss": null,
+  "redzone": false,
+  "spot": "ECU 25",
   "state": "AL",
   "status": "In Progress",
   "venue": "Bryant-Denny Stadium"
@@ -6399,14 +6399,14 @@
   "away_rank": 99,
   "away_short": "Duquesne",
   "city": "USAF Academy",
-  "clock": "0:00",
+  "clock": "12:17",
   "conf_comp": false,
-  "detail": "End of 1st",
-  "down": "3rd & 6 at DUQ 44",
+  "detail": "12:17 - 2nd",
+  "down": null,
   "espn_id": "401864496",
   "final": false,
   "home_abbr": "AFA",
-  "home_r": "7",
+  "home_r": "14",
   "home_rank": 99,
   "home_short": "Air Force",
   "in_play": true,
@@ -6420,7 +6420,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "5 CAR, 38 YDS",
+    "val": "6 CAR, 49 YDS",
     "who": "R. Conti"
    },
    {
@@ -6431,18 +6431,20 @@
    }
   ],
   "line_away": [
+   0.0,
    0.0
   ],
   "line_home": [
+   7.0,
    7.0
   ],
   "neutral": false,
-  "period": 1,
-  "poss": "home",
+  "period": 2,
+  "poss": null,
   "redzone": false,
-  "spot": "DUQ 44",
+  "spot": null,
   "state": "CO",
-  "status": "End of Period",
+  "status": "In Progress",
   "venue": "Falcon Stadium"
  },
  "d500b645ddca0f63d4d383778b3d5b21": {
@@ -7112,10 +7114,10 @@
   "away_rank": 99,
   "away_short": "North Texas",
   "city": "Bloomington",
-  "clock": "0:16",
+  "clock": "0:01",
   "conf_comp": false,
-  "detail": "0:16 - 2nd",
-  "down": "1st & 10 at IU 48",
+  "detail": "0:01 - 2nd",
+  "down": "3rd & 6 at IU 44",
   "espn_id": "401858425",
   "final": false,
   "home_abbr": "IU",
@@ -7127,7 +7129,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "15/18, 101 YDS",
+    "val": "15/19, 101 YDS",
     "who": "T. Jackson"
    },
    {
@@ -7155,7 +7157,7 @@
   "period": 2,
   "poss": "away",
   "redzone": false,
-  "spot": "IU 48",
+  "spot": "IU 44",
   "state": "IN",
   "status": "In Progress",
   "venue": "Memorial Stadium (Bloomington, IN)"
@@ -7417,10 +7419,10 @@
   "away_rank": 99,
   "away_short": "New Hampshire",
   "city": "Syracuse",
-  "clock": "1:42",
+  "clock": "0:51",
   "conf_comp": false,
-  "detail": "1:42 - 2nd",
-  "down": null,
+  "detail": "0:51 - 2nd",
+  "down": "2nd & 10 at UNH 37",
   "espn_id": "401858208",
   "final": false,
   "home_abbr": "SYR",
@@ -7458,9 +7460,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "UNH 37",
   "state": "NY",
   "status": "In Progress",
   "venue": "JMA Wireless Dome"
