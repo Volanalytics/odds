@@ -478,27 +478,44 @@
   "away_rank": 99,
   "away_short": "Ohio",
   "city": "Lincoln",
-  "clock": "0:00",
+  "clock": "14:48",
   "conf_comp": false,
-  "detail": "9/5 - 12:00 PM EDT",
-  "down": null,
+  "detail": "14:48 - 1st",
+  "down": "1st & Goal at NEB 7",
   "espn_id": "401858430",
   "final": false,
   "home_abbr": "NEB",
   "home_r": "0",
   "home_rank": 99,
   "home_short": "Nebraska",
-  "in_play": false,
-  "leaders": [],
-  "line_away": [],
-  "line_home": [],
+  "in_play": true,
+  "leaders": [
+   {
+    "cat": "PASS",
+    "team": "away",
+    "val": "1/1, 68 YDS",
+    "who": "N. Poulos"
+   },
+   {
+    "cat": "REC",
+    "team": "away",
+    "val": "1 REC, 68 YDS",
+    "who": "R. Neer"
+   }
+  ],
+  "line_away": [
+   0.0
+  ],
+  "line_home": [
+   0.0
+  ],
   "neutral": false,
-  "period": 0,
-  "poss": null,
-  "redzone": false,
-  "spot": null,
+  "period": 1,
+  "poss": "away",
+  "redzone": true,
+  "spot": "NEB 7",
   "state": "NE",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "Memorial Stadium (Lincoln, NE)"
  },
  "0c4c84793ee16b40df982640f76a4d9b": {
@@ -912,27 +929,38 @@
   "away_rank": 99,
   "away_short": "Coastal",
   "city": "Morgantown",
-  "clock": "0:00",
+  "clock": "14:13",
   "conf_comp": false,
-  "detail": "9/5 - 12:00 PM EDT",
+  "detail": "14:13 - 1st",
   "down": null,
   "espn_id": "401856780",
   "final": false,
   "home_abbr": "WVU",
-  "home_r": "0",
+  "home_r": "6",
   "home_rank": 99,
   "home_short": "West Virginia",
-  "in_play": false,
-  "leaders": [],
-  "line_away": [],
-  "line_home": [],
+  "in_play": true,
+  "leaders": [
+   {
+    "cat": "RUSH",
+    "team": "home",
+    "val": "2 CAR, 75 YDS, 1 TD",
+    "who": "C. Cook"
+   }
+  ],
+  "line_away": [
+   0.0
+  ],
+  "line_home": [
+   6.0
+  ],
   "neutral": false,
-  "period": 0,
+  "period": 1,
   "poss": null,
-  "redzone": false,
+  "redzone": true,
   "spot": null,
   "state": "WV",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "Milan Puskar Stadium"
  },
  "18c682b142ecfadb8d6d801f5fb9aac7": {
@@ -4034,27 +4062,50 @@
   "away_rank": 99,
   "away_short": "Lafayette",
   "city": "East Hartford",
-  "clock": "0:00",
+  "clock": "14:45",
   "conf_comp": false,
-  "detail": "9/5 - 12:00 PM EDT",
-  "down": null,
+  "detail": "14:45 - 1st",
+  "down": "2nd & 3 at CONN 32",
   "espn_id": "401861962",
   "final": false,
   "home_abbr": "CONN",
   "home_r": "0",
   "home_rank": 99,
   "home_short": "UConn",
-  "in_play": false,
-  "leaders": [],
-  "line_away": [],
-  "line_home": [],
+  "in_play": true,
+  "leaders": [
+   {
+    "cat": "PASS",
+    "team": "home",
+    "val": "1/1, 7 YDS",
+    "who": "K. Osborne"
+   },
+   {
+    "cat": "RUSH",
+    "team": "home",
+    "val": "1 CAR, 0 YDS",
+    "who": "Team"
+   },
+   {
+    "cat": "REC",
+    "team": "home",
+    "val": "1 REC, 7 YDS",
+    "who": "C. Bowers"
+   }
+  ],
+  "line_away": [
+   0.0
+  ],
+  "line_home": [
+   0.0
+  ],
   "neutral": false,
-  "period": 0,
-  "poss": null,
+  "period": 1,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "CONN 32",
   "state": "CT",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "Pratt & Whitney Stadium"
  },
  "7356f9bad07c48fc6b78f52e38c85c11": {
@@ -6667,46 +6718,50 @@
   "away_rank": 99,
   "away_short": "Tarleton St",
   "city": "Bowling Green",
-  "clock": "0:00",
+  "clock": "13:42",
   "conf_comp": false,
-  "detail": "9/5 - 12:00 PM EDT",
-  "down": null,
+  "detail": "13:42 - 1st",
+  "down": "3rd & 9 at BGSU 21",
   "espn_id": "401866410",
   "final": false,
   "home_abbr": "BGSU",
   "home_r": "0",
   "home_rank": 99,
   "home_short": "Bowling Green",
-  "in_play": false,
+  "in_play": true,
   "leaders": [
    {
     "cat": "PASS",
-    "team": "away",
-    "val": "224 YDS, 3 TD",
-    "who": "K. Anderson"
+    "team": "home",
+    "val": "1/1, 0 YDS",
+    "who": "J. Kastantin"
    },
    {
     "cat": "RUSH",
-    "team": "away",
-    "val": "25 CAR, 184 YDS, 2 TD",
-    "who": "T. Hines"
+    "team": "home",
+    "val": "1 CAR, 1 YDS",
+    "who": "J. Kastantin"
    },
    {
     "cat": "REC",
-    "team": "away",
-    "val": "6 REC, 109 YDS, 2 TD",
-    "who": "M. Willis"
+    "team": "home",
+    "val": "1 REC, 0 YDS",
+    "who": "K. Baldwin"
    }
   ],
-  "line_away": [],
-  "line_home": [],
+  "line_away": [
+   0.0
+  ],
+  "line_home": [
+   0.0
+  ],
   "neutral": false,
-  "period": 0,
-  "poss": null,
+  "period": 1,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "BGSU 21",
   "state": "OH",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "Doyt L. Perry Stadium"
  },
  "df510525b83238b6e856c80c353bb32a": {
@@ -7130,46 +7185,44 @@
   "away_rank": 99,
   "away_short": "New Hampshire",
   "city": "Syracuse",
-  "clock": "0:00",
+  "clock": "13:16",
   "conf_comp": false,
-  "detail": "9/5 - 12:00 PM EDT",
-  "down": null,
+  "detail": "13:16 - 1st",
+  "down": "2nd & 10 at SYR 40",
   "espn_id": "401858208",
   "final": false,
   "home_abbr": "SYR",
   "home_r": "0",
   "home_rank": 99,
   "home_short": "Syracuse",
-  "in_play": false,
+  "in_play": true,
   "leaders": [
    {
     "cat": "PASS",
-    "team": "away",
-    "val": "230 YDS, 2 TD",
-    "who": "B. Bentley"
+    "team": "home",
+    "val": "1, 0 YDS",
+    "who": "S. Angeli"
    },
    {
     "cat": "RUSH",
-    "team": "away",
-    "val": "10 CAR, 53 YDS",
-    "who": "M. Thomason"
-   },
-   {
-    "cat": "REC",
-    "team": "away",
-    "val": "6 REC, 123 YDS, 1 TD",
-    "who": "J. Kelly"
+    "team": "home",
+    "val": "3 CAR, 10 YDS",
+    "who": "T. Hill"
    }
   ],
-  "line_away": [],
-  "line_home": [],
+  "line_away": [
+   0.0
+  ],
+  "line_home": [
+   0.0
+  ],
   "neutral": false,
-  "period": 0,
-  "poss": null,
+  "period": 1,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "SYR 40",
   "state": "NY",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "JMA Wireless Dome"
  },
  "f825e4c4d512e1c0a6db6ac7d8bc0326": {
