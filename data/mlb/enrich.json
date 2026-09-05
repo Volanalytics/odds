@@ -1578,27 +1578,33 @@
   "abstract": "Preview",
   "away_p": "Max Scherzer",
   "away_p_hand": "R",
-  "away_r": null,
-  "cur_batter": null,
-  "cur_pitcher": null,
+  "away_r": 0,
+  "cur_batter": "Brett Bateman",
+  "cur_pitcher": "Seth Lugo",
   "game_pk": 824066,
-  "half": null,
+  "half": "Top",
   "home_p": "Seth Lugo",
   "home_p_hand": "R",
-  "home_r": null,
+  "home_r": 0,
   "in_play": false,
-  "inning": null,
-  "innings": [],
-  "outs": null,
+  "inning": 1,
+  "innings": [
+   {
+    "a": null,
+    "h": null,
+    "n": 1
+   }
+  ],
+  "outs": 0,
   "rhe_away": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "rhe_home": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "status": "Pre-Game",
   "warmup": false
@@ -1787,14 +1793,14 @@
   "away_p": "Javier Assad",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Pete Crow-Armstrong",
+  "cur_batter": "Michael Busch",
   "cur_pitcher": "Ryan Gusto",
   "game_pk": 823823,
   "half": "Top",
   "home_p": "Ryan Gusto",
   "home_p_hand": "R",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "innings": [
    {
@@ -1806,7 +1812,7 @@
   "outs": 0,
   "rhe_away": [
    0,
-   0,
+   1,
    0
   ],
   "rhe_home": [
@@ -1814,8 +1820,8 @@
    0,
    0
   ],
-  "status": "Warmup",
-  "warmup": true
+  "status": "In Progress",
+  "warmup": false
  },
  "c3d5e91757e67f6c08706b0970a77f89": {
   "abstract": "Final",
@@ -1896,44 +1902,15 @@
   "abstract": "Preview",
   "away_p": "Carlos Rod\u00f3n",
   "away_p_hand": "L",
-  "away_r": null,
-  "cur_batter": null,
-  "cur_pitcher": null,
+  "away_r": 0,
+  "cur_batter": "Paul Goldschmidt",
+  "cur_pitcher": "Robbie Ray",
   "game_pk": 823257,
-  "half": null,
+  "half": "Top",
   "home_p": "Robbie Ray",
   "home_p_hand": "L",
-  "home_r": null,
-  "in_play": false,
-  "inning": null,
-  "innings": [],
-  "outs": null,
-  "rhe_away": [
-   null,
-   null,
-   null
-  ],
-  "rhe_home": [
-   null,
-   null,
-   null
-  ],
-  "status": "Pre-Game",
-  "warmup": false
- },
- "c5b03415dadb8213241501d56b4926bc": {
-  "abstract": "Live",
-  "away_p": "Anthony Molina",
-  "away_p_hand": "R",
-  "away_r": 0,
-  "cur_batter": "Jonah Cox",
-  "cur_pitcher": "Zac Thornton",
-  "game_pk": 823577,
-  "half": "Top",
-  "home_p": "Zac Thornton",
-  "home_p_hand": "L",
   "home_r": 0,
-  "in_play": true,
+  "in_play": false,
   "inning": 1,
   "innings": [
    {
@@ -1946,6 +1923,41 @@
   "rhe_away": [
    0,
    0,
+   0
+  ],
+  "rhe_home": [
+   0,
+   0,
+   0
+  ],
+  "status": "Pre-Game",
+  "warmup": false
+ },
+ "c5b03415dadb8213241501d56b4926bc": {
+  "abstract": "Live",
+  "away_p": "Anthony Molina",
+  "away_p_hand": "R",
+  "away_r": 1,
+  "cur_batter": "Francisco Lindor",
+  "cur_pitcher": "Anthony Molina",
+  "game_pk": 823577,
+  "half": "Bottom",
+  "home_p": "Zac Thornton",
+  "home_p_hand": "L",
+  "home_r": 0,
+  "in_play": true,
+  "inning": 1,
+  "innings": [
+   {
+    "a": 1,
+    "h": null,
+    "n": 1
+   }
+  ],
+  "outs": 0,
+  "rhe_away": [
+   1,
+   1,
    0
   ],
   "rhe_home": [
