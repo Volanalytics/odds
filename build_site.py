@@ -287,8 +287,14 @@ def build(days_shown=2, history_days=4, keep_hours=12):
             "away_full": ev["away"], "home_full": ev["home"],
             # Desktop shows the full name, mobile the short one. Falls back to
             # the display code, then to whatever the odds feed gave us.
-            "away_short": m.get("away_short") or away_code,
-            "home_short": m.get("home_short") or home_code,
+            # Football gets ESPN's shortDisplayName; baseball a city-level
+            # name from sports.py. Falls back to the code either way.
+            "away_short": (m.get("away_short")
+                           or (CFG.get("short") or {}).get(ev["away_team"])
+                           or away_code),
+            "home_short": (m.get("home_short")
+                           or (CFG.get("short") or {}).get(ev["home_team"])
+                           or home_code),
             # Football extras; absent for MLB and simply not rendered.
             "neutral":   bool(m.get("neutral")),
             "venue":     m.get("venue"),

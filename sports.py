@@ -39,6 +39,28 @@ MLB_TEAMS = {
 assert len(set(MLB_TEAMS.values())) == 30, "MLB map must cover exactly 30 clubs"
 
 
+# Display name for the card header: city, plus the club name only where a city
+# fields two teams. "Chicago Cubs" and "Miami", not "CHC" and "MIA".
+MLB_SHORT = {
+    "Arizona Diamondbacks": "Arizona", "Atlanta Braves": "Atlanta",
+    "Baltimore Orioles": "Baltimore", "Boston Red Sox": "Boston",
+    "Chicago Cubs": "Chicago Cubs", "Chicago White Sox": "Chicago White Sox",
+    "Cincinnati Reds": "Cincinnati", "Cleveland Guardians": "Cleveland",
+    "Colorado Rockies": "Colorado", "Detroit Tigers": "Detroit",
+    "Houston Astros": "Houston", "Kansas City Royals": "Kansas City",
+    "Los Angeles Angels": "LA Angels", "Los Angeles Dodgers": "LA Dodgers",
+    "Miami Marlins": "Miami", "Milwaukee Brewers": "Milwaukee",
+    "Minnesota Twins": "Minnesota", "New York Mets": "NY Mets",
+    "New York Yankees": "NY Yankees", "Athletics": "Athletics",
+    "Philadelphia Phillies": "Philadelphia", "Pittsburgh Pirates": "Pittsburgh",
+    "San Diego Padres": "San Diego", "San Francisco Giants": "San Francisco",
+    "Seattle Mariners": "Seattle", "St. Louis Cardinals": "St. Louis",
+    "Tampa Bay Rays": "Tampa Bay", "Texas Rangers": "Texas",
+    "Toronto Blue Jays": "Toronto", "Washington Nationals": "Washington",
+    "Oakland Athletics": "Athletics", "Las Vegas Athletics": "Athletics",
+}
+
+
 SPORTS = {
     "mlb": {
         "key":    "baseball_mlb",
@@ -70,6 +92,7 @@ SPORTS = {
         "event_cadence": [(1, 3600), (6, 10800), (999, None)],
         "spread_markets": {"spreads", "spreads_1st_5_innings"},
         "teams":  MLB_TEAMS,
+        "short":  MLB_SHORT,
         # Alerting. cents = moneyline move worth reporting; keys = numbers
         # whose crossing matters more than the distance moved.
         "alerts": {

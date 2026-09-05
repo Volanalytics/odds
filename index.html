@@ -154,10 +154,11 @@ tr.det td{background:#061014;padding:0;text-align:left}
 .chead{display:flex;justify-content:space-between;align-items:flex-start;
        gap:8px;padding:8px 10px;border-bottom:1px solid var(--line)}
 .chead > div:first-child{flex:1;min-width:0}
-.crow{display:flex;align-items:baseline;justify-content:space-between;
-      gap:10px;line-height:1.5}
-.crow .tname{flex:1;min-width:0}
-.crow .run{flex:0 0 auto}
+.crow{display:flex;align-items:baseline;gap:10px;line-height:1.5}
+.crow .tname{flex:0 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;
+             white-space:nowrap}
+.crow .run{flex:0 0 auto;margin-left:2px}
+.cstat{margin-top:3px}
 .cmeta{text-align:right;font-size:11px;color:var(--dim);white-space:nowrap}
 .mkts{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
       gap:1px;background:var(--line)}
@@ -173,9 +174,11 @@ tr.det td{background:#061014;padding:0;text-align:left}
 .cpanel{grid-column:1 / -1}
 .chist{background:#061014;padding:8px 10px;overflow-x:auto;
        -webkit-overflow-scrolling:touch}
-/* R/H/E pinned to the right edge so the totals stay visible while the innings
-   scroll under them. */
-.chist table.box .tot{position:sticky;right:0;background:#061014}
+/* R/H/E are separated from the innings by a rule rather than pinned: three
+   sticky columns all at right:0 stack on top of each other, which is why the
+   headers vanished. */
+table.box .tot{border-left:1px solid var(--line)}
+table.box th.tot{border-left:1px solid var(--line)}
 .chist .dhead{font-size:11px}
 .chist .hrow{display:flex;justify-content:space-between;font-size:11px;
              padding:1px 0}
@@ -281,14 +284,22 @@ function boxTable(g){
   const A = g.away_short || g.away, H = g.home_short || g.home;
 
   if(b.kind === "innings"){
-    const inn = b.innings || [];
-    if(!inn.length) return '<div class="bmsg">Game has not started.</div>';
-    const head = inn.map(i => `<th>${i.n}</th>`).join("")
+    const played = b.innings || [];
+    if(!played.length) return '<div class="bmsg">Game has not started.</div>';
+    /* Always show a full nine so the grid doesn't reflow as the game goes on,
+       and keep any extras beyond that. Unplayed innings render blank. */
+    const n = Math.max(9, played.length);
+    const at = i => played.find(x => x.n === i + 1) || {};
+    const head = Array.from({length: n}, (_, i) => `<th>${i + 1}</th>`).join("")
                + '<th class="tot">R</th><th class="tot">H</th><th class="tot">E</th>';
     const row = (name, key, rhe) =>
       `<tr><td class="bt">${name}</td>`
-      + inn.map(i => `<td>${i[key] ?? "-"}</td>`).join("")
-      + (rhe || []).map(v => `<td class="tot">${v ?? "-"}</td>`).join("") + "</tr>";
+      + Array.from({length: n}, (_, i) => {
+          const v = at(i)[key];
+          return `<td>${v ?? ""}</td>`;
+        }).join("")
+      + ["0", "1", "2"].map(k => `<td class="tot">${(rhe || [])[k] ?? "-"}</td>`).join("")
+      + "</tr>";
     return `<table class="box"><thead><tr><th></th>${head}</tr></thead><tbody>`
          + row(A, "a", b.rhe[0]) + row(H, "h", b.rhe[1]) + "</tbody></table>";
   }
@@ -463,9 +474,9 @@ function card(g, gi){
         <div class="crow"><span class="tname">${poss(g, "away")}${rk(g.away_rank)}<span class="team">${g.away_short || g.away}</span>${g.away_p ? pit(g.away_p, g.away_ph) : ""}</span>${ar}</div>
         <div class="crow"><span class="tname">${poss(g, "home")}${rk(g.home_rank)}<span class="team">${g.home_short || g.home}</span>${g.home_p ? pit(g.home_p, g.home_ph) : ""}</span>${hr}</div>
         ${venueLine(g)}
+        <div class="cstat">${statusLine(g)}${drive(g)}${livemlb(g)}</div>
       </div>
-      <div class="cmeta">${g.time}${g.away_rot ? `<br>${g.away_rot}/${g.home_rot}` : ""}
-        ${statusLine(g)}${drive(g)}${livemlb(g)}</div>
+      <div class="cmeta">${g.time}${g.away_rot ? `<br>${g.away_rot}/${g.home_rot}` : ""}</div>
     </div>
     ${open === BOX ? cardHist(gi, BOX) : ""}
     <div class="mkts">${cells.join("")}</div>
