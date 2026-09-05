@@ -638,10 +638,10 @@
   "away_rank": 99,
   "away_short": "SE Missouri",
   "city": "Ames",
-  "clock": "10:08",
+  "clock": "8:33",
   "conf_comp": false,
-  "detail": "10:08 - 1st",
-  "down": "1st & 10 at SEMO 25",
+  "detail": "8:33 - 1st",
+  "down": "3rd & 5 at ISU 26",
   "espn_id": "401856779",
   "final": false,
   "home_abbr": "ISU",
@@ -677,9 +677,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": "SEMO 25",
+  "spot": "ISU 26",
   "state": "IA",
   "status": "In Progress",
   "venue": "Jack Trice Stadium"
@@ -941,10 +941,10 @@
   "away_rank": 99,
   "away_short": "Coastal",
   "city": "Morgantown",
-  "clock": "0:00",
+  "clock": "12:56",
   "conf_comp": false,
-  "detail": "Halftime",
-  "down": "2nd & 10 at WVU 12",
+  "detail": "12:56 - 3rd",
+  "down": "1st & 10 at WVU 17",
   "espn_id": "401856780",
   "final": false,
   "home_abbr": "WVU",
@@ -974,19 +974,21 @@
   ],
   "line_away": [
    0.0,
+   0.0,
    0.0
   ],
   "line_home": [
    14.0,
-   10.0
+   10.0,
+   0.0
   ],
   "neutral": false,
-  "period": 2,
-  "poss": null,
+  "period": 3,
+  "poss": "home",
   "redzone": false,
-  "spot": "WVU 12",
+  "spot": "WVU 17",
   "state": "WV",
-  "status": "Halftime",
+  "status": "In Progress",
   "venue": "Milan Puskar Stadium"
  },
  "18c682b142ecfadb8d6d801f5fb9aac7": {
@@ -3763,10 +3765,10 @@
   "away_rank": 99,
   "away_short": "Youngstown St",
   "city": "Lexington",
-  "clock": "10:26",
+  "clock": "6:20",
   "conf_comp": false,
-  "detail": "10:26 - 2nd",
-  "down": null,
+  "detail": "6:20 - 2nd",
+  "down": "3rd & 6 at UK 34",
   "espn_id": "401856659",
   "final": false,
   "home_abbr": "UK",
@@ -3805,8 +3807,8 @@
   "neutral": false,
   "period": 2,
   "poss": "away",
-  "redzone": true,
-  "spot": null,
+  "redzone": false,
+  "spot": "UK 34",
   "state": "KY",
   "status": "In Progress",
   "venue": "Kroger Field"
@@ -4146,7 +4148,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "6 CAR, 65 YDS, 1 TD",
+    "val": "6 CAR, 66 YDS, 1 TD",
     "who": "K. Osborne"
    },
    {
@@ -5007,14 +5009,14 @@
   "away_rank": 99,
   "away_short": "Kent State",
   "city": "Columbia",
-  "clock": "7:54",
+  "clock": "6:19",
   "conf_comp": false,
-  "detail": "7:54 - 2nd",
-  "down": "1st & 10 at SC 24",
+  "detail": "6:19 - 2nd",
+  "down": null,
   "espn_id": "401856665",
   "final": false,
   "home_abbr": "SC",
-  "home_r": "15",
+  "home_r": "21",
   "home_rank": 99,
   "home_short": "South Carolina",
   "in_play": true,
@@ -5022,13 +5024,13 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "9/11, 104 YDS, 1 TD",
+    "val": "10/12, 109 YDS, 1 TD",
     "who": "L. Sellers"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "6 CAR, 62 YDS, 1 TD",
+    "val": "8 CAR, 68 YDS, 1 TD",
     "who": "M. Fuller"
    },
    {
@@ -5044,13 +5046,13 @@
   ],
   "line_home": [
    7.0,
-   8.0
+   14.0
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
-  "redzone": false,
-  "spot": "SC 24",
+  "poss": null,
+  "redzone": true,
+  "spot": null,
   "state": "SC",
   "status": "In Progress",
   "venue": "Williams-Brice Stadium"
@@ -5061,10 +5063,10 @@
   "away_rank": 99,
   "away_short": "Ball State",
   "city": "Columbus",
-  "clock": "3:59",
+  "clock": "1:15",
   "conf_comp": false,
-  "detail": "3:59 - 2nd",
-  "down": null,
+  "detail": "1:15 - 2nd",
+  "down": "3rd & 4 at BALL 15",
   "espn_id": "401858432",
   "final": false,
   "home_abbr": "OSU",
@@ -5076,7 +5078,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "12/15, 199 YDS, 2 TD",
+    "val": "17/21, 274 YDS, 2 TD",
     "who": "J. Sayin"
    },
    {
@@ -5088,8 +5090,8 @@
    {
     "cat": "REC",
     "team": "home",
-    "val": "5 REC, 80 YDS, 1 TD",
-    "who": "D. McCuin"
+    "val": "6 REC, 135 YDS, 1 TD",
+    "who": "J. Smith"
    }
   ],
   "line_away": [
@@ -5102,9 +5104,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
-  "redzone": false,
-  "spot": null,
+  "poss": "home",
+  "redzone": true,
+  "spot": "BALL 15",
   "state": "OH",
   "status": "In Progress",
   "venue": "Ohio Stadium"
@@ -5554,14 +5556,14 @@
  },
  "ab601e833e1494159df16e0331dd02d4": {
   "away_abbr": "M-OH",
-  "away_r": "1",
+  "away_r": "7",
   "away_rank": 99,
   "away_short": "Miami OH",
   "city": "Pittsburgh",
-  "clock": "7:50",
+  "clock": "5:04",
   "conf_comp": false,
-  "detail": "7:50 - 2nd",
-  "down": null,
+  "detail": "5:04 - 2nd",
+  "down": "4th & 17 at M-OH 27",
   "espn_id": "401858207",
   "final": false,
   "home_abbr": "PITT",
@@ -5591,7 +5593,7 @@
   ],
   "line_away": [
    0.0,
-   1.0
+   7.0
   ],
   "line_home": [
    21.0,
@@ -5599,9 +5601,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "M-OH 27",
   "state": "PA",
   "status": "In Progress",
   "venue": "Acrisure Stadium"
@@ -5812,7 +5814,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "9 CAR, 58 YDS, 1 TD",
+    "val": "9 CAR, 54 YDS, 1 TD",
     "who": "K. Russell"
    },
    {
@@ -6407,10 +6409,10 @@
   "away_rank": 99,
   "away_short": "Duquesne",
   "city": "USAF Academy",
-  "clock": "9:33",
+  "clock": "8:37",
   "conf_comp": false,
-  "detail": "9:33 - 2nd",
-  "down": null,
+  "detail": "8:37 - 2nd",
+  "down": "1st & 10 at AF 28",
   "espn_id": "401864496",
   "final": false,
   "home_abbr": "AFA",
@@ -6448,9 +6450,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "AF 28",
   "state": "CO",
   "status": "In Progress",
   "venue": "Falcon Stadium"
@@ -6933,10 +6935,10 @@
   "away_rank": 99,
   "away_short": "Tarleton St",
   "city": "Bowling Green",
-  "clock": "14:21",
+  "clock": "12:47",
   "conf_comp": false,
-  "detail": "14:21 - 3rd",
-  "down": "2nd & 6 at TAR 22",
+  "detail": "12:47 - 3rd",
+  "down": "2nd & 9 at BGSU 16",
   "espn_id": "401866410",
   "final": false,
   "home_abbr": "BGSU",
@@ -6976,9 +6978,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "TAR 22",
+  "spot": "BGSU 16",
   "state": "OH",
   "status": "In Progress",
   "venue": "Doyt L. Perry Stadium"
