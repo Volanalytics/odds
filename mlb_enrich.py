@@ -118,7 +118,9 @@ def fetch(start, end):
         "sportId": 1, "startDate": start, "endDate": end,
         # linescore carries offense/defense, which is where the CURRENT
         # pitcher and batter live -- probablePitcher is only the starter.
-        "hydrate": "probablePitcher,linescore,team",
+        # decisions carries the winning/losing/save pitchers once a game is
+        # final -- it is empty before that, so it costs nothing to always ask.
+        "hydrate": "probablePitcher,linescore,team,decisions",
     })
     r.raise_for_status()
     out = []
@@ -191,8 +193,22 @@ def summarize(g, hands):
         side = "home" if half_l.startswith("top") else \
                ("away" if half_l.startswith("bot") else None)
 
+    # Pitching decisions. MLB does not say which club each belongs to, but the
+    # winner necessarily pitched for the side that scored more, and a save
+    # always belongs to the winning club too.
+    dec = g.get("decisions") or {}
+    _ar = (ls.get("teams", {}).get("away") or {}).get("runs")
+    _hr = (ls.get("teams", {}).get("home") or {}).get("runs")
+    win_side = None
+    if _ar is not None and _hr is not None and _ar != _hr:
+        win_side = "away" if _ar > _hr else "home"
+
     return {
         "game_pk":     g.get("gamePk"),
+        "win_p":       (dec.get("winner") or {}).get("fullName"),
+        "lose_p":      (dec.get("loser") or {}).get("fullName"),
+        "save_p":      (dec.get("save") or {}).get("fullName"),
+        "win_side":    win_side,
         "cur_pitcher": cur_p,
         "pitch_side":  side,
         "cur_batter":  cur_b,
