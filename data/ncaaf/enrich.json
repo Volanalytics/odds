@@ -179,17 +179,17 @@
   "away_rank": 99,
   "away_short": "C Michigan",
   "city": "Albuquerque",
-  "clock": "1:08",
+  "clock": "0:00",
   "conf_comp": false,
-  "detail": "1:08 - 4th",
-  "down": "1st & 10 at CMU 20",
+  "detail": "Final",
+  "down": null,
   "espn_id": "401864498",
-  "final": false,
+  "final": true,
   "home_abbr": "UNM",
   "home_r": "38",
   "home_rank": 99,
   "home_short": "New Mexico",
-  "in_play": true,
+  "in_play": false,
   "leaders": [
    {
     "cat": "PASS",
@@ -224,11 +224,11 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "CMU 20",
+  "spot": null,
   "state": "NM",
-  "status": "In Progress",
+  "status": "Final",
   "venue": "University Stadium (NM)"
  },
  "04d0c72553f17ebc22509fb1b5926600": {
@@ -1232,10 +1232,10 @@
   "away_rank": 99,
   "away_short": "UCLA",
   "city": "Berkeley",
-  "clock": "0:50",
+  "clock": "0:00",
   "conf_comp": false,
-  "detail": "0:50 - 3rd",
-  "down": "1st & 10 at CAL 17",
+  "detail": "End of 3rd",
+  "down": "3rd & 10 at CAL 17",
   "espn_id": "401858210",
   "final": false,
   "home_abbr": "CAL",
@@ -1247,13 +1247,13 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "19/27, 237 YDS, 2 TD",
+    "val": "19/29, 237 YDS, 2 TD",
     "who": "J. Sagapolutele"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "19 CAR, 83 YDS, 1 TD",
+    "val": "20 CAR, 84 YDS, 1 TD",
     "who": "A. Mohammed"
    },
    {
@@ -1703,14 +1703,14 @@
   "away_rank": 99,
   "away_short": "Miss Valley St",
   "city": "Sacramento",
-  "clock": "4:52",
+  "clock": "3:21",
   "conf_comp": false,
-  "detail": "4:52 - 4th",
-  "down": "2nd & 7 at MVSU 31",
+  "detail": "3:21 - 4th",
+  "down": "1st & 10 at MVSU 25",
   "espn_id": "401866411",
   "final": false,
   "home_abbr": "SAC",
-  "home_r": "45",
+  "home_r": "52",
   "home_rank": 99,
   "home_short": "Sacramento St",
   "in_play": true,
@@ -1724,8 +1724,8 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "3 CAR, 50 YDS, 1 TD",
-    "who": "J. Patterson"
+    "val": "8 CAR, 58 YDS, 1 TD",
+    "who": "D. Swinney"
    },
    {
     "cat": "REC",
@@ -1744,13 +1744,13 @@
    14.0,
    17.0,
    7.0,
-   7.0
+   14.0
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "MVSU 31",
+  "spot": "MVSU 25",
   "state": "CA",
   "status": "In Progress",
   "venue": "Hornet Stadium"
@@ -3984,10 +3984,10 @@
   "away_rank": 99,
   "away_short": "Western KY",
   "city": "Reno",
-  "clock": "0:00",
+  "clock": "11:55",
   "conf_comp": false,
-  "detail": "End of 3rd",
-  "down": "1st & 10 at WKU 47",
+  "detail": "11:55 - 4th",
+  "down": "2nd & 7 at WKU 12",
   "espn_id": "401864432",
   "final": false,
   "home_abbr": "NEV",
@@ -4005,7 +4005,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "7 CAR, 139 YDS, 1 TD",
+    "val": "8 CAR, 143 YDS, 1 TD",
     "who": "D. Kelley"
    },
    {
@@ -4018,18 +4018,20 @@
   "line_away": [
    0.0,
    7.0,
+   0.0,
    0.0
   ],
   "line_home": [
    14.0,
    7.0,
-   14.0
+   14.0,
+   0.0
   ],
   "neutral": false,
-  "period": 3,
+  "period": 4,
   "poss": "home",
-  "redzone": false,
-  "spot": "WKU 47",
+  "redzone": true,
+  "spot": "WKU 12",
   "state": "NV",
   "status": "In Progress",
   "venue": "Mackay Stadium"
@@ -7770,14 +7772,14 @@
  },
  "df569f05eeee15a5fdf95bd5ce086d6d": {
   "away_abbr": "UNLV",
-  "away_r": "14",
+  "away_r": "21",
   "away_rank": 99,
   "away_short": "UNLV",
   "city": "Honolulu",
-  "clock": "5:02",
+  "clock": "3:42",
   "conf_comp": true,
-  "detail": "5:02 - 4th",
-  "down": "1st & 10 at 50",
+  "detail": "3:42 - 4th",
+  "down": "2nd & 1 at UNLV 47",
   "espn_id": "401864497",
   "final": false,
   "home_abbr": "HAW",
@@ -7789,14 +7791,14 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "16/39, 157 YDS",
+    "val": "17/41, 176 YDS, 1 INT",
     "who": "M. Alejado"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "15 CAR, 72 YDS, 2 TD",
-    "who": "J. Arnold"
+    "val": "15 CAR, 122 YDS, 1 TD",
+    "who": "J. Thomas"
    },
    {
     "cat": "REC",
@@ -7809,7 +7811,7 @@
    7.0,
    7.0,
    0.0,
-   0.0
+   7.0
   ],
   "line_home": [
    0.0,
@@ -7819,9 +7821,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "50",
+  "spot": "UNLV 47",
   "state": "HI",
   "status": "In Progress",
   "venue": "Clarence T.C. Ching Athletics Complex"
