@@ -211,7 +211,7 @@
   "home_p": "Kyle Bradish",
   "home_p_hand": "R",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "innings": [
    {
@@ -221,7 +221,7 @@
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 1,
   "pitch_side": "home",
   "rhe_away": [
    0,
@@ -234,10 +234,12 @@
    0
   ],
   "save_p": null,
-  "status": "Warmup",
-  "warmup": true,
+  "status": "In Progress",
+  "warmup": false,
   "win_p": null,
-  "win_side": null
+  "win_side": null,
+  "wp_away": 50.0,
+  "wp_home": 50.0
  },
  "2d3ba8f32a3003fe2c9866328f0b1a2b": {
   "abstract": "Final",
@@ -421,7 +423,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -877,14 +879,14 @@
   "away_p": "Walbert Ure\u00f1a",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Zach Neto",
+  "cur_batter": "Wade Meckler",
   "cur_pitcher": "Paul Skenes",
   "game_pk": 823336,
   "half": "Top",
   "home_p": "Paul Skenes",
   "home_p_hand": "R",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "innings": [
    {
@@ -894,7 +896,7 @@
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 2,
   "pitch_side": "home",
   "rhe_away": [
    0,
@@ -907,10 +909,12 @@
    0
   ],
   "save_p": null,
-  "status": "Warmup",
-  "warmup": true,
+  "status": "In Progress",
+  "warmup": false,
   "win_p": null,
-  "win_side": null
+  "win_side": null,
+  "wp_away": 46.199999999999996,
+  "wp_home": 53.800000000000004
  },
  "756b1fa5fc5aae0f6173b45c15d5e49f": {
   "abstract": "Live",
@@ -924,7 +928,7 @@
   "home_p": "Christian Scott",
   "home_p_hand": "R",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "innings": [
    {
@@ -947,25 +951,27 @@
    0
   ],
   "save_p": null,
-  "status": "Warmup",
-  "warmup": true,
+  "status": "In Progress",
+  "warmup": false,
   "win_p": null,
-  "win_side": null
+  "win_side": null,
+  "wp_away": 50.0,
+  "wp_home": 50.0
  },
  "7ebaf13916efa137bac4a274d53d01ed": {
   "abstract": "Live",
   "away_p": "Kyle Harrison",
   "away_p_hand": "L",
   "away_r": 3,
-  "cur_batter": "Matt McLain",
-  "cur_pitcher": "Antonio Senzatela",
+  "cur_batter": "Christian Yelich",
+  "cur_pitcher": "Brady Singer",
   "game_pk": 824469,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Brady Singer",
   "home_p_hand": "R",
   "home_r": 6,
   "in_play": true,
-  "inning": 4,
+  "inning": 5,
   "innings": [
    {
     "a": 0,
@@ -986,13 +992,18 @@
     "a": 3,
     "h": 2,
     "n": 4
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 5
    }
   ],
   "lose_p": null,
   "outs": 2,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "pitcher_changed": true,
-  "prev_pitcher": "Kyle Harrison",
+  "prev_pitcher": "Antonio Senzatela",
   "rhe_away": [
    3,
    2,
@@ -1008,8 +1019,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 9.899999999999991,
-  "wp_home": 90.10000000000001
+  "wp_away": 14.099999999999994,
+  "wp_home": 85.9
  },
  "855005fb1370a5252daf5699bd5fce84": {
   "abstract": "Preview",
@@ -2207,7 +2218,7 @@
   "rhe_home": [
    1,
    3,
-   1
+   0
   ],
   "save_p": null,
   "status": "Final",
@@ -3065,10 +3076,10 @@
   "away_p": "Tyler Mahle",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Brandon Marsh",
-  "cur_pitcher": "Tyler Mahle",
+  "cur_batter": "Sean Murphy",
+  "cur_pitcher": "Aaron Nola",
   "game_pk": 823417,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Aaron Nola",
   "home_p_hand": "R",
   "home_r": 2,
@@ -3082,15 +3093,15 @@
    },
    {
     "a": 0,
-    "h": null,
+    "h": 0,
     "n": 2
    }
   ],
   "lose_p": null,
   "outs": 3,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "pitcher_changed": true,
-  "prev_pitcher": "Aaron Nola",
+  "prev_pitcher": "Tyler Mahle",
   "rhe_away": [
    0,
    0,
@@ -3098,7 +3109,7 @@
   ],
   "rhe_home": [
    2,
-   1,
+   2,
    0
   ],
   "save_p": null,
@@ -3106,8 +3117,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 26.299999999999997,
-  "wp_home": 73.7
+  "wp_away": 27.200000000000003,
+  "wp_home": 72.8
  },
  "efbec01e9ddadbf59d572981c0ab0b39": {
   "abstract": "Preview",
@@ -3161,7 +3172,7 @@
   "home_p": "Gavin Williams",
   "home_p_hand": "R",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "innings": [
    {
@@ -3184,10 +3195,12 @@
    0
   ],
   "save_p": null,
-  "status": "Warmup",
-  "warmup": true,
+  "status": "In Progress",
+  "warmup": false,
   "win_p": null,
-  "win_side": null
+  "win_side": null,
+  "wp_away": 50.0,
+  "wp_home": 50.0
  },
  "fb7185d28470aa6f3e7aba955423c36f": {
   "abstract": "Final",
