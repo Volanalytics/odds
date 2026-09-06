@@ -421,7 +421,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -455,7 +455,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -957,8 +957,8 @@
   "away_p": "Kyle Harrison",
   "away_p_hand": "L",
   "away_r": 0,
-  "cur_batter": "Cooper Pratt",
-  "cur_pitcher": "Brady Singer",
+  "cur_batter": "Eugenio Su\u00e1rez",
+  "cur_pitcher": "Kyle Harrison",
   "game_pk": 824469,
   "half": "Top",
   "home_p": "Brady Singer",
@@ -978,16 +978,16 @@
     "n": 2
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 3
    }
   ],
   "lose_p": null,
-  "outs": 0,
-  "pitch_side": "home",
+  "outs": 3,
+  "pitch_side": "away",
   "pitcher_changed": true,
-  "prev_pitcher": "Kyle Harrison",
+  "prev_pitcher": "Brady Singer",
   "rhe_away": [
    0,
    0,
@@ -1003,8 +1003,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 17.900000000000006,
-  "wp_home": 82.1
+  "wp_away": 18.10000000000001,
+  "wp_home": 81.89999999999999
  },
  "855005fb1370a5252daf5699bd5fce84": {
   "abstract": "Preview",
@@ -2202,7 +2202,7 @@
   "rhe_home": [
    1,
    3,
-   0
+   1
   ],
   "save_p": null,
   "status": "Final",
@@ -2884,7 +2884,7 @@
    null
   ],
   "save_p": null,
-  "status": "Scheduled",
+  "status": "Pre-Game",
   "warmup": false,
   "win_p": null,
   "win_side": null
@@ -3093,29 +3093,35 @@
   "abstract": "Preview",
   "away_p": "Kyle Leahy",
   "away_p_hand": "R",
-  "away_r": null,
-  "cur_batter": null,
-  "cur_pitcher": null,
+  "away_r": 0,
+  "cur_batter": "Bryan Torres",
+  "cur_pitcher": "Tanner Gordon",
   "game_pk": 824309,
-  "half": null,
+  "half": "Top",
   "home_p": "Tanner Gordon",
   "home_p_hand": "R",
-  "home_r": null,
+  "home_r": 0,
   "in_play": false,
-  "inning": null,
-  "innings": [],
+  "inning": 1,
+  "innings": [
+   {
+    "a": null,
+    "h": null,
+    "n": 1
+   }
+  ],
   "lose_p": null,
-  "outs": null,
-  "pitch_side": "away",
+  "outs": 0,
+  "pitch_side": "home",
   "rhe_away": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "rhe_home": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "save_p": null,
   "status": "Pre-Game",
