@@ -117,7 +117,7 @@ td{padding:3px 6px;border-bottom:1px solid rgba(29,58,68,.5);
 td.l{text-align:left}
 /* One team per line. Previously both were inline-block, so with no pitcher
    between them -- football has none -- they ran together on a single row. */
-td.l .trow{display:flex;justify-content:space-between;align-items:baseline;
+td.l .trow{display:flex;justify-content:space-between;align-items:center;
            gap:10px;white-space:normal;line-height:1.3;max-width:250px}
 td.l .tname{flex:1;min-width:0}
 td.l .run{flex:0 0 auto;text-align:right}
@@ -154,7 +154,7 @@ tr.det td{background:#061014;padding:0;text-align:left}
 .chead{display:flex;justify-content:space-between;align-items:flex-start;
        gap:8px;padding:8px 10px;border-bottom:1px solid var(--line)}
 .chead > div:first-child{flex:1;min-width:0}
-.crow{display:flex;align-items:baseline;gap:10px;line-height:1.5}
+.crow{display:flex;align-items:center;gap:10px;line-height:1.5}
 .crow .tname{flex:0 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;
              white-space:nowrap}
 .crow .run{flex:0 0 auto;margin-left:2px}
@@ -333,7 +333,9 @@ function livemlb(g){
   const bits = [];
   if(g.cur_pitcher){
     const chg = g.pitcher_changed ? '<span class="chg">NEW</span>' : "";
-    bits.push(`<div class="lp">${chg}P: ${g.cur_pitcher}</div>`);
+    const who = g.pitch_side === "home" ? (g.home || "")
+              : g.pitch_side === "away" ? (g.away || "") : "";
+    bits.push(`<div class="lp">${chg}P: ${g.cur_pitcher}${who ? " (" + who + ")" : ""}</div>`);
   }
   if(g.wp_home !== null && g.wp_home !== undefined){
     const hi = g.wp_home >= 50;
@@ -472,8 +474,8 @@ function card(g, gi){
   return `<div class="card${g.started ? " started" : ""}">
     <div class="chead${g.box ? " boxable" : ""}"${g.box ? ` onclick="det(${gi},'${BOX}')"` : ""}>
       <div>
-        <div class="crow"><span class="tname">${poss(g, "away")}${rk(g.away_rank)}<span class="team">${g.away_short || g.away}</span>${g.away_p ? pit(g.away_p, g.away_ph) : ""}</span>${ar}</div>
-        <div class="crow"><span class="tname">${poss(g, "home")}${rk(g.home_rank)}<span class="team">${g.home_short || g.home}</span>${g.home_p ? pit(g.home_p, g.home_ph) : ""}</span>${hr}</div>
+        <div class="crow"><span class="tname">${poss(g, "away")}${rk(g.away_rank)}<span class="team">${g.away_short || g.away}</span>${(g.away_p && !g.live) ? pit(g.away_p, g.away_ph) : ""}</span>${ar}</div>
+        <div class="crow"><span class="tname">${poss(g, "home")}${rk(g.home_rank)}<span class="team">${g.home_short || g.home}</span>${(g.home_p && !g.live) ? pit(g.home_p, g.home_ph) : ""}</span>${hr}</div>
         ${venueLine(g)}
         <div class="cstat">${statusLine(g)}${drive(g)}${livemlb(g)}</div>
       </div>
@@ -524,9 +526,9 @@ function render(){
         <td class="l time">${g.date}<br>${g.time}${rot}${statusLine(g)}${drive(g)}${livemlb(g)}</td>
         <td class="l${g.box ? " boxable" : ""}"${g.box ? ` onclick="det(${i},'${BOX}')"` : ""}>
           <div class="trow"><span class="tname">${poss(g, "away")}${rk(g.away_rank)}<span class="team">${g.away_full || g.away}</span></span>${(g.away_r ?? null) !== null ? `<span class="run">${g.away_r}</span>` : ""}</div>
-          ${g.away_p ? pit(g.away_p, g.away_ph) : ""}
+          ${(g.away_p && !g.live) ? pit(g.away_p, g.away_ph) : ""}
           <div class="trow"><span class="tname">${poss(g, "home")}${rk(g.home_rank)}<span class="team">${g.home_full || g.home}</span></span>${(g.home_r ?? null) !== null ? `<span class="run">${g.home_r}</span>` : ""}</div>
-          ${g.home_p ? pit(g.home_p, g.home_ph) : ""}
+          ${(g.home_p && !g.live) ? pit(g.home_p, g.home_ph) : ""}
           ${venueLine(g)}
         </td>
         ${d.columns.map(c => cell(g.markets[c.key], "cur", i, c.key)).join("")}
