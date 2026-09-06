@@ -179,9 +179,22 @@ def summarize(g, hands):
     cur_p = (dfn.get("pitcher") or {}).get("fullName")
     cur_b = (off.get("batter") or {}).get("fullName")
 
+    # Which side is pitching. linescore.defense carries the team, but the
+    # inning half is a free and equally reliable fallback: top means the home
+    # side is in the field, bottom means the away side is.
+    dteam = (dfn.get("team") or {}).get("name")
+    if dteam:
+        side = "home" if dteam == (tms.get("home", {}).get("team") or {}).get("name") \
+               else "away"
+    else:
+        half_l = (ls.get("inningHalf") or "").lower()
+        side = "home" if half_l.startswith("top") else \
+               ("away" if half_l.startswith("bot") else None)
+
     return {
         "game_pk":     g.get("gamePk"),
         "cur_pitcher": cur_p,
+        "pitch_side":  side,
         "cur_batter":  cur_b,
         "innings":     innings,
         "rhe_away":    [(lt.get("away") or {}).get(k) for k in ("runs","hits","errors")],

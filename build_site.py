@@ -309,6 +309,7 @@ def build(days_shown=2, history_days=4, keep_hours=12):
             # once a change is made; wp is win probability for the home side.
             "espn_id":     m.get("espn_id"),
             "cur_pitcher": m.get("cur_pitcher"),
+            "pitch_side":  m.get("pitch_side"),
             "cur_batter":  m.get("cur_batter"),
             "wp_home":     m.get("wp_home"),
             "wp_away":     m.get("wp_away"),
