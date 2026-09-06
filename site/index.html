@@ -346,6 +346,21 @@ function livemlb(g){
   return bits.join("");
 }
 
+/* Pitching decisions, shown in place of the probable starters once a game is
+   final. Same amber as the live pitcher line: both answer "who is responsible
+   for what is happening on the mound". */
+function decisions(g){
+  if(!g.final || !(g.win_p || g.lose_p)) return "";
+  const W = g.win_side === "away" ? (g.away || "") : (g.home || "");
+  const L = g.win_side === "away" ? (g.home || "") : (g.away || "");
+  const out = [];
+  if(g.win_p)  out.push(`<div class="lp">W: ${g.win_p}${W ? " (" + W + ")" : ""}</div>`);
+  if(g.lose_p) out.push(`<div class="lp">L: ${g.lose_p}${L ? " (" + L + ")" : ""}</div>`);
+  // A save always belongs to the winning club.
+  if(g.save_p) out.push(`<div class="lp">S: ${g.save_p}${W ? " (" + W + ")" : ""}</div>`);
+  return out.join("");
+}
+
 /* Down, distance and field position. One short line, shown under the clock. */
 function drive(g){
   if(!g.live) return "";
@@ -474,10 +489,10 @@ function card(g, gi){
   return `<div class="card${g.started ? " started" : ""}">
     <div class="chead${g.box ? " boxable" : ""}"${g.box ? ` onclick="det(${gi},'${BOX}')"` : ""}>
       <div>
-        <div class="crow"><span class="tname">${poss(g, "away")}${rk(g.away_rank)}<span class="team">${g.away_short || g.away}</span>${(g.away_p && !g.live) ? pit(g.away_p, g.away_ph) : ""}</span>${ar}</div>
-        <div class="crow"><span class="tname">${poss(g, "home")}${rk(g.home_rank)}<span class="team">${g.home_short || g.home}</span>${(g.home_p && !g.live) ? pit(g.home_p, g.home_ph) : ""}</span>${hr}</div>
+        <div class="crow"><span class="tname">${poss(g, "away")}${rk(g.away_rank)}<span class="team">${g.away_short || g.away}</span>${(g.away_p && !g.live && !g.final) ? pit(g.away_p, g.away_ph) : ""}</span>${ar}</div>
+        <div class="crow"><span class="tname">${poss(g, "home")}${rk(g.home_rank)}<span class="team">${g.home_short || g.home}</span>${(g.home_p && !g.live && !g.final) ? pit(g.home_p, g.home_ph) : ""}</span>${hr}</div>
         ${venueLine(g)}
-        <div class="cstat">${statusLine(g)}${drive(g)}${livemlb(g)}</div>
+        <div class="cstat">${statusLine(g)}${drive(g)}${livemlb(g)}${decisions(g)}</div>
       </div>
       <div class="cmeta">${g.time}${g.away_rot ? `<br>${g.away_rot}/${g.home_rot}` : ""}</div>
     </div>
@@ -523,12 +538,12 @@ function render(){
     }
     const rot = g.away_rot ? `<div class="time">${g.away_rot}<br>${g.home_rot}</div>` : "";
     rows.push(`<tr class="${i % 2 ? "g1" : "g0"}${g.started ? " started" : ""}">
-        <td class="l time">${g.date}<br>${g.time}${rot}${statusLine(g)}${drive(g)}${livemlb(g)}</td>
+        <td class="l time">${g.date}<br>${g.time}${rot}${statusLine(g)}${drive(g)}${livemlb(g)}${decisions(g)}</td>
         <td class="l${g.box ? " boxable" : ""}"${g.box ? ` onclick="det(${i},'${BOX}')"` : ""}>
           <div class="trow"><span class="tname">${poss(g, "away")}${rk(g.away_rank)}<span class="team">${g.away_full || g.away}</span></span>${(g.away_r ?? null) !== null ? `<span class="run">${g.away_r}</span>` : ""}</div>
-          ${(g.away_p && !g.live) ? pit(g.away_p, g.away_ph) : ""}
+          ${(g.away_p && !g.live && !g.final) ? pit(g.away_p, g.away_ph) : ""}
           <div class="trow"><span class="tname">${poss(g, "home")}${rk(g.home_rank)}<span class="team">${g.home_full || g.home}</span></span>${(g.home_r ?? null) !== null ? `<span class="run">${g.home_r}</span>` : ""}</div>
-          ${(g.home_p && !g.live) ? pit(g.home_p, g.home_ph) : ""}
+          ${(g.home_p && !g.live && !g.final) ? pit(g.home_p, g.home_ph) : ""}
           ${venueLine(g)}
         </td>
         ${d.columns.map(c => cell(g.markets[c.key], "cur", i, c.key)).join("")}
