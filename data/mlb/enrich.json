@@ -210,7 +210,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -443,7 +443,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -911,7 +911,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -945,7 +945,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -1157,7 +1157,7 @@
   "win_side": "away"
  },
  "9744b17bfe52474717b2c23f7700752f": {
-  "abstract": "Live",
+  "abstract": "Final",
   "away_p": "Dustin May",
   "away_p_hand": "R",
   "away_r": 3,
@@ -1168,7 +1168,7 @@
   "home_p": "Andrew Abbott",
   "home_p_hand": "L",
   "home_r": 5,
-  "in_play": true,
+  "in_play": false,
   "inning": 9,
   "innings": [
    {
@@ -1212,13 +1212,13 @@
     "n": 8
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 9
    }
   ],
-  "lose_p": null,
-  "outs": 2,
+  "lose_p": "Aaron Ashby",
+  "outs": 3,
   "pitch_side": "home",
   "rhe_away": [
    3,
@@ -1230,13 +1230,11 @@
    12,
    1
   ],
-  "save_p": null,
-  "status": "In Progress",
+  "save_p": "Emilio Pag\u00e1n",
+  "status": "Game Over",
   "warmup": false,
-  "win_p": null,
-  "win_side": "home",
-  "wp_away": 28.700000000000003,
-  "wp_home": 71.3
+  "win_p": "Tony Santillan",
+  "win_side": "home"
  },
  "9bff8c9d21336a9f547bec785afbb238": {
   "abstract": "Final",
@@ -1568,13 +1566,13 @@
   "away_p": "Cade Cavalli",
   "away_p_hand": "R",
   "away_r": 4,
-  "cur_batter": "Will Smith",
+  "cur_batter": "Enrique Hern\u00e1ndez",
   "cur_pitcher": "Jack Sinclair",
   "game_pk": 823904,
   "half": "Bottom",
   "home_p": "Tyler Glasnow",
   "home_p_hand": "R",
-  "home_r": 5,
+  "home_r": 6,
   "in_play": true,
   "inning": 8,
   "innings": [
@@ -1615,22 +1613,20 @@
    },
    {
     "a": 0,
-    "h": null,
+    "h": 1,
     "n": 8
    }
   ],
   "lose_p": null,
-  "outs": 1,
+  "outs": 2,
   "pitch_side": "away",
-  "pitcher_changed": true,
-  "prev_pitcher": "Erik Tolman",
   "rhe_away": [
    4,
    7,
    0
   ],
   "rhe_home": [
-   5,
+   6,
    7,
    0
   ],
@@ -1639,8 +1635,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 8.200000000000003,
-  "wp_home": 91.8
+  "wp_away": 12.299999999999997,
+  "wp_home": 87.7
  },
  "add942d9a7eebd81c252d596832ff941": {
   "abstract": "Final",
@@ -2811,7 +2807,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -2833,15 +2829,15 @@
   "away_p": "Jeffrey Springs",
   "away_p_hand": "L",
   "away_r": 6,
-  "cur_batter": "Dominic Canzone",
-  "cur_pitcher": "Geoff Hartlieb",
+  "cur_batter": "Donovan Walton",
+  "cur_pitcher": "Carlos Vargas",
   "game_pk": 823094,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "George Kirby",
   "home_p_hand": "R",
-  "home_r": 0,
+  "home_r": 1,
   "in_play": true,
-  "inning": 8,
+  "inning": 9,
   "innings": [
    {
     "a": 0,
@@ -2880,21 +2876,28 @@
    },
    {
     "a": 2,
-    "h": null,
+    "h": 1,
     "n": 8
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 9
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "away",
+  "outs": 0,
+  "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Geoff Hartlieb",
   "rhe_away": [
    6,
    9,
    0
   ],
   "rhe_home": [
-   0,
-   3,
+   1,
+   4,
    0
   ],
   "save_p": null,
@@ -2902,8 +2905,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 99.1,
-  "wp_home": 0.8999999999999999
+  "wp_away": 98.1,
+  "wp_home": 1.9
  },
  "e5841b22c4ba21de51634f16c9743bcb": {
   "abstract": "Final",
@@ -3002,7 +3005,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -3036,7 +3039,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -3070,7 +3073,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
