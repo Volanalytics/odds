@@ -467,7 +467,7 @@
    null
   ],
   "save_p": null,
-  "status": "Scheduled",
+  "status": "Pre-Game",
   "warmup": false,
   "win_p": null,
   "win_side": null
@@ -956,9 +956,9 @@
   "abstract": "Live",
   "away_p": "Kyle Harrison",
   "away_p_hand": "L",
-  "away_r": 2,
-  "cur_batter": "Cooper Pratt",
-  "cur_pitcher": "Brady Singer",
+  "away_r": 3,
+  "cur_batter": "Dane Myers",
+  "cur_pitcher": "Kyle Harrison",
   "game_pk": 824469,
   "half": "Top",
   "home_p": "Brady Singer",
@@ -983,31 +983,33 @@
     "n": 3
    },
    {
-    "a": 2,
+    "a": 3,
     "h": null,
     "n": 4
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "home",
+  "outs": 3,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Brady Singer",
   "rhe_away": [
-   2,
+   3,
    2,
    1
   ],
   "rhe_home": [
    4,
    6,
-   0
+   1
   ],
   "save_p": null,
   "status": "In Progress",
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 34.89999999999999,
-  "wp_home": 65.10000000000001
+  "wp_away": 38.9,
+  "wp_home": 61.1
  },
  "855005fb1370a5252daf5699bd5fce84": {
   "abstract": "Preview",
@@ -2862,29 +2864,35 @@
   "abstract": "Preview",
   "away_p": "Gerrit Cole",
   "away_p_hand": "R",
-  "away_r": null,
-  "cur_batter": null,
-  "cur_pitcher": null,
+  "away_r": 0,
+  "cur_batter": "Ben Rice",
+  "cur_pitcher": "Michael King",
   "game_pk": 823253,
-  "half": null,
+  "half": "Top",
   "home_p": "Michael King",
   "home_p_hand": "R",
-  "home_r": null,
+  "home_r": 0,
   "in_play": false,
-  "inning": null,
-  "innings": [],
+  "inning": 1,
+  "innings": [
+   {
+    "a": null,
+    "h": null,
+    "n": 1
+   }
+  ],
   "lose_p": null,
-  "outs": null,
-  "pitch_side": "away",
+  "outs": 0,
+  "pitch_side": "home",
   "rhe_away": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "rhe_home": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "save_p": null,
   "status": "Pre-Game",
@@ -3057,10 +3065,10 @@
   "away_p": "Tyler Mahle",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Matt Olson",
-  "cur_pitcher": "Aaron Nola",
+  "cur_batter": "Trea Turner",
+  "cur_pitcher": "Tyler Mahle",
   "game_pk": 823417,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Aaron Nola",
   "home_p_hand": "R",
   "home_r": 0,
@@ -3068,14 +3076,16 @@
   "inning": 1,
   "innings": [
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 1
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Aaron Nola",
   "rhe_away": [
    0,
    0,
@@ -3091,8 +3101,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 46.199999999999996,
-  "wp_home": 53.800000000000004
+  "wp_away": 41.7,
+  "wp_home": 58.3
  },
  "efbec01e9ddadbf59d572981c0ab0b39": {
   "abstract": "Preview",
