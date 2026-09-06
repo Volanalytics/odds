@@ -121,10 +121,10 @@
   "away_rank": 99,
   "away_short": "N Arizona",
   "city": "Tucson",
-  "clock": "0:24",
+  "clock": "4:34",
   "conf_comp": false,
-  "detail": "0:24 - 3rd",
-  "down": "2nd & 7 at NAU 29",
+  "detail": "4:34 - 3rd",
+  "down": "1st & 10 at NAU 32",
   "espn_id": "401856773",
   "final": false,
   "home_abbr": "ARIZ",
@@ -136,7 +136,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "20/26, 235 YDS, 2 TD",
+    "val": "21/27, 256 YDS, 2 TD",
     "who": "N. Fifita"
    },
    {
@@ -148,7 +148,7 @@
    {
     "cat": "REC",
     "team": "home",
-    "val": "7 REC, 75 YDS",
+    "val": "8 REC, 96 YDS",
     "who": "G. Richardson"
    }
   ],
@@ -166,7 +166,7 @@
   "period": 3,
   "poss": "home",
   "redzone": false,
-  "spot": "NAU 29",
+  "spot": "NAU 32",
   "state": "AZ",
   "status": "In Progress",
   "venue": "Casino Del Sol Stadium"
@@ -368,14 +368,14 @@
   "away_rank": 99,
   "away_short": "Clemson",
   "city": "Baton Rouge",
-  "clock": "5:22",
+  "clock": "3:24",
   "conf_comp": false,
-  "detail": "5:22 - 3rd",
-  "down": "1st & 10 at LSU 22",
+  "detail": "3:24 - 3rd",
+  "down": null,
   "espn_id": "401856660",
   "final": false,
   "home_abbr": "LSU",
-  "home_r": "38",
+  "home_r": "44",
   "home_rank": 11,
   "home_short": "LSU",
   "in_play": true,
@@ -383,7 +383,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "13/24, 183 YDS, 1 TD, 1 INT",
+    "val": "16/28, 230 YDS, 1 TD, 1 INT",
     "who": "S. Leavitt"
    },
    {
@@ -395,7 +395,7 @@
    {
     "cat": "REC",
     "team": "home",
-    "val": "5 REC, 95 YDS, 1 TD",
+    "val": "7 REC, 110 YDS, 1 TD",
     "who": "W. Watkins Jr."
    }
   ],
@@ -407,13 +407,13 @@
   "line_home": [
    17.0,
    14.0,
-   7.0
+   13.0
   ],
   "neutral": false,
   "period": 3,
-  "poss": "home",
-  "redzone": false,
-  "spot": "LSU 22",
+  "poss": null,
+  "redzone": true,
+  "spot": null,
   "state": "LA",
   "status": "In Progress",
   "venue": "Tiger Stadium (LA)"
@@ -1226,10 +1226,10 @@
   "away_rank": 99,
   "away_short": "UCLA",
   "city": "Berkeley",
-  "clock": "3:10",
+  "clock": "1:59",
   "conf_comp": false,
-  "detail": "3:10 - 2nd",
-  "down": "2nd & 10 at CAL 18",
+  "detail": "1:59 - 2nd",
+  "down": null,
   "espn_id": "401858210",
   "final": false,
   "home_abbr": "CAL",
@@ -1267,9 +1267,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "CAL 18",
+  "spot": null,
   "state": "CA",
   "status": "In Progress",
   "venue": "California Memorial Stadium"
@@ -1855,14 +1855,14 @@
   "away_rank": 99,
   "away_short": "Portland St",
   "city": "San Diego",
-  "clock": "6:50",
+  "clock": "5:15",
   "conf_comp": false,
-  "detail": "6:50 - 3rd",
-  "down": "2nd & Goal at PRST 5",
+  "detail": "5:15 - 3rd",
+  "down": "1st & 10 at PRST 25",
   "espn_id": "401860879",
   "final": false,
   "home_abbr": "SDSU",
-  "home_r": "36",
+  "home_r": "43",
   "home_rank": 99,
   "home_short": "San Diego St",
   "in_play": true,
@@ -1894,13 +1894,13 @@
   "line_home": [
    7.0,
    22.0,
-   7.0
+   14.0
   ],
   "neutral": false,
   "period": 3,
-  "poss": "home",
-  "redzone": true,
-  "spot": "PRST 5",
+  "poss": null,
+  "redzone": false,
+  "spot": "PRST 25",
   "state": "CA",
   "status": "In Progress",
   "venue": "Snapdragon Stadium"
@@ -2592,7 +2592,7 @@
   "city": "Tempe",
   "clock": "0:00",
   "conf_comp": false,
-  "detail": "End of 2nd",
+  "detail": "End of 3rd",
   "down": "2nd & 10 at MORG 37",
   "espn_id": "401856774",
   "final": false,
@@ -2623,14 +2623,16 @@
   ],
   "line_away": [
    7.0,
+   0.0,
    0.0
   ],
   "line_home": [
    28.0,
-   21.0
+   21.0,
+   0.0
   ],
   "neutral": false,
-  "period": 2,
+  "period": 3,
   "poss": "away",
   "redzone": false,
   "spot": "MORG 37",
@@ -3966,10 +3968,10 @@
   "away_rank": 99,
   "away_short": "Western KY",
   "city": "Reno",
-  "clock": "2:21",
+  "clock": "1:46",
   "conf_comp": false,
-  "detail": "2:21 - 2nd",
-  "down": "1st & 10 at WKU 25",
+  "detail": "1:46 - 2nd",
+  "down": "3rd & -13 at WKU 48",
   "espn_id": "401864432",
   "final": false,
   "home_abbr": "NEV",
@@ -4007,9 +4009,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": "WKU 25",
+  "spot": "WKU 48",
   "state": "NV",
   "status": "In Progress",
   "venue": "Mackay Stadium"
@@ -7754,10 +7756,10 @@
   "away_rank": 99,
   "away_short": "UNLV",
   "city": "Honolulu",
-  "clock": "0:10",
+  "clock": "13:48",
   "conf_comp": true,
-  "detail": "0:10 - 2nd",
-  "down": "1st & 10 at UNLV 45",
+  "detail": "13:48 - 3rd",
+  "down": "2nd & 9 at HAW 44",
   "espn_id": "401864497",
   "final": false,
   "home_abbr": "HAW",
@@ -7787,17 +7789,19 @@
   ],
   "line_away": [
    7.0,
-   7.0
+   7.0,
+   0.0
   ],
   "line_home": [
    0.0,
-   3.0
+   3.0,
+   0.0
   ],
   "neutral": false,
-  "period": 2,
+  "period": 3,
   "poss": "home",
   "redzone": false,
-  "spot": "UNLV 45",
+  "spot": "HAW 44",
   "state": "HI",
   "status": "In Progress",
   "venue": "Clarence T.C. Ching Athletics Complex"
