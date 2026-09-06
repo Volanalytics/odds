@@ -84,14 +84,14 @@
   "away_p": "Clay Holmes",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Pete Crow-Armstrong",
+  "cur_batter": "Michael Busch",
   "cur_pitcher": "Tyler Phillips",
   "game_pk": 823822,
   "half": "Top",
   "home_p": "Tyler Phillips",
   "home_p_hand": "R",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "innings": [
    {
@@ -101,11 +101,11 @@
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 1,
   "pitch_side": "home",
   "rhe_away": [
    0,
-   0,
+   1,
    0
   ],
   "rhe_home": [
@@ -114,10 +114,12 @@
    0
   ],
   "save_p": null,
-  "status": "Warmup",
-  "warmup": true,
+  "status": "In Progress",
+  "warmup": false,
   "win_p": null,
-  "win_side": null
+  "win_side": null,
+  "wp_away": 51.9,
+  "wp_home": 48.1
  },
  "1b0e8aa1b257757991d6d1e3d3d0bab9": {
   "abstract": "Final",
@@ -204,7 +206,7 @@
   "away_p": "Payton Tolle",
   "away_p_hand": "L",
   "away_r": 0,
-  "cur_batter": "Roman Anthony",
+  "cur_batter": "Trevor Story",
   "cur_pitcher": "Kyle Bradish",
   "game_pk": 824794,
   "half": "Top",
@@ -221,7 +223,7 @@
    }
   ],
   "lose_p": null,
-  "outs": 1,
+  "outs": 2,
   "pitch_side": "home",
   "rhe_away": [
    0,
@@ -238,8 +240,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 50.0,
-  "wp_home": 50.0
+  "wp_away": 47.4,
+  "wp_home": 52.6
  },
  "2d3ba8f32a3003fe2c9866328f0b1a2b": {
   "abstract": "Final",
@@ -879,10 +881,10 @@
   "away_p": "Walbert Ure\u00f1a",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Wade Meckler",
-  "cur_pitcher": "Paul Skenes",
+  "cur_batter": "Konnor Griffin",
+  "cur_pitcher": "Walbert Ure\u00f1a",
   "game_pk": 823336,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Paul Skenes",
   "home_p_hand": "R",
   "home_r": 0,
@@ -890,17 +892,19 @@
   "inning": 1,
   "innings": [
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 1
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Paul Skenes",
   "rhe_away": [
    0,
-   0,
+   1,
    0
   ],
   "rhe_home": [
@@ -913,15 +917,15 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 46.199999999999996,
-  "wp_home": 53.800000000000004
+  "wp_away": 45.199999999999996,
+  "wp_home": 54.800000000000004
  },
  "756b1fa5fc5aae0f6173b45c15d5e49f": {
   "abstract": "Live",
   "away_p": "Cesar Perdomo",
   "away_p_hand": "L",
   "away_r": 0,
-  "cur_batter": "Drew Gilbert",
+  "cur_batter": "Rafael Devers",
   "cur_pitcher": "Christian Scott",
   "game_pk": 823578,
   "half": "Top",
@@ -938,7 +942,7 @@
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 1,
   "pitch_side": "home",
   "rhe_away": [
    0,
@@ -955,15 +959,15 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 50.0,
-  "wp_home": 50.0
+  "wp_away": 47.8,
+  "wp_home": 52.2
  },
  "7ebaf13916efa137bac4a274d53d01ed": {
   "abstract": "Live",
   "away_p": "Kyle Harrison",
   "away_p_hand": "L",
-  "away_r": 3,
-  "cur_batter": "Christian Yelich",
+  "away_r": 4,
+  "cur_batter": "Garrett Mitchell",
   "cur_pitcher": "Brady Singer",
   "game_pk": 824469,
   "half": "Top",
@@ -994,7 +998,7 @@
     "n": 4
    },
    {
-    "a": null,
+    "a": 1,
     "h": null,
     "n": 5
    }
@@ -1002,11 +1006,9 @@
   "lose_p": null,
   "outs": 2,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "Antonio Senzatela",
   "rhe_away": [
+   4,
    3,
-   2,
    1
   ],
   "rhe_home": [
@@ -1019,8 +1021,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 14.099999999999994,
-  "wp_home": 85.9
+  "wp_away": 16.0,
+  "wp_home": 84.0
  },
  "855005fb1370a5252daf5699bd5fce84": {
   "abstract": "Preview",
@@ -2672,7 +2674,7 @@
   "win_side": "away"
  },
  "d545cab19c6dbf61ef08fc9c481877f8": {
-  "abstract": "Preview",
+  "abstract": "Live",
   "away_p": "Spencer Arrighetti",
   "away_p_hand": "R",
   "away_r": 0,
@@ -2706,8 +2708,8 @@
    0
   ],
   "save_p": null,
-  "status": "Pre-Game",
-  "warmup": false,
+  "status": "Warmup",
+  "warmup": true,
   "win_p": null,
   "win_side": null
  },
@@ -3076,15 +3078,15 @@
   "away_p": "Tyler Mahle",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Sean Murphy",
+  "cur_batter": "Austin Riley",
   "cur_pitcher": "Aaron Nola",
   "game_pk": 823417,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Aaron Nola",
   "home_p_hand": "R",
   "home_r": 2,
   "in_play": true,
-  "inning": 2,
+  "inning": 3,
   "innings": [
    {
     "a": 0,
@@ -3095,13 +3097,16 @@
     "a": 0,
     "h": 0,
     "n": 2
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 3
    }
   ],
   "lose_p": null,
-  "outs": 3,
+  "outs": 1,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "Tyler Mahle",
   "rhe_away": [
    0,
    0,
@@ -3117,8 +3122,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 27.200000000000003,
-  "wp_home": 72.8
+  "wp_away": 26.400000000000006,
+  "wp_home": 73.6
  },
  "efbec01e9ddadbf59d572981c0ab0b39": {
   "abstract": "Preview",
@@ -3165,7 +3170,7 @@
   "away_p": "Jackson Jobe",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Kevin McGonigle",
+  "cur_batter": "Colt Keith",
   "cur_pitcher": "Gavin Williams",
   "game_pk": 824385,
   "half": "Top",
@@ -3182,7 +3187,7 @@
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 1,
   "pitch_side": "home",
   "rhe_away": [
    0,
@@ -3199,8 +3204,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 50.0,
-  "wp_home": 50.0
+  "wp_away": 47.8,
+  "wp_home": 52.2
  },
  "fb7185d28470aa6f3e7aba955423c36f": {
   "abstract": "Final",
