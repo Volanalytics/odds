@@ -1228,13 +1228,13 @@
  },
  "1bb9e45b6e7ed1200104ed018eff9093": {
   "away_abbr": "UCLA",
-  "away_r": "24",
+  "away_r": "30",
   "away_rank": 99,
   "away_short": "UCLA",
   "city": "Berkeley",
-  "clock": "9:52",
+  "clock": "8:46",
   "conf_comp": false,
-  "detail": "9:52 - 4th",
+  "detail": "8:46 - 4th",
   "down": null,
   "espn_id": "401858210",
   "final": false,
@@ -1247,13 +1247,13 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "21/31, 258 YDS, 2 TD",
+    "val": "21/33, 258 YDS, 2 TD, 1 INT",
     "who": "J. Sagapolutele"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "24 CAR, 100 YDS, 1 TD",
+    "val": "25 CAR, 102 YDS, 1 TD",
     "who": "A. Mohammed"
    },
    {
@@ -1267,7 +1267,7 @@
    7.0,
    17.0,
    0.0,
-   0.0
+   6.0
   ],
   "line_home": [
    7.0,
@@ -1278,7 +1278,7 @@
   "neutral": false,
   "period": 4,
   "poss": null,
-  "redzone": false,
+  "redzone": true,
   "spot": null,
   "state": "CA",
   "status": "In Progress",
@@ -3726,7 +3726,26 @@
   "home_rank": 99,
   "home_short": "New Mexico St",
   "in_play": false,
-  "leaders": [],
+  "leaders": [
+   {
+    "cat": "PASS",
+    "team": "home",
+    "val": "11/20, 253 YDS, 2 TD",
+    "who": "T. Hedden"
+   },
+   {
+    "cat": "RUSH",
+    "team": "home",
+    "val": "19 CAR, 137 YDS, 1 TD",
+    "who": "J. Jones"
+   },
+   {
+    "cat": "REC",
+    "team": "home",
+    "val": "3 REC, 94 YDS",
+    "who": "T. King"
+   }
+  ],
   "line_away": [
    7.0,
    7.0,
@@ -4034,10 +4053,10 @@
   "away_rank": 99,
   "away_short": "Western KY",
   "city": "Reno",
-  "clock": "6:07",
+  "clock": "2:00",
   "conf_comp": false,
-  "detail": "6:07 - 4th",
-  "down": null,
+  "detail": "2:00 - 4th",
+  "down": "2nd & 1 at NEV 27",
   "espn_id": "401864432",
   "final": false,
   "home_abbr": "NEV",
@@ -4049,7 +4068,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "22/37, 189 YDS",
+    "val": "24/39, 203 YDS",
     "who": "R. Tisdale Jr."
    },
    {
@@ -4079,9 +4098,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "NEV 27",
   "state": "NV",
   "status": "In Progress",
   "venue": "Mackay Stadium"
