@@ -276,10 +276,6 @@ def main():
         out[eid] = summarize(best, hands)
 
     os.makedirs(os.path.join(DATA_DIR, "mlb"), exist_ok=True)
-    tmp = os.path.join(DATA_DIR, "mlb", "enrich.json.tmp")
-    with open(tmp, "w", encoding="utf-8") as f:
-        json.dump(out, f, indent=1, sort_keys=True)
-    os.replace(tmp, os.path.join(DATA_DIR, "mlb", "enrich.json"))
 
     # Win probability for live games only, and a diff against the previous
     # poll so a pitching change is visible rather than inferred.
@@ -312,6 +308,11 @@ def main():
     with open(tmp, "w", encoding="utf-8") as f:
         json.dump(now_state, f, sort_keys=True)
     os.replace(tmp, prev_path)
+
+    tmp = os.path.join(DATA_DIR, "mlb", "enrich.json.tmp")
+    with open(tmp, "w", encoding="utf-8") as f:
+        json.dump(out, f, indent=1, sort_keys=True)
+    os.replace(tmp, os.path.join(DATA_DIR, "mlb", "enrich.json"))
 
     live = sum(1 for v in out.values() if v["in_play"])
     changed = sum(1 for v in out.values() if v.get("pitcher_changed"))

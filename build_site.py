@@ -37,6 +37,38 @@ LOCAL_TZ = ZoneInfo(os.environ.get("ODDS_TZ", "America/New_York"))
 
 
 
+def implied(american):
+    """American odds -> implied probability, vig included."""
+    if american is None:
+        return None
+    return (100.0 / (american + 100.0)) if american > 0 \
+        else (-american / (-american + 100.0))
+
+
+def market_prob(sides, away_code, home_code):
+    """
+    No-vig probability from a two-way moneyline.
+
+    Raw implied probabilities sum to more than 1 -- that excess IS the vig --
+    so normalising by the total strips it out proportionally. This is what the
+    market actually thinks, and before first pitch it beats any model number
+    the feeds publish.
+    """
+    if not sides or len(sides) != 2:
+        return None, None
+    px = {}
+    for s in sides:
+        try:
+            px[s["label"]] = implied(int(str(s["cur"]).replace("+", "")))
+        except (ValueError, TypeError):
+            return None, None
+    a, h = px.get(away_code), px.get(home_code)
+    if not a or not h:
+        return None, None
+    tot = a + h
+    return round(100 * a / tot, 1), round(100 * h / tot, 1)
+
+
 def status_text(m, sport):
     """
     One display string for game state, decided here rather than in the page.
@@ -252,6 +284,7 @@ def build(days_shown=2, history_days=4, keep_hours=12):
         for v in markets.values():
             v.sort(key=lambda s: side_order(s["label"], away_code, home_code))
 
+        mkt_away, mkt_home = market_prob(markets.get("h2h"), away_code, home_code)
         start = start_utc.astimezone(LOCAL_TZ)
         games.append({
             "game_pk":  m.get("game_pk"),
@@ -310,6 +343,7 @@ def build(days_shown=2, history_days=4, keep_hours=12):
             "espn_id":     m.get("espn_id"),
             "cur_pitcher": m.get("cur_pitcher"),
             "pitch_side":  m.get("pitch_side"),
+            "mkt_away": mkt_away, "mkt_home": mkt_home,
             "win_p":  m.get("win_p"), "lose_p": m.get("lose_p"),
             "save_p": m.get("save_p"), "win_side": m.get("win_side"),
             "cur_batter":  m.get("cur_batter"),

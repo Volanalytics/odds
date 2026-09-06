@@ -339,11 +339,23 @@ function livemlb(g){
   }
   if(g.wp_home !== null && g.wp_home !== undefined){
     const hi = g.wp_home >= 50;
-    const side = hi ? (g.home_short || g.home) : (g.away_short || g.away);
+    const side = hi ? (g.home || "") : (g.away || "");
     const pct  = hi ? g.wp_home : g.wp_away;
     bits.push(`<div class="wp">WP ${side} ${Math.round(pct)}%</div>`);
   }
   return bits.join("");
+}
+
+/* Before first pitch there is no model win probability worth showing, but the
+   moneyline itself is one: strip the vig and it's the market's own estimate.
+   Labelled MKT so it is never confused with MLB's in-game WP. */
+function marketProb(g){
+  if(g.live || g.final) return "";
+  if(g.mkt_home === null || g.mkt_home === undefined) return "";
+  const hi = g.mkt_home >= 50;
+  const side = hi ? (g.home || "") : (g.away || "");
+  const pct  = hi ? g.mkt_home : g.mkt_away;
+  return `<div class="wp">MKT ${side} ${Math.round(pct)}%</div>`;
 }
 
 /* Pitching decisions, shown in place of the probable starters once a game is
@@ -492,7 +504,7 @@ function card(g, gi){
         <div class="crow"><span class="tname">${poss(g, "away")}${rk(g.away_rank)}<span class="team">${g.away_short || g.away}</span>${(g.away_p && !g.live && !g.final) ? pit(g.away_p, g.away_ph) : ""}</span>${ar}</div>
         <div class="crow"><span class="tname">${poss(g, "home")}${rk(g.home_rank)}<span class="team">${g.home_short || g.home}</span>${(g.home_p && !g.live && !g.final) ? pit(g.home_p, g.home_ph) : ""}</span>${hr}</div>
         ${venueLine(g)}
-        <div class="cstat">${statusLine(g)}${drive(g)}${livemlb(g)}${decisions(g)}</div>
+        <div class="cstat">${statusLine(g)}${drive(g)}${livemlb(g)}${decisions(g)}${marketProb(g)}</div>
       </div>
       <div class="cmeta">${g.time}${g.away_rot ? `<br>${g.away_rot}/${g.home_rot}` : ""}</div>
     </div>
@@ -538,7 +550,7 @@ function render(){
     }
     const rot = g.away_rot ? `<div class="time">${g.away_rot}<br>${g.home_rot}</div>` : "";
     rows.push(`<tr class="${i % 2 ? "g1" : "g0"}${g.started ? " started" : ""}">
-        <td class="l time">${g.date}<br>${g.time}${rot}${statusLine(g)}${drive(g)}${livemlb(g)}${decisions(g)}</td>
+        <td class="l time">${g.date}<br>${g.time}${rot}${statusLine(g)}${drive(g)}${livemlb(g)}${decisions(g)}${marketProb(g)}</td>
         <td class="l${g.box ? " boxable" : ""}"${g.box ? ` onclick="det(${i},'${BOX}')"` : ""}>
           <div class="trow"><span class="tname">${poss(g, "away")}${rk(g.away_rank)}<span class="team">${g.away_full || g.away}</span></span>${(g.away_r ?? null) !== null ? `<span class="run">${g.away_r}</span>` : ""}</div>
           ${(g.away_p && !g.live && !g.final) ? pit(g.away_p, g.away_ph) : ""}
