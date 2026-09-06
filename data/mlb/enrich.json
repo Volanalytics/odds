@@ -210,7 +210,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -443,7 +443,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -911,7 +911,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -945,7 +945,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -1170,7 +1170,28 @@
   "home_r": 1,
   "in_play": true,
   "inning": 4,
-  "innings": [],
+  "innings": [
+   {
+    "a": 1,
+    "h": 1,
+    "n": 1
+   },
+   {
+    "a": 0,
+    "h": 0,
+    "n": 2
+   },
+   {
+    "a": 1,
+    "h": 0,
+    "n": 3
+   },
+   {
+    "a": 0,
+    "h": null,
+    "n": 4
+   }
+  ],
   "lose_p": null,
   "outs": 2,
   "pitch_side": "away",
@@ -1442,10 +1463,10 @@
   "away_p": "Taj Bradley",
   "away_p_hand": "R",
   "away_r": 6,
-  "cur_batter": "Brooks Lee",
-  "cur_pitcher": "Tyler Schweitzer",
+  "cur_batter": "Munetaka Murakami",
+  "cur_pitcher": "Jeff Hoffman",
   "game_pk": 824553,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Anthony Kay",
   "home_p_hand": "L",
   "home_r": 4,
@@ -1488,16 +1509,16 @@
     "n": 7
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 8
    }
   ],
   "lose_p": null,
-  "outs": 0,
-  "pitch_side": "home",
+  "outs": 1,
+  "pitch_side": "away",
   "pitcher_changed": true,
-  "prev_pitcher": "Sean Newcomb",
+  "prev_pitcher": "Tyler Schweitzer",
   "rhe_away": [
    6,
    8,
@@ -1513,27 +1534,27 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 88.1,
-  "wp_home": 11.899999999999999
+  "wp_away": 83.3,
+  "wp_home": 16.7
  },
  "ab0bc299e48e6a4feb43688eda780998": {
   "abstract": "Live",
   "away_p": "Cade Cavalli",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Teoscar Hern\u00e1ndez",
+  "cur_batter": "Alex Freeland",
   "cur_pitcher": "Cade Cavalli",
   "game_pk": 823904,
   "half": "Bottom",
   "home_p": "Tyler Glasnow",
   "home_p_hand": "R",
-  "home_r": 0,
+  "home_r": 2,
   "in_play": true,
   "inning": 1,
   "innings": [
    {
     "a": 0,
-    "h": null,
+    "h": 2,
     "n": 1
    }
   ],
@@ -1546,27 +1567,27 @@
    0
   ],
   "rhe_home": [
-   0,
-   1,
+   2,
+   3,
    0
   ],
   "save_p": null,
   "status": "In Progress",
   "warmup": false,
   "win_p": null,
-  "win_side": null,
-  "wp_away": 41.300000000000004,
-  "wp_home": 58.699999999999996
+  "win_side": "home",
+  "wp_away": 26.799999999999997,
+  "wp_home": 73.2
  },
  "add942d9a7eebd81c252d596832ff941": {
   "abstract": "Live",
   "away_p": "Drew Rasmussen",
   "away_p_hand": "R",
   "away_r": 3,
-  "cur_batter": "Brandon Nimmo",
-  "cur_pitcher": "Cam Booser",
+  "cur_batter": "Ezequiel Duran",
+  "cur_pitcher": "Tyler Wells",
   "game_pk": 822850,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Jacob deGrom",
   "home_p_hand": "R",
   "home_r": 3,
@@ -1620,10 +1641,10 @@
    }
   ],
   "lose_p": null,
-  "outs": 3,
+  "outs": 1,
   "pitch_side": "away",
   "pitcher_changed": true,
-  "prev_pitcher": "Jakob Junis",
+  "prev_pitcher": "Cam Booser",
   "rhe_away": [
    3,
    9,
@@ -1639,18 +1660,18 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 39.5,
-  "wp_home": 60.5
+  "wp_away": 41.800000000000004,
+  "wp_home": 58.199999999999996
  },
  "b343b2c13d1aaa540bd4974035adc893": {
   "abstract": "Live",
   "away_p": "Max Scherzer",
   "away_p_hand": "R",
   "away_r": 4,
-  "cur_batter": "Brett Bateman",
-  "cur_pitcher": "Anthony Gose",
+  "cur_batter": "Nick Loftin",
+  "cur_pitcher": "Tyler Rogers",
   "game_pk": 824066,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Seth Lugo",
   "home_p_hand": "R",
   "home_r": 3,
@@ -1693,16 +1714,16 @@
     "n": 7
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 8
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
   "pitcher_changed": true,
-  "prev_pitcher": "Craig Kimbrel",
+  "prev_pitcher": "Anthony Gose",
   "rhe_away": [
    4,
    12,
@@ -1718,8 +1739,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 74.6,
-  "wp_home": 25.4
+  "wp_away": 69.2,
+  "wp_home": 30.8
  },
  "c0d390a487adbc676467b156b561e0f0": {
   "abstract": "Preview",
@@ -2000,8 +2021,8 @@
   "away_p": "Carlos Rod\u00f3n",
   "away_p_hand": "L",
   "away_r": 5,
-  "cur_batter": "Jackson Merrill",
-  "cur_pitcher": "Michael Fulmer",
+  "cur_batter": "Ethan Salas",
+  "cur_pitcher": "Brent Headrick",
   "game_pk": 823257,
   "half": "Bottom",
   "home_p": "Robbie Ray",
@@ -2042,8 +2063,10 @@
    }
   ],
   "lose_p": null,
-  "outs": 1,
+  "outs": 2,
   "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Michael Fulmer",
   "rhe_away": [
    5,
    8,
@@ -2059,8 +2082,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 90.0,
-  "wp_home": 10.0
+  "wp_away": 90.3,
+  "wp_home": 9.700000000000001
  },
  "c5b03415dadb8213241501d56b4926bc": {
   "abstract": "Final",
@@ -2261,10 +2284,10 @@
   "away_p": "Brandon Pfaadt",
   "away_p_hand": "R",
   "away_r": 2,
-  "cur_batter": "Gabriel Moreno",
-  "cur_pitcher": "AJ Blubaugh",
+  "cur_batter": "Cam Smith",
+  "cur_pitcher": "Brandon Pfaadt",
   "game_pk": 824145,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Ethan Pecko",
   "home_p_hand": "R",
   "home_r": 3,
@@ -2308,8 +2331,10 @@
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "home",
+  "outs": 1,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "AJ Blubaugh",
   "rhe_away": [
    2,
    6,
@@ -2325,8 +2350,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 32.69999999999999,
-  "wp_home": 67.30000000000001
+  "wp_away": 21.099999999999994,
+  "wp_home": 78.9
  },
  "d08cd8d7e7ee9c4a2c546a19da42d129": {
   "abstract": "Final",
@@ -2699,7 +2724,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -2853,7 +2878,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -2887,7 +2912,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -2921,7 +2946,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -2943,7 +2968,7 @@
   "away_p": "Sonny Gray",
   "away_p_hand": "R",
   "away_r": 5,
-  "cur_batter": "Eli White",
+  "cur_batter": "Roman Anthony",
   "cur_pitcher": "Albert Su\u00e1rez",
   "game_pk": 824795,
   "half": "Top",
@@ -2995,10 +3020,8 @@
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 2,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "Sonny Gray",
   "rhe_away": [
    5,
    8,
@@ -3022,10 +3045,10 @@
   "away_p": "Matthew Liberatore",
   "away_p_hand": "L",
   "away_r": 3,
-  "cur_batter": "Cole Carrigg",
+  "cur_batter": "Troy Johnston",
   "cur_pitcher": "Matthew Liberatore",
   "game_pk": 824310,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Mason Adams",
   "home_p_hand": "R",
   "home_r": 0,
@@ -3059,10 +3082,8 @@
    }
   ],
   "lose_p": null,
-  "outs": 3,
+  "outs": 1,
   "pitch_side": "away",
-  "pitcher_changed": true,
-  "prev_pitcher": "Mason Adams",
   "rhe_away": [
    3,
    8,
@@ -3070,7 +3091,7 @@
   ],
   "rhe_home": [
    0,
-   0,
+   1,
    0
   ],
   "save_p": null,
@@ -3078,7 +3099,7 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 82.1,
-  "wp_home": 17.9
+  "wp_away": 80.5,
+  "wp_home": 19.5
  }
 }
