@@ -1071,25 +1071,27 @@
   "away_p": "Jake Irvin",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "James Wood",
-  "cur_pitcher": "Nick Pivetta",
+  "cur_batter": "Fernando Tatis Jr.",
+  "cur_pitcher": "Jake Irvin",
   "game_pk": 823254,
   "half": "Top",
   "home_p": "Nick Pivetta",
   "home_p_hand": "R",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "innings": [
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 1
    }
   ],
   "lose_p": null,
-  "outs": 0,
-  "pitch_side": "home",
+  "outs": 3,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Nick Pivetta",
   "rhe_away": [
    0,
    0,
@@ -1101,10 +1103,12 @@
    0
   ],
   "save_p": null,
-  "status": "Warmup",
-  "warmup": true,
+  "status": "In Progress",
+  "warmup": false,
   "win_p": null,
-  "win_side": null
+  "win_side": null,
+  "wp_away": 46.199999999999996,
+  "wp_home": 53.800000000000004
  },
  "56329e0195eb8df1d61a2ced249e623d": {
   "abstract": "Preview",
@@ -1915,10 +1919,10 @@
   "away_p": "Joe Ryan",
   "away_p_hand": "R",
   "away_r": 4,
-  "cur_batter": "Kevin McGonigle",
+  "cur_batter": "Gleyber Torres",
   "cur_pitcher": "Connor Prielipp",
   "game_pk": 824229,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Troy Melton",
   "home_p_hand": "R",
   "home_r": 5,
@@ -1962,10 +1966,8 @@
    }
   ],
   "lose_p": null,
-  "outs": 3,
+  "outs": 1,
   "pitch_side": "away",
-  "pitcher_changed": true,
-  "prev_pitcher": "Jacob Waguespack",
   "rhe_away": [
    4,
    7,
@@ -1981,8 +1983,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 31.39999999999999,
-  "wp_home": 68.60000000000001
+  "wp_away": 23.0,
+  "wp_home": 77.0
  },
  "a58a90b8a19f48d680546cac451b77ec": {
   "abstract": "Preview",
@@ -2344,7 +2346,7 @@
   "win_side": "away"
  },
  "b4745820fda1c660f277b88a71e25596": {
-  "abstract": "Live",
+  "abstract": "Final",
   "away_p": "Derek Law",
   "away_p_hand": "R",
   "away_r": 5,
@@ -2355,7 +2357,7 @@
   "home_p": "Noah Cameron",
   "home_p_hand": "L",
   "home_r": 4,
-  "in_play": true,
+  "in_play": false,
   "inning": 10,
   "innings": [
    {
@@ -2409,11 +2411,9 @@
     "n": 10
    }
   ],
-  "lose_p": null,
-  "outs": 2,
+  "lose_p": "Craig Kimbrel",
+  "outs": 3,
   "pitch_side": "away",
-  "pitcher_changed": true,
-  "prev_pitcher": "Gerardo Carrillo",
   "rhe_away": [
    5,
    10,
@@ -2424,13 +2424,11 @@
    8,
    1
   ],
-  "save_p": null,
-  "status": "In Progress",
+  "save_p": "Dennis Santana",
+  "status": "Game Over",
   "warmup": false,
-  "win_p": null,
-  "win_side": "away",
-  "wp_away": 71.0,
-  "wp_home": 28.999999999999996
+  "win_p": "Justin Martinez",
+  "win_side": "away"
  },
  "bbab891f2a9defcd506aafce495b42dc": {
   "abstract": "Preview",
