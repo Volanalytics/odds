@@ -74,7 +74,7 @@
    0
   ],
   "save_p": "Trevor Megill",
-  "status": "Game Over",
+  "status": "Final",
   "warmup": false,
   "win_p": "Abner Uribe",
   "win_side": "home"
@@ -1123,7 +1123,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -1317,7 +1317,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -1418,29 +1418,35 @@
   "abstract": "Preview",
   "away_p": "Michael McGreevy",
   "away_p_hand": "R",
-  "away_r": null,
-  "cur_batter": null,
-  "cur_pitcher": null,
+  "away_r": 0,
+  "cur_batter": "Bryan Torres",
+  "cur_pitcher": "Logan Webb",
   "game_pk": 823175,
-  "half": null,
+  "half": "Top",
   "home_p": "Logan Webb",
   "home_p_hand": "R",
-  "home_r": null,
+  "home_r": 0,
   "in_play": false,
-  "inning": null,
-  "innings": [],
+  "inning": 1,
+  "innings": [
+   {
+    "a": null,
+    "h": null,
+    "n": 1
+   }
+  ],
   "lose_p": null,
-  "outs": null,
-  "pitch_side": "away",
+  "outs": 0,
+  "pitch_side": "home",
   "rhe_away": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "rhe_home": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "save_p": null,
   "status": "Pre-Game",
@@ -1909,15 +1915,15 @@
   "away_p": "Joe Ryan",
   "away_p_hand": "R",
   "away_r": 4,
-  "cur_batter": "Eduardo Valencia",
-  "cur_pitcher": "Connor Prielipp",
+  "cur_batter": "Ryan Jeffers",
+  "cur_pitcher": "Jacob Waguespack",
   "game_pk": 824229,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Troy Melton",
   "home_p_hand": "R",
   "home_r": 5,
   "in_play": true,
-  "inning": 6,
+  "inning": 7,
   "innings": [
    {
     "a": 1,
@@ -1946,13 +1952,20 @@
    },
    {
     "a": 2,
-    "h": null,
+    "h": 0,
     "n": 6
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 7
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "away",
+  "outs": 0,
+  "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Connor Prielipp",
   "rhe_away": [
    4,
    7,
@@ -1968,8 +1981,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 29.700000000000003,
-  "wp_home": 70.3
+  "wp_away": 27.299999999999997,
+  "wp_home": 72.7
  },
  "a58a90b8a19f48d680546cac451b77ec": {
   "abstract": "Preview",
@@ -1988,7 +2001,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -2000,7 +2013,7 @@
    null
   ],
   "save_p": null,
-  "status": "Scheduled",
+  "status": "Pre-Game",
   "warmup": false,
   "win_p": null,
   "win_side": null
@@ -2335,13 +2348,13 @@
   "away_p": "Derek Law",
   "away_p_hand": "R",
   "away_r": 5,
-  "cur_batter": "Vinnie Pasquantino",
+  "cur_batter": "Michael Massey",
   "cur_pitcher": "Gerardo Carrillo",
   "game_pk": 824062,
   "half": "Bottom",
   "home_p": "Noah Cameron",
   "home_p_hand": "L",
-  "home_r": 1,
+  "home_r": 4,
   "in_play": true,
   "inning": 10,
   "innings": [
@@ -2392,23 +2405,21 @@
    },
    {
     "a": 5,
-    "h": 1,
+    "h": 4,
     "n": 10
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 1,
   "pitch_side": "away",
-  "pitcher_changed": true,
-  "prev_pitcher": "Justin Martinez",
   "rhe_away": [
    5,
    10,
    1
   ],
   "rhe_home": [
-   1,
-   7,
+   4,
+   8,
    1
   ],
   "save_p": null,
@@ -2416,8 +2427,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 95.7,
-  "wp_home": 4.3
+  "wp_away": 71.0,
+  "wp_home": 28.999999999999996
  },
  "bbab891f2a9defcd506aafce495b42dc": {
   "abstract": "Preview",
@@ -2436,7 +2447,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -2765,7 +2776,7 @@
   "rhe_home": [
    1,
    3,
-   1
+   0
   ],
   "save_p": null,
   "status": "Final",
