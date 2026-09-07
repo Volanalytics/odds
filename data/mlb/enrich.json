@@ -11,7 +11,7 @@
   "home_p": "Robert Gasser",
   "home_p_hand": "L",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "innings": [
    {
@@ -34,18 +34,20 @@
    0
   ],
   "save_p": null,
-  "status": "Warmup",
-  "warmup": true,
+  "status": "In Progress",
+  "warmup": false,
   "win_p": null,
-  "win_side": null
+  "win_side": null,
+  "wp_away": 50.0,
+  "wp_home": 50.0
  },
  "0a5522c3b427e5162e8c13c1ddb05dd7": {
   "abstract": "Live",
   "away_p": "Joey Cantillo",
   "away_p_hand": "L",
   "away_r": 0,
-  "cur_batter": "Angel Mart\u00ednez",
-  "cur_pitcher": "Trevor Rogers",
+  "cur_batter": "Christian Encarnacion-Strand",
+  "cur_pitcher": "Joey Cantillo",
   "game_pk": 824793,
   "half": "Top",
   "home_p": "Trevor Rogers",
@@ -60,14 +62,16 @@
     "n": 1
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 2
    }
   ],
   "lose_p": null,
-  "outs": 0,
-  "pitch_side": "home",
+  "outs": 3,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Trevor Rogers",
   "rhe_away": [
    0,
    1,
@@ -83,8 +87,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 50.0,
-  "wp_home": 50.0
+  "wp_away": 46.0,
+  "wp_home": 54.0
  },
  "10492fa54f9765a1ae3c65266b20ca1a": {
   "abstract": "Preview",
@@ -319,13 +323,13 @@
   "away_p": "Grayson Rodriguez",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Kyren Paris",
-  "cur_pitcher": "Brayan Bello",
+  "cur_batter": "Isiah Kiner-Falefa",
+  "cur_pitcher": "Grayson Rodriguez",
   "game_pk": 824715,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Brayan Bello",
   "home_p_hand": "R",
-  "home_r": 0,
+  "home_r": 1,
   "in_play": true,
   "inning": 2,
   "innings": [
@@ -335,31 +339,33 @@
     "n": 1
    },
    {
-    "a": null,
-    "h": null,
+    "a": 0,
+    "h": 1,
     "n": 2
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Brayan Bello",
   "rhe_away": [
    0,
    1,
    0
   ],
   "rhe_home": [
-   0,
    1,
+   2,
    0
   ],
   "save_p": null,
   "status": "In Progress",
   "warmup": false,
   "win_p": null,
-  "win_side": null,
-  "wp_away": 47.199999999999996,
-  "wp_home": 52.800000000000004
+  "win_side": "home",
+  "wp_away": 48.3,
+  "wp_home": 51.7
  },
  "27dbceeb05fa78d858bc4c8e0fce75ba": {
   "abstract": "Final",
@@ -884,8 +890,8 @@
   "abstract": "Live",
   "away_p": "Jonah Tong",
   "away_p_hand": "R",
-  "away_r": 3,
-  "cur_batter": "Marcus Semien",
+  "away_r": 4,
+  "cur_batter": "Brett Baty",
   "cur_pitcher": "Eury P\u00e9rez",
   "game_pk": 823820,
   "half": "Top",
@@ -906,19 +912,17 @@
     "n": 2
    },
    {
-    "a": null,
+    "a": 1,
     "h": null,
     "n": 3
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 1,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "Jonah Tong",
   "rhe_away": [
-   3,
-   3,
+   4,
+   6,
    0
   ],
   "rhe_home": [
@@ -930,9 +934,9 @@
   "status": "In Progress",
   "warmup": false,
   "win_p": null,
-  "win_side": "home",
-  "wp_away": 38.800000000000004,
-  "wp_home": 61.199999999999996
+  "win_side": null,
+  "wp_away": 44.099999999999994,
+  "wp_home": 55.900000000000006
  },
  "4b966f5cc20bd2c8aabb3ffae91d489c": {
   "abstract": "Preview",
@@ -985,7 +989,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -1179,7 +1183,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -2177,7 +2181,7 @@
   "home_p": "Noah Cameron",
   "home_p_hand": "L",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "innings": [
    {
@@ -2200,10 +2204,12 @@
    0
   ],
   "save_p": null,
-  "status": "Warmup",
-  "warmup": true,
+  "status": "In Progress",
+  "warmup": false,
   "win_p": null,
-  "win_side": null
+  "win_side": null,
+  "wp_away": 50.0,
+  "wp_home": 50.0
  },
  "bbab891f2a9defcd506aafce495b42dc": {
   "abstract": "Preview",
@@ -2222,7 +2228,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -2551,7 +2557,7 @@
   "rhe_home": [
    1,
    3,
-   0
+   1
   ],
   "save_p": null,
   "status": "Final",
@@ -2843,7 +2849,7 @@
   "away_p": "Grant Holmes",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Brandon Marsh",
+  "cur_batter": "Justin Crawford",
   "cur_pitcher": "Grant Holmes",
   "game_pk": 823415,
   "half": "Bottom",
@@ -2880,10 +2886,8 @@
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 1,
   "pitch_side": "away",
-  "pitcher_changed": true,
-  "prev_pitcher": "Jes\u00fas Luzardo",
   "rhe_away": [
    0,
    1,
@@ -2891,7 +2895,7 @@
   ],
   "rhe_home": [
    0,
-   1,
+   2,
    0
   ],
   "save_p": null,
@@ -2899,8 +2903,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 43.300000000000004,
-  "wp_home": 56.699999999999996
+  "wp_away": 43.10000000000001,
+  "wp_home": 56.89999999999999
  },
  "d08cd8d7e7ee9c4a2c546a19da42d129": {
   "abstract": "Final",
