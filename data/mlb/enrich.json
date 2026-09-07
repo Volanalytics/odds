@@ -240,7 +240,7 @@
   "win_side": "away"
  },
  "22430c880f9e9118f74aacf0b720b7ee": {
-  "abstract": "Preview",
+  "abstract": "Live",
   "away_p": "Grayson Rodriguez",
   "away_p_hand": "R",
   "away_r": 0,
@@ -274,8 +274,8 @@
    0
   ],
   "save_p": null,
-  "status": "Pre-Game",
-  "warmup": false,
+  "status": "Warmup",
+  "warmup": true,
   "win_p": null,
   "win_side": null
  },
@@ -769,10 +769,10 @@
   "away_p": "Jonah Tong",
   "away_p_hand": "R",
   "away_r": 2,
-  "cur_batter": "A.J. Ewing",
-  "cur_pitcher": "Eury P\u00e9rez",
+  "cur_batter": "Kyle Stowers",
+  "cur_pitcher": "Jonah Tong",
   "game_pk": 823820,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Eury P\u00e9rez",
   "home_p_hand": "R",
   "home_r": 0,
@@ -786,8 +786,10 @@
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Eury P\u00e9rez",
   "rhe_away": [
    2,
    1,
@@ -803,8 +805,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 59.599999999999994,
-  "wp_home": 40.400000000000006
+  "wp_away": 67.8,
+  "wp_home": 32.2
  },
  "4b966f5cc20bd2c8aabb3ffae91d489c": {
   "abstract": "Preview",
@@ -857,7 +859,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -2219,7 +2221,7 @@
   "rhe_home": [
    1,
    3,
-   1
+   0
   ],
   "save_p": null,
   "status": "Final",
@@ -2477,25 +2479,32 @@
   "away_p": "Grant Holmes",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Bryson Stott",
-  "cur_pitcher": "Grant Holmes",
+  "cur_batter": "Michael Harris II",
+  "cur_pitcher": "Jes\u00fas Luzardo",
   "game_pk": 823415,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Jes\u00fas Luzardo",
   "home_p_hand": "L",
   "home_r": 0,
   "in_play": true,
-  "inning": 1,
+  "inning": 2,
   "innings": [
    {
     "a": 0,
-    "h": null,
+    "h": 0,
     "n": 1
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 2
    }
   ],
   "lose_p": null,
   "outs": 2,
-  "pitch_side": "away",
+  "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Grant Holmes",
   "rhe_away": [
    0,
    0,
@@ -2507,12 +2516,12 @@
    0
   ],
   "save_p": null,
-  "status": "In Progress",
+  "status": "Player challenge",
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 45.699999999999996,
-  "wp_home": 54.300000000000004
+  "wp_away": 47.699999999999996,
+  "wp_home": 52.300000000000004
  },
  "d08cd8d7e7ee9c4a2c546a19da42d129": {
   "abstract": "Final",
