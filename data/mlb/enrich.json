@@ -171,7 +171,7 @@
   "home_p": "Drew Anderson",
   "home_p_hand": "R",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "innings": [
    {
@@ -194,10 +194,12 @@
    0
   ],
   "save_p": null,
-  "status": "Warmup",
-  "warmup": true,
+  "status": "In Progress",
+  "warmup": false,
   "win_p": null,
-  "win_side": null
+  "win_side": null,
+  "wp_away": 50.0,
+  "wp_home": 50.0
  },
  "109d31adb57ca2a65a0e61f6bc9ad6c7": {
   "abstract": "Final",
@@ -626,14 +628,14 @@
   "away_p": "Tanner Bibee",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Steven Kwan",
+  "cur_batter": "Jos\u00e9 Ram\u00edrez",
   "cur_pitcher": "Brandon Young",
   "game_pk": 824792,
   "half": "Top",
   "home_p": "Brandon Young",
   "home_p_hand": "R",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "innings": [
    {
@@ -643,11 +645,11 @@
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 1,
   "pitch_side": "home",
   "rhe_away": [
    0,
-   0,
+   1,
    0
   ],
   "rhe_home": [
@@ -656,10 +658,12 @@
    0
   ],
   "save_p": null,
-  "status": "Warmup",
-  "warmup": true,
+  "status": "In Progress",
+  "warmup": false,
   "win_p": null,
-  "win_side": null
+  "win_side": null,
+  "wp_away": 55.9,
+  "wp_home": 44.1
  },
  "35484b18fe129394ebc819752a8b92c1": {
   "abstract": "Final",
@@ -1187,7 +1191,7 @@
   "home_p": "Sandy Alcantara",
   "home_p_hand": "R",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "innings": [
    {
@@ -1210,10 +1214,12 @@
    0
   ],
   "save_p": null,
-  "status": "Warmup",
-  "warmup": true,
+  "status": "In Progress",
+  "warmup": false,
   "win_p": null,
-  "win_side": null
+  "win_side": null,
+  "wp_away": 50.0,
+  "wp_home": 50.0
  },
  "756b1fa5fc5aae0f6173b45c15d5e49f": {
   "abstract": "Final",
@@ -1469,29 +1475,35 @@
   "abstract": "Preview",
   "away_p": "Quinn Mathews",
   "away_p_hand": "L",
-  "away_r": null,
-  "cur_batter": null,
-  "cur_pitcher": null,
+  "away_r": 0,
+  "cur_batter": "Bryan Torres",
+  "cur_pitcher": "Landen Roupp",
   "game_pk": 823174,
-  "half": null,
+  "half": "Top",
   "home_p": "Landen Roupp",
   "home_p_hand": "R",
-  "home_r": null,
+  "home_r": 0,
   "in_play": false,
-  "inning": null,
-  "innings": [],
+  "inning": 1,
+  "innings": [
+   {
+    "a": null,
+    "h": null,
+    "n": 1
+   }
+  ],
   "lose_p": null,
-  "outs": null,
-  "pitch_side": "away",
+  "outs": 0,
+  "pitch_side": "home",
   "rhe_away": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "rhe_home": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "save_p": null,
   "status": "Pre-Game",
@@ -1657,46 +1669,12 @@
   "abstract": "Preview",
   "away_p": "Cal Quantrill",
   "away_p_hand": "R",
-  "away_r": null,
-  "cur_batter": null,
-  "cur_pitcher": null,
-  "game_pk": 823092,
-  "half": null,
-  "home_p": "Bryce Miller",
-  "home_p_hand": "R",
-  "home_r": null,
-  "in_play": false,
-  "inning": null,
-  "innings": [],
-  "lose_p": null,
-  "outs": null,
-  "pitch_side": "away",
-  "rhe_away": [
-   null,
-   null,
-   null
-  ],
-  "rhe_home": [
-   null,
-   null,
-   null
-  ],
-  "save_p": null,
-  "status": "Pre-Game",
-  "warmup": false,
-  "win_p": null,
-  "win_side": null
- },
- "9e2f314d867b53d782c83c17368fae5e": {
-  "abstract": "Live",
-  "away_p": "Hayden Wesneski",
-  "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Jeremy Pe\u00f1a",
-  "cur_pitcher": "Andrew Painter",
-  "game_pk": 823414,
+  "cur_batter": "Joc Pederson",
+  "cur_pitcher": "Bryce Miller",
+  "game_pk": 823092,
   "half": "Top",
-  "home_p": "Andrew Painter",
+  "home_p": "Bryce Miller",
   "home_p_hand": "R",
   "home_r": 0,
   "in_play": false,
@@ -1722,10 +1700,52 @@
    0
   ],
   "save_p": null,
-  "status": "Warmup",
-  "warmup": true,
+  "status": "Pre-Game",
+  "warmup": false,
   "win_p": null,
   "win_side": null
+ },
+ "9e2f314d867b53d782c83c17368fae5e": {
+  "abstract": "Live",
+  "away_p": "Hayden Wesneski",
+  "away_p_hand": "R",
+  "away_r": 0,
+  "cur_batter": "Jeremy Pe\u00f1a",
+  "cur_pitcher": "Andrew Painter",
+  "game_pk": 823414,
+  "half": "Top",
+  "home_p": "Andrew Painter",
+  "home_p_hand": "R",
+  "home_r": 0,
+  "in_play": true,
+  "inning": 1,
+  "innings": [
+   {
+    "a": null,
+    "h": null,
+    "n": 1
+   }
+  ],
+  "lose_p": null,
+  "outs": 0,
+  "pitch_side": "home",
+  "rhe_away": [
+   0,
+   0,
+   0
+  ],
+  "rhe_home": [
+   0,
+   0,
+   0
+  ],
+  "save_p": null,
+  "status": "In Progress",
+  "warmup": false,
+  "win_p": null,
+  "win_side": null,
+  "wp_away": 50.0,
+  "wp_home": 50.0
  },
  "a10aaa5c39074d6ea18faef14d18bfb5": {
   "abstract": "Preview",
