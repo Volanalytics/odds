@@ -135,9 +135,15 @@ td.sel{outline:1px solid var(--chalk);outline-offset:-1px}
 .open{color:var(--dim)}
 /* Opening price, shown under the current one on sides that moved. */
 .opn{color:var(--dim);font-size:10px;line-height:1.3;opacity:.75}
-/* Exchange quote: distinct colour so it never reads as a second book line. */
-.alt{color:#7FB3D5;font-size:10px;line-height:1.3}
-.alt .side{color:#5A8CAD}
+/* Book tags. Fixed width so prices align into a column regardless of tag. */
+.bk{display:inline-block;min-width:26px;font-size:10px;font-weight:700;
+    letter-spacing:.5px;vertical-align:baseline}
+.bk.bol{color:var(--dim)}
+.bk.k{color:#6FB4E0}
+/* Exchange price at the SAME size and weight as the book price -- only the
+   colour differs, so it reads as a peer rather than a footnote. */
+.arow{line-height:1.5}
+.altp{color:#8FC7E8}
 .cur{color:var(--ink)}
 tr.det td{background:#061014;padding:0;text-align:left}
 .dwrap{padding:10px 16px;white-space:normal}
@@ -211,7 +217,7 @@ table.box th.tot{border-left:1px solid var(--line)}
   .mklbl{font-size:12px}
   .mkln{font-size:14px}
   .opn{font-size:11px}
-  .alt{font-size:11px}
+  .bk{font-size:11px;min-width:28px}
   .side{font-size:13px;min-width:44px}
   @media (max-width:400px){
     .mkln{font-size:13px}
@@ -418,16 +424,23 @@ function sideHTML(s, which){
   const v = s[which] || "&mdash;";
   const k = which === "cur" ? mvClass(s.moved_min, s.changed) : "";
   const d = which === "cur" && s.changed ? '<span class="dot">&#9679;</span>' : "";
-  let out = `<span class="side">${s.label}</span>`
+
+  /* Both books get a tag at the same size, and the prices line up in a
+     column, so neither reads as an afterthought. The tag only appears when a
+     second book actually has a quote -- a lone "BOL" on every line is noise. */
+  const tagged = which === "cur" && s.alt;
+  const tag = t => tagged ? `<span class="bk ${t}">${t === "k" ? (BOOKLBL[s.alt.book] || "ALT") : "BOL"}</span>` : "";
+
+  let out = `<span class="side">${s.label}</span>${tag("bol")}`
           + `<span class="${which === "cur" ? "cur " + k : "open"}">${v}</span>${d}`;
-  if(which === "cur" && s.changed && s.open && s.open !== s.cur){
-    out += `<div class="opn"><span class="side"></span>${s.open}</div>`;
-  }
-  /* Exchange quote under the book price. Kalshi is priced by traders rather
-     than a book adding margin, so the gap between the two is the interesting
-     part -- worth seeing side by side rather than on a separate board. */
   if(which === "cur" && s.alt){
-    out += `<div class="alt"><span class="side">${BOOKLBL[s.alt.book] || s.alt.book}</span>${s.alt.cur}</div>`;
+    out += `<div class="arow"><span class="side"></span>${tag("k")}`
+         + `<span class="cur altp">${s.alt.cur}</span></div>`;
+  }
+  if(which === "cur" && s.changed && s.open && s.open !== s.cur){
+    out += `<div class="opn"><span class="side"></span>`
+         + (tagged ? '<span class="bk"></span>' : "")
+         + `open ${s.open}</div>`;
   }
   return out;
 }
