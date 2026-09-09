@@ -456,10 +456,38 @@ function cell(sides, which, gi, key){
        + sides.map(s => `<div>${sideHTML(s, which)}</div>`).join("") + "</td>";
 }
 
+/* One chronological stream covering both books rather than two separate
+   lists. Which book moved first is the interesting part, and that is only
+   visible when the rows are interleaved. */
+function mergedHist(s){
+  const rows = [];
+  const add = (arr, fallback, book) =>
+    (arr || (fallback ? [fallback] : [])).forEach(h =>
+      rows.push({ts: h.ts, iso: h.iso || h.iso_open || "", line: h.line, book: book}));
+
+  add(s.hist, {ts: s.opened_at, iso: s.iso_open, line: s.cur}, "bol");
+  if(s.alt)
+    add(s.alt.hist, {ts: s.alt.opened_at, iso: s.alt.iso_open, line: s.alt.cur}, "k");
+
+  // Sort on the ISO value; the display stamp is 12-hour and would put
+  // 01:10 PM ahead of 09:30 AM.
+  rows.sort((a, b) => (b.iso || "").localeCompare(a.iso || ""));
+  return rows;
+}
+
 function histRows(s){
-  return (s.hist || [{ts: s.opened_at, line: s.cur}]).map((h, i) =>
-    `<tr><td class="dts">${h.ts}</td><td class="${i ? "" : "dnow"}">${h.line}</td></tr>`
-  ).join("");
+  const rows = mergedHist(s);
+  const tagged = !!s.alt;
+  const newest = {};                       // first row per book is current
+  return rows.map(h => {
+    const isNew = !newest[h.book] && (newest[h.book] = 1);
+    const tag = tagged
+      ? `<td><span class="bk ${h.book}">${h.book === "k"
+          ? (BOOKLBL[s.alt.book] || "ALT") : "BOL"}</span></td>` : "";
+    return `<tr><td class="dts">${h.ts}</td>${tag}`
+         + `<td class="${isNew ? "dnow" : ""} ${h.book === "k" ? "altp" : ""}">`
+         + `${h.line}</td></tr>`;
+  }).join("");
 }
 
 function detailRow(gi, key){
@@ -498,9 +526,18 @@ function cardHist(gi, key){
   const label = DATA.columns.find(c => c.key === key).label;
   return '<div class="chist">' + (g.markets[key] || []).map(s =>
     `<div class="dhead">${label} &mdash; ${s.label}</div>`
-    + (s.hist || [{ts: s.opened_at, line: s.cur}]).map((h, i) =>
-        `<div class="hrow"><span class="dts">${h.ts}</span>
-         <span class="${i ? "" : "dnow"}">${h.line}</span></div>`).join("")
+    + (function(){
+        const rows = mergedHist(s), newest = {};
+        return rows.map(h => {
+          const isNew = !newest[h.book] && (newest[h.book] = 1);
+          const tag = s.alt
+            ? `<span class="bk ${h.book}">${h.book === "k"
+                ? (BOOKLBL[s.alt.book] || "ALT") : "BOL"}</span>` : "";
+          return `<div class="hrow"><span class="dts">${h.ts}</span>`
+               + `<span>${tag}<span class="${isNew ? "dnow" : ""} `
+               + `${h.book === "k" ? "altp" : ""}">${h.line}</span></span></div>`;
+        }).join("");
+      })()
   ).join("") + "</div>";
 }
 
