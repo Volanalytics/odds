@@ -25,6 +25,8 @@ from zoneinfo import ZoneInfo
 import sports
 
 DATA_DIR = os.environ.get("ODDS_DATA_DIR", "data")
+# First entry in sports.BOOKS drives the board; the rest render alongside.
+PRIMARY  = (getattr(sports, "BOOKS", ["betonlineag"]) or ["betonlineag"])[0]
 
 # Set from sports.py in main(); nothing below hardcodes a league.
 SPORT_ID = None
@@ -250,11 +252,12 @@ def build(days_shown=2, history_days=4, keep_hours=12):
         # looks like a fresh side with no history, defeating the board.
         by_side = defaultdict(list)
         for r in rows:
-            by_side[(r["market"], r["outcome"], r["desc"])].append(r)
+            by_side[(r.get("book", PRIMARY), r["market"],
+                     r["outcome"], r["desc"])].append(r)
 
         markets, newest, moves = {}, None, 0
 
-        for (market, _, _), seq in by_side.items():
+        for (book, market, _, _), seq in by_side.items():
             # ts is ISO-8601, so lexical sort is chronological. Never sort on a
             # formatted 12-hour stamp: "01:10 PM" sorts before "09:30 AM".
             seq.sort(key=lambda r: r["ts"])
@@ -278,7 +281,24 @@ def build(days_shown=2, history_days=4, keep_hours=12):
             if changed:
                 side["hist"] = [{"ts": stamp(r["ts"]), "line": fmt_line(r)}
                                 for r in reversed(seq)]
+            side["book"] = book
+            # Secondary books hang off the primary side rather than forming
+            # their own row: an exchange quote is a comparison, not a separate
+            # market. Matched below once every side is built.
             markets.setdefault(market, []).append(side)
+
+        # Fold secondary-book quotes into the matching primary side.
+        for key, sides in list(markets.items()):
+            prim = [s for s in sides if s["book"] == PRIMARY]
+            alts = [s for s in sides if s["book"] != PRIMARY]
+            for p in prim:
+                for a in alts:
+                    if a["label"] == p["label"]:
+                        p["alt"] = {"book": a["book"], "cur": a["cur"]}
+                        break
+            # A market the primary book doesn't price at all still shows,
+            # so an exchange-only line isn't invisible.
+            markets[key] = prim or alts
 
         # Match the Teams column: away first, then home; Over before Under.
         for v in markets.values():
@@ -404,6 +424,7 @@ def build_one(sport, outdir, days, keep_hours):
                    "columns": [{"key": k, "label": l} for k, l in CFG["columns"]]}
 
     payload["sport"] = sport
+    payload["books"] = list(getattr(sports, "BOOKS", [PRIMARY]))
     payload["label"] = CFG["label"]
 
     with open(os.path.join(outdir, f"data-{sport}.json"), "w", encoding="utf-8") as f:

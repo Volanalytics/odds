@@ -61,6 +61,12 @@ MLB_SHORT = {
 }
 
 
+# Books to request. 1-10 bookmakers count as ONE region, so a second book
+# costs nothing extra -- the quota is [markets] x [regions], not per book.
+# The first entry is primary and drives the board; the rest render alongside.
+BOOKS = ["betonlineag", "kalshi"]
+
+
 SPORTS = {
     "mlb": {
         "key":    "baseball_mlb",

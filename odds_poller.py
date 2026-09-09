@@ -56,7 +56,8 @@ import sports
 
 API_KEY  = os.environ.get("ODDS_API_KEY", "")
 DATA_DIR = os.environ.get("ODDS_DATA_DIR", "data")
-BOOK     = "betonlineag"
+BOOK     = "betonlineag"          # primary, kept for messages
+BOOKS    = None                    # set from sports.py in main()
 
 # Set by main() from sports.py. Nothing below hardcodes a league any more.
 SPORT     = None       # api key, e.g. "baseball_mlb"
@@ -153,8 +154,8 @@ def load_last_prices(days):
     last = {}
     for d in days:
         for r in read_ndjson(d):
-            last[(r["event_id"], r["market"], r["outcome"], r["desc"])] = \
-                (r["point"], r["price"])
+            last[(r["event_id"], r.get("book", BOOK), r["market"],
+                  r["outcome"], r["desc"])] = (r["point"], r["price"])
     return last
 
 
@@ -267,7 +268,7 @@ def store_odds(payload, last, day):
     event_id, polled, out = payload["id"], now_iso(), []
 
     for bm in payload.get("bookmakers", []):
-        if bm["key"] != BOOK:
+        if BOOKS and bm["key"] not in BOOKS:
             continue
         for mkt in bm.get("markets", []):
             stamp = mkt.get("last_update") or bm.get("last_update") or polled
@@ -278,13 +279,16 @@ def store_odds(payload, last, day):
                 outcome = oc.get("name") or ""
                 desc    = oc.get("description") or ""   # TEAM on team_totals
                 point   = oc.get("point")
-                key     = (event_id, mkt["key"], outcome, desc)
+                # The book MUST be in the dedupe key: without it, Kalshi and
+                # BetOnline prices for the same side overwrite each other and
+                # the store records a phantom move on every poll.
+                key     = (event_id, bm["key"], mkt["key"], outcome, desc)
 
                 if last.get(key) == (point, int(price)):
                     continue
                 last[key] = (point, int(price))
                 out.append({
-                    "event_id": event_id, "book": BOOK, "market": mkt["key"],
+                    "event_id": event_id, "book": bm["key"], "market": mkt["key"],
                     "outcome": outcome, "desc": desc, "point": point,
                     "price": int(price), "ts": stamp, "polled": polled,
                 })
@@ -339,7 +343,7 @@ def mode_main(index, state, force=False):
         print("  not due yet (slate cadence)")
         return
 
-    data = api_get(f"/v4/sports/{SPORT}/odds", bookmakers=BOOK,
+    data = api_get(f"/v4/sports/{SPORT}/odds", bookmakers=",".join(BOOKS),
                    markets=",".join(CFG["slate"]), oddsFormat="american",
                    includeRotationNumbers="true")
     if not data:
@@ -386,7 +390,7 @@ def mode_deep(index, state, dry_run=False, force=False, date=None):
         n = 0
         for i in range(0, len(CFG["event"]), CHUNK):
             data = api_get(f"/v4/sports/{SPORT}/events/{eid}/odds",
-                           bookmakers=BOOK,
+                           bookmakers=",".join(BOOKS),
                            markets=",".join(CFG["event"][i:i + CHUNK]),
                            oddsFormat="american")
             if data:
@@ -401,7 +405,7 @@ def mode_deep(index, state, dry_run=False, force=False, date=None):
 # ═════════════════════════════════════════════════════════════════════════════
 
 def main():
-    global SPORT, SPORT_ID, CFG
+    global SPORT, SPORT_ID, CFG, BOOKS
 
     ap = argparse.ArgumentParser()
     ap.add_argument("--sport", default="mlb", choices=list(sports.SPORTS),
@@ -416,6 +420,7 @@ def main():
     SPORT_ID = args.sport
     CFG      = sports.cfg(SPORT_ID)
     SPORT    = CFG["key"]
+    BOOKS    = list(getattr(sports, "BOOKS", [BOOK]))
 
     if args.tomorrow:
         args.date = (now() + timedelta(days=1)).strftime("%Y-%m-%d")
