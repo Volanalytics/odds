@@ -586,10 +586,10 @@
   "away_p": "Braydon Fisher",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Vladimir Guerrero Jr.",
-  "cur_pitcher": "Brady Basso",
+  "cur_batter": "Henry Bolte",
+  "cur_pitcher": "Braydon Fisher",
   "game_pk": 824956,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Brady Basso",
   "home_p_hand": "L",
   "home_r": 0,
@@ -597,14 +597,16 @@
   "inning": 1,
   "innings": [
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 1
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Brady Basso",
   "rhe_away": [
    0,
    0,
@@ -620,8 +622,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 46.199999999999996,
-  "wp_home": 53.800000000000004
+  "wp_away": 45.199999999999996,
+  "wp_home": 54.800000000000004
  },
  "2c0c5fa6dfe40dcd60cf3217261fb2d9": {
   "abstract": "Preview",
@@ -671,7 +673,13 @@
   "home_r": 0,
   "in_play": false,
   "inning": 1,
-  "innings": [],
+  "innings": [
+   {
+    "a": null,
+    "h": null,
+    "n": 1
+   }
+  ],
   "lose_p": null,
   "outs": 0,
   "pitch_side": "home",
@@ -924,27 +932,30 @@
   "away_p": "Zebby Matthews",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Josh Bell",
+  "cur_batter": "Trevor Larnach",
   "cur_pitcher": "Keider Montero",
   "game_pk": 824226,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Keider Montero",
   "home_p_hand": "R",
   "home_r": 2,
   "in_play": true,
-  "inning": 1,
+  "inning": 2,
   "innings": [
    {
     "a": 0,
     "h": 2,
     "n": 1
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 2
    }
   ],
   "lose_p": null,
-  "outs": 3,
+  "outs": 2,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "Zebby Matthews",
   "rhe_away": [
    0,
    0,
@@ -960,8 +971,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 29.5,
-  "wp_home": 70.5
+  "wp_away": 26.299999999999997,
+  "wp_home": 73.7
  },
  "4645b2d34e3503155b3ff308836621dc": {
   "abstract": "Final",
@@ -2282,15 +2293,15 @@
   "cur_pitcher": null,
   "game_pk": 824871,
   "half": null,
-  "home_p": null,
-  "home_p_hand": null,
+  "home_p": "Reynaldo L\u00f3pez",
+  "home_p_hand": "R",
   "home_r": null,
   "in_play": false,
   "inning": null,
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -2302,7 +2313,7 @@
    null
   ],
   "save_p": null,
-  "status": "Scheduled",
+  "status": "Pre-Game",
   "warmup": false,
   "win_p": null,
   "win_side": null
