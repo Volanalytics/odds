@@ -398,7 +398,7 @@
   "away_p": "Tomoyuki Sugano",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Spencer Jones",
+  "cur_batter": "George Lombard Jr.",
   "cur_pitcher": "Tomoyuki Sugano",
   "game_pk": 823497,
   "half": "Bottom",
@@ -422,8 +422,6 @@
   "lose_p": null,
   "outs": 0,
   "pitch_side": "away",
-  "pitcher_changed": true,
-  "prev_pitcher": "Will Warren",
   "rhe_away": [
    0,
    0,
@@ -439,8 +437,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 34.39999999999999,
-  "wp_home": 65.60000000000001
+  "wp_away": 31.299999999999997,
+  "wp_home": 68.7
  },
  "22430c880f9e9118f74aacf0b720b7ee": {
   "abstract": "Final",
@@ -1804,8 +1802,8 @@
   "away_p": "Robert Stock",
   "away_p_hand": "R",
   "away_r": 8,
-  "cur_batter": "Kyle Stowers",
-  "cur_pitcher": "Robert Stock",
+  "cur_batter": "Juan Soto",
+  "cur_pitcher": "Janson Junk",
   "game_pk": 823818,
   "half": "Bottom",
   "home_p": "Janson Junk",
@@ -1826,15 +1824,15 @@
    },
    {
     "a": 2,
-    "h": null,
+    "h": 0,
     "n": 3
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "away",
+  "outs": 3,
+  "pitch_side": "home",
   "pitcher_changed": true,
-  "prev_pitcher": "Janson Junk",
+  "prev_pitcher": "Robert Stock",
   "rhe_away": [
    8,
    8,
@@ -1850,8 +1848,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 97.2,
-  "wp_home": 2.8000000000000003
+  "wp_away": 97.8,
+  "wp_home": 2.1999999999999997
  },
  "9320b01114d200ee9f8d2fb0848e6496": {
   "abstract": "Final",
@@ -2350,7 +2348,7 @@
   "home_p": "Davis Martin",
   "home_p_hand": "R",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "innings": [
    {
@@ -2373,10 +2371,12 @@
    0
   ],
   "save_p": null,
-  "status": "Warmup",
-  "warmup": true,
+  "status": "In Progress",
+  "warmup": false,
   "win_p": null,
-  "win_side": null
+  "win_side": null,
+  "wp_away": 50.0,
+  "wp_home": 50.0
  },
  "bbab891f2a9defcd506aafce495b42dc": {
   "abstract": "Final",
@@ -2462,16 +2462,16 @@
   "abstract": "Live",
   "away_p": "Ryan Johnson",
   "away_p_hand": "R",
-  "away_r": 5,
-  "cur_batter": "Kyren Paris",
+  "away_r": 6,
+  "cur_batter": "Denzer Guzman",
   "cur_pitcher": "Jake Bennett",
   "game_pk": 824713,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Jake Bennett",
   "home_p_hand": "L",
   "home_r": 0,
   "in_play": true,
-  "inning": 3,
+  "inning": 4,
   "innings": [
    {
     "a": 0,
@@ -2487,16 +2487,19 @@
     "a": 5,
     "h": 0,
     "n": 3
+   },
+   {
+    "a": 1,
+    "h": null,
+    "n": 4
    }
   ],
   "lose_p": null,
-  "outs": 3,
+  "outs": 2,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "Ryan Johnson",
   "rhe_away": [
-   5,
    6,
+   7,
    0
   ],
   "rhe_home": [
@@ -2509,15 +2512,15 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 91.5,
-  "wp_home": 8.5
+  "wp_away": 91.0,
+  "wp_home": 9.0
  },
  "cd4dc96755ca32cc907956934a4f2fcb": {
   "abstract": "Live",
   "away_p": "Griffin Jax",
   "away_p_hand": "R",
-  "away_r": 1,
-  "cur_batter": "Richie Palacios",
+  "away_r": 3,
+  "cur_batter": "Yandy D\u00edaz",
   "cur_pitcher": "Reynaldo L\u00f3pez",
   "game_pk": 824871,
   "half": "Top",
@@ -2533,7 +2536,7 @@
     "n": 1
    },
    {
-    "a": 1,
+    "a": 3,
     "h": null,
     "n": 2
    }
@@ -2542,8 +2545,8 @@
   "outs": 2,
   "pitch_side": "home",
   "rhe_away": [
-   1,
    3,
+   4,
    0
   ],
   "rhe_home": [
@@ -2556,8 +2559,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 60.5,
-  "wp_home": 39.5
+  "wp_away": 61.1,
+  "wp_home": 38.9
  },
  "cd725aa57a2f0e5ac106e101cd15fc1d": {
   "abstract": "Final",
@@ -2724,13 +2727,13 @@
   "away_p": "Foster Griffin",
   "away_p_hand": "L",
   "away_r": 2,
-  "cur_batter": "Leody Taveras",
-  "cur_pitcher": "Foster Griffin",
+  "cur_batter": "Dylan Beavers",
+  "cur_pitcher": "Matt Festa",
   "game_pk": 824791,
   "half": "Bottom",
   "home_p": "Shane Baz",
   "home_p_hand": "R",
-  "home_r": 6,
+  "home_r": 7,
   "in_play": true,
   "inning": 3,
   "innings": [
@@ -2746,21 +2749,23 @@
    },
    {
     "a": 0,
-    "h": 6,
+    "h": 7,
     "n": 3
    }
   ],
   "lose_p": null,
-  "outs": 1,
+  "outs": 2,
   "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Foster Griffin",
   "rhe_away": [
    2,
    2,
    1
   ],
   "rhe_home": [
-   6,
-   6,
+   7,
+   7,
    0
   ],
   "save_p": null,
@@ -2768,8 +2773,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 8.200000000000003,
-  "wp_home": 91.8
+  "wp_away": 6.8999999999999915,
+  "wp_home": 93.10000000000001
  },
  "de5c4fe6a041ce8073e59e063fe7f31f": {
   "abstract": "Preview",
@@ -2817,7 +2822,7 @@
   "home_p": "Logan Henderson",
   "home_p_hand": "R",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "innings": [
    {
@@ -2840,10 +2845,12 @@
    0
   ],
   "save_p": null,
-  "status": "Warmup",
-  "warmup": true,
+  "status": "In Progress",
+  "warmup": false,
   "win_p": null,
-  "win_side": null
+  "win_side": null,
+  "wp_away": 50.0,
+  "wp_home": 50.0
  },
  "e1530fe384fbce5fff1d0a587c45122e": {
   "abstract": "Final",
@@ -3100,13 +3107,13 @@
   "away_p": "Hunter Brown",
   "away_p_hand": "R",
   "away_r": 4,
-  "cur_batter": "Kyle Schwarber",
+  "cur_batter": "Bryce Harper",
   "cur_pitcher": "Hunter Brown",
   "game_pk": 823416,
   "half": "Bottom",
   "home_p": "Cristopher S\u00e1nchez",
   "home_p_hand": "L",
-  "home_r": 0,
+  "home_r": 3,
   "in_play": true,
   "inning": 3,
   "innings": [
@@ -3122,21 +3129,21 @@
    },
    {
     "a": 4,
-    "h": null,
+    "h": 3,
     "n": 3
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 1,
   "pitch_side": "away",
   "rhe_away": [
    4,
    7,
-   0
+   1
   ],
   "rhe_home": [
-   0,
    3,
+   5,
    0
   ],
   "save_p": null,
@@ -3144,8 +3151,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 72.9,
-  "wp_home": 27.1
+  "wp_away": 69.5,
+  "wp_home": 30.5
  },
  "f62b9e0454b38cb2e0509ef206a08138": {
   "abstract": "Final",
