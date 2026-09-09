@@ -16,7 +16,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -370,7 +370,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -564,7 +564,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -598,7 +598,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -792,7 +792,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -1254,7 +1254,7 @@
   "win_side": "home"
  },
  "7fe872788a9a570ceb3aa6918bbf641d": {
-  "abstract": "Live",
+  "abstract": "Final",
   "away_p": "Quinn Mathews",
   "away_p_hand": "L",
   "away_r": 1,
@@ -1265,7 +1265,7 @@
   "home_p": "Landen Roupp",
   "home_p_hand": "R",
   "home_r": 2,
-  "in_play": true,
+  "in_play": false,
   "inning": 9,
   "innings": [
    {
@@ -1314,8 +1314,8 @@
     "n": 9
    }
   ],
-  "lose_p": null,
-  "outs": 2,
+  "lose_p": "Quinn Mathews",
+  "outs": 3,
   "pitch_side": "home",
   "rhe_away": [
    1,
@@ -1327,13 +1327,11 @@
    6,
    1
   ],
-  "save_p": null,
-  "status": "In Progress",
+  "save_p": "Joel Kuhnel",
+  "status": "Game Over",
   "warmup": false,
-  "win_p": null,
-  "win_side": "home",
-  "wp_away": 3.9000000000000057,
-  "wp_home": 96.1
+  "win_p": "Landen Roupp",
+  "win_side": "home"
  },
  "85c65d8138861fb6a024b339bf4f5ab6": {
   "abstract": "Final",
@@ -1459,15 +1457,15 @@
   "away_p": "Cal Quantrill",
   "away_p_hand": "R",
   "away_r": 10,
-  "cur_batter": "Michael Arroyo",
-  "cur_pitcher": "Robert Garcia",
+  "cur_batter": "Wyatt Langford",
+  "cur_pitcher": "Michael Rucker",
   "game_pk": 823092,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Bryce Miller",
   "home_p_hand": "R",
   "home_r": 3,
   "in_play": true,
-  "inning": 7,
+  "inning": 8,
   "innings": [
    {
     "a": 1,
@@ -1501,15 +1499,20 @@
    },
    {
     "a": 1,
-    "h": null,
+    "h": 0,
     "n": 7
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 8
    }
   ],
   "lose_p": null,
   "outs": 2,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "pitcher_changed": true,
-  "prev_pitcher": "Cal Quantrill",
+  "prev_pitcher": "Robert Garcia",
   "rhe_away": [
    10,
    11,
@@ -1525,8 +1528,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 99.5,
-  "wp_home": 0.5
+  "wp_away": 99.6,
+  "wp_home": 0.4
  },
  "9e2f314d867b53d782c83c17368fae5e": {
   "abstract": "Final",
@@ -2042,7 +2045,7 @@
    0
   ],
   "save_p": "Spencer Miles",
-  "status": "Game Over",
+  "status": "Final",
   "warmup": false,
   "win_p": "Jos\u00e9 Soriano",
   "win_side": "away"
@@ -2064,7 +2067,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -2098,7 +2101,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -2292,7 +2295,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -2326,7 +2329,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -2472,8 +2475,8 @@
   "away_p": "Nick Lodolo",
   "away_p_hand": "L",
   "away_r": 2,
-  "cur_batter": "Dane Myers",
-  "cur_pitcher": "Edgardo Henriquez",
+  "cur_batter": "Teoscar Hern\u00e1ndez",
+  "cur_pitcher": "Luis Mey",
   "game_pk": 823901,
   "half": "Top",
   "home_p": "Tarik Skubal",
@@ -2518,19 +2521,19 @@
     "n": 7
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 8
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "home",
+  "outs": 3,
+  "pitch_side": "away",
   "pitcher_changed": true,
-  "prev_pitcher": "Luis Mey",
+  "prev_pitcher": "Edgardo Henriquez",
   "rhe_away": [
    2,
-   4,
+   5,
    0
   ],
   "rhe_home": [
@@ -2543,8 +2546,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 20.099999999999994,
-  "wp_home": 79.9
+  "wp_away": 21.700000000000003,
+  "wp_home": 78.3
  },
  "f1963b019550753f962dfa7a7fa3e781": {
   "abstract": "Preview",
@@ -2563,7 +2566,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
