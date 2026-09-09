@@ -438,10 +438,10 @@
   "away_p": "Riley Cornelio",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "CJ Abrams",
-  "cur_pitcher": "Casey Mize",
+  "cur_batter": "Jake Cronenworth",
+  "cur_pitcher": "Riley Cornelio",
   "game_pk": 823250,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Casey Mize",
   "home_p_hand": "R",
   "home_r": 0,
@@ -449,14 +449,16 @@
   "inning": 1,
   "innings": [
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 1
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "home",
+  "outs": 1,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Casey Mize",
   "rhe_away": [
    0,
    1,
@@ -472,8 +474,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 48.4,
-  "wp_home": 51.6
+  "wp_away": 47.4,
+  "wp_home": 52.6
  },
  "2c0c5fa6dfe40dcd60cf3217261fb2d9": {
   "abstract": "Preview",
@@ -1186,7 +1188,7 @@
   "away_p": "Quinn Mathews",
   "away_p_hand": "L",
   "away_r": 0,
-  "cur_batter": "Bryan Torres",
+  "cur_batter": "Alec Burleson",
   "cur_pitcher": "Landen Roupp",
   "game_pk": 823174,
   "half": "Top",
@@ -1203,7 +1205,7 @@
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 2,
   "pitch_side": "home",
   "rhe_away": [
    0,
@@ -1220,23 +1222,23 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 50.0,
-  "wp_home": 50.0
+  "wp_away": 46.199999999999996,
+  "wp_home": 53.800000000000004
  },
  "85c65d8138861fb6a024b339bf4f5ab6": {
   "abstract": "Live",
   "away_p": "David Peterson",
   "away_p_hand": "L",
   "away_r": 1,
-  "cur_batter": "Jackson Chourio",
-  "cur_pitcher": "Aaron Civale",
+  "cur_batter": "Michael Busch",
+  "cur_pitcher": "Antonio Senzatela",
   "game_pk": 823738,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Jacob Misiorowski",
   "home_p_hand": "R",
   "home_r": 1,
   "in_play": true,
-  "inning": 7,
+  "inning": 8,
   "innings": [
    {
     "a": 1,
@@ -1270,13 +1272,20 @@
    },
    {
     "a": 0,
-    "h": null,
+    "h": 0,
     "n": 7
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 8
    }
   ],
   "lose_p": null,
   "outs": 2,
-  "pitch_side": "away",
+  "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Aaron Civale",
   "rhe_away": [
    1,
    4,
@@ -1292,8 +1301,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 47.9,
-  "wp_home": 52.1
+  "wp_away": 41.800000000000004,
+  "wp_home": 58.199999999999996
  },
  "8dafff0a0578488c760ea460e1e6f7b3": {
   "abstract": "Preview",
@@ -1334,10 +1343,10 @@
   "away_p": "Cal Quantrill",
   "away_p_hand": "R",
   "away_r": 1,
-  "cur_batter": "Ezequiel Duran",
-  "cur_pitcher": "Bryce Miller",
+  "cur_batter": "Randy Arozarena",
+  "cur_pitcher": "Cal Quantrill",
   "game_pk": 823092,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Bryce Miller",
   "home_p_hand": "R",
   "home_r": 0,
@@ -1351,8 +1360,10 @@
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Bryce Miller",
   "rhe_away": [
    1,
    1,
@@ -1368,8 +1379,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 57.6,
-  "wp_home": 42.4
+  "wp_away": 55.199999999999996,
+  "wp_home": 44.800000000000004
  },
  "9e2f314d867b53d782c83c17368fae5e": {
   "abstract": "Final",
@@ -1452,7 +1463,7 @@
   "win_side": "away"
  },
  "a10aaa5c39074d6ea18faef14d18bfb5": {
-  "abstract": "Live",
+  "abstract": "Final",
   "away_p": "Gabriel Hughes",
   "away_p_hand": "R",
   "away_r": 3,
@@ -1463,7 +1474,7 @@
   "home_p": "Cam Schlittler",
   "home_p_hand": "R",
   "home_r": 5,
-  "in_play": true,
+  "in_play": false,
   "inning": 9,
   "innings": [
    {
@@ -1512,11 +1523,9 @@
     "n": 9
    }
   ],
-  "lose_p": null,
-  "outs": 2,
+  "lose_p": "Gabriel Hughes",
+  "outs": 3,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "Tim Hill",
   "rhe_away": [
    3,
    4,
@@ -1527,13 +1536,11 @@
    8,
    0
   ],
-  "save_p": null,
-  "status": "In Progress",
+  "save_p": "David Bednar",
+  "status": "Game Over",
   "warmup": false,
-  "win_p": null,
-  "win_side": "home",
-  "wp_away": 1.2000000000000028,
-  "wp_home": 98.8
+  "win_p": "Cam Schlittler",
+  "win_side": "home"
  },
  "a410afcc86bee1b6cbe7e60eafd8d50e": {
   "abstract": "Final",
@@ -1819,10 +1826,10 @@
   "away_p": "Jos\u00e9 Soriano",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Vladimir Guerrero Jr.",
-  "cur_pitcher": "Jack Perkins",
+  "cur_batter": "Henry Bolte",
+  "cur_pitcher": "Jos\u00e9 Soriano",
   "game_pk": 824957,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Jack Perkins",
   "home_p_hand": "R",
   "home_r": 0,
@@ -1830,14 +1837,16 @@
   "inning": 1,
   "innings": [
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 1
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Jack Perkins",
   "rhe_away": [
    0,
    1,
@@ -1853,8 +1862,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 50.2,
-  "wp_home": 49.8
+  "wp_away": 45.199999999999996,
+  "wp_home": 54.800000000000004
  },
  "c8513bd1ec6dd659d64e9c17052f4c9d": {
   "abstract": "Preview",
@@ -1928,9 +1937,9 @@
   "abstract": "Live",
   "away_p": "Freddy Peralta",
   "away_p_hand": "R",
-  "away_r": 6,
-  "cur_batter": "Victor Mesa Jr.",
-  "cur_pitcher": "Elieser Hern\u00e1ndez",
+  "away_r": 7,
+  "cur_batter": "Drake Baldwin",
+  "cur_pitcher": "Cole Sulser",
   "game_pk": 824875,
   "half": "Top",
   "home_p": "AJ Smith-Shawver",
@@ -1980,19 +1989,19 @@
     "n": 8
    },
    {
-    "a": null,
+    "a": 1,
     "h": null,
     "n": 9
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "home",
+  "outs": 3,
+  "pitch_side": "away",
   "pitcher_changed": true,
-  "prev_pitcher": "Cole Sulser",
+  "prev_pitcher": "Elieser Hern\u00e1ndez",
   "rhe_away": [
-   6,
-   10,
+   7,
+   11,
    0
   ],
   "rhe_home": [
@@ -2005,8 +2014,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 99.3,
-  "wp_home": 0.7000000000000001
+  "wp_away": 99.7,
+  "wp_home": 0.3
  },
  "ce94c6d5ef8ae9f29d29223e386beee1": {
   "abstract": "Final",
@@ -2195,15 +2204,15 @@
   "away_p": "Corbin Burnes",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Ketel Marte",
+  "cur_batter": "Gabriel Moreno",
   "cur_pitcher": "Connor Thomas",
   "game_pk": 824063,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Michael Wacha",
   "home_p_hand": "R",
   "home_r": 0,
   "in_play": true,
-  "inning": 7,
+  "inning": 8,
   "innings": [
    {
     "a": 0,
@@ -2239,16 +2248,19 @@
     "a": 0,
     "h": 0,
     "n": 7
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 8
    }
   ],
   "lose_p": null,
-  "outs": 3,
+  "outs": 0,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "Dennis Santana",
   "rhe_away": [
    0,
-   4,
+   5,
    0
   ],
   "rhe_home": [
@@ -2261,8 +2273,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 45.9,
-  "wp_home": 54.1
+  "wp_away": 50.0,
+  "wp_home": 50.0
  },
  "f01c292dd868a51b739e2283164a5e94": {
   "abstract": "Live",
@@ -2343,13 +2355,13 @@
   "away_p": "Bubba Chandler",
   "away_p_hand": "R",
   "away_r": 9,
-  "cur_batter": "Andrew Benintendi",
-  "cur_pitcher": "Wilber Dotel",
+  "cur_batter": "Brandon Lowe",
+  "cur_pitcher": "Jos\u00e9 Urquidy",
   "game_pk": 824551,
   "half": "Bottom",
   "home_p": "Sean Burke",
   "home_p_hand": "R",
-  "home_r": 2,
+  "home_r": 3,
   "in_play": true,
   "inning": 7,
   "innings": [
@@ -2385,23 +2397,23 @@
    },
    {
     "a": 0,
-    "h": null,
+    "h": 1,
     "n": 7
    }
   ],
   "lose_p": null,
-  "outs": 0,
-  "pitch_side": "away",
+  "outs": 3,
+  "pitch_side": "home",
   "pitcher_changed": true,
-  "prev_pitcher": "Jos\u00e9 Urquidy",
+  "prev_pitcher": "Wilber Dotel",
   "rhe_away": [
    9,
    15,
    0
   ],
   "rhe_home": [
-   2,
-   4,
+   3,
+   5,
    0
   ],
   "save_p": null,
