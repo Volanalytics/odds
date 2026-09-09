@@ -135,6 +135,9 @@ td.sel{outline:1px solid var(--chalk);outline-offset:-1px}
 .open{color:var(--dim)}
 /* Opening price, shown under the current one on sides that moved. */
 .opn{color:var(--dim);font-size:10px;line-height:1.3;opacity:.75}
+/* Exchange quote: distinct colour so it never reads as a second book line. */
+.alt{color:#7FB3D5;font-size:10px;line-height:1.3}
+.alt .side{color:#5A8CAD}
 .cur{color:var(--ink)}
 tr.det td{background:#061014;padding:0;text-align:left}
 .dwrap{padding:10px 16px;white-space:normal}
@@ -208,6 +211,7 @@ table.box th.tot{border-left:1px solid var(--line)}
   .mklbl{font-size:12px}
   .mkln{font-size:14px}
   .opn{font-size:11px}
+  .alt{font-size:11px}
   .side{font-size:13px;min-width:44px}
   @media (max-width:400px){
     .mkln{font-size:13px}
@@ -243,6 +247,8 @@ table.box th.tot{border-left:1px solid var(--line)}
 <div id="cards"></div>
 
 <script>
+const BOOKLBL = {kalshi: "K", polymarket: "P", novig: "NV", prophetx: "PX",
+                 betopenly: "BO"};
 const REFRESH_MS = 30000;
 let DATA = null, OPEN = null, SPORTS = [], SPORT = null;
 const CACHE = {};
@@ -416,6 +422,12 @@ function sideHTML(s, which){
           + `<span class="${which === "cur" ? "cur " + k : "open"}">${v}</span>${d}`;
   if(which === "cur" && s.changed && s.open && s.open !== s.cur){
     out += `<div class="opn"><span class="side"></span>${s.open}</div>`;
+  }
+  /* Exchange quote under the book price. Kalshi is priced by traders rather
+     than a book adding margin, so the gap between the two is the interesting
+     part -- worth seeing side by side rather than on a separate board. */
+  if(which === "cur" && s.alt){
+    out += `<div class="alt"><span class="side">${BOOKLBL[s.alt.book] || s.alt.book}</span>${s.alt.cur}</div>`;
   }
   return out;
 }
