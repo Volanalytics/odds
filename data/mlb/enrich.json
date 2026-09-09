@@ -37,29 +37,35 @@
   "abstract": "Preview",
   "away_p": "Zac Gallen",
   "away_p_hand": "R",
-  "away_r": null,
-  "cur_batter": null,
-  "cur_pitcher": null,
+  "away_r": 0,
+  "cur_batter": "Ildemaro Vargas",
+  "cur_pitcher": "Daniel Lynch IV",
   "game_pk": 824064,
-  "half": null,
+  "half": "Top",
   "home_p": "Daniel Lynch IV",
   "home_p_hand": "L",
-  "home_r": null,
+  "home_r": 0,
   "in_play": false,
-  "inning": null,
-  "innings": [],
+  "inning": 1,
+  "innings": [
+   {
+    "a": null,
+    "h": null,
+    "n": 1
+   }
+  ],
   "lose_p": null,
-  "outs": null,
-  "pitch_side": "away",
+  "outs": 0,
+  "pitch_side": "home",
   "rhe_away": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "rhe_home": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "save_p": null,
   "status": "Pre-Game",
@@ -592,7 +598,7 @@
   "away_p": "Braydon Fisher",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Alejandro Kirk",
+  "cur_batter": "Ernie Clement",
   "cur_pitcher": "Brady Basso",
   "game_pk": 824956,
   "half": "Top",
@@ -624,13 +630,11 @@
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 2,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "Michael Lorenzen",
   "rhe_away": [
    0,
-   1,
+   2,
    0
   ],
   "rhe_home": [
@@ -643,8 +647,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 36.7,
-  "wp_home": 63.3
+  "wp_away": 35.599999999999994,
+  "wp_home": 64.4
  },
  "2c0c5fa6dfe40dcd60cf3217261fb2d9": {
   "abstract": "Preview",
@@ -952,16 +956,16 @@
   "abstract": "Live",
   "away_p": "Zebby Matthews",
   "away_p_hand": "R",
-  "away_r": 0,
-  "cur_batter": "Kody Clemens",
+  "away_r": 2,
+  "cur_batter": "Kaelen Culpepper",
   "cur_pitcher": "Keider Montero",
   "game_pk": 824226,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Keider Montero",
   "home_p_hand": "R",
   "home_r": 5,
   "in_play": true,
-  "inning": 3,
+  "inning": 4,
   "innings": [
    {
     "a": 0,
@@ -977,16 +981,19 @@
     "a": 0,
     "h": 3,
     "n": 3
+   },
+   {
+    "a": 2,
+    "h": null,
+    "n": 4
    }
   ],
   "lose_p": null,
-  "outs": 3,
+  "outs": 0,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "Travis Adams",
   "rhe_away": [
-   0,
-   0,
+   2,
+   2,
    0
   ],
   "rhe_home": [
@@ -999,8 +1006,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 6.599999999999994,
-  "wp_home": 93.4
+  "wp_away": 12.400000000000006,
+  "wp_home": 87.6
  },
  "4645b2d34e3503155b3ff308836621dc": {
   "abstract": "Final",
@@ -1121,24 +1128,24 @@
   "away_p": "Andre Pallante",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Turner Hill",
+  "cur_batter": "Jung Hoo Lee",
   "cur_pitcher": "Andre Pallante",
   "game_pk": 823172,
   "half": "Bottom",
   "home_p": "Blade Tidwell",
   "home_p_hand": "R",
-  "home_r": 0,
+  "home_r": 1,
   "in_play": true,
   "inning": 1,
   "innings": [
    {
     "a": 0,
-    "h": null,
+    "h": 1,
     "n": 1
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 2,
   "pitch_side": "away",
   "rhe_away": [
    0,
@@ -1146,17 +1153,17 @@
    0
   ],
   "rhe_home": [
-   0,
    1,
+   2,
    0
   ],
   "save_p": null,
   "status": "In Progress",
   "warmup": false,
   "win_p": null,
-  "win_side": null,
-  "wp_away": 39.300000000000004,
-  "wp_home": 60.699999999999996
+  "win_side": "home",
+  "wp_away": 35.3,
+  "wp_home": 64.7
  },
  "4b966f5cc20bd2c8aabb3ffae91d489c": {
   "abstract": "Final",
