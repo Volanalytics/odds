@@ -718,15 +718,15 @@
   "away_p": "Jackson Kent",
   "away_p_hand": "L",
   "away_r": 2,
-  "cur_batter": "Samad Taylor",
-  "cur_pitcher": "Luis Perales",
+  "cur_batter": "James Wood",
+  "cur_pitcher": "Wandy Peralta",
   "game_pk": 823251,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Walker Buehler",
   "home_p_hand": "R",
   "home_r": 8,
   "in_play": true,
-  "inning": 7,
+  "inning": 8,
   "innings": [
    {
     "a": 0,
@@ -762,14 +762,21 @@
     "a": 0,
     "h": 1,
     "n": 7
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 8
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "away",
+  "outs": 0,
+  "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Luis Perales",
   "rhe_away": [
    2,
-   3,
+   4,
    1
   ],
   "rhe_home": [
@@ -782,8 +789,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 0.7000000000000028,
-  "wp_home": 99.3
+  "wp_away": 0.7999999999999972,
+  "wp_home": 99.2
  },
  "34562a9fcbcea523c510c1e42991506b": {
   "abstract": "Final",
@@ -1794,7 +1801,7 @@
   "home_p": "Janson Junk",
   "home_p_hand": "R",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "innings": [
    {
@@ -1817,10 +1824,12 @@
    0
   ],
   "save_p": null,
-  "status": "Warmup",
-  "warmup": true,
+  "status": "In Progress",
+  "warmup": false,
   "win_p": null,
-  "win_side": null
+  "win_side": null,
+  "wp_away": 50.0,
+  "wp_home": 50.0
  },
  "9320b01114d200ee9f8d2fb0848e6496": {
   "abstract": "Final",
@@ -2672,14 +2681,14 @@
   "away_p": "Foster Griffin",
   "away_p_hand": "L",
   "away_r": 0,
-  "cur_batter": "Steven Kwan",
+  "cur_batter": "Chase DeLauter",
   "cur_pitcher": "Shane Baz",
   "game_pk": 824791,
   "half": "Top",
   "home_p": "Shane Baz",
   "home_p_hand": "R",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "innings": [
    {
@@ -2693,7 +2702,7 @@
   "pitch_side": "home",
   "rhe_away": [
    0,
-   0,
+   1,
    0
   ],
   "rhe_home": [
@@ -2702,10 +2711,12 @@
    0
   ],
   "save_p": null,
-  "status": "Warmup",
-  "warmup": true,
+  "status": "In Progress",
+  "warmup": false,
   "win_p": null,
-  "win_side": null
+  "win_side": null,
+  "wp_away": 53.599999999999994,
+  "wp_home": 46.400000000000006
  },
  "de5c4fe6a041ce8073e59e063fe7f31f": {
   "abstract": "Preview",
@@ -2724,7 +2735,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -2856,7 +2867,7 @@
    0
   ],
   "save_p": "Andr\u00e9s Mu\u00f1oz",
-  "status": "Game Over",
+  "status": "Final",
   "warmup": false,
   "win_p": "Kade Anderson",
   "win_side": "home"
