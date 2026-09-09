@@ -277,10 +277,11 @@ def build(days_shown=2, history_days=4, keep_hours=12):
                 "changed":   changed,
                 "moved_min": round((now - moved_at).total_seconds() / 60, 1),
                 "opened_at": stamp(first["ts"]),
+                "iso_open":  first["ts"],
             }
             if changed:
-                side["hist"] = [{"ts": stamp(r["ts"]), "line": fmt_line(r)}
-                                for r in reversed(seq)]
+                side["hist"] = [{"ts": stamp(r["ts"]), "iso": r["ts"],
+                                 "line": fmt_line(r)} for r in reversed(seq)]
             side["book"] = book
             # Secondary books hang off the primary side rather than forming
             # their own row: an exchange quote is a comparison, not a separate
@@ -294,7 +295,10 @@ def build(days_shown=2, history_days=4, keep_hours=12):
             for p in prim:
                 for a in alts:
                     if a["label"] == p["label"]:
-                        p["alt"] = {"book": a["book"], "cur": a["cur"]}
+                        p["alt"] = {"book": a["book"], "cur": a["cur"],
+                                    "hist": a.get("hist"),
+                                    "opened_at": a.get("opened_at"),
+                                    "iso_open": a.get("iso_open")}
                         break
             # A market the primary book doesn't price at all still shows,
             # so an exchange-only line isn't invisible.
