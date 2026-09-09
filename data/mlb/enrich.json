@@ -718,8 +718,8 @@
   "away_p": "Jackson Kent",
   "away_p_hand": "L",
   "away_r": 2,
-  "cur_batter": "Keibert Ruiz",
-  "cur_pitcher": "Wandy Peralta",
+  "cur_batter": "Jackson Merrill",
+  "cur_pitcher": "Luis Perales",
   "game_pk": 823251,
   "half": "Top",
   "home_p": "Walker Buehler",
@@ -759,16 +759,16 @@
     "n": 6
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 7
    }
   ],
   "lose_p": null,
-  "outs": 0,
-  "pitch_side": "home",
+  "outs": 3,
+  "pitch_side": "away",
   "pitcher_changed": true,
-  "prev_pitcher": "Luis Perales",
+  "prev_pitcher": "Wandy Peralta",
   "rhe_away": [
    2,
    3,
@@ -784,8 +784,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 2.9000000000000057,
-  "wp_home": 97.1
+  "wp_away": 1.7000000000000028,
+  "wp_home": 98.3
  },
  "34562a9fcbcea523c510c1e42991506b": {
   "abstract": "Final",
@@ -1210,18 +1210,18 @@
   "win_side": null
  },
  "4a391464b8e1ffee0ee5e205298840de": {
-  "abstract": "Live",
+  "abstract": "Final",
   "away_p": "Andre Pallante",
   "away_p_hand": "R",
   "away_r": 6,
-  "cur_batter": "Jordan Walker",
+  "cur_batter": "Iv\u00e1n Herrera",
   "cur_pitcher": "Trent Harris",
   "game_pk": 823172,
   "half": "Top",
   "home_p": "Blade Tidwell",
   "home_p_hand": "R",
   "home_r": 7,
-  "in_play": true,
+  "in_play": false,
   "inning": 9,
   "innings": [
    {
@@ -1265,16 +1265,14 @@
     "n": 8
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 9
    }
   ],
-  "lose_p": null,
-  "outs": 0,
+  "lose_p": "George Soriano",
+  "outs": 3,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "George Soriano",
   "rhe_away": [
    6,
    8,
@@ -1285,13 +1283,11 @@
    10,
    3
   ],
-  "save_p": null,
-  "status": "In Progress",
+  "save_p": "Trent Harris",
+  "status": "Game Over",
   "warmup": false,
-  "win_p": null,
-  "win_side": "home",
-  "wp_away": 28.200000000000003,
-  "wp_home": 71.8
+  "win_p": "Matt Wilkinson",
+  "win_side": "home"
  },
  "4b966f5cc20bd2c8aabb3ffae91d489c": {
   "abstract": "Final",
@@ -2730,7 +2726,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -2792,15 +2788,15 @@
   "away_p": "Cody Bradford",
   "away_p_hand": "L",
   "away_r": 2,
-  "cur_batter": "Jake Burger",
-  "cur_pitcher": "Gabe Speier",
+  "cur_batter": "Joc Pederson",
+  "cur_pitcher": "Andr\u00e9s Mu\u00f1oz",
   "game_pk": 823090,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Kade Anderson",
   "home_p_hand": "L",
   "home_r": 3,
   "in_play": true,
-  "inning": 8,
+  "inning": 9,
   "innings": [
    {
     "a": 0,
@@ -2841,13 +2837,18 @@
     "a": 1,
     "h": 0,
     "n": 8
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 9
    }
   ],
   "lose_p": null,
-  "outs": 3,
+  "outs": 0,
   "pitch_side": "home",
   "pitcher_changed": true,
-  "prev_pitcher": "Robby Ahlstrom",
+  "prev_pitcher": "Gabe Speier",
   "rhe_away": [
    2,
    7,
@@ -2863,8 +2864,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 15.0,
-  "wp_home": 85.0
+  "wp_away": 28.200000000000003,
+  "wp_home": 71.8
  },
  "e28a92e1cd8fe7ce97b34004a0d2063e": {
   "abstract": "Final",
@@ -3037,7 +3038,7 @@
   "win_side": "home"
  },
  "f1963b019550753f962dfa7a7fa3e781": {
-  "abstract": "Preview",
+  "abstract": "Live",
   "away_p": "Hunter Brown",
   "away_p_hand": "R",
   "away_r": 0,
@@ -3071,8 +3072,8 @@
    0
   ],
   "save_p": null,
-  "status": "Pre-Game",
-  "warmup": false,
+  "status": "Warmup",
+  "warmup": true,
   "win_p": null,
   "win_side": null
  },
