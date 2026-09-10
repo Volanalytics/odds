@@ -38,10 +38,10 @@
   "away_p": "Zac Gallen",
   "away_p_hand": "R",
   "away_r": 2,
-  "cur_batter": "Ketel Marte",
-  "cur_pitcher": "Anthony Gose",
+  "cur_batter": "Isaac Collins",
+  "cur_pitcher": "Michael Soroka",
   "game_pk": 824064,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Daniel Lynch IV",
   "home_p_hand": "L",
   "home_r": 5,
@@ -79,14 +79,16 @@
     "n": 6
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 7
    }
   ],
   "lose_p": null,
   "outs": 1,
-  "pitch_side": "home",
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Anthony Gose",
   "rhe_away": [
    2,
    6,
@@ -102,8 +104,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 11.0,
-  "wp_home": 89.0
+  "wp_away": 5.900000000000006,
+  "wp_home": 94.1
  },
  "10492fa54f9765a1ae3c65266b20ca1a": {
   "abstract": "Final",
@@ -510,8 +512,8 @@
   "away_p": "Rhett Lowder",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "JJ Bleday",
-  "cur_pitcher": "Yoshinobu Yamamoto",
+  "cur_batter": "Teoscar Hern\u00e1ndez",
+  "cur_pitcher": "Rhett Lowder",
   "game_pk": 823900,
   "half": "Top",
   "home_p": "Yoshinobu Yamamoto",
@@ -526,16 +528,16 @@
     "n": 1
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 2
    }
   ],
   "lose_p": null,
-  "outs": 0,
-  "pitch_side": "home",
+  "outs": 3,
+  "pitch_side": "away",
   "pitcher_changed": true,
-  "prev_pitcher": "Rhett Lowder",
+  "prev_pitcher": "Yoshinobu Yamamoto",
   "rhe_away": [
    0,
    1,
@@ -551,8 +553,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 50.0,
-  "wp_home": 50.0
+  "wp_away": 46.0,
+  "wp_home": 54.0
  },
  "309bc53328fe78f477537b0dcbef3ddf": {
   "abstract": "Final",
@@ -1796,10 +1798,10 @@
   "away_p": "Lake Bachar",
   "away_p_hand": "R",
   "away_r": 4,
-  "cur_batter": "Konnor Griffin",
-  "cur_pitcher": "Trevor Richards",
+  "cur_batter": "Edgar Quero",
+  "cur_pitcher": "Mason Montgomery",
   "game_pk": 824549,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Davis Martin",
   "home_p_hand": "R",
   "home_r": 2,
@@ -1847,14 +1849,16 @@
     "n": 8
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 9
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Trevor Richards",
   "rhe_away": [
    4,
    10,
@@ -1870,8 +1874,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 92.4,
-  "wp_home": 7.6
+  "wp_away": 90.5,
+  "wp_home": 9.5
  },
  "bbab891f2a9defcd506aafce495b42dc": {
   "abstract": "Final",
@@ -2308,18 +2312,18 @@
   "win_side": null
  },
  "df53cc747b6ef1e7688d8595a1d6aec6": {
-  "abstract": "Live",
+  "abstract": "Final",
   "away_p": "Kevin Gausman",
   "away_p_hand": "R",
-  "away_r": 4,
-  "cur_batter": "Michael Conforto",
+  "away_r": 6,
+  "cur_batter": "BJ Murray Jr.",
   "cur_pitcher": "Abner Uribe",
   "game_pk": 823739,
   "half": "Top",
   "home_p": "Logan Henderson",
   "home_p_hand": "R",
   "home_r": 8,
-  "in_play": true,
+  "in_play": false,
   "inning": 9,
   "innings": [
    {
@@ -2363,17 +2367,17 @@
     "n": 8
    },
    {
-    "a": 3,
+    "a": 5,
     "h": null,
     "n": 9
    }
   ],
-  "lose_p": null,
-  "outs": 2,
+  "lose_p": "Kevin Gausman",
+  "outs": 3,
   "pitch_side": "home",
   "rhe_away": [
-   4,
-   4,
+   6,
+   5,
    2
   ],
   "rhe_home": [
@@ -2382,12 +2386,10 @@
    1
   ],
   "save_p": null,
-  "status": "In Progress",
+  "status": "Game Over",
   "warmup": false,
-  "win_p": null,
-  "win_side": "home",
-  "wp_away": 1.4000000000000057,
-  "wp_home": 98.6
+  "win_p": "Logan Henderson",
+  "win_side": "home"
  },
  "e1530fe384fbce5fff1d0a587c45122e": {
   "abstract": "Final",
