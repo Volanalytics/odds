@@ -1,574 +1,797 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="color-scheme" content="dark">
-<title>MLB Projections &middot; Dashboard</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- Without this, phones assume a ~980px layout and scale the whole page down. -->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#08161B">
+<title>Odds board</title>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --field:#08161B; --panel:#102A31; --panel-2:#173A44;
-  --line:#1F5058;
-  --chalk:#EAF0F6; --muted:#8199B0; --accent:#3FD0C9;
-  --gain:#8CC63F; --loss:#E8615C;
+  --field:#08161B; --panel:#0D2028; --panel2:#112932; --line:#1D3A44;
+  --ink:#DCE6E4; --dim:#7B968F; --chalk:#F2F7F5;
+  --m2:#F07E7C; --m5:#EFC24B; --m10:#5DCAA5; --live:#5A1414;
 }
 *{box-sizing:border-box}
-body{margin:0;background:var(--field);color:var(--chalk);
-  font-family:"Roboto Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
-  font-size:14px;line-height:1.55;-webkit-text-size-adjust:100%;
-  font-variant-numeric:tabular-nums}
-a{color:var(--accent);text-decoration:none}
-header{border-bottom:1px solid var(--line);background:var(--panel);
-  position:sticky;top:0;z-index:5}
-.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
-.brand{display:flex;align-items:baseline;gap:12px;padding:14px 0 0}
-.brand h1{font-weight:700;font-size:22px;letter-spacing:.14em;
-  text-transform:uppercase;margin:0}
-.brand .stamp{font-size:11px;color:var(--muted);letter-spacing:.08em}
-nav{display:flex;gap:4px;padding:10px 0 0}
-nav a{padding:8px 14px;border-radius:6px 6px 0 0;font-size:13px;
-  letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
-  font-weight:500}
-nav a.on{background:var(--field);color:var(--chalk);
-  box-shadow:inset 0 2px 0 var(--accent)}
-main{padding:22px 0 60px}
-.note{color:var(--muted);font-size:13px;margin:0 0 18px;max-width:70ch}
-h2{font-weight:700;font-size:16px;letter-spacing:.12em;
-  text-transform:uppercase;margin:26px 0 10px;color:var(--chalk)}
-h2:first-of-type{margin-top:0}
-table{width:100%;border-collapse:collapse;font-size:14px}
-th{font-weight:500;font-size:11px;
-  letter-spacing:.12em;text-transform:uppercase;color:var(--muted);
-  text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);
-  white-space:nowrap;background:var(--field)}
-td{padding:9px 10px;border-bottom:1px solid rgba(36,64,92,.5)}
-tbody tr:hover{background:var(--panel)}
-.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
-.team{font-weight:500}
-.fav{color:var(--accent)}
-.date{color:var(--muted);font-size:13px}
-.pos{color:var(--gain)} .neg{color:var(--loss)}
-.pill{display:inline-block;padding:1px 7px;border-radius:99px;font-size:10px;
-  letter-spacing:.08em;text-transform:uppercase;background:var(--panel-2);
-  color:var(--muted)}
-.board{display:none}
-.game{background:var(--panel);border:1px solid var(--line);border-radius:10px;
-  margin:0 0 10px;overflow:hidden}
-.game .kick{padding:7px 12px;background:var(--panel-2);font-size:11px;
-  letter-spacing:.08em;color:var(--muted);
-  display:flex;justify-content:space-between;align-items:center}
-.game .side{display:flex;justify-content:space-between;align-items:center;
-  padding:10px 12px}
-.game .side + .side{border-top:1px solid rgba(36,64,92,.6)}
-.game .side .nm{font-weight:500;font-size:14px}
-.game .side .sc{font-weight:700;font-size:26px;line-height:1;
-  font-variant-numeric:tabular-nums;letter-spacing:-.02em}
-.game .side.win .sc{color:var(--accent)}
-.game .foot{padding:7px 12px;border-top:1px solid rgba(36,64,92,.6);
-  font-size:11px;color:var(--muted);display:flex;gap:14px;
-  letter-spacing:.06em}
-/* ---- bet cards: the mobile form of the Dashboard and Market tables ----
-   Those tables are 12-16 columns wide. Horizontal scrolling works but you
-   cannot compare two bets that way, so on a phone each row becomes a block.
-   Hidden by default and switched on in the 760px query, mirroring .board. */
-.betboard{display:none}
-.bet{background:var(--panel);border:1px solid var(--line);border-radius:10px;
-  margin:0 0 10px;overflow:hidden}
-.bet .top{padding:8px 12px;background:var(--panel-2);display:flex;
-  justify-content:space-between;align-items:center;gap:10px}
-.bet .top .gm{font-weight:500;font-size:13px}
-.bet .top .pr{font-variant-numeric:tabular-nums;font-weight:700;font-size:15px}
-.bet .pick{padding:9px 12px;display:flex;justify-content:space-between;
-  align-items:baseline;gap:10px;border-bottom:1px solid rgba(36,64,92,.6)}
-.bet .pick .who{font-weight:700;font-size:15px;letter-spacing:.02em}
-.bet .pick .ev{font-weight:700;font-size:19px;font-variant-numeric:tabular-nums}
-/* The window grid is the whole point of the card: seven small cells, each a
-   window and its EV, so the spread across windows is visible at a glance
-   without scrolling anything. */
-.bet .wins{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
-  background:rgba(36,64,92,.6)}
-.bet .wins div{background:var(--panel);padding:6px 4px;text-align:center}
-/* Each cell is also this card's window selector, so it needs to look
-   pressable and show which one is active. */
-.bet .wins .wc{cursor:pointer;touch-action:manipulation;
-  box-shadow:inset 0 0 0 0 var(--accent);transition:box-shadow .12s}
-.bet .wins .wc.on{background:var(--panel-2);
-  box-shadow:inset 0 0 0 1px var(--accent)}
-.bet .wins .wc.on .w{color:var(--accent)}
-.bet .wins .w{font-size:9px;letter-spacing:.08em;text-transform:uppercase;
-  color:var(--muted);display:block}
-.bet .wins .e{font-size:12px;font-weight:700;font-variant-numeric:tabular-nums;
-  display:block;margin-top:2px}
-.bet .wins .p{font-size:10px;color:var(--muted);display:block}
-.bet .foot{padding:7px 12px;font-size:11px;color:var(--muted);display:flex;
-  flex-wrap:wrap;gap:12px;letter-spacing:.06em;
-  border-top:1px solid rgba(36,64,92,.6)}
-.bet .foot b{color:var(--chalk);font-weight:500}
-/* ---- window selector ----
-   Market carries per-window Fair / Edge / Model win, which cannot all be
-   columns at once. Every window's value ships in the HTML as a [data-w]
-   span and the selector just sets data-win on the container; the rules that
-   do the showing are generated per window in site_all.py, because only it
-   knows the window labels. */
-.wsel{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:0 0 12px}
-.wsel .lb{font-size:10px;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--muted);margin-right:2px}
-.wsel button{background:var(--panel);color:var(--muted);border:1px solid var(--line);
-  border-radius:99px;padding:5px 11px;font-family:inherit;font-size:12px;
-  cursor:pointer;touch-action:manipulation}
-.wsel button:hover{color:var(--chalk)}
-.wsel button.on{background:var(--panel-2);color:var(--accent);
-  border-color:var(--accent)}
-@media(max-width:760px){
-  .tbl{display:none}
-  .board{display:block}
-  /* A bet table wrapped in .betscroll gives way to its card board. The
-     sortbar and the swipe hint go with it - both are table affordances. */
-  .betscroll{display:none}
-  .betboard{display:block}
-  .betscroll + .sortbar,.betscroll .swipe{display:none}
-  .wrap{padding:0 12px}
-}
-th[data-t]{cursor:pointer;user-select:none;position:relative;
-  touch-action:manipulation}
-th[data-t]:hover{color:var(--chalk)}
-th[data-t]:active{color:var(--accent)}
-th[data-t]::after{content:"";opacity:.35;margin-left:6px;font-size:10px}
-th[data-t][data-dir="asc"]::after{content:"\2191";opacity:1;color:var(--accent)}
-th[data-t][data-dir="desc"]::after{content:"\2193";opacity:1;color:var(--accent)}
-th[data-t]:not([data-dir])::after{content:"\2195"}
-/* Rank badge for a multi-key sort. Only drawn from the second key on: a
-   lone "1" on a single-column sort is noise, and that is the common case. */
-th[data-t][data-rank]::before{content:attr(data-rank);font-size:9px;
-  color:var(--accent);opacity:.85;margin-right:4px;vertical-align:super}
-.sortbar{color:var(--muted);font-size:12px;margin:0 0 8px;min-height:16px;
-  display:flex;flex-wrap:wrap;gap:6px;align-items:center}
-.sortbar .key{color:var(--accent);cursor:pointer;padding:3px 4px 3px 7px;
-  border:1px solid var(--line);border-radius:4px;white-space:nowrap;
-  touch-action:manipulation}
-.sortbar .key:hover{border-color:var(--accent)}
-.sortbar .key .x{display:inline-block;margin-left:5px;padding:0 4px;
-  color:var(--muted);font-size:13px;line-height:1}
-.sortbar .key .x:hover{color:var(--chalk)}
-.sortbar .clr{color:var(--muted);cursor:pointer;padding:3px 6px;
-  border-bottom:1px dotted var(--line);touch-action:manipulation}
-.sortbar .clr:hover{color:var(--chalk)}
-.sortbar .clr.on{color:var(--accent);border-bottom-style:solid}
-.tools{display:flex;gap:8px;align-items:center;margin:0 0 14px}
-.tools input{flex:1;background:var(--panel);color:var(--chalk);
-  border:1px solid var(--line);border-radius:6px;padding:9px 11px;
-  font-family:inherit;font-size:13px}
-.tools input::placeholder{color:var(--muted)}
-.tools .count{font-size:11px;color:var(--muted);letter-spacing:.08em;
-  white-space:nowrap}
-tr.row{cursor:pointer}
-tr.row td:first-child{position:relative;padding-left:22px}
-tr.row td:first-child::before{content:"\203A";position:absolute;left:8px;
-  color:var(--muted);transition:transform .12s;display:inline-block}
-tr.row.open td:first-child::before{transform:rotate(90deg);color:var(--accent)}
-tr.det{display:none}
-tr.det.show{display:table-row}
-tr.det > td{background:var(--panel);padding:14px 16px}
-.mx{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.mx h4{margin:0 0 8px;font-size:12px;letter-spacing:.12em;
-  text-transform:uppercase;color:var(--accent);font-weight:500}
-.mx table{font-size:12px}
-.mx td{padding:3px 6px;border:0}
-.mx .k{color:var(--muted)}
-.mx .v{text-align:right;font-variant-numeric:tabular-nums}
-table.wingrid{font-size:12px;margin-top:4px}
-table.wingrid th{padding:4px 8px;background:transparent;border-bottom:1px solid var(--line)}
-table.wingrid th.v{text-align:right}
-table.wingrid td{padding:4px 8px;border-bottom:1px solid rgba(36,64,92,.35)}
-table.wingrid td.k{color:var(--muted);text-align:left;white-space:nowrap}
-table.wingrid td.v{text-align:right;font-variant-numeric:tabular-nums}
-table.wingrid tr.shared td{color:var(--muted)}
-table.wingrid tr.shared td.v{color:var(--chalk)}
-.game .det2{display:none;padding:12px;border-top:1px solid var(--line);
-  background:var(--panel-2)}
-.game.open .det2{display:block}
-.game .kick{cursor:pointer}
-@media(max-width:760px){.mx{grid-template-columns:1fr}}
-/* Wide tables scroll sideways instead of being clipped. The first column is
-   pinned so the team name stays visible while the numbers move under it -
-   without that, a horizontally scrolled row is unreadable. */
-.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;
-  scrollbar-width:thin;scrollbar-color:var(--line) transparent}
-.scroll > table{min-width:max-content}
-.scroll::-webkit-scrollbar{height:6px}
-.scroll::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}
-.pin th:first-child,.pin td:first-child{position:sticky;left:0;z-index:2;
-  background:var(--field)}
-.pin tbody tr:hover td:first-child{background:var(--panel)}
-tr.det .pin th:first-child,tr.det .pin td:first-child,
-.det2 .pin th:first-child,.det2 .pin td:first-child{background:var(--panel)}
-.det2 .pin th:first-child,.det2 .pin td:first-child{background:var(--panel-2)}
-.scroll{max-width:100%}
-.wingrid.pin td.k,.wingrid.pin th.k{position:sticky;left:0;z-index:2;
-  background:var(--panel);min-width:104px}
-.det2 .wingrid.pin td.k,.det2 .wingrid.pin th.k{background:var(--panel-2)}
-.wingrid th.v,.wingrid td.v{min-width:56px}
-/* The dashboard is a single slate, so every Date cell holds the same string.
-   Pinning it - which is what .pin does by default - locks the one column
-   that carries no per-row information and lets the matchup scroll away.
-   Release Date and pin Game in its place, at every width. Date still
-   scrolls, passing under the pinned cell, which is why Game needs its own
-   background and a z-index above it.
+body{margin:0;background:var(--field);color:var(--ink);
+     font-family:"Roboto Mono",ui-monospace,monospace;font-size:13px;
+     -webkit-text-size-adjust:100%}
+header{position:sticky;top:0;z-index:20;background:var(--field);
+       border-bottom:1px solid var(--line)}
+.legend{display:flex;font-size:11px;font-weight:500}
+.legend div{flex:1;text-align:center;padding:4px 2px;color:#0A1518}
+.bar{display:flex;justify-content:flex-end;align-items:baseline;
+     gap:10px;padding:6px 14px}
+.bar h1{margin:0;font-size:15px;font-weight:700;color:var(--chalk);letter-spacing:.5px}
+.bar .meta{font-size:11px;color:var(--dim);text-align:right}
 
-   nth-child(2), not :first-child - the Date column stays in the DOM (the
-   sort handler indexes cells positionally via cells[k.i], so removing or
-   hiding it structurally would break sorting on everything to its right). */
-.dash th:first-child,.dash td:first-child{position:static}
-.dash th:nth-child(2),.dash td:nth-child(2){position:sticky;left:0;z-index:2;
-  background:var(--field);box-shadow:1px 0 0 var(--line)}
-.dash tbody tr:hover td:nth-child(2){background:var(--panel)}
-.det2 .dash th:nth-child(2),.det2 .dash td:nth-child(2){background:var(--panel-2)}
-@media(max-width:760px){
-  th[data-t]{padding:11px 10px}   /* larger tap target for sorting */
-  tr.det > td{padding:12px 10px}
-  .mx{gap:12px}
-  .wingrid{font-size:11px}
-  .wingrid th,.wingrid td{padding:4px 6px}
-  /* On a phone the repeated date is not just redundant, it costs ~90px of a
-     ~380px viewport. Desktop has the room, so it keeps it. */
-  .dash th:first-child,.dash td:first-child{display:none}
+/* shared bits */
+.team{color:var(--chalk);font-weight:500}
+.pit{color:var(--dim);font-size:10px;line-height:1.35}
+.run{color:var(--m10);font-weight:700;font-size:16px;line-height:1.1}
+.st{font-size:10px;color:var(--dim)}
+.st.live{color:var(--m5);font-weight:500}
+.st.warm{color:var(--m10)}
+.st.fin{color:var(--m10);font-weight:700}
+/* Possession dot, in the same amber as the live clock so the two read as one
+   piece of live state. */
+.ball{color:var(--m5);width:13px;height:8px;margin-right:5px;
+      vertical-align:baseline;flex:0 0 auto}
+/* Same colour as the game time above it -- the drive line is context, not an
+   alert, so the RZ badge carries the emphasis instead of the whole string. */
+.drv{font-size:10px;color:var(--m5);line-height:1.3;white-space:nowrap}
+.lp{font-size:10px;color:var(--m5);line-height:1.35;white-space:nowrap}
+.wp{font-size:10px;color:var(--m10);line-height:1.35;white-space:nowrap}
+/* A pitching change is the one live event that reliably moves a total. */
+.chg{background:var(--m2);color:#04161A;border-radius:3px;padding:0 3px;
+     margin-right:4px;font-size:9px;font-weight:700}
+/* Red fill with a yellow outline: a started game already has a dark red row
+   background, so red-on-red needs the border to separate it. The outline
+   clears 6:1 against both the red row and the normal panel. */
+.rzb{display:inline-block;background:#D93A38;color:#FFFFFF;
+     border:1px solid var(--m5);border-radius:3px;
+     padding:0 3px;margin-right:4px;font-size:9px;font-weight:700;
+     letter-spacing:.5px;vertical-align:1px}
+.rank{color:var(--m5);font-size:10px;font-weight:700;margin-right:3px;
+      vertical-align:top}
+.neu{display:inline-block;margin-top:3px;font-size:10px;font-weight:700;
+     letter-spacing:.5px;color:#04161A;background:var(--m10);
+     border-radius:3px;padding:1px 5px}
+.side{color:var(--dim);font-size:11px;display:inline-block;min-width:36px;
+      max-width:92px;text-align:left;overflow:hidden;text-overflow:ellipsis;
+      white-space:nowrap;vertical-align:bottom}
+/* Highlight chip. The colour is !important on purpose: .mv is a state class
+   that has to win over whatever text colour the surrounding cell sets, and
+   relying on declaration order broke once already (pale ink on yellow at
+   1.3:1). Near-black rather than pure black -- softer on an always-on
+   monitor, still 12:1+ against every band. */
+.mv{border-radius:3px;padding:1px 5px;font-weight:700;
+    color:#04161A !important;text-shadow:none}
+.mv2{background:var(--m2)!important}
+.mv5{background:var(--m5)!important}
+.mv10{background:var(--m10)!important}
+/* The trailing dot sits outside the chip, so it keeps card colour. */
+.mv+.dot{color:var(--m10)}
+.dot{color:var(--m10);font-size:10px;margin-left:3px}
+.tabs{display:flex;gap:0;border-bottom:1px solid var(--line);
+      overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tabs button{flex:0 0 auto;background:none;border:0;border-bottom:2px solid transparent;
+  color:var(--dim);font-family:inherit;font-size:13px;font-weight:500;
+  letter-spacing:.5px;padding:9px 18px;cursor:pointer;white-space:nowrap}
+.tabs button:hover{color:var(--ink)}
+.tabs button.on{color:var(--chalk);border-bottom-color:var(--m10)}
+.tabs .n{color:var(--dim);font-weight:400;margin-left:6px;font-size:11px}
+.tabs button.on .n{color:var(--m10)}
+.boxable{cursor:pointer}
+.boxable:hover{outline:1px solid var(--m10);outline-offset:-1px}
+table.box{width:auto;border-collapse:collapse;font-size:11px;margin-bottom:6px}
+table.box th{position:static;background:none;border:0;padding:2px 7px;
+             color:var(--dim);font-weight:500;text-align:right;font-size:10px}
+table.box td{border:0;padding:2px 7px;text-align:right;background:none;
+             color:var(--ink)}
+table.box .bt{text-align:left;color:var(--chalk);font-weight:500;padding-right:14px}
+table.box .tot{color:var(--m10);font-weight:700}
+/* Stacked rather than a single row: three leaders side by side overflow the
+   panel and get clipped at the right edge. */
+.leads{display:flex;flex-direction:column;gap:3px;margin-top:6px;
+       white-space:normal}
+.lead{font-size:10px;display:flex;gap:8px;align-items:baseline}
+.lcat{color:var(--dim);flex:0 0 34px}
+.lwho{color:var(--chalk);flex:0 0 auto}
+.lval{color:var(--ink);flex:1;min-width:0}
+.lcat{color:var(--dim);margin-right:6px}
+.lwho{color:var(--chalk);margin-right:6px}
+.lval{color:var(--ink)}
+.bmsg{color:var(--dim);font-size:11px}
+.empty{padding:40px;text-align:center;color:var(--dim)}
+
+/* ── desktop table ───────────────────────────────────────────── */
+table{width:100%;border-collapse:collapse}
+thead th{position:sticky;top:52px;background:var(--panel2);color:var(--dim);
+         font-size:11px;font-weight:500;text-align:center;padding:5px 6px;
+         border-bottom:1px solid var(--line);white-space:nowrap}
+thead th.l{text-align:left}
+td{padding:3px 6px;border-bottom:1px solid rgba(29,58,68,.5);
+   text-align:center;white-space:nowrap;vertical-align:top}
+td.l{text-align:left}
+/* One team per line. Previously both were inline-block, so with no pitcher
+   between them -- football has none -- they ran together on a single row. */
+td.l .trow{display:flex;justify-content:space-between;align-items:center;
+           gap:10px;white-space:normal;line-height:1.3;max-width:250px}
+td.l .tname{flex:1;min-width:0}
+td.l .run{flex:0 0 auto;text-align:right}
+td.l .team{white-space:normal}
+td.l .rank{vertical-align:baseline}
+tr.g0{background:var(--panel)} tr.g1{background:var(--panel2)}
+tr.started td{background:var(--live)}
+tr.slate td{background:var(--field);color:var(--chalk);font-weight:700;
+            font-size:12px;letter-spacing:1px;text-align:left;
+            padding:8px 14px 5px;border-bottom:1px solid var(--line)}
+td.hot{cursor:pointer}
+td.hot:hover{outline:1px solid var(--m10);outline-offset:-1px}
+td.sel{outline:1px solid var(--chalk);outline-offset:-1px}
+.time{color:var(--dim);font-size:11px}
+.open{color:var(--dim)}
+/* Opening price, shown under the current one on sides that moved. */
+.opn{color:var(--dim);font-size:10px;line-height:1.3;opacity:.75}
+/* Book tags. Fixed width so prices align into a column regardless of tag. */
+.bk{display:inline-block;min-width:26px;font-size:10px;font-weight:700;
+    letter-spacing:.5px;vertical-align:baseline}
+.bk.bol{color:var(--dim)}
+.bk.k{color:#6FB4E0}
+/* Exchange price at the SAME size and weight as the book price -- only the
+   colour differs, so it reads as a peer rather than a footnote. */
+.arow{line-height:1.5}
+.altp{color:#8FC7E8}
+.cur{color:var(--ink)}
+tr.det td{background:#061014;padding:0;text-align:left}
+.dwrap{padding:10px 16px;white-space:normal}
+.dhead{color:var(--chalk);font-weight:500;margin-bottom:6px;font-size:12px}
+.dwrap table{width:auto;min-width:340px}
+.dwrap td{border:0;padding:2px 18px 2px 0;font-size:11px;background:none}
+.dts{color:var(--dim)}
+.dnow{color:var(--m10)}
+
+/* ── mobile cards ────────────────────────────────────────────── */
+#cards{display:none;padding:8px}
+.slab{color:var(--chalk);font-weight:700;font-size:12px;letter-spacing:1px;
+      padding:10px 4px 6px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:6px;
+      margin-bottom:8px;overflow:hidden}
+.card.started{background:var(--live)}
+.chead{display:flex;justify-content:space-between;align-items:flex-start;
+       gap:8px;padding:8px 10px;border-bottom:1px solid var(--line)}
+.chead > div:first-child{flex:1;min-width:0}
+.crow{display:flex;align-items:center;gap:10px;line-height:1.5}
+.crow .tname{flex:0 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;
+             white-space:nowrap}
+.crow .run{flex:0 0 auto;margin-left:2px}
+.cstat{margin-top:3px}
+.cmeta{text-align:right;font-size:11px;color:var(--dim);white-space:nowrap}
+.mkts{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+      gap:1px;background:var(--line)}
+.mk{background:var(--panel2);padding:6px 8px;min-height:52px;
+    min-width:0;overflow:hidden}
+.card.started .mk{background:#4A1111}
+.mk.hot{cursor:pointer}
+.mk.sel{outline:1px solid var(--chalk);outline-offset:-1px}
+.mklbl{color:var(--dim);font-size:10px;letter-spacing:.5px;margin-bottom:2px}
+.mkln{font-size:12px;line-height:1.5;white-space:nowrap;
+      overflow:hidden;text-overflow:ellipsis}
+/* Full-width row inside the two-column market grid. */
+.cpanel{grid-column:1 / -1}
+.chist{background:#061014;padding:8px 10px;overflow-x:auto;
+       -webkit-overflow-scrolling:touch}
+/* R/H/E are separated from the innings by a rule rather than pinned: three
+   sticky columns all at right:0 stack on top of each other, which is why the
+   headers vanished. */
+table.box .tot{border-left:1px solid var(--line)}
+table.box th.tot{border-left:1px solid var(--line)}
+.chist .dhead{font-size:11px}
+.chist .hrow{display:flex;justify-content:space-between;font-size:11px;
+             padding:1px 0}
+
+@media (max-width:900px){
+  table{display:none}
+  table.box{display:table}          /* not the desktop board -- keep this one */
+  #cards{display:block}
+  .legend{font-size:10px}
+  .legend div{padding:4px 1px}
+  .bar h1{font-size:14px}
+  .bar .meta{font-size:11px}
+
+  /* Phone-only type scale. Desktop keeps the denser sizes above, since the
+     table has to fit eleven columns and this layout only has two. */
+  body{font-size:15px}
+  .card .team{font-size:17px}
+  .card .run{font-size:21px}
+  .pit{font-size:12px}
+  .st{font-size:12px}
+  .drv{font-size:11px}
+  .lp,.wp{font-size:11px}
+  .rzb{font-size:10px}
+  .ball{width:15px;height:9px}
+  .cmeta{font-size:13px}
+  .slab{font-size:14px}
+  .mklbl{font-size:12px}
+  .mkln{font-size:14px}
+  .opn{font-size:11px}
+  .bk{font-size:11px;min-width:28px}
+  .side{font-size:13px;min-width:44px}
+  @media (max-width:400px){
+    .mkln{font-size:13px}
+    .side{min-width:38px;max-width:74px;font-size:12px}
+  }
+  .chist .dhead{font-size:13px}
+  .chist .hrow{font-size:13px;padding:2px 0}
+  .mk{padding:8px 8px;min-height:64px}
 }
-.swipe{display:none;font-size:10px;letter-spacing:.1em;text-transform:uppercase;
-  color:var(--muted);margin:0 0 4px}
-@media(max-width:760px){.swipe{display:block}}
-.sorter{display:none;margin:0 0 12px;gap:8px;align-items:center}
-.sorter label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--muted)}
-.sorter select{background:var(--panel);color:var(--chalk);
-  border:1px solid var(--line);border-radius:6px;padding:7px 9px;
-  font-family:inherit;font-size:13px;flex:1}
-.sorter button{background:var(--panel);color:var(--chalk);
-  border:1px solid var(--line);border-radius:6px;padding:7px 11px;
-  font-family:inherit;font-size:13px;cursor:pointer}
-@media(max-width:760px){.sorter{display:flex}}
-.prose{max-width:78ch}
-.prose h3{font-size:14px;letter-spacing:.1em;text-transform:uppercase;
-  margin:28px 0 8px;color:var(--accent);font-weight:500}
-.prose p{margin:0 0 12px;color:#C4D2DF}
-.prose code{background:var(--panel);padding:1px 5px;border-radius:4px;
-  font-size:12px;color:var(--chalk)}
-.prose ul{margin:0 0 14px;padding-left:18px;color:#C4D2DF}
-.prose li{margin:0 0 6px}
-.toc{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 20px}
-.toc a{background:var(--panel);border:1px solid var(--line);border-radius:6px;
-  padding:5px 10px;font-size:12px;color:var(--chalk)}
-.toc a:hover{border-color:var(--accent)}
-.hit{color:var(--gain)} .miss{color:var(--loss)}
-.big{display:flex;gap:22px;flex-wrap:wrap;margin:0 0 20px}
-.big div{background:var(--panel);border:1px solid var(--line);
-  border-radius:8px;padding:12px 16px;min-width:120px}
-.big .n{font-size:24px;font-weight:700;font-variant-numeric:tabular-nums}
-.big .l{font-size:11px;letter-spacing:.1em;text-transform:uppercase;
-  color:var(--muted);margin-top:2px}
-footer{border-top:1px solid var(--line);color:var(--muted);font-size:12px;
-  padding:16px 0 40px}
-header .wrap{position:relative}
-.portal{position:absolute;right:16px;bottom:9px;
-  display:inline-flex;align-items:center;gap:7px;
-  background:#3FD0C9;color:#08161B;
-  font-family:inherit;font-size:12px;font-weight:700;
-  letter-spacing:.12em;text-transform:uppercase;
-  padding:8px 14px;border-radius:8px;white-space:nowrap;
-  box-shadow:0 3px 14px rgba(63,208,201,.30),0 1px 0 rgba(255,255,255,.10);
-  transition:transform .12s,box-shadow .12s,filter .12s}
-.portal:hover{color:#08161B;transform:translateY(-2px);filter:brightness(1.08);
-  box-shadow:0 6px 20px rgba(63,208,201,.42),0 1px 0 rgba(255,255,255,.14)}
-.portal:active{transform:translateY(0)}
-.portal:focus-visible{outline:2px solid var(--chalk);outline-offset:3px}
-.portal .ar{font-size:13px;line-height:1}
-@media(min-width:761px){.brand{padding-right:170px;flex-wrap:wrap}}
-@media(max-width:760px){
-  .portal{position:static;margin:10px 0 2px;font-size:11px;padding:7px 12px}
-}
-</style></head>
-<body><header><div class="wrap">
-<div class="brand"><h1>MLB Projections</h1>
-<span class="stamp">MLB &middot; built Sep 10, 2026 06:53</span></div>
-<nav><a href="index.html" class="on">Dashboard</a><a href="games.html" class="">Games</a><a href="form.html" class="">Form</a><a href="ev.html" class="">Market</a><a href="tracking.html" class="">Tracking</a><a href="teams.html" class="">Teams</a><a href="about.html" class="">About</a></nav>
-<a class="portal" href="https://volanalytics.github.io/Portal/"><span class="ar">&#8592;</span> All Models</a>
-</div></header>
-<main><div class="wrap"><style>[data-win] [data-w]{display:none}[data-win='season'] [data-w='season']{display:inline}[data-win='l30d'] [data-w='l30d']{display:inline}[data-win='l14d'] [data-w='l14d']{display:inline}[data-win='l7d'] [data-w='l7d']{display:inline}[data-win='l15g'] [data-w='l15g']{display:inline}[data-win='l7g'] [data-w='l7g']{display:inline}[data-win='l3g'] [data-w='l3g']{display:inline}.bet[data-win] [data-w]{display:none}.bet[data-win='season'] [data-w='season']{display:inline}.bet[data-win='l30d'] [data-w='l30d']{display:inline}.bet[data-win='l14d'] [data-w='l14d']{display:inline}.bet[data-win='l7d'] [data-w='l7d']{display:inline}.bet[data-win='l15g'] [data-w='l15g']{display:inline}.bet[data-win='l7g'] [data-w='l7g']{display:inline}.bet[data-win='l3g'] [data-w='l3g']{display:inline}</style><h2>Scored record</h2><div class='scroll'><table class='pin'><thead><tr><th data-t='txt'>Model</th><th class='num' data-t='num'>Games</th><th class='num' data-t='num'>Bias</th><th class='num' data-t='num'>MAE</th><th class='num' data-t='num'>Called</th></tr></thead><tbody><tr><td class='team'>Season</td><td class='num'>299</td><td class='num'>-0.17</td><td class='num'>3.65</td><td class='num'>50%</td></tr><tr><td class='team'>L30d</td><td class='num'>152</td><td class='num'>-0.79</td><td class='num'>3.59</td><td class='num'>46%</td></tr><tr><td class='team'>L14d</td><td class='num'>152</td><td class='num'>-0.78</td><td class='num'>3.57</td><td class='num'>56%</td></tr><tr><td class='team'>L7d</td><td class='num'>152</td><td class='num'>-0.70</td><td class='num'>3.59</td><td class='num'>47%</td></tr><tr><td class='team'>L15g</td><td class='num'>168</td><td class='num'>-0.72</td><td class='num'>3.56</td><td class='num'>50%</td></tr><tr><td class='team'>L7g</td><td class='num'>168</td><td class='num'>-0.72</td><td class='num'>3.58</td><td class='num'>49%</td></tr><tr><td class='team'>L3g</td><td class='num'>168</td><td class='num'>-0.69</td><td class='num'>3.55</td><td class='num'>52%</td></tr></tbody></table></div><h2>Every priced bet</h2><div class='tools'><input id='q' type='search' placeholder='Filter by team, pick, or market…' autocomplete='off'><span class='count' id='qn'></span></div><div class='betscroll'><div class='swipe'>swipe for more columns &rarr;</div><div class='scroll'><table class='pin dash'><thead><tr><th data-t='num'>Date</th><th data-t='txt'>Game</th><th data-t='txt'>Mkt</th><th data-t='txt'>Pick</th><th class='num' data-t='num'>Price</th><th class='num' data-t='num'>Season</th><th class='num' data-t='num'>L30d</th><th class='num' data-t='num'>L14d</th><th class='num' data-t='num'>L7d</th><th class='num' data-t='num'>L15g</th><th class='num' data-t='num'>L7g</th><th class='num' data-t='num'>L3g</th><th class='num' data-t='num'>Spread</th><th class='num' data-t='num'>Agree</th></tr></thead><tbody><tr><td class='date' data-v='20260910'>2026-09-10</td><td>TEX @ SEA</td><td><span class='pill'>moneyline</span></td><td class='team'>TEX</td><td class='num'>+111</td><td class='num' data-v='2.7992'><span class='pos'>+2.8%</span><br><span style='color:var(--muted);font-size:11px'>48.7</span></td><td class='num' data-v='8.8866'><span class='pos'>+8.9%</span><br><span style='color:var(--muted);font-size:11px'>51.6</span></td><td class='num' data-v='21.7048'><span class='pos'>+21.7%</span><br><span style='color:var(--muted);font-size:11px'>57.7</span></td><td class='num' data-v='15.9129'><span class='pos'>+15.9%</span><br><span style='color:var(--muted);font-size:11px'>54.9</span></td><td class='num' data-v='-4.2482'><span class='neg'>-4.2%</span><br><span style='color:var(--muted);font-size:11px'>45.4</span></td><td class='num' data-v='-5.1977'><span class='neg'>-5.2%</span><br><span style='color:var(--muted);font-size:11px'>44.9</span></td><td class='num' data-v='-8.1517'><span class='neg'>-8.2%</span><br><span style='color:var(--muted);font-size:11px'>43.5</span></td><td class='num' data-v='29.86'>29.9</td><td class='num' data-v='4' style='white-space:nowrap'>4/7<br><span style='color:var(--muted);font-size:11px'>4/4c 0/3g</span><span class='pill'>opposed</span></td></tr><tr><td class='date' data-v='20260910'>2026-09-10</td><td>PIT @ CWS</td><td><span class='pill'>moneyline</span></td><td class='team'>PIT</td><td class='num'>-103</td><td class='num' data-v='12.7340'><span class='pos'>+12.7%</span><br><span style='color:var(--muted);font-size:11px'>57.2</span></td><td class='num' data-v='3.5990'><span class='pos'>+3.6%</span><br><span style='color:var(--muted);font-size:11px'>52.6</span></td><td class='num' data-v='13.5519'><span class='pos'>+13.6%</span><br><span style='color:var(--muted);font-size:11px'>57.6</span></td><td class='num' data-v='14.9217'><span class='pos'>+14.9%</span><br><span style='color:var(--muted);font-size:11px'>58.3</span></td><td class='num' data-v='-8.1376'><span class='neg'>-8.1%</span><br><span style='color:var(--muted);font-size:11px'>46.6</span></td><td class='num' data-v='-13.0845'><span class='neg'>-13.1%</span><br><span style='color:var(--muted);font-size:11px'>44.1</span></td><td class='num' data-v='-6.1470'><span class='neg'>-6.1%</span><br><span style='color:var(--muted);font-size:11px'>47.6</span></td><td class='num' data-v='28.01'>28.0</td><td class='num' data-v='4' style='white-space:nowrap'>4/7<br><span style='color:var(--muted);font-size:11px'>4/4c 0/3g</span><span class='pill'>opposed</span></td></tr><tr><td class='date' data-v='20260910'>2026-09-10</td><td>PIT @ CWS</td><td><span class='pill'>moneyline</span></td><td class='team'>CWS</td><td class='num'>-107</td><td class='num' data-v='-17.2000'><span class='neg'>-17.2%</span><br><span style='color:var(--muted);font-size:11px'>42.8</span></td><td class='num' data-v='-8.2332'><span class='neg'>-8.2%</span><br><span style='color:var(--muted);font-size:11px'>47.4</span></td><td class='num' data-v='-18.0029'><span class='neg'>-18.0%</span><br><span style='color:var(--muted);font-size:11px'>42.4</span></td><td class='num' data-v='-19.3474'><span class='neg'>-19.3%</span><br><span style='color:var(--muted);font-size:11px'>41.7</span></td><td class='num' data-v='3.2872'><span class='pos'>+3.3%</span><br><span style='color:var(--muted);font-size:11px'>53.4</span></td><td class='num' data-v='8.1430'><span class='pos'>+8.1%</span><br><span style='color:var(--muted);font-size:11px'>55.9</span></td><td class='num' data-v='1.3333'><span class='pos'>+1.3%</span><br><span style='color:var(--muted);font-size:11px'>52.4</span></td><td class='num' data-v='27.49'>27.5</td><td class='num' data-v='3' style='white-space:nowrap'>3/7<br><span style='color:var(--muted);font-size:11px'>0/4c 3/3g</span><span class='pill'>opposed</span></td></tr><tr><td class='date' data-v='20260910'>2026-09-10</td><td>TEX @ SEA</td><td><span class='pill'>moneyline</span></td><td class='team'>SEA</td><td class='num'>-122</td><td class='num' data-v='-6.6872'><span class='neg'>-6.7%</span><br><span style='color:var(--muted);font-size:11px'>51.3</span></td><td class='num' data-v='-11.9370'><span class='neg'>-11.9%</span><br><span style='color:var(--muted);font-size:11px'>48.4</span></td><td class='num' data-v='-22.9915'><span class='neg'>-23.0%</span><br><span style='color:var(--muted);font-size:11px'>42.3</span></td><td class='num' data-v='-17.9965'><span class='neg'>-18.0%</span><br><span style='color:var(--muted);font-size:11px'>45.1</span></td><td class='num' data-v='-0.6095'><span class='neg'>-0.6%</span><br><span style='color:var(--muted);font-size:11px'>54.6</span></td><td class='num' data-v='0.2093'><span class='pos'>+0.2%</span><br><span style='color:var(--muted);font-size:11px'>55.1</span></td><td class='num' data-v='2.7569'><span class='pos'>+2.8%</span><br><span style='color:var(--muted);font-size:11px'>56.5</span></td><td class='num' data-v='25.75'>25.7</td><td class='num' data-v='2' style='white-space:nowrap'>2/7<br><span style='color:var(--muted);font-size:11px'>0/4c 2/3g</span><span class='pill'>split</span></td></tr><tr><td class='date' data-v='20260910'>2026-09-10</td><td>COL @ NYY</td><td><span class='pill'>moneyline</span></td><td class='team'>COL</td><td class='num'>+277</td><td class='num' data-v='32.9868'><span class='pos'>+33.0%</span><br><span style='color:var(--muted);font-size:11px'>35.3</span></td><td class='num' data-v='42.4683'><span class='pos'>+42.5%</span><br><span style='color:var(--muted);font-size:11px'>37.8</span></td><td class='num' data-v='47.0300'><span class='pos'>+47.0%</span><br><span style='color:var(--muted);font-size:11px'>39.0</span></td><td class='num' data-v='46.2948'><span class='pos'>+46.3%</span><br><span style='color:var(--muted);font-size:11px'>38.8</span></td><td class='num' data-v='28.4439'><span class='pos'>+28.4%</span><br><span style='color:var(--muted);font-size:11px'>34.1</span></td><td class='num' data-v='29.5749'><span class='pos'>+29.6%</span><br><span style='color:var(--muted);font-size:11px'>34.4</span></td><td class='num' data-v='21.4317'><span class='pos'>+21.4%</span><br><span style='color:var(--muted);font-size:11px'>32.2</span></td><td class='num' data-v='25.60'>25.6</td><td class='num' data-v='7' style='white-space:nowrap'>7/7<br><span style='color:var(--muted);font-size:11px'>4/4c 3/3g</span></td></tr><tr><td class='date' data-v='20260910'>2026-09-10</td><td>TB @ ATL</td><td><span class='pill'>moneyline</span></td><td class='team'>TB</td><td class='num'>+104</td><td class='num' data-v='15.6680'><span class='pos'>+15.7%</span><br><span style='color:var(--muted);font-size:11px'>56.7</span></td><td class='num' data-v='30.6518'><span class='pos'>+30.7%</span><br><span style='color:var(--muted);font-size:11px'>64.0</span></td><td class='num' data-v='23.9606'><span class='pos'>+24.0%</span><br><span style='color:var(--muted);font-size:11px'>60.8</span></td><td class='num' data-v='20.1968'><span class='pos'>+20.2%</span><br><span style='color:var(--muted);font-size:11px'>58.9</span></td><td class='num' data-v='6.6104'><span class='pos'>+6.6%</span><br><span style='color:var(--muted);font-size:11px'>52.3</span></td><td class='num' data-v='11.9348'><span class='pos'>+11.9%</span><br><span style='color:var(--muted);font-size:11px'>54.9</span></td><td class='num' data-v='12.8528'><span class='pos'>+12.9%</span><br><span style='color:var(--muted);font-size:11px'>55.3</span></td><td class='num' data-v='24.04'>24.0</td><td class='num' data-v='7' style='white-space:nowrap'>7/7<br><span style='color:var(--muted);font-size:11px'>4/4c 3/3g</span></td></tr><tr><td class='date' data-v='20260910'>2026-09-10</td><td>TB @ ATL</td><td><span class='pill'>moneyline</span></td><td class='team'>ATL</td><td class='num'>-115</td><td class='num' data-v='-19.0478'><span class='neg'>-19.0%</span><br><span style='color:var(--muted);font-size:11px'>43.3</span></td><td class='num' data-v='-32.7798'><span class='neg'>-32.8%</span><br><span style='color:var(--muted);font-size:11px'>36.0</span></td><td class='num' data-v='-26.6476'><span class='neg'>-26.6%</span><br><span style='color:var(--muted);font-size:11px'>39.2</span></td><td class='num' data-v='-23.1983'><span class='neg'>-23.2%</span><br><span style='color:var(--muted);font-size:11px'>41.1</span></td><td class='num' data-v='-10.7470'><span class='neg'>-10.7%</span><br><span style='color:var(--muted);font-size:11px'>47.7</span></td><td class='num' data-v='-15.6265'><span class='neg'>-15.6%</span><br><span style='color:var(--muted);font-size:11px'>45.1</span></td><td class='num' data-v='-16.4678'><span class='neg'>-16.5%</span><br><span style='color:var(--muted);font-size:11px'>44.7</span></td><td class='num' data-v='22.03'>22.0</td><td class='num' data-v='0' style='white-space:nowrap'>0/7<br><span style='color:var(--muted);font-size:11px'>0/4c 0/3g</span></td></tr><tr><td class='date' data-v='20260910'>2026-09-10</td><td>TEX @ SEA</td><td><span class='pill'>total</span></td><td class='team'>under 6.5</td><td class='num'>-105</td><td class='num' data-v='-26.8638'><span class='neg'>-26.9%</span><br><span style='color:var(--muted);font-size:11px'>8.59</span></td><td class='num' data-v='-34.4488'><span class='neg'>-34.4%</span><br><span style='color:var(--muted);font-size:11px'>9.1</span></td><td class='num' data-v='-32.7014'><span class='neg'>-32.7%</span><br><span style='color:var(--muted);font-size:11px'>8.96</span></td><td class='num' data-v='-35.8350'><span class='neg'>-35.8%</span><br><span style='color:var(--muted);font-size:11px'>9.21</span></td><td class='num' data-v='-37.8557'><span class='neg'>-37.9%</span><br><span style='color:var(--muted);font-size:11px'>9.24</span></td><td class='num' data-v='-36.9186'><span class='neg'>-36.9%</span><br><span style='color:var(--muted);font-size:11px'>9.26</span></td><td class='num' data-v='-48.1643'><span class='neg'>-48.2%</span><br><span style='color:var(--muted);font-size:11px'>10.24</span></td><td class='num' data-v='21.30'>21.3</td><td class='num' data-v='0' style='white-space:nowrap'>0/7<br><span style='color:var(--muted);font-size:11px'>0/4c 0/3g</span></td></tr><tr><td class='date' data-v='20260910'>2026-09-10</td><td>TEX @ SEA</td><td><span class='pill'>total</span></td><td class='team'>over 6.5</td><td class='num'>-115</td><td class='num' data-v='16.9226'><span class='pos'>+16.9%</span><br><span style='color:var(--muted);font-size:11px'>8.59</span></td><td class='num' data-v='24.1859'><span class='pos'>+24.2%</span><br><span style='color:var(--muted);font-size:11px'>9.1</span></td><td class='num' data-v='22.5126'><span class='pos'>+22.5%</span><br><span style='color:var(--muted);font-size:11px'>8.96</span></td><td class='num' data-v='25.5133'><span class='pos'>+25.5%</span><br><span style='color:var(--muted);font-size:11px'>9.21</span></td><td class='num' data-v='27.4483'><span class='pos'>+27.4%</span><br><span style='color:var(--muted);font-size:11px'>9.24</span></td><td class='num' data-v='26.5509'><span class='pos'>+26.6%</span><br><span style='color:var(--muted);font-size:11px'>9.26</span></td><td class='num' data-v='37.3196'><span class='pos'>+37.3%</span><br><span style='color:var(--muted);font-size:11px'>10.24</span></td><td class='num' data-v='20.40'>20.4</td><td class='num' data-v='7' style='white-space:nowrap'>7/7<br><span style='color:var(--muted);font-size:11px'>4/4c 3/3g</span></td></tr><tr><td class='date' data-v='20260910'>2026-09-10</td><td>HOU @ PHI</td><td><span class='pill'>moneyline</span></td><td class='team'>HOU</td><td class='num'>+165</td><td class='num' data-v='28.2202'><span class='pos'>+28.2%</span><br><span style='color:var(--muted);font-size:11px'>48.4</span></td><td class='num' data-v='35.8788'><span class='pos'>+35.9%</span><br><span style='color:var(--muted);font-size:11px'>51.3</span></td><td class='num' data-v='28.2865'><span class='pos'>+28.3%</span><br><span style='color:var(--muted);font-size:11px'>48.4</span></td><td class='num' data-v='34.0370'><span class='pos'>+34.0%</span><br><span style='color:var(--muted);font-size:11px'>50.6</span></td><td class='num' data-v='17.5010'><span class='pos'>+17.5%</span><br><span style='color:var(--muted);font-size:11px'>44.3</span></td><td class='num' data-v='19.8330'><span class='pos'>+19.8%</span><br><span style='color:var(--muted);font-size:11px'>45.2</span></td><td class='num' data-v='30.0620'><span class='pos'>+30.1%</span><br><span style='color:var(--muted);font-size:11px'>49.1</span></td><td class='num' data-v='18.38'>18.4</td><td class='num' data-v='7' style='white-space:nowrap'>7/7<br><span style='color:var(--muted);font-size:11px'>4/4c 3/3g</span></td></tr><tr><td class='date' data-v='20260910'>2026-09-10</td><td>HOU @ PHI</td><td><span class='pill'>total</span></td><td class='team'>under 8.5</td><td class='num'>-104</td><td class='num' data-v='-7.6606'><span class='neg'>-7.7%</span><br><span style='color:var(--muted);font-size:11px'>9.44</span></td><td class='num' data-v='1.8627'><span class='pos'>+1.9%</span><br><span style='color:var(--muted);font-size:11px'>8.9</span></td><td class='num' data-v='9.5519'><span class='pos'>+9.6%</span><br><span style='color:var(--muted);font-size:11px'>8.42</span></td><td class='num' data-v='10.7092'><span class='pos'>+10.7%</span><br><span style='color:var(--muted);font-size:11px'>8.39</span></td><td class='num' data-v='-4.7281'><span class='neg'>-4.7%</span><br><span style='color:var(--muted);font-size:11px'>9.3</span></td><td class='num' data-v='-4.2965'><span class='neg'>-4.3%</span><br><span style='color:var(--muted);font-size:11px'>9.28</span></td><td class='num' data-v='2.0196'><span class='pos'>+2.0%</span><br><span style='color:var(--muted);font-size:11px'>8.91</span></td><td class='num' data-v='18.37'>18.4</td><td class='num' data-v='4' style='white-space:nowrap'>4/7<br><span style='color:var(--muted);font-size:11px'>3/4c 1/3g</span><span class='pill'>split</span></td></tr><tr><td class='date' data-v='20260910'>2026-09-10</td><td>HOU @ PHI</td><td><span class='pill'>total</span></td><td class='team'>over 8.5</td><td class='num'>-116</td><td class='num' data-v='-1.4500'><span class='neg'>-1.5%</span><br><span style='color:var(--muted);font-size:11px'>9.44</span></td><td class='num' data-v='-10.4903'><span class='neg'>-10.5%</span><br><span style='color:var(--muted);font-size:11px'>8.9</span></td><td class='num' data-v='-17.7897'><span class='neg'>-17.8%</span><br><span style='color:var(--muted);font-size:11px'>8.42</span></td><td class='num' data-v='-18.8883'><span class='neg'>-18.9%</span><br><span style='color:var(--muted);font-size:11px'>8.39</span></td><td class='num' data-v='-4.2338'><span class='neg'>-4.2%</span><br><span style='color:var(--muted);font-size:11px'>9.3</span></td><td class='num' data-v='-4.6434'><span class='neg'>-4.6%</span><br><span style='color:var(--muted);font-size:11px'>9.28</span></td><td class='num' data-v='-10.6393'><span class='neg'>-10.6%</span><br><span style='color:var(--muted);font-size:11px'>8.91</span></td><td class='num' data-v='17.44'>17.4</td><td class='num' data-v='0' style='white-space:nowrap'>0/7<br><span style='color:var(--muted);font-size:11px'>0/4c 0/3g</span></td></tr><tr><td class='date' data-v='20260910'>2026-09-10</td><td>PIT @ CWS</td><td><span class='pill'>total</span></td><td class='team'>under 7.5</td><td class='num'>+100</td><td class='num' data-v='-20.8000'><span class='neg'>-20.8%</span><br><span style='color:var(--muted);font-size:11px'>9.41</span></td><td class='num' data-v='-14.9300'><span class='neg'>-14.9%</span><br><span style='color:var(--muted);font-size:11px'>8.98</span></td><td class='num' data-v='-14.6000'><span class='neg'>-14.6%</span><br><span style='color:var(--muted);font-size:11px'>8.99</span></td><td class='num' data-v='-4.0900'><span class='neg'>-4.1%</span><br><span style='color:var(--muted);font-size:11px'>8.3</span></td><td class='num' data-v='-12.1200'><span class='neg'>-12.1%</span><br><span style='color:var(--muted);font-size:11px'>8.81</span></td><td class='num' data-v='-12.0200'><span class='neg'>-12.0%</span><br><span style='color:var(--muted);font-size:11px'>8.84</span></td><td class='num' data-v='-16.2600'><span class='neg'>-16.3%</span><br><span style='color:var(--muted);font-size:11px'>9.1</span></td><td class='num' data-v='16.71'>16.7</td><td class='num' data-v='0' style='white-space:nowrap'>0/7<br><span style='color:var(--muted);font-size:11px'>0/4c 0/3g</span></td></tr><tr><td class='date' data-v='20260910'>2026-09-10</td><td>PIT @ CWS</td><td><span class='pill'>total</span></td><td class='team'>over 7.5</td><td class='num'>-120</td><td class='num' data-v='10.7333'><span class='pos'>+10.7%</span><br><span style='color:var(--muted);font-size:11px'>9.41</span></td><td class='num' data-v='5.3525'><span class='pos'>+5.4%</span><br><span style='color:var(--muted);font-size:11px'>8.98</span></td><td class='num' data-v='5.0500'><span class='pos'>+5.0%</span><br><span style='color:var(--muted);font-size:11px'>8.99</span></td><td class='num' data-v='-4.5842'><span class='neg'>-4.6%</span><br><span style='color:var(--muted);font-size:11px'>8.3</span></td><td class='num' data-v='2.7767'><span class='pos'>+2.8%</span><br><span style='color:var(--muted);font-size:11px'>8.81</span></td><td class='num' data-v='2.6850'><span class='pos'>+2.7%</span><br><span style='color:var(--muted);font-size:11px'>8.84</span></td><td class='num' data-v='6.5717'><span class='pos'>+6.6%</span><br><span style='color:var(--muted);font-size:11px'>9.1</span></td><td class='num' data-v='15.32'>15.3</td><td class='num' data-v='6' style='white-space:nowrap'>6/7<br><span style='color:var(--muted);font-size:11px'>3/4c 3/3g</span><span class='pill'>split</span></td></tr><tr><td class='date' data-v='20260910'>2026-09-10</td><td>TB @ ATL</td><td><span class='pill'>total</span></td><td class='team'>over 8.5</td><td class='num'>-105</td><td class='num' data-v='-4.7726'><span class='neg'>-4.8%</span><br><span style='color:var(--muted);font-size:11px'>8.97</span></td><td class='num' data-v='-5.4462'><span class='neg'>-5.4%</span><br><span style='color:var(--muted);font-size:11px'>8.9</span></td><td class='num' data-v='-0.8776'><span class='neg'>-0.9%</span><br><span style='color:var(--muted);font-size:11px'>9.18</span></td><td class='num' data-v='-3.1229'><span class='neg'>-3.1%</span><br><span style='color:var(--muted);font-size:11px'>9.07</span></td><td class='num' data-v='-16.0476'><span class='neg'>-16.0%</span><br><span style='color:var(--muted);font-size:11px'>8.29</span></td><td class='num' data-v='-12.5333'><span class='neg'>-12.5%</span><br><span style='color:var(--muted);font-size:11px'>8.47</span></td><td class='num' data-v='-12.6895'><span class='neg'>-12.7%</span><br><span style='color:var(--muted);font-size:11px'>8.49</span></td><td class='num' data-v='15.17'>15.2</td><td class='num' data-v='0' style='white-space:nowrap'>0/7<br><span style='color:var(--muted);font-size:11px'>0/4c 0/3g</span></td></tr><tr><td class='date' data-v='20260910'>2026-09-10</td><td>TB @ ATL</td><td><span class='pill'>total</span></td><td class='team'>under 8.5</td><td class='num'>-115</td><td class='num' data-v='-4.2315'><span class='neg'>-4.2%</span><br><span style='color:var(--muted);font-size:11px'>8.97</span></td><td class='num' data-v='-3.5865'><span class='neg'>-3.6%</span><br><span style='color:var(--muted);font-size:11px'>8.9</span></td><td class='num' data-v='-7.9613'><span class='neg'>-8.0%</span><br><span style='color:var(--muted);font-size:11px'>9.18</span></td><td class='num' data-v='-5.8113'><span class='neg'>-5.8%</span><br><span style='color:var(--muted);font-size:11px'>9.07</span></td><td class='num' data-v='6.5652'><span class='pos'>+6.6%</span><br><span style='color:var(--muted);font-size:11px'>8.29</span></td><td class='num' data-v='3.2000'><span class='pos'>+3.2%</span><br><span style='color:var(--muted);font-size:11px'>8.47</span></td><td class='num' data-v='3.3496'><span class='pos'>+3.3%</span><br><span style='color:var(--muted);font-size:11px'>8.49</span></td><td class='num' data-v='14.53'>14.5</td><td class='num' data-v='3' style='white-space:nowrap'>3/7<br><span style='color:var(--muted);font-size:11px'>0/4c 3/3g</span><span class='pill'>opposed</span></td></tr><tr><td class='date' data-v='20260910'>2026-09-10</td><td>COL @ NYY</td><td><span class='pill'>total</span></td><td class='team'>under 8.5</td><td class='num'>+105</td><td class='num' data-v='0.5730'><span class='pos'>+0.6%</span><br><span style='color:var(--muted);font-size:11px'>9.29</span></td><td class='num' data-v='-4.2753'><span class='neg'>-4.3%</span><br><span style='color:var(--muted);font-size:11px'>9.56</span></td><td class='num' data-v='-4.1625'><span class='neg'>-4.2%</span><br><span style='color:var(--muted);font-size:11px'>9.56</span></td><td class='num' data-v='5.1855'><span class='pos'>+5.2%</span><br><span style='color:var(--muted);font-size:11px'>9.01</span></td><td class='num' data-v='-4.9825'><span class='neg'>-5.0%</span><br><span style='color:var(--muted);font-size:11px'>9.59</span></td><td class='num' data-v='-8.5290'><span class='neg'>-8.5%</span><br><span style='color:var(--muted);font-size:11px'>9.85</span></td><td class='num' data-v='-1.2310'><span class='neg'>-1.2%</span><br><span style='color:var(--muted);font-size:11px'>9.39</span></td><td class='num' data-v='13.71'>13.7</td><td class='num' data-v='2' style='white-space:nowrap'>2/7<br><span style='color:var(--muted);font-size:11px'>2/4c 0/3g</span><span class='pill'>split</span></td></tr><tr><td class='date' data-v='20260910'>2026-09-10</td><td>COL @ NYY</td><td><span class='pill'>total</span></td><td class='team'>over 8.5</td><td class='num'>-125</td><td class='num' data-v='-8.3080'><span class='neg'>-8.3%</span><br><span style='color:var(--muted);font-size:11px'>9.29</span></td><td class='num' data-v='-4.0510'><span class='neg'>-4.1%</span><br><span style='color:var(--muted);font-size:11px'>9.56</span></td><td class='num' data-v='-4.1500'><span class='neg'>-4.2%</span><br><span style='color:var(--muted);font-size:11px'>9.56</span></td><td class='num' data-v='-12.3580'><span class='neg'>-12.4%</span><br><span style='color:var(--muted);font-size:11px'>9.01</span></td><td class='num' data-v='-3.4300'><span class='neg'>-3.4%</span><br><span style='color:var(--muted);font-size:11px'>9.59</span></td><td class='num' data-v='-0.3160'><span class='neg'>-0.3%</span><br><span style='color:var(--muted);font-size:11px'>9.85</span></td><td class='num' data-v='-6.7240'><span class='neg'>-6.7%</span><br><span style='color:var(--muted);font-size:11px'>9.39</span></td><td class='num' data-v='12.04'>12.0</td><td class='num' data-v='0' style='white-space:nowrap'>0/7<br><span style='color:var(--muted);font-size:11px'>0/4c 0/3g</span></td></tr><tr><td class='date' data-v='20260910'>2026-09-10</td><td>HOU @ PHI</td><td><span class='pill'>moneyline</span></td><td class='team'>PHI</td><td class='num'>-183</td><td class='num' data-v='-20.1801'><span class='neg'>-20.2%</span><br><span style='color:var(--muted);font-size:11px'>51.6</span></td><td class='num' data-v='-24.6493'><span class='neg'>-24.6%</span><br><span style='color:var(--muted);font-size:11px'>48.7</span></td><td class='num' data-v='-20.2187'><span class='neg'>-20.2%</span><br><span style='color:var(--muted);font-size:11px'>51.6</span></td><td class='num' data-v='-23.5745'><span class='neg'>-23.6%</span><br><span style='color:var(--muted);font-size:11px'>49.4</span></td><td class='num' data-v='-13.9247'><span class='neg'>-13.9%</span><br><span style='color:var(--muted);font-size:11px'>55.7</span></td><td class='num' data-v='-15.2856'><span class='neg'>-15.3%</span><br><span style='color:var(--muted);font-size:11px'>54.8</span></td><td class='num' data-v='-21.2549'><span class='neg'>-21.3%</span><br><span style='color:var(--muted);font-size:11px'>50.9</span></td><td class='num' data-v='10.72'>10.7</td><td class='num' data-v='0' style='white-space:nowrap'>0/7<br><span style='color:var(--muted);font-size:11px'>0/4c 0/3g</span></td></tr><tr><td class='date' data-v='20260910'>2026-09-10</td><td>COL @ NYY</td><td><span class='pill'>moneyline</span></td><td class='team'>NYY</td><td class='num'>-315</td><td class='num' data-v='-14.7274'><span class='neg'>-14.7%</span><br><span style='color:var(--muted);font-size:11px'>64.7</span></td><td class='num' data-v='-18.0408'><span class='neg'>-18.0%</span><br><span style='color:var(--muted);font-size:11px'>62.2</span></td><td class='num' data-v='-19.6349'><span class='neg'>-19.6%</span><br><span style='color:var(--muted);font-size:11px'>61.0</span></td><td class='num' data-v='-19.3780'><span class='neg'>-19.4%</span><br><span style='color:var(--muted);font-size:11px'>61.2</span></td><td class='num' data-v='-13.1398'><span class='neg'>-13.1%</span><br><span style='color:var(--muted);font-size:11px'>65.9</span></td><td class='num' data-v='-13.5351'><span class='neg'>-13.5%</span><br><span style='color:var(--muted);font-size:11px'>65.6</span></td><td class='num' data-v='-10.6894'><span class='neg'>-10.7%</span><br><span style='color:var(--muted);font-size:11px'>67.8</span></td><td class='num' data-v='8.95'>8.9</td><td class='num' data-v='0' style='white-space:nowrap'>0/7<br><span style='color:var(--muted);font-size:11px'>0/4c 0/3g</span></td></tr></tbody></table></div></div><div class='betboard'><div class='bet' data-win='season'><div class='top'><span class='gm'>TEX @ SEA</span><span class='pr'>+111</span></div><div class='pick'><span class='who'>TEX <span class='pill'>moneyline</span></span><span class='ev'><span data-w='season' class='pos'>+2.8%</span><span data-w='l30d' class='pos'>+8.9%</span><span data-w='l14d' class='pos'>+21.7%</span><span data-w='l7d' class='pos'>+15.9%</span><span data-w='l15g' class='neg'>-4.2%</span><span data-w='l7g' class='neg'>-5.2%</span><span data-w='l3g' class='neg'>-8.2%</span></span></div><div class='wins'><div class='wc on' data-cell='season'><span class='w'>Season</span><span class='e pos'>+3%</span><span class='p'>48.7</span></div><div class='wc' data-cell='l30d'><span class='w'>L30d</span><span class='e pos'>+9%</span><span class='p'>51.6</span></div><div class='wc' data-cell='l14d'><span class='w'>L14d</span><span class='e pos'>+22%</span><span class='p'>57.7</span></div><div class='wc' data-cell='l7d'><span class='w'>L7d</span><span class='e pos'>+16%</span><span class='p'>54.9</span></div><div class='wc' data-cell='l15g'><span class='w'>L15g</span><span class='e neg'>-4%</span><span class='p'>45.4</span></div><div class='wc' data-cell='l7g'><span class='w'>L7g</span><span class='e neg'>-5%</span><span class='p'>44.9</span></div><div class='wc' data-cell='l3g'><span class='w'>L3g</span><span class='e neg'>-8%</span><span class='p'>43.5</span></div></div><div class='foot'><span>spread <b>29.9</b></span><span>agree <b>4/7</b> 4/4c 0/3g</span><span><span class='pill'>opposed</span></span></div></div><div class='bet' data-win='season'><div class='top'><span class='gm'>PIT @ CWS</span><span class='pr'>-103</span></div><div class='pick'><span class='who'>PIT <span class='pill'>moneyline</span></span><span class='ev'><span data-w='season' class='pos'>+12.7%</span><span data-w='l30d' class='pos'>+3.6%</span><span data-w='l14d' class='pos'>+13.6%</span><span data-w='l7d' class='pos'>+14.9%</span><span data-w='l15g' class='neg'>-8.1%</span><span data-w='l7g' class='neg'>-13.1%</span><span data-w='l3g' class='neg'>-6.1%</span></span></div><div class='wins'><div class='wc on' data-cell='season'><span class='w'>Season</span><span class='e pos'>+13%</span><span class='p'>57.2</span></div><div class='wc' data-cell='l30d'><span class='w'>L30d</span><span class='e pos'>+4%</span><span class='p'>52.6</span></div><div class='wc' data-cell='l14d'><span class='w'>L14d</span><span class='e pos'>+14%</span><span class='p'>57.6</span></div><div class='wc' data-cell='l7d'><span class='w'>L7d</span><span class='e pos'>+15%</span><span class='p'>58.3</span></div><div class='wc' data-cell='l15g'><span class='w'>L15g</span><span class='e neg'>-8%</span><span class='p'>46.6</span></div><div class='wc' data-cell='l7g'><span class='w'>L7g</span><span class='e neg'>-13%</span><span class='p'>44.1</span></div><div class='wc' data-cell='l3g'><span class='w'>L3g</span><span class='e neg'>-6%</span><span class='p'>47.6</span></div></div><div class='foot'><span>spread <b>28.0</b></span><span>agree <b>4/7</b> 4/4c 0/3g</span><span><span class='pill'>opposed</span></span></div></div><div class='bet' data-win='season'><div class='top'><span class='gm'>PIT @ CWS</span><span class='pr'>-107</span></div><div class='pick'><span class='who'>CWS <span class='pill'>moneyline</span></span><span class='ev'><span data-w='season' class='neg'>-17.2%</span><span data-w='l30d' class='neg'>-8.2%</span><span data-w='l14d' class='neg'>-18.0%</span><span data-w='l7d' class='neg'>-19.3%</span><span data-w='l15g' class='pos'>+3.3%</span><span data-w='l7g' class='pos'>+8.1%</span><span data-w='l3g' class='pos'>+1.3%</span></span></div><div class='wins'><div class='wc on' data-cell='season'><span class='w'>Season</span><span class='e neg'>-17%</span><span class='p'>42.8</span></div><div class='wc' data-cell='l30d'><span class='w'>L30d</span><span class='e neg'>-8%</span><span class='p'>47.4</span></div><div class='wc' data-cell='l14d'><span class='w'>L14d</span><span class='e neg'>-18%</span><span class='p'>42.4</span></div><div class='wc' data-cell='l7d'><span class='w'>L7d</span><span class='e neg'>-19%</span><span class='p'>41.7</span></div><div class='wc' data-cell='l15g'><span class='w'>L15g</span><span class='e pos'>+3%</span><span class='p'>53.4</span></div><div class='wc' data-cell='l7g'><span class='w'>L7g</span><span class='e pos'>+8%</span><span class='p'>55.9</span></div><div class='wc' data-cell='l3g'><span class='w'>L3g</span><span class='e pos'>+1%</span><span class='p'>52.4</span></div></div><div class='foot'><span>spread <b>27.5</b></span><span>agree <b>3/7</b> 0/4c 3/3g</span><span><span class='pill'>opposed</span></span></div></div><div class='bet' data-win='season'><div class='top'><span class='gm'>TEX @ SEA</span><span class='pr'>-122</span></div><div class='pick'><span class='who'>SEA <span class='pill'>moneyline</span></span><span class='ev'><span data-w='season' class='neg'>-6.7%</span><span data-w='l30d' class='neg'>-11.9%</span><span data-w='l14d' class='neg'>-23.0%</span><span data-w='l7d' class='neg'>-18.0%</span><span data-w='l15g' class='neg'>-0.6%</span><span data-w='l7g' class='pos'>+0.2%</span><span data-w='l3g' class='pos'>+2.8%</span></span></div><div class='wins'><div class='wc on' data-cell='season'><span class='w'>Season</span><span class='e neg'>-7%</span><span class='p'>51.3</span></div><div class='wc' data-cell='l30d'><span class='w'>L30d</span><span class='e neg'>-12%</span><span class='p'>48.4</span></div><div class='wc' data-cell='l14d'><span class='w'>L14d</span><span class='e neg'>-23%</span><span class='p'>42.3</span></div><div class='wc' data-cell='l7d'><span class='w'>L7d</span><span class='e neg'>-18%</span><span class='p'>45.1</span></div><div class='wc' data-cell='l15g'><span class='w'>L15g</span><span class='e neg'>-1%</span><span class='p'>54.6</span></div><div class='wc' data-cell='l7g'><span class='w'>L7g</span><span class='e pos'>+0%</span><span class='p'>55.1</span></div><div class='wc' data-cell='l3g'><span class='w'>L3g</span><span class='e pos'>+3%</span><span class='p'>56.5</span></div></div><div class='foot'><span>spread <b>25.7</b></span><span>agree <b>2/7</b> 0/4c 2/3g</span><span><span class='pill'>split</span></span></div></div><div class='bet' data-win='season'><div class='top'><span class='gm'>COL @ NYY</span><span class='pr'>+277</span></div><div class='pick'><span class='who'>COL <span class='pill'>moneyline</span></span><span class='ev'><span data-w='season' class='pos'>+33.0%</span><span data-w='l30d' class='pos'>+42.5%</span><span data-w='l14d' class='pos'>+47.0%</span><span data-w='l7d' class='pos'>+46.3%</span><span data-w='l15g' class='pos'>+28.4%</span><span data-w='l7g' class='pos'>+29.6%</span><span data-w='l3g' class='pos'>+21.4%</span></span></div><div class='wins'><div class='wc on' data-cell='season'><span class='w'>Season</span><span class='e pos'>+33%</span><span class='p'>35.3</span></div><div class='wc' data-cell='l30d'><span class='w'>L30d</span><span class='e pos'>+42%</span><span class='p'>37.8</span></div><div class='wc' data-cell='l14d'><span class='w'>L14d</span><span class='e pos'>+47%</span><span class='p'>39.0</span></div><div class='wc' data-cell='l7d'><span class='w'>L7d</span><span class='e pos'>+46%</span><span class='p'>38.8</span></div><div class='wc' data-cell='l15g'><span class='w'>L15g</span><span class='e pos'>+28%</span><span class='p'>34.1</span></div><div class='wc' data-cell='l7g'><span class='w'>L7g</span><span class='e pos'>+30%</span><span class='p'>34.4</span></div><div class='wc' data-cell='l3g'><span class='w'>L3g</span><span class='e pos'>+21%</span><span class='p'>32.2</span></div></div><div class='foot'><span>spread <b>25.6</b></span><span>agree <b>7/7</b> 4/4c 3/3g</span></div></div><div class='bet' data-win='season'><div class='top'><span class='gm'>TB @ ATL</span><span class='pr'>+104</span></div><div class='pick'><span class='who'>TB <span class='pill'>moneyline</span></span><span class='ev'><span data-w='season' class='pos'>+15.7%</span><span data-w='l30d' class='pos'>+30.7%</span><span data-w='l14d' class='pos'>+24.0%</span><span data-w='l7d' class='pos'>+20.2%</span><span data-w='l15g' class='pos'>+6.6%</span><span data-w='l7g' class='pos'>+11.9%</span><span data-w='l3g' class='pos'>+12.9%</span></span></div><div class='wins'><div class='wc on' data-cell='season'><span class='w'>Season</span><span class='e pos'>+16%</span><span class='p'>56.7</span></div><div class='wc' data-cell='l30d'><span class='w'>L30d</span><span class='e pos'>+31%</span><span class='p'>64.0</span></div><div class='wc' data-cell='l14d'><span class='w'>L14d</span><span class='e pos'>+24%</span><span class='p'>60.8</span></div><div class='wc' data-cell='l7d'><span class='w'>L7d</span><span class='e pos'>+20%</span><span class='p'>58.9</span></div><div class='wc' data-cell='l15g'><span class='w'>L15g</span><span class='e pos'>+7%</span><span class='p'>52.3</span></div><div class='wc' data-cell='l7g'><span class='w'>L7g</span><span class='e pos'>+12%</span><span class='p'>54.9</span></div><div class='wc' data-cell='l3g'><span class='w'>L3g</span><span class='e pos'>+13%</span><span class='p'>55.3</span></div></div><div class='foot'><span>spread <b>24.0</b></span><span>agree <b>7/7</b> 4/4c 3/3g</span></div></div><div class='bet' data-win='season'><div class='top'><span class='gm'>TB @ ATL</span><span class='pr'>-115</span></div><div class='pick'><span class='who'>ATL <span class='pill'>moneyline</span></span><span class='ev'><span data-w='season' class='neg'>-19.0%</span><span data-w='l30d' class='neg'>-32.8%</span><span data-w='l14d' class='neg'>-26.6%</span><span data-w='l7d' class='neg'>-23.2%</span><span data-w='l15g' class='neg'>-10.7%</span><span data-w='l7g' class='neg'>-15.6%</span><span data-w='l3g' class='neg'>-16.5%</span></span></div><div class='wins'><div class='wc on' data-cell='season'><span class='w'>Season</span><span class='e neg'>-19%</span><span class='p'>43.3</span></div><div class='wc' data-cell='l30d'><span class='w'>L30d</span><span class='e neg'>-33%</span><span class='p'>36.0</span></div><div class='wc' data-cell='l14d'><span class='w'>L14d</span><span class='e neg'>-27%</span><span class='p'>39.2</span></div><div class='wc' data-cell='l7d'><span class='w'>L7d</span><span class='e neg'>-23%</span><span class='p'>41.1</span></div><div class='wc' data-cell='l15g'><span class='w'>L15g</span><span class='e neg'>-11%</span><span class='p'>47.7</span></div><div class='wc' data-cell='l7g'><span class='w'>L7g</span><span class='e neg'>-16%</span><span class='p'>45.1</span></div><div class='wc' data-cell='l3g'><span class='w'>L3g</span><span class='e neg'>-16%</span><span class='p'>44.7</span></div></div><div class='foot'><span>spread <b>22.0</b></span><span>agree <b>0/7</b> 0/4c 0/3g</span></div></div><div class='bet' data-win='season'><div class='top'><span class='gm'>TEX @ SEA</span><span class='pr'>-105</span></div><div class='pick'><span class='who'>under 6.5 <span class='pill'>total</span></span><span class='ev'><span data-w='season' class='neg'>-26.9%</span><span data-w='l30d' class='neg'>-34.4%</span><span data-w='l14d' class='neg'>-32.7%</span><span data-w='l7d' class='neg'>-35.8%</span><span data-w='l15g' class='neg'>-37.9%</span><span data-w='l7g' class='neg'>-36.9%</span><span data-w='l3g' class='neg'>-48.2%</span></span></div><div class='wins'><div class='wc on' data-cell='season'><span class='w'>Season</span><span class='e neg'>-27%</span><span class='p'>8.59</span></div><div class='wc' data-cell='l30d'><span class='w'>L30d</span><span class='e neg'>-34%</span><span class='p'>9.1</span></div><div class='wc' data-cell='l14d'><span class='w'>L14d</span><span class='e neg'>-33%</span><span class='p'>8.96</span></div><div class='wc' data-cell='l7d'><span class='w'>L7d</span><span class='e neg'>-36%</span><span class='p'>9.21</span></div><div class='wc' data-cell='l15g'><span class='w'>L15g</span><span class='e neg'>-38%</span><span class='p'>9.24</span></div><div class='wc' data-cell='l7g'><span class='w'>L7g</span><span class='e neg'>-37%</span><span class='p'>9.26</span></div><div class='wc' data-cell='l3g'><span class='w'>L3g</span><span class='e neg'>-48%</span><span class='p'>10.24</span></div></div><div class='foot'><span>spread <b>21.3</b></span><span>agree <b>0/7</b> 0/4c 0/3g</span></div></div><div class='bet' data-win='season'><div class='top'><span class='gm'>TEX @ SEA</span><span class='pr'>-115</span></div><div class='pick'><span class='who'>over 6.5 <span class='pill'>total</span></span><span class='ev'><span data-w='season' class='pos'>+16.9%</span><span data-w='l30d' class='pos'>+24.2%</span><span data-w='l14d' class='pos'>+22.5%</span><span data-w='l7d' class='pos'>+25.5%</span><span data-w='l15g' class='pos'>+27.4%</span><span data-w='l7g' class='pos'>+26.6%</span><span data-w='l3g' class='pos'>+37.3%</span></span></div><div class='wins'><div class='wc on' data-cell='season'><span class='w'>Season</span><span class='e pos'>+17%</span><span class='p'>8.59</span></div><div class='wc' data-cell='l30d'><span class='w'>L30d</span><span class='e pos'>+24%</span><span class='p'>9.1</span></div><div class='wc' data-cell='l14d'><span class='w'>L14d</span><span class='e pos'>+23%</span><span class='p'>8.96</span></div><div class='wc' data-cell='l7d'><span class='w'>L7d</span><span class='e pos'>+26%</span><span class='p'>9.21</span></div><div class='wc' data-cell='l15g'><span class='w'>L15g</span><span class='e pos'>+27%</span><span class='p'>9.24</span></div><div class='wc' data-cell='l7g'><span class='w'>L7g</span><span class='e pos'>+27%</span><span class='p'>9.26</span></div><div class='wc' data-cell='l3g'><span class='w'>L3g</span><span class='e pos'>+37%</span><span class='p'>10.24</span></div></div><div class='foot'><span>spread <b>20.4</b></span><span>agree <b>7/7</b> 4/4c 3/3g</span></div></div><div class='bet' data-win='season'><div class='top'><span class='gm'>HOU @ PHI</span><span class='pr'>+165</span></div><div class='pick'><span class='who'>HOU <span class='pill'>moneyline</span></span><span class='ev'><span data-w='season' class='pos'>+28.2%</span><span data-w='l30d' class='pos'>+35.9%</span><span data-w='l14d' class='pos'>+28.3%</span><span data-w='l7d' class='pos'>+34.0%</span><span data-w='l15g' class='pos'>+17.5%</span><span data-w='l7g' class='pos'>+19.8%</span><span data-w='l3g' class='pos'>+30.1%</span></span></div><div class='wins'><div class='wc on' data-cell='season'><span class='w'>Season</span><span class='e pos'>+28%</span><span class='p'>48.4</span></div><div class='wc' data-cell='l30d'><span class='w'>L30d</span><span class='e pos'>+36%</span><span class='p'>51.3</span></div><div class='wc' data-cell='l14d'><span class='w'>L14d</span><span class='e pos'>+28%</span><span class='p'>48.4</span></div><div class='wc' data-cell='l7d'><span class='w'>L7d</span><span class='e pos'>+34%</span><span class='p'>50.6</span></div><div class='wc' data-cell='l15g'><span class='w'>L15g</span><span class='e pos'>+18%</span><span class='p'>44.3</span></div><div class='wc' data-cell='l7g'><span class='w'>L7g</span><span class='e pos'>+20%</span><span class='p'>45.2</span></div><div class='wc' data-cell='l3g'><span class='w'>L3g</span><span class='e pos'>+30%</span><span class='p'>49.1</span></div></div><div class='foot'><span>spread <b>18.4</b></span><span>agree <b>7/7</b> 4/4c 3/3g</span></div></div><div class='bet' data-win='season'><div class='top'><span class='gm'>HOU @ PHI</span><span class='pr'>-104</span></div><div class='pick'><span class='who'>under 8.5 <span class='pill'>total</span></span><span class='ev'><span data-w='season' class='neg'>-7.7%</span><span data-w='l30d' class='pos'>+1.9%</span><span data-w='l14d' class='pos'>+9.6%</span><span data-w='l7d' class='pos'>+10.7%</span><span data-w='l15g' class='neg'>-4.7%</span><span data-w='l7g' class='neg'>-4.3%</span><span data-w='l3g' class='pos'>+2.0%</span></span></div><div class='wins'><div class='wc on' data-cell='season'><span class='w'>Season</span><span class='e neg'>-8%</span><span class='p'>9.44</span></div><div class='wc' data-cell='l30d'><span class='w'>L30d</span><span class='e pos'>+2%</span><span class='p'>8.9</span></div><div class='wc' data-cell='l14d'><span class='w'>L14d</span><span class='e pos'>+10%</span><span class='p'>8.42</span></div><div class='wc' data-cell='l7d'><span class='w'>L7d</span><span class='e pos'>+11%</span><span class='p'>8.39</span></div><div class='wc' data-cell='l15g'><span class='w'>L15g</span><span class='e neg'>-5%</span><span class='p'>9.3</span></div><div class='wc' data-cell='l7g'><span class='w'>L7g</span><span class='e neg'>-4%</span><span class='p'>9.28</span></div><div class='wc' data-cell='l3g'><span class='w'>L3g</span><span class='e pos'>+2%</span><span class='p'>8.91</span></div></div><div class='foot'><span>spread <b>18.4</b></span><span>agree <b>4/7</b> 3/4c 1/3g</span><span><span class='pill'>split</span></span></div></div><div class='bet' data-win='season'><div class='top'><span class='gm'>HOU @ PHI</span><span class='pr'>-116</span></div><div class='pick'><span class='who'>over 8.5 <span class='pill'>total</span></span><span class='ev'><span data-w='season' class='neg'>-1.5%</span><span data-w='l30d' class='neg'>-10.5%</span><span data-w='l14d' class='neg'>-17.8%</span><span data-w='l7d' class='neg'>-18.9%</span><span data-w='l15g' class='neg'>-4.2%</span><span data-w='l7g' class='neg'>-4.6%</span><span data-w='l3g' class='neg'>-10.6%</span></span></div><div class='wins'><div class='wc on' data-cell='season'><span class='w'>Season</span><span class='e neg'>-1%</span><span class='p'>9.44</span></div><div class='wc' data-cell='l30d'><span class='w'>L30d</span><span class='e neg'>-10%</span><span class='p'>8.9</span></div><div class='wc' data-cell='l14d'><span class='w'>L14d</span><span class='e neg'>-18%</span><span class='p'>8.42</span></div><div class='wc' data-cell='l7d'><span class='w'>L7d</span><span class='e neg'>-19%</span><span class='p'>8.39</span></div><div class='wc' data-cell='l15g'><span class='w'>L15g</span><span class='e neg'>-4%</span><span class='p'>9.3</span></div><div class='wc' data-cell='l7g'><span class='w'>L7g</span><span class='e neg'>-5%</span><span class='p'>9.28</span></div><div class='wc' data-cell='l3g'><span class='w'>L3g</span><span class='e neg'>-11%</span><span class='p'>8.91</span></div></div><div class='foot'><span>spread <b>17.4</b></span><span>agree <b>0/7</b> 0/4c 0/3g</span></div></div><div class='bet' data-win='season'><div class='top'><span class='gm'>PIT @ CWS</span><span class='pr'>+100</span></div><div class='pick'><span class='who'>under 7.5 <span class='pill'>total</span></span><span class='ev'><span data-w='season' class='neg'>-20.8%</span><span data-w='l30d' class='neg'>-14.9%</span><span data-w='l14d' class='neg'>-14.6%</span><span data-w='l7d' class='neg'>-4.1%</span><span data-w='l15g' class='neg'>-12.1%</span><span data-w='l7g' class='neg'>-12.0%</span><span data-w='l3g' class='neg'>-16.3%</span></span></div><div class='wins'><div class='wc on' data-cell='season'><span class='w'>Season</span><span class='e neg'>-21%</span><span class='p'>9.41</span></div><div class='wc' data-cell='l30d'><span class='w'>L30d</span><span class='e neg'>-15%</span><span class='p'>8.98</span></div><div class='wc' data-cell='l14d'><span class='w'>L14d</span><span class='e neg'>-15%</span><span class='p'>8.99</span></div><div class='wc' data-cell='l7d'><span class='w'>L7d</span><span class='e neg'>-4%</span><span class='p'>8.3</span></div><div class='wc' data-cell='l15g'><span class='w'>L15g</span><span class='e neg'>-12%</span><span class='p'>8.81</span></div><div class='wc' data-cell='l7g'><span class='w'>L7g</span><span class='e neg'>-12%</span><span class='p'>8.84</span></div><div class='wc' data-cell='l3g'><span class='w'>L3g</span><span class='e neg'>-16%</span><span class='p'>9.1</span></div></div><div class='foot'><span>spread <b>16.7</b></span><span>agree <b>0/7</b> 0/4c 0/3g</span></div></div><div class='bet' data-win='season'><div class='top'><span class='gm'>PIT @ CWS</span><span class='pr'>-120</span></div><div class='pick'><span class='who'>over 7.5 <span class='pill'>total</span></span><span class='ev'><span data-w='season' class='pos'>+10.7%</span><span data-w='l30d' class='pos'>+5.4%</span><span data-w='l14d' class='pos'>+5.0%</span><span data-w='l7d' class='neg'>-4.6%</span><span data-w='l15g' class='pos'>+2.8%</span><span data-w='l7g' class='pos'>+2.7%</span><span data-w='l3g' class='pos'>+6.6%</span></span></div><div class='wins'><div class='wc on' data-cell='season'><span class='w'>Season</span><span class='e pos'>+11%</span><span class='p'>9.41</span></div><div class='wc' data-cell='l30d'><span class='w'>L30d</span><span class='e pos'>+5%</span><span class='p'>8.98</span></div><div class='wc' data-cell='l14d'><span class='w'>L14d</span><span class='e pos'>+5%</span><span class='p'>8.99</span></div><div class='wc' data-cell='l7d'><span class='w'>L7d</span><span class='e neg'>-5%</span><span class='p'>8.3</span></div><div class='wc' data-cell='l15g'><span class='w'>L15g</span><span class='e pos'>+3%</span><span class='p'>8.81</span></div><div class='wc' data-cell='l7g'><span class='w'>L7g</span><span class='e pos'>+3%</span><span class='p'>8.84</span></div><div class='wc' data-cell='l3g'><span class='w'>L3g</span><span class='e pos'>+7%</span><span class='p'>9.1</span></div></div><div class='foot'><span>spread <b>15.3</b></span><span>agree <b>6/7</b> 3/4c 3/3g</span><span><span class='pill'>split</span></span></div></div><div class='bet' data-win='season'><div class='top'><span class='gm'>TB @ ATL</span><span class='pr'>-105</span></div><div class='pick'><span class='who'>over 8.5 <span class='pill'>total</span></span><span class='ev'><span data-w='season' class='neg'>-4.8%</span><span data-w='l30d' class='neg'>-5.4%</span><span data-w='l14d' class='neg'>-0.9%</span><span data-w='l7d' class='neg'>-3.1%</span><span data-w='l15g' class='neg'>-16.0%</span><span data-w='l7g' class='neg'>-12.5%</span><span data-w='l3g' class='neg'>-12.7%</span></span></div><div class='wins'><div class='wc on' data-cell='season'><span class='w'>Season</span><span class='e neg'>-5%</span><span class='p'>8.97</span></div><div class='wc' data-cell='l30d'><span class='w'>L30d</span><span class='e neg'>-5%</span><span class='p'>8.9</span></div><div class='wc' data-cell='l14d'><span class='w'>L14d</span><span class='e neg'>-1%</span><span class='p'>9.18</span></div><div class='wc' data-cell='l7d'><span class='w'>L7d</span><span class='e neg'>-3%</span><span class='p'>9.07</span></div><div class='wc' data-cell='l15g'><span class='w'>L15g</span><span class='e neg'>-16%</span><span class='p'>8.29</span></div><div class='wc' data-cell='l7g'><span class='w'>L7g</span><span class='e neg'>-13%</span><span class='p'>8.47</span></div><div class='wc' data-cell='l3g'><span class='w'>L3g</span><span class='e neg'>-13%</span><span class='p'>8.49</span></div></div><div class='foot'><span>spread <b>15.2</b></span><span>agree <b>0/7</b> 0/4c 0/3g</span></div></div><div class='bet' data-win='season'><div class='top'><span class='gm'>TB @ ATL</span><span class='pr'>-115</span></div><div class='pick'><span class='who'>under 8.5 <span class='pill'>total</span></span><span class='ev'><span data-w='season' class='neg'>-4.2%</span><span data-w='l30d' class='neg'>-3.6%</span><span data-w='l14d' class='neg'>-8.0%</span><span data-w='l7d' class='neg'>-5.8%</span><span data-w='l15g' class='pos'>+6.6%</span><span data-w='l7g' class='pos'>+3.2%</span><span data-w='l3g' class='pos'>+3.3%</span></span></div><div class='wins'><div class='wc on' data-cell='season'><span class='w'>Season</span><span class='e neg'>-4%</span><span class='p'>8.97</span></div><div class='wc' data-cell='l30d'><span class='w'>L30d</span><span class='e neg'>-4%</span><span class='p'>8.9</span></div><div class='wc' data-cell='l14d'><span class='w'>L14d</span><span class='e neg'>-8%</span><span class='p'>9.18</span></div><div class='wc' data-cell='l7d'><span class='w'>L7d</span><span class='e neg'>-6%</span><span class='p'>9.07</span></div><div class='wc' data-cell='l15g'><span class='w'>L15g</span><span class='e pos'>+7%</span><span class='p'>8.29</span></div><div class='wc' data-cell='l7g'><span class='w'>L7g</span><span class='e pos'>+3%</span><span class='p'>8.47</span></div><div class='wc' data-cell='l3g'><span class='w'>L3g</span><span class='e pos'>+3%</span><span class='p'>8.49</span></div></div><div class='foot'><span>spread <b>14.5</b></span><span>agree <b>3/7</b> 0/4c 3/3g</span><span><span class='pill'>opposed</span></span></div></div><div class='bet' data-win='season'><div class='top'><span class='gm'>COL @ NYY</span><span class='pr'>+105</span></div><div class='pick'><span class='who'>under 8.5 <span class='pill'>total</span></span><span class='ev'><span data-w='season' class='pos'>+0.6%</span><span data-w='l30d' class='neg'>-4.3%</span><span data-w='l14d' class='neg'>-4.2%</span><span data-w='l7d' class='pos'>+5.2%</span><span data-w='l15g' class='neg'>-5.0%</span><span data-w='l7g' class='neg'>-8.5%</span><span data-w='l3g' class='neg'>-1.2%</span></span></div><div class='wins'><div class='wc on' data-cell='season'><span class='w'>Season</span><span class='e pos'>+1%</span><span class='p'>9.29</span></div><div class='wc' data-cell='l30d'><span class='w'>L30d</span><span class='e neg'>-4%</span><span class='p'>9.56</span></div><div class='wc' data-cell='l14d'><span class='w'>L14d</span><span class='e neg'>-4%</span><span class='p'>9.56</span></div><div class='wc' data-cell='l7d'><span class='w'>L7d</span><span class='e pos'>+5%</span><span class='p'>9.01</span></div><div class='wc' data-cell='l15g'><span class='w'>L15g</span><span class='e neg'>-5%</span><span class='p'>9.59</span></div><div class='wc' data-cell='l7g'><span class='w'>L7g</span><span class='e neg'>-9%</span><span class='p'>9.85</span></div><div class='wc' data-cell='l3g'><span class='w'>L3g</span><span class='e neg'>-1%</span><span class='p'>9.39</span></div></div><div class='foot'><span>spread <b>13.7</b></span><span>agree <b>2/7</b> 2/4c 0/3g</span><span><span class='pill'>split</span></span></div></div><div class='bet' data-win='season'><div class='top'><span class='gm'>COL @ NYY</span><span class='pr'>-125</span></div><div class='pick'><span class='who'>over 8.5 <span class='pill'>total</span></span><span class='ev'><span data-w='season' class='neg'>-8.3%</span><span data-w='l30d' class='neg'>-4.1%</span><span data-w='l14d' class='neg'>-4.2%</span><span data-w='l7d' class='neg'>-12.4%</span><span data-w='l15g' class='neg'>-3.4%</span><span data-w='l7g' class='neg'>-0.3%</span><span data-w='l3g' class='neg'>-6.7%</span></span></div><div class='wins'><div class='wc on' data-cell='season'><span class='w'>Season</span><span class='e neg'>-8%</span><span class='p'>9.29</span></div><div class='wc' data-cell='l30d'><span class='w'>L30d</span><span class='e neg'>-4%</span><span class='p'>9.56</span></div><div class='wc' data-cell='l14d'><span class='w'>L14d</span><span class='e neg'>-4%</span><span class='p'>9.56</span></div><div class='wc' data-cell='l7d'><span class='w'>L7d</span><span class='e neg'>-12%</span><span class='p'>9.01</span></div><div class='wc' data-cell='l15g'><span class='w'>L15g</span><span class='e neg'>-3%</span><span class='p'>9.59</span></div><div class='wc' data-cell='l7g'><span class='w'>L7g</span><span class='e neg'>-0%</span><span class='p'>9.85</span></div><div class='wc' data-cell='l3g'><span class='w'>L3g</span><span class='e neg'>-7%</span><span class='p'>9.39</span></div></div><div class='foot'><span>spread <b>12.0</b></span><span>agree <b>0/7</b> 0/4c 0/3g</span></div></div><div class='bet' data-win='season'><div class='top'><span class='gm'>HOU @ PHI</span><span class='pr'>-183</span></div><div class='pick'><span class='who'>PHI <span class='pill'>moneyline</span></span><span class='ev'><span data-w='season' class='neg'>-20.2%</span><span data-w='l30d' class='neg'>-24.6%</span><span data-w='l14d' class='neg'>-20.2%</span><span data-w='l7d' class='neg'>-23.6%</span><span data-w='l15g' class='neg'>-13.9%</span><span data-w='l7g' class='neg'>-15.3%</span><span data-w='l3g' class='neg'>-21.3%</span></span></div><div class='wins'><div class='wc on' data-cell='season'><span class='w'>Season</span><span class='e neg'>-20%</span><span class='p'>51.6</span></div><div class='wc' data-cell='l30d'><span class='w'>L30d</span><span class='e neg'>-25%</span><span class='p'>48.7</span></div><div class='wc' data-cell='l14d'><span class='w'>L14d</span><span class='e neg'>-20%</span><span class='p'>51.6</span></div><div class='wc' data-cell='l7d'><span class='w'>L7d</span><span class='e neg'>-24%</span><span class='p'>49.4</span></div><div class='wc' data-cell='l15g'><span class='w'>L15g</span><span class='e neg'>-14%</span><span class='p'>55.7</span></div><div class='wc' data-cell='l7g'><span class='w'>L7g</span><span class='e neg'>-15%</span><span class='p'>54.8</span></div><div class='wc' data-cell='l3g'><span class='w'>L3g</span><span class='e neg'>-21%</span><span class='p'>50.9</span></div></div><div class='foot'><span>spread <b>10.7</b></span><span>agree <b>0/7</b> 0/4c 0/3g</span></div></div><div class='bet' data-win='season'><div class='top'><span class='gm'>COL @ NYY</span><span class='pr'>-315</span></div><div class='pick'><span class='who'>NYY <span class='pill'>moneyline</span></span><span class='ev'><span data-w='season' class='neg'>-14.7%</span><span data-w='l30d' class='neg'>-18.0%</span><span data-w='l14d' class='neg'>-19.6%</span><span data-w='l7d' class='neg'>-19.4%</span><span data-w='l15g' class='neg'>-13.1%</span><span data-w='l7g' class='neg'>-13.5%</span><span data-w='l3g' class='neg'>-10.7%</span></span></div><div class='wins'><div class='wc on' data-cell='season'><span class='w'>Season</span><span class='e neg'>-15%</span><span class='p'>64.7</span></div><div class='wc' data-cell='l30d'><span class='w'>L30d</span><span class='e neg'>-18%</span><span class='p'>62.2</span></div><div class='wc' data-cell='l14d'><span class='w'>L14d</span><span class='e neg'>-20%</span><span class='p'>61.0</span></div><div class='wc' data-cell='l7d'><span class='w'>L7d</span><span class='e neg'>-19%</span><span class='p'>61.2</span></div><div class='wc' data-cell='l15g'><span class='w'>L15g</span><span class='e neg'>-13%</span><span class='p'>65.9</span></div><div class='wc' data-cell='l7g'><span class='w'>L7g</span><span class='e neg'>-14%</span><span class='p'>65.6</span></div><div class='wc' data-cell='l3g'><span class='w'>L3g</span><span class='e neg'>-11%</span><span class='p'>67.8</span></div></div><div class='foot'><span>spread <b>8.9</b></span><span>agree <b>0/7</b> 0/4c 0/3g</span></div></div></div><p class='note'>EV% for the same bet under every window. <b>Season</b> is the full-season rates. <b>L30d, L14d, L7d</b> are calendar windows &mdash; trailing days. <b>L15g, L7g, L3g</b> are game-count windows &mdash; each player's last N games played, read only from today's side of the venue. The <code>d</code> and <code>g</code> suffixes matter: L7d is seven days, L7g is seven games. The small grey number is that window's projection &mdash; the projected total on a total, the model's win probability on a moneyline &mdash; and it matches the Games and Form pages. Sorted by <b>spread</b>, widest disagreement first.</p><p class='note'><b>Count agreement by family, not by column.</b> Every window shares the same lineups, park factor, bullpen, umpire and simulator, and windows within one model share their rate construction too &mdash; four calendar windows agreeing is close to one opinion stated four times, not four confirmations. The short windows are also regressed hard toward a season anchor, so they agree with the season column by construction. The sub-counts (<code>c</code> for calendar, <code>g</code> for games) are the useful read: a row where one family is unanimous one way and the other unanimous the opposite is marked <span class='pill'>opposed</span>, and that is the only disagreement here backed by two genuinely different readings of form.</p><p class='note'>The game-count windows are <b>not backtested</b>. The calibration constants and the edge figures on Tracking were both measured on season rates and do not carry over.</p><p class='note'>Each model against completed games it projected beforehand. MAE is here because it is conventional, but it is a poor way to separate these &mdash; almost all of it is irreducible game noise, and a model that improved meaningfully would barely move it. Bias and the over/under call rate are more sensitive; closing-line value is better still.</p></div></main>
+</style>
+</head>
+<body>
+
+<header>
+  <div class="legend">
+    <div style="background:#F07E7C">&lt;2 min</div>
+    <div style="background:#EFC24B">2-5 min</div>
+    <div style="background:#5DCAA5">5-10 min</div>
+    <div style="background:#B9C6C2">no move</div>
+    <div style="background:#5A1414;color:#F2F7F5">started</div>
+  </div>
+  <nav class="tabs" id="tabs"></nav>
+  <div class="bar">
+    <div class="meta" id="meta">loading&hellip;</div>
+  </div>
+</header>
+
+<table>
+  <thead><tr id="head"></tr></thead>
+  <tbody id="body"></tbody>
+</table>
+<div id="cards"></div>
+
 <script>
-(function(){
-  var val=function(el,t){
-    var s=el.getAttribute('data-v');
-    if(s===null){
-      // A per-window cell holds every window's value as a [data-w] span and
-      // shows one. textContent would concatenate all seven and parseFloat
-      // would stop at the first, so the column would always sort on the
-      // first window regardless of which is selected. Read the one the
-      // container is currently showing instead.
-      var host=el.closest?el.closest('[data-win]'):null;
-      var w=host&&host.getAttribute('data-win');
-      var pick=w&&el.querySelector?el.querySelector("[data-w='"+w+"']"):null;
-      s=pick?pick.textContent:el.textContent;
+const BOOKLBL = {kalshi: "K", polymarket: "P", novig: "NV", prophetx: "PX",
+                 betopenly: "BO"};
+const REFRESH_MS = 30000;
+let DATA = null, OPEN = null, SPORTS = [], SPORT = null;
+const CACHE = {};
+
+/* Remembering the tab in the URL means a phone bookmark or a refresh lands
+   where you left off, and the wall monitor can be pinned to one sport. */
+function initialSport(){
+  const q = new URLSearchParams(location.search).get("s");
+  return q || null;
+}
+
+function mvClass(min, changed){
+  if(!changed) return "";
+  if(min < 2)  return "mv mv2";
+  if(min < 5)  return "mv mv5";
+  if(min < 10) return "mv mv10";
+  return "";
+}
+
+const pit = (n, h) => `<div class="pit">${n ? n + (h ? "-" + h : "") : "&mdash;"}</div>`;
+
+/* Possession marker. Only meaningful while a game is live, so it is gated on
+   that rather than on the field being present -- ESPN leaves stale situation
+   data on a game that has just ended. */
+const BALL = '<svg class="ball" viewBox="0 0 22 13" aria-hidden="true">'
+  + '<ellipse cx="11" cy="6.5" rx="10" ry="5.7" fill="currentColor"/>'
+  + '<path d="M6.5 6.5h9M9 4.4v4.2M11 4.4v4.2M13 4.4v4.2" '
+  + 'stroke="#08161B" stroke-width="1.1" stroke-linecap="round"/></svg>';
+
+const poss = (g, side) => (g.live && g.poss === side) ? BALL : "";
+
+/* Box score panel. Reuses the OPEN mechanism the odds history uses, with a
+   reserved key, so opening a box closes any open history and vice versa --
+   two panels under one game would push the row apart. */
+const BOX = "__box";
+
+function boxTable(g){
+  const b = g.box;
+  if(!b) return '<div class="bmsg">No box score yet.</div>';
+  const A = g.away_short || g.away, H = g.home_short || g.home;
+
+  if(b.kind === "innings"){
+    const played = b.innings || [];
+    if(!played.length) return '<div class="bmsg">Game has not started.</div>';
+    /* Always show a full nine so the grid doesn't reflow as the game goes on,
+       and keep any extras beyond that. Unplayed innings render blank. */
+    const n = Math.max(9, played.length);
+    const at = i => played.find(x => x.n === i + 1) || {};
+    const head = Array.from({length: n}, (_, i) => `<th>${i + 1}</th>`).join("")
+               + '<th class="tot">R</th><th class="tot">H</th><th class="tot">E</th>';
+    const row = (name, key, rhe) =>
+      `<tr><td class="bt">${name}</td>`
+      + Array.from({length: n}, (_, i) => {
+          const v = at(i)[key];
+          return `<td>${v ?? ""}</td>`;
+        }).join("")
+      + ["0", "1", "2"].map(k => `<td class="tot">${(rhe || [])[k] ?? "-"}</td>`).join("")
+      + "</tr>";
+    return `<table class="box"><thead><tr><th></th>${head}</tr></thead><tbody>`
+         + row(A, "a", b.rhe[0]) + row(H, "h", b.rhe[1]) + "</tbody></table>";
+  }
+
+  // periods
+  const n = Math.max(b.away.length, b.home.length);
+  if(!n) return '<div class="bmsg">Game has not started.</div>';
+  const lbl = i => i < 4 ? "Q" + (i + 1) : (n === 5 ? "OT" : "OT" + (i - 3));
+  const sum = a => a.reduce((x, y) => x + (Number(y) || 0), 0);
+  const head = Array.from({length: n}, (_, i) => `<th>${lbl(i)}</th>`).join("")
+             + '<th class="tot">T</th>';
+  const row = (name, arr) =>
+    `<tr><td class="bt">${name}</td>`
+    + Array.from({length: n}, (_, i) => `<td>${arr[i] ?? "-"}</td>`).join("")
+    + `<td class="tot">${sum(arr)}</td></tr>`;
+  const lead = (b.leaders || []).map(l =>
+    `<div class="lead"><span class="lcat">${l.cat}</span>`
+    + `<span class="lwho">${l.who}${l.team ? " (" + (l.team === "away" ? A : H) + ")" : ""}</span>`
+    + `<span class="lval">${l.val}</span></div>`).join("");
+  return `<table class="box"><thead><tr><th></th>${head}</tr></thead><tbody>`
+       + row(A, b.away) + row(H, b.home) + "</tbody></table>"
+       + (lead ? `<div class="leads">${lead}</div>` : "");
+}
+
+/* Live baseball state: who is pitching now, and the market-independent win
+   probability. Shown only while in play -- a final game's WP is 0/100 and a
+   scheduled game has none. */
+function livemlb(g){
+  if(!g.live) return "";
+  const bits = [];
+  if(g.cur_pitcher){
+    const chg = g.pitcher_changed ? '<span class="chg">NEW</span>' : "";
+    const who = g.pitch_side === "home" ? (g.home || "")
+              : g.pitch_side === "away" ? (g.away || "") : "";
+    bits.push(`<div class="lp">${chg}P: ${g.cur_pitcher}${who ? " (" + who + ")" : ""}</div>`);
+  }
+  if(g.wp_home !== null && g.wp_home !== undefined){
+    const hi = g.wp_home >= 50;
+    const side = hi ? (g.home || "") : (g.away || "");
+    const pct  = hi ? g.wp_home : g.wp_away;
+    bits.push(`<div class="wp">WP ${side} ${Math.round(pct)}%</div>`);
+  }
+  return bits.join("");
+}
+
+/* Before first pitch there is no model win probability worth showing, but the
+   moneyline itself is one: strip the vig and it's the market's own estimate.
+   Labelled MKT so it is never confused with MLB's in-game WP. */
+function marketProb(g){
+  if(g.live || g.final) return "";
+  if(g.mkt_home === null || g.mkt_home === undefined) return "";
+  const hi = g.mkt_home >= 50;
+  const side = hi ? (g.home || "") : (g.away || "");
+  const pct  = hi ? g.mkt_home : g.mkt_away;
+  return `<div class="wp">MKT ${side} ${Math.round(pct)}%</div>`;
+}
+
+/* Pitching decisions, shown in place of the probable starters once a game is
+   final. Same amber as the live pitcher line: both answer "who is responsible
+   for what is happening on the mound". */
+function decisions(g){
+  if(!g.final || !(g.win_p || g.lose_p)) return "";
+  const W = g.win_side === "away" ? (g.away || "") : (g.home || "");
+  const L = g.win_side === "away" ? (g.home || "") : (g.away || "");
+  const out = [];
+  if(g.win_p)  out.push(`<div class="lp">W: ${g.win_p}${W ? " (" + W + ")" : ""}</div>`);
+  if(g.lose_p) out.push(`<div class="lp">L: ${g.lose_p}${L ? " (" + L + ")" : ""}</div>`);
+  // A save always belongs to the winning club.
+  if(g.save_p) out.push(`<div class="lp">S: ${g.save_p}${W ? " (" + W + ")" : ""}</div>`);
+  return out.join("");
+}
+
+/* Down, distance and field position. One short line, shown under the clock. */
+function drive(g){
+  if(!g.live) return "";
+  const bits = [];
+  if(g.down) bits.push(g.down);
+  if(g.spot && !(g.down || "").includes(g.spot)) bits.push(g.spot);
+  if(!bits.length) return "";
+  const rz = g.redzone ? '<span class="rzb">RZ</span>' : "";
+  return `<div class="drv">${rz}${bits.join(" \u00b7 ")}</div>`;
+}
+
+/* AP rank prefix, e.g. "1 ALA". Absent for MLB and unranked teams. */
+const rk = n => (n && n > 0 && n <= 25) ? `<span class="rank">${n}</span>` : "";
+
+/* Neutral site is the thing you can't infer from the odds feed: home/away is
+   arbitrary for those games. Venue only shown when it's neutral -- otherwise
+   it's just the home team's stadium and adds noise. */
+function venueLine(g){
+  if(!g.neutral) return "";
+  const where = [g.city, g.state].filter(Boolean).join(", ");
+  return `<div class="neu">NEUTRAL${where ? " \u00b7 " + where : ""}</div>`;
+}
+
+/* The builder decides the wording per sport (build_site.status_text); the page
+   only picks a colour. The old version had a baseball branch first, so a live
+   football game took it and rendered an empty inning plus "0 out". */
+function statusLine(g){
+  if(!g.status_text) return "";
+  const cls = g.live   ? "st live"
+            : g.warmup ? "st warm"
+            : g.final  ? "st fin"
+            : "st";
+  return `<div class="${cls}">${g.status_text}</div>`;
+}
+
+function sideHTML(s, which){
+  const v = s[which] || "&mdash;";
+  const k = which === "cur" ? mvClass(s.moved_min, s.changed) : "";
+  const d = which === "cur" && s.changed ? '<span class="dot">&#9679;</span>' : "";
+
+  /* Tag by the side's ACTUAL book. Some markets are priced by only one of the
+     two -- college moneylines are frequently Kalshi-only -- and hardcoding
+     "BOL" made an exchange price look like a book price, which is why football
+     appeared to have no Kalshi data at all. No tag only when the single quote
+     comes from the primary book. */
+  const prim = (DATA.books || [])[0] || "betonlineag";
+  const own  = s.book || prim;
+  const tagged = which === "cur" && (!!s.alt || own !== prim);
+  const bkTag = b => `<span class="bk ${b === prim ? "bol" : "k"}">`
+                   + `${b === prim ? "BOL" : (BOOKLBL[b] || "ALT")}</span>`;
+  const tag = b => tagged ? bkTag(b) : "";
+  const ownAlt = own !== prim ? " altp" : "";
+
+  let out = `<span class="side">${s.label}</span>${tag(own)}`
+          + `<span class="${which === "cur" ? "cur " + k + ownAlt : "open"}">${v}</span>${d}`;
+  if(which === "cur" && s.alt){
+    out += `<div class="arow"><span class="side"></span>${tag(s.alt.book)}`
+         + `<span class="cur altp">${s.alt.cur}</span></div>`;
+  }
+  if(which === "cur" && s.changed && s.open && s.open !== s.cur){
+    out += `<div class="opn"><span class="side"></span>`
+         + (tagged ? '<span class="bk"></span>' : "")
+         + `open ${s.open}</div>`;
+  }
+  return out;
+}
+
+/* ── desktop ─────────────────────────────────────────────────── */
+function cell(sides, which, gi, key){
+  if(!sides || !sides.length) return "<td>&mdash;</td>";
+  const any = sides.some(s => s.changed);
+  const cls = (which === "cur" && any ? "hot" : "")
+            + (OPEN && OPEN[0] === gi && OPEN[1] === key ? " sel" : "");
+  const click = which === "cur" && any ? ` onclick="det(${gi},'${key}')"` : "";
+  return `<td class="${cls}"${click}>`
+       + sides.map(s => `<div>${sideHTML(s, which)}</div>`).join("") + "</td>";
+}
+
+/* One chronological stream covering both books rather than two separate
+   lists. Which book moved first is the interesting part, and that is only
+   visible when the rows are interleaved. */
+function mergedHist(s){
+  const rows = [];
+  const add = (arr, fallback, book) =>
+    (arr || (fallback ? [fallback] : [])).forEach(h =>
+      rows.push({ts: h.ts || "\u2014", iso: h.iso || h.iso_open || "",
+                 line: h.line, book: book}));
+
+  add(s.hist, {ts: s.opened_at, iso: s.iso_open, line: s.cur}, s.book || "bol");
+  if(s.alt)
+    add(s.alt.hist, {ts: s.alt.opened_at, iso: s.alt.iso_open, line: s.alt.cur},
+        s.alt.book);
+
+  // Sort on the ISO value; the display stamp is 12-hour and would put
+  // 01:10 PM ahead of 09:30 AM.
+  rows.sort((a, b) => (b.iso || "").localeCompare(a.iso || ""));
+  return rows;
+}
+
+function histRows(s){
+  const rows = mergedHist(s);
+  const prim = (DATA.books || [])[0] || "betonlineag";
+  const multi = !!s.alt || (s.book && s.book !== prim);
+  const newest = {};                       // first row per book is current
+  return rows.map(h => {
+    const isNew = !newest[h.book] && (newest[h.book] = 1);
+    const isP = h.book === prim || h.book === "bol";
+    const tag = multi
+      ? `<td><span class="bk ${isP ? "bol" : "k"}">`
+      + `${isP ? "BOL" : (BOOKLBL[h.book] || "ALT")}</span></td>` : "";
+    return `<tr><td class="dts">${h.ts}</td>${tag}`
+         + `<td class="${isNew ? "dnow" : ""} ${isP ? "" : "altp"}">${h.line}</td></tr>`;
+  }).join("");
+}
+
+function detailRow(gi, key){
+  const g = DATA.games[gi];
+  if(key === BOX){
+    return `<tr class="det"><td colspan="${DATA.columns.length + 2}">
+              <div class="dwrap">${boxTable(g)}</div></td></tr>`;
+  }
+  const label = DATA.columns.find(c => c.key === key).label;
+  const blocks = (g.markets[key] || []).map(s =>
+    `<div style="display:inline-block;vertical-align:top;margin-right:36px">
+       <div class="dhead">${g.away} @ ${g.home} &mdash; ${label} &mdash; ${s.label}</div>
+       <table>${histRows(s)}</table></div>`).join("");
+  return `<tr class="det"><td colspan="${DATA.columns.length + 2}">
+            <div class="dwrap">${blocks}</div></td></tr>`;
+}
+
+/* ── mobile ──────────────────────────────────────────────────── */
+function mkBlock(g, gi, col){
+  const sides = g.markets[col.key];
+  if(!sides || !sides.length)
+    return `<div class="mk"><div class="mklbl">${col.label}</div>
+            <div class="mkln">&mdash;</div></div>`;
+  const any = sides.some(s => s.changed);
+  const cls = (any ? " hot" : "")
+            + (OPEN && OPEN[0] === gi && OPEN[1] === col.key ? " sel" : "");
+  const click = any ? ` onclick="det(${gi},'${col.key}')"` : "";
+  return `<div class="mk${cls}"${click}><div class="mklbl">${col.label}</div>`
+       + sides.map(s => `<div class="mkln">${sideHTML(s, "cur")}</div>`).join("")
+       + "</div>";
+}
+
+function cardHist(gi, key){
+  const g = DATA.games[gi];
+  if(key === BOX) return `<div class="chist">${boxTable(g)}</div>`;
+  const label = DATA.columns.find(c => c.key === key).label;
+  return '<div class="chist">' + (g.markets[key] || []).map(s =>
+    `<div class="dhead">${label} &mdash; ${s.label}</div>`
+    + (function(){
+        const rows = mergedHist(s), newest = {};
+        return rows.map(h => {
+          const isNew = !newest[h.book] && (newest[h.book] = 1);
+          const tag = s.alt
+            ? `<span class="bk ${h.book}">${h.book === "k"
+                ? (BOOKLBL[s.alt.book] || "ALT") : "BOL"}</span>` : "";
+          return `<div class="hrow"><span class="dts">${h.ts}</span>`
+               + `<span>${tag}<span class="${isNew ? "dnow" : ""} `
+               + `${h.book === "k" ? "altp" : ""}">${h.line}</span></span></div>`;
+        }).join("");
+      })()
+  ).join("") + "</div>";
+}
+
+function card(g, gi){
+  const ar = (g.away_r ?? null) !== null ? ` <span class="run">${g.away_r}</span>` : "";
+  const hr = (g.home_r ?? null) !== null ? ` <span class="run">${g.home_r}</span>` : "";
+  const open = (OPEN && OPEN[0] === gi) ? OPEN[1] : null;
+  const cols = DATA.columns;
+  const cells = cols.map(c => mkBlock(g, gi, c));
+
+  /* Drop the history panel into the grid immediately below the tapped cell
+     rather than at the foot of the card. The grid is two columns, so the row
+     containing cell i ends at i+1 when i is even and at i when it's odd --
+     inserting mid-row would push its neighbour down a line. */
+  if(open && open !== BOX){
+    const i = cols.findIndex(c => c.key === open);
+    if(i >= 0){
+      const endOfRow = (i % 2 === 0) ? i + 1 : i;
+      cells.splice(Math.min(endOfRow, cells.length - 1) + 1, 0,
+                   `<div class="cpanel">${cardHist(gi, open)}</div>`);
     }
-    s=s.trim();
-    if(t==='num'){var n=parseFloat(s.replace(/[^0-9.+-]/g,''));return isNaN(n)?-Infinity:n;}
-    return s.toLowerCase();
-  };
-  // Tables register their re-sort here so the window selector can replay the
-  // current sort after switching. Without it the rows keep the old order
-  // while showing new numbers, which reads exactly like a broken sort.
-  var RESORT=[];
-  document.querySelectorAll('table').forEach(function(tb){
-    var heads=tb.querySelectorAll('thead th');
-    // The sort stack: [{i, t, dir}], first entry is the primary key. A plain
-    // click replaces it; shift/ctrl/cmd-click appends, so "price desc, then
-    // L3g desc" is two clicks.
-    //
-    // Direction rules, all aimed at one click doing what was meant:
-    //   - a numeric column opens descending, a text column ascending. Nobody
-    //     opens an EV column wanting the worst number on top.
-    //   - clicking a key already in the stack flips it and nothing else, so
-    //     the primary stays flippable no matter how many keys are behind it.
-    //   - a key is never removed by clicking its header. Two states on a
-    //     narrow target, not three - overshooting used to delete the key
-    //     instead of flipping it back. Removal lives on the readout below.
-    var stack=[];
-    var bar=null;
-    var addMode=false;
-    var open=function(t){return t==='num'?'desc':'asc';};
-    var label=function(k){
-      var th=heads[k.i];
-      var txt=(th.textContent||'').trim()||'col '+(k.i+1);
-      return txt+' '+(k.dir==='asc'?'\u2191':'\u2193');
-    };
-    var paint=function(){
-      heads.forEach(function(h){
-        h.removeAttribute('data-dir');h.removeAttribute('data-rank');});
-      stack.forEach(function(k,n){
-        heads[k.i].setAttribute('data-dir',k.dir);
-        if(stack.length>1)heads[k.i].setAttribute('data-rank',n+1);
-      });
-      if(!bar)return;
-      // The readout is the roomy control. Header cells on this table are
-      // ~60px wide; these chips are not, so flipping and removing a key are
-      // easier here than up there. The +key chip is also the touch
-      // equivalent of shift-click, since the dashboard table stays on screen
-      // at phone widths and there is no modifier available.
-      var html='';
-      if(stack.length){
-        html='sorted by '+stack.map(function(k,n){
-          return '<span class="key" data-k="'+n+'">'+label(k)+
-                 '<span class="x">\u00d7</span></span>';
-        }).join(' &rsaquo; ')+'<span class="clr wipe">clear</span>';
-      }
-      html+='<span class="clr add'+(addMode?' on':'')+'">+key</span>';
-      bar.innerHTML=html;
-      Array.prototype.forEach.call(bar.querySelectorAll('.key'),function(el){
-        el.addEventListener('click',function(ev){
-          var n=parseInt(el.getAttribute('data-k'),10);
-          if(isNaN(n)||!stack[n])return;
-          if(ev.target&&ev.target.className==='x')stack.splice(n,1);
-          else stack[n].dir=stack[n].dir==='asc'?'desc':'asc';
-          paint();apply();
-        });
-      });
-      var w=bar.querySelector('.wipe');
-      if(w)w.addEventListener('click',function(){stack=[];paint();});
-      var ad=bar.querySelector('.add');
-      if(ad)ad.addEventListener('click',function(){addMode=!addMode;paint();});
-    };
-    var apply=function(){
-      var body=tb.querySelector('tbody');
-      var all=Array.prototype.slice.call(body.querySelectorAll('tr'));
-      var rows=all.filter(function(r){return !r.classList.contains('det');});
-      var dets={};
-      all.forEach(function(r){
-        if(r.classList.contains('det'))dets[r.getAttribute('data-g')]=r;
-      });
-      // Remember the incoming order so the comparator can fall back to it.
-      // Array.prototype.sort is stable in every browser this targets, but
-      // being explicit keeps a full tie from depending on that.
-      rows.forEach(function(r,n){r._n=n;});
-      rows.sort(function(a,b){
-        for(var s=0;s<stack.length;s++){
-          var k=stack[s];
-          if(!a.cells[k.i]||!b.cells[k.i])continue;
-          var x=val(a.cells[k.i],k.t),y=val(b.cells[k.i],k.t);
-          if(x<y)return k.dir==='asc'?-1:1;
-          if(x>y)return k.dir==='asc'?1:-1;
-        }
-        return a._n-b._n;
-      });
-      rows.forEach(function(r){
-        body.appendChild(r);
-        var g=r.getAttribute('data-g');
-        if(g!==null&&dets[g])body.appendChild(dets[g]);
-      });
-    };
-    heads.forEach(function(th,i){
-      if(!th.hasAttribute('data-t'))return;
-      th.setAttribute('tabindex','0');
-      var go=function(add){
-        var t=th.getAttribute('data-t');
-        var at=-1;
-        for(var s=0;s<stack.length;s++)if(stack[s].i===i){at=s;break;}
-        if(at>=0){
-          // Already a key: flip it, leave its position and the rest alone.
-          stack[at].dir=stack[at].dir==='asc'?'desc':'asc';
-        }else if(add){
-          stack.push({i:i,t:t,dir:open(t)});
-        }else{
-          stack=[{i:i,t:t,dir:open(t)}];
-        }
-        paint();apply();
-      };
-      th.addEventListener('click',function(ev){
-        go(ev.shiftKey||ev.ctrlKey||ev.metaKey||addMode);
-      });
-      th.addEventListener('keydown',function(ev){
-        if(ev.key==='Enter'||ev.key===' '){
-          ev.preventDefault();go(ev.shiftKey||addMode);}
-      });
-    });
-    // Readout sits directly above its own table, so a page with two tables
-    // gets two independent stacks and two independent bars.
-    var host=tb.parentNode;
-    bar=document.createElement('div');
-    bar.className='sortbar';
-    host.parentNode.insertBefore(bar,host);
-    RESORT.push(function(){if(stack.length)apply();});
-    paint();
+  }
+  return `<div class="card${g.started ? " started" : ""}">
+    <div class="chead${g.box ? " boxable" : ""}"${g.box ? ` onclick="det(${gi},'${BOX}')"` : ""}>
+      <div>
+        <div class="crow"><span class="tname">${poss(g, "away")}${rk(g.away_rank)}<span class="team">${g.away_short || g.away}</span>${(g.away_p && !g.live && !g.final) ? pit(g.away_p, g.away_ph) : ""}</span>${ar}</div>
+        <div class="crow"><span class="tname">${poss(g, "home")}${rk(g.home_rank)}<span class="team">${g.home_short || g.home}</span>${(g.home_p && !g.live && !g.final) ? pit(g.home_p, g.home_ph) : ""}</span>${hr}</div>
+        ${venueLine(g)}
+        <div class="cstat">${statusLine(g)}${drive(g)}${livemlb(g)}${decisions(g)}${marketProb(g)}</div>
+      </div>
+      <div class="cmeta">${g.time}${g.away_rot ? `<br>${g.away_rot}/${g.home_rot}` : ""}</div>
+    </div>
+    ${open === BOX ? cardHist(gi, BOX) : ""}
+    <div class="mkts">${cells.join("")}</div>
+  </div>`;
+}
+
+/* ── render ──────────────────────────────────────────────────── */
+function renderTabs(){
+  document.getElementById("tabs").innerHTML = SPORTS.map(s =>
+    `<button class="${s.sport === SPORT ? "on" : ""}" onclick="pick('${s.sport}')">`
+    + `${s.label}<span class="n">${s.games}</span></button>`).join("");
+}
+
+async function pick(sport){
+  if(sport === SPORT) return;
+  SPORT = sport;
+  OPEN = null;                      // an open history panel belongs to the old sport
+  history.replaceState(null, "", "?s=" + sport);
+  renderTabs();
+  await loadSport();
+}
+
+function render(){
+  const d = DATA;
+  const moved = d.games.reduce((a, g) => a + g.moves, 0);
+  document.getElementById("meta").textContent =
+    `${d.games.length} games \u00b7 ${moved} moved \u00b7 ${d.generated}`;
+  document.title = `${d.label || ""} odds`.trim();
+
+  document.getElementById("head").innerHTML =
+      '<th class="l">Time</th><th class="l">Teams</th>'
+    + d.columns.map(c => `<th>${c.label}</th>`).join("");
+
+  const rows = [], cards = [];
+  d.games.forEach((g, i) => {
+    const prev = i ? d.games[i - 1] : null;
+    const newSlate = (!prev || g.slate !== prev.slate) && g.slate_lbl;
+    if(newSlate){
+      rows.push(`<tr class="slate"><td colspan="${d.columns.length + 2}">${g.slate_lbl}</td></tr>`);
+      cards.push(`<div class="slab">${g.slate_lbl}</div>`);
+    }
+    const rot = g.away_rot ? `<div class="time">${g.away_rot}<br>${g.home_rot}</div>` : "";
+    rows.push(`<tr class="${i % 2 ? "g1" : "g0"}${g.started ? " started" : ""}">
+        <td class="l time">${g.date}<br>${g.time}${rot}${statusLine(g)}${drive(g)}${livemlb(g)}${decisions(g)}${marketProb(g)}</td>
+        <td class="l${g.box ? " boxable" : ""}"${g.box ? ` onclick="det(${i},'${BOX}')"` : ""}>
+          <div class="trow"><span class="tname">${poss(g, "away")}${rk(g.away_rank)}<span class="team">${g.away_full || g.away}</span></span>${(g.away_r ?? null) !== null ? `<span class="run">${g.away_r}</span>` : ""}</div>
+          ${(g.away_p && !g.live && !g.final) ? pit(g.away_p, g.away_ph) : ""}
+          <div class="trow"><span class="tname">${poss(g, "home")}${rk(g.home_rank)}<span class="team">${g.home_full || g.home}</span></span>${(g.home_r ?? null) !== null ? `<span class="run">${g.home_r}</span>` : ""}</div>
+          ${(g.home_p && !g.live && !g.final) ? pit(g.home_p, g.home_ph) : ""}
+          ${venueLine(g)}
+        </td>
+        ${d.columns.map(c => cell(g.markets[c.key], "cur", i, c.key)).join("")}
+      </tr>`);
+    if(OPEN && OPEN[0] === i) rows.push(detailRow(i, OPEN[1]));
+    cards.push(card(g, i));
   });
-  var tbl=document.querySelector('table'),
-      tb=tbl?tbl.querySelector('tbody'):null;
-  if(tb){
-    tb.addEventListener('click',function(ev){
-      var tr=ev.target.closest('tr.row');
-      if(!tr)return;
-      var g=tr.getAttribute('data-g');
-      var d=tb.querySelector("tr.det[data-g='"+g+"']");
-      if(!d)return;
-      var open=d.classList.toggle('show');
-      tr.classList.toggle('open',open);
-    });
+
+  document.getElementById("body").innerHTML =
+    rows.join("") || '<tr><td class="empty" colspan="12">No games. Run the poller.</td></tr>';
+  document.getElementById("cards").innerHTML =
+    cards.join("") || '<div class="empty">No games. Run the poller.</div>';
+}
+
+function det(gi, key){
+  OPEN = (OPEN && OPEN[0] === gi && OPEN[1] === key) ? null : [gi, key];
+  render();
+}
+
+async function loadSport(){
+  const entry = SPORTS.find(s => s.sport === SPORT);
+  if(!entry){
+    document.getElementById("meta").textContent = "unknown sport " + SPORT;
+    return;
   }
-  var bd=document.querySelector('.board');
-  if(bd){
-    bd.addEventListener('click',function(ev){
-      var c=ev.target.closest('.game');
-      if(c&&c.querySelector('.det2'))c.classList.toggle('open');
-    });
+  let d;
+  try{
+    const r = await fetch(entry.file + "?t=" + Date.now());
+    if(!r.ok) throw new Error("HTTP " + r.status);
+    d = await r.json();
+  }catch(e){
+    document.getElementById("meta").textContent = entry.file + " not loaded \u2014 " + e.message;
+    return;
   }
-  var q=document.getElementById('q'),qn=document.getElementById('qn');
-  if(q){
-    var filter=function(){
-      var v=q.value.trim().toLowerCase(),shown=0,total=0;
-      if(tb){
-        tb.querySelectorAll('tr.row, tr:not(.det):not(.row)').forEach(function(tr){
-          total++;
-          var hit=!v||tr.textContent.toLowerCase().indexOf(v)>-1;
-          tr.style.display=hit?'':'none';
-          if(hit)shown++;
-          var g=tr.getAttribute('data-g');
-          if(g!==null){
-            var d=tb.querySelector("tr.det[data-g='"+g+"']");
-            if(d&&!hit){d.classList.remove('show');tr.classList.remove('open');}
-          }
-        });
-      }
-      if(bd){
-        bd.querySelectorAll('.game').forEach(function(c){
-          var hit=!v||c.textContent.toLowerCase().indexOf(v)>-1;
-          c.style.display=hit?'':'none';
-          if(!hit)c.classList.remove('open');
-        });
-      }
-      // Bet cards are the mobile form of the same rows, so the filter has to
-      // reach them too - otherwise searching on a phone appears to do
-      // nothing. They carry their own count, since on mobile the table rows
-      // above are hidden and would report a total nobody can see.
-      var bcards=document.querySelectorAll('.betboard .bet');
-      if(bcards.length){
-        var bshown=0;
-        bcards.forEach(function(c){
-          var hit=!v||c.textContent.toLowerCase().indexOf(v)>-1;
-          c.style.display=hit?'':'none';
-          if(hit)bshown++;
-        });
-        if(!tb){shown=bshown;total=bcards.length;}
-      }
-      if(qn)qn.textContent=v?shown+' / '+total:'';
-    };
-    q.addEventListener('input',filter);
-    q.addEventListener('keydown',function(ev){
-      if(ev.key==='Escape'){q.value='';filter();}
-    });
+  /* Render failures are a separate problem from fetch failures; reporting them
+     as "not loaded" sends you hunting for a file that arrived fine. */
+  try{
+    CACHE[SPORT] = d;
+    DATA = d;
+    render();
+  }catch(e){
+    document.getElementById("meta").textContent = "render error \u2014 " + e.message;
+    console.error("render failed:", e);
+    console.log("first game:", d.games && d.games[0]);
   }
-  var board=document.querySelector('.board'),sel=document.getElementById('bsort'),
-      btn=document.getElementById('bdir');
-  if(board&&sel){
-    var asc=true;
-    var apply=function(){
-      var k=sel.value,t=sel.options[sel.selectedIndex].getAttribute('data-t');
-      var cards=Array.prototype.slice.call(board.querySelectorAll('.game'));
-      cards.sort(function(a,b){
-        var x=a.getAttribute('data-'+k),y=b.getAttribute('data-'+k);
-        if(t==='num'){x=parseFloat(x);y=parseFloat(y);}
-        else{x=(x||'').toLowerCase();y=(y||'').toLowerCase();}
-        if(x<y)return asc?-1:1;
-        if(x>y)return asc?1:-1;
-        return 0;
+}
+
+/* ── live game state, fetched by the browser ──────────────────────────────
+   Odds refresh on the build cycle (5 min, bounded by what the odds feed
+   itself publishes). Game state doesn't need to ride that clock: both MLB's
+   and ESPN's APIs are unauthenticated and update within seconds, so the page
+   calls them directly and patches scores in place.
+
+   Deliberately fail-quiet. If CORS blocks these, LIVE_OK flips off and the
+   board carries on with build-cycle data -- a broken live overlay must never
+   take the odds board down with it. */
+const LIVE_MS = 30000;
+let LIVE_OK = true, LIVE_TIMER = null;
+
+function patch(g, o){
+  for(const k in o) if(o[k] !== undefined && o[k] !== null) g[k] = o[k];
+}
+
+async function liveMLB(games){
+  const days = [...new Set(games.map(g => g.slate))];
+  for(const d of days){
+    const r = await fetch("https://statsapi.mlb.com/api/v1/schedule"
+      + `?sportId=1&date=${d}&hydrate=linescore`);
+    if(!r.ok) throw new Error("HTTP " + r.status);
+    const j = await r.json();
+    const by = {};
+    for(const day of (j.dates || []))
+      for(const gm of (day.games || [])) by[gm.gamePk] = gm;
+
+    for(const g of games){
+      const gm = by[g.game_pk];
+      if(!gm) continue;
+      const ls = gm.linescore || {}, st = gm.status || {};
+      const inPlay = st.abstractGameState === "Live"
+                  && !["Warmup", "Pre-Game"].includes(st.detailedState);
+      const half = ls.inningHalf || "", inn = ls.currentInning || "";
+      patch(g, {
+        away_r: (ls.teams?.away || {}).runs,
+        home_r: (ls.teams?.home || {}).runs,
+        cur_pitcher: (ls.defense?.pitcher || {}).fullName,
+        live: inPlay, final: st.abstractGameState === "Final",
+        status_text: st.abstractGameState === "Final" ? "Final"
+                   : inPlay ? `${half} ${inn} \u00b7 ${ls.outs ?? 0} out`.trim()
+                   : g.status_text,
       });
-      cards.forEach(function(c){board.appendChild(c);});
-      btn.textContent=asc?'\u2191':'\u2193';
-    };
-    sel.addEventListener('change',apply);
-    btn.addEventListener('click',function(){asc=!asc;apply();});
+    }
   }
-  // Window selector. Every per-window value ships in the page inside a
-  // [data-w] span; switching windows is just setting data-win on the
-  // container and letting CSS decide what shows. No re-render, no lookup
-  // table, and the table keeps whatever sort is already applied.
-  // Point a card (or the page container) at a window: set the attribute the
-  // generated CSS keys off, and move the highlight to the matching cell.
-  var setwin=function(el,w){
-    el.setAttribute('data-win',w);
-    el.querySelectorAll('.wc').forEach(function(c){
-      c.classList.toggle('on',c.getAttribute('data-cell')===w);
+}
+
+async function liveCFB(games){
+  const r = await fetch("https://site.api.espn.com/apis/site/v2/sports/"
+    + "football/college-football/scoreboard?limit=300");
+  if(!r.ok) throw new Error("HTTP " + r.status);
+  const j = await r.json();
+  const by = {};
+  for(const ev of (j.events || [])) by[ev.id] = ev;
+
+  for(const g of games){
+    const ev = by[g.espn_id];
+    if(!ev) continue;
+    const comp = (ev.competitions || [{}])[0];
+    const st = (ev.status || {}).type || {};
+    const sit = comp.situation || {};
+    const side = {};
+    for(const c of (comp.competitors || [])) side[c.homeAway] = c;
+    const poss = Object.keys(side).find(
+      k => String((side[k].team || {}).id) === String(sit.possession));
+    patch(g, {
+      away_r: (side.away || {}).score, home_r: (side.home || {}).score,
+      live: st.state === "in", final: st.state === "post",
+      status_text: st.shortDetail || g.status_text,
+      poss: poss, down: sit.downDistanceText, spot: sit.possessionText,
+      redzone: !!sit.isRedZone,
     });
-  };
-  document.querySelectorAll('.wsel').forEach(function(ws){
-    var host=document.getElementById(ws.getAttribute('data-for'));
-    if(!host)return;
-    var btns=ws.querySelectorAll('button');
-    btns.forEach(function(b){
-      b.addEventListener('click',function(){
-        var w=b.getAttribute('data-w');
-        btns.forEach(function(o){o.classList.remove('on');});
-        b.classList.add('on');
-        host.setAttribute('data-win',w);
-        // Cards carry their own data-win, which outranks the page's. Move
-        // them together or the chip row would appear to do nothing on a
-        // phone, where the cards are all that is visible.
-        host.querySelectorAll('.bet').forEach(function(c){setwin(c,w);});
-        // The per-window columns now hold different numbers, so any active
-        // sort has to run again against them.
-        RESORT.forEach(function(f){f();});
-      });
-    });
-  });
-  // A card's window grid doubles as its own selector: tap a window to read
-  // that window's fair price and edge in the foot, without scrolling back to
-  // the chip row. Scoped to the one card, so two bets can be inspected under
-  // different windows side by side.
-  document.querySelectorAll('.betboard').forEach(function(bb){
-    bb.addEventListener('click',function(ev){
-      var cell=ev.target.closest&&ev.target.closest('.wc');
-      if(!cell)return;
-      var card=cell.closest('.bet');
-      if(card)setwin(card,cell.getAttribute('data-cell'));
-    });
-  });
-})();
+  }
+}
+
+async function refreshLive(){
+  if(!LIVE_OK || !DATA || document.hidden) return;
+  const live = DATA.games.filter(g => g.live);
+  if(!live.length) return;
+  try{
+    if(DATA.sport === "mlb")        await liveMLB(live);
+    else if(DATA.sport === "ncaaf") await liveCFB(live);
+    else return;
+    render();
+  }catch(e){
+    // Almost certainly CORS. Stop retrying rather than erroring every 30s.
+    LIVE_OK = false;
+    console.warn("live refresh disabled:", e.message);
+  }
+}
+
+async function load(){
+  try{
+    const r = await fetch("sports.json?t=" + Date.now());
+    if(!r.ok) throw new Error("HTTP " + r.status);
+    SPORTS = (await r.json()).sports || [];
+  }catch(e){
+    document.getElementById("meta").textContent = "sports.json not loaded \u2014 " + e.message;
+    return;
+  }
+  if(!SPORTS.length) return;
+  if(!SPORT || !SPORTS.some(s => s.sport === SPORT)){
+    /* Prefer the URL, then the first sport that actually has games -- landing
+       on an empty NCAAF board in June looks broken. */
+    SPORT = initialSport()
+         || (SPORTS.find(s => s.games > 0) || SPORTS[0]).sport;
+  }
+  renderTabs();
+  await loadSport();
+}
+load();
+setInterval(load, REFRESH_MS);
+LIVE_TIMER = setInterval(refreshLive, LIVE_MS);
+/* Catch up immediately when a backgrounded tab comes forward, rather than
+   showing stale scores until the next tick. */
+document.addEventListener("visibilitychange", () => {
+  if(!document.hidden) refreshLive();
+});
 </script>
-<footer><div class="wrap">Model output, not advice. Held-out error is about 3.7 runs a game and the model does not yet beat a league-average constant — treat every number as a wide estimate.</div></footer>
-</body></html>
+</body>
+</html>
