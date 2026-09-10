@@ -38,10 +38,10 @@
   "away_p": "Zac Gallen",
   "away_p_hand": "R",
   "away_r": 2,
-  "cur_batter": "Adrian Del Castillo",
-  "cur_pitcher": "Craig Kimbrel",
+  "cur_batter": "Michael Massey",
+  "cur_pitcher": "Michael Soroka",
   "game_pk": 824064,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Daniel Lynch IV",
   "home_p_hand": "L",
   "home_r": 5,
@@ -84,14 +84,16 @@
     "n": 7
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 8
    }
   ],
   "lose_p": null,
   "outs": 2,
-  "pitch_side": "home",
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Craig Kimbrel",
   "rhe_away": [
    2,
    8,
@@ -107,8 +109,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 4.5,
-  "wp_home": 95.5
+  "wp_away": 3.0,
+  "wp_home": 97.0
  },
  "10492fa54f9765a1ae3c65266b20ca1a": {
   "abstract": "Final",
@@ -515,15 +517,15 @@
   "away_p": "Rhett Lowder",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Will Banfield",
-  "cur_pitcher": "Yoshinobu Yamamoto",
+  "cur_batter": "Tommy Edman",
+  "cur_pitcher": "Rhett Lowder",
   "game_pk": 823900,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Yoshinobu Yamamoto",
   "home_p_hand": "R",
   "home_r": 1,
   "in_play": true,
-  "inning": 2,
+  "inning": 3,
   "innings": [
    {
     "a": 0,
@@ -534,13 +536,18 @@
     "a": 0,
     "h": 1,
     "n": 2
+   },
+   {
+    "a": 0,
+    "h": null,
+    "n": 3
    }
   ],
   "lose_p": null,
   "outs": 3,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "pitcher_changed": true,
-  "prev_pitcher": "Rhett Lowder",
+  "prev_pitcher": "Yoshinobu Yamamoto",
   "rhe_away": [
    0,
    1,
@@ -556,8 +563,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 35.39999999999999,
-  "wp_home": 64.60000000000001
+  "wp_away": 34.3,
+  "wp_home": 65.7
  },
  "309bc53328fe78f477537b0dcbef3ddf": {
   "abstract": "Final",
@@ -2293,7 +2300,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -2385,7 +2392,7 @@
    1
   ],
   "save_p": null,
-  "status": "Game Over",
+  "status": "Final",
   "warmup": false,
   "win_p": "Logan Henderson",
   "win_side": "home"
