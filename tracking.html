@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>MLB Projections &middot; Tracking</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --field:#08161B; --panel:#102A31; --panel-2:#173A44;
+  --line:#1F5058;
+  --chalk:#EAF0F6; --muted:#8199B0; --accent:#3FD0C9;
+  --gain:#8CC63F; --loss:#E8615C;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--field);color:var(--chalk);
+  font-family:"Roboto Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  font-size:14px;line-height:1.55;-webkit-text-size-adjust:100%;
+  font-variant-numeric:tabular-nums}
+a{color:var(--accent);text-decoration:none}
+header{border-bottom:1px solid var(--line);background:var(--panel);
+  position:sticky;top:0;z-index:5}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+.brand{display:flex;align-items:baseline;gap:12px;padding:14px 0 0}
+.brand h1{font-weight:700;font-size:22px;letter-spacing:.14em;
+  text-transform:uppercase;margin:0}
+.brand .stamp{font-size:11px;color:var(--muted);letter-spacing:.08em}
+nav{display:flex;gap:4px;padding:10px 0 0}
+nav a{padding:8px 14px;border-radius:6px 6px 0 0;font-size:13px;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
+  font-weight:500}
+nav a.on{background:var(--field);color:var(--chalk);
+  box-shadow:inset 0 2px 0 var(--accent)}
+main{padding:22px 0 60px}
+.note{color:var(--muted);font-size:13px;margin:0 0 18px;max-width:70ch}
+h2{font-weight:700;font-size:16px;letter-spacing:.12em;
+  text-transform:uppercase;margin:26px 0 10px;color:var(--chalk)}
+h2:first-of-type{margin-top:0}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{font-weight:500;font-size:11px;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--muted);
+  text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);
+  white-space:nowrap;background:var(--field)}
+td{padding:9px 10px;border-bottom:1px solid rgba(36,64,92,.5)}
+tbody tr:hover{background:var(--panel)}
+.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.team{font-weight:500}
+.fav{color:var(--accent)}
+.date{color:var(--muted);font-size:13px}
+.pos{color:var(--gain)} .neg{color:var(--loss)}
+.pill{display:inline-block;padding:1px 7px;border-radius:99px;font-size:10px;
+  letter-spacing:.08em;text-transform:uppercase;background:var(--panel-2);
+  color:var(--muted)}
+.board{display:none}
+.game{background:var(--panel);border:1px solid var(--line);border-radius:10px;
+  margin:0 0 10px;overflow:hidden}
+.game .kick{padding:7px 12px;background:var(--panel-2);font-size:11px;
+  letter-spacing:.08em;color:var(--muted);
+  display:flex;justify-content:space-between;align-items:center}
+.game .side{display:flex;justify-content:space-between;align-items:center;
+  padding:10px 12px}
+.game .side + .side{border-top:1px solid rgba(36,64,92,.6)}
+.game .side .nm{font-weight:500;font-size:14px}
+.game .side .sc{font-weight:700;font-size:26px;line-height:1;
+  font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.game .side.win .sc{color:var(--accent)}
+.game .foot{padding:7px 12px;border-top:1px solid rgba(36,64,92,.6);
+  font-size:11px;color:var(--muted);display:flex;gap:14px;
+  letter-spacing:.06em}
+/* ---- bet cards: the mobile form of the Dashboard and Market tables ----
+   Those tables are 12-16 columns wide. Horizontal scrolling works but you
+   cannot compare two bets that way, so on a phone each row becomes a block.
+   Hidden by default and switched on in the 760px query, mirroring .board. */
+.betboard{display:none}
+.bet{background:var(--panel);border:1px solid var(--line);border-radius:10px;
+  margin:0 0 10px;overflow:hidden}
+.bet .top{padding:8px 12px;background:var(--panel-2);display:flex;
+  justify-content:space-between;align-items:center;gap:10px}
+.bet .top .gm{font-weight:500;font-size:13px}
+.bet .top .pr{font-variant-numeric:tabular-nums;font-weight:700;font-size:15px}
+.bet .pick{padding:9px 12px;display:flex;justify-content:space-between;
+  align-items:baseline;gap:10px;border-bottom:1px solid rgba(36,64,92,.6)}
+.bet .pick .who{font-weight:700;font-size:15px;letter-spacing:.02em}
+.bet .pick .ev{font-weight:700;font-size:19px;font-variant-numeric:tabular-nums}
+/* The window grid is the whole point of the card: seven small cells, each a
+   window and its EV, so the spread across windows is visible at a glance
+   without scrolling anything. */
+.bet .wins{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+  background:rgba(36,64,92,.6)}
+.bet .wins div{background:var(--panel);padding:6px 4px;text-align:center}
+/* Each cell is also this card's window selector, so it needs to look
+   pressable and show which one is active. */
+.bet .wins .wc{cursor:pointer;touch-action:manipulation;
+  box-shadow:inset 0 0 0 0 var(--accent);transition:box-shadow .12s}
+.bet .wins .wc.on{background:var(--panel-2);
+  box-shadow:inset 0 0 0 1px var(--accent)}
+.bet .wins .wc.on .w{color:var(--accent)}
+.bet .wins .w{font-size:9px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--muted);display:block}
+.bet .wins .e{font-size:12px;font-weight:700;font-variant-numeric:tabular-nums;
+  display:block;margin-top:2px}
+.bet .wins .p{font-size:10px;color:var(--muted);display:block}
+.bet .foot{padding:7px 12px;font-size:11px;color:var(--muted);display:flex;
+  flex-wrap:wrap;gap:12px;letter-spacing:.06em;
+  border-top:1px solid rgba(36,64,92,.6)}
+.bet .foot b{color:var(--chalk);font-weight:500}
+/* ---- window selector ----
+   Market carries per-window Fair / Edge / Model win, which cannot all be
+   columns at once. Every window's value ships in the HTML as a [data-w]
+   span and the selector just sets data-win on the container; the rules that
+   do the showing are generated per window in site_all.py, because only it
+   knows the window labels. */
+.wsel{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:0 0 12px}
+.wsel .lb{font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--muted);margin-right:2px}
+.wsel button{background:var(--panel);color:var(--muted);border:1px solid var(--line);
+  border-radius:99px;padding:5px 11px;font-family:inherit;font-size:12px;
+  cursor:pointer;touch-action:manipulation}
+.wsel button:hover{color:var(--chalk)}
+.wsel button.on{background:var(--panel-2);color:var(--accent);
+  border-color:var(--accent)}
+@media(max-width:760px){
+  .tbl{display:none}
+  .board{display:block}
+  /* A bet table wrapped in .betscroll gives way to its card board. The
+     sortbar and the swipe hint go with it - both are table affordances. */
+  .betscroll{display:none}
+  .betboard{display:block}
+  .betscroll + .sortbar,.betscroll .swipe{display:none}
+  .wrap{padding:0 12px}
+}
+th[data-t]{cursor:pointer;user-select:none;position:relative;
+  touch-action:manipulation}
+th[data-t]:hover{color:var(--chalk)}
+th[data-t]:active{color:var(--accent)}
+th[data-t]::after{content:"";opacity:.35;margin-left:6px;font-size:10px}
+th[data-t][data-dir="asc"]::after{content:"\2191";opacity:1;color:var(--accent)}
+th[data-t][data-dir="desc"]::after{content:"\2193";opacity:1;color:var(--accent)}
+th[data-t]:not([data-dir])::after{content:"\2195"}
+/* Rank badge for a multi-key sort. Only drawn from the second key on: a
+   lone "1" on a single-column sort is noise, and that is the common case. */
+th[data-t][data-rank]::before{content:attr(data-rank);font-size:9px;
+  color:var(--accent);opacity:.85;margin-right:4px;vertical-align:super}
+.sortbar{color:var(--muted);font-size:12px;margin:0 0 8px;min-height:16px;
+  display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.sortbar .key{color:var(--accent);cursor:pointer;padding:3px 4px 3px 7px;
+  border:1px solid var(--line);border-radius:4px;white-space:nowrap;
+  touch-action:manipulation}
+.sortbar .key:hover{border-color:var(--accent)}
+.sortbar .key .x{display:inline-block;margin-left:5px;padding:0 4px;
+  color:var(--muted);font-size:13px;line-height:1}
+.sortbar .key .x:hover{color:var(--chalk)}
+.sortbar .clr{color:var(--muted);cursor:pointer;padding:3px 6px;
+  border-bottom:1px dotted var(--line);touch-action:manipulation}
+.sortbar .clr:hover{color:var(--chalk)}
+.sortbar .clr.on{color:var(--accent);border-bottom-style:solid}
+.tools{display:flex;gap:8px;align-items:center;margin:0 0 14px}
+.tools input{flex:1;background:var(--panel);color:var(--chalk);
+  border:1px solid var(--line);border-radius:6px;padding:9px 11px;
+  font-family:inherit;font-size:13px}
+.tools input::placeholder{color:var(--muted)}
+.tools .count{font-size:11px;color:var(--muted);letter-spacing:.08em;
+  white-space:nowrap}
+tr.row{cursor:pointer}
+tr.row td:first-child{position:relative;padding-left:22px}
+tr.row td:first-child::before{content:"\203A";position:absolute;left:8px;
+  color:var(--muted);transition:transform .12s;display:inline-block}
+tr.row.open td:first-child::before{transform:rotate(90deg);color:var(--accent)}
+tr.det{display:none}
+tr.det.show{display:table-row}
+tr.det > td{background:var(--panel);padding:14px 16px}
+.mx{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.mx h4{margin:0 0 8px;font-size:12px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--accent);font-weight:500}
+.mx table{font-size:12px}
+.mx td{padding:3px 6px;border:0}
+.mx .k{color:var(--muted)}
+.mx .v{text-align:right;font-variant-numeric:tabular-nums}
+table.wingrid{font-size:12px;margin-top:4px}
+table.wingrid th{padding:4px 8px;background:transparent;border-bottom:1px solid var(--line)}
+table.wingrid th.v{text-align:right}
+table.wingrid td{padding:4px 8px;border-bottom:1px solid rgba(36,64,92,.35)}
+table.wingrid td.k{color:var(--muted);text-align:left;white-space:nowrap}
+table.wingrid td.v{text-align:right;font-variant-numeric:tabular-nums}
+table.wingrid tr.shared td{color:var(--muted)}
+table.wingrid tr.shared td.v{color:var(--chalk)}
+.game .det2{display:none;padding:12px;border-top:1px solid var(--line);
+  background:var(--panel-2)}
+.game.open .det2{display:block}
+.game .kick{cursor:pointer}
+@media(max-width:760px){.mx{grid-template-columns:1fr}}
+/* Wide tables scroll sideways instead of being clipped. The first column is
+   pinned so the team name stays visible while the numbers move under it -
+   without that, a horizontally scrolled row is unreadable. */
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;
+  scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+.scroll > table{min-width:max-content}
+.scroll::-webkit-scrollbar{height:6px}
+.scroll::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}
+.pin th:first-child,.pin td:first-child{position:sticky;left:0;z-index:2;
+  background:var(--field)}
+.pin tbody tr:hover td:first-child{background:var(--panel)}
+tr.det .pin th:first-child,tr.det .pin td:first-child,
+.det2 .pin th:first-child,.det2 .pin td:first-child{background:var(--panel)}
+.det2 .pin th:first-child,.det2 .pin td:first-child{background:var(--panel-2)}
+.scroll{max-width:100%}
+.wingrid.pin td.k,.wingrid.pin th.k{position:sticky;left:0;z-index:2;
+  background:var(--panel);min-width:104px}
+.det2 .wingrid.pin td.k,.det2 .wingrid.pin th.k{background:var(--panel-2)}
+.wingrid th.v,.wingrid td.v{min-width:56px}
+/* The dashboard is a single slate, so every Date cell holds the same string.
+   Pinning it - which is what .pin does by default - locks the one column
+   that carries no per-row information and lets the matchup scroll away.
+   Release Date and pin Game in its place, at every width. Date still
+   scrolls, passing under the pinned cell, which is why Game needs its own
+   background and a z-index above it.
+
+   nth-child(2), not :first-child - the Date column stays in the DOM (the
+   sort handler indexes cells positionally via cells[k.i], so removing or
+   hiding it structurally would break sorting on everything to its right). */
+.dash th:first-child,.dash td:first-child{position:static}
+.dash th:nth-child(2),.dash td:nth-child(2){position:sticky;left:0;z-index:2;
+  background:var(--field);box-shadow:1px 0 0 var(--line)}
+.dash tbody tr:hover td:nth-child(2){background:var(--panel)}
+.det2 .dash th:nth-child(2),.det2 .dash td:nth-child(2){background:var(--panel-2)}
+@media(max-width:760px){
+  th[data-t]{padding:11px 10px}   /* larger tap target for sorting */
+  tr.det > td{padding:12px 10px}
+  .mx{gap:12px}
+  .wingrid{font-size:11px}
+  .wingrid th,.wingrid td{padding:4px 6px}
+  /* On a phone the repeated date is not just redundant, it costs ~90px of a
+     ~380px viewport. Desktop has the room, so it keeps it. */
+  .dash th:first-child,.dash td:first-child{display:none}
+}
+.swipe{display:none;font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted);margin:0 0 4px}
+@media(max-width:760px){.swipe{display:block}}
+.sorter{display:none;margin:0 0 12px;gap:8px;align-items:center}
+.sorter label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--muted)}
+.sorter select{background:var(--panel);color:var(--chalk);
+  border:1px solid var(--line);border-radius:6px;padding:7px 9px;
+  font-family:inherit;font-size:13px;flex:1}
+.sorter button{background:var(--panel);color:var(--chalk);
+  border:1px solid var(--line);border-radius:6px;padding:7px 11px;
+  font-family:inherit;font-size:13px;cursor:pointer}
+@media(max-width:760px){.sorter{display:flex}}
+.prose{max-width:78ch}
+.prose h3{font-size:14px;letter-spacing:.1em;text-transform:uppercase;
+  margin:28px 0 8px;color:var(--accent);font-weight:500}
+.prose p{margin:0 0 12px;color:#C4D2DF}
+.prose code{background:var(--panel);padding:1px 5px;border-radius:4px;
+  font-size:12px;color:var(--chalk)}
+.prose ul{margin:0 0 14px;padding-left:18px;color:#C4D2DF}
+.prose li{margin:0 0 6px}
+.toc{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 20px}
+.toc a{background:var(--panel);border:1px solid var(--line);border-radius:6px;
+  padding:5px 10px;font-size:12px;color:var(--chalk)}
+.toc a:hover{border-color:var(--accent)}
+.hit{color:var(--gain)} .miss{color:var(--loss)}
+.big{display:flex;gap:22px;flex-wrap:wrap;margin:0 0 20px}
+.big div{background:var(--panel);border:1px solid var(--line);
+  border-radius:8px;padding:12px 16px;min-width:120px}
+.big .n{font-size:24px;font-weight:700;font-variant-numeric:tabular-nums}
+.big .l{font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted);margin-top:2px}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:12px;
+  padding:16px 0 40px}
+header .wrap{position:relative}
+.portal{position:absolute;right:16px;bottom:9px;
+  display:inline-flex;align-items:center;gap:7px;
+  background:#3FD0C9;color:#08161B;
+  font-family:inherit;font-size:12px;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;
+  padding:8px 14px;border-radius:8px;white-space:nowrap;
+  box-shadow:0 3px 14px rgba(63,208,201,.30),0 1px 0 rgba(255,255,255,.10);
+  transition:transform .12s,box-shadow .12s,filter .12s}
+.portal:hover{color:#08161B;transform:translateY(-2px);filter:brightness(1.08);
+  box-shadow:0 6px 20px rgba(63,208,201,.42),0 1px 0 rgba(255,255,255,.14)}
+.portal:active{transform:translateY(0)}
+.portal:focus-visible{outline:2px solid var(--chalk);outline-offset:3px}
+.portal .ar{font-size:13px;line-height:1}
+@media(min-width:761px){.brand{padding-right:170px;flex-wrap:wrap}}
+@media(max-width:760px){
+  .portal{position:static;margin:10px 0 2px;font-size:11px;padding:7px 12px}
+}
+</style></head>
+<body><header><div class="wrap">
+<div class="brand"><h1>MLB Projections</h1>
+<span class="stamp">MLB &middot; built Sep 10, 2026 06:53</span></div>
+<nav><a href="index.html" class="">Dashboard</a><a href="games.html" class="">Games</a><a href="form.html" class="">Form</a><a href="ev.html" class="">Market</a><a href="tracking.html" class="on">Tracking</a><a href="teams.html" class="">Teams</a><a href="about.html" class="">About</a></nav>
+<a class="portal" href="https://volanalytics.github.io/Portal/"><span class="ar">&#8592;</span> All Models</a>
+</div></header>
+<main><div class="wrap"><div class='big'><div><div class='n'>299</div><div class='l'>games</div></div><div><div class='n'>-0.17</div><div class='l'>bias</div></div><div><div class='n'>3.65</div><div class='l'>MAE</div></div><div><div class='n'>3.62</div><div class='l'>naive MAE</div></div><div><div class='n'>50%</div><div class='l'>over/under called</div></div></div><div class='tools'><input id='q' type='search' placeholder='Filter…' autocomplete='off'><span class='count' id='qn'></span></div><div class='swipe'>swipe for more columns &rarr;</div><div class='scroll'><table class='pin'><thead><tr><th data-t='num'>Date</th><th data-t='txt'>Game</th><th class='num' data-t='num'>Proj</th><th class='num' data-t='num'>Actual</th><th class='num' data-t='num'>Error</th><th class='num' data-t='num'>P(over)</th><th data-t='txt'>Result</th><th></th></tr></thead><tbody><tr><td class='date' data-v='20260909'>2026-09-09</td><td class='team'>TEX @ SEA</td><td class='num'>8.71</td><td class='num'>5</td><td class='num '>+3.71</td><td class='num'>50%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260909'>2026-09-09</td><td class='team'>STL @ SF</td><td class='num'>8.62</td><td class='num'>13</td><td class='num '>-4.38</td><td class='num'>49%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260909'>2026-09-09</td><td class='team'>WSH @ SD</td><td class='num'>8.18</td><td class='num'>11</td><td class='num '>-2.82</td><td class='num'>45%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260909'>2026-09-09</td><td class='team'>HOU @ PHI</td><td class='num'>8.78</td><td class='num'>18</td><td class='num miss'>-9.22</td><td class='num'>51%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260909'>2026-09-09</td><td class='team'>COL @ NYY</td><td class='num'>9.95</td><td class='num'>7</td><td class='num '>+2.95</td><td class='num'>52%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260909'>2026-09-09</td><td class='team'>CHC @ MIL</td><td class='num'>8.13</td><td class='num'>14</td><td class='num miss'>-5.87</td><td class='num'>44%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260909'>2026-09-09</td><td class='team'>NYM @ MIA</td><td class='num'>8.53</td><td class='num'>29</td><td class='num miss'>-20.47</td><td class='num'>49%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260909'>2026-09-09</td><td class='team'>CIN @ LAD</td><td class='num'>9.01</td><td class='num'>15</td><td class='num miss'>-5.99</td><td class='num'>53%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260909'>2026-09-09</td><td class='team'>AZ @ KC</td><td class='num'>9.56</td><td class='num'>7</td><td class='num '>+2.56</td><td class='num'>58%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260909'>2026-09-09</td><td class='team'>MIN @ DET</td><td class='num'>8.52</td><td class='num'>9</td><td class='num hit'>-0.48</td><td class='num'>48%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260909'>2026-09-09</td><td class='team'>PIT @ CWS</td><td class='num'>8.80</td><td class='num'>6</td><td class='num '>+2.80</td><td class='num'>51%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260909'>2026-09-09</td><td class='team'>LAA @ BOS</td><td class='num'>8.00</td><td class='num'>10</td><td class='num hit'>-2.00</td><td class='num'>43%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260909'>2026-09-09</td><td class='team'>CLE @ BAL</td><td class='num'>8.27</td><td class='num'>14</td><td class='num miss'>-5.73</td><td class='num'>46%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260909'>2026-09-09</td><td class='team'>TB @ ATL</td><td class='num'>9.48</td><td class='num'>9</td><td class='num hit'>+0.48</td><td class='num'>57%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260909'>2026-09-09</td><td class='team'>TOR @ ATH</td><td class='num'>10.21</td><td class='num'>2</td><td class='num miss'>+8.21</td><td class='num'>54%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260908'>2026-09-08</td><td class='team'>TEX @ SEA</td><td class='num'>8.58</td><td class='num'>15</td><td class='num miss'>-6.42</td><td class='num'>48%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260908'>2026-09-08</td><td class='team'>STL @ SF</td><td class='num'>8.29</td><td class='num'>3</td><td class='num miss'>+5.29</td><td class='num'>46%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260908'>2026-09-08</td><td class='team'>WSH @ SD</td><td class='num'>7.50</td><td class='num'>9</td><td class='num hit'>-1.50</td><td class='num'>37%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260908'>2026-09-08</td><td class='team'>HOU @ PHI</td><td class='num'>9.19</td><td class='num'>11</td><td class='num hit'>-1.81</td><td class='num'>55%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260908'>2026-09-08</td><td class='team'>COL @ NYY</td><td class='num'>8.67</td><td class='num'>8</td><td class='num hit'>+0.67</td><td class='num'>50%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260908'>2026-09-08</td><td class='team'>CHC @ MIL</td><td class='num'>8.22</td><td class='num'>7</td><td class='num hit'>+1.22</td><td class='num'>45%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260908'>2026-09-08</td><td class='team'>NYM @ MIA</td><td class='num'>7.91</td><td class='num'>12</td><td class='num '>-4.09</td><td class='num'>42%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260908'>2026-09-08</td><td class='team'>CIN @ LAD</td><td class='num'>8.64</td><td class='num'>5</td><td class='num '>+3.64</td><td class='num'>49%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260908'>2026-09-08</td><td class='team'>AZ @ KC</td><td class='num'>8.96</td><td class='num'>8</td><td class='num hit'>+0.96</td><td class='num'>52%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260908'>2026-09-08</td><td class='team'>MIN @ DET</td><td class='num'>8.87</td><td class='num'>5</td><td class='num '>+3.87</td><td class='num'>52%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260908'>2026-09-08</td><td class='team'>PIT @ CWS</td><td class='num'>8.50</td><td class='num'>12</td><td class='num '>-3.50</td><td class='num'>48%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260908'>2026-09-08</td><td class='team'>LAA @ BOS</td><td class='num'>7.74</td><td class='num'>7</td><td class='num hit'>+0.74</td><td class='num'>40%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260908'>2026-09-08</td><td class='team'>CLE @ BAL</td><td class='num'>8.24</td><td class='num'>14</td><td class='num miss'>-5.76</td><td class='num'>45%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260908'>2026-09-08</td><td class='team'>TB @ ATL</td><td class='num'>9.13</td><td class='num'>8</td><td class='num hit'>+1.13</td><td class='num'>54%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260908'>2026-09-08</td><td class='team'>TOR @ ATH</td><td class='num'>10.18</td><td class='num'>6</td><td class='num '>+4.18</td><td class='num'>54%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260907'>2026-09-07</td><td class='team'>STL @ SF</td><td class='num'>8.38</td><td class='num'>9</td><td class='num hit'>-0.62</td><td class='num'>47%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260907'>2026-09-07</td><td class='team'>WSH @ SD</td><td class='num'>7.76</td><td class='num'>5</td><td class='num '>+2.76</td><td class='num'>40%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260907'>2026-09-07</td><td class='team'>ATL @ PHI</td><td class='num'>8.68</td><td class='num'>1</td><td class='num miss'>+7.68</td><td class='num'>50%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260907'>2026-09-07</td><td class='team'>CHC @ MIL</td><td class='num'>8.36</td><td class='num'>7</td><td class='num hit'>+1.36</td><td class='num'>46%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260907'>2026-09-07</td><td class='team'>NYM @ MIA</td><td class='num'>8.24</td><td class='num'>13</td><td class='num '>-4.76</td><td class='num'>45%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260907'>2026-09-07</td><td class='team'>CIN @ LAD</td><td class='num'>8.33</td><td class='num'>9</td><td class='num hit'>-0.67</td><td class='num'>46%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260907'>2026-09-07</td><td class='team'>AZ @ KC</td><td class='num'>8.67</td><td class='num'>9</td><td class='num hit'>-0.33</td><td class='num'>50%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260907'>2026-09-07</td><td class='team'>MIN @ DET</td><td class='num'>8.07</td><td class='num'>9</td><td class='num hit'>-0.93</td><td class='num'>43%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260907'>2026-09-07</td><td class='team'>LAA @ BOS</td><td class='num'>8.73</td><td class='num'>7</td><td class='num hit'>+1.73</td><td class='num'>50%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260907'>2026-09-07</td><td class='team'>CLE @ BAL</td><td class='num'>7.73</td><td class='num'>10</td><td class='num '>-2.27</td><td class='num'>40%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260907'>2026-09-07</td><td class='team'>TOR @ ATH</td><td class='num'>8.71</td><td class='num'>11</td><td class='num '>-2.29</td><td class='num'>49%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260906'>2026-09-06</td><td class='team'>TB @ TEX</td><td class='num'>7.87</td><td class='num'>14</td><td class='num miss'>-6.13</td><td class='num'>42%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260906'>2026-09-06</td><td class='team'>ATH @ SEA</td><td class='num'>8.55</td><td class='num'>2</td><td class='num miss'>+6.55</td><td class='num'>48%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260906'>2026-09-06</td><td class='team'>NYY @ SD</td><td class='num'>7.55</td><td class='num'>7</td><td class='num hit'>+0.55</td><td class='num'>38%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260906'>2026-09-06</td><td class='team'>LAA @ PIT</td><td class='num'>8.68</td><td class='num'>1</td><td class='num miss'>+7.68</td><td class='num'>50%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260906'>2026-09-06</td><td class='team'>ATL @ PHI</td><td class='num'>9.66</td><td class='num'>9</td><td class='num hit'>+0.66</td><td class='num'>50%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260906'>2026-09-06</td><td class='team'>SF @ NYM</td><td class='num'>8.35</td><td class='num'>6</td><td class='num '>+2.35</td><td class='num'>46%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260906'>2026-09-06</td><td class='team'>CHC @ MIA</td><td class='num'>8.97</td><td class='num'>13</td><td class='num '>-4.03</td><td class='num'>52%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260906'>2026-09-06</td><td class='team'>WSH @ LAD</td><td class='num'>8.85</td><td class='num'>12</td><td class='num '>-3.15</td><td class='num'>51%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260906'>2026-09-06</td><td class='team'>TOR @ KC</td><td class='num'>9.35</td><td class='num'>7</td><td class='num '>+2.35</td><td class='num'>56%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260906'>2026-09-06</td><td class='team'>AZ @ HOU</td><td class='num'>8.08</td><td class='num'>5</td><td class='num '>+3.08</td><td class='num'>43%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260906'>2026-09-06</td><td class='team'>STL @ COL</td><td class='num'>9.82</td><td class='num'>18</td><td class='num miss'>-8.18</td><td class='num'>51%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260906'>2026-09-06</td><td class='team'>DET @ CLE</td><td class='num'>8.95</td><td class='num'>5</td><td class='num '>+3.95</td><td class='num'>52%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260906'>2026-09-06</td><td class='team'>MIL @ CIN</td><td class='num'>8.85</td><td class='num'>20</td><td class='num miss'>-11.15</td><td class='num'>52%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260906'>2026-09-06</td><td class='team'>MIN @ CWS</td><td class='num'>8.86</td><td class='num'>11</td><td class='num '>-2.14</td><td class='num'>51%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260906'>2026-09-06</td><td class='team'>BOS @ BAL</td><td class='num'>8.10</td><td class='num'>4</td><td class='num '>+4.10</td><td class='num'>44%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260905'>2026-09-05</td><td class='team'>TB @ TEX</td><td class='num'>8.11</td><td class='num'>9</td><td class='num hit'>-0.89</td><td class='num'>44%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260905'>2026-09-05</td><td class='team'>ATH @ SEA</td><td class='num'>9.14</td><td class='num'>8</td><td class='num hit'>+1.14</td><td class='num'>54%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260905'>2026-09-05</td><td class='team'>NYY @ SD</td><td class='num'>7.61</td><td class='num'>6</td><td class='num hit'>+1.61</td><td class='num'>39%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260905'>2026-09-05</td><td class='team'>LAA @ PIT</td><td class='num'>8.56</td><td class='num'>7</td><td class='num hit'>+1.56</td><td class='num'>49%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260905'>2026-09-05</td><td class='team'>ATL @ PHI</td><td class='num'>9.02</td><td class='num'>6</td><td class='num '>+3.02</td><td class='num'>53%</td><td class='num miss'>under</td><td></td></tr><tr><td class='date' data-v='20260905'>2026-09-05</td><td class='team'>SF @ NYM</td><td class='num'>8.60</td><td class='num'>14</td><td class='num miss'>-5.40</td><td class='num'>49%</td><td class='num miss'>over</td><td></td></tr><tr><td class='date' data-v='20260905'>2026-09-05</td><td class='team'>CHC @ MIA</td><td class='num'>8.84</td><td class='num'>11</td><td class='num '>-2.16</td><td class='num'>51%</td><td class='num hit'>over</td><td></td></tr><tr><td class='date' data-v='20260905'>2026-09-05</td><td class='team'>WSH @ LAD</td><td class='num'>8.15</td><td class='num'>11</td><td class='num '>-2.85</td><td class='num'>44%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260905'>2026-09-05</td><td class='team'>TOR @ KC</td><td class='num'>9.55</td><td class='num'>7</td><td class='num '>+2.55</td><td class='num'>58%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260905'>2026-09-05</td><td class='team'>AZ @ HOU</td><td class='num'>8.78</td><td class='num'>7</td><td class='num hit'>+1.78</td><td class='num'>51%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260905'>2026-09-05</td><td class='team'>STL @ COL</td><td class='num'>9.96</td><td class='num'>17</td><td class='num miss'>-7.04</td><td class='num'>52%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260905'>2026-09-05</td><td class='team'>DET @ CLE</td><td class='num'>7.56</td><td class='num'>6</td><td class='num hit'>+1.56</td><td class='num'>38%</td><td class='num hit'>under</td><td></td></tr><tr><td class='date' data-v='20260905'>2026-09-05</td><td class='team'>MIL @ CIN</td><td class='num'>8.89</td><td class='num'>8</td><td class='num hit'>+0.89</td><td class='num'>52%</td><td class='num miss'>under</td><td></td></tr><tr><td class='date' data-v='20260905'>2026-09-05</td><td class='team'>MIN @ CWS</td><td class='num'>8.82</td><td class='num'>10</td><td class='num hit'>-1.18</td><td class='num'>51%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260905'>2026-09-05</td><td class='team'>BOS @ BAL</td><td class='num'>8.60</td><td class='num'>5</td><td class='num '>+3.60</td><td class='num'>49%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260904'>2026-09-04</td><td class='team'>TB @ TEX</td><td class='num'>8.90</td><td class='num'>13</td><td class='num '>-4.10</td><td class='num'>52%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260904'>2026-09-04</td><td class='team'>ATH @ SEA</td><td class='num'>8.28</td><td class='num'>13</td><td class='num '>-4.72</td><td class='num'>46%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260904'>2026-09-04</td><td class='team'>NYY @ SD</td><td class='num'>7.73</td><td class='num'>5</td><td class='num '>+2.73</td><td class='num'>40%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260904'>2026-09-04</td><td class='team'>LAA @ PIT</td><td class='num'>9.51</td><td class='num'>1</td><td class='num miss'>+8.51</td><td class='num'>57%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260904'>2026-09-04</td><td class='team'>ATL @ PHI</td><td class='num'>8.01</td><td class='num'>7</td><td class='num hit'>+1.01</td><td class='num'>43%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260904'>2026-09-04</td><td class='team'>SF @ NYM</td><td class='num'>8.24</td><td class='num'>16</td><td class='num miss'>-7.76</td><td class='num'>45%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260904'>2026-09-04</td><td class='team'>CHC @ MIA</td><td class='num'>8.54</td><td class='num'>7</td><td class='num hit'>+1.54</td><td class='num'>48%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260904'>2026-09-04</td><td class='team'>WSH @ LAD</td><td class='num'>8.77</td><td class='num'>8</td><td class='num hit'>+0.77</td><td class='num'>51%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260904'>2026-09-04</td><td class='team'>TOR @ KC</td><td class='num'>8.71</td><td class='num'>11</td><td class='num '>-2.29</td><td class='num'>50%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260904'>2026-09-04</td><td class='team'>AZ @ HOU</td><td class='num'>9.77</td><td class='num'>4</td><td class='num miss'>+5.77</td><td class='num'>51%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260904'>2026-09-04</td><td class='team'>STL @ COL</td><td class='num'>10.37</td><td class='num'>13</td><td class='num '>-2.63</td><td class='num'>56%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260904'>2026-09-04</td><td class='team'>DET @ CLE</td><td class='num'>8.11</td><td class='num'>7</td><td class='num hit'>+1.11</td><td class='num'>44%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260904'>2026-09-04</td><td class='team'>DET @ CLE</td><td class='num'>8.20</td><td class='num'>13</td><td class='num '>-4.80</td><td class='num'>45%</td><td class='num miss'>over</td><td></td></tr><tr><td class='date' data-v='20260904'>2026-09-04</td><td class='team'>MIL @ CIN</td><td class='num'>9.05</td><td class='num'>17</td><td class='num miss'>-7.95</td><td class='num'>53%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260904'>2026-09-04</td><td class='team'>MIN @ CWS</td><td class='num'>9.20</td><td class='num'>5</td><td class='num '>+4.20</td><td class='num'>55%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260904'>2026-09-04</td><td class='team'>BOS @ BAL</td><td class='num'>8.12</td><td class='num'>1</td><td class='num miss'>+7.12</td><td class='num'>44%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260903'>2026-09-03</td><td class='team'>TB @ TEX</td><td class='num'>8.39</td><td class='num'>6</td><td class='num '>+2.39</td><td class='num'>47%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260903'>2026-09-03</td><td class='team'>ATH @ SEA</td><td class='num'>8.51</td><td class='num'>11</td><td class='num '>-2.49</td><td class='num'>48%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260903'>2026-09-03</td><td class='team'>SF @ PIT</td><td class='num'>9.38</td><td class='num'>7</td><td class='num '>+2.38</td><td class='num'>56%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260903'>2026-09-03</td><td class='team'>STL @ LAD</td><td class='num'>8.13</td><td class='num'>5</td><td class='num '>+3.13</td><td class='num'>44%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260903'>2026-09-03</td><td class='team'>MIA @ KC</td><td class='num'>8.93</td><td class='num'>10</td><td class='num hit'>-1.07</td><td class='num'>52%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260903'>2026-09-03</td><td class='team'>CWS @ HOU</td><td class='num'>9.32</td><td class='num'>8</td><td class='num hit'>+1.32</td><td class='num'>56%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260903'>2026-09-03</td><td class='team'>TOR @ CLE</td><td class='num'>8.86</td><td class='num'>9</td><td class='num hit'>-0.14</td><td class='num'>52%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260903'>2026-09-03</td><td class='team'>MIL @ CHC</td><td class='num'>8.62</td><td class='num'>3</td><td class='num miss'>+5.62</td><td class='num'>49%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260903'>2026-09-03</td><td class='team'>BOS @ BAL</td><td class='num'>7.86</td><td class='num'>11</td><td class='num '>-3.14</td><td class='num'>42%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260902'>2026-09-02</td><td class='team'>ATL @ WSH</td><td class='num'>9.33</td><td class='num'>9</td><td class='num hit'>+0.33</td><td class='num'>56%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260902'>2026-09-02</td><td class='team'>ATH @ TEX</td><td class='num'>8.37</td><td class='num'>11</td><td class='num '>-2.63</td><td class='num'>47%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260902'>2026-09-02</td><td class='team'>NYM @ TB</td><td class='num'>8.69</td><td class='num'>14</td><td class='num miss'>-5.31</td><td class='num'>50%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260902'>2026-09-02</td><td class='team'>SF @ PIT</td><td class='num'>9.34</td><td class='num'>9</td><td class='num hit'>+0.34</td><td class='num'>56%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260902'>2026-09-02</td><td class='team'>DET @ MIN</td><td class='num'>9.17</td><td class='num'>17</td><td class='num miss'>-7.83</td><td class='num'>55%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260902'>2026-09-02</td><td class='team'>STL @ LAD</td><td class='num'>8.20</td><td class='num'>14</td><td class='num miss'>-5.80</td><td class='num'>45%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260902'>2026-09-02</td><td class='team'>NYY @ LAA</td><td class='num'>6.64</td><td class='num'>9</td><td class='num '>-2.36</td><td class='num'>28%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260902'>2026-09-02</td><td class='team'>MIA @ KC</td><td class='num'>8.36</td><td class='num'>15</td><td class='num miss'>-6.64</td><td class='num'>46%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260902'>2026-09-02</td><td class='team'>CWS @ HOU</td><td class='num'>8.72</td><td class='num'>2</td><td class='num miss'>+6.72</td><td class='num'>50%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260902'>2026-09-02</td><td class='team'>BAL @ COL</td><td class='num'>9.60</td><td class='num'>11</td><td class='num hit'>-1.40</td><td class='num'>49%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260902'>2026-09-02</td><td class='team'>TOR @ CLE</td><td class='num'>8.09</td><td class='num'>11</td><td class='num '>-2.91</td><td class='num'>44%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260902'>2026-09-02</td><td class='team'>SD @ CIN</td><td class='num'>8.57</td><td class='num'>10</td><td class='num hit'>-1.43</td><td class='num'>49%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260902'>2026-09-02</td><td class='team'>MIL @ CHC</td><td class='num'>8.54</td><td class='num'>14</td><td class='num miss'>-5.46</td><td class='num'>48%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260902'>2026-09-02</td><td class='team'>SEA @ BOS</td><td class='num'>8.78</td><td class='num'>11</td><td class='num '>-2.22</td><td class='num'>51%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260902'>2026-09-02</td><td class='team'>PHI @ AZ</td><td class='num'>8.71</td><td class='num'>1</td><td class='num miss'>+7.71</td><td class='num'>50%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260901'>2026-09-01</td><td class='team'>ATL @ WSH</td><td class='num'>10.09</td><td class='num'>14</td><td class='num '>-3.91</td><td class='num'>54%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260901'>2026-09-01</td><td class='team'>ATH @ TEX</td><td class='num'>8.34</td><td class='num'>13</td><td class='num '>-4.66</td><td class='num'>46%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260901'>2026-09-01</td><td class='team'>NYM @ TB</td><td class='num'>8.83</td><td class='num'>8</td><td class='num hit'>+0.83</td><td class='num'>52%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260901'>2026-09-01</td><td class='team'>SF @ PIT</td><td class='num'>8.94</td><td class='num'>25</td><td class='num miss'>-16.06</td><td class='num'>52%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260901'>2026-09-01</td><td class='team'>DET @ MIN</td><td class='num'>8.91</td><td class='num'>17</td><td class='num miss'>-8.09</td><td class='num'>52%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260901'>2026-09-01</td><td class='team'>STL @ LAD</td><td class='num'>9.24</td><td class='num'>21</td><td class='num miss'>-11.76</td><td class='num'>55%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260901'>2026-09-01</td><td class='team'>NYY @ LAA</td><td class='num'>8.13</td><td class='num'>10</td><td class='num hit'>-1.87</td><td class='num'>45%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260901'>2026-09-01</td><td class='team'>MIA @ KC</td><td class='num'>9.85</td><td class='num'>9</td><td class='num hit'>+0.85</td><td class='num'>52%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260901'>2026-09-01</td><td class='team'>CWS @ HOU</td><td class='num'>9.22</td><td class='num'>6</td><td class='num '>+3.22</td><td class='num'>55%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260901'>2026-09-01</td><td class='team'>BAL @ COL</td><td class='num'>10.29</td><td class='num'>6</td><td class='num '>+4.29</td><td class='num'>56%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260901'>2026-09-01</td><td class='team'>TOR @ CLE</td><td class='num'>9.23</td><td class='num'>7</td><td class='num '>+2.23</td><td class='num'>55%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260901'>2026-09-01</td><td class='team'>SD @ CIN</td><td class='num'>9.43</td><td class='num'>7</td><td class='num '>+2.43</td><td class='num'>57%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260901'>2026-09-01</td><td class='team'>MIL @ CHC</td><td class='num'>9.53</td><td class='num'>13</td><td class='num '>-3.47</td><td class='num'>58%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260901'>2026-09-01</td><td class='team'>SEA @ BOS</td><td class='num'>8.43</td><td class='num'>15</td><td class='num miss'>-6.57</td><td class='num'>48%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260901'>2026-09-01</td><td class='team'>PHI @ AZ</td><td class='num'>8.60</td><td class='num'>8</td><td class='num hit'>+0.60</td><td class='num'>49%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260831'>2026-08-31</td><td class='team'>MIA @ WSH</td><td class='num'>9.90</td><td class='num'>9</td><td class='num hit'>+0.90</td><td class='num'>52%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260831'>2026-08-31</td><td class='team'>ATH @ TEX</td><td class='num'>9.06</td><td class='num'>9</td><td class='num hit'>+0.06</td><td class='num'>53%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260831'>2026-08-31</td><td class='team'>NYM @ TB</td><td class='num'>9.34</td><td class='num'>5</td><td class='num '>+4.34</td><td class='num'>56%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260831'>2026-08-31</td><td class='team'>DET @ MIN</td><td class='num'>9.23</td><td class='num'>12</td><td class='num '>-2.77</td><td class='num'>55%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260831'>2026-08-31</td><td class='team'>NYY @ LAA</td><td class='num'>8.52</td><td class='num'>11</td><td class='num '>-2.48</td><td class='num'>49%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260831'>2026-08-31</td><td class='team'>CWS @ HOU</td><td class='num'>9.15</td><td class='num'>9</td><td class='num hit'>+0.15</td><td class='num'>55%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260831'>2026-08-31</td><td class='team'>BAL @ COL</td><td class='num'>10.24</td><td class='num'>3</td><td class='num miss'>+7.24</td><td class='num'>55%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260831'>2026-08-31</td><td class='team'>SD @ CIN</td><td class='num'>9.10</td><td class='num'>5</td><td class='num '>+4.10</td><td class='num'>54%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260831'>2026-08-31</td><td class='team'>MIL @ CHC</td><td class='num'>8.64</td><td class='num'>20</td><td class='num miss'>-11.36</td><td class='num'>50%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260831'>2026-08-31</td><td class='team'>SEA @ BOS</td><td class='num'>8.46</td><td class='num'>17</td><td class='num miss'>-8.54</td><td class='num'>48%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260831'>2026-08-31</td><td class='team'>SF @ ATL</td><td class='num'>9.21</td><td class='num'>10</td><td class='num hit'>-0.79</td><td class='num'>54%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260831'>2026-08-31</td><td class='team'>PHI @ AZ</td><td class='num'>9.05</td><td class='num'>3</td><td class='num miss'>+6.05</td><td class='num'>53%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260830'>2026-08-30</td><td class='team'>MIA @ WSH</td><td class='num'>9.69</td><td class='num'>8</td><td class='num hit'>+1.69</td><td class='num'>50%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260830'>2026-08-30</td><td class='team'>SEA @ TOR</td><td class='num'>8.97</td><td class='num'>7</td><td class='num hit'>+1.97</td><td class='num'>53%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260830'>2026-08-30</td><td class='team'>SD @ TB</td><td class='num'>8.16</td><td class='num'>9</td><td class='num hit'>-0.84</td><td class='num'>45%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260830'>2026-08-30</td><td class='team'>PIT @ STL</td><td class='num'>8.96</td><td class='num'>9</td><td class='num hit'>-0.04</td><td class='num'>53%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260830'>2026-08-30</td><td class='team'>BOS @ NYY</td><td class='num'>8.96</td><td class='num'>17</td><td class='num miss'>-8.04</td><td class='num'>53%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260830'>2026-08-30</td><td class='team'>HOU @ NYM</td><td class='num'>9.08</td><td class='num'>9</td><td class='num hit'>+0.08</td><td class='num'>54%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260830'>2026-08-30</td><td class='team'>CWS @ MIN</td><td class='num'>9.21</td><td class='num'>6</td><td class='num '>+3.21</td><td class='num'>55%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260830'>2026-08-30</td><td class='team'>TEX @ MIL</td><td class='num'>9.02</td><td class='num'>11</td><td class='num hit'>-1.98</td><td class='num'>53%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260830'>2026-08-30</td><td class='team'>PHI @ LAA</td><td class='num'>7.89</td><td class='num'>7</td><td class='num hit'>+0.89</td><td class='num'>42%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260830'>2026-08-30</td><td class='team'>LAD @ DET</td><td class='num'>9.08</td><td class='num'>7</td><td class='num '>+2.08</td><td class='num'>53%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260830'>2026-08-30</td><td class='team'>KC @ CLE</td><td class='num'>8.69</td><td class='num'>12</td><td class='num '>-3.31</td><td class='num'>50%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260830'>2026-08-30</td><td class='team'>CIN @ CHC</td><td class='num'>9.19</td><td class='num'>12</td><td class='num '>-2.81</td><td class='num'>54%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260830'>2026-08-30</td><td class='team'>COL @ ATL</td><td class='num'>9.60</td><td class='num'>5</td><td class='num '>+4.60</td><td class='num'>49%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260830'>2026-08-30</td><td class='team'>BAL @ ATH</td><td class='num'>11.57</td><td class='num'>13</td><td class='num hit'>-1.43</td><td class='num'>66%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260829'>2026-08-29</td><td class='team'>MIA @ WSH</td><td class='num'>8.91</td><td class='num'>9</td><td class='num hit'>-0.09</td><td class='num'>52%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260829'>2026-08-29</td><td class='team'>SEA @ TOR</td><td class='num'>8.82</td><td class='num'>7</td><td class='num hit'>+1.82</td><td class='num'>51%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260829'>2026-08-29</td><td class='team'>SD @ TB</td><td class='num'>8.35</td><td class='num'>13</td><td class='num '>-4.65</td><td class='num'>47%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260829'>2026-08-29</td><td class='team'>PIT @ STL</td><td class='num'>8.57</td><td class='num'>8</td><td class='num hit'>+0.57</td><td class='num'>48%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260829'>2026-08-29</td><td class='team'>AZ @ SF</td><td class='num'>8.91</td><td class='num'>8</td><td class='num hit'>+0.91</td><td class='num'>52%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260829'>2026-08-29</td><td class='team'>BOS @ NYY</td><td class='num'>8.49</td><td class='num'>11</td><td class='num '>-2.51</td><td class='num'>48%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260829'>2026-08-29</td><td class='team'>BOS @ NYY</td><td class='num'>8.44</td><td class='num'>6</td><td class='num '>+2.44</td><td class='num'>47%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260829'>2026-08-29</td><td class='team'>HOU @ NYM</td><td class='num'>8.74</td><td class='num'>8</td><td class='num hit'>+0.74</td><td class='num'>51%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260829'>2026-08-29</td><td class='team'>CWS @ MIN</td><td class='num'>9.15</td><td class='num'>5</td><td class='num '>+4.15</td><td class='num'>54%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260829'>2026-08-29</td><td class='team'>TEX @ MIL</td><td class='num'>8.51</td><td class='num'>8</td><td class='num hit'>+0.51</td><td class='num'>48%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260829'>2026-08-29</td><td class='team'>PHI @ LAA</td><td class='num'>7.99</td><td class='num'>6</td><td class='num hit'>+1.99</td><td class='num'>43%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260829'>2026-08-29</td><td class='team'>LAD @ DET</td><td class='num'>8.38</td><td class='num'>3</td><td class='num miss'>+5.38</td><td class='num'>47%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260829'>2026-08-29</td><td class='team'>KC @ CLE</td><td class='num'>8.38</td><td class='num'>11</td><td class='num '>-2.62</td><td class='num'>47%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260829'>2026-08-29</td><td class='team'>CIN @ CHC</td><td class='num'>9.44</td><td class='num'>22</td><td class='num miss'>-12.56</td><td class='num'>57%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260829'>2026-08-29</td><td class='team'>COL @ ATL</td><td class='num'>9.64</td><td class='num'>3</td><td class='num miss'>+6.64</td><td class='num'>49%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260829'>2026-08-29</td><td class='team'>BAL @ ATH</td><td class='num'>10.54</td><td class='num'>8</td><td class='num '>+2.54</td><td class='num'>57%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260828'>2026-08-28</td><td class='team'>MIA @ WSH</td><td class='num'>10.06</td><td class='num'>11</td><td class='num hit'>-0.94</td><td class='num'>53%</td><td class='num hit'>over</td><td></td></tr><tr><td class='date' data-v='20260828'>2026-08-28</td><td class='team'>SEA @ TOR</td><td class='num'>7.91</td><td class='num'>9</td><td class='num hit'>-1.09</td><td class='num'>42%</td><td class='num miss'>over</td><td></td></tr><tr><td class='date' data-v='20260828'>2026-08-28</td><td class='team'>SD @ TB</td><td class='num'>7.91</td><td class='num'>13</td><td class='num miss'>-5.09</td><td class='num'>42%</td><td class='num miss'>over</td><td></td></tr><tr><td class='date' data-v='20260828'>2026-08-28</td><td class='team'>PIT @ STL</td><td class='num'>8.99</td><td class='num'>5</td><td class='num '>+3.99</td><td class='num'>52%</td><td class='num miss'>under</td><td></td></tr><tr><td class='date' data-v='20260828'>2026-08-28</td><td class='team'>AZ @ SF</td><td class='num'>8.59</td><td class='num'>16</td><td class='num miss'>-7.41</td><td class='num'>49%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260828'>2026-08-28</td><td class='team'>BOS @ NYY</td><td class='num'>8.77</td><td class='num'>1</td><td class='num miss'>+7.77</td><td class='num'>51%</td><td class='num miss'>under</td><td></td></tr><tr><td class='date' data-v='20260828'>2026-08-28</td><td class='team'>HOU @ NYM</td><td class='num'>8.73</td><td class='num'>4</td><td class='num '>+4.73</td><td class='num'>51%</td><td class='num miss'>under</td><td></td></tr><tr><td class='date' data-v='20260828'>2026-08-28</td><td class='team'>CWS @ MIN</td><td class='num'>9.06</td><td class='num'>11</td><td class='num hit'>-1.94</td><td class='num'>54%</td><td class='num hit'>over</td><td></td></tr><tr><td class='date' data-v='20260828'>2026-08-28</td><td class='team'>TEX @ MIL</td><td class='num'>8.31</td><td class='num'>7</td><td class='num hit'>+1.31</td><td class='num'>46%</td><td class='num hit'>under</td><td></td></tr><tr><td class='date' data-v='20260828'>2026-08-28</td><td class='team'>PHI @ LAA</td><td class='num'>7.80</td><td class='num'>8</td><td class='num hit'>-0.20</td><td class='num'>41%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260828'>2026-08-28</td><td class='team'>LAD @ DET</td><td class='num'>8.28</td><td class='num'>3</td><td class='num miss'>+5.28</td><td class='num'>46%</td><td class='num hit'>under</td><td></td></tr><tr><td class='date' data-v='20260828'>2026-08-28</td><td class='team'>KC @ CLE</td><td class='num'>8.05</td><td class='num'>3</td><td class='num miss'>+5.05</td><td class='num'>43%</td><td class='num hit'>under</td><td></td></tr><tr><td class='date' data-v='20260828'>2026-08-28</td><td class='team'>CIN @ CHC</td><td class='num'>10.07</td><td class='num'>18</td><td class='num miss'>-7.93</td><td class='num'>54%</td><td class='num hit'>over</td><td></td></tr><tr><td class='date' data-v='20260828'>2026-08-28</td><td class='team'>COL @ ATL</td><td class='num'>9.47</td><td class='num'>10</td><td class='num hit'>-0.53</td><td class='num'>57%</td><td class='num hit'>over</td><td></td></tr><tr><td class='date' data-v='20260828'>2026-08-28</td><td class='team'>BAL @ ATH</td><td class='num'>10.60</td><td class='num'>7</td><td class='num '>+3.60</td><td class='num'>58%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260827'>2026-08-27</td><td class='team'>COL @ WSH</td><td class='num'>9.64</td><td class='num'>8</td><td class='num hit'>+1.64</td><td class='num'>49%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260827'>2026-08-27</td><td class='team'>KC @ TOR</td><td class='num'>8.42</td><td class='num'>15</td><td class='num miss'>-6.58</td><td class='num'>47%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260827'>2026-08-27</td><td class='team'>BAL @ STL</td><td class='num'>8.66</td><td class='num'>12</td><td class='num '>-3.34</td><td class='num'>50%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260827'>2026-08-27</td><td class='team'>AZ @ SF</td><td class='num'>8.59</td><td class='num'>7</td><td class='num hit'>+1.59</td><td class='num'>49%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260827'>2026-08-27</td><td class='team'>HOU @ NYY</td><td class='num'>8.88</td><td class='num'>6</td><td class='num '>+2.88</td><td class='num'>52%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260827'>2026-08-27</td><td class='team'>MIL @ NYM</td><td class='num'>7.91</td><td class='num'>10</td><td class='num '>-2.09</td><td class='num'>42%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260827'>2026-08-27</td><td class='team'>LAD @ ATL</td><td class='num'>8.35</td><td class='num'>1</td><td class='num miss'>+7.35</td><td class='num'>46%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260826'>2026-08-26</td><td class='team'>COL @ WSH</td><td class='num'>10.21</td><td class='num'>14</td><td class='num '>-3.79</td><td class='num'>55%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260826'>2026-08-26</td><td class='team'>KC @ TOR</td><td class='num'>8.77</td><td class='num'>3</td><td class='num miss'>+5.77</td><td class='num'>51%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260826'>2026-08-26</td><td class='team'>BAL @ STL</td><td class='num'>8.83</td><td class='num'>15</td><td class='num miss'>-6.17</td><td class='num'>52%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260826'>2026-08-26</td><td class='team'>PHI @ SEA</td><td class='num'>8.40</td><td class='num'>6</td><td class='num '>+2.40</td><td class='num'>47%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260826'>2026-08-26</td><td class='team'>CIN @ SF</td><td class='num'>9.07</td><td class='num'>19</td><td class='num miss'>-9.93</td><td class='num'>53%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260826'>2026-08-26</td><td class='team'>PIT @ SD</td><td class='num'>8.80</td><td class='num'>3</td><td class='num miss'>+5.80</td><td class='num'>51%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260826'>2026-08-26</td><td class='team'>HOU @ NYY</td><td class='num'>8.62</td><td class='num'>12</td><td class='num '>-3.38</td><td class='num'>49%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260826'>2026-08-26</td><td class='team'>MIL @ NYM</td><td class='num'>8.97</td><td class='num'>9</td><td class='num hit'>-0.03</td><td class='num'>52%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260826'>2026-08-26</td><td class='team'>BOS @ MIA</td><td class='num'>8.52</td><td class='num'>4</td><td class='num '>+4.52</td><td class='num'>48%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260826'>2026-08-26</td><td class='team'>CLE @ LAA</td><td class='num'>8.56</td><td class='num'>7</td><td class='num hit'>+1.56</td><td class='num'>49%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260826'>2026-08-26</td><td class='team'>TB @ DET</td><td class='num'>9.03</td><td class='num'>3</td><td class='num miss'>+6.03</td><td class='num'>53%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260826'>2026-08-26</td><td class='team'>TEX @ CWS</td><td class='num'>8.40</td><td class='num'>14</td><td class='num miss'>-5.60</td><td class='num'>47%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260826'>2026-08-26</td><td class='team'>LAD @ ATL</td><td class='num'>10.06</td><td class='num'>11</td><td class='num hit'>-0.94</td><td class='num'>53%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260826'>2026-08-26</td><td class='team'>MIN @ ATH</td><td class='num'>11.05</td><td class='num'>11</td><td class='num hit'>+0.05</td><td class='num'>61%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260826'>2026-08-26</td><td class='team'>CHC @ AZ</td><td class='num'>9.49</td><td class='num'>2</td><td class='num miss'>+7.49</td><td class='num'>58%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260825'>2026-08-25</td><td class='team'>COL @ WSH</td><td class='num'>9.69</td><td class='num'>4</td><td class='num miss'>+5.69</td><td class='num'>50%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260825'>2026-08-25</td><td class='team'>KC @ TOR</td><td class='num'>9.57</td><td class='num'>8</td><td class='num hit'>+1.57</td><td class='num'>58%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260825'>2026-08-25</td><td class='team'>BAL @ STL</td><td class='num'>9.05</td><td class='num'>14</td><td class='num '>-4.95</td><td class='num'>54%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260825'>2026-08-25</td><td class='team'>PHI @ SEA</td><td class='num'>9.35</td><td class='num'>5</td><td class='num '>+4.35</td><td class='num'>56%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260825'>2026-08-25</td><td class='team'>CIN @ SF</td><td class='num'>9.12</td><td class='num'>4</td><td class='num miss'>+5.12</td><td class='num'>54%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260825'>2026-08-25</td><td class='team'>PIT @ SD</td><td class='num'>8.39</td><td class='num'>1</td><td class='num miss'>+7.39</td><td class='num'>47%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260825'>2026-08-25</td><td class='team'>HOU @ NYY</td><td class='num'>9.99</td><td class='num'>16</td><td class='num miss'>-6.01</td><td class='num'>53%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260825'>2026-08-25</td><td class='team'>MIL @ NYM</td><td class='num'>8.18</td><td class='num'>5</td><td class='num '>+3.18</td><td class='num'>45%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260825'>2026-08-25</td><td class='team'>BOS @ MIA</td><td class='num'>8.26</td><td class='num'>10</td><td class='num hit'>-1.74</td><td class='num'>46%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260825'>2026-08-25</td><td class='team'>CLE @ LAA</td><td class='num'>7.69</td><td class='num'>14</td><td class='num miss'>-6.31</td><td class='num'>39%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260825'>2026-08-25</td><td class='team'>TB @ DET</td><td class='num'>9.17</td><td class='num'>5</td><td class='num '>+4.17</td><td class='num'>55%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260825'>2026-08-25</td><td class='team'>TEX @ CWS</td><td class='num'>8.80</td><td class='num'>18</td><td class='num miss'>-9.20</td><td class='num'>51%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260825'>2026-08-25</td><td class='team'>LAD @ ATL</td><td class='num'>9.34</td><td class='num'>7</td><td class='num '>+2.34</td><td class='num'>56%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260825'>2026-08-25</td><td class='team'>MIN @ ATH</td><td class='num'>11.45</td><td class='num'>6</td><td class='num miss'>+5.45</td><td class='num'>64%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260825'>2026-08-25</td><td class='team'>CHC @ AZ</td><td class='num'>8.93</td><td class='num'>9</td><td class='num hit'>-0.07</td><td class='num'>52%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260824'>2026-08-24</td><td class='team'>COL @ WSH</td><td class='num'>9.68</td><td class='num'>16</td><td class='num miss'>-6.32</td><td class='num'>50%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260824'>2026-08-24</td><td class='team'>PHI @ SEA</td><td class='num'>7.93</td><td class='num'>11</td><td class='num '>-3.07</td><td class='num'>42%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260824'>2026-08-24</td><td class='team'>CIN @ SF</td><td class='num'>8.69</td><td class='num'>5</td><td class='num '>+3.69</td><td class='num'>50%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260824'>2026-08-24</td><td class='team'>PIT @ SD</td><td class='num'>7.90</td><td class='num'>5</td><td class='num '>+2.90</td><td class='num'>42%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260824'>2026-08-24</td><td class='team'>BOS @ MIA</td><td class='num'>7.75</td><td class='num'>6</td><td class='num hit'>+1.75</td><td class='num'>41%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260824'>2026-08-24</td><td class='team'>CLE @ LAA</td><td class='num'>7.69</td><td class='num'>6</td><td class='num hit'>+1.69</td><td class='num'>40%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260824'>2026-08-24</td><td class='team'>TB @ DET</td><td class='num'>8.28</td><td class='num'>5</td><td class='num '>+3.28</td><td class='num'>45%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260824'>2026-08-24</td><td class='team'>TEX @ CWS</td><td class='num'>9.01</td><td class='num'>13</td><td class='num '>-3.99</td><td class='num'>53%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260824'>2026-08-24</td><td class='team'>MIN @ ATH</td><td class='num'>11.41</td><td class='num'>15</td><td class='num '>-3.59</td><td class='num'>64%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260824'>2026-08-24</td><td class='team'>CHC @ AZ</td><td class='num'>9.89</td><td class='num'>7</td><td class='num '>+2.89</td><td class='num'>52%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260823'>2026-08-23</td><td class='team'>LAA @ TEX</td><td class='num'>8.12</td><td class='num'>8</td><td class='num hit'>+0.12</td><td class='num'>44%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260823'>2026-08-23</td><td class='team'>CHC @ SEA</td><td class='num'>8.02</td><td class='num'>21</td><td class='num miss'>-12.98</td><td class='num'>43%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260823'>2026-08-23</td><td class='team'>MIN @ SD</td><td class='num'>8.42</td><td class='num'>9</td><td class='num hit'>-0.58</td><td class='num'>47%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260823'>2026-08-23</td><td class='team'>STL @ PHI</td><td class='num'>9.38</td><td class='num'>10</td><td class='num hit'>-0.62</td><td class='num'>56%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260823'>2026-08-23</td><td class='team'>TOR @ NYY</td><td class='num'>8.49</td><td class='num'>11</td><td class='num '>-2.51</td><td class='num'>48%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260823'>2026-08-23</td><td class='team'>ATL @ MIL</td><td class='num'>8.68</td><td class='num'>6</td><td class='num '>+2.68</td><td class='num'>50%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260823'>2026-08-23</td><td class='team'>WSH @ MIA</td><td class='num'>9.00</td><td class='num'>8</td><td class='num hit'>+1.00</td><td class='num'>53%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260823'>2026-08-23</td><td class='team'>PIT @ LAD</td><td class='num'>8.83</td><td class='num'>4</td><td class='num '>+4.83</td><td class='num'>51%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260823'>2026-08-23</td><td class='team'>DET @ KC</td><td class='num'>9.39</td><td class='num'>18</td><td class='num miss'>-8.61</td><td class='num'>56%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260823'>2026-08-23</td><td class='team'>ATH @ HOU</td><td class='num'>9.74</td><td class='num'>13</td><td class='num '>-3.26</td><td class='num'>50%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260823'>2026-08-23</td><td class='team'>CLE @ COL</td><td class='num'>9.36</td><td class='num'>9</td><td class='num hit'>+0.36</td><td class='num'>56%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260823'>2026-08-23</td><td class='team'>NYM @ CWS</td><td class='num'>7.95</td><td class='num'>3</td><td class='num '>+4.95</td><td class='num'>43%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260823'>2026-08-23</td><td class='team'>SF @ BOS</td><td class='num'>7.96</td><td class='num'>9</td><td class='num hit'>-1.04</td><td class='num'>43%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260823'>2026-08-23</td><td class='team'>TB @ BAL</td><td class='num'>8.50</td><td class='num'>4</td><td class='num '>+4.50</td><td class='num'>48%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260823'>2026-08-23</td><td class='team'>CIN @ AZ</td><td class='num'>9.36</td><td class='num'>8</td><td class='num hit'>+1.36</td><td class='num'>56%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260822'>2026-08-22</td><td class='team'>LAA @ TEX</td><td class='num'>9.04</td><td class='num'>3</td><td class='num miss'>+6.04</td><td class='num'>54%</td><td class='num miss'>under</td><td></td></tr><tr><td class='date' data-v='20260822'>2026-08-22</td><td class='team'>CHC @ SEA</td><td class='num'>9.24</td><td class='num'>9</td><td class='num hit'>+0.24</td><td class='num'>55%</td><td class='num hit'>over</td><td></td></tr><tr><td class='date' data-v='20260822'>2026-08-22</td><td class='team'>MIN @ SD</td><td class='num'>8.11</td><td class='num'>12</td><td class='num '>-3.89</td><td class='num'>44%</td><td class='num miss'>over</td><td></td></tr><tr><td class='date' data-v='20260822'>2026-08-22</td><td class='team'>STL @ PHI</td><td class='num'>10.36</td><td class='num'>15</td><td class='num '>-4.64</td><td class='num'>55%</td><td class='num hit'>over</td><td></td></tr><tr><td class='date' data-v='20260822'>2026-08-22</td><td class='team'>TOR @ NYY</td><td class='num'>7.95</td><td class='num'>7</td><td class='num hit'>+0.95</td><td class='num'>42%</td><td class='num hit'>under</td><td></td></tr><tr><td class='date' data-v='20260822'>2026-08-22</td><td class='team'>ATL @ MIL</td><td class='num'>8.36</td><td class='num'>5</td><td class='num '>+3.36</td><td class='num'>47%</td><td class='num hit'>under</td><td></td></tr><tr><td class='date' data-v='20260822'>2026-08-22</td><td class='team'>WSH @ MIA</td><td class='num'>8.82</td><td class='num'>6</td><td class='num '>+2.82</td><td class='num'>51%</td><td class='num miss'>under</td><td></td></tr><tr><td class='date' data-v='20260822'>2026-08-22</td><td class='team'>PIT @ LAD</td><td class='num'>8.40</td><td class='num'>7</td><td class='num hit'>+1.40</td><td class='num'>47%</td><td class='num hit'>under</td><td></td></tr><tr><td class='date' data-v='20260822'>2026-08-22</td><td class='team'>DET @ KC</td><td class='num'>9.66</td><td class='num'>4</td><td class='num miss'>+5.66</td><td class='num'>50%</td><td class='num hit'>under</td><td></td></tr><tr><td class='date' data-v='20260822'>2026-08-22</td><td class='team'>ATH @ HOU</td><td class='num'>9.51</td><td class='num'>7</td><td class='num '>+2.51</td><td class='num'>58%</td><td class='num miss'>under</td><td></td></tr><tr><td class='date' data-v='20260822'>2026-08-22</td><td class='team'>CLE @ COL</td><td class='num'>9.89</td><td class='num'>7</td><td class='num '>+2.89</td><td class='num'>51%</td><td class='num miss'>under</td><td></td></tr><tr><td class='date' data-v='20260822'>2026-08-22</td><td class='team'>NYM @ CWS</td><td class='num'>8.81</td><td class='num'>15</td><td class='num miss'>-6.19</td><td class='num'>51%</td><td class='num hit'>over</td><td></td></tr><tr><td class='date' data-v='20260822'>2026-08-22</td><td class='team'>SF @ BOS</td><td class='num'>8.93</td><td class='num'>5</td><td class='num '>+3.93</td><td class='num'>52%</td><td class='num miss'>under</td><td></td></tr><tr><td class='date' data-v='20260822'>2026-08-22</td><td class='team'>TB @ BAL</td><td class='num'>8.51</td><td class='num'>5</td><td class='num '>+3.51</td><td class='num'>48%</td><td class='num hit'>under</td><td></td></tr><tr><td class='date' data-v='20260822'>2026-08-22</td><td class='team'>CIN @ AZ</td><td class='num'>9.08</td><td class='num'>16</td><td class='num miss'>-6.92</td><td class='num'>54%</td><td class='num hit'>over</td><td></td></tr><tr><td class='date' data-v='20260821'>2026-08-21</td><td class='team'>LAA @ TEX</td><td class='num'>7.97</td><td class='num'>3</td><td class='num '>+4.97</td><td class='num'>43%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260821'>2026-08-21</td><td class='team'>CHC @ SEA</td><td class='num'>8.62</td><td class='num'>11</td><td class='num '>-2.38</td><td class='num'>49%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260821'>2026-08-21</td><td class='team'>MIN @ SD</td><td class='num'>8.51</td><td class='num'>8</td><td class='num hit'>+0.51</td><td class='num'>48%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260821'>2026-08-21</td><td class='team'>STL @ PHI</td><td class='num'>9.27</td><td class='num'>13</td><td class='num '>-3.73</td><td class='num'>55%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260821'>2026-08-21</td><td class='team'>TOR @ NYY</td><td class='num'>8.59</td><td class='num'>4</td><td class='num '>+4.59</td><td class='num'>49%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260821'>2026-08-21</td><td class='team'>ATL @ MIL</td><td class='num'>7.58</td><td class='num'>3</td><td class='num '>+4.58</td><td class='num'>38%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260821'>2026-08-21</td><td class='team'>WSH @ MIA</td><td class='num'>9.09</td><td class='num'>5</td><td class='num '>+4.09</td><td class='num'>54%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260821'>2026-08-21</td><td class='team'>PIT @ LAD</td><td class='num'>8.76</td><td class='num'>9</td><td class='num hit'>-0.24</td><td class='num'>51%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260821'>2026-08-21</td><td class='team'>DET @ KC</td><td class='num'>8.65</td><td class='num'>7</td><td class='num hit'>+1.65</td><td class='num'>49%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260821'>2026-08-21</td><td class='team'>ATH @ HOU</td><td class='num'>9.20</td><td class='num'>4</td><td class='num miss'>+5.20</td><td class='num'>55%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260821'>2026-08-21</td><td class='team'>CLE @ COL</td><td class='num'>9.96</td><td class='num'>10</td><td class='num hit'>-0.04</td><td class='num'>52%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260821'>2026-08-21</td><td class='team'>NYM @ CWS</td><td class='num'>8.64</td><td class='num'>10</td><td class='num hit'>-1.36</td><td class='num'>49%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260821'>2026-08-21</td><td class='team'>SF @ BOS</td><td class='num'>7.90</td><td class='num'>10</td><td class='num '>-2.10</td><td class='num'>41%</td><td class='num miss'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260821'>2026-08-21</td><td class='team'>TB @ BAL</td><td class='num'>8.74</td><td class='num'>8</td><td class='num hit'>+0.74</td><td class='num'>50%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260821'>2026-08-21</td><td class='team'>CIN @ AZ</td><td class='num'>9.00</td><td class='num'>9</td><td class='num hit'>+0.00</td><td class='num'>53%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260820'>2026-08-20</td><td class='team'>WSH @ TEX</td><td class='num'>9.04</td><td class='num'>2</td><td class='num miss'>+7.04</td><td class='num'>49%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260820'>2026-08-20</td><td class='team'>TOR @ TB</td><td class='num'>9.24</td><td class='num'>6</td><td class='num '>+3.24</td><td class='num'>52%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260820'>2026-08-20</td><td class='team'>SEA @ MIL</td><td class='num'>9.30</td><td class='num'>11</td><td class='num hit'>-1.70</td><td class='num'>52%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260820'>2026-08-20</td><td class='team'>ATH @ KC</td><td class='num'>10.47</td><td class='num'>8</td><td class='num '>+2.47</td><td class='num'>60%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260820'>2026-08-20</td><td class='team'>LAA @ HOU</td><td class='num'>9.27</td><td class='num'>21</td><td class='num miss'>-11.73</td><td class='num'>52%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260820'>2026-08-20</td><td class='team'>SF @ CLE</td><td class='num'>9.27</td><td class='num'>7</td><td class='num '>+2.27</td><td class='num'>51%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260820'>2026-08-20</td><td class='team'>STL @ CIN</td><td class='num'>9.66</td><td class='num'>19</td><td class='num miss'>-9.34</td><td class='num'>55%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260820'>2026-08-20</td><td class='team'>ATL @ CWS</td><td class='num'>10.38</td><td class='num'>2</td><td class='num miss'>+8.38</td><td class='num'>60%</td><td class='num miss'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260820'>2026-08-20</td><td class='team'>NYY @ BAL</td><td class='num'>8.66</td><td class='num'>7</td><td class='num hit'>+1.66</td><td class='num'>47%</td><td class='num hit'>under</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260819'>2026-08-19</td><td class='team'>WSH @ TEX</td><td class='num'>9.25</td><td class='num'>6</td><td class='num '>+3.25</td><td class='num'>51%</td><td class='num miss'>under</td><td></td></tr><tr><td class='date' data-v='20260819'>2026-08-19</td><td class='team'>TOR @ TB</td><td class='num'>8.42</td><td class='num'>13</td><td class='num '>-4.58</td><td class='num'>44%</td><td class='num miss'>over</td><td></td></tr><tr><td class='date' data-v='20260819'>2026-08-19</td><td class='team'>DET @ PIT</td><td class='num'>9.87</td><td class='num'>7</td><td class='num '>+2.87</td><td class='num'>57%</td><td class='num miss'>under</td><td></td></tr><tr><td class='date' data-v='20260819'>2026-08-19</td><td class='team'>MIA @ PHI</td><td class='num'>10.06</td><td class='num'>5</td><td class='num miss'>+5.06</td><td class='num'>58%</td><td class='num miss'>under</td><td></td></tr><tr><td class='date' data-v='20260819'>2026-08-19</td><td class='team'>SD @ NYM</td><td class='num'>9.06</td><td class='num'>6</td><td class='num '>+3.06</td><td class='num'>50%</td><td class='num hit'>under</td><td></td></tr><tr><td class='date' data-v='20260819'>2026-08-19</td><td class='team'>ATL @ MIN</td><td class='num'>9.25</td><td class='num'>10</td><td class='num hit'>-0.75</td><td class='num'>51%</td><td class='num hit'>over</td><td></td></tr><tr><td class='date' data-v='20260819'>2026-08-19</td><td class='team'>SEA @ MIL</td><td class='num'>8.63</td><td class='num'>12</td><td class='num '>-3.37</td><td class='num'>46%</td><td class='num miss'>over</td><td></td></tr><tr><td class='date' data-v='20260819'>2026-08-19</td><td class='team'>ATH @ KC</td><td class='num'>10.72</td><td class='num'>16</td><td class='num miss'>-5.28</td><td class='num'>63%</td><td class='num hit'>over</td><td></td></tr><tr><td class='date' data-v='20260819'>2026-08-19</td><td class='team'>LAA @ HOU</td><td class='num'>9.02</td><td class='num'>5</td><td class='num '>+4.02</td><td class='num'>50%</td><td class='num hit'>under</td><td></td></tr><tr><td class='date' data-v='20260819'>2026-08-19</td><td class='team'>LAD @ COL</td><td class='num'>11.16</td><td class='num'>10</td><td class='num hit'>+1.16</td><td class='num'>66%</td><td class='num hit'>over</td><td><span class=pill>proj lineup</span></td></tr><tr><td class='date' data-v='20260819'>2026-08-19</td><td class='team'>SF @ CLE</td><td class='num'>8.59</td><td class='num'>1</td><td class='num miss'>+7.59</td><td class='num'>46%</td><td class='num hit'>under</td><td></td></tr><tr><td class='date' data-v='20260819'>2026-08-19</td><td class='team'>STL @ CIN</td><td class='num'>8.58</td><td class='num'>9</td><td class='num hit'>-0.42</td><td class='num'>45%</td><td class='num miss'>over</td><td></td></tr><tr><td class='date' data-v='20260819'>2026-08-19</td><td class='team'>CWS @ CHC</td><td class='num'>9.07</td><td class='num'>3</td><td class='num miss'>+6.07</td><td class='num'>50%</td><td class='num hit'>under</td><td></td></tr><tr><td class='date' data-v='20260819'>2026-08-19</td><td class='team'>AZ @ BOS</td><td class='num'>7.61</td><td class='num'>13</td><td class='num miss'>-5.39</td><td class='num'>36%</td><td class='num miss'>over</td><td></td></tr><tr><td class='date' data-v='20260819'>2026-08-19</td><td class='team'>NYY @ BAL</td><td class='num'>9.31</td><td class='num'>8</td><td class='num hit'>+1.31</td><td class='num'>52%</td><td class='num miss'>under</td><td></td></tr></tbody></table></div></div></main>
+<script>
+(function(){
+  var val=function(el,t){
+    var s=el.getAttribute('data-v');
+    if(s===null){
+      // A per-window cell holds every window's value as a [data-w] span and
+      // shows one. textContent would concatenate all seven and parseFloat
+      // would stop at the first, so the column would always sort on the
+      // first window regardless of which is selected. Read the one the
+      // container is currently showing instead.
+      var host=el.closest?el.closest('[data-win]'):null;
+      var w=host&&host.getAttribute('data-win');
+      var pick=w&&el.querySelector?el.querySelector("[data-w='"+w+"']"):null;
+      s=pick?pick.textContent:el.textContent;
+    }
+    s=s.trim();
+    if(t==='num'){var n=parseFloat(s.replace(/[^0-9.+-]/g,''));return isNaN(n)?-Infinity:n;}
+    return s.toLowerCase();
+  };
+  // Tables register their re-sort here so the window selector can replay the
+  // current sort after switching. Without it the rows keep the old order
+  // while showing new numbers, which reads exactly like a broken sort.
+  var RESORT=[];
+  document.querySelectorAll('table').forEach(function(tb){
+    var heads=tb.querySelectorAll('thead th');
+    // The sort stack: [{i, t, dir}], first entry is the primary key. A plain
+    // click replaces it; shift/ctrl/cmd-click appends, so "price desc, then
+    // L3g desc" is two clicks.
+    //
+    // Direction rules, all aimed at one click doing what was meant:
+    //   - a numeric column opens descending, a text column ascending. Nobody
+    //     opens an EV column wanting the worst number on top.
+    //   - clicking a key already in the stack flips it and nothing else, so
+    //     the primary stays flippable no matter how many keys are behind it.
+    //   - a key is never removed by clicking its header. Two states on a
+    //     narrow target, not three - overshooting used to delete the key
+    //     instead of flipping it back. Removal lives on the readout below.
+    var stack=[];
+    var bar=null;
+    var addMode=false;
+    var open=function(t){return t==='num'?'desc':'asc';};
+    var label=function(k){
+      var th=heads[k.i];
+      var txt=(th.textContent||'').trim()||'col '+(k.i+1);
+      return txt+' '+(k.dir==='asc'?'\u2191':'\u2193');
+    };
+    var paint=function(){
+      heads.forEach(function(h){
+        h.removeAttribute('data-dir');h.removeAttribute('data-rank');});
+      stack.forEach(function(k,n){
+        heads[k.i].setAttribute('data-dir',k.dir);
+        if(stack.length>1)heads[k.i].setAttribute('data-rank',n+1);
+      });
+      if(!bar)return;
+      // The readout is the roomy control. Header cells on this table are
+      // ~60px wide; these chips are not, so flipping and removing a key are
+      // easier here than up there. The +key chip is also the touch
+      // equivalent of shift-click, since the dashboard table stays on screen
+      // at phone widths and there is no modifier available.
+      var html='';
+      if(stack.length){
+        html='sorted by '+stack.map(function(k,n){
+          return '<span class="key" data-k="'+n+'">'+label(k)+
+                 '<span class="x">\u00d7</span></span>';
+        }).join(' &rsaquo; ')+'<span class="clr wipe">clear</span>';
+      }
+      html+='<span class="clr add'+(addMode?' on':'')+'">+key</span>';
+      bar.innerHTML=html;
+      Array.prototype.forEach.call(bar.querySelectorAll('.key'),function(el){
+        el.addEventListener('click',function(ev){
+          var n=parseInt(el.getAttribute('data-k'),10);
+          if(isNaN(n)||!stack[n])return;
+          if(ev.target&&ev.target.className==='x')stack.splice(n,1);
+          else stack[n].dir=stack[n].dir==='asc'?'desc':'asc';
+          paint();apply();
+        });
+      });
+      var w=bar.querySelector('.wipe');
+      if(w)w.addEventListener('click',function(){stack=[];paint();});
+      var ad=bar.querySelector('.add');
+      if(ad)ad.addEventListener('click',function(){addMode=!addMode;paint();});
+    };
+    var apply=function(){
+      var body=tb.querySelector('tbody');
+      var all=Array.prototype.slice.call(body.querySelectorAll('tr'));
+      var rows=all.filter(function(r){return !r.classList.contains('det');});
+      var dets={};
+      all.forEach(function(r){
+        if(r.classList.contains('det'))dets[r.getAttribute('data-g')]=r;
+      });
+      // Remember the incoming order so the comparator can fall back to it.
+      // Array.prototype.sort is stable in every browser this targets, but
+      // being explicit keeps a full tie from depending on that.
+      rows.forEach(function(r,n){r._n=n;});
+      rows.sort(function(a,b){
+        for(var s=0;s<stack.length;s++){
+          var k=stack[s];
+          if(!a.cells[k.i]||!b.cells[k.i])continue;
+          var x=val(a.cells[k.i],k.t),y=val(b.cells[k.i],k.t);
+          if(x<y)return k.dir==='asc'?-1:1;
+          if(x>y)return k.dir==='asc'?1:-1;
+        }
+        return a._n-b._n;
+      });
+      rows.forEach(function(r){
+        body.appendChild(r);
+        var g=r.getAttribute('data-g');
+        if(g!==null&&dets[g])body.appendChild(dets[g]);
+      });
+    };
+    heads.forEach(function(th,i){
+      if(!th.hasAttribute('data-t'))return;
+      th.setAttribute('tabindex','0');
+      var go=function(add){
+        var t=th.getAttribute('data-t');
+        var at=-1;
+        for(var s=0;s<stack.length;s++)if(stack[s].i===i){at=s;break;}
+        if(at>=0){
+          // Already a key: flip it, leave its position and the rest alone.
+          stack[at].dir=stack[at].dir==='asc'?'desc':'asc';
+        }else if(add){
+          stack.push({i:i,t:t,dir:open(t)});
+        }else{
+          stack=[{i:i,t:t,dir:open(t)}];
+        }
+        paint();apply();
+      };
+      th.addEventListener('click',function(ev){
+        go(ev.shiftKey||ev.ctrlKey||ev.metaKey||addMode);
+      });
+      th.addEventListener('keydown',function(ev){
+        if(ev.key==='Enter'||ev.key===' '){
+          ev.preventDefault();go(ev.shiftKey||addMode);}
+      });
+    });
+    // Readout sits directly above its own table, so a page with two tables
+    // gets two independent stacks and two independent bars.
+    var host=tb.parentNode;
+    bar=document.createElement('div');
+    bar.className='sortbar';
+    host.parentNode.insertBefore(bar,host);
+    RESORT.push(function(){if(stack.length)apply();});
+    paint();
+  });
+  var tbl=document.querySelector('table'),
+      tb=tbl?tbl.querySelector('tbody'):null;
+  if(tb){
+    tb.addEventListener('click',function(ev){
+      var tr=ev.target.closest('tr.row');
+      if(!tr)return;
+      var g=tr.getAttribute('data-g');
+      var d=tb.querySelector("tr.det[data-g='"+g+"']");
+      if(!d)return;
+      var open=d.classList.toggle('show');
+      tr.classList.toggle('open',open);
+    });
+  }
+  var bd=document.querySelector('.board');
+  if(bd){
+    bd.addEventListener('click',function(ev){
+      var c=ev.target.closest('.game');
+      if(c&&c.querySelector('.det2'))c.classList.toggle('open');
+    });
+  }
+  var q=document.getElementById('q'),qn=document.getElementById('qn');
+  if(q){
+    var filter=function(){
+      var v=q.value.trim().toLowerCase(),shown=0,total=0;
+      if(tb){
+        tb.querySelectorAll('tr.row, tr:not(.det):not(.row)').forEach(function(tr){
+          total++;
+          var hit=!v||tr.textContent.toLowerCase().indexOf(v)>-1;
+          tr.style.display=hit?'':'none';
+          if(hit)shown++;
+          var g=tr.getAttribute('data-g');
+          if(g!==null){
+            var d=tb.querySelector("tr.det[data-g='"+g+"']");
+            if(d&&!hit){d.classList.remove('show');tr.classList.remove('open');}
+          }
+        });
+      }
+      if(bd){
+        bd.querySelectorAll('.game').forEach(function(c){
+          var hit=!v||c.textContent.toLowerCase().indexOf(v)>-1;
+          c.style.display=hit?'':'none';
+          if(!hit)c.classList.remove('open');
+        });
+      }
+      // Bet cards are the mobile form of the same rows, so the filter has to
+      // reach them too - otherwise searching on a phone appears to do
+      // nothing. They carry their own count, since on mobile the table rows
+      // above are hidden and would report a total nobody can see.
+      var bcards=document.querySelectorAll('.betboard .bet');
+      if(bcards.length){
+        var bshown=0;
+        bcards.forEach(function(c){
+          var hit=!v||c.textContent.toLowerCase().indexOf(v)>-1;
+          c.style.display=hit?'':'none';
+          if(hit)bshown++;
+        });
+        if(!tb){shown=bshown;total=bcards.length;}
+      }
+      if(qn)qn.textContent=v?shown+' / '+total:'';
+    };
+    q.addEventListener('input',filter);
+    q.addEventListener('keydown',function(ev){
+      if(ev.key==='Escape'){q.value='';filter();}
+    });
+  }
+  var board=document.querySelector('.board'),sel=document.getElementById('bsort'),
+      btn=document.getElementById('bdir');
+  if(board&&sel){
+    var asc=true;
+    var apply=function(){
+      var k=sel.value,t=sel.options[sel.selectedIndex].getAttribute('data-t');
+      var cards=Array.prototype.slice.call(board.querySelectorAll('.game'));
+      cards.sort(function(a,b){
+        var x=a.getAttribute('data-'+k),y=b.getAttribute('data-'+k);
+        if(t==='num'){x=parseFloat(x);y=parseFloat(y);}
+        else{x=(x||'').toLowerCase();y=(y||'').toLowerCase();}
+        if(x<y)return asc?-1:1;
+        if(x>y)return asc?1:-1;
+        return 0;
+      });
+      cards.forEach(function(c){board.appendChild(c);});
+      btn.textContent=asc?'\u2191':'\u2193';
+    };
+    sel.addEventListener('change',apply);
+    btn.addEventListener('click',function(){asc=!asc;apply();});
+  }
+  // Window selector. Every per-window value ships in the page inside a
+  // [data-w] span; switching windows is just setting data-win on the
+  // container and letting CSS decide what shows. No re-render, no lookup
+  // table, and the table keeps whatever sort is already applied.
+  // Point a card (or the page container) at a window: set the attribute the
+  // generated CSS keys off, and move the highlight to the matching cell.
+  var setwin=function(el,w){
+    el.setAttribute('data-win',w);
+    el.querySelectorAll('.wc').forEach(function(c){
+      c.classList.toggle('on',c.getAttribute('data-cell')===w);
+    });
+  };
+  document.querySelectorAll('.wsel').forEach(function(ws){
+    var host=document.getElementById(ws.getAttribute('data-for'));
+    if(!host)return;
+    var btns=ws.querySelectorAll('button');
+    btns.forEach(function(b){
+      b.addEventListener('click',function(){
+        var w=b.getAttribute('data-w');
+        btns.forEach(function(o){o.classList.remove('on');});
+        b.classList.add('on');
+        host.setAttribute('data-win',w);
+        // Cards carry their own data-win, which outranks the page's. Move
+        // them together or the chip row would appear to do nothing on a
+        // phone, where the cards are all that is visible.
+        host.querySelectorAll('.bet').forEach(function(c){setwin(c,w);});
+        // The per-window columns now hold different numbers, so any active
+        // sort has to run again against them.
+        RESORT.forEach(function(f){f();});
+      });
+    });
+  });
+  // A card's window grid doubles as its own selector: tap a window to read
+  // that window's fair price and edge in the foot, without scrolling back to
+  // the chip row. Scoped to the one card, so two bets can be inspected under
+  // different windows side by side.
+  document.querySelectorAll('.betboard').forEach(function(bb){
+    bb.addEventListener('click',function(ev){
+      var cell=ev.target.closest&&ev.target.closest('.wc');
+      if(!cell)return;
+      var card=cell.closest('.bet');
+      if(card)setwin(card,cell.getAttribute('data-cell'));
+    });
+  });
+})();
+</script>
+<footer><div class="wrap">Model output, not advice. Held-out error is about 3.7 runs a game and the model does not yet beat a league-average constant — treat every number as a wide estimate.</div></footer>
+</body></html>
