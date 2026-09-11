@@ -1503,10 +1503,10 @@
   "away_rank": 99,
   "away_short": "Villanova",
   "city": "Louisville",
-  "clock": "12:16",
+  "clock": "11:01",
   "conf_comp": false,
-  "detail": "12:16 - 1st",
-  "down": null,
+  "detail": "11:01 - 1st",
+  "down": "1st & 10 at VILL 47",
   "espn_id": "401858215",
   "final": false,
   "home_abbr": "LOU",
@@ -1517,15 +1517,21 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "2, 0 YDS",
-    "who": "L. Kienholz"
+    "team": "away",
+    "val": "2/2, 12 YDS",
+    "who": "P. McQuaide"
    },
    {
     "cat": "RUSH",
     "team": "home",
     "val": "3 CAR, 18 YDS",
     "who": "I. Brown"
+   },
+   {
+    "cat": "REC",
+    "team": "away",
+    "val": "1 REC, 8 YDS",
+    "who": "B. Reed"
    }
   ],
   "line_away": [
@@ -1536,9 +1542,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "VILL 47",
   "state": "KY",
   "status": "In Progress",
   "venue": "L&N Federal Credit Union Stadium"
@@ -4765,14 +4771,14 @@
   "away_rank": 99,
   "away_short": "Richmond",
   "city": "Raleigh",
-  "clock": "12:26",
+  "clock": "11:21",
   "conf_comp": false,
-  "detail": "12:26 - 1st",
-  "down": "1st & 10 at RICH 22",
+  "detail": "11:21 - 1st",
+  "down": "1st & 10 at RICH 25",
   "espn_id": "401858222",
   "final": false,
   "home_abbr": "NCSU",
-  "home_r": "0",
+  "home_r": "7",
   "home_rank": 99,
   "home_short": "NC State",
   "in_play": true,
@@ -4786,7 +4792,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "1 CAR, 43 YDS",
+    "val": "2 CAR, 46 YDS",
     "who": "J. Scott"
    },
    {
@@ -4800,13 +4806,13 @@
    0.0
   ],
   "line_home": [
-   0.0
+   7.0
   ],
   "neutral": false,
   "period": 1,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "RICH 22",
+  "spot": "RICH 25",
   "state": "NC",
   "status": "In Progress",
   "venue": "Carter-Finley Stadium"
@@ -5681,10 +5687,10 @@
   "away_rank": 99,
   "away_short": "Norfolk St",
   "city": "Charlottesville",
-  "clock": "11:22",
+  "clock": "7:47",
   "conf_comp": false,
-  "detail": "11:22 - 1st",
-  "down": "4th & 7 at UVA 29",
+  "detail": "7:47 - 1st",
+  "down": null,
   "espn_id": "401858220",
   "final": false,
   "home_abbr": "UVA",
@@ -5696,14 +5702,14 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "5/8, 45 YDS",
+    "val": "5/9, 45 YDS, 1 INT",
     "who": "D. Bailey"
    },
    {
     "cat": "RUSH",
-    "team": "away",
-    "val": "1 CAR, -9 YDS",
-    "who": "D. Bailey"
+    "team": "home",
+    "val": "1 CAR, 2 YDS",
+    "who": "B. Pribula"
    },
    {
     "cat": "REC",
@@ -5720,9 +5726,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": "away",
-  "redzone": false,
-  "spot": "UVA 29",
+  "poss": null,
+  "redzone": true,
+  "spot": null,
   "state": "VA",
   "status": "In Progress",
   "venue": "Scott Stadium"
