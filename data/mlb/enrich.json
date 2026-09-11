@@ -982,7 +982,7 @@
   "win_side": null
  },
  "3c3f42ca13e41dbc966dfb7f8361a615": {
-  "abstract": "Preview",
+  "abstract": "Live",
   "away_p": "Miguel Ullola",
   "away_p_hand": "R",
   "away_r": 0,
@@ -1016,8 +1016,8 @@
    0
   ],
   "save_p": null,
-  "status": "Pre-Game",
-  "warmup": false,
+  "status": "Warmup",
+  "warmup": true,
   "win_p": null,
   "win_side": null
  },
@@ -1346,8 +1346,8 @@
   "away_p": "Yusei Kikuchi",
   "away_p_hand": "L",
   "away_r": 1,
-  "cur_batter": "Mike Trout",
-  "cur_pitcher": "Cade Cavalli",
+  "cur_batter": "James Wood",
+  "cur_pitcher": "Yusei Kikuchi",
   "game_pk": 822684,
   "half": "Top",
   "home_p": "Cade Cavalli",
@@ -1363,8 +1363,10 @@
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "home",
+  "outs": 3,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Cade Cavalli",
   "rhe_away": [
    1,
    1,
@@ -1380,8 +1382,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 47.8,
-  "wp_home": 52.2
+  "wp_away": 56.2,
+  "wp_home": 43.8
  },
  "5829b429dfb2b487aaca727451b8c55c": {
   "abstract": "Preview",
@@ -2752,27 +2754,32 @@
   "away_p": "Mason Adams",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Gleyber Torres",
-  "cur_pitcher": "Mason Adams",
+  "cur_batter": "Kyle Karros",
+  "cur_pitcher": "Framber Valdez",
   "game_pk": 824227,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Framber Valdez",
   "home_p_hand": "L",
   "home_r": 0,
   "in_play": true,
-  "inning": 1,
+  "inning": 2,
   "innings": [
    {
     "a": 0,
-    "h": null,
+    "h": 0,
     "n": 1
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 2
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "away",
+  "outs": 0,
+  "pitch_side": "home",
   "pitcher_changed": true,
-  "prev_pitcher": "Framber Valdez",
+  "prev_pitcher": "Mason Adams",
   "rhe_away": [
    0,
    2,
@@ -2788,8 +2795,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 47.4,
-  "wp_home": 52.6
+  "wp_away": 50.0,
+  "wp_home": 50.0
  },
  "f01c292dd868a51b739e2283164a5e94": {
   "abstract": "Final",
