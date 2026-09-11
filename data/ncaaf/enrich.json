@@ -1499,14 +1499,14 @@
  },
  "340ecb016288a69dfc2227500f14bc46": {
   "away_abbr": "VILL",
-  "away_r": "3",
+  "away_r": "10",
   "away_rank": 99,
   "away_short": "Villanova",
   "city": "Louisville",
-  "clock": "0:00",
+  "clock": "13:29",
   "conf_comp": false,
-  "detail": "End of 1st",
-  "down": "1st & 10 at VILL 35",
+  "detail": "13:29 - 2nd",
+  "down": "1st & 10 at LOU 39",
   "espn_id": "401858215",
   "final": false,
   "home_abbr": "LOU",
@@ -1518,7 +1518,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "4/7, 118 YDS, 1 TD",
+    "val": "5/8, 137 YDS, 1 TD",
     "who": "L. Kienholz"
    },
    {
@@ -1535,18 +1535,20 @@
    }
   ],
   "line_away": [
-   3.0
+   3.0,
+   7.0
   ],
   "line_home": [
-   17.0
+   17.0,
+   0.0
   ],
   "neutral": false,
-  "period": 1,
-  "poss": "away",
+  "period": 2,
+  "poss": "home",
   "redzone": false,
-  "spot": "VILL 35",
+  "spot": "LOU 39",
   "state": "KY",
-  "status": "End of Period",
+  "status": "In Progress",
   "venue": "L&N Federal Credit Union Stadium"
  },
  "3848eaee7484034f3604aed922649c4e": {
@@ -4771,10 +4773,10 @@
   "away_rank": 99,
   "away_short": "Richmond",
   "city": "Raleigh",
-  "clock": "0:11",
+  "clock": "0:00",
   "conf_comp": false,
-  "detail": "0:11 - 1st",
-  "down": "2nd & 4 at RICH 47",
+  "detail": "End of 1st",
+  "down": "2nd & 10 at RICH 47",
   "espn_id": "401858222",
   "final": false,
   "home_abbr": "NCSU",
@@ -4814,7 +4816,7 @@
   "redzone": false,
   "spot": "RICH 47",
   "state": "NC",
-  "status": "In Progress",
+  "status": "End of Period",
   "venue": "Carter-Finley Stadium"
  },
  "b1298d12169731a56fba3b484f27c005": {
@@ -5687,10 +5689,10 @@
   "away_rank": 99,
   "away_short": "Norfolk St",
   "city": "Charlottesville",
-  "clock": "0:12",
+  "clock": "0:00",
   "conf_comp": false,
-  "detail": "0:12 - 1st",
-  "down": "1st & 10 at UVA 45",
+  "detail": "End of 1st",
+  "down": "2nd & 14 at NORF 48",
   "espn_id": "401858220",
   "final": false,
   "home_abbr": "UVA",
@@ -5707,9 +5709,9 @@
    },
    {
     "cat": "RUSH",
-    "team": "away",
-    "val": "4 CAR, 8 YDS",
-    "who": "R. Moore"
+    "team": "home",
+    "val": "1 CAR, 11 YDS",
+    "who": "X. Davis"
    },
    {
     "cat": "REC",
@@ -5728,9 +5730,9 @@
   "period": 1,
   "poss": "home",
   "redzone": false,
-  "spot": "UVA 45",
+  "spot": "NORF 48",
   "state": "VA",
-  "status": "In Progress",
+  "status": "End of Period",
   "venue": "Scott Stadium"
  },
  "d71b8c6e0faec78e166823b1b3fa22b0": {
@@ -5883,10 +5885,10 @@
   "away_rank": 99,
   "away_short": "Rutgers",
   "city": "Chestnut Hill",
-  "clock": "13:52",
+  "clock": "11:26",
   "conf_comp": false,
-  "detail": "13:52 - 1st",
-  "down": "4th & 1 at RUTG 34",
+  "detail": "11:26 - 1st",
+  "down": "4th & 3 at RUTG 27",
   "espn_id": "401858214",
   "final": false,
   "home_abbr": "BC",
@@ -5896,10 +5898,22 @@
   "in_play": true,
   "leaders": [
    {
+    "cat": "PASS",
+    "team": "home",
+    "val": "1/1, 2 YDS",
+    "who": "M. McKenzie"
+   },
+   {
     "cat": "RUSH",
     "team": "away",
     "val": "3 CAR, 9 YDS",
     "who": "A. Raymond"
+   },
+   {
+    "cat": "REC",
+    "team": "home",
+    "val": "1 REC, 2 YDS",
+    "who": "E. Dickens"
    }
   ],
   "line_away": [
@@ -5910,9 +5924,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "RUTG 34",
+  "spot": "RUTG 27",
   "state": "MA",
   "status": "In Progress",
   "venue": "Alumni Stadium (Chestnut Hill, MA)"
