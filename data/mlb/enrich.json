@@ -364,7 +364,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -900,7 +900,7 @@
   "away_p": "Paul Skenes",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Spencer Horwitz",
+  "cur_batter": "Jacob Gonzalez",
   "cur_pitcher": "Clay Holmes",
   "game_pk": 824630,
   "half": "Top",
@@ -922,13 +922,11 @@
    }
   ],
   "lose_p": null,
-  "outs": 1,
+  "outs": 2,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "Paul Skenes",
   "rhe_away": [
    0,
-   1,
+   2,
    0
   ],
   "rhe_home": [
@@ -941,8 +939,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 37.3,
-  "wp_home": 62.7
+  "wp_away": 36.8,
+  "wp_home": 63.2
  },
  "3c3f42ca13e41dbc966dfb7f8361a615": {
   "abstract": "Final",
@@ -1281,7 +1279,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -1315,7 +1313,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -1349,7 +1347,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -1959,10 +1957,10 @@
   "away_p": "Tanner Gordon",
   "away_p_hand": "R",
   "away_r": 4,
-  "cur_batter": "TJ Rumfield",
-  "cur_pitcher": "Andrew Sears",
+  "cur_batter": "Eduardo Valencia",
+  "cur_pitcher": "Juan Mejia",
   "game_pk": 824224,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Andrew Sears",
   "home_p_hand": "L",
   "home_r": 4,
@@ -1990,14 +1988,16 @@
     "n": 4
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 5
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Andrew Sears",
   "rhe_away": [
    4,
    7,
@@ -2013,8 +2013,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 52.7,
-  "wp_home": 47.3
+  "wp_away": 43.300000000000004,
+  "wp_home": 56.699999999999996
  },
  "cd6e588ebdaf04eb7def2c1d33b7144e": {
   "abstract": "Final",
@@ -2436,8 +2436,8 @@
   "away_p": "Zac Thornton",
   "away_p_hand": "L",
   "away_r": 4,
-  "cur_batter": "Cody Bellinger",
-  "cur_pitcher": "Zac Thornton",
+  "cur_batter": "Juan Soto",
+  "cur_pitcher": "Gerrit Cole",
   "game_pk": 823496,
   "half": "Bottom",
   "home_p": "Gerrit Cole",
@@ -2468,8 +2468,10 @@
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "away",
+  "outs": 3,
+  "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Zac Thornton",
   "rhe_away": [
    4,
    7,
@@ -2485,7 +2487,7 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 82.5,
-  "wp_home": 17.5
+  "wp_away": 81.3,
+  "wp_home": 18.7
  }
 }
