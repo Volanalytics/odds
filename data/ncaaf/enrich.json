@@ -1503,10 +1503,10 @@
   "away_rank": 99,
   "away_short": "Villanova",
   "city": "Louisville",
-  "clock": "7:04",
+  "clock": "4:22",
   "conf_comp": false,
-  "detail": "7:04 - 4th",
-  "down": null,
+  "detail": "4:22 - 4th",
+  "down": "2nd & 9 at VILL 37",
   "espn_id": "401858215",
   "final": false,
   "home_abbr": "LOU",
@@ -1548,9 +1548,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "VILL 37",
   "state": "KY",
   "status": "In Progress",
   "venue": "L&N Federal Credit Union Stadium"
@@ -4009,10 +4009,10 @@
   "away_rank": 23,
   "away_short": "Missouri",
   "city": "Lawrence",
-  "clock": "0:00",
+  "clock": "13:51",
   "conf_comp": false,
-  "detail": "Halftime",
-  "down": "4th & 9 at KU 8",
+  "detail": "13:51 - 3rd",
+  "down": "4th & 10 at MIZ 18",
   "espn_id": "401856678",
   "final": false,
   "home_abbr": "KU",
@@ -4024,13 +4024,13 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "13/18, 202 YDS, 1 TD",
+    "val": "13/20, 202 YDS, 1 TD",
     "who": "A. Simmons"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "14 CAR, 88 YDS, 1 TD",
+    "val": "15 CAR, 88 YDS, 1 TD",
     "who": "J. Roberts"
    },
    {
@@ -4042,19 +4042,21 @@
   ],
   "line_away": [
    0.0,
-   14.0
+   14.0,
+   0.0
   ],
   "line_home": [
    0.0,
-   14.0
+   14.0,
+   0.0
   ],
   "neutral": false,
-  "period": 2,
-  "poss": null,
-  "redzone": true,
-  "spot": "KU 8",
+  "period": 3,
+  "poss": "away",
+  "redzone": false,
+  "spot": "MIZ 18",
   "state": "KS",
-  "status": "Halftime",
+  "status": "In Progress",
   "venue": "David Booth Kansas Memorial Stadium"
  },
  "91ba0aefe833f0543aa43843374916f4": {
@@ -4783,10 +4785,10 @@
   "away_rank": 99,
   "away_short": "Richmond",
   "city": "Raleigh",
-  "clock": "1:23",
+  "clock": "0:38",
   "conf_comp": false,
-  "detail": "1:23 - 2nd",
-  "down": "1st & 10 at NCSU 31",
+  "detail": "0:38 - 2nd",
+  "down": "2nd & Goal at RICH 4",
   "espn_id": "401858222",
   "final": false,
   "home_abbr": "NCSU",
@@ -4798,7 +4800,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "11/13, 217 YDS, 1 TD",
+    "val": "13/18, 281 YDS, 1 TD",
     "who": "C. Bailey"
    },
    {
@@ -4810,7 +4812,7 @@
    {
     "cat": "REC",
     "team": "home",
-    "val": "3 REC, 69 YDS",
+    "val": "4 REC, 123 YDS",
     "who": "K. Jackson"
    }
   ],
@@ -4825,8 +4827,8 @@
   "neutral": false,
   "period": 2,
   "poss": "home",
-  "redzone": false,
-  "spot": "NCSU 31",
+  "redzone": true,
+  "spot": "RICH 4",
   "state": "NC",
   "status": "In Progress",
   "venue": "Carter-Finley Stadium"
@@ -5903,10 +5905,10 @@
   "away_rank": 99,
   "away_short": "Rutgers",
   "city": "Chestnut Hill",
-  "clock": "6:47",
+  "clock": "2:37",
   "conf_comp": false,
-  "detail": "6:47 - 3rd",
-  "down": "1st & 10 at BC 41",
+  "detail": "2:37 - 3rd",
+  "down": "2nd & Goal at BC 4",
   "espn_id": "401858214",
   "final": false,
   "home_abbr": "BC",
@@ -5924,7 +5926,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "20 CAR, 98 YDS",
+    "val": "21 CAR, 103 YDS",
     "who": "A. Raymond"
    },
    {
@@ -5946,9 +5948,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "home",
-  "redzone": false,
-  "spot": "BC 41",
+  "poss": "away",
+  "redzone": true,
+  "spot": "BC 4",
   "state": "MA",
   "status": "In Progress",
   "venue": "Alumni Stadium (Chestnut Hill, MA)"
