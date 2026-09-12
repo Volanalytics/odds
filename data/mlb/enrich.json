@@ -256,7 +256,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -330,7 +330,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -828,7 +828,7 @@
   "win_side": "home"
  },
  "3b910a2e0ac0e7339bf6d0b3857bf1bc": {
-  "abstract": "Preview",
+  "abstract": "Live",
   "away_p": "Paul Skenes",
   "away_p_hand": "R",
   "away_r": 0,
@@ -862,8 +862,8 @@
    0
   ],
   "save_p": null,
-  "status": "Pre-Game",
-  "warmup": false,
+  "status": "Warmup",
+  "warmup": true,
   "win_p": null,
   "win_side": null
  },
@@ -1204,7 +1204,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -1238,7 +1238,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -1847,9 +1847,9 @@
   "abstract": "Live",
   "away_p": "Tanner Gordon",
   "away_p_hand": "R",
-  "away_r": 0,
-  "cur_batter": "Hunter Goodman",
-  "cur_pitcher": "Andrew Sears",
+  "away_r": 3,
+  "cur_batter": "Kevin McGonigle",
+  "cur_pitcher": "Tanner Gordon",
   "game_pk": 824224,
   "half": "Top",
   "home_p": "Andrew Sears",
@@ -1869,17 +1869,19 @@
     "n": 2
    },
    {
-    "a": null,
+    "a": 3,
     "h": null,
     "n": 3
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "home",
+  "outs": 3,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Andrew Sears",
   "rhe_away": [
-   0,
-   2,
+   3,
+   3,
    0
   ],
   "rhe_home": [
@@ -1891,9 +1893,9 @@
   "status": "In Progress",
   "warmup": false,
   "win_p": null,
-  "win_side": null,
-  "wp_away": 57.5,
-  "wp_home": 42.5
+  "win_side": "away",
+  "wp_away": 77.1,
+  "wp_home": 22.900000000000002
  },
  "cd6e588ebdaf04eb7def2c1d33b7144e": {
   "abstract": "Final",
@@ -2315,30 +2317,33 @@
   "away_p": "Zac Thornton",
   "away_p_hand": "L",
   "away_r": 1,
-  "cur_batter": "Jared Young",
+  "cur_batter": "Marcus Semien",
   "cur_pitcher": "Gerrit Cole",
   "game_pk": 823496,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Gerrit Cole",
   "home_p_hand": "R",
   "home_r": 0,
   "in_play": true,
-  "inning": 1,
+  "inning": 2,
   "innings": [
    {
     "a": 1,
     "h": 0,
     "n": 1
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 2
    }
   ],
   "lose_p": null,
-  "outs": 3,
+  "outs": 1,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "Zac Thornton",
   "rhe_away": [
    1,
-   1,
+   2,
    0
   ],
   "rhe_home": [
@@ -2351,7 +2356,7 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 59.300000000000004,
-  "wp_home": 40.699999999999996
+  "wp_away": 63.7,
+  "wp_home": 36.3
  }
 }
