@@ -353,7 +353,7 @@
   "home_p": "Cesar Perdomo",
   "home_p_hand": "L",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "innings": [
    {
@@ -376,10 +376,12 @@
    0
   ],
   "save_p": null,
-  "status": "Warmup",
-  "warmup": true,
+  "status": "In Progress",
+  "warmup": false,
   "win_p": null,
-  "win_side": null
+  "win_side": null,
+  "wp_away": 50.0,
+  "wp_home": 50.0
  },
  "14b28cc8951c1250a20d6aa224ec3317": {
   "abstract": "Preview",
@@ -974,8 +976,8 @@
   "away_p": "Paul Skenes",
   "away_p_hand": "R",
   "away_r": 3,
-  "cur_batter": "Bryan Reynolds",
-  "cur_pitcher": "Jacob Webb",
+  "cur_batter": "Nico Hoerner",
+  "cur_pitcher": "Paul Skenes",
   "game_pk": 824630,
   "half": "Top",
   "home_p": "Clay Holmes",
@@ -1015,16 +1017,16 @@
     "n": 6
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 7
    }
   ],
   "lose_p": null,
-  "outs": 0,
-  "pitch_side": "home",
+  "outs": 3,
+  "pitch_side": "away",
   "pitcher_changed": true,
-  "prev_pitcher": "Paul Skenes",
+  "prev_pitcher": "Jacob Webb",
   "rhe_away": [
    3,
    5,
@@ -1040,8 +1042,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 73.0,
-  "wp_home": 27.0
+  "wp_away": 66.19999999999999,
+  "wp_home": 33.800000000000004
  },
  "3c3f42ca13e41dbc966dfb7f8361a615": {
   "abstract": "Final",
@@ -1697,32 +1699,38 @@
   "abstract": "Preview",
   "away_p": "Tim Mayza",
   "away_p_hand": "L",
-  "away_r": null,
-  "cur_batter": null,
-  "cur_pitcher": null,
+  "away_r": 0,
+  "cur_batter": "Kyle Schwarber",
+  "cur_pitcher": "Tyler Mahle",
   "game_pk": 824870,
-  "half": null,
+  "half": "Top",
   "home_p": "Tyler Mahle",
   "home_p_hand": "R",
-  "home_r": null,
+  "home_r": 0,
   "in_play": false,
-  "inning": null,
-  "innings": [],
+  "inning": 1,
+  "innings": [
+   {
+    "a": null,
+    "h": null,
+    "n": 1
+   }
+  ],
   "lose_p": null,
-  "outs": null,
-  "pitch_side": "away",
+  "outs": 0,
+  "pitch_side": "home",
   "rhe_away": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "rhe_home": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "save_p": null,
-  "status": "Scheduled",
+  "status": "Pre-Game",
   "warmup": false,
   "win_p": null,
   "win_side": null
@@ -1852,7 +1860,7 @@
   "away_p": "Kyle Bradish",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Kazuma Okamoto",
+  "cur_batter": "Andr\u00e9s Gim\u00e9nez",
   "cur_pitcher": "Kyle Bradish",
   "game_pk": 822768,
   "half": "Bottom",
@@ -1888,7 +1896,7 @@
   ],
   "rhe_home": [
    5,
-   6,
+   8,
    0
   ],
   "save_p": null,
@@ -1896,8 +1904,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 7.299999999999997,
-  "wp_home": 92.7
+  "wp_away": 6.8999999999999915,
+  "wp_home": 93.10000000000001
  },
  "a5da7f95d7c671a9287dc40863b8204e": {
   "abstract": "Preview",
@@ -2178,8 +2186,8 @@
   "away_p": "Tanner Gordon",
   "away_p_hand": "R",
   "away_r": 7,
-  "cur_batter": "Max Clark",
-  "cur_pitcher": "Jaden Hill",
+  "cur_batter": "Spencer Torkelson",
+  "cur_pitcher": "Jordan Romano",
   "game_pk": 824224,
   "half": "Bottom",
   "home_p": "Andrew Sears",
@@ -2232,6 +2240,8 @@
   "lose_p": null,
   "outs": 0,
   "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Jaden Hill",
   "rhe_away": [
    7,
    12,
@@ -2247,8 +2257,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 37.1,
-  "wp_home": 62.9
+  "wp_away": 29.60000000000001,
+  "wp_home": 70.39999999999999
  },
  "c8c288fb5f290ac3cb4c91c056e01cdc": {
   "abstract": "Preview",
@@ -2386,7 +2396,7 @@
   "home_p": "Andrew Alvarez",
   "home_p_hand": "L",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "innings": [
    {
@@ -2409,10 +2419,12 @@
    0
   ],
   "save_p": null,
-  "status": "Warmup",
-  "warmup": true,
+  "status": "In Progress",
+  "warmup": false,
   "win_p": null,
-  "win_side": null
+  "win_side": null,
+  "wp_away": 50.0,
+  "wp_home": 50.0
  },
  "d30d8cd5fc6b55f7548118280dd2b37f": {
   "abstract": "Final",
@@ -2738,15 +2750,15 @@
   "away_p": "Zac Thornton",
   "away_p_hand": "L",
   "away_r": 11,
-  "cur_batter": "Cody Bellinger",
-  "cur_pitcher": "Tobias Myers",
+  "cur_batter": "Carson Benge",
+  "cur_pitcher": "Bradley Hanner",
   "game_pk": 823496,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Gerrit Cole",
   "home_p_hand": "R",
   "home_r": 2,
   "in_play": true,
-  "inning": 8,
+  "inning": 9,
   "innings": [
    {
     "a": 1,
@@ -2785,13 +2797,20 @@
    },
    {
     "a": 5,
-    "h": null,
+    "h": 0,
     "n": 8
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 9
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "away",
+  "outs": 1,
+  "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Tobias Myers",
   "rhe_away": [
    11,
    13,
