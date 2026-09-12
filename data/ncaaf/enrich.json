@@ -1503,14 +1503,14 @@
   "away_rank": 99,
   "away_short": "Villanova",
   "city": "Louisville",
-  "clock": "14:08",
+  "clock": "12:36",
   "conf_comp": false,
-  "detail": "14:08 - 4th",
-  "down": "3rd & 1 at VILL 7",
+  "detail": "12:36 - 4th",
+  "down": null,
   "espn_id": "401858215",
   "final": false,
   "home_abbr": "LOU",
-  "home_r": "45",
+  "home_r": "52",
   "home_rank": 24,
   "home_short": "Louisville",
   "in_play": true,
@@ -1544,13 +1544,13 @@
    17.0,
    14.0,
    14.0,
-   0.0
+   7.0
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
-  "redzone": true,
-  "spot": "VILL 7",
+  "poss": null,
+  "redzone": false,
+  "spot": null,
   "state": "KY",
   "status": "In Progress",
   "venue": "L&N Federal Credit Union Stadium"
@@ -4009,10 +4009,10 @@
   "away_rank": 23,
   "away_short": "Missouri",
   "city": "Lawrence",
-  "clock": "0:12",
+  "clock": "0:00",
   "conf_comp": false,
-  "detail": "0:12 - 2nd",
-  "down": null,
+  "detail": "Halftime",
+  "down": "4th & 9 at KU 8",
   "espn_id": "401856678",
   "final": false,
   "home_abbr": "KU",
@@ -4052,9 +4052,9 @@
   "period": 2,
   "poss": null,
   "redzone": true,
-  "spot": null,
+  "spot": "KU 8",
   "state": "KS",
-  "status": "In Progress",
+  "status": "Halftime",
   "venue": "David Booth Kansas Memorial Stadium"
  },
  "91ba0aefe833f0543aa43843374916f4": {
@@ -4783,14 +4783,14 @@
   "away_rank": 99,
   "away_short": "Richmond",
   "city": "Raleigh",
-  "clock": "7:15",
+  "clock": "5:36",
   "conf_comp": false,
-  "detail": "7:15 - 2nd",
-  "down": null,
+  "detail": "5:36 - 2nd",
+  "down": "3rd & 7 at RICH 28",
   "espn_id": "401858222",
   "final": false,
   "home_abbr": "NCSU",
-  "home_r": "41",
+  "home_r": "42",
   "home_rank": 99,
   "home_short": "NC State",
   "in_play": true,
@@ -4798,13 +4798,13 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "8/9, 150 YDS",
+    "val": "10/11, 208 YDS, 1 TD",
     "who": "C. Bailey"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "8 CAR, 171 YDS, 3 TD",
+    "val": "8 CAR, 123 YDS, 2 TD",
     "who": "J. Scott"
    },
    {
@@ -4820,13 +4820,13 @@
   ],
   "line_home": [
    21.0,
-   20.0
+   21.0
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
-  "redzone": true,
-  "spot": null,
+  "poss": "away",
+  "redzone": false,
+  "spot": "RICH 28",
   "state": "NC",
   "status": "In Progress",
   "venue": "Carter-Finley Stadium"
@@ -5701,14 +5701,14 @@
   "away_rank": 99,
   "away_short": "Norfolk St",
   "city": "Charlottesville",
-  "clock": "7:23",
+  "clock": "4:17",
   "conf_comp": false,
-  "detail": "7:23 - 4th",
+  "detail": "4:17 - 4th",
   "down": null,
   "espn_id": "401858220",
   "final": false,
   "home_abbr": "UVA",
-  "home_r": "52",
+  "home_r": "58",
   "home_rank": 25,
   "home_short": "Virginia",
   "in_play": true,
@@ -5742,7 +5742,7 @@
    21.0,
    7.0,
    14.0,
-   10.0
+   16.0
   ],
   "neutral": false,
   "period": 4,
@@ -5903,10 +5903,10 @@
   "away_rank": 99,
   "away_short": "Rutgers",
   "city": "Chestnut Hill",
-  "clock": "0:00",
+  "clock": "12:24",
   "conf_comp": false,
-  "detail": "Halftime",
-  "down": "1st & 10 at BC 25",
+  "detail": "12:24 - 3rd",
+  "down": "1st & 10 at RUTG 46",
   "espn_id": "401858214",
   "final": false,
   "home_abbr": "BC",
@@ -5918,13 +5918,13 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "10/16, 127 YDS",
+    "val": "11/18, 130 YDS",
     "who": "M. McKenzie"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "16 CAR, 94 YDS",
+    "val": "18 CAR, 94 YDS",
     "who": "A. Raymond"
    },
    {
@@ -5936,19 +5936,21 @@
   ],
   "line_away": [
    0.0,
-   7.0
+   7.0,
+   0.0
   ],
   "line_home": [
    14.0,
-   6.0
+   6.0,
+   0.0
   ],
   "neutral": false,
-  "period": 2,
-  "poss": null,
+  "period": 3,
+  "poss": "away",
   "redzone": false,
-  "spot": "BC 25",
+  "spot": "RUTG 46",
   "state": "MA",
-  "status": "Halftime",
+  "status": "In Progress",
   "venue": "Alumni Stadium (Chestnut Hill, MA)"
  },
  "dbcfc3184e20d1ea45e910b89585071f": {
