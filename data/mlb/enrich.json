@@ -256,7 +256,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -290,7 +290,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -622,7 +622,7 @@
    0
   ],
   "save_p": "Cade Smith",
-  "status": "Game Over",
+  "status": "Final",
   "warmup": false,
   "win_p": "Hunter Gaddis",
   "win_side": "away"
@@ -632,13 +632,13 @@
   "away_p": "MacKenzie Gore",
   "away_p_hand": "L",
   "away_r": 1,
-  "cur_batter": "Ketel Marte",
-  "cur_pitcher": "MacKenzie Gore",
+  "cur_batter": "Gabriel Moreno",
+  "cur_pitcher": "Jakob Junis",
   "game_pk": 825036,
   "half": "Bottom",
   "home_p": "Merrill Kelly",
   "home_p_hand": "R",
-  "home_r": 1,
+  "home_r": 3,
   "in_play": true,
   "inning": 5,
   "innings": [
@@ -664,30 +664,32 @@
    },
    {
     "a": 1,
-    "h": 1,
+    "h": 3,
     "n": 5
    }
   ],
   "lose_p": null,
   "outs": 0,
   "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "MacKenzie Gore",
   "rhe_away": [
    1,
    2,
    0
   ],
   "rhe_home": [
-   1,
-   4,
+   3,
+   5,
    0
   ],
   "save_p": null,
   "status": "In Progress",
   "warmup": false,
   "win_p": null,
-  "win_side": null,
-  "wp_away": 44.9,
-  "wp_home": 55.1
+  "win_side": "home",
+  "wp_away": 14.799999999999997,
+  "wp_home": 85.2
  },
  "36a89478e8db28447dfe1b5d1f656477": {
   "abstract": "Final",
@@ -786,7 +788,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -1140,7 +1142,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -1174,7 +1176,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -1196,15 +1198,15 @@
   "away_p": "Robbie Ray",
   "away_p_hand": "L",
   "away_r": 7,
-  "cur_batter": "Osleivis Basabe",
-  "cur_pitcher": "Robbie Ray",
+  "cur_batter": "Luis Campusano",
+  "cur_pitcher": "Yunior Marte",
   "game_pk": 823173,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Anthony Molina",
   "home_p_hand": "R",
   "home_r": 1,
   "in_play": true,
-  "inning": 3,
+  "inning": 4,
   "innings": [
    {
     "a": 0,
@@ -1218,13 +1220,20 @@
    },
    {
     "a": 5,
-    "h": null,
+    "h": 0,
     "n": 3
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 4
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "away",
+  "outs": 1,
+  "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Robbie Ray",
   "rhe_away": [
    7,
    9,
@@ -1260,7 +1269,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -1408,7 +1417,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -1624,10 +1633,10 @@
   "away_p": "Anthony Kay",
   "away_p_hand": "L",
   "away_r": 2,
-  "cur_batter": "Chase Meidroth",
-  "cur_pitcher": "Luis Gastelum",
+  "cur_batter": "Nathan Church",
+  "cur_pitcher": "Trevor Richards",
   "game_pk": 823012,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Matthew Liberatore",
   "home_p_hand": "L",
   "home_r": 6,
@@ -1660,14 +1669,16 @@
     "n": 5
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 6
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Luis Gastelum",
   "rhe_away": [
    2,
    8,
@@ -1683,8 +1694,42 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 11.799999999999997,
-  "wp_home": 88.2
+  "wp_away": 10.799999999999997,
+  "wp_home": 89.2
+ },
+ "c63a7d48eec7289e56b5115bf9fcb09e": {
+  "abstract": "Preview",
+  "away_p": "Tanner Gordon",
+  "away_p_hand": "R",
+  "away_r": null,
+  "cur_batter": null,
+  "cur_pitcher": null,
+  "game_pk": 824224,
+  "half": null,
+  "home_p": null,
+  "home_p_hand": null,
+  "home_r": null,
+  "in_play": false,
+  "inning": null,
+  "innings": [],
+  "lose_p": null,
+  "outs": null,
+  "pitch_side": "away",
+  "rhe_away": [
+   null,
+   null,
+   null
+  ],
+  "rhe_home": [
+   null,
+   null,
+   null
+  ],
+  "save_p": null,
+  "status": "Scheduled",
+  "warmup": false,
+  "win_p": null,
+  "win_side": null
  },
  "cd6e588ebdaf04eb7def2c1d33b7144e": {
   "abstract": "Final",
@@ -1793,7 +1838,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -1815,8 +1860,8 @@
   "away_p": "George Kirby",
   "away_p_hand": "R",
   "away_r": 2,
-  "cur_batter": "Max Muncy",
-  "cur_pitcher": "George Kirby",
+  "cur_batter": "Julio Rodr\u00edguez",
+  "cur_pitcher": "Jeffrey Springs",
   "game_pk": 824954,
   "half": "Bottom",
   "home_p": "Jeffrey Springs",
@@ -1847,15 +1892,15 @@
    },
    {
     "a": 0,
-    "h": null,
+    "h": 0,
     "n": 5
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "away",
+  "outs": 3,
+  "pitch_side": "home",
   "pitcher_changed": true,
-  "prev_pitcher": "Jeffrey Springs",
+  "prev_pitcher": "George Kirby",
   "rhe_away": [
    2,
    6,
@@ -1863,7 +1908,7 @@
   ],
   "rhe_home": [
    4,
-   8,
+   9,
    0
   ],
   "save_p": null,
@@ -1871,8 +1916,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 20.299999999999997,
-  "wp_home": 79.7
+  "wp_away": 20.599999999999994,
+  "wp_home": 79.4
  },
  "de5c4fe6a041ce8073e59e063fe7f31f": {
   "abstract": "Final",
@@ -2051,7 +2096,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -2085,7 +2130,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
