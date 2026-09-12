@@ -1503,10 +1503,10 @@
   "away_rank": 99,
   "away_short": "Villanova",
   "city": "Louisville",
-  "clock": "0:00",
+  "clock": "14:00",
   "conf_comp": false,
-  "detail": "Halftime",
-  "down": "3rd & 10 at LOU 35",
+  "detail": "14:00 - 3rd",
+  "down": "1st & 10 at LOU 34",
   "espn_id": "401858215",
   "final": false,
   "home_abbr": "LOU",
@@ -1536,19 +1536,21 @@
   ],
   "line_away": [
    3.0,
-   7.0
+   7.0,
+   0.0
   ],
   "line_home": [
    17.0,
-   14.0
+   14.0,
+   0.0
   ],
   "neutral": false,
-  "period": 2,
-  "poss": null,
+  "period": 3,
+  "poss": "home",
   "redzone": false,
-  "spot": "LOU 35",
+  "spot": "LOU 34",
   "state": "KY",
-  "status": "Halftime",
+  "status": "In Progress",
   "venue": "L&N Federal Credit Union Stadium"
  },
  "3848eaee7484034f3604aed922649c4e": {
@@ -4005,10 +4007,10 @@
   "away_rank": 23,
   "away_short": "Missouri",
   "city": "Lawrence",
-  "clock": "11:02",
+  "clock": "8:06",
   "conf_comp": false,
-  "detail": "11:02 - 2nd",
-  "down": "3rd & 6 at MIZ 39",
+  "detail": "8:06 - 2nd",
+  "down": "3rd & Goal at KU 10",
   "espn_id": "401856678",
   "final": false,
   "home_abbr": "KU",
@@ -4020,13 +4022,13 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "6/9, 83 YDS",
+    "val": "7/11, 121 YDS",
     "who": "A. Simmons"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "7 CAR, 14 YDS",
+    "val": "10 CAR, 17 YDS",
     "who": "J. Roberts"
    },
    {
@@ -4047,8 +4049,8 @@
   "neutral": false,
   "period": 2,
   "poss": "away",
-  "redzone": false,
-  "spot": "MIZ 39",
+  "redzone": true,
+  "spot": "KU 10",
   "state": "KS",
   "status": "In Progress",
   "venue": "David Booth Kansas Memorial Stadium"
@@ -5697,14 +5699,14 @@
   "away_rank": 99,
   "away_short": "Norfolk St",
   "city": "Charlottesville",
-  "clock": "10:57",
+  "clock": "10:54",
   "conf_comp": false,
-  "detail": "10:57 - 3rd",
-  "down": null,
+  "detail": "10:54 - 3rd",
+  "down": "2nd & 10 at NORF 25",
   "espn_id": "401858220",
   "final": false,
   "home_abbr": "UVA",
-  "home_r": "34",
+  "home_r": "35",
   "home_rank": 25,
   "home_short": "Virginia",
   "in_play": true,
@@ -5736,13 +5738,13 @@
   "line_home": [
    21.0,
    7.0,
-   6.0
+   7.0
   ],
   "neutral": false,
   "period": 3,
-  "poss": null,
-  "redzone": true,
-  "spot": null,
+  "poss": "away",
+  "redzone": false,
+  "spot": "NORF 25",
   "state": "VA",
   "status": "In Progress",
   "venue": "Scott Stadium"
@@ -5897,10 +5899,10 @@
   "away_rank": 99,
   "away_short": "Rutgers",
   "city": "Chestnut Hill",
-  "clock": "7:52",
+  "clock": "6:00",
   "conf_comp": false,
-  "detail": "7:52 - 2nd",
-  "down": "1st & 10 at BC 45",
+  "detail": "6:00 - 2nd",
+  "down": "3rd & 2 at BC 25",
   "espn_id": "401858214",
   "final": false,
   "home_abbr": "BC",
@@ -5918,7 +5920,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "10 CAR, 62 YDS",
+    "val": "13 CAR, 82 YDS",
     "who": "A. Raymond"
    },
    {
@@ -5940,7 +5942,7 @@
   "period": 2,
   "poss": "away",
   "redzone": false,
-  "spot": "BC 45",
+  "spot": "BC 25",
   "state": "MA",
   "status": "In Progress",
   "venue": "Alumni Stadium (Chestnut Hill, MA)"
