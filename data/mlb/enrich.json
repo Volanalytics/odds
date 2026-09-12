@@ -900,44 +900,49 @@
   "away_p": "Paul Skenes",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Michael Busch",
-  "cur_pitcher": "Paul Skenes",
+  "cur_batter": "Spencer Horwitz",
+  "cur_pitcher": "Clay Holmes",
   "game_pk": 824630,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Clay Holmes",
   "home_p_hand": "R",
-  "home_r": 0,
+  "home_r": 1,
   "in_play": true,
-  "inning": 1,
+  "inning": 2,
   "innings": [
    {
     "a": 0,
-    "h": null,
+    "h": 1,
     "n": 1
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 2
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "away",
+  "outs": 1,
+  "pitch_side": "home",
   "pitcher_changed": true,
-  "prev_pitcher": "Clay Holmes",
+  "prev_pitcher": "Paul Skenes",
   "rhe_away": [
    0,
    1,
    0
   ],
   "rhe_home": [
-   0,
-   0,
+   1,
+   1,
    0
   ],
   "save_p": null,
   "status": "In Progress",
   "warmup": false,
   "win_p": null,
-  "win_side": null,
-  "wp_away": 47.4,
-  "wp_home": 52.6
+  "win_side": "home",
+  "wp_away": 37.3,
+  "wp_home": 62.7
  },
  "3c3f42ca13e41dbc966dfb7f8361a615": {
   "abstract": "Final",
@@ -1954,15 +1959,15 @@
   "away_p": "Tanner Gordon",
   "away_p_hand": "R",
   "away_r": 4,
-  "cur_batter": "Connor Norby",
+  "cur_batter": "TJ Rumfield",
   "cur_pitcher": "Andrew Sears",
   "game_pk": 824224,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Andrew Sears",
   "home_p_hand": "L",
   "home_r": 4,
   "in_play": true,
-  "inning": 4,
+  "inning": 5,
   "innings": [
    {
     "a": 0,
@@ -1983,16 +1988,19 @@
     "a": 1,
     "h": 2,
     "n": 4
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 5
    }
   ],
   "lose_p": null,
-  "outs": 3,
+  "outs": 1,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "Tanner Gordon",
   "rhe_away": [
    4,
-   5,
+   7,
    0
   ],
   "rhe_home": [
@@ -2005,8 +2013,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 47.199999999999996,
-  "wp_home": 52.800000000000004
+  "wp_away": 52.7,
+  "wp_home": 47.3
  },
  "cd6e588ebdaf04eb7def2c1d33b7144e": {
   "abstract": "Final",
@@ -2428,13 +2436,13 @@
   "away_p": "Zac Thornton",
   "away_p_hand": "L",
   "away_r": 4,
-  "cur_batter": "Paul Goldschmidt",
+  "cur_batter": "Cody Bellinger",
   "cur_pitcher": "Zac Thornton",
   "game_pk": 823496,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Gerrit Cole",
   "home_p_hand": "R",
-  "home_r": 0,
+  "home_r": 1,
   "in_play": true,
   "inning": 4,
   "innings": [
@@ -2455,23 +2463,21 @@
    },
    {
     "a": 0,
-    "h": null,
+    "h": 1,
     "n": 4
    }
   ],
   "lose_p": null,
-  "outs": 3,
+  "outs": 1,
   "pitch_side": "away",
-  "pitcher_changed": true,
-  "prev_pitcher": "Gerrit Cole",
   "rhe_away": [
    4,
    7,
    0
   ],
   "rhe_home": [
-   0,
-   0,
+   1,
+   2,
    0
   ],
   "save_p": null,
@@ -2479,7 +2485,7 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 86.1,
-  "wp_home": 13.900000000000002
+  "wp_away": 82.5,
+  "wp_home": 17.5
  }
 }
