@@ -205,7 +205,7 @@
   "home_p": "Quinn Mathews",
   "home_p_hand": "L",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "innings": [
    {
@@ -228,10 +228,12 @@
    0
   ],
   "save_p": null,
-  "status": "Warmup",
-  "warmup": true,
+  "status": "In Progress",
+  "warmup": false,
   "win_p": null,
-  "win_side": null
+  "win_side": null,
+  "wp_away": 50.0,
+  "wp_home": 50.0
  },
  "119261d49b81854e942bebf7f44afa6b": {
   "abstract": "Final",
@@ -746,10 +748,10 @@
   "away_p": "Sean Newcomb",
   "away_p_hand": "L",
   "away_r": 0,
-  "cur_batter": "Braden Montgomery",
-  "cur_pitcher": "Gavin Williams",
+  "cur_batter": "Jos\u00e9 Ram\u00edrez",
+  "cur_pitcher": "Sean Burke",
   "game_pk": 824386,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Gavin Williams",
   "home_p_hand": "R",
   "home_r": 0,
@@ -772,14 +774,16 @@
     "n": 3
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 4
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Gavin Williams",
   "rhe_away": [
    0,
    2,
@@ -795,8 +799,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 52.900000000000006,
-  "wp_home": 47.099999999999994
+  "wp_away": 43.99999999999999,
+  "wp_home": 56.00000000000001
  },
  "2f2faff81101f84158c3cfbd630bcb30": {
   "abstract": "Preview",
@@ -1351,14 +1355,14 @@
   "away_p": "Will Warren",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Ben Rice",
+  "cur_batter": "Cody Bellinger",
   "cur_pitcher": "Dean Kremer",
   "game_pk": 823656,
   "half": "Top",
   "home_p": "Dean Kremer",
   "home_p_hand": "R",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "innings": [
    {
@@ -1381,17 +1385,19 @@
    0
   ],
   "save_p": null,
-  "status": "Warmup",
-  "warmup": true,
+  "status": "In Progress",
+  "warmup": false,
   "win_p": null,
-  "win_side": null
+  "win_side": null,
+  "wp_away": 53.599999999999994,
+  "wp_home": 46.400000000000006
  },
  "6f154c72fa0631ec5a970f84c1492463": {
   "abstract": "Live",
   "away_p": "Brandon Young",
   "away_p_hand": "R",
   "away_r": 1,
-  "cur_batter": "A.J. Ewing",
+  "cur_batter": "Francisco Alvarez",
   "cur_pitcher": "Brandon Young",
   "game_pk": 823575,
   "half": "Bottom",
@@ -1430,8 +1436,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 58.7,
-  "wp_home": 41.3
+  "wp_away": 52.800000000000004,
+  "wp_home": 47.199999999999996
  },
  "6f96adeb30e87f1372ad951bf3404d21": {
   "abstract": "Final",
@@ -2032,7 +2038,7 @@
   "away_p": "Reynaldo L\u00f3pez",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Ronald Acu\u00f1a Jr.",
+  "cur_batter": "Ozzie Albies",
   "cur_pitcher": "David Peterson",
   "game_pk": 824629,
   "half": "Top",
@@ -2049,11 +2055,11 @@
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 2,
   "pitch_side": "home",
   "rhe_away": [
    0,
-   0,
+   1,
    0
   ],
   "rhe_home": [
@@ -2066,8 +2072,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 50.0,
-  "wp_home": 50.0
+  "wp_away": 47.4,
+  "wp_home": 52.6
  },
  "9c0b5b3f819915fa2cd982a14186b77d": {
   "abstract": "Preview",
@@ -2308,8 +2314,8 @@
   "away_p": "Troy Melton",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Brett Bateman",
-  "cur_pitcher": "Troy Melton",
+  "cur_batter": "Spencer Torkelson",
+  "cur_pitcher": "Jos\u00e9 Soriano",
   "game_pk": 822765,
   "half": "Bottom",
   "home_p": "Jos\u00e9 Soriano",
@@ -2325,13 +2331,15 @@
    },
    {
     "a": 0,
-    "h": null,
+    "h": 0,
     "n": 2
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "away",
+  "outs": 3,
+  "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Troy Melton",
   "rhe_away": [
    0,
    0,
@@ -2347,8 +2355,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 22.599999999999994,
-  "wp_home": 77.4
+  "wp_away": 23.700000000000003,
+  "wp_home": 76.3
  },
  "baa7f738229bf9855e24037a2a30a2cb": {
   "abstract": "Preview",
@@ -3385,10 +3393,10 @@
   "away_p": "Tarik Skubal",
   "away_p_hand": "L",
   "away_r": 3,
-  "cur_batter": "Tommy Edman",
-  "cur_pitcher": "Nick Lodolo",
+  "cur_batter": "Juan Brito",
+  "cur_pitcher": "Tarik Skubal",
   "game_pk": 824465,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Nick Lodolo",
   "home_p_hand": "L",
   "home_r": 0,
@@ -3416,14 +3424,16 @@
     "n": 4
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 5
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "home",
+  "outs": 1,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Nick Lodolo",
   "rhe_away": [
    3,
    2,
