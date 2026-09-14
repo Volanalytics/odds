@@ -746,7 +746,7 @@
   "away_p": "Sean Newcomb",
   "away_p_hand": "L",
   "away_r": 0,
-  "cur_batter": "Sam Antonacci",
+  "cur_batter": "Miguel Vargas",
   "cur_pitcher": "Gavin Williams",
   "game_pk": 824386,
   "half": "Top",
@@ -773,10 +773,8 @@
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 2,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "Sean Burke",
   "rhe_away": [
    0,
    1,
@@ -792,8 +790,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 50.0,
-  "wp_home": 50.0
+  "wp_away": 47.0,
+  "wp_home": 53.0
  },
  "2f2faff81101f84158c3cfbd630bcb30": {
   "abstract": "Preview",
@@ -1344,7 +1342,7 @@
   "win_side": "home"
  },
  "68721959a546157007d97eeca5682379": {
-  "abstract": "Preview",
+  "abstract": "Live",
   "away_p": "Will Warren",
   "away_p_hand": "R",
   "away_r": 0,
@@ -1378,8 +1376,8 @@
    0
   ],
   "save_p": null,
-  "status": "Pre-Game",
-  "warmup": false,
+  "status": "Warmup",
+  "warmup": true,
   "win_p": null,
   "win_side": null
  },
@@ -1388,10 +1386,10 @@
   "away_p": "Brandon Young",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Gunnar Henderson",
-  "cur_pitcher": "Jonah Tong",
+  "cur_batter": "Juan Soto",
+  "cur_pitcher": "Brandon Young",
   "game_pk": 823575,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Jonah Tong",
   "home_p_hand": "R",
   "home_r": 0,
@@ -1399,14 +1397,16 @@
   "inning": 1,
   "innings": [
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 1
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Jonah Tong",
   "rhe_away": [
    0,
    0,
@@ -1422,8 +1422,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 46.199999999999996,
-  "wp_home": 53.800000000000004
+  "wp_away": 45.199999999999996,
+  "wp_home": 54.800000000000004
  },
  "6f96adeb30e87f1372ad951bf3404d21": {
   "abstract": "Final",
@@ -2020,7 +2020,7 @@
   "win_side": "home"
  },
  "99d391c2ac7a5942710858c928ac73f8": {
-  "abstract": "Preview",
+  "abstract": "Live",
   "away_p": "Reynaldo L\u00f3pez",
   "away_p_hand": "R",
   "away_r": 0,
@@ -2054,8 +2054,8 @@
    0
   ],
   "save_p": null,
-  "status": "Pre-Game",
-  "warmup": false,
+  "status": "Warmup",
+  "warmup": true,
   "win_p": null,
   "win_side": null
  },
@@ -2298,7 +2298,7 @@
   "away_p": "Troy Melton",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "George Springer",
+  "cur_batter": "Alejandro Kirk",
   "cur_pitcher": "Troy Melton",
   "game_pk": 822765,
   "half": "Bottom",
@@ -2315,10 +2315,8 @@
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 1,
   "pitch_side": "away",
-  "pitcher_changed": true,
-  "prev_pitcher": "Jos\u00e9 Soriano",
   "rhe_away": [
    0,
    0,
@@ -2334,8 +2332,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 45.199999999999996,
-  "wp_home": 54.800000000000004
+  "wp_away": 36.7,
+  "wp_home": 63.3
  },
  "baa7f738229bf9855e24037a2a30a2cb": {
   "abstract": "Preview",
@@ -3372,15 +3370,15 @@
   "away_p": "Tarik Skubal",
   "away_p_hand": "L",
   "away_r": 1,
-  "cur_batter": "Ke'Bryan Hayes",
-  "cur_pitcher": "Tarik Skubal",
+  "cur_batter": "Will Smith",
+  "cur_pitcher": "Nick Lodolo",
   "game_pk": 824465,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Nick Lodolo",
   "home_p_hand": "L",
   "home_r": 0,
   "in_play": true,
-  "inning": 3,
+  "inning": 4,
   "innings": [
    {
     "a": 0,
@@ -3394,15 +3392,20 @@
    },
    {
     "a": 0,
-    "h": null,
+    "h": 0,
     "n": 3
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 4
    }
   ],
   "lose_p": null,
   "outs": 1,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "pitcher_changed": true,
-  "prev_pitcher": "Nick Lodolo",
+  "prev_pitcher": "Tarik Skubal",
   "rhe_away": [
    1,
    1,
@@ -3418,8 +3421,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 59.1,
-  "wp_home": 40.9
+  "wp_away": 60.0,
+  "wp_home": 40.0
  },
  "ff08b7b349f719f151912ec3a9a09257": {
   "abstract": "Final",
