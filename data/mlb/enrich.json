@@ -746,7 +746,7 @@
   "away_p": "Sean Newcomb",
   "away_p_hand": "L",
   "away_r": 0,
-  "cur_batter": "Sam Antonacci",
+  "cur_batter": "Miguel Vargas",
   "cur_pitcher": "Gavin Williams",
   "game_pk": 824386,
   "half": "Top",
@@ -767,7 +767,7 @@
   "pitch_side": "home",
   "rhe_away": [
    0,
-   0,
+   1,
    0
   ],
   "rhe_home": [
@@ -780,8 +780,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 50.0,
-  "wp_home": 50.0
+  "wp_away": 59.0,
+  "wp_home": 41.0
  },
  "2f2faff81101f84158c3cfbd630bcb30": {
   "abstract": "Preview",
@@ -1372,7 +1372,7 @@
   "win_side": null
  },
  "6f154c72fa0631ec5a970f84c1492463": {
-  "abstract": "Preview",
+  "abstract": "Live",
   "away_p": "Brandon Young",
   "away_p_hand": "R",
   "away_r": 0,
@@ -1406,8 +1406,8 @@
    0
   ],
   "save_p": null,
-  "status": "Pre-Game",
-  "warmup": false,
+  "status": "Warmup",
+  "warmup": true,
   "win_p": null,
   "win_side": null
  },
@@ -2280,7 +2280,7 @@
   "win_side": "away"
  },
  "b2124bf9ac2a7c068e866541e3d9bebe": {
-  "abstract": "Preview",
+  "abstract": "Live",
   "away_p": "Troy Melton",
   "away_p_hand": "R",
   "away_r": 0,
@@ -2314,8 +2314,8 @@
    0
   ],
   "save_p": null,
-  "status": "Pre-Game",
-  "warmup": false,
+  "status": "Warmup",
+  "warmup": true,
   "win_p": null,
   "win_side": null
  },
@@ -3348,25 +3348,27 @@
   "away_p": "Tarik Skubal",
   "away_p_hand": "L",
   "away_r": 0,
-  "cur_batter": "Tommy Edman",
-  "cur_pitcher": "Nick Lodolo",
+  "cur_batter": "Dane Myers",
+  "cur_pitcher": "Tarik Skubal",
   "game_pk": 824465,
   "half": "Top",
   "home_p": "Nick Lodolo",
   "home_p_hand": "L",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "innings": [
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 1
    }
   ],
   "lose_p": null,
-  "outs": 0,
-  "pitch_side": "home",
+  "outs": 3,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Nick Lodolo",
   "rhe_away": [
    0,
    0,
@@ -3378,10 +3380,12 @@
    0
   ],
   "save_p": null,
-  "status": "Warmup",
-  "warmup": true,
+  "status": "In Progress",
+  "warmup": false,
   "win_p": null,
-  "win_side": null
+  "win_side": null,
+  "wp_away": 46.199999999999996,
+  "wp_home": 53.800000000000004
  },
  "ff08b7b349f719f151912ec3a9a09257": {
   "abstract": "Final",
