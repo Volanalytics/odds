@@ -746,25 +746,32 @@
   "away_p": "Sean Newcomb",
   "away_p_hand": "L",
   "away_r": 0,
-  "cur_batter": "Chase DeLauter",
-  "cur_pitcher": "Sean Newcomb",
+  "cur_batter": "Colson Montgomery",
+  "cur_pitcher": "Gavin Williams",
   "game_pk": 824386,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Gavin Williams",
   "home_p_hand": "R",
   "home_r": 0,
   "in_play": true,
-  "inning": 1,
+  "inning": 2,
   "innings": [
    {
     "a": 0,
-    "h": null,
+    "h": 0,
     "n": 1
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 2
    }
   ],
   "lose_p": null,
   "outs": 1,
-  "pitch_side": "away",
+  "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Sean Newcomb",
   "rhe_away": [
    0,
    1,
@@ -780,8 +787,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 47.4,
-  "wp_home": 52.6
+  "wp_away": 47.699999999999996,
+  "wp_home": 52.300000000000004
  },
  "2f2faff81101f84158c3cfbd630bcb30": {
   "abstract": "Preview",
@@ -2971,29 +2978,35 @@
   "abstract": "Preview",
   "away_p": "Sandy Alcantara",
   "away_p_hand": "R",
-  "away_r": null,
-  "cur_batter": null,
-  "cur_pitcher": null,
+  "away_r": 0,
+  "cur_batter": "Kyle Stowers",
+  "cur_pitcher": "Corbin Burnes",
   "game_pk": 825034,
-  "half": null,
+  "half": "Top",
   "home_p": "Corbin Burnes",
   "home_p_hand": "R",
-  "home_r": null,
+  "home_r": 0,
   "in_play": false,
-  "inning": null,
-  "innings": [],
+  "inning": 1,
+  "innings": [
+   {
+    "a": null,
+    "h": null,
+    "n": 1
+   }
+  ],
   "lose_p": null,
-  "outs": null,
-  "pitch_side": "away",
+  "outs": 0,
+  "pitch_side": "home",
   "rhe_away": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "rhe_home": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "save_p": null,
   "status": "Pre-Game",
@@ -3347,9 +3360,9 @@
   "abstract": "Live",
   "away_p": "Tarik Skubal",
   "away_p_hand": "L",
-  "away_r": 0,
-  "cur_batter": "Kyle Tucker",
-  "cur_pitcher": "Nick Lodolo",
+  "away_r": 1,
+  "cur_batter": "Tyler Stephenson",
+  "cur_pitcher": "Tarik Skubal",
   "game_pk": 824465,
   "half": "Top",
   "home_p": "Nick Lodolo",
@@ -3364,19 +3377,19 @@
     "n": 1
    },
    {
-    "a": null,
+    "a": 1,
     "h": null,
     "n": 2
    }
   ],
   "lose_p": null,
-  "outs": 0,
-  "pitch_side": "home",
+  "outs": 3,
+  "pitch_side": "away",
   "pitcher_changed": true,
-  "prev_pitcher": "Tarik Skubal",
+  "prev_pitcher": "Nick Lodolo",
   "rhe_away": [
-   0,
-   0,
+   1,
+   1,
    0
   ],
   "rhe_home": [
@@ -3388,9 +3401,9 @@
   "status": "In Progress",
   "warmup": false,
   "win_p": null,
-  "win_side": null,
-  "wp_away": 50.0,
-  "wp_home": 50.0
+  "win_side": "away",
+  "wp_away": 56.7,
+  "wp_home": 43.3
  },
  "ff08b7b349f719f151912ec3a9a09257": {
   "abstract": "Final",
