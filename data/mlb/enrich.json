@@ -114,18 +114,18 @@
   "win_side": "away"
  },
  "0df8abb4425b8b10d8e3a0599974813f": {
-  "abstract": "Live",
+  "abstract": "Final",
   "away_p": "Landen Roupp",
   "away_p_hand": "R",
   "away_r": 1,
-  "cur_batter": "Masyn Winn",
-  "cur_pitcher": "Carson Seymour",
+  "cur_batter": "Christian Koss",
+  "cur_pitcher": "Riley O'Brien",
   "game_pk": 823006,
   "half": "Top",
   "home_p": "Quinn Mathews",
   "home_p_hand": "L",
   "home_r": 2,
-  "in_play": true,
+  "in_play": false,
   "inning": 9,
   "innings": [
    {
@@ -174,11 +174,11 @@
     "n": 9
    }
   ],
-  "lose_p": null,
+  "lose_p": "Landen Roupp",
   "outs": 3,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "pitcher_changed": true,
-  "prev_pitcher": "Riley O'Brien",
+  "prev_pitcher": "Carson Seymour",
   "rhe_away": [
    1,
    6,
@@ -189,13 +189,11 @@
    8,
    0
   ],
-  "save_p": null,
-  "status": "In Progress",
+  "save_p": "Riley O'Brien",
+  "status": "Game Over",
   "warmup": false,
-  "win_p": null,
-  "win_side": "home",
-  "wp_away": 14.600000000000009,
-  "wp_home": 85.39999999999999
+  "win_p": "Quinn Mathews",
+  "win_side": "home"
  },
  "119261d49b81854e942bebf7f44afa6b": {
   "abstract": "Final",
@@ -316,13 +314,13 @@
   "away_p": "Casey Mize",
   "away_p_hand": "R",
   "away_r": 6,
-  "cur_batter": "Jake McCarthy",
-  "cur_pitcher": "Kyle Hart",
+  "cur_batter": "Connor Norby",
+  "cur_pitcher": "Bradgley Rodriguez",
   "game_pk": 824308,
   "half": "Bottom",
   "home_p": "Tomoyuki Sugano",
   "home_p_hand": "R",
-  "home_r": 2,
+  "home_r": 4,
   "in_play": true,
   "inning": 6,
   "innings": [
@@ -353,21 +351,23 @@
    },
    {
     "a": 0,
-    "h": null,
+    "h": 2,
     "n": 6
    }
   ],
   "lose_p": null,
   "outs": 1,
   "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Kyle Hart",
   "rhe_away": [
    6,
    8,
    0
   ],
   "rhe_home": [
-   2,
-   8,
+   4,
+   9,
    0
   ],
   "save_p": null,
@@ -375,8 +375,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 90.0,
-  "wp_home": 10.0
+  "wp_away": 67.8,
+  "wp_home": 32.2
  },
  "24dff06b7aac0693e5e299af47f50290": {
   "abstract": "Final",
@@ -885,10 +885,10 @@
   "away_p": "Will Warren",
   "away_p_hand": "R",
   "away_r": 8,
-  "cur_batter": "Austin Wells",
-  "cur_pitcher": "Tommy Nance",
+  "cur_batter": "Luke Keaschall",
+  "cur_pitcher": "John Schreiber",
   "game_pk": 823656,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Dean Kremer",
   "home_p_hand": "R",
   "home_r": 3,
@@ -942,8 +942,10 @@
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "home",
+  "outs": 1,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Tommy Nance",
   "rhe_away": [
    8,
    9,
@@ -959,8 +961,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 98.2,
-  "wp_home": 1.7999999999999998
+  "wp_away": 99.2,
+  "wp_home": 0.8
  },
  "6f154c72fa0631ec5a970f84c1492463": {
   "abstract": "Final",
@@ -1400,8 +1402,8 @@
   "abstract": "Live",
   "away_p": "Kade Anderson",
   "away_p_hand": "L",
-  "away_r": 0,
-  "cur_batter": "Dominic Canzone",
+  "away_r": 3,
+  "cur_batter": "Josh Naylor",
   "cur_pitcher": "Reid Detmers",
   "game_pk": 823981,
   "half": "Top",
@@ -1427,19 +1429,17 @@
     "n": 3
    },
    {
-    "a": null,
+    "a": 3,
     "h": null,
     "n": 4
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 1,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "Kade Anderson",
   "rhe_away": [
-   0,
    3,
+   5,
    0
   ],
   "rhe_home": [
@@ -1452,8 +1452,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 12.400000000000006,
-  "wp_home": 87.6
+  "wp_away": 34.8,
+  "wp_home": 65.2
  },
  "a1a608b633419833caf64ad8739781f3": {
   "abstract": "Preview",
@@ -1882,15 +1882,15 @@
   "away_p": "Sandy Alcantara",
   "away_p_hand": "R",
   "away_r": 3,
-  "cur_batter": "Corbin Carroll",
-  "cur_pitcher": "Sandy Alcantara",
+  "cur_batter": "Griffin Conine",
+  "cur_pitcher": "Corbin Burnes",
   "game_pk": 825034,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Corbin Burnes",
   "home_p_hand": "R",
   "home_r": 3,
   "in_play": true,
-  "inning": 3,
+  "inning": 4,
   "innings": [
    {
     "a": 0,
@@ -1906,15 +1906,22 @@
     "a": 0,
     "h": 3,
     "n": 3
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 4
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "away",
+  "outs": 0,
+  "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Sandy Alcantara",
   "rhe_away": [
    3,
    3,
-   1
+   2
   ],
   "rhe_home": [
    3,
