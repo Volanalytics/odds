@@ -1927,7 +1927,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -2353,7 +2353,7 @@
    0
   ],
   "save_p": null,
-  "status": "Game Over",
+  "status": "Final",
   "warmup": false,
   "win_p": "Tommy Nance",
   "win_side": "home"
@@ -2763,7 +2763,7 @@
   "win_side": null
  },
  "fa74757372f1d4cb43bd1510e5ed1213": {
-  "abstract": "Live",
+  "abstract": "Final",
   "away_p": "Keider Montero",
   "away_p_hand": "R",
   "away_r": 1,
@@ -2774,7 +2774,7 @@
   "home_p": "Max Scherzer",
   "home_p_hand": "R",
   "home_r": 5,
-  "in_play": true,
+  "in_play": false,
   "inning": 9,
   "innings": [
    {
@@ -2818,13 +2818,13 @@
     "n": 8
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 9
    }
   ],
-  "lose_p": null,
-  "outs": 2,
+  "lose_p": "Keider Montero",
+  "outs": 3,
   "pitch_side": "home",
   "rhe_away": [
    1,
@@ -2836,13 +2836,11 @@
    9,
    0
   ],
-  "save_p": null,
-  "status": "In Progress",
+  "save_p": "Louis Varland",
+  "status": "Game Over",
   "warmup": false,
-  "win_p": null,
-  "win_side": "home",
-  "wp_away": 1.0999999999999943,
-  "wp_home": 98.9
+  "win_p": "Max Scherzer",
+  "win_side": "home"
  },
  "fd0c792d70a4325cb16c03c7af9a089a": {
   "abstract": "Final",
