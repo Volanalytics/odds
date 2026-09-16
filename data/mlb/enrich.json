@@ -1174,7 +1174,7 @@
   "away_p": "Anthony Molina",
   "away_p_hand": "R",
   "away_r": 4,
-  "cur_batter": "Christian Koss",
+  "cur_batter": "Bryce Eldridge",
   "cur_pitcher": "Gordon Graceffo",
   "game_pk": 823004,
   "half": "Top",
@@ -1231,13 +1231,11 @@
    }
   ],
   "lose_p": null,
-  "outs": 1,
+  "outs": 2,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "Trent Harris",
   "rhe_away": [
    4,
-   10,
+   11,
    2
   ],
   "rhe_home": [
@@ -1516,7 +1514,7 @@
   "win_side": null
  },
  "97eacfe4e498d0be4c1fb28f0dccad61": {
-  "abstract": "Live",
+  "abstract": "Final",
   "away_p": "Anthony Kay",
   "away_p_hand": "L",
   "away_r": 3,
@@ -1527,7 +1525,7 @@
   "home_p": "Parker Messick",
   "home_p_hand": "L",
   "home_r": 6,
-  "in_play": true,
+  "in_play": false,
   "inning": 9,
   "innings": [
    {
@@ -1571,13 +1569,13 @@
     "n": 8
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 9
    }
   ],
-  "lose_p": null,
-  "outs": 2,
+  "lose_p": "Hagen Smith",
+  "outs": 3,
   "pitch_side": "home",
   "rhe_away": [
    3,
@@ -1589,13 +1587,11 @@
    5,
    0
   ],
-  "save_p": null,
-  "status": "In Progress",
+  "save_p": "Cade Smith",
+  "status": "Game Over",
   "warmup": false,
-  "win_p": null,
-  "win_side": "home",
-  "wp_away": 1.5,
-  "wp_home": 98.5
+  "win_p": "Parker Messick",
+  "win_side": "home"
  },
  "99d391c2ac7a5942710858c928ac73f8": {
   "abstract": "Final",
@@ -2200,8 +2196,8 @@
   "away_p": "Carlos Rod\u00f3n",
   "away_p_hand": "L",
   "away_r": 0,
-  "cur_batter": "Austin Martin",
-  "cur_pitcher": "Clarke Schmidt",
+  "cur_batter": "Ryan Jeffers",
+  "cur_pitcher": "Brent Headrick",
   "game_pk": 823655,
   "half": "Bottom",
   "home_p": "Zebby Matthews",
@@ -2247,8 +2243,10 @@
    }
   ],
   "lose_p": null,
-  "outs": 1,
+  "outs": 2,
   "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Clarke Schmidt",
   "rhe_away": [
    0,
    2,
@@ -2264,8 +2262,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 8.099999999999994,
-  "wp_home": 91.9
+  "wp_away": 11.099999999999994,
+  "wp_home": 88.9
  },
  "d468d51c641b469172b3c59500fa2d49": {
   "abstract": "Final",
@@ -2601,29 +2599,35 @@
   "abstract": "Preview",
   "away_p": "Zack Wheeler",
   "away_p_hand": "R",
-  "away_r": null,
-  "cur_batter": null,
-  "cur_pitcher": null,
+  "away_r": 0,
+  "cur_batter": "Kyle Schwarber",
+  "cur_pitcher": "Jared Simpson",
   "game_pk": 822680,
-  "half": null,
+  "half": "Top",
   "home_p": "Jared Simpson",
   "home_p_hand": "L",
-  "home_r": null,
+  "home_r": 0,
   "in_play": false,
-  "inning": null,
-  "innings": [],
+  "inning": 1,
+  "innings": [
+   {
+    "a": null,
+    "h": null,
+    "n": 1
+   }
+  ],
   "lose_p": null,
-  "outs": null,
-  "pitch_side": "away",
+  "outs": 0,
+  "pitch_side": "home",
   "rhe_away": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "rhe_home": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "save_p": null,
   "status": "Pre-Game",
@@ -2636,15 +2640,15 @@
   "away_p": "Keider Montero",
   "away_p_hand": "R",
   "away_r": 1,
-  "cur_batter": "Brett Bateman",
-  "cur_pitcher": "Keider Montero",
+  "cur_batter": "Kevin McGonigle",
+  "cur_pitcher": "Max Scherzer",
   "game_pk": 822763,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Max Scherzer",
   "home_p_hand": "R",
   "home_r": 0,
   "in_play": true,
-  "inning": 2,
+  "inning": 3,
   "innings": [
    {
     "a": 1,
@@ -2653,13 +2657,20 @@
    },
    {
     "a": 0,
-    "h": null,
+    "h": 0,
     "n": 2
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 3
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "away",
+  "outs": 0,
+  "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Keider Montero",
   "rhe_away": [
    1,
    2,
@@ -2675,8 +2686,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 55.7,
-  "wp_home": 44.3
+  "wp_away": 61.199999999999996,
+  "wp_home": 38.800000000000004
  },
  "fd0c792d70a4325cb16c03c7af9a089a": {
   "abstract": "Final",
