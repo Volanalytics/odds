@@ -484,7 +484,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -496,7 +496,7 @@
    null
   ],
   "save_p": null,
-  "status": "Scheduled",
+  "status": "Pre-Game",
   "warmup": false,
   "win_p": null,
   "win_side": null
@@ -1176,18 +1176,18 @@
   "win_side": "away"
  },
  "6e2eb2cc19ebcdb2b0405dff792ab529": {
-  "abstract": "Live",
+  "abstract": "Final",
   "away_p": "Anthony Molina",
   "away_p_hand": "R",
   "away_r": 6,
-  "cur_batter": "Thomas Saggese",
+  "cur_batter": "Nathan Church",
   "cur_pitcher": "Joel Kuhnel",
   "game_pk": 823004,
   "half": "Bottom",
   "home_p": "Matthew Liberatore",
   "home_p_hand": "L",
-  "home_r": 4,
-  "in_play": true,
+  "home_r": 5,
+  "in_play": false,
   "inning": 10,
   "innings": [
    {
@@ -1237,12 +1237,12 @@
    },
    {
     "a": 2,
-    "h": null,
+    "h": 1,
     "n": 10
    }
   ],
-  "lose_p": null,
-  "outs": 1,
+  "lose_p": "Riley O'Brien",
+  "outs": 3,
   "pitch_side": "away",
   "rhe_away": [
    6,
@@ -1250,17 +1250,15 @@
    2
   ],
   "rhe_home": [
-   4,
+   5,
    5,
    2
   ],
-  "save_p": null,
-  "status": "In Progress",
+  "save_p": "Joel Kuhnel",
+  "status": "Game Over",
   "warmup": false,
-  "win_p": null,
-  "win_side": "away",
-  "wp_away": 66.0,
-  "wp_home": 34.0
+  "win_p": "Reiver Sanmartin",
+  "win_side": "away"
  },
  "6f154c72fa0631ec5a970f84c1492463": {
   "abstract": "Final",
@@ -2213,10 +2211,10 @@
   "away_p": "Carlos Rod\u00f3n",
   "away_p_hand": "L",
   "away_r": 2,
-  "cur_batter": "Emmanuel Rodriguez",
-  "cur_pitcher": "Brent Headrick",
+  "cur_batter": "Brooks Lee",
+  "cur_pitcher": "Paul Blackburn",
   "game_pk": 823655,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Zebby Matthews",
   "home_p_hand": "R",
   "home_r": 2,
@@ -2270,10 +2268,10 @@
    }
   ],
   "lose_p": null,
-  "outs": 3,
+  "outs": 1,
   "pitch_side": "away",
   "pitcher_changed": true,
-  "prev_pitcher": "Yoendrys G\u00f3mez",
+  "prev_pitcher": "Brent Headrick",
   "rhe_away": [
    2,
    7,
@@ -2289,8 +2287,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 47.8,
-  "wp_home": 52.2
+  "wp_away": 41.800000000000004,
+  "wp_home": 58.199999999999996
  },
  "d468d51c641b469172b3c59500fa2d49": {
   "abstract": "Final",
@@ -2667,15 +2665,15 @@
   "away_p": "Keider Montero",
   "away_p_hand": "R",
   "away_r": 1,
-  "cur_batter": "John Peck",
-  "cur_pitcher": "Max Scherzer",
+  "cur_batter": "Brett Bateman",
+  "cur_pitcher": "Tyler Holton",
   "game_pk": 822763,
   "half": "Bottom",
   "home_p": "Max Scherzer",
   "home_p_hand": "R",
   "home_r": 2,
   "in_play": true,
-  "inning": 4,
+  "inning": 5,
   "innings": [
    {
     "a": 1,
@@ -2696,13 +2694,18 @@
     "a": 0,
     "h": 2,
     "n": 4
+   },
+   {
+    "a": 0,
+    "h": null,
+    "n": 5
    }
   ],
   "lose_p": null,
-  "outs": 3,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
   "pitcher_changed": true,
-  "prev_pitcher": "Keider Montero",
+  "prev_pitcher": "Max Scherzer",
   "rhe_away": [
    1,
    3,
@@ -2718,8 +2721,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 34.0,
-  "wp_home": 66.0
+  "wp_away": 30.700000000000003,
+  "wp_home": 69.3
  },
  "fd0c792d70a4325cb16c03c7af9a089a": {
   "abstract": "Final",
