@@ -1168,10 +1168,10 @@
   "away_p": "Anthony Molina",
   "away_p_hand": "R",
   "away_r": 1,
-  "cur_batter": "Turner Hill",
-  "cur_pitcher": "Matthew Liberatore",
+  "cur_batter": "Alec Burleson",
+  "cur_pitcher": "Anthony Molina",
   "game_pk": 823004,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Matthew Liberatore",
   "home_p_hand": "L",
   "home_r": 0,
@@ -1204,14 +1204,16 @@
     "n": 5
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 6
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "home",
+  "outs": 2,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Matthew Liberatore",
   "rhe_away": [
    1,
    6,
@@ -1227,8 +1229,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 70.1,
-  "wp_home": 29.9
+  "wp_away": 64.4,
+  "wp_home": 35.6
  },
  "6f154c72fa0631ec5a970f84c1492463": {
   "abstract": "Final",
@@ -1497,7 +1499,7 @@
   "away_p": "Anthony Kay",
   "away_p_hand": "L",
   "away_r": 3,
-  "cur_batter": "David Fry",
+  "cur_batter": "Petey Halpin",
   "cur_pitcher": "Hagen Smith",
   "game_pk": 824382,
   "half": "Bottom",
@@ -1539,10 +1541,8 @@
    }
   ],
   "lose_p": null,
-  "outs": 1,
+  "outs": 2,
   "pitch_side": "away",
-  "pitcher_changed": true,
-  "prev_pitcher": "Parker Messick",
   "rhe_away": [
    3,
    7,
@@ -1558,8 +1558,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 60.4,
-  "wp_home": 39.6
+  "wp_away": 65.1,
+  "wp_home": 34.9
  },
  "99d391c2ac7a5942710858c928ac73f8": {
   "abstract": "Final",
@@ -2158,8 +2158,8 @@
   "away_p": "Carlos Rod\u00f3n",
   "away_p_hand": "L",
   "away_r": 0,
-  "cur_batter": "Royce Lewis",
-  "cur_pitcher": "Carlos Rod\u00f3n",
+  "cur_batter": "Ryan McMahon",
+  "cur_pitcher": "Zebby Matthews",
   "game_pk": 823655,
   "half": "Bottom",
   "home_p": "Zebby Matthews",
@@ -2185,15 +2185,15 @@
    },
    {
     "a": 0,
-    "h": null,
+    "h": 0,
     "n": 4
    }
   ],
   "lose_p": null,
-  "outs": 0,
-  "pitch_side": "away",
+  "outs": 3,
+  "pitch_side": "home",
   "pitcher_changed": true,
-  "prev_pitcher": "Zebby Matthews",
+  "prev_pitcher": "Carlos Rod\u00f3n",
   "rhe_away": [
    0,
    2,
@@ -2209,8 +2209,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 31.5,
-  "wp_home": 68.5
+  "wp_away": 29.5,
+  "wp_home": 70.5
  },
  "d468d51c641b469172b3c59500fa2d49": {
   "abstract": "Final",
@@ -2577,7 +2577,7 @@
   "win_side": null
  },
  "fa74757372f1d4cb43bd1510e5ed1213": {
-  "abstract": "Preview",
+  "abstract": "Live",
   "away_p": "Keider Montero",
   "away_p_hand": "R",
   "away_r": 0,
@@ -2611,8 +2611,8 @@
    0
   ],
   "save_p": null,
-  "status": "Pre-Game",
-  "warmup": false,
+  "status": "Warmup",
+  "warmup": true,
   "win_p": null,
   "win_side": null
  },
