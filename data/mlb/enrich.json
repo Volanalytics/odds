@@ -268,7 +268,7 @@
    0
   ],
   "save_p": null,
-  "status": "Game Over",
+  "status": "Final",
   "warmup": false,
   "win_p": "Landon Knack",
   "win_side": "away"
@@ -277,29 +277,36 @@
   "abstract": "Live",
   "away_p": "Michael King",
   "away_p_hand": "R",
-  "away_r": 0,
-  "cur_batter": "Kyle Karros",
-  "cur_pitcher": "Michael King",
+  "away_r": 1,
+  "cur_batter": "Luis Campusano",
+  "cur_pitcher": "Tanner Gordon",
   "game_pk": 824305,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Tanner Gordon",
   "home_p_hand": "R",
   "home_r": 1,
   "in_play": true,
-  "inning": 1,
+  "inning": 2,
   "innings": [
    {
     "a": 0,
     "h": 1,
     "n": 1
+   },
+   {
+    "a": 1,
+    "h": null,
+    "n": 2
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "away",
+  "outs": 0,
+  "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Michael King",
   "rhe_away": [
-   0,
-   2,
+   1,
+   3,
    0
   ],
   "rhe_home": [
@@ -311,9 +318,9 @@
   "status": "In Progress",
   "warmup": false,
   "win_p": null,
-  "win_side": "home",
-  "wp_away": 35.3,
-  "wp_home": 64.7
+  "win_side": null,
+  "wp_away": 36.8,
+  "wp_home": 63.2
  },
  "15c9ca42142414287f11247c92905d9f": {
   "abstract": "Final",
@@ -387,7 +394,7 @@
   "rhe_home": [
    3,
    5,
-   1
+   2
   ],
   "save_p": null,
   "status": "Final",
@@ -501,7 +508,7 @@
   "rhe_home": [
    1,
    6,
-   1
+   2
   ],
   "save_p": null,
   "status": "Final",
@@ -1301,7 +1308,7 @@
   "rhe_home": [
    4,
    7,
-   0
+   1
   ],
   "save_p": "Jacob Latz",
   "status": "Final",
@@ -1589,18 +1596,18 @@
   "win_side": null
  },
  "72854b76ef219e56254f54563177c407": {
-  "abstract": "Live",
+  "abstract": "Final",
   "away_p": "Kyle Harrison",
   "away_p_hand": "L",
   "away_r": 4,
-  "cur_batter": "Andrew Vaughn",
+  "cur_batter": "Joey Ortiz",
   "cur_pitcher": "Mason Montgomery",
   "game_pk": 823334,
   "half": "Top",
   "home_p": "Wilber Dotel",
   "home_p_hand": "R",
   "home_r": 7,
-  "in_play": true,
+  "in_play": false,
   "inning": 9,
   "innings": [
    {
@@ -1644,16 +1651,14 @@
     "n": 8
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 9
    }
   ],
-  "lose_p": null,
-  "outs": 1,
+  "lose_p": "Kyle Harrison",
+  "outs": 3,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "Aaron Ashby",
   "rhe_away": [
    4,
    9,
@@ -1664,13 +1669,11 @@
    7,
    1
   ],
-  "save_p": null,
-  "status": "In Progress",
+  "save_p": "Mason Montgomery",
+  "status": "Game Over",
   "warmup": false,
-  "win_p": null,
-  "win_side": "home",
-  "wp_away": 1.5,
-  "wp_home": 98.5
+  "win_p": "Khristian Curtis",
+  "win_side": "home"
  },
  "82ab22dcd4b5a9fd457f4a06b2e93579": {
   "abstract": "Preview",
@@ -1735,7 +1738,7 @@
    null
   ],
   "save_p": null,
-  "status": "Scheduled",
+  "status": "Pre-Game",
   "warmup": false,
   "win_p": null,
   "win_side": null
@@ -2155,10 +2158,10 @@
   "away_p": "Jeffrey Springs",
   "away_p_hand": "L",
   "away_r": 1,
-  "cur_batter": "Michael Stefanic",
-  "cur_pitcher": "Steven Matz",
+  "cur_batter": "Taylor Walls",
+  "cur_pitcher": "Yunior Tur",
   "game_pk": 822924,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Drew Rasmussen",
   "home_p_hand": "R",
   "home_r": 8,
@@ -2201,14 +2204,16 @@
     "n": 7
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 8
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Steven Matz",
   "rhe_away": [
    1,
    5,
@@ -2224,8 +2229,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 0.20000000000000284,
-  "wp_home": 99.8
+  "wp_away": 0.09999999999999432,
+  "wp_home": 99.9
  },
  "b9c3b50472005c67c30de323cd8a5396": {
   "abstract": "Preview",
@@ -2914,7 +2919,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -2926,7 +2931,7 @@
    null
   ],
   "save_p": null,
-  "status": "Scheduled",
+  "status": "Pre-Game",
   "warmup": false,
   "win_p": null,
   "win_side": null
