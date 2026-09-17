@@ -278,44 +278,42 @@
   "away_p": "Michael King",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Connor Norby",
+  "cur_batter": "Kyle Karros",
   "cur_pitcher": "Michael King",
   "game_pk": 824305,
   "half": "Bottom",
   "home_p": "Tanner Gordon",
   "home_p_hand": "R",
-  "home_r": 0,
+  "home_r": 1,
   "in_play": true,
   "inning": 1,
   "innings": [
    {
     "a": 0,
-    "h": null,
+    "h": 1,
     "n": 1
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 2,
   "pitch_side": "away",
-  "pitcher_changed": true,
-  "prev_pitcher": "Tanner Gordon",
   "rhe_away": [
    0,
    2,
    0
   ],
   "rhe_home": [
-   0,
    1,
+   2,
    0
   ],
   "save_p": null,
   "status": "In Progress",
   "warmup": false,
   "win_p": null,
-  "win_side": null,
-  "wp_away": 36.9,
-  "wp_home": 63.1
+  "win_side": "home",
+  "wp_away": 35.3,
+  "wp_home": 64.7
  },
  "15c9ca42142414287f11247c92905d9f": {
   "abstract": "Final",
@@ -1595,15 +1593,15 @@
   "away_p": "Kyle Harrison",
   "away_p_hand": "L",
   "away_r": 4,
-  "cur_batter": "Bryan Reynolds",
-  "cur_pitcher": "Aaron Ashby",
+  "cur_batter": "Andrew Vaughn",
+  "cur_pitcher": "Mason Montgomery",
   "game_pk": 823334,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Wilber Dotel",
   "home_p_hand": "R",
   "home_r": 7,
   "in_play": true,
-  "inning": 8,
+  "inning": 9,
   "innings": [
    {
     "a": 0,
@@ -1644,11 +1642,18 @@
     "a": 2,
     "h": 2,
     "n": 8
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 9
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "away",
+  "outs": 1,
+  "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Aaron Ashby",
   "rhe_away": [
    4,
    9,
@@ -1664,8 +1669,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 2.9000000000000057,
-  "wp_home": 97.1
+  "wp_away": 1.5,
+  "wp_home": 98.5
  },
  "82ab22dcd4b5a9fd457f4a06b2e93579": {
   "abstract": "Preview",
@@ -2150,7 +2155,7 @@
   "away_p": "Jeffrey Springs",
   "away_p_hand": "L",
   "away_r": 1,
-  "cur_batter": "Max Muncy",
+  "cur_batter": "Michael Stefanic",
   "cur_pitcher": "Steven Matz",
   "game_pk": 822924,
   "half": "Top",
@@ -2202,10 +2207,8 @@
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 2,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "Yunior Tur",
   "rhe_away": [
    1,
    5,
@@ -2214,15 +2217,15 @@
   "rhe_home": [
    8,
    6,
-   0
+   1
   ],
   "save_p": null,
   "status": "In Progress",
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 0.4000000000000057,
-  "wp_home": 99.6
+  "wp_away": 0.20000000000000284,
+  "wp_home": 99.8
  },
  "b9c3b50472005c67c30de323cd8a5396": {
   "abstract": "Preview",
@@ -2912,6 +2915,40 @@
   "lose_p": null,
   "outs": null,
   "pitch_side": "home",
+  "rhe_away": [
+   null,
+   null,
+   null
+  ],
+  "rhe_home": [
+   null,
+   null,
+   null
+  ],
+  "save_p": null,
+  "status": "Scheduled",
+  "warmup": false,
+  "win_p": null,
+  "win_side": null
+ },
+ "de26fcfdce286e11d0005c82ffdccce6": {
+  "abstract": "Preview",
+  "away_p": "Tyler Mahle",
+  "away_p_hand": "R",
+  "away_r": null,
+  "cur_batter": null,
+  "cur_pitcher": null,
+  "game_pk": 824138,
+  "half": null,
+  "home_p": "Peter Lambert",
+  "home_p_hand": "R",
+  "home_r": null,
+  "in_play": false,
+  "inning": null,
+  "innings": [],
+  "lose_p": null,
+  "outs": null,
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
