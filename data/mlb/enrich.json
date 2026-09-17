@@ -198,10 +198,10 @@
   "away_p": "Justin Wrobleski",
   "away_p_hand": "L",
   "away_r": 7,
-  "cur_batter": "Hunter Feduccia",
-  "cur_pitcher": "Tony Santillan",
+  "cur_batter": "TJ Friedl",
+  "cur_pitcher": "Landon Knack",
   "game_pk": 824464,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Brady Singer",
   "home_p_hand": "R",
   "home_r": 1,
@@ -234,14 +234,16 @@
     "n": 5
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 6
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Tony Santillan",
   "rhe_away": [
    7,
    10,
@@ -257,8 +259,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 97.0,
-  "wp_home": 3.0
+  "wp_away": 96.8,
+  "wp_home": 3.2
  },
  "0e8da1c4233051485aceb65b1a5c417a": {
   "abstract": "Preview",
@@ -372,13 +374,47 @@
   "rhe_home": [
    3,
    5,
-   1
+   2
   ],
   "save_p": null,
   "status": "Final",
   "warmup": false,
   "win_p": "Blade Tidwell",
   "win_side": "away"
+ },
+ "18d975d07e13a3b661fde1c6b246c75e": {
+  "abstract": "Preview",
+  "away_p": "Connor Prielipp",
+  "away_p_hand": "L",
+  "away_r": null,
+  "cur_batter": null,
+  "cur_pitcher": null,
+  "game_pk": 823977,
+  "half": null,
+  "home_p": "Grayson Rodriguez",
+  "home_p_hand": "R",
+  "home_r": null,
+  "in_play": false,
+  "inning": null,
+  "innings": [],
+  "lose_p": null,
+  "outs": null,
+  "pitch_side": "away",
+  "rhe_away": [
+   null,
+   null,
+   null
+  ],
+  "rhe_home": [
+   null,
+   null,
+   null
+  ],
+  "save_p": null,
+  "status": "Scheduled",
+  "warmup": false,
+  "win_p": null,
+  "win_side": null
  },
  "1ddb6d18eafe93f1947471922f1938ea": {
   "abstract": "Final",
@@ -452,7 +488,7 @@
   "rhe_home": [
    1,
    6,
-   1
+   2
   ],
   "save_p": null,
   "status": "Final",
@@ -1252,7 +1288,7 @@
   "rhe_home": [
    4,
    7,
-   0
+   1
   ],
   "save_p": "Jacob Latz",
   "status": "Final",
@@ -1543,9 +1579,9 @@
   "abstract": "Live",
   "away_p": "Kyle Harrison",
   "away_p_hand": "L",
-  "away_r": 1,
-  "cur_batter": "Bo Naylor",
-  "cur_pitcher": "Gregory Soto",
+  "away_r": 2,
+  "cur_batter": "Henry Davis",
+  "cur_pitcher": "Garrett Stallings",
   "game_pk": 823334,
   "half": "Top",
   "home_p": "Wilber Dotel",
@@ -1580,31 +1616,33 @@
     "n": 5
    },
    {
-    "a": null,
+    "a": 1,
     "h": null,
     "n": 6
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "home",
+  "outs": 3,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Gregory Soto",
   "rhe_away": [
-   1,
+   2,
    5,
    1
   ],
   "rhe_home": [
    5,
    4,
-   0
+   1
   ],
   "save_p": null,
   "status": "In Progress",
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 13.0,
-  "wp_home": 87.0
+  "wp_away": 11.700000000000003,
+  "wp_home": 88.3
  },
  "86a852d517d266c4d6c74e570caffa06": {
   "abstract": "Preview",
@@ -2055,7 +2093,7 @@
   "away_p": "Jeffrey Springs",
   "away_p_hand": "L",
   "away_r": 0,
-  "cur_batter": "Alika Williams",
+  "cur_batter": "Jeff McNeil",
   "cur_pitcher": "Drew Rasmussen",
   "game_pk": 822924,
   "half": "Top",
@@ -2092,13 +2130,11 @@
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 2,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "Geoff Hartlieb",
   "rhe_away": [
    0,
-   3,
+   4,
    1
   ],
   "rhe_home": [
@@ -2111,8 +2147,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 3.799999999999997,
-  "wp_home": 96.2
+  "wp_away": 3.6000000000000085,
+  "wp_home": 96.39999999999999
  },
  "b9c3b50472005c67c30de323cd8a5396": {
   "abstract": "Preview",
@@ -2699,7 +2735,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -2965,6 +3001,40 @@
   "warmup": false,
   "win_p": "Max Fried",
   "win_side": "away"
+ },
+ "f383973af69817d515b481a52d17ff6d": {
+  "abstract": "Preview",
+  "away_p": "Cade Cavalli",
+  "away_p_hand": "R",
+  "away_r": null,
+  "cur_batter": null,
+  "cur_pitcher": null,
+  "game_pk": 823005,
+  "half": null,
+  "home_p": "Kyle Leahy",
+  "home_p_hand": "R",
+  "home_r": null,
+  "in_play": false,
+  "inning": null,
+  "innings": [],
+  "lose_p": null,
+  "outs": null,
+  "pitch_side": "away",
+  "rhe_away": [
+   null,
+   null,
+   null
+  ],
+  "rhe_home": [
+   null,
+   null,
+   null
+  ],
+  "save_p": null,
+  "status": "Scheduled",
+  "warmup": false,
+  "win_p": null,
+  "win_side": null
  },
  "f915c125897694acec2531632a1231ff": {
   "abstract": "Final",
