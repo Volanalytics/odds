@@ -198,14 +198,14 @@
   "away_p": "Justin Wrobleski",
   "away_p_hand": "L",
   "away_r": 0,
-  "cur_batter": "Tommy Edman",
+  "cur_batter": "Freddie Freeman",
   "cur_pitcher": "Brady Singer",
   "game_pk": 824464,
   "half": "Top",
   "home_p": "Brady Singer",
   "home_p_hand": "R",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "innings": [
    {
@@ -215,7 +215,7 @@
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 1,
   "pitch_side": "home",
   "rhe_away": [
    0,
@@ -228,10 +228,12 @@
    0
   ],
   "save_p": null,
-  "status": "Warmup",
-  "warmup": true,
+  "status": "In Progress",
+  "warmup": false,
   "win_p": null,
-  "win_side": null
+  "win_side": null,
+  "wp_away": 47.8,
+  "wp_home": 52.2
  },
  "0e8da1c4233051485aceb65b1a5c417a": {
   "abstract": "Preview",
@@ -345,7 +347,7 @@
   "rhe_home": [
    3,
    5,
-   1
+   2
   ],
   "save_p": null,
   "status": "Final",
@@ -425,7 +427,7 @@
   "rhe_home": [
    1,
    6,
-   1
+   2
   ],
   "save_p": null,
   "status": "Final",
@@ -1225,7 +1227,7 @@
   "rhe_home": [
    4,
    7,
-   0
+   1
   ],
   "save_p": "Jacob Latz",
   "status": "Final",
@@ -1517,10 +1519,10 @@
   "away_p": "Kyle Harrison",
   "away_p_hand": "L",
   "away_r": 0,
-  "cur_batter": "Jackson Chourio",
-  "cur_pitcher": "Wilber Dotel",
+  "cur_batter": "Oneil Cruz",
+  "cur_pitcher": "Kyle Harrison",
   "game_pk": 823334,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Wilber Dotel",
   "home_p_hand": "R",
   "home_r": 0,
@@ -1528,14 +1530,16 @@
   "inning": 1,
   "innings": [
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 1
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "home",
+  "outs": 1,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Wilber Dotel",
   "rhe_away": [
    0,
    0,
@@ -1551,8 +1555,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 47.8,
-  "wp_home": 52.2
+  "wp_away": 45.199999999999996,
+  "wp_home": 54.800000000000004
  },
  "86a852d517d266c4d6c74e570caffa06": {
   "abstract": "Preview",
@@ -2589,7 +2593,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
