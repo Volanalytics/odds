@@ -244,7 +244,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -413,7 +413,7 @@
   "rhe_home": [
    1,
    6,
-   2
+   1
   ],
   "save_p": null,
   "status": "Final",
@@ -2207,18 +2207,18 @@
   "win_side": "home"
  },
  "c89612459b7a3827c4eefbe1f5627635": {
-  "abstract": "Live",
+  "abstract": "Final",
   "away_p": "George Kirby",
   "away_p_hand": "R",
   "away_r": 7,
-  "cur_batter": "Vaughn Grissom",
+  "cur_batter": "Jose Siri",
   "cur_pitcher": "Andr\u00e9s Mu\u00f1oz",
   "game_pk": 823979,
   "half": "Bottom",
   "home_p": "Yusei Kikuchi",
   "home_p_hand": "L",
   "home_r": 2,
-  "in_play": true,
+  "in_play": false,
   "inning": 9,
   "innings": [
    {
@@ -2263,15 +2263,13 @@
    },
    {
     "a": 0,
-    "h": null,
+    "h": 0,
     "n": 9
    }
   ],
-  "lose_p": null,
-  "outs": 1,
+  "lose_p": "Yusei Kikuchi",
+  "outs": 3,
   "pitch_side": "away",
-  "pitcher_changed": true,
-  "prev_pitcher": "Mitch Farris",
   "rhe_away": [
    7,
    9,
@@ -2279,16 +2277,14 @@
   ],
   "rhe_home": [
    2,
-   8,
+   10,
    2
   ],
   "save_p": null,
-  "status": "In Progress",
+  "status": "Game Over",
   "warmup": false,
-  "win_p": null,
-  "win_side": "away",
-  "wp_away": 99.2,
-  "wp_home": 0.8
+  "win_p": "Carlos Vargas",
+  "win_side": "away"
  },
  "cce625b7dac12280fdb88a6f44058c93": {
   "abstract": "Final",
