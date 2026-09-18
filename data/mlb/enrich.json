@@ -4,8 +4,8 @@
   "away_p": "Sonny Gray",
   "away_p_hand": "R",
   "away_r": 1,
-  "cur_batter": "Nicky Lopez",
-  "cur_pitcher": "Sonny Gray",
+  "cur_batter": "Danny Jansen",
+  "cur_pitcher": "Wyatt Olds",
   "game_pk": 822845,
   "half": "Bottom",
   "home_p": "Tyler Alexander",
@@ -53,6 +53,8 @@
   "lose_p": null,
   "outs": 1,
   "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Sonny Gray",
   "rhe_away": [
    1,
    4,
@@ -68,8 +70,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 12.400000000000006,
-  "wp_home": 87.6
+  "wp_away": 11.299999999999997,
+  "wp_home": 88.7
  },
  "080879497a1aa1cc2674f615e55cc797": {
   "abstract": "Final",
@@ -851,7 +853,7 @@
   "rhe_home": [
    4,
    7,
-   0
+   1
   ],
   "save_p": "Jacob Latz",
   "status": "Final",
@@ -1109,10 +1111,10 @@
   "away_p": "Taj Bradley",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Brooks Lee",
-  "cur_pitcher": "Walbert Ure\u00f1a",
+  "cur_batter": "Wade Meckler",
+  "cur_pitcher": "Taj Bradley",
   "game_pk": 823978,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Walbert Ure\u00f1a",
   "home_p_hand": "R",
   "home_r": 3,
@@ -1130,17 +1132,19 @@
     "n": 2
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 3
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Walbert Ure\u00f1a",
   "rhe_away": [
    0,
-   2,
+   3,
    0
   ],
   "rhe_home": [
@@ -1153,8 +1157,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 16.900000000000006,
-  "wp_home": 83.1
+  "wp_away": 18.10000000000001,
+  "wp_home": 81.89999999999999
  },
  "72854b76ef219e56254f54563177c407": {
   "abstract": "Final",
@@ -1589,6 +1593,40 @@
   "warmup": false,
   "win_p": "Parker Messick",
   "win_side": "home"
+ },
+ "a09736b1c232b3bc0b3e9938db6f2337": {
+  "abstract": "Preview",
+  "away_p": "Clay Holmes",
+  "away_p_hand": "R",
+  "away_r": null,
+  "cur_batter": null,
+  "cur_pitcher": null,
+  "game_pk": 824463,
+  "half": null,
+  "home_p": "Chase Burns",
+  "home_p_hand": "R",
+  "home_r": null,
+  "in_play": false,
+  "inning": null,
+  "innings": [],
+  "lose_p": null,
+  "outs": null,
+  "pitch_side": "away",
+  "rhe_away": [
+   null,
+   null,
+   null
+  ],
+  "rhe_home": [
+   null,
+   null,
+   null
+  ],
+  "save_p": null,
+  "status": "Scheduled",
+  "warmup": false,
+  "win_p": null,
+  "win_side": null
  },
  "a62a35a880cc2c7bc487947c5d3afe74": {
   "abstract": "Final",
@@ -2324,8 +2362,6 @@
   "lose_p": "Framber Valdez",
   "outs": 3,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "Ty Madden",
   "rhe_away": [
    1,
    8,
@@ -2337,7 +2373,7 @@
    0
   ],
   "save_p": "Grant Taylor",
-  "status": "Game Over",
+  "status": "Final",
   "warmup": false,
   "win_p": "Bryan Hudson",
   "win_side": "home"
