@@ -11,7 +11,7 @@
   "home_p": "Cade Povich",
   "home_p_hand": "L",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "innings": [
    {
@@ -34,10 +34,12 @@
    0
   ],
   "save_p": null,
-  "status": "Warmup",
-  "warmup": true,
+  "status": "In Progress",
+  "warmup": false,
   "win_p": null,
-  "win_side": null
+  "win_side": null,
+  "wp_away": 50.0,
+  "wp_home": 50.0
  },
  "04a2f236dde09215a7d5033c63178a44": {
   "abstract": "Final",
@@ -742,7 +744,7 @@
   "win_side": null
  },
  "49deafc3a88bf69634e0f3510d62b0ee": {
-  "abstract": "Preview",
+  "abstract": "Live",
   "away_p": "Tim Mayza",
   "away_p_hand": "L",
   "away_r": 0,
@@ -776,8 +778,8 @@
    0
   ],
   "save_p": null,
-  "status": "Pre-Game",
-  "warmup": false,
+  "status": "Warmup",
+  "warmup": true,
   "win_p": null,
   "win_side": null
  },
@@ -2006,30 +2008,33 @@
   "away_p": "Clay Holmes",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Ian Happ",
+  "cur_batter": "Carson Kelly",
   "cur_pitcher": "Chase Burns",
   "game_pk": 824463,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Chase Burns",
   "home_p_hand": "R",
   "home_r": 2,
   "in_play": true,
-  "inning": 1,
+  "inning": 2,
   "innings": [
    {
     "a": 0,
     "h": 2,
     "n": 1
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 2
    }
   ],
   "lose_p": null,
-  "outs": 3,
+  "outs": 1,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "Clay Holmes",
   "rhe_away": [
    0,
-   0,
+   2,
    0
   ],
   "rhe_home": [
@@ -2042,8 +2047,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 26.599999999999994,
-  "wp_home": 73.4
+  "wp_away": 30.5,
+  "wp_home": 69.5
  },
  "a0d104e8bf314f79a38436433c2fa67a": {
   "abstract": "Preview",
@@ -2244,10 +2249,10 @@
   "away_p": "Randy Dobnak",
   "away_p_hand": "R",
   "away_r": 1,
-  "cur_batter": "John Rave",
-  "cur_pitcher": "Paul Skenes",
+  "cur_batter": "Ryan O'Hearn",
+  "cur_pitcher": "Randy Dobnak",
   "game_pk": 823331,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Paul Skenes",
   "home_p_hand": "R",
   "home_r": 0,
@@ -2260,14 +2265,16 @@
     "n": 1
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 2
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "home",
+  "outs": 1,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Paul Skenes",
   "rhe_away": [
    1,
    1,
@@ -2283,8 +2290,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 58.2,
-  "wp_home": 41.8
+  "wp_away": 55.7,
+  "wp_home": 44.3
  },
  "bc6cda1a14a8d0e13bd5ff88dc04726a": {
   "abstract": "Preview",
