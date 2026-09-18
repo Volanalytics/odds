@@ -4,7 +4,7 @@
   "away_p": "Dustin May",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Brice Turang",
+  "cur_batter": "Christian Yelich",
   "cur_pitcher": "Cade Povich",
   "game_pk": 824790,
   "half": "Top",
@@ -21,7 +21,7 @@
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 2,
   "pitch_side": "home",
   "rhe_away": [
    0,
@@ -38,8 +38,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 53.599999999999994,
-  "wp_home": 46.400000000000006
+  "wp_away": 49.5,
+  "wp_home": 50.5
  },
  "04a2f236dde09215a7d5033c63178a44": {
   "abstract": "Final",
@@ -1579,8 +1579,8 @@
   "abstract": "Live",
   "away_p": "Ranger Suarez",
   "away_p_hand": "L",
-  "away_r": 0,
-  "cur_batter": "Roman Anthony",
+  "away_r": 1,
+  "cur_batter": "Wilyer Abreu",
   "cur_pitcher": "Ian Seymour",
   "game_pk": 822923,
   "half": "Top",
@@ -1591,17 +1591,17 @@
   "inning": 1,
   "innings": [
    {
-    "a": null,
+    "a": 1,
     "h": null,
     "n": 1
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 2,
   "pitch_side": "home",
   "rhe_away": [
-   0,
-   0,
+   1,
+   1,
    0
   ],
   "rhe_home": [
@@ -1613,9 +1613,9 @@
   "status": "In Progress",
   "warmup": false,
   "win_p": null,
-  "win_side": null,
-  "wp_away": 50.0,
-  "wp_home": 50.0
+  "win_side": "away",
+  "wp_away": 56.2,
+  "wp_home": 43.8
  },
  "86a852d517d266c4d6c74e570caffa06": {
   "abstract": "Final",
@@ -2010,8 +2010,8 @@
   "away_p": "Clay Holmes",
   "away_p_hand": "R",
   "away_r": 1,
-  "cur_batter": "Pete Crow-Armstrong",
-  "cur_pitcher": "Chase Burns",
+  "cur_batter": "H\u00e9ctor Rodr\u00edguez",
+  "cur_pitcher": "Clay Holmes",
   "game_pk": 824463,
   "half": "Top",
   "home_p": "Chase Burns",
@@ -2032,8 +2032,10 @@
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "home",
+  "outs": 3,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Chase Burns",
   "rhe_away": [
    1,
    3,
@@ -2049,8 +2051,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 50.8,
-  "wp_home": 49.2
+  "wp_away": 42.50000000000001,
+  "wp_home": 57.49999999999999
  },
  "a0d104e8bf314f79a38436433c2fa67a": {
   "abstract": "Preview",
@@ -2251,15 +2253,15 @@
   "away_p": "Randy Dobnak",
   "away_p_hand": "R",
   "away_r": 1,
-  "cur_batter": "Henry Davis",
-  "cur_pitcher": "Randy Dobnak",
+  "cur_batter": "Nick Loftin",
+  "cur_pitcher": "Paul Skenes",
   "game_pk": 823331,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Paul Skenes",
   "home_p_hand": "R",
   "home_r": 0,
   "in_play": true,
-  "inning": 2,
+  "inning": 3,
   "innings": [
    {
     "a": 1,
@@ -2268,13 +2270,20 @@
    },
    {
     "a": 0,
-    "h": null,
+    "h": 0,
     "n": 2
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 3
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "away",
+  "outs": 0,
+  "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Randy Dobnak",
   "rhe_away": [
    1,
    1,
@@ -2290,8 +2299,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 54.699999999999996,
-  "wp_home": 45.300000000000004
+  "wp_away": 61.199999999999996,
+  "wp_home": 38.800000000000004
  },
  "bc6cda1a14a8d0e13bd5ff88dc04726a": {
   "abstract": "Preview",
@@ -2788,7 +2797,7 @@
   "win_side": "home"
  },
  "d59af92c5a51eebe1b3721cfbbd3dab8": {
-  "abstract": "Preview",
+  "abstract": "Live",
   "away_p": "Andrew Sears",
   "away_p_hand": "L",
   "away_r": 0,
@@ -2822,8 +2831,8 @@
    0
   ],
   "save_p": null,
-  "status": "Pre-Game",
-  "warmup": false,
+  "status": "Warmup",
+  "warmup": true,
   "win_p": null,
   "win_side": null
  },
@@ -3310,7 +3319,7 @@
   "away_p": "Mason Barnett",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Henry Bolte",
+  "cur_batter": "Lawrence Butler",
   "cur_pitcher": "Daniel Espino",
   "game_pk": 824383,
   "half": "Top",
@@ -3327,7 +3336,7 @@
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 1,
   "pitch_side": "home",
   "rhe_away": [
    0,
@@ -3344,8 +3353,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 50.0,
-  "wp_home": 50.0
+  "wp_away": 53.599999999999994,
+  "wp_home": 46.400000000000006
  },
  "fd0d48d248eb15ca70844bf48633f158": {
   "abstract": "Preview",
