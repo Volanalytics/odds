@@ -2006,10 +2006,10 @@
   "away_p": "Clay Holmes",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Seiya Suzuki",
-  "cur_pitcher": "Chase Burns",
+  "cur_batter": "Carlos Jorge",
+  "cur_pitcher": "Clay Holmes",
   "game_pk": 824463,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Chase Burns",
   "home_p_hand": "R",
   "home_r": 0,
@@ -2017,14 +2017,16 @@
   "inning": 1,
   "innings": [
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 1
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Chase Burns",
   "rhe_away": [
    0,
    0,
@@ -2040,8 +2042,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 47.8,
-  "wp_home": 52.2
+  "wp_away": 47.4,
+  "wp_home": 52.6
  },
  "a0d104e8bf314f79a38436433c2fa67a": {
   "abstract": "Preview",
@@ -2241,11 +2243,11 @@
   "abstract": "Live",
   "away_p": "Randy Dobnak",
   "away_p_hand": "R",
-  "away_r": 0,
-  "cur_batter": "Vinnie Pasquantino",
-  "cur_pitcher": "Paul Skenes",
+  "away_r": 1,
+  "cur_batter": "Brandon Lowe",
+  "cur_pitcher": "Randy Dobnak",
   "game_pk": 823331,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Paul Skenes",
   "home_p_hand": "R",
   "home_r": 0,
@@ -2253,31 +2255,33 @@
   "inning": 1,
   "innings": [
    {
-    "a": null,
+    "a": 1,
     "h": null,
     "n": 1
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Paul Skenes",
   "rhe_away": [
-   0,
-   0,
+   1,
+   1,
    0
   ],
   "rhe_home": [
    0,
-   0,
+   1,
    0
   ],
   "save_p": null,
   "status": "In Progress",
   "warmup": false,
   "win_p": null,
-  "win_side": null,
-  "wp_away": 47.8,
-  "wp_home": 52.2
+  "win_side": "away",
+  "wp_away": 51.4,
+  "wp_home": 48.6
  },
  "bc6cda1a14a8d0e13bd5ff88dc04726a": {
   "abstract": "Preview",
@@ -3286,7 +3290,7 @@
   "win_side": "home"
  },
  "faeba6575c679e03be0a8b007d243848": {
-  "abstract": "Preview",
+  "abstract": "Live",
   "away_p": "Mason Barnett",
   "away_p_hand": "R",
   "away_r": 0,
@@ -3320,8 +3324,8 @@
    0
   ],
   "save_p": null,
-  "status": "Pre-Game",
-  "warmup": false,
+  "status": "Warmup",
+  "warmup": true,
   "win_p": null,
   "win_side": null
  },
