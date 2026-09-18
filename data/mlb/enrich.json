@@ -4,7 +4,7 @@
   "away_p": "Sonny Gray",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Willson Contreras",
+  "cur_batter": "Trevor Story",
   "cur_pitcher": "Chase Silseth",
   "game_pk": 822845,
   "half": "Top",
@@ -46,13 +46,11 @@
    }
   ],
   "lose_p": null,
-  "outs": 1,
+  "outs": 2,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "Cody Bradford",
   "rhe_away": [
    0,
-   3,
+   4,
    0
   ],
   "rhe_home": [
@@ -65,8 +63,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 14.099999999999994,
-  "wp_home": 85.9
+  "wp_away": 14.799999999999997,
+  "wp_home": 85.2
  },
  "080879497a1aa1cc2674f615e55cc797": {
   "abstract": "Final",
@@ -1072,8 +1070,8 @@
   "away_p": "Taj Bradley",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Brooks Lee",
-  "cur_pitcher": "Walbert Ure\u00f1a",
+  "cur_batter": "Zach Neto",
+  "cur_pitcher": "Taj Bradley",
   "game_pk": 823978,
   "half": "Top",
   "home_p": "Walbert Ure\u00f1a",
@@ -1083,17 +1081,19 @@
   "inning": 1,
   "innings": [
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 1
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "home",
+  "outs": 3,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Walbert Ure\u00f1a",
   "rhe_away": [
    0,
-   0,
+   2,
    0
   ],
   "rhe_home": [
@@ -1228,15 +1228,15 @@
   "away_p": "Aaron Nola",
   "away_p_hand": "R",
   "away_r": 3,
-  "cur_batter": "Francisco Lindor",
-  "cur_pitcher": "Tim Mayza",
+  "cur_batter": "Kyle Schwarber",
+  "cur_pitcher": "Austin Warren",
   "game_pk": 823573,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Nolan McLean",
   "home_p_hand": "R",
   "home_r": 0,
   "in_play": true,
-  "inning": 8,
+  "inning": 9,
   "innings": [
    {
     "a": 0,
@@ -1275,15 +1275,20 @@
    },
    {
     "a": 1,
-    "h": null,
+    "h": 0,
     "n": 8
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 9
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "away",
+  "outs": 0,
+  "pitch_side": "home",
   "pitcher_changed": true,
-  "prev_pitcher": "Jonathan Bowlan",
+  "prev_pitcher": "Tim Mayza",
   "rhe_away": [
    3,
    8,
@@ -1299,8 +1304,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 94.4,
-  "wp_home": 5.6000000000000005
+  "wp_away": 96.6,
+  "wp_home": 3.4000000000000004
  },
  "8cac5435079f2d8d51adb91e7950bb26": {
   "abstract": "Final",
@@ -1623,18 +1628,18 @@
   "win_side": "home"
  },
  "b9c3b50472005c67c30de323cd8a5396": {
-  "abstract": "Live",
+  "abstract": "Final",
   "away_p": "Seth Lugo",
   "away_p_hand": "R",
   "away_r": 2,
-  "cur_batter": "Yordan Alvarez",
-  "cur_pitcher": "Alex Lange",
+  "cur_batter": "Michael Massey",
+  "cur_pitcher": "Josh Hader",
   "game_pk": 824141,
   "half": "Top",
   "home_p": "Miguel Ullola",
   "home_p_hand": "R",
   "home_r": 6,
-  "in_play": true,
+  "in_play": false,
   "inning": 9,
   "innings": [
    {
@@ -1683,11 +1688,11 @@
     "n": 9
    }
   ],
-  "lose_p": null,
+  "lose_p": "Seth Lugo",
   "outs": 3,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "pitcher_changed": true,
-  "prev_pitcher": "Josh Hader",
+  "prev_pitcher": "Alex Lange",
   "rhe_away": [
    2,
    3,
@@ -1699,12 +1704,10 @@
    0
   ],
   "save_p": null,
-  "status": "In Progress",
+  "status": "Game Over",
   "warmup": false,
-  "win_p": null,
-  "win_side": "home",
-  "wp_away": 0.09999999999999432,
-  "wp_home": 99.9
+  "win_p": "Bryan King",
+  "win_side": "home"
  },
  "ba420794fe974233579a5168b03e3743": {
   "abstract": "Preview",
@@ -2221,10 +2224,10 @@
   "away_p": "Framber Valdez",
   "away_p_hand": "L",
   "away_r": 1,
-  "cur_batter": "Dillon Dingler",
-  "cur_pitcher": "Grant Taylor",
+  "cur_batter": "Chase Meidroth",
+  "cur_pitcher": "Ty Madden",
   "game_pk": 824548,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Erick Fedde",
   "home_p_hand": "R",
   "home_r": 3,
@@ -2262,16 +2265,16 @@
     "n": 6
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 7
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
   "pitcher_changed": true,
-  "prev_pitcher": "Jordan Hicks",
+  "prev_pitcher": "Grant Taylor",
   "rhe_away": [
    1,
    6,
@@ -2287,8 +2290,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 18.0,
-  "wp_home": 82.0
+  "wp_away": 11.299999999999997,
+  "wp_home": 88.7
  },
  "de26fcfdce286e11d0005c82ffdccce6": {
   "abstract": "Preview",
