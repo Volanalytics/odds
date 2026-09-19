@@ -529,7 +529,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -883,7 +883,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -904,29 +904,35 @@
   "abstract": "Preview",
   "away_p": "Bryce Miller",
   "away_p_hand": "R",
-  "away_r": null,
-  "cur_batter": null,
-  "cur_pitcher": null,
+  "away_r": 0,
+  "cur_batter": "J.P. Crawford",
+  "cur_pitcher": "Jose Quintana",
   "game_pk": 824304,
-  "half": null,
+  "half": "Top",
   "home_p": "Jose Quintana",
   "home_p_hand": "L",
-  "home_r": null,
+  "home_r": 0,
   "in_play": false,
-  "inning": null,
-  "innings": [],
+  "inning": 1,
+  "innings": [
+   {
+    "a": null,
+    "h": null,
+    "n": 1
+   }
+  ],
   "lose_p": null,
-  "outs": null,
-  "pitch_side": "away",
+  "outs": 0,
+  "pitch_side": "home",
   "rhe_away": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "rhe_home": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "save_p": null,
   "status": "Pre-Game",
@@ -1320,7 +1326,7 @@
   "rhe_away": [
    4,
    9,
-   1
+   0
   ],
   "rhe_home": [
    7,
@@ -1338,7 +1344,7 @@
   "away_p": "Andrew Painter",
   "away_p_hand": "R",
   "away_r": 1,
-  "cur_batter": "Justin Crawford",
+  "cur_batter": "Trea Turner",
   "cur_pitcher": "Christian Scott",
   "game_pk": 823571,
   "half": "Top",
@@ -1375,13 +1381,11 @@
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 1,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "Andrew Painter",
   "rhe_away": [
    1,
-   4,
+   5,
    0
   ],
   "rhe_home": [
@@ -1394,8 +1398,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 50.0,
-  "wp_home": 50.0
+  "wp_away": 47.0,
+  "wp_home": 53.0
  },
  "7b148d0f1eaf595528a0bf3c835fdfb3": {
   "abstract": "Preview",
@@ -1414,7 +1418,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -1808,7 +1812,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -1922,7 +1926,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -2750,7 +2754,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -2984,7 +2988,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -3046,15 +3050,15 @@
   "away_p": "Brayan Bello",
   "away_p_hand": "R",
   "away_r": 1,
-  "cur_batter": "Adley Rutschman",
+  "cur_batter": "Nick Sogard",
   "cur_pitcher": "Freddy Peralta",
   "game_pk": 822921,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Freddy Peralta",
   "home_p_hand": "R",
   "home_r": 1,
   "in_play": true,
-  "inning": 5,
+  "inning": 6,
   "innings": [
    {
     "a": 0,
@@ -3080,13 +3084,16 @@
     "a": 0,
     "h": 0,
     "n": 5
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 6
    }
   ],
   "lose_p": null,
-  "outs": 3,
+  "outs": 2,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "Brayan Bello",
   "rhe_away": [
    1,
    4,
@@ -3102,8 +3109,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 48.5,
-  "wp_home": 51.5
+  "wp_away": 50.3,
+  "wp_home": 49.7
  },
  "f383973af69817d515b481a52d17ff6d": {
   "abstract": "Final",
@@ -3190,8 +3197,8 @@
   "away_p": "Robert Gasser",
   "away_p_hand": "L",
   "away_r": 1,
-  "cur_batter": "Pete Alonso",
-  "cur_pitcher": "Robert Gasser",
+  "cur_batter": "William Contreras",
+  "cur_pitcher": "Trevor Rogers",
   "game_pk": 824788,
   "half": "Bottom",
   "home_p": "Trevor Rogers",
@@ -3227,13 +3234,15 @@
    },
    {
     "a": 0,
-    "h": null,
+    "h": 0,
     "n": 6
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "away",
+  "outs": 3,
+  "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Robert Gasser",
   "rhe_away": [
    1,
    1,
@@ -3249,8 +3258,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 59.9,
-  "wp_home": 40.1
+  "wp_away": 43.400000000000006,
+  "wp_home": 56.599999999999994
  },
  "faeba6575c679e03be0a8b007d243848": {
   "abstract": "Final",
