@@ -1333,7 +1333,7 @@
   "home_p": "Christian Scott",
   "home_p_hand": "R",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "innings": [
    {
@@ -1356,10 +1356,12 @@
    0
   ],
   "save_p": null,
-  "status": "Warmup",
-  "warmup": true,
+  "status": "In Progress",
+  "warmup": false,
   "win_p": null,
-  "win_side": null
+  "win_side": null,
+  "wp_away": 50.0,
+  "wp_home": 50.0
  },
  "7b148d0f1eaf595528a0bf3c835fdfb3": {
   "abstract": "Preview",
@@ -1680,8 +1682,8 @@
   "away_p": "Jackson Jobe",
   "away_p_hand": "R",
   "away_r": 1,
-  "cur_batter": "Max Clark",
-  "cur_pitcher": "Noah Schultz",
+  "cur_batter": "Eduardo Valencia",
+  "cur_pitcher": "Grant Taylor",
   "game_pk": 824545,
   "half": "Top",
   "home_p": "Sean Burke",
@@ -1732,11 +1734,13 @@
    }
   ],
   "lose_p": null,
-  "outs": 1,
+  "outs": 2,
   "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Noah Schultz",
   "rhe_away": [
    1,
-   6,
+   7,
    1
   ],
   "rhe_home": [
@@ -1749,8 +1753,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 20.700000000000003,
-  "wp_home": 79.3
+  "wp_away": 13.5,
+  "wp_home": 86.5
  },
  "99e8d3217fe1ac7aeaf6b77ec6e6fb7c": {
   "abstract": "Preview",
@@ -1985,8 +1989,8 @@
   "away_p": "Jackson Jobe",
   "away_p_hand": "R",
   "away_r": 1,
-  "cur_batter": "Max Clark",
-  "cur_pitcher": "Noah Schultz",
+  "cur_batter": "Eduardo Valencia",
+  "cur_pitcher": "Grant Taylor",
   "game_pk": 824545,
   "half": "Top",
   "home_p": "Sean Burke",
@@ -2037,11 +2041,13 @@
    }
   ],
   "lose_p": null,
-  "outs": 1,
+  "outs": 2,
   "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Noah Schultz",
   "rhe_away": [
    1,
-   6,
+   7,
    1
   ],
   "rhe_home": [
@@ -2054,8 +2060,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 20.700000000000003,
-  "wp_home": 79.3
+  "wp_away": 13.5,
+  "wp_home": 86.5
  },
  "b93df18188b2370baac5d9d231f2bd59": {
   "abstract": "Preview",
@@ -2998,10 +3004,10 @@
   "away_p": "Brayan Bello",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Nick Sogard",
-  "cur_pitcher": "Freddy Peralta",
+  "cur_batter": "Liam Hicks",
+  "cur_pitcher": "Brayan Bello",
   "game_pk": 822921,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Freddy Peralta",
   "home_p_hand": "R",
   "home_r": 0,
@@ -3014,14 +3020,16 @@
     "n": 1
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 2
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Freddy Peralta",
   "rhe_away": [
    0,
    0,
@@ -3033,12 +3041,12 @@
    0
   ],
   "save_p": null,
-  "status": "In Progress",
+  "status": "Umpire review",
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 47.699999999999996,
-  "wp_home": 52.300000000000004
+  "wp_away": 44.9,
+  "wp_home": 55.1
  },
  "f383973af69817d515b481a52d17ff6d": {
   "abstract": "Final",
@@ -3124,11 +3132,11 @@
   "abstract": "Live",
   "away_p": "Robert Gasser",
   "away_p_hand": "L",
-  "away_r": 0,
-  "cur_batter": "Gary S\u00e1nchez",
-  "cur_pitcher": "Trevor Rogers",
+  "away_r": 1,
+  "cur_batter": "Rece Hinds",
+  "cur_pitcher": "Robert Gasser",
   "game_pk": 824788,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Trevor Rogers",
   "home_p_hand": "L",
   "home_r": 0,
@@ -3141,33 +3149,33 @@
     "n": 1
    },
    {
-    "a": null,
+    "a": 1,
     "h": null,
     "n": 2
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
   "pitcher_changed": true,
-  "prev_pitcher": "Robert Gasser",
+  "prev_pitcher": "Trevor Rogers",
   "rhe_away": [
-   0,
+   1,
    1,
    0
   ],
   "rhe_home": [
    0,
-   1,
+   2,
    0
   ],
   "save_p": null,
   "status": "In Progress",
   "warmup": false,
   "win_p": null,
-  "win_side": null,
-  "wp_away": 55.0,
-  "wp_home": 45.0
+  "win_side": "away",
+  "wp_away": 56.7,
+  "wp_home": 43.3
  },
  "faeba6575c679e03be0a8b007d243848": {
   "abstract": "Final",
