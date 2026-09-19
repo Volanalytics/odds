@@ -523,7 +523,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -871,7 +871,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -1302,7 +1302,7 @@
   "rhe_away": [
    4,
    9,
-   0
+   1
   ],
   "rhe_home": [
    7,
@@ -1372,7 +1372,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -1674,7 +1674,7 @@
   "away_p": "Jackson Jobe",
   "away_p_hand": "R",
   "away_r": 1,
-  "cur_batter": "Colt Keith",
+  "cur_batter": "Max Clark",
   "cur_pitcher": "Sean Burke",
   "game_pk": 824545,
   "half": "Top",
@@ -1716,13 +1716,11 @@
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 2,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "Jackson Jobe",
   "rhe_away": [
    1,
-   4,
+   5,
    1
   ],
   "rhe_home": [
@@ -1735,8 +1733,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 31.799999999999997,
-  "wp_home": 68.2
+  "wp_away": 29.700000000000003,
+  "wp_home": 70.3
  },
  "99e8d3217fe1ac7aeaf6b77ec6e6fb7c": {
   "abstract": "Preview",
@@ -1755,7 +1753,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -1869,7 +1867,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -1971,7 +1969,7 @@
   "away_p": "Jackson Jobe",
   "away_p_hand": "R",
   "away_r": 1,
-  "cur_batter": "Colt Keith",
+  "cur_batter": "Max Clark",
   "cur_pitcher": "Sean Burke",
   "game_pk": 824545,
   "half": "Top",
@@ -2013,13 +2011,11 @@
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 2,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "Jackson Jobe",
   "rhe_away": [
    1,
-   4,
+   5,
    1
   ],
   "rhe_home": [
@@ -2032,8 +2028,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 31.799999999999997,
-  "wp_home": 68.2
+  "wp_away": 29.700000000000003,
+  "wp_home": 70.3
  },
  "b93df18188b2370baac5d9d231f2bd59": {
   "abstract": "Preview",
@@ -2473,29 +2469,35 @@
   "abstract": "Preview",
   "away_p": "Matthew Boyd",
   "away_p_hand": "L",
-  "away_r": null,
-  "cur_batter": null,
-  "cur_pitcher": null,
+  "away_r": 0,
+  "cur_batter": "Pete Crow-Armstrong",
+  "cur_pitcher": "Nick Lodolo",
   "game_pk": 824461,
-  "half": null,
+  "half": "Top",
   "home_p": "Nick Lodolo",
   "home_p_hand": "L",
-  "home_r": null,
+  "home_r": 0,
   "in_play": false,
-  "inning": null,
-  "innings": [],
+  "inning": 1,
+  "innings": [
+   {
+    "a": null,
+    "h": null,
+    "n": 1
+   }
+  ],
   "lose_p": null,
-  "outs": null,
-  "pitch_side": "away",
+  "outs": 0,
+  "pitch_side": "home",
   "rhe_away": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "rhe_home": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "save_p": null,
   "status": "Pre-Game",
@@ -2680,7 +2682,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -2914,7 +2916,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -3086,7 +3088,7 @@
   "win_side": "away"
  },
  "f6f64c128ccbed0075d0f180def1fb56": {
-  "abstract": "Preview",
+  "abstract": "Live",
   "away_p": "Robert Gasser",
   "away_p_hand": "L",
   "away_r": 0,
@@ -3120,8 +3122,8 @@
    0
   ],
   "save_p": null,
-  "status": "Pre-Game",
-  "warmup": false,
+  "status": "Warmup",
+  "warmup": true,
   "win_p": null,
   "win_side": null
  },
