@@ -165,18 +165,18 @@
   "win_side": "away"
  },
  "05846a699cfe1709affba4abc9b862ef": {
-  "abstract": "Live",
+  "abstract": "Final",
   "away_p": "Will Warren",
   "away_p_hand": "R",
   "away_r": 4,
-  "cur_batter": "Anthony Volpe",
+  "cur_batter": "Jos\u00e9 Caballero",
   "cur_pitcher": "Jonathan Lo\u00e1isiga",
   "game_pk": 825028,
   "half": "Top",
   "home_p": "Corbin Burnes",
   "home_p_hand": "R",
   "home_r": 8,
-  "in_play": true,
+  "in_play": false,
   "inning": 9,
   "innings": [
    {
@@ -220,19 +220,17 @@
     "n": 8
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 9
    }
   ],
-  "lose_p": null,
-  "outs": 1,
+  "lose_p": "Brent Headrick",
+  "outs": 3,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "Luis Gil",
   "rhe_away": [
    4,
-   7,
+   8,
    1
   ],
   "rhe_home": [
@@ -241,12 +239,10 @@
    0
   ],
   "save_p": null,
-  "status": "In Progress",
+  "status": "Game Over",
   "warmup": false,
-  "win_p": null,
-  "win_side": "home",
-  "wp_away": 1.5,
-  "wp_home": 98.5
+  "win_p": "Justin Martinez",
+  "win_side": "home"
  },
  "07a49329fbb35ea5b26f59b425b089bc": {
   "abstract": "Final",
@@ -1701,15 +1697,15 @@
   "away_p": "Troy Melton",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Andrew Benintendi",
-  "cur_pitcher": "Troy Melton",
+  "cur_batter": "Riley Greene",
+  "cur_pitcher": "Davis Martin",
   "game_pk": 824546,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Davis Martin",
   "home_p_hand": "R",
   "home_r": 1,
   "in_play": true,
-  "inning": 3,
+  "inning": 4,
   "innings": [
    {
     "a": 0,
@@ -1723,13 +1719,20 @@
    },
    {
     "a": 0,
-    "h": null,
+    "h": 0,
     "n": 3
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 4
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "away",
+  "outs": 1,
+  "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Troy Melton",
   "rhe_away": [
    0,
    1,
@@ -1745,8 +1748,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 35.599999999999994,
-  "wp_home": 64.4
+  "wp_away": 34.8,
+  "wp_home": 65.2
  },
  "82ab22dcd4b5a9fd457f4a06b2e93579": {
   "abstract": "Final",
@@ -2399,7 +2402,7 @@
   "win_side": "home"
  },
  "b93df18188b2370baac5d9d231f2bd59": {
-  "abstract": "Preview",
+  "abstract": "Live",
   "away_p": "Jacob Misiorowski",
   "away_p_hand": "R",
   "away_r": 0,
@@ -2433,8 +2436,8 @@
    0
   ],
   "save_p": null,
-  "status": "Pre-Game",
-  "warmup": false,
+  "status": "Warmup",
+  "warmup": true,
   "win_p": null,
   "win_side": null
  },
@@ -3302,8 +3305,6 @@
   "lose_p": "Ryan Johnson",
   "outs": 3,
   "pitch_side": "away",
-  "pitcher_changed": true,
-  "prev_pitcher": "Mitch Farris",
   "rhe_away": [
    8,
    13,
