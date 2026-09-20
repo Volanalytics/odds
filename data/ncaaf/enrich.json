@@ -477,10 +477,10 @@
   "away_rank": 99,
   "away_short": "N Dakota St",
   "city": "Sacramento",
-  "clock": "0:51",
+  "clock": "0:00",
   "conf_comp": false,
-  "detail": "0:51 - 3rd",
-  "down": "2nd & 16 at SAC 36",
+  "detail": "End of 3rd",
+  "down": "2nd & 10 at SAC 25",
   "espn_id": "401864507",
   "final": false,
   "home_abbr": "SAC",
@@ -492,13 +492,13 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "12/21, 196 YDS, 1 TD",
+    "val": "11/20, 196 YDS, 1 TD",
     "who": "N. Hayes"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "11 CAR, 74 YDS, 1 TD",
+    "val": "12 CAR, 75 YDS, 1 TD",
     "who": "D. Scott"
    },
    {
@@ -522,9 +522,9 @@
   "period": 3,
   "poss": "away",
   "redzone": false,
-  "spot": "SAC 36",
+  "spot": "SAC 25",
   "state": "CA",
-  "status": "In Progress",
+  "status": "End of Period",
   "venue": "Hornet Stadium"
  },
  "0cdac6d2b6c2cbfb0f734a8cdfbe086e": {
@@ -581,14 +581,14 @@
   "away_rank": 99,
   "away_short": "James Madison",
   "city": "San Diego",
-  "clock": "10:29",
+  "clock": "8:52",
   "conf_comp": false,
-  "detail": "10:29 - 4th",
-  "down": "1st & 10 at JMU 31",
+  "detail": "8:52 - 4th",
+  "down": null,
   "espn_id": "401860887",
   "final": false,
   "home_abbr": "SDSU",
-  "home_r": "7",
+  "home_r": "13",
   "home_rank": 99,
   "home_short": "San Diego St",
   "in_play": true,
@@ -602,7 +602,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "28 CAR, 126 YDS, 1 TD",
+    "val": "30 CAR, 138 YDS, 1 TD",
     "who": "J. Kinnard"
    },
    {
@@ -622,13 +622,13 @@
    0.0,
    0.0,
    7.0,
-   0.0
+   6.0
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
-  "redzone": false,
-  "spot": "JMU 31",
+  "poss": null,
+  "redzone": true,
+  "spot": null,
   "state": "CA",
   "status": "In Progress",
   "venue": "Snapdragon Stadium"
@@ -1507,14 +1507,14 @@
   "away_rank": 99,
   "away_short": "Montana",
   "city": "Corvallis",
-  "clock": "14:19",
+  "clock": "11:56",
   "conf_comp": false,
-  "detail": "14:19 - 3rd",
-  "down": null,
+  "detail": "11:56 - 3rd",
+  "down": "3rd & 9 at MONT 42",
   "espn_id": "401860886",
   "final": false,
   "home_abbr": "ORST",
-  "home_r": "41",
+  "home_r": "42",
   "home_rank": 99,
   "home_short": "Oregon St",
   "in_play": true,
@@ -1528,7 +1528,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "11 CAR, 52 YDS",
+    "val": "13 CAR, 51 YDS",
     "who": "E. Gillman"
    },
    {
@@ -1546,13 +1546,13 @@
   "line_home": [
    14.0,
    21.0,
-   6.0
+   7.0
   ],
   "neutral": false,
   "period": 3,
-  "poss": null,
-  "redzone": true,
-  "spot": null,
+  "poss": "away",
+  "redzone": false,
+  "spot": "MONT 42",
   "state": "OR",
   "status": "In Progress",
   "venue": "Reser Stadium"
@@ -3451,10 +3451,10 @@
   "away_rank": 99,
   "away_short": "South Dakota",
   "city": "Boise",
-  "clock": "4:54",
+  "clock": "2:50",
   "conf_comp": false,
-  "detail": "4:54 - 4th",
-  "down": "1st & 10 at BOIS 38",
+  "detail": "2:50 - 4th",
+  "down": "2nd & 10 at BOIS 24",
   "espn_id": "401860885",
   "final": false,
   "home_abbr": "BOIS",
@@ -3466,7 +3466,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "11/20, 228 YDS, 3 TD, 1 INT",
+    "val": "12/23, 243 YDS, 3 TD, 1 INT",
     "who": "A. Modrzewski"
    },
    {
@@ -3498,7 +3498,7 @@
   "period": 4,
   "poss": "away",
   "redzone": false,
-  "spot": "BOIS 38",
+  "spot": "BOIS 24",
   "state": "ID",
   "status": "In Progress",
   "venue": "Albertsons Stadium"
@@ -3847,10 +3847,10 @@
   "away_rank": 99,
   "away_short": "Purdue",
   "city": "Pasadena",
-  "clock": "13:01",
+  "clock": "11:00",
   "conf_comp": true,
-  "detail": "13:01 - 3rd",
-  "down": null,
+  "detail": "11:00 - 3rd",
+  "down": "1st & 10 at PUR 11",
   "espn_id": "401858458",
   "final": false,
   "home_abbr": "UCLA",
@@ -3868,8 +3868,8 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "5 CAR, 44 YDS",
-    "who": "N. Iamaleava"
+    "val": "10 CAR, 60 YDS, 1 TD",
+    "who": "W. Knight"
    },
    {
     "cat": "REC",
@@ -3890,9 +3890,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": null,
-  "redzone": false,
-  "spot": null,
+  "poss": "home",
+  "redzone": true,
+  "spot": "PUR 11",
   "state": "CA",
   "status": "In Progress",
   "venue": "Rose Bowl"
@@ -4577,9 +4577,9 @@
   "away_rank": 99,
   "away_short": "N Illinois",
   "city": "Tucson",
-  "clock": "11:32",
+  "clock": "8:40",
   "conf_comp": false,
-  "detail": "11:32 - 4th",
+  "detail": "8:40 - 4th",
   "down": null,
   "espn_id": "401856793",
   "final": false,
@@ -6784,14 +6784,14 @@
  },
  "f6db4e789ff9341a9c94befc751c5f53": {
   "away_abbr": "FRES",
-  "away_r": "6",
+  "away_r": "13",
   "away_rank": 99,
   "away_short": "Fresno St",
   "city": "San Jose",
-  "clock": "12:59",
+  "clock": "11:56",
   "conf_comp": false,
-  "detail": "12:59 - 3rd",
-  "down": "1st & 10 at SJSU 14",
+  "detail": "11:56 - 3rd",
+  "down": null,
   "espn_id": "401860888",
   "final": false,
   "home_abbr": "SJSU",
@@ -6802,9 +6802,9 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "8/14, 128 YDS, 1 INT",
-    "who": "L. Weaver"
+    "team": "away",
+    "val": "11/21, 140 YDS, 1 TD",
+    "who": "J. Mandal"
    },
    {
     "cat": "RUSH",
@@ -6822,7 +6822,7 @@
   "line_away": [
    0.0,
    6.0,
-   0.0
+   7.0
   ],
   "line_home": [
    3.0,
@@ -6831,9 +6831,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "away",
-  "redzone": true,
-  "spot": "SJSU 14",
+  "poss": null,
+  "redzone": false,
+  "spot": null,
   "state": "CA",
   "status": "In Progress",
   "venue": "CEFCU Stadium"
