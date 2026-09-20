@@ -477,22 +477,22 @@
   "away_rank": 99,
   "away_short": "N Dakota St",
   "city": "Sacramento",
-  "clock": "1:44",
+  "clock": "0:00",
   "conf_comp": false,
-  "detail": "1:44 - 4th",
-  "down": "1st & 10 at NDSU 13",
+  "detail": "Final",
+  "down": null,
   "espn_id": "401864507",
-  "final": false,
+  "final": true,
   "home_abbr": "SAC",
   "home_r": "10",
   "home_rank": 99,
   "home_short": "Sacramento St",
-  "in_play": true,
+  "in_play": false,
   "leaders": [
    {
     "cat": "PASS",
     "team": "home",
-    "val": "24/39, 233 YDS, 1 TD, 1 INT",
+    "val": "25/41, 238 YDS, 1 TD, 2 INT",
     "who": "J. Sharman"
    },
    {
@@ -522,11 +522,11 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
-  "redzone": true,
-  "spot": "NDSU 13",
+  "poss": null,
+  "redzone": false,
+  "spot": null,
   "state": "CA",
-  "status": "In Progress",
+  "status": "Final",
   "venue": "Hornet Stadium"
  },
  "0cdac6d2b6c2cbfb0f734a8cdfbe086e": {
@@ -1601,14 +1601,14 @@
  },
  "381e5c97af94a83e03eae0ac6f11ed38": {
   "away_abbr": "MONT",
-  "away_r": "10",
+  "away_r": "17",
   "away_rank": 99,
   "away_short": "Montana",
   "city": "Corvallis",
-  "clock": "10:55",
+  "clock": "8:53",
   "conf_comp": false,
-  "detail": "10:55 - 4th",
-  "down": "2nd & 2 at MONT 33",
+  "detail": "8:53 - 4th",
+  "down": null,
   "espn_id": "401860886",
   "final": false,
   "home_abbr": "ORST",
@@ -1626,21 +1626,21 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "15 CAR, 65 YDS",
+    "val": "17 CAR, 80 YDS",
     "who": "E. Gillman"
    },
    {
     "cat": "REC",
-    "team": "home",
-    "val": "4 REC, 100 YDS, 1 TD",
-    "who": "J. Legree"
+    "team": "away",
+    "val": "10 REC, 124 YDS, 1 TD",
+    "who": "B. Davis"
    }
   ],
   "line_away": [
    0.0,
    3.0,
    7.0,
-   0.0
+   7.0
   ],
   "line_home": [
    14.0,
@@ -1650,9 +1650,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "MONT 33",
+  "spot": null,
   "state": "OR",
   "status": "In Progress",
   "venue": "Reser Stadium"
@@ -3947,14 +3947,14 @@
   "away_rank": 99,
   "away_short": "Purdue",
   "city": "Pasadena",
-  "clock": "14:56",
+  "clock": "13:01",
   "conf_comp": true,
-  "detail": "14:56 - 4th",
-  "down": null,
+  "detail": "13:01 - 4th",
+  "down": "1st & 10 at UCLA 19",
   "espn_id": "401858458",
   "final": false,
   "home_abbr": "UCLA",
-  "home_r": "44",
+  "home_r": "45",
   "home_rank": 99,
   "home_short": "UCLA",
   "in_play": true,
@@ -3962,7 +3962,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "13/20, 285 YDS, 3 TD",
+    "val": "15/23, 335 YDS, 3 TD",
     "who": "R. Browne"
    },
    {
@@ -3988,13 +3988,13 @@
    21.0,
    3.0,
    14.0,
-   6.0
+   7.0
   ],
   "neutral": false,
   "period": 4,
-  "poss": null,
+  "poss": "away",
   "redzone": true,
-  "spot": null,
+  "spot": "UCLA 19",
   "state": "CA",
   "status": "In Progress",
   "venue": "Rose Bowl"
@@ -4971,6 +4971,54 @@
   "state": "TN",
   "status": "Scheduled",
   "venue": "Neyland Stadium"
+ },
+ "9fe2a7b54748dc10ff57743cdd1b041c": {
+  "away_abbr": "UNM",
+  "away_r": "0",
+  "away_rank": 99,
+  "away_short": "New Mexico",
+  "city": "Las Cruces",
+  "clock": "0:00",
+  "conf_comp": false,
+  "detail": "9/26 - 3:30 PM EDT",
+  "down": null,
+  "espn_id": "401864579",
+  "final": false,
+  "home_abbr": "NMSU",
+  "home_r": "0",
+  "home_rank": 99,
+  "home_short": "New Mexico St",
+  "in_play": false,
+  "leaders": [
+   {
+    "cat": "PASS",
+    "team": "home",
+    "val": "781 YDS, 5 TD, 3 INT",
+    "who": "T. Hedden"
+   },
+   {
+    "cat": "RUSH",
+    "team": "home",
+    "val": "43 CAR, 243 YDS, 2 TD",
+    "who": "J. Jones"
+   },
+   {
+    "cat": "REC",
+    "team": "home",
+    "val": "14 REC, 239 YDS, 2 TD",
+    "who": "T. King"
+   }
+  ],
+  "line_away": [],
+  "line_home": [],
+  "neutral": false,
+  "period": 0,
+  "poss": null,
+  "redzone": false,
+  "spot": null,
+  "state": "NM",
+  "status": "Scheduled",
+  "venue": "Aggie Memorial Stadium"
  },
  "a195a61a5f2a3c5c0ed7ba7b313572e5": {
   "away_abbr": "DUKE",
@@ -6890,14 +6938,14 @@
   "away_rank": 99,
   "away_short": "Fresno St",
   "city": "San Jose",
-  "clock": "12:40",
+  "clock": "12:30",
   "conf_comp": false,
-  "detail": "12:40 - 4th",
+  "detail": "12:30 - 4th",
   "down": null,
   "espn_id": "401860888",
   "final": false,
   "home_abbr": "SJSU",
-  "home_r": "3",
+  "home_r": "10",
   "home_rank": 99,
   "home_short": "San Jos\u00e9 St",
   "in_play": true,
@@ -6905,7 +6953,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "15/26, 213 YDS, 2 INT",
+    "val": "16/27, 214 YDS, 1 TD, 2 INT",
     "who": "L. Weaver"
    },
    {
@@ -6931,12 +6979,12 @@
    3.0,
    0.0,
    0.0,
-   0.0
+   7.0
   ],
   "neutral": false,
   "period": 4,
   "poss": null,
-  "redzone": true,
+  "redzone": false,
   "spot": null,
   "state": "CA",
   "status": "In Progress",
@@ -7201,5 +7249,53 @@
   "state": "IN",
   "status": "Scheduled",
   "venue": "Notre Dame Stadium"
+ },
+ "fc7c77e060e8ba29a61de994be1497c0": {
+  "away_abbr": "HAW",
+  "away_r": "0",
+  "away_rank": 99,
+  "away_short": "Hawai'i",
+  "city": "Laramie",
+  "clock": "0:00",
+  "conf_comp": true,
+  "detail": "9/26 - 3:00 PM EDT",
+  "down": null,
+  "espn_id": "401864510",
+  "final": false,
+  "home_abbr": "WYO",
+  "home_r": "0",
+  "home_rank": 99,
+  "home_short": "Wyoming",
+  "in_play": false,
+  "leaders": [
+   {
+    "cat": "PASS",
+    "team": "away",
+    "val": "794 YDS, 2 TD, 1 INT",
+    "who": "M. Alejado"
+   },
+   {
+    "cat": "RUSH",
+    "team": "away",
+    "val": "42 CAR, 167 YDS, 3 TD",
+    "who": "D. Rice"
+   },
+   {
+    "cat": "REC",
+    "team": "away",
+    "val": "15 REC, 180 YDS",
+    "who": "K. Carvalho"
+   }
+  ],
+  "line_away": [],
+  "line_home": [],
+  "neutral": false,
+  "period": 0,
+  "poss": null,
+  "redzone": false,
+  "spot": null,
+  "state": "WY",
+  "status": "Scheduled",
+  "venue": "War Memorial Stadium"
  }
 }
