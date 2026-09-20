@@ -267,7 +267,7 @@
    0
   ],
   "save_p": null,
-  "status": "Pre-Game",
+  "status": "Delayed Start",
   "warmup": false,
   "win_p": null,
   "win_side": null
@@ -391,10 +391,10 @@
   "away_p": "Andrew Alvarez",
   "away_p_hand": "L",
   "away_r": 2,
-  "cur_batter": "Jos\u00e9 Ferm\u00edn",
+  "cur_batter": "Jordan Walker",
   "cur_pitcher": "Andrew Alvarez",
   "game_pk": 823003,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Michael McGreevy",
   "home_p_hand": "R",
   "home_r": 0,
@@ -418,10 +418,8 @@
    }
   ],
   "lose_p": null,
-  "outs": 3,
+  "outs": 2,
   "pitch_side": "away",
-  "pitcher_changed": true,
-  "prev_pitcher": "Michael McGreevy",
   "rhe_away": [
    2,
    4,
@@ -429,7 +427,7 @@
   ],
   "rhe_home": [
    0,
-   3,
+   4,
    1
   ],
   "save_p": null,
@@ -437,15 +435,15 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 68.1,
-  "wp_home": 31.900000000000002
+  "wp_away": 65.1,
+  "wp_home": 34.9
  },
  "3ffa69e9cd90187364365a87f82ce273": {
   "abstract": "Live",
   "away_p": "Jos\u00e9 Soriano",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Brett Bateman",
+  "cur_batter": "George Springer",
   "cur_pitcher": "Jordan Montgomery",
   "game_pk": 822843,
   "half": "Top",
@@ -477,10 +475,8 @@
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 2,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "Jos\u00e9 Soriano",
   "rhe_away": [
    0,
    0,
@@ -496,8 +492,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 18.10000000000001,
-  "wp_home": 81.89999999999999
+  "wp_away": 18.89999999999999,
+  "wp_home": 81.10000000000001
  },
  "440458d6d4f20aa4ec271bc5f4501fa5": {
   "abstract": "Preview",
@@ -545,7 +541,7 @@
   "home_p": "Jose Quintana",
   "home_p_hand": "L",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "innings": [
    {
@@ -568,10 +564,12 @@
    0
   ],
   "save_p": null,
-  "status": "Warmup",
-  "warmup": true,
+  "status": "In Progress",
+  "warmup": false,
   "win_p": null,
-  "win_side": null
+  "win_side": null,
+  "wp_away": 50.0,
+  "wp_home": 50.0
  },
  "49deafc3a88bf69634e0f3510d62b0ee": {
   "abstract": "Final",
@@ -658,10 +656,10 @@
   "away_p": "Grant Holmes",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Mauricio Dub\u00f3n",
-  "cur_pitcher": "Hayden Wesneski",
+  "cur_batter": "Daulton Varsho",
+  "cur_pitcher": "Grant Holmes",
   "game_pk": 824137,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Hayden Wesneski",
   "home_p_hand": "R",
   "home_r": 2,
@@ -684,16 +682,16 @@
     "n": 3
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 4
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
   "pitcher_changed": true,
-  "prev_pitcher": "Grant Holmes",
+  "prev_pitcher": "Hayden Wesneski",
   "rhe_away": [
    0,
    2,
@@ -709,8 +707,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 27.10000000000001,
-  "wp_home": 72.89999999999999
+  "wp_away": 21.39999999999999,
+  "wp_home": 78.60000000000001
  },
  "59c14a5981b0869948d86636923f1c90": {
   "abstract": "Preview",
@@ -1116,10 +1114,10 @@
   "away_p": "Jacob Lopez",
   "away_p_hand": "L",
   "away_r": 6,
-  "cur_batter": "Henry Bolte",
-  "cur_pitcher": "Matt Festa",
+  "cur_batter": "Jos\u00e9 Ram\u00edrez",
+  "cur_pitcher": "Geoff Hartlieb",
   "game_pk": 824380,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Tanner Bibee",
   "home_p_hand": "R",
   "home_r": 11,
@@ -1152,14 +1150,16 @@
     "n": 5
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 6
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Matt Festa",
   "rhe_away": [
    6,
    12,
@@ -1175,8 +1175,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 3.700000000000003,
-  "wp_home": 96.3
+  "wp_away": 2.6000000000000085,
+  "wp_home": 97.39999999999999
  },
  "99889cbde736c28d9ff46c7252530d7a": {
   "abstract": "Final",
@@ -1771,10 +1771,10 @@
   "away_p": "Matthew Boyd",
   "away_p_hand": "L",
   "away_r": 3,
-  "cur_batter": "Carson Kelly",
-  "cur_pitcher": "Nick Lodolo",
+  "cur_batter": "Elly De La Cruz",
+  "cur_pitcher": "Daniel Palencia",
   "game_pk": 824461,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Nick Lodolo",
   "home_p_hand": "L",
   "home_r": 2,
@@ -1813,8 +1813,10 @@
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Nick Lodolo",
   "rhe_away": [
    3,
    6,
@@ -1830,8 +1832,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 46.599999999999994,
-  "wp_home": 53.400000000000006
+  "wp_away": 60.4,
+  "wp_home": 39.6
  },
  "ceb78c18c34b6f6922ac73e4cb32b373": {
   "abstract": "Final",
@@ -2032,8 +2034,8 @@
   "away_p": "Noah Cameron",
   "away_p_hand": "L",
   "away_r": 1,
-  "cur_batter": "Jac Caglianone",
-  "cur_pitcher": "Bubba Chandler",
+  "cur_batter": "Vinnie Pasquantino",
+  "cur_pitcher": "Brandon Eisert",
   "game_pk": 823330,
   "half": "Top",
   "home_p": "Bubba Chandler",
@@ -2071,6 +2073,8 @@
   "lose_p": null,
   "outs": 0,
   "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Bubba Chandler",
   "rhe_away": [
    1,
    8,
@@ -2086,8 +2090,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 20.5,
-  "wp_home": 79.5
+  "wp_away": 27.0,
+  "wp_home": 73.0
  },
  "de26fcfdce286e11d0005c82ffdccce6": {
   "abstract": "Final",
