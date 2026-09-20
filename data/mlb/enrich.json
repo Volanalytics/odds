@@ -768,6 +768,40 @@
   "win_p": "Riley Cornelio",
   "win_side": "away"
  },
+ "3e7090629723a062facffeca147d8c9d": {
+  "abstract": "Preview",
+  "away_p": null,
+  "away_p_hand": null,
+  "away_r": null,
+  "cur_batter": null,
+  "cur_pitcher": null,
+  "game_pk": 824221,
+  "half": null,
+  "home_p": "River Ryan",
+  "home_p_hand": "R",
+  "home_r": null,
+  "in_play": false,
+  "inning": null,
+  "innings": [],
+  "lose_p": null,
+  "outs": null,
+  "pitch_side": "away",
+  "rhe_away": [
+   null,
+   null,
+   null
+  ],
+  "rhe_home": [
+   null,
+   null,
+   null
+  ],
+  "save_p": null,
+  "status": "Scheduled",
+  "warmup": false,
+  "win_p": null,
+  "win_side": null
+ },
  "3ffa69e9cd90187364365a87f82ce273": {
   "abstract": "Final",
   "away_p": "Jos\u00e9 Soriano",
@@ -1580,8 +1614,8 @@
  },
  "7294e99a67c70c66b6edecf9841d4f03": {
   "abstract": "Preview",
-  "away_p": "Bailey Ober",
-  "away_p_hand": "R",
+  "away_p": null,
+  "away_p_hand": null,
   "away_r": null,
   "cur_batter": null,
   "cur_pitcher": null,
@@ -1697,10 +1731,10 @@
   "away_p": "Troy Melton",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Spencer Torkelson",
-  "cur_pitcher": "Davis Martin",
+  "cur_batter": "Colson Montgomery",
+  "cur_pitcher": "Troy Melton",
   "game_pk": 824546,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Davis Martin",
   "home_p_hand": "R",
   "home_r": 1,
@@ -1723,14 +1757,16 @@
     "n": 3
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 4
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Davis Martin",
   "rhe_away": [
    0,
    2,
@@ -1746,8 +1782,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 35.599999999999994,
-  "wp_home": 64.4
+  "wp_away": 31.5,
+  "wp_home": 68.5
  },
  "82ab22dcd4b5a9fd457f4a06b2e93579": {
   "abstract": "Final",
@@ -3314,7 +3350,7 @@
    1
   ],
   "save_p": "Bailey Ober",
-  "status": "Game Over",
+  "status": "Final",
   "warmup": false,
   "win_p": "Dean Kremer",
   "win_side": "away"
