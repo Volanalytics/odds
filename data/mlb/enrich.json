@@ -169,10 +169,10 @@
   "away_p": "Will Warren",
   "away_p_hand": "R",
   "away_r": 4,
-  "cur_batter": "Luis Garc\u00eda Jr.",
-  "cur_pitcher": "Justin Martinez",
+  "cur_batter": "Lars Nootbaar",
+  "cur_pitcher": "Will Warren",
   "game_pk": 825028,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Corbin Burnes",
   "home_p_hand": "R",
   "home_r": 1,
@@ -200,14 +200,16 @@
     "n": 4
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 5
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "home",
+  "outs": 1,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Justin Martinez",
   "rhe_away": [
    4,
    5,
@@ -223,8 +225,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 81.5,
-  "wp_home": 18.5
+  "wp_away": 83.5,
+  "wp_home": 16.5
  },
  "07a49329fbb35ea5b26f59b425b089bc": {
   "abstract": "Final",
@@ -1320,13 +1322,13 @@
   "away_p": "Kade Anderson",
   "away_p_hand": "L",
   "away_r": 2,
-  "cur_batter": "Cole Young",
-  "cur_pitcher": "Jimmy Herget",
+  "cur_batter": "TJ Rumfield",
+  "cur_pitcher": "Andr\u00e9s Mu\u00f1oz",
   "game_pk": 824300,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Tomoyuki Sugano",
   "home_p_hand": "R",
-  "home_r": 0,
+  "home_r": 1,
   "in_play": true,
   "inning": 9,
   "innings": [
@@ -1371,22 +1373,24 @@
     "n": 8
    },
    {
-    "a": null,
-    "h": null,
+    "a": 0,
+    "h": 1,
     "n": 9
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "home",
+  "outs": 1,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Jimmy Herget",
   "rhe_away": [
    2,
    4,
    0
   ],
   "rhe_home": [
-   0,
-   4,
+   1,
+   5,
    0
   ],
   "save_p": null,
@@ -1394,11 +1398,11 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 91.4,
-  "wp_home": 8.6
+  "wp_away": 95.3,
+  "wp_home": 4.7
  },
  "6d1dfbda25b97d4a5286162ffb1fe571": {
-  "abstract": "Live",
+  "abstract": "Final",
   "away_p": "Spencer Miles",
   "away_p_hand": "R",
   "away_r": 7,
@@ -1409,7 +1413,7 @@
   "home_p": "Jacob deGrom",
   "home_p_hand": "R",
   "home_r": 2,
-  "in_play": true,
+  "in_play": false,
   "inning": 9,
   "innings": [
    {
@@ -1454,12 +1458,12 @@
    },
    {
     "a": 0,
-    "h": null,
+    "h": 0,
     "n": 9
    }
   ],
-  "lose_p": null,
-  "outs": 1,
+  "lose_p": "Jacob deGrom",
+  "outs": 3,
   "pitch_side": "away",
   "rhe_away": [
    7,
@@ -1472,12 +1476,10 @@
    0
   ],
   "save_p": null,
-  "status": "In Progress",
+  "status": "Final",
   "warmup": false,
-  "win_p": null,
-  "win_side": "away",
-  "wp_away": 98.1,
-  "wp_home": 1.9
+  "win_p": "Spencer Arrighetti",
+  "win_side": "away"
  },
  "7147180b37c36caf2b4003b82c2d1afa": {
   "abstract": "Final",
@@ -1679,7 +1681,7 @@
   "win_side": "home"
  },
  "7b148d0f1eaf595528a0bf3c835fdfb3": {
-  "abstract": "Preview",
+  "abstract": "Live",
   "away_p": "Troy Melton",
   "away_p_hand": "R",
   "away_r": 0,
@@ -1713,8 +1715,8 @@
    0
   ],
   "save_p": null,
-  "status": "Delayed Start",
-  "warmup": false,
+  "status": "Warmup",
+  "warmup": true,
   "win_p": null,
   "win_side": null
  },
@@ -1963,10 +1965,10 @@
   "away_p": "Sandy Alcantara",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Xander Bogaerts",
+  "cur_batter": "Samad Taylor",
   "cur_pitcher": "Sandy Alcantara",
   "game_pk": 823247,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Walker Buehler",
   "home_p_hand": "R",
   "home_r": 4,
@@ -2005,10 +2007,8 @@
    }
   ],
   "lose_p": null,
-  "outs": 3,
+  "outs": 2,
   "pitch_side": "away",
-  "pitcher_changed": true,
-  "prev_pitcher": "Walker Buehler",
   "rhe_away": [
    0,
    1,
@@ -2024,8 +2024,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 5.5,
-  "wp_home": 94.5
+  "wp_away": 5.700000000000003,
+  "wp_home": 94.3
  },
  "a09736b1c232b3bc0b3e9938db6f2337": {
   "abstract": "Final",
@@ -2282,7 +2282,7 @@
   "away_p": "Matt Wilkinson",
   "away_p_hand": "L",
   "away_r": 1,
-  "cur_batter": "Jung Hoo Lee",
+  "cur_batter": "Andrew Knizner",
   "cur_pitcher": "Emmet Sheehan",
   "game_pk": 823896,
   "half": "Top",
@@ -2324,13 +2324,11 @@
    }
   ],
   "lose_p": null,
-  "outs": 1,
+  "outs": 2,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "Matt Wilkinson",
   "rhe_away": [
    1,
-   1,
+   2,
    0
   ],
   "rhe_home": [
@@ -2343,8 +2341,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 66.0,
-  "wp_home": 34.0
+  "wp_away": 66.19999999999999,
+  "wp_home": 33.800000000000004
  },
  "b93df18188b2370baac5d9d231f2bd59": {
   "abstract": "Preview",
@@ -2871,8 +2869,8 @@
   "away_p": "Jack Perkins",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Carlos Cortes",
-  "cur_pitcher": "Hunter Gaddis",
+  "cur_batter": "Henry Bolte",
+  "cur_pitcher": "Cade Smith",
   "game_pk": 824381,
   "half": "Top",
   "home_p": "Gavin Williams",
@@ -2923,8 +2921,10 @@
    }
   ],
   "lose_p": null,
-  "outs": 1,
+  "outs": 2,
   "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Hunter Gaddis",
   "rhe_away": [
    0,
    5,
@@ -2940,8 +2940,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 46.9,
-  "wp_home": 53.1
+  "wp_away": 28.10000000000001,
+  "wp_home": 71.89999999999999
  },
  "dbab73eb54eeeb245023e7d6ff78a316": {
   "abstract": "Final",
@@ -3188,10 +3188,10 @@
   "away_p": "Dean Kremer",
   "away_p_hand": "R",
   "away_r": 3,
-  "cur_batter": "Josh Lowe",
+  "cur_batter": "Jose Siri",
   "cur_pitcher": "Dean Kremer",
   "game_pk": 823975,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Ryan Johnson",
   "home_p_hand": "R",
   "home_r": 0,
@@ -3225,10 +3225,8 @@
    }
   ],
   "lose_p": null,
-  "outs": 3,
+  "outs": 1,
   "pitch_side": "away",
-  "pitcher_changed": true,
-  "prev_pitcher": "Ryan Johnson",
   "rhe_away": [
    3,
    7,
@@ -3244,8 +3242,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 82.1,
-  "wp_home": 17.9
+  "wp_away": 83.5,
+  "wp_home": 16.5
  },
  "e9aa9f3f95397e0ea42fbde233eb3e3b": {
   "abstract": "Final",
