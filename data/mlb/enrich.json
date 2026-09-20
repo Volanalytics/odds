@@ -209,10 +209,10 @@
   "away_p": "Patrick Sandoval",
   "away_p_hand": "L",
   "away_r": 0,
-  "cur_batter": "Trevor Story",
-  "cur_pitcher": "Griffin Jax",
+  "cur_batter": "Ryan Vilade",
+  "cur_pitcher": "Patrick Sandoval",
   "game_pk": 822922,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Griffin Jax",
   "home_p_hand": "R",
   "home_r": 0,
@@ -220,14 +220,16 @@
   "inning": 1,
   "innings": [
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 1
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Griffin Jax",
   "rhe_away": [
    0,
    1,
@@ -243,23 +245,23 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 47.4,
-  "wp_home": 52.6
+  "wp_away": 41.7,
+  "wp_home": 58.3
  },
  "09a8d21707b561bb7c88b6b936dff49c": {
   "abstract": "Live",
   "away_p": "Cristopher S\u00e1nchez",
   "away_p_hand": "L",
   "away_r": 2,
-  "cur_batter": "Marcus Semien",
-  "cur_pitcher": "Cristopher S\u00e1nchez",
+  "cur_batter": "Kyle Schwarber",
+  "cur_pitcher": "Jonah Tong",
   "game_pk": 823570,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Jonah Tong",
   "home_p_hand": "R",
   "home_r": 0,
   "in_play": true,
-  "inning": 2,
+  "inning": 3,
   "innings": [
    {
     "a": 2,
@@ -268,13 +270,20 @@
    },
    {
     "a": 0,
-    "h": null,
+    "h": 0,
     "n": 2
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 3
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "away",
+  "outs": 0,
+  "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Cristopher S\u00e1nchez",
   "rhe_away": [
    2,
    2,
@@ -282,7 +291,7 @@
   ],
   "rhe_home": [
    0,
-   1,
+   2,
    0
   ],
   "save_p": null,
@@ -290,8 +299,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 65.6,
-  "wp_home": 34.4
+  "wp_away": 66.4,
+  "wp_home": 33.6
  },
  "0f7b4e8f0c23ecca42f1c5e69ecc9bcc": {
   "abstract": "Final",
@@ -664,7 +673,7 @@
   "win_side": "home"
  },
  "440458d6d4f20aa4ec271bc5f4501fa5": {
-  "abstract": "Preview",
+  "abstract": "Live",
   "away_p": "Jake Irvin",
   "away_p_hand": "R",
   "away_r": 0,
@@ -698,8 +707,8 @@
    0
   ],
   "save_p": null,
-  "status": "Pre-Game",
-  "warmup": false,
+  "status": "Warmup",
+  "warmup": true,
   "win_p": null,
   "win_side": null
  },
@@ -2596,10 +2605,10 @@
   "away_p": "Michael Wacha",
   "away_p_hand": "R",
   "away_r": 1,
-  "cur_batter": "Michael Massey",
-  "cur_pitcher": "Lake Bachar",
+  "cur_batter": "Brandon Lowe",
+  "cur_pitcher": "Michael Wacha",
   "game_pk": 823329,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Lake Bachar",
   "home_p_hand": "R",
   "home_r": 0,
@@ -2614,7 +2623,9 @@
   ],
   "lose_p": null,
   "outs": 1,
-  "pitch_side": "home",
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Lake Bachar",
   "rhe_away": [
    1,
    3,
@@ -2630,8 +2641,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 63.2,
-  "wp_home": 36.8
+  "wp_away": 57.6,
+  "wp_home": 42.4
  },
  "de26fcfdce286e11d0005c82ffdccce6": {
   "abstract": "Final",
@@ -2917,9 +2928,9 @@
   "abstract": "Live",
   "away_p": "David Peterson",
   "away_p_hand": "L",
-  "away_r": 0,
-  "cur_batter": "Michael Busch",
-  "cur_pitcher": "Rhett Lowder",
+  "away_r": 1,
+  "cur_batter": "Dane Myers",
+  "cur_pitcher": "David Peterson",
   "game_pk": 824462,
   "half": "Top",
   "home_p": "Rhett Lowder",
@@ -2929,17 +2940,19 @@
   "inning": 1,
   "innings": [
    {
-    "a": null,
+    "a": 1,
     "h": null,
     "n": 1
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "home",
+  "outs": 3,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Rhett Lowder",
   "rhe_away": [
-   0,
    1,
+   3,
    0
   ],
   "rhe_home": [
@@ -2951,9 +2964,9 @@
   "status": "In Progress",
   "warmup": false,
   "win_p": null,
-  "win_side": null,
-  "wp_away": 50.2,
-  "wp_home": 49.8
+  "win_side": "away",
+  "wp_away": 60.4,
+  "wp_home": 39.6
  },
  "f383973af69817d515b481a52d17ff6d": {
   "abstract": "Final",
