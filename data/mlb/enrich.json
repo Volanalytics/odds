@@ -363,7 +363,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -647,7 +647,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -908,9 +908,9 @@
   "abstract": "Live",
   "away_p": "Eury P\u00e9rez",
   "away_p_hand": "R",
-  "away_r": 5,
-  "cur_batter": "Griffin Conine",
-  "cur_pitcher": "Mason Miller",
+  "away_r": 6,
+  "cur_batter": "Ty France",
+  "cur_pitcher": "Victor Vodnik",
   "game_pk": 823249,
   "half": "Top",
   "home_p": "Casey Mize",
@@ -960,17 +960,19 @@
     "n": 8
    },
    {
-    "a": null,
+    "a": 1,
     "h": null,
     "n": 9
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "home",
+  "outs": 3,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Mason Miller",
   "rhe_away": [
-   5,
-   9,
+   6,
+   10,
    0
   ],
   "rhe_home": [
@@ -982,9 +984,9 @@
   "status": "In Progress",
   "warmup": false,
   "win_p": null,
-  "win_side": "home",
-  "wp_away": 9.200000000000003,
-  "wp_home": 90.8
+  "win_side": null,
+  "wp_away": 39.5,
+  "wp_home": 60.5
  },
  "6b489bbf5b1f7acd0e5eea9f0d257d40": {
   "abstract": "Final",
@@ -1083,7 +1085,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -1282,7 +1284,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -1556,7 +1558,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -1657,8 +1659,8 @@
   "abstract": "Live",
   "away_p": "Joe Ryan",
   "away_p_hand": "R",
-  "away_r": 4,
-  "cur_batter": "Royce Lewis",
+  "away_r": 5,
+  "cur_batter": "Walker Jenkins",
   "cur_pitcher": "Ryan Watson",
   "game_pk": 823976,
   "half": "Top",
@@ -1704,7 +1706,7 @@
     "n": 7
    },
    {
-    "a": null,
+    "a": 1,
     "h": null,
     "n": 8
    }
@@ -1713,8 +1715,8 @@
   "outs": 1,
   "pitch_side": "home",
   "rhe_away": [
-   4,
-   10,
+   5,
+   11,
    1
   ],
   "rhe_home": [
@@ -1727,8 +1729,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 86.3,
-  "wp_home": 13.700000000000001
+  "wp_away": 94.9,
+  "wp_home": 5.1
  },
  "abb3f111a0be68d4bdf0608a428f8d55": {
   "abstract": "Final",
@@ -2341,7 +2343,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -2569,7 +2571,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -2587,18 +2589,18 @@
   "win_side": null
  },
  "e9aa9f3f95397e0ea42fbde233eb3e3b": {
-  "abstract": "Live",
+  "abstract": "Final",
   "away_p": "Yunior Marte",
   "away_p_hand": "R",
   "away_r": 4,
-  "cur_batter": "Drew Gilbert",
+  "cur_batter": "Victor Bericoto",
   "cur_pitcher": "Seth Halvorsen",
   "game_pk": 823899,
   "half": "Top",
   "home_p": "Tarik Skubal",
   "home_p_hand": "L",
   "home_r": 10,
-  "in_play": true,
+  "in_play": false,
   "inning": 9,
   "innings": [
    {
@@ -2642,16 +2644,14 @@
     "n": 8
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 9
    }
   ],
-  "lose_p": null,
-  "outs": 1,
+  "lose_p": "Yunior Marte",
+  "outs": 3,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "Edwin D\u00edaz",
   "rhe_away": [
    4,
    8,
@@ -2663,12 +2663,10 @@
    0
   ],
   "save_p": null,
-  "status": "In Progress",
+  "status": "Game Over",
   "warmup": false,
-  "win_p": null,
-  "win_side": "home",
-  "wp_away": 0.09999999999999432,
-  "wp_home": 99.9
+  "win_p": "Tarik Skubal",
+  "win_side": "home"
  },
  "ee466ede63ff4aece0b2964d81a18297": {
   "abstract": "Final",
