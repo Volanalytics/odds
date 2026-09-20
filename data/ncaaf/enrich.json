@@ -579,14 +579,14 @@
   "away_rank": 99,
   "away_short": "James Madison",
   "city": "San Diego",
-  "clock": "8:59",
+  "clock": "5:22",
   "conf_comp": false,
-  "detail": "8:59 - 3rd",
-  "down": "1st & 10 at 50",
+  "detail": "5:22 - 3rd",
+  "down": null,
   "espn_id": "401860887",
   "final": false,
   "home_abbr": "SDSU",
-  "home_r": "0",
+  "home_r": "7",
   "home_rank": 99,
   "home_short": "San Diego St",
   "in_play": true,
@@ -594,13 +594,13 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "16/22, 193 YDS, 1 TD",
+    "val": "16/22, 192 YDS, 1 TD",
     "who": "C. Coleman"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "22 CAR, 106 YDS",
+    "val": "24 CAR, 110 YDS, 1 TD",
     "who": "J. Kinnard"
    },
    {
@@ -618,13 +618,13 @@
   "line_home": [
    0.0,
    0.0,
-   0.0
+   7.0
   ],
   "neutral": false,
   "period": 3,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "50",
+  "spot": null,
   "state": "CA",
   "status": "In Progress",
   "venue": "Snapdragon Stadium"
@@ -1503,10 +1503,10 @@
   "away_rank": 99,
   "away_short": "Montana",
   "city": "Corvallis",
-  "clock": "1:46",
+  "clock": "0:44",
   "conf_comp": false,
-  "detail": "1:46 - 2nd",
-  "down": null,
+  "detail": "0:44 - 2nd",
+  "down": "1st & 10 at MONT 34",
   "espn_id": "401860886",
   "final": false,
   "home_abbr": "ORST",
@@ -1518,7 +1518,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "13/17, 167 YDS, 4 TD",
+    "val": "17/22, 225 YDS, 4 TD",
     "who": "B. Atkinson"
    },
    {
@@ -1530,8 +1530,8 @@
    {
     "cat": "REC",
     "team": "home",
-    "val": "3 REC, 52 YDS, 1 TD",
-    "who": "J. Legree"
+    "val": "5 REC, 78 YDS, 1 TD",
+    "who": "A. Hampton"
    }
   ],
   "line_away": [
@@ -1544,9 +1544,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "MONT 34",
   "state": "OR",
   "status": "In Progress",
   "venue": "Reser Stadium"
@@ -1707,13 +1707,13 @@
  },
  "3db3de2fb9101f01f676c1f319837667": {
   "away_abbr": "CLT",
-  "away_r": "15",
+  "away_r": "21",
   "away_rank": 99,
   "away_short": "Charlotte",
   "city": "Boone",
-  "clock": "2:05",
+  "clock": "1:54",
   "conf_comp": false,
-  "detail": "2:05 - 4th",
+  "detail": "1:54 - 4th",
   "down": null,
   "espn_id": "401864574",
   "final": false,
@@ -1726,7 +1726,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "28/41, 331 YDS, 2 TD",
+    "val": "28/42, 331 YDS, 2 TD, 1 INT",
     "who": "M. Singleton"
    },
    {
@@ -1746,7 +1746,7 @@
    0.0,
    7.0,
    0.0,
-   8.0
+   14.0
   ],
   "line_home": [
    3.0,
@@ -1757,7 +1757,7 @@
   "neutral": false,
   "period": 4,
   "poss": null,
-  "redzone": false,
+  "redzone": true,
   "spot": null,
   "state": "NC",
   "status": "In Progress",
@@ -3441,14 +3441,14 @@
  },
  "6d109b8538a3588ad21a393896d32efc": {
   "away_abbr": "SDAK",
-  "away_r": "14",
+  "away_r": "21",
   "away_rank": 99,
   "away_short": "South Dakota",
   "city": "Boise",
-  "clock": "3:51",
+  "clock": "2:42",
   "conf_comp": false,
-  "detail": "3:51 - 3rd",
-  "down": "1st & 10 at SDAK 42",
+  "detail": "2:42 - 3rd",
+  "down": "1st & 10 at BOIS 36",
   "espn_id": "401860885",
   "final": false,
   "home_abbr": "BOIS",
@@ -3459,15 +3459,15 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "16/23, 161 YDS, 2 TD",
-    "who": "M. Madsen"
+    "team": "away",
+    "val": "9/16, 178 YDS, 3 TD, 1 INT",
+    "who": "A. Modrzewski"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "14 CAR, 66 YDS, 1 TD",
-    "who": "S. Gaines"
+    "val": "18 CAR, 73 YDS",
+    "who": "D. Riley"
    },
    {
     "cat": "REC",
@@ -3479,7 +3479,7 @@
   "line_away": [
    7.0,
    7.0,
-   0.0
+   7.0
   ],
   "line_home": [
    7.0,
@@ -3488,9 +3488,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "SDAK 42",
+  "spot": "BOIS 36",
   "state": "ID",
   "status": "In Progress",
   "venue": "Albertsons Stadium"
@@ -3839,10 +3839,10 @@
   "away_rank": 99,
   "away_short": "Purdue",
   "city": "Pasadena",
-  "clock": "2:05",
+  "clock": "1:15",
   "conf_comp": true,
-  "detail": "2:05 - 2nd",
-  "down": null,
+  "detail": "1:15 - 2nd",
+  "down": "1st & 10 at UCLA 46",
   "espn_id": "401858458",
   "final": false,
   "home_abbr": "UCLA",
@@ -3860,7 +3860,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "3 CAR, 46 YDS",
+    "val": "4 CAR, 54 YDS",
     "who": "N. Iamaleava"
    },
    {
@@ -3880,9 +3880,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "UCLA 46",
   "state": "CA",
   "status": "In Progress",
   "venue": "Rose Bowl"
@@ -4567,9 +4567,9 @@
   "away_rank": 99,
   "away_short": "N Illinois",
   "city": "Tucson",
-  "clock": "14:25",
+  "clock": "11:42",
   "conf_comp": false,
-  "detail": "14:25 - 3rd",
+  "detail": "11:42 - 3rd",
   "down": null,
   "espn_id": "401856793",
   "final": false,
@@ -6776,10 +6776,10 @@
   "away_rank": 99,
   "away_short": "Fresno St",
   "city": "San Jose",
-  "clock": "2:05",
+  "clock": "1:45",
   "conf_comp": false,
-  "detail": "2:05 - 2nd",
-  "down": "1st & 10 at SJSU 25",
+  "detail": "1:45 - 2nd",
+  "down": null,
   "espn_id": "401860888",
   "final": false,
   "home_abbr": "SJSU",
@@ -6797,7 +6797,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "10 CAR, 35 YDS",
+    "val": "11 CAR, 35 YDS",
     "who": "J. Bates"
    },
    {
@@ -6817,9 +6817,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "SJSU 25",
+  "spot": null,
   "state": "CA",
   "status": "In Progress",
   "venue": "CEFCU Stadium"
