@@ -477,10 +477,10 @@
   "away_rank": 99,
   "away_short": "N Dakota St",
   "city": "Sacramento",
-  "clock": "1:58",
+  "clock": "1:44",
   "conf_comp": false,
-  "detail": "1:58 - 4th",
-  "down": "1st & 10 at NDSU 26",
+  "detail": "1:44 - 4th",
+  "down": "1st & 10 at NDSU 13",
   "espn_id": "401864507",
   "final": false,
   "home_abbr": "SAC",
@@ -492,7 +492,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "24/35, 233 YDS, 1 TD, 1 INT",
+    "val": "24/39, 233 YDS, 1 TD, 1 INT",
     "who": "J. Sharman"
    },
    {
@@ -523,8 +523,8 @@
   "neutral": false,
   "period": 4,
   "poss": "home",
-  "redzone": false,
-  "spot": "NDSU 26",
+  "redzone": true,
+  "spot": "NDSU 13",
   "state": "CA",
   "status": "In Progress",
   "venue": "Hornet Stadium"
@@ -856,6 +856,54 @@
   "state": "MS",
   "status": "Final",
   "venue": "M. M. Roberts Stadium"
+ },
+ "11c5e9c2cf899388abd0dae30ea71db9": {
+  "away_abbr": "USA",
+  "away_r": "0",
+  "away_rank": 99,
+  "away_short": "South Alabama",
+  "city": "Lexington",
+  "clock": "0:00",
+  "conf_comp": false,
+  "detail": "9/26 - 12:45 PM EDT",
+  "down": null,
+  "espn_id": "401864576",
+  "final": false,
+  "home_abbr": "UK",
+  "home_r": "0",
+  "home_rank": 99,
+  "home_short": "Kentucky",
+  "in_play": false,
+  "leaders": [
+   {
+    "cat": "PASS",
+    "team": "away",
+    "val": "450 YDS, 3 TD",
+    "who": "B. Davenport"
+   },
+   {
+    "cat": "RUSH",
+    "team": "away",
+    "val": "33 CAR, 142 YDS, 2 TD",
+    "who": "P. Martin"
+   },
+   {
+    "cat": "REC",
+    "team": "away",
+    "val": "14 REC, 197 YDS, 2 TD",
+    "who": "B. Jenkins"
+   }
+  ],
+  "line_away": [],
+  "line_home": [],
+  "neutral": false,
+  "period": 0,
+  "poss": null,
+  "redzone": false,
+  "spot": null,
+  "state": "KY",
+  "status": "Scheduled",
+  "venue": "Kroger Field"
  },
  "15ebe2df1d91e584d091d509e70a1a71": {
   "away_abbr": "M-OH",
@@ -1557,14 +1605,14 @@
   "away_rank": 99,
   "away_short": "Montana",
   "city": "Corvallis",
-  "clock": "11:26",
+  "clock": "10:55",
   "conf_comp": false,
-  "detail": "11:26 - 4th",
-  "down": null,
+  "detail": "10:55 - 4th",
+  "down": "2nd & 2 at MONT 33",
   "espn_id": "401860886",
   "final": false,
   "home_abbr": "ORST",
-  "home_r": "48",
+  "home_r": "49",
   "home_rank": 99,
   "home_short": "Oregon St",
   "in_play": true,
@@ -1578,7 +1626,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "13 CAR, 51 YDS",
+    "val": "15 CAR, 65 YDS",
     "who": "E. Gillman"
    },
    {
@@ -1598,13 +1646,13 @@
    14.0,
    21.0,
    7.0,
-   6.0
+   7.0
   ],
   "neutral": false,
   "period": 4,
-  "poss": null,
-  "redzone": true,
-  "spot": null,
+  "poss": "away",
+  "redzone": false,
+  "spot": "MONT 33",
   "state": "OR",
   "status": "In Progress",
   "venue": "Reser Stadium"
@@ -3899,14 +3947,14 @@
   "away_rank": 99,
   "away_short": "Purdue",
   "city": "Pasadena",
-  "clock": "0:56",
+  "clock": "14:56",
   "conf_comp": true,
-  "detail": "0:56 - 3rd",
-  "down": "1st & 10 at PUR 32",
+  "detail": "14:56 - 4th",
+  "down": null,
   "espn_id": "401858458",
   "final": false,
   "home_abbr": "UCLA",
-  "home_r": "38",
+  "home_r": "44",
   "home_rank": 99,
   "home_short": "UCLA",
   "in_play": true,
@@ -3914,7 +3962,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "14/21, 332 YDS, 3 TD",
+    "val": "13/20, 285 YDS, 3 TD",
     "who": "R. Browne"
    },
    {
@@ -3933,18 +3981,20 @@
   "line_away": [
    7.0,
    14.0,
-   10.0
+   10.0,
+   0.0
   ],
   "line_home": [
    21.0,
    3.0,
-   14.0
+   14.0,
+   6.0
   ],
   "neutral": false,
-  "period": 3,
-  "poss": "home",
-  "redzone": false,
-  "spot": "PUR 32",
+  "period": 4,
+  "poss": null,
+  "redzone": true,
+  "spot": null,
   "state": "CA",
   "status": "In Progress",
   "venue": "Rose Bowl"
@@ -6840,10 +6890,10 @@
   "away_rank": 99,
   "away_short": "Fresno St",
   "city": "San Jose",
-  "clock": "15:00",
+  "clock": "12:40",
   "conf_comp": false,
-  "detail": "15:00 - 4th",
-  "down": "3rd & 5 at SJSU 40",
+  "detail": "12:40 - 4th",
+  "down": null,
   "espn_id": "401860888",
   "final": false,
   "home_abbr": "SJSU",
@@ -6855,19 +6905,19 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "14/24, 185 YDS, 2 INT",
+    "val": "15/26, 213 YDS, 2 INT",
     "who": "L. Weaver"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "15 CAR, 63 YDS",
+    "val": "19 CAR, 94 YDS",
     "who": "J. Bates"
    },
    {
     "cat": "REC",
     "team": "home",
-    "val": "5 REC, 118 YDS",
+    "val": "6 REC, 146 YDS",
     "who": "A. Ivey"
    }
   ],
@@ -6885,9 +6935,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
-  "redzone": false,
-  "spot": "SJSU 40",
+  "poss": null,
+  "redzone": true,
+  "spot": null,
   "state": "CA",
   "status": "In Progress",
   "venue": "CEFCU Stadium"
