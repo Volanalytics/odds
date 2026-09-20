@@ -178,13 +178,7 @@
   "home_r": 0,
   "in_play": false,
   "inning": 1,
-  "innings": [
-   {
-    "a": null,
-    "h": null,
-    "n": 1
-   }
-  ],
+  "innings": [],
   "lose_p": null,
   "outs": 0,
   "pitch_side": "home",
@@ -209,24 +203,24 @@
   "away_p": "Patrick Sandoval",
   "away_p_hand": "L",
   "away_r": 0,
-  "cur_batter": "Jonny DeLuca",
+  "cur_batter": "Ben Williamson",
   "cur_pitcher": "Patrick Sandoval",
   "game_pk": 822922,
   "half": "Bottom",
   "home_p": "Griffin Jax",
   "home_p_hand": "R",
-  "home_r": 0,
+  "home_r": 4,
   "in_play": true,
   "inning": 1,
   "innings": [
    {
     "a": 0,
-    "h": null,
+    "h": 4,
     "n": 1
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 1,
   "pitch_side": "away",
   "rhe_away": [
    0,
@@ -234,25 +228,25 @@
    0
   ],
   "rhe_home": [
-   0,
-   1,
+   4,
+   3,
    0
   ],
   "save_p": null,
   "status": "In Progress",
   "warmup": false,
   "win_p": null,
-  "win_side": null,
-  "wp_away": 29.60000000000001,
-  "wp_home": 70.39999999999999
+  "win_side": "home",
+  "wp_away": 12.299999999999997,
+  "wp_home": 87.7
  },
  "09a8d21707b561bb7c88b6b936dff49c": {
   "abstract": "Live",
   "away_p": "Cristopher S\u00e1nchez",
   "away_p_hand": "L",
-  "away_r": 2,
-  "cur_batter": "Trea Turner",
-  "cur_pitcher": "Jonah Tong",
+  "away_r": 4,
+  "cur_batter": "Luis Torrens",
+  "cur_pitcher": "Cristopher S\u00e1nchez",
   "game_pk": 823570,
   "half": "Top",
   "home_p": "Jonah Tong",
@@ -272,17 +266,19 @@
     "n": 2
    },
    {
-    "a": null,
+    "a": 2,
     "h": null,
     "n": 3
    }
   ],
   "lose_p": null,
-  "outs": 0,
-  "pitch_side": "home",
+  "outs": 3,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Jonah Tong",
   "rhe_away": [
-   2,
-   2,
+   4,
+   4,
    0
   ],
   "rhe_home": [
@@ -295,8 +291,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 74.0,
-  "wp_home": 26.0
+  "wp_away": 85.2,
+  "wp_home": 14.799999999999999
  },
  "0f7b4e8f0c23ecca42f1c5e69ecc9bcc": {
   "abstract": "Final",
@@ -379,7 +375,7 @@
   "win_side": "home"
  },
  "1686c3eaa46bbe30e7c4e29863bb9ce4": {
-  "abstract": "Preview",
+  "abstract": "Live",
   "away_p": "Mart\u00edn P\u00e9rez",
   "away_p_hand": "L",
   "away_r": 0,
@@ -413,8 +409,8 @@
    0
   ],
   "save_p": null,
-  "status": "Pre-Game",
-  "warmup": false,
+  "status": "Warmup",
+  "warmup": true,
   "win_p": null,
   "win_side": null
  },
@@ -1154,7 +1150,7 @@
   "win_side": null
  },
  "6d1dfbda25b97d4a5286162ffb1fe571": {
-  "abstract": "Preview",
+  "abstract": "Live",
   "away_p": "Spencer Miles",
   "away_p_hand": "R",
   "away_r": 0,
@@ -1188,8 +1184,8 @@
    0
   ],
   "save_p": null,
-  "status": "Pre-Game",
-  "warmup": false,
+  "status": "Warmup",
+  "warmup": true,
   "win_p": null,
   "win_side": null
  },
@@ -1642,29 +1638,35 @@
   "abstract": "Preview",
   "away_p": "Sandy Alcantara",
   "away_p_hand": "R",
-  "away_r": null,
-  "cur_batter": null,
-  "cur_pitcher": null,
+  "away_r": 0,
+  "cur_batter": "Kyle Stowers",
+  "cur_pitcher": "Walker Buehler",
   "game_pk": 823247,
-  "half": null,
+  "half": "Top",
   "home_p": "Walker Buehler",
   "home_p_hand": "R",
-  "home_r": null,
+  "home_r": 0,
   "in_play": false,
-  "inning": null,
-  "innings": [],
+  "inning": 1,
+  "innings": [
+   {
+    "a": null,
+    "h": null,
+    "n": 1
+   }
+  ],
   "lose_p": null,
-  "outs": null,
-  "pitch_side": "away",
+  "outs": 0,
+  "pitch_side": "home",
   "rhe_away": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "rhe_home": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "save_p": null,
   "status": "Pre-Game",
@@ -2601,25 +2603,32 @@
   "away_p": "Michael Wacha",
   "away_p_hand": "R",
   "away_r": 1,
-  "cur_batter": "Oneil Cruz",
-  "cur_pitcher": "Michael Wacha",
+  "cur_batter": "Luke Maile",
+  "cur_pitcher": "Yohan Ram\u00edrez",
   "game_pk": 823329,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Lake Bachar",
   "home_p_hand": "R",
   "home_r": 0,
   "in_play": true,
-  "inning": 1,
+  "inning": 2,
   "innings": [
    {
     "a": 1,
-    "h": null,
+    "h": 0,
     "n": 1
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 2
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "away",
+  "outs": 1,
+  "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Michael Wacha",
   "rhe_away": [
    1,
    3,
@@ -2635,8 +2644,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 51.0,
-  "wp_home": 49.0
+  "wp_away": 60.3,
+  "wp_home": 39.7
  },
  "de26fcfdce286e11d0005c82ffdccce6": {
   "abstract": "Final",
@@ -2923,7 +2932,7 @@
   "away_p": "David Peterson",
   "away_p_hand": "L",
   "away_r": 1,
-  "cur_batter": "Elly De La Cruz",
+  "cur_batter": "Tyler Stephenson",
   "cur_pitcher": "David Peterson",
   "game_pk": 824462,
   "half": "Bottom",
@@ -2940,7 +2949,7 @@
    }
   ],
   "lose_p": null,
-  "outs": 1,
+  "outs": 2,
   "pitch_side": "away",
   "rhe_away": [
    1,
@@ -2949,7 +2958,7 @@
   ],
   "rhe_home": [
    0,
-   0,
+   1,
    0
   ],
   "save_p": null,
@@ -2957,8 +2966,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 57.6,
-  "wp_home": 42.4
+  "wp_away": 58.0,
+  "wp_home": 42.0
  },
  "f383973af69817d515b481a52d17ff6d": {
   "abstract": "Final",
