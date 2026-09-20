@@ -477,10 +477,10 @@
   "away_rank": 99,
   "away_short": "N Dakota St",
   "city": "Sacramento",
-  "clock": "4:09",
+  "clock": "1:58",
   "conf_comp": false,
-  "detail": "4:09 - 4th",
-  "down": "4th & 5 at SAC 45",
+  "detail": "1:58 - 4th",
+  "down": "1st & 10 at NDSU 26",
   "espn_id": "401864507",
   "final": false,
   "home_abbr": "SAC",
@@ -491,9 +491,9 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "away",
-    "val": "14/24, 210 YDS, 1 TD",
-    "who": "N. Hayes"
+    "team": "home",
+    "val": "24/35, 233 YDS, 1 TD, 1 INT",
+    "who": "J. Sharman"
    },
    {
     "cat": "RUSH",
@@ -522,9 +522,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "SAC 45",
+  "spot": "NDSU 26",
   "state": "CA",
   "status": "In Progress",
   "venue": "Hornet Stadium"
@@ -583,17 +583,17 @@
   "away_rank": 99,
   "away_short": "James Madison",
   "city": "San Diego",
-  "clock": "0:54",
+  "clock": "0:00",
   "conf_comp": false,
-  "detail": "0:54 - 4th",
-  "down": "1st & 10 at SDSU 35",
+  "detail": "Final",
+  "down": null,
   "espn_id": "401860887",
-  "final": false,
+  "final": true,
   "home_abbr": "SDSU",
   "home_r": "13",
   "home_rank": 99,
   "home_short": "San Diego St",
-  "in_play": true,
+  "in_play": false,
   "leaders": [
    {
     "cat": "PASS",
@@ -628,11 +628,11 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "SDSU 35",
+  "spot": null,
   "state": "CA",
-  "status": "In Progress",
+  "status": "Final",
   "venue": "Snapdragon Stadium"
  },
  "0ce2e66203e1c66f3f2687fdccd37408": {
@@ -1557,14 +1557,14 @@
   "away_rank": 99,
   "away_short": "Montana",
   "city": "Corvallis",
-  "clock": "0:00",
+  "clock": "11:26",
   "conf_comp": false,
-  "detail": "End of 3rd",
-  "down": "1st & 10 at ORST 41",
+  "detail": "11:26 - 4th",
+  "down": null,
   "espn_id": "401860886",
   "final": false,
   "home_abbr": "ORST",
-  "home_r": "42",
+  "home_r": "48",
   "home_rank": 99,
   "home_short": "Oregon St",
   "in_play": true,
@@ -1591,18 +1591,20 @@
   "line_away": [
    0.0,
    3.0,
-   7.0
+   7.0,
+   0.0
   ],
   "line_home": [
    14.0,
    21.0,
-   7.0
+   7.0,
+   6.0
   ],
   "neutral": false,
-  "period": 3,
-  "poss": "home",
-  "redzone": false,
-  "spot": "ORST 41",
+  "period": 4,
+  "poss": null,
+  "redzone": true,
+  "spot": null,
   "state": "OR",
   "status": "In Progress",
   "venue": "Reser Stadium"
@@ -3897,10 +3899,10 @@
   "away_rank": 99,
   "away_short": "Purdue",
   "city": "Pasadena",
-  "clock": "3:05",
+  "clock": "0:56",
   "conf_comp": true,
-  "detail": "3:05 - 3rd",
-  "down": "3rd & 1 at 50",
+  "detail": "0:56 - 3rd",
+  "down": "1st & 10 at PUR 32",
   "espn_id": "401858458",
   "final": false,
   "home_abbr": "UCLA",
@@ -3918,7 +3920,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "11 CAR, 67 YDS, 2 TD",
+    "val": "14 CAR, 85 YDS, 2 TD",
     "who": "W. Knight"
    },
    {
@@ -3942,7 +3944,7 @@
   "period": 3,
   "poss": "home",
   "redzone": false,
-  "spot": "50",
+  "spot": "PUR 32",
   "state": "CA",
   "status": "In Progress",
   "venue": "Rose Bowl"
@@ -6838,10 +6840,10 @@
   "away_rank": 99,
   "away_short": "Fresno St",
   "city": "San Jose",
-  "clock": "1:26",
+  "clock": "15:00",
   "conf_comp": false,
-  "detail": "1:26 - 3rd",
-  "down": "3rd & 3 at SJSU 26",
+  "detail": "15:00 - 4th",
+  "down": "3rd & 5 at SJSU 40",
   "espn_id": "401860888",
   "final": false,
   "home_abbr": "SJSU",
@@ -6853,7 +6855,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "13/23, 176 YDS, 2 INT",
+    "val": "14/24, 185 YDS, 2 INT",
     "who": "L. Weaver"
    },
    {
@@ -6872,18 +6874,20 @@
   "line_away": [
    0.0,
    6.0,
-   7.0
+   7.0,
+   0.0
   ],
   "line_home": [
    3.0,
    0.0,
+   0.0,
    0.0
   ],
   "neutral": false,
-  "period": 3,
+  "period": 4,
   "poss": "home",
   "redzone": false,
-  "spot": "SJSU 26",
+  "spot": "SJSU 40",
   "state": "CA",
   "status": "In Progress",
   "venue": "CEFCU Stadium"
