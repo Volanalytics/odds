@@ -477,10 +477,10 @@
   "away_rank": 99,
   "away_short": "N Dakota St",
   "city": "Sacramento",
-  "clock": "2:00",
+  "clock": "1:34",
   "conf_comp": false,
-  "detail": "2:00 - 2nd",
-  "down": "2nd & 7 at NDSU 31",
+  "detail": "1:34 - 2nd",
+  "down": null,
   "espn_id": "401864507",
   "final": false,
   "home_abbr": "SAC",
@@ -518,9 +518,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "NDSU 31",
+  "spot": null,
   "state": "CA",
   "status": "In Progress",
   "venue": "Hornet Stadium"
@@ -1453,10 +1453,10 @@
   "away_rank": 99,
   "away_short": "Montana",
   "city": "Corvallis",
-  "clock": "8:42",
+  "clock": "7:18",
   "conf_comp": false,
-  "detail": "8:42 - 2nd",
-  "down": null,
+  "detail": "7:18 - 2nd",
+  "down": "1st & 10 at MONT 24",
   "espn_id": "401860886",
   "final": false,
   "home_abbr": "ORST",
@@ -1468,7 +1468,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "10/13, 150 YDS, 3 TD",
+    "val": "11/15, 150 YDS, 3 TD",
     "who": "B. Atkinson"
    },
    {
@@ -1494,9 +1494,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "MONT 24",
   "state": "OR",
   "status": "In Progress",
   "venue": "Reser Stadium"
@@ -1657,14 +1657,14 @@
  },
  "3db3de2fb9101f01f676c1f319837667": {
   "away_abbr": "CLT",
-  "away_r": "7",
+  "away_r": "15",
   "away_rank": 99,
   "away_short": "Charlotte",
   "city": "Boone",
-  "clock": "8:12",
+  "clock": "7:00",
   "conf_comp": false,
-  "detail": "8:12 - 4th",
-  "down": "2nd & 7 at APP 14",
+  "detail": "7:00 - 4th",
+  "down": null,
   "espn_id": "401864574",
   "final": false,
   "home_abbr": "APP",
@@ -1696,7 +1696,7 @@
    0.0,
    7.0,
    0.0,
-   0.0
+   8.0
   ],
   "line_home": [
    3.0,
@@ -1706,9 +1706,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
+  "poss": null,
   "redzone": true,
-  "spot": "APP 14",
+  "spot": null,
   "state": "NC",
   "status": "In Progress",
   "venue": "Kidd Brewer Stadium"
@@ -2124,6 +2124,54 @@
     "team": "away",
     "val": "6 REC, 148 YDS, 2 TD",
     "who": "M. Matthews"
+   }
+  ],
+  "line_away": [],
+  "line_home": [],
+  "neutral": false,
+  "period": 0,
+  "poss": null,
+  "redzone": false,
+  "spot": null,
+  "state": "TX",
+  "status": "Scheduled",
+  "venue": "Kyle Field"
+ },
+ "4c69ecf41bb2d36dfeedeae23acc5b86": {
+  "away_abbr": "TEX",
+  "away_r": "0",
+  "away_rank": 1,
+  "away_short": "Texas",
+  "city": "College Station",
+  "clock": "0:00",
+  "conf_comp": true,
+  "detail": "11/27 - 7:30 PM EST",
+  "down": null,
+  "espn_id": "401856756",
+  "final": false,
+  "home_abbr": "TA&M",
+  "home_r": "0",
+  "home_rank": 9,
+  "home_short": "Texas A&M",
+  "in_play": false,
+  "leaders": [
+   {
+    "cat": "PASS",
+    "team": "away",
+    "val": "500 YDS, 5 TD, 2 INT",
+    "who": "A. Manning"
+   },
+   {
+    "cat": "RUSH",
+    "team": "away",
+    "val": "31 CAR, 144 YDS, 2 TD",
+    "who": "H. Smothers"
+   },
+   {
+    "cat": "REC",
+    "team": "away",
+    "val": "11 REC, 143 YDS, 2 TD",
+    "who": "R. Wingo"
    }
   ],
   "line_away": [],
@@ -2560,6 +2608,54 @@
   "state": "AL",
   "status": "Scheduled",
   "venue": "Bryant-Denny Stadium"
+ },
+ "5b00e6b226dce4274d819d5d1818e703": {
+  "away_abbr": "MSST",
+  "away_r": "0",
+  "away_rank": 99,
+  "away_short": "Mississippi St",
+  "city": "Oxford",
+  "clock": "0:00",
+  "conf_comp": true,
+  "detail": "11/27 - 12:00 PM EST",
+  "down": null,
+  "espn_id": "401856762",
+  "final": false,
+  "home_abbr": "MISS",
+  "home_r": "0",
+  "home_rank": 8,
+  "home_short": "Ole Miss",
+  "in_play": false,
+  "leaders": [
+   {
+    "cat": "PASS",
+    "team": "away",
+    "val": "581 YDS, 7 TD",
+    "who": "K. Taylor"
+   },
+   {
+    "cat": "RUSH",
+    "team": "away",
+    "val": "27 CAR, 165 YDS, 2 TD",
+    "who": "F. Bothwell"
+   },
+   {
+    "cat": "REC",
+    "team": "away",
+    "val": "14 REC, 239 YDS, 2 TD",
+    "who": "A. Evans III"
+   }
+  ],
+  "line_away": [],
+  "line_home": [],
+  "neutral": false,
+  "period": 0,
+  "poss": null,
+  "redzone": false,
+  "spot": null,
+  "state": "MS",
+  "status": "Scheduled",
+  "venue": "Vaught-Hemingway Stadium"
  },
  "5bc9efd5f27827a26c1cf8744bb8c2b1": {
   "away_abbr": "AKR",
@@ -3299,14 +3395,14 @@
   "away_rank": 99,
   "away_short": "South Dakota",
   "city": "Boise",
-  "clock": "0:00",
+  "clock": "8:19",
   "conf_comp": false,
-  "detail": "Halftime",
-  "down": "3rd & 8 at SDAK 25",
+  "detail": "8:19 - 3rd",
+  "down": "1st & 10 at SDAK 24",
   "espn_id": "401860885",
   "final": false,
   "home_abbr": "BOIS",
-  "home_r": "21",
+  "home_r": "24",
   "home_rank": 99,
   "home_short": "Boise St",
   "in_play": true,
@@ -3314,7 +3410,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "14/20, 158 YDS, 2 TD",
+    "val": "15/21, 162 YDS, 2 TD",
     "who": "M. Madsen"
    },
    {
@@ -3332,19 +3428,21 @@
   ],
   "line_away": [
    7.0,
-   7.0
+   7.0,
+   0.0
   ],
   "line_home": [
    7.0,
-   14.0
+   14.0,
+   3.0
   ],
   "neutral": false,
-  "period": 2,
+  "period": 3,
   "poss": null,
   "redzone": false,
-  "spot": "SDAK 25",
+  "spot": "SDAK 24",
   "state": "ID",
-  "status": "Halftime",
+  "status": "In Progress",
   "venue": "Albertsons Stadium"
  },
  "6de44361bd6b6afc20b9bbefcc219f2a": {
@@ -3691,10 +3789,10 @@
   "away_rank": 99,
   "away_short": "Purdue",
   "city": "Pasadena",
-  "clock": "9:55",
+  "clock": "8:19",
   "conf_comp": true,
-  "detail": "9:55 - 2nd",
-  "down": "1st & 10 at PUR 24",
+  "detail": "8:19 - 2nd",
+  "down": "1st & 10 at UCLA 39",
   "espn_id": "401858458",
   "final": false,
   "home_abbr": "UCLA",
@@ -3718,7 +3816,7 @@
    {
     "cat": "REC",
     "team": "away",
-    "val": "1 REC, 75 YDS, 1 TD",
+    "val": "2 REC, 87 YDS, 1 TD",
     "who": "X. Townsend"
    }
   ],
@@ -3732,9 +3830,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "PUR 24",
+  "spot": "UCLA 39",
   "state": "CA",
   "status": "In Progress",
   "venue": "Rose Bowl"
@@ -6626,10 +6724,10 @@
   "away_rank": 99,
   "away_short": "Fresno St",
   "city": "San Jose",
-  "clock": "10:17",
+  "clock": "7:08",
   "conf_comp": false,
-  "detail": "10:17 - 2nd",
-  "down": "2nd & 9 at FRES 29",
+  "detail": "7:08 - 2nd",
+  "down": "4th & 5 at SJSU 45",
   "espn_id": "401860888",
   "final": false,
   "home_abbr": "SJSU",
@@ -6641,7 +6739,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "5/10, 69 YDS",
+    "val": "7/12, 90 YDS",
     "who": "J. Mandal"
    },
    {
@@ -6653,7 +6751,7 @@
    {
     "cat": "REC",
     "team": "away",
-    "val": "2 REC, 29 YDS",
+    "val": "3 REC, 39 YDS",
     "who": "J. Freeman"
    }
   ],
@@ -6669,7 +6767,7 @@
   "period": 2,
   "poss": "away",
   "redzone": false,
-  "spot": "FRES 29",
+  "spot": "SJSU 45",
   "state": "CA",
   "status": "In Progress",
   "venue": "CEFCU Stadium"
