@@ -477,10 +477,10 @@
   "away_rank": 99,
   "away_short": "N Dakota St",
   "city": "Sacramento",
-  "clock": "6:52",
+  "clock": "4:59",
   "conf_comp": false,
-  "detail": "6:52 - 2nd",
-  "down": null,
+  "detail": "4:59 - 2nd",
+  "down": "3rd & 4 at NDSU 41",
   "espn_id": "401864507",
   "final": false,
   "home_abbr": "SAC",
@@ -492,13 +492,13 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "7/11, 167 YDS, 1 TD",
+    "val": "8/13, 170 YDS, 1 TD",
     "who": "N. Hayes"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "4 CAR, 48 YDS, 1 TD",
+    "val": "5 CAR, 53 YDS, 1 TD",
     "who": "D. Scott"
    },
    {
@@ -518,9 +518,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "NDSU 41",
   "state": "CA",
   "status": "In Progress",
   "venue": "Hornet Stadium"
@@ -581,7 +581,7 @@
   "city": "San Diego",
   "clock": "0:00",
   "conf_comp": false,
-  "detail": "End of 2nd",
+  "detail": "Halftime",
   "down": "1st & 10 at SDSU 29",
   "espn_id": "401860887",
   "final": false,
@@ -620,11 +620,11 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
   "spot": "SDSU 29",
   "state": "CA",
-  "status": "In Progress",
+  "status": "Halftime",
   "venue": "Snapdragon Stadium"
  },
  "0ce2e66203e1c66f3f2687fdccd37408": {
@@ -1453,10 +1453,10 @@
   "away_rank": 99,
   "away_short": "Montana",
   "city": "Corvallis",
-  "clock": "11:55",
+  "clock": "11:08",
   "conf_comp": false,
-  "detail": "11:55 - 2nd",
-  "down": null,
+  "detail": "11:08 - 2nd",
+  "down": "3rd & 1 at ORST 19",
   "espn_id": "401860886",
   "final": false,
   "home_abbr": "ORST",
@@ -1474,7 +1474,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "2 CAR, 24 YDS",
+    "val": "3 CAR, 30 YDS",
     "who": "A. Newberry"
    },
    {
@@ -1494,9 +1494,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "ORST 19",
   "state": "OR",
   "status": "In Progress",
   "venue": "Reser Stadium"
@@ -1661,10 +1661,10 @@
   "away_rank": 99,
   "away_short": "Charlotte",
   "city": "Boone",
-  "clock": "15:00",
+  "clock": "12:08",
   "conf_comp": false,
-  "detail": "15:00 - 4th",
-  "down": "1st & 10 at CLT 34",
+  "detail": "12:08 - 4th",
+  "down": "3rd & Goal at CLT 7",
   "espn_id": "401864574",
   "final": false,
   "home_abbr": "APP",
@@ -1676,7 +1676,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "22/33, 282 YDS, 1 TD",
+    "val": "26/37, 305 YDS, 1 TD",
     "who": "M. Singleton"
    },
    {
@@ -1707,8 +1707,8 @@
   "neutral": false,
   "period": 4,
   "poss": "home",
-  "redzone": false,
-  "spot": "CLT 34",
+  "redzone": true,
+  "spot": "CLT 7",
   "state": "NC",
   "status": "In Progress",
   "venue": "Kidd Brewer Stadium"
@@ -3395,9 +3395,9 @@
   "away_rank": 99,
   "away_short": "South Dakota",
   "city": "Boise",
-  "clock": "7:41",
+  "clock": "0:00",
   "conf_comp": false,
-  "detail": "7:41 - 2nd",
+  "detail": "Halftime",
   "down": "2nd & 10 at BOIS 17",
   "espn_id": "401860885",
   "final": false,
@@ -3436,11 +3436,11 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
   "spot": "BOIS 17",
   "state": "ID",
-  "status": "In Progress",
+  "status": "Halftime",
   "venue": "Albertsons Stadium"
  },
  "6de44361bd6b6afc20b9bbefcc219f2a": {
@@ -3783,14 +3783,14 @@
  },
  "7a6a2035bf5d7abd30d6cc8b76d59e3e": {
   "away_abbr": "PUR",
-  "away_r": "13",
+  "away_r": "14",
   "away_rank": 99,
   "away_short": "Purdue",
   "city": "Pasadena",
-  "clock": "13:45",
+  "clock": "13:29",
   "conf_comp": true,
-  "detail": "13:45 - 2nd",
-  "down": null,
+  "detail": "13:29 - 2nd",
+  "down": "2nd & 1 at UCLA 30",
   "espn_id": "401858458",
   "final": false,
   "home_abbr": "UCLA",
@@ -3820,7 +3820,7 @@
   ],
   "line_away": [
    7.0,
-   6.0
+   7.0
   ],
   "line_home": [
    21.0,
@@ -3828,9 +3828,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
-  "redzone": true,
-  "spot": null,
+  "poss": "home",
+  "redzone": false,
+  "spot": "UCLA 30",
   "state": "CA",
   "status": "In Progress",
   "venue": "Rose Bowl"
@@ -4515,14 +4515,14 @@
   "away_rank": 99,
   "away_short": "N Illinois",
   "city": "Tucson",
-  "clock": "3:13",
+  "clock": "2:00",
   "conf_comp": false,
-  "detail": "3:13 - 2nd",
+  "detail": "2:00 - 2nd",
   "down": null,
   "espn_id": "401856793",
   "final": false,
   "home_abbr": "ARIZ",
-  "home_r": "21",
+  "home_r": "28",
   "home_rank": 99,
   "home_short": "Arizona",
   "in_play": true,
@@ -4533,7 +4533,7 @@
   ],
   "line_home": [
    7.0,
-   14.0
+   21.0
   ],
   "neutral": false,
   "period": 2,
@@ -6722,10 +6722,10 @@
   "away_rank": 99,
   "away_short": "Fresno St",
   "city": "San Jose",
-  "clock": "13:04",
+  "clock": "11:49",
   "conf_comp": false,
-  "detail": "13:04 - 2nd",
-  "down": null,
+  "detail": "11:49 - 2nd",
+  "down": "3rd & 6 at SJSU 34",
   "espn_id": "401860888",
   "final": false,
   "home_abbr": "SJSU",
@@ -6737,7 +6737,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "4/7, 55 YDS",
+    "val": "5/10, 69 YDS",
     "who": "J. Mandal"
    },
    {
@@ -6763,9 +6763,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "SJSU 34",
   "state": "CA",
   "status": "In Progress",
   "venue": "CEFCU Stadium"
