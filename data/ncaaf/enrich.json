@@ -477,14 +477,14 @@
   "away_rank": 99,
   "away_short": "N Dakota St",
   "city": "Sacramento",
-  "clock": "6:56",
+  "clock": "6:52",
   "conf_comp": false,
-  "detail": "6:56 - 2nd",
-  "down": "4th & 10 at NDSU 12",
+  "detail": "6:52 - 2nd",
+  "down": null,
   "espn_id": "401864507",
   "final": false,
   "home_abbr": "SAC",
-  "home_r": "0",
+  "home_r": "3",
   "home_rank": 99,
   "home_short": "Sacramento St",
   "in_play": true,
@@ -514,13 +514,13 @@
   ],
   "line_home": [
    0.0,
-   0.0
+   3.0
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
-  "redzone": true,
-  "spot": "NDSU 12",
+  "poss": null,
+  "redzone": false,
+  "spot": null,
   "state": "CA",
   "status": "In Progress",
   "venue": "Hornet Stadium"
@@ -579,10 +579,10 @@
   "away_rank": 99,
   "away_short": "James Madison",
   "city": "San Diego",
-  "clock": "0:30",
+  "clock": "0:00",
   "conf_comp": false,
-  "detail": "0:30 - 2nd",
-  "down": null,
+  "detail": "End of 2nd",
+  "down": "1st & 10 at SDSU 29",
   "espn_id": "401860887",
   "final": false,
   "home_abbr": "SDSU",
@@ -600,7 +600,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "16 CAR, 77 YDS",
+    "val": "18 CAR, 88 YDS",
     "who": "J. Kinnard"
    },
    {
@@ -620,9 +620,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
-  "redzone": true,
-  "spot": null,
+  "poss": "home",
+  "redzone": false,
+  "spot": "SDSU 29",
   "state": "CA",
   "status": "In Progress",
   "venue": "Snapdragon Stadium"
@@ -1449,14 +1449,14 @@
  },
  "381e5c97af94a83e03eae0ac6f11ed38": {
   "away_abbr": "MONT",
-  "away_r": "0",
+  "away_r": "3",
   "away_rank": 99,
   "away_short": "Montana",
   "city": "Corvallis",
-  "clock": "14:33",
+  "clock": "11:55",
   "conf_comp": false,
-  "detail": "14:33 - 2nd",
-  "down": "2nd & 8 at ORST 24",
+  "detail": "11:55 - 2nd",
+  "down": null,
   "espn_id": "401860886",
   "final": false,
   "home_abbr": "ORST",
@@ -1486,7 +1486,7 @@
   ],
   "line_away": [
    0.0,
-   0.0
+   3.0
   ],
   "line_home": [
    14.0,
@@ -1494,9 +1494,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "ORST 24",
+  "spot": null,
   "state": "OR",
   "status": "In Progress",
   "venue": "Reser Stadium"
@@ -1661,10 +1661,10 @@
   "away_rank": 99,
   "away_short": "Charlotte",
   "city": "Boone",
-  "clock": "2:07",
+  "clock": "15:00",
   "conf_comp": false,
-  "detail": "2:07 - 3rd",
-  "down": null,
+  "detail": "15:00 - 4th",
+  "down": "1st & 10 at CLT 34",
   "espn_id": "401864574",
   "final": false,
   "home_abbr": "APP",
@@ -1676,7 +1676,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "19/28, 245 YDS, 1 TD",
+    "val": "22/33, 282 YDS, 1 TD",
     "who": "M. Singleton"
    },
    {
@@ -1695,18 +1695,20 @@
   "line_away": [
    0.0,
    7.0,
+   0.0,
    0.0
   ],
   "line_home": [
    3.0,
    10.0,
-   6.0
+   6.0,
+   0.0
   ],
   "neutral": false,
-  "period": 3,
-  "poss": null,
+  "period": 4,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "CLT 34",
   "state": "NC",
   "status": "In Progress",
   "venue": "Kidd Brewer Stadium"
@@ -3781,14 +3783,14 @@
  },
  "7a6a2035bf5d7abd30d6cc8b76d59e3e": {
   "away_abbr": "PUR",
-  "away_r": "7",
+  "away_r": "13",
   "away_rank": 99,
   "away_short": "Purdue",
   "city": "Pasadena",
-  "clock": "15:00",
+  "clock": "13:45",
   "conf_comp": true,
-  "detail": "15:00 - 1st",
-  "down": "3rd & 10 at UCLA 30",
+  "detail": "13:45 - 2nd",
+  "down": null,
   "espn_id": "401858458",
   "final": false,
   "home_abbr": "UCLA",
@@ -3799,9 +3801,9 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "8/12, 114 YDS, 2 TD",
-    "who": "N. Iamaleava"
+    "team": "away",
+    "val": "4/5, 117 YDS, 1 TD",
+    "who": "R. Browne"
    },
    {
     "cat": "RUSH",
@@ -3817,16 +3819,18 @@
    }
   ],
   "line_away": [
-   7.0
+   7.0,
+   6.0
   ],
   "line_home": [
-   21.0
+   21.0,
+   0.0
   ],
   "neutral": false,
-  "period": 1,
-  "poss": "away",
-  "redzone": false,
-  "spot": "UCLA 30",
+  "period": 2,
+  "poss": null,
+  "redzone": true,
+  "spot": null,
   "state": "CA",
   "status": "In Progress",
   "venue": "Rose Bowl"
@@ -4511,9 +4515,9 @@
   "away_rank": 99,
   "away_short": "N Illinois",
   "city": "Tucson",
-  "clock": "3:54",
+  "clock": "3:13",
   "conf_comp": false,
-  "detail": "3:54 - 2nd",
+  "detail": "3:13 - 2nd",
   "down": null,
   "espn_id": "401856793",
   "final": false,
@@ -6718,9 +6722,9 @@
   "away_rank": 99,
   "away_short": "Fresno St",
   "city": "San Jose",
-  "clock": "14:40",
+  "clock": "13:04",
   "conf_comp": false,
-  "detail": "14:40 - 2nd",
+  "detail": "13:04 - 2nd",
   "down": null,
   "espn_id": "401860888",
   "final": false,
@@ -6739,7 +6743,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "7 CAR, 23 YDS",
+    "val": "8 CAR, 29 YDS",
     "who": "J. Bates"
    },
    {
