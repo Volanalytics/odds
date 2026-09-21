@@ -559,7 +559,7 @@
   "home_p": "Shane Baz",
   "home_p_hand": "R",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "innings": [
    {
@@ -582,10 +582,12 @@
    0
   ],
   "save_p": null,
-  "status": "Warmup",
-  "warmup": true,
+  "status": "In Progress",
+  "warmup": false,
   "win_p": null,
-  "win_side": null
+  "win_side": null,
+  "wp_away": 50.0,
+  "wp_home": 50.0
  },
  "1cfde197827ecee7feb17929bf32793b": {
   "abstract": "Preview",
@@ -852,10 +854,10 @@
   "away_p": "DJ Herz",
   "away_p_hand": "L",
   "away_r": 0,
-  "cur_batter": "Abimelec Ortiz",
-  "cur_pitcher": "River Ryan",
+  "cur_batter": "Eduardo Valencia",
+  "cur_pitcher": "DJ Herz",
   "game_pk": 824221,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "River Ryan",
   "home_p_hand": "R",
   "home_r": 2,
@@ -873,14 +875,16 @@
     "n": 2
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 3
    }
   ],
   "lose_p": null,
   "outs": 2,
-  "pitch_side": "home",
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "River Ryan",
   "rhe_away": [
    0,
    2,
@@ -896,8 +900,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 26.900000000000006,
-  "wp_home": 73.1
+  "wp_away": 26.299999999999997,
+  "wp_home": 73.7
  },
  "3ffa69e9cd90187364365a87f82ce273": {
   "abstract": "Final",
@@ -1857,7 +1861,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
