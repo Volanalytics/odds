@@ -472,15 +472,15 @@
   "away_p": "Trey Yesavage",
   "away_p_hand": "R",
   "away_r": 3,
-  "cur_batter": "Pete Alonso",
-  "cur_pitcher": "Chad Dallas",
+  "cur_batter": "Josh Smith",
+  "cur_pitcher": "Shane Baz",
   "game_pk": 824787,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Shane Baz",
   "home_p_hand": "R",
-  "home_r": 1,
+  "home_r": 2,
   "in_play": true,
-  "inning": 6,
+  "inning": 7,
   "innings": [
    {
     "a": 3,
@@ -509,23 +509,28 @@
    },
    {
     "a": 0,
-    "h": null,
+    "h": 1,
     "n": 6
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 7
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "away",
+  "outs": 0,
+  "pitch_side": "home",
   "pitcher_changed": true,
-  "prev_pitcher": "Shane Baz",
+  "prev_pitcher": "Chad Dallas",
   "rhe_away": [
    3,
    4,
    0
   ],
   "rhe_home": [
-   1,
    2,
+   3,
    0
   ],
   "save_p": null,
@@ -533,8 +538,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 77.5,
-  "wp_home": 22.5
+  "wp_away": 67.3,
+  "wp_home": 32.7
  },
  "1cfde197827ecee7feb17929bf32793b": {
   "abstract": "Preview",
@@ -707,7 +712,7 @@
   "win_side": null
  },
  "3e7090629723a062facffeca147d8c9d": {
-  "abstract": "Live",
+  "abstract": "Final",
   "away_p": "DJ Herz",
   "away_p_hand": "L",
   "away_r": 2,
@@ -718,7 +723,7 @@
   "home_p": "River Ryan",
   "home_p_hand": "R",
   "home_r": 9,
-  "in_play": true,
+  "in_play": false,
   "inning": 9,
   "innings": [
    {
@@ -762,16 +767,14 @@
     "n": 8
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 9
    }
   ],
-  "lose_p": null,
-  "outs": 2,
+  "lose_p": "DJ Herz",
+  "outs": 3,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "Drew Sommers",
   "rhe_away": [
    2,
    5,
@@ -783,12 +786,10 @@
    0
   ],
   "save_p": null,
-  "status": "In Progress",
+  "status": "Game Over",
   "warmup": false,
-  "win_p": null,
-  "win_side": "home",
-  "wp_away": 0.09999999999999432,
-  "wp_home": 99.9
+  "win_p": "Keider Montero",
+  "win_side": "home"
  },
  "440458d6d4f20aa4ec271bc5f4501fa5": {
   "abstract": "Final",
@@ -1468,7 +1469,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
