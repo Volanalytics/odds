@@ -559,6 +559,40 @@
   "win_p": "Yennier Cano",
   "win_side": "home"
  },
+ "1cc251b3308daacf4f549c56ad233607": {
+  "abstract": "Preview",
+  "away_p": "Robbie Ray",
+  "away_p_hand": "L",
+  "away_r": null,
+  "cur_batter": null,
+  "cur_pitcher": null,
+  "game_pk": 823894,
+  "half": null,
+  "home_p": null,
+  "home_p_hand": null,
+  "home_r": null,
+  "in_play": false,
+  "inning": null,
+  "innings": [],
+  "lose_p": null,
+  "outs": null,
+  "pitch_side": "away",
+  "rhe_away": [
+   null,
+   null,
+   null
+  ],
+  "rhe_home": [
+   null,
+   null,
+   null
+  ],
+  "save_p": null,
+  "status": "Scheduled",
+  "warmup": false,
+  "win_p": null,
+  "win_side": null
+ },
  "1cfde197827ecee7feb17929bf32793b": {
   "abstract": "Preview",
   "away_p": "Sean Manaea",
@@ -638,10 +672,10 @@
   "away_p": "Dustin May",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Jake Bauers",
-  "cur_pitcher": "Zack Wheeler",
+  "cur_batter": "Alec Bohm",
+  "cur_pitcher": "Dustin May",
   "game_pk": 823412,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Zack Wheeler",
   "home_p_hand": "R",
   "home_r": 0,
@@ -654,14 +688,16 @@
     "n": 1
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 2
    }
   ],
   "lose_p": null,
   "outs": 1,
-  "pitch_side": "home",
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Zack Wheeler",
   "rhe_away": [
    0,
    0,
@@ -677,16 +713,16 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 47.699999999999996,
-  "wp_home": 52.300000000000004
+  "wp_away": 44.9,
+  "wp_home": 55.1
  },
  "388cb001ef45b493163b9d37cf60f606": {
   "abstract": "Live",
   "away_p": "Andre Pallante",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Oneil Cruz",
-  "cur_pitcher": "Andre Pallante",
+  "cur_batter": "Thomas Saggese",
+  "cur_pitcher": "Jared Jones",
   "game_pk": 823328,
   "half": "Bottom",
   "home_p": "Jared Jones",
@@ -702,15 +738,15 @@
    },
    {
     "a": 0,
-    "h": null,
+    "h": 0,
     "n": 2
    }
   ],
   "lose_p": null,
-  "outs": 0,
-  "pitch_side": "away",
+  "outs": 3,
+  "pitch_side": "home",
   "pitcher_changed": true,
-  "prev_pitcher": "Jared Jones",
+  "prev_pitcher": "Andre Pallante",
   "rhe_away": [
    0,
    0,
@@ -726,8 +762,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 46.0,
-  "wp_home": 54.0
+  "wp_away": 48.9,
+  "wp_home": 51.1
  },
  "394e1e2b849c5b4eaf2b5984eaa74b79": {
   "abstract": "Final",
@@ -813,31 +849,34 @@
   "abstract": "Live",
   "away_p": "Parker Messick",
   "away_p_hand": "L",
-  "away_r": 0,
-  "cur_batter": "Angel Mart\u00ednez",
+  "away_r": 1,
+  "cur_batter": "Travis Bazzana",
   "cur_pitcher": "Payton Tolle",
   "game_pk": 824709,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Payton Tolle",
   "home_p_hand": "L",
   "home_r": 0,
   "in_play": true,
-  "inning": 1,
+  "inning": 2,
   "innings": [
    {
     "a": 0,
     "h": 0,
     "n": 1
+   },
+   {
+    "a": 1,
+    "h": null,
+    "n": 2
    }
   ],
   "lose_p": null,
-  "outs": 3,
+  "outs": 0,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "Parker Messick",
   "rhe_away": [
-   0,
    1,
+   4,
    0
   ],
   "rhe_home": [
@@ -849,9 +888,9 @@
   "status": "In Progress",
   "warmup": false,
   "win_p": null,
-  "win_side": null,
-  "wp_away": 47.8,
-  "wp_home": 52.2
+  "win_side": "away",
+  "wp_away": 63.7,
+  "wp_home": 36.3
  },
  "3e7090629723a062facffeca147d8c9d": {
   "abstract": "Final",
@@ -2573,10 +2612,10 @@
   "away_p": "Riley Cornelio",
   "away_p_hand": "R",
   "away_r": 1,
-  "cur_batter": "Andr\u00e9s Chaparro",
-  "cur_pitcher": "Drew Anderson",
+  "cur_batter": "Max Clark",
+  "cur_pitcher": "Riley Cornelio",
   "game_pk": 824222,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Drew Anderson",
   "home_p_hand": "R",
   "home_r": 0,
@@ -2595,13 +2634,13 @@
    }
   ],
   "lose_p": null,
-  "outs": 0,
-  "pitch_side": "home",
+  "outs": 1,
+  "pitch_side": "away",
   "pitcher_changed": true,
-  "prev_pitcher": "Riley Cornelio",
+  "prev_pitcher": "Drew Anderson",
   "rhe_away": [
    1,
-   1,
+   2,
    0
   ],
   "rhe_home": [
@@ -2614,8 +2653,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 60.3,
-  "wp_home": 39.7
+  "wp_away": 55.7,
+  "wp_home": 44.3
  },
  "e92bbb840d0b4b67982c31bc3cef37bf": {
   "abstract": "Final",
