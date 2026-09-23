@@ -1594,29 +1594,35 @@
   "abstract": "Preview",
   "away_p": "Walbert Ure\u00f1a",
   "away_p_hand": "R",
-  "away_r": null,
-  "cur_batter": null,
-  "cur_pitcher": null,
+  "away_r": 0,
+  "cur_batter": "Zach Neto",
+  "cur_pitcher": "Jeffrey Springs",
   "game_pk": 824951,
-  "half": null,
+  "half": "Top",
   "home_p": "Jeffrey Springs",
   "home_p_hand": "L",
-  "home_r": null,
+  "home_r": 0,
   "in_play": false,
-  "inning": null,
-  "innings": [],
+  "inning": 1,
+  "innings": [
+   {
+    "a": null,
+    "h": null,
+    "n": 1
+   }
+  ],
   "lose_p": null,
-  "outs": null,
-  "pitch_side": "away",
+  "outs": 0,
+  "pitch_side": "home",
   "rhe_away": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "rhe_home": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "save_p": null,
   "status": "Pre-Game",
@@ -2325,10 +2331,10 @@
   "away_p": "Connor Prielipp",
   "away_p_hand": "L",
   "away_r": 4,
-  "cur_batter": "Royce Lewis",
-  "cur_pitcher": "Braxton Roxby",
+  "cur_batter": "Jonah Cox",
+  "cur_pitcher": "A.J. Minter",
   "game_pk": 823168,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Cesar Perdomo",
   "home_p_hand": "L",
   "home_r": 2,
@@ -2371,17 +2377,19 @@
     "n": 7
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 8
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Braxton Roxby",
   "rhe_away": [
    4,
-   7,
+   8,
    0
   ],
   "rhe_home": [
@@ -2394,7 +2402,7 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 85.0,
-  "wp_home": 15.0
+  "wp_away": 84.7,
+  "wp_home": 15.299999999999999
  }
 }
