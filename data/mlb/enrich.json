@@ -398,10 +398,10 @@
   "away_p": "Andrew Abbott",
   "away_p_hand": "L",
   "away_r": 1,
-  "cur_batter": "Matt McLain",
-  "cur_pitcher": "Chris Sale",
+  "cur_batter": "Michael Harris II",
+  "cur_pitcher": "Andrew Abbott",
   "game_pk": 824868,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Chris Sale",
   "home_p_hand": "L",
   "home_r": 0,
@@ -414,16 +414,16 @@
     "n": 1
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 2
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
   "pitcher_changed": true,
-  "prev_pitcher": "Andrew Abbott",
+  "prev_pitcher": "Chris Sale",
   "rhe_away": [
    1,
    1,
@@ -439,8 +439,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 58.2,
-  "wp_home": 41.8
+  "wp_away": 55.7,
+  "wp_home": 44.3
  },
  "2ec6c946384087513c61f58aad6e082f": {
   "abstract": "Final",
@@ -974,7 +974,7 @@
   "home_p": "Seth Lugo",
   "home_p_hand": "R",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "innings": [
    {
@@ -997,10 +997,12 @@
    0
   ],
   "save_p": null,
-  "status": "Warmup",
-  "warmup": true,
+  "status": "In Progress",
+  "warmup": false,
   "win_p": null,
-  "win_side": null
+  "win_side": null,
+  "wp_away": 50.0,
+  "wp_home": 50.0
  },
  "6ae37d18d4a5fb4d9c92a8aee3f54186": {
   "abstract": "Preview",
@@ -1047,8 +1049,8 @@
   "away_p": "Logan Henderson",
   "away_p_hand": "R",
   "away_r": 4,
-  "cur_batter": "Trea Turner",
-  "cur_pitcher": "Logan Henderson",
+  "cur_batter": "Joey Ortiz",
+  "cur_pitcher": "Aaron Nola",
   "game_pk": 823410,
   "half": "Bottom",
   "home_p": "Aaron Nola",
@@ -1069,15 +1071,15 @@
    },
    {
     "a": 2,
-    "h": null,
+    "h": 0,
     "n": 3
    }
   ],
   "lose_p": null,
-  "outs": 0,
-  "pitch_side": "away",
+  "outs": 3,
+  "pitch_side": "home",
   "pitcher_changed": true,
-  "prev_pitcher": "Aaron Nola",
+  "prev_pitcher": "Logan Henderson",
   "rhe_away": [
    4,
    4,
@@ -1093,8 +1095,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 76.4,
-  "wp_home": 23.599999999999998
+  "wp_away": 80.4,
+  "wp_home": 19.6
  },
  "7294e99a67c70c66b6edecf9841d4f03": {
   "abstract": "Final",
@@ -1215,10 +1217,10 @@
   "away_p": "Matthew Liberatore",
   "away_p_hand": "L",
   "away_r": 3,
-  "cur_batter": "Konnor Griffin",
-  "cur_pitcher": "Matthew Liberatore",
+  "cur_batter": "Jos\u00e9 Ferm\u00edn",
+  "cur_pitcher": "Khristian Curtis",
   "game_pk": 823327,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Lake Bachar",
   "home_p_hand": "R",
   "home_r": 1,
@@ -1237,15 +1239,15 @@
    },
    {
     "a": 3,
-    "h": null,
+    "h": 0,
     "n": 3
    }
   ],
   "lose_p": null,
   "outs": 3,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "pitcher_changed": true,
-  "prev_pitcher": "Khristian Curtis",
+  "prev_pitcher": "Matthew Liberatore",
   "rhe_away": [
    3,
    4,
@@ -1261,8 +1263,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 59.699999999999996,
-  "wp_home": 40.300000000000004
+  "wp_away": 71.80000000000001,
+  "wp_home": 28.199999999999996
  },
  "7d11a20c7ec2247d0ce57f87cda008ca": {
   "abstract": "Preview",
@@ -1592,13 +1594,13 @@
   "away_p": "Mason Englert",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Jazz Chisholm Jr.",
+  "cur_batter": "Ben Rice",
   "cur_pitcher": "Mason Englert",
   "game_pk": 823492,
   "half": "Bottom",
   "home_p": "Gerrit Cole",
   "home_p_hand": "R",
-  "home_r": 1,
+  "home_r": 2,
   "in_play": true,
   "inning": 2,
   "innings": [
@@ -1609,23 +1611,21 @@
    },
    {
     "a": 0,
-    "h": null,
+    "h": 1,
     "n": 2
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 2,
   "pitch_side": "away",
-  "pitcher_changed": true,
-  "prev_pitcher": "Gerrit Cole",
   "rhe_away": [
    0,
    1,
-   0
+   1
   ],
   "rhe_home": [
-   1,
    2,
+   3,
    0
   ],
   "save_p": null,
@@ -1633,23 +1633,23 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 29.0,
-  "wp_home": 71.0
+  "wp_away": 27.200000000000003,
+  "wp_home": 72.8
  },
  "94d0c4d70e74a3ca8f70abe5a0859ea1": {
   "abstract": "Live",
   "away_p": "CJ Van Eyk",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Christian Franklin",
-  "cur_pitcher": "CJ Van Eyk",
+  "cur_batter": "Myles Straw",
+  "cur_pitcher": "Trey Gibson",
   "game_pk": 824784,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Trey Gibson",
   "home_p_hand": "R",
   "home_r": 4,
   "in_play": true,
-  "inning": 4,
+  "inning": 5,
   "innings": [
    {
     "a": 0,
@@ -1670,11 +1670,18 @@
     "a": 0,
     "h": 1,
     "n": 4
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 5
    }
   ],
   "lose_p": null,
   "outs": 2,
-  "pitch_side": "away",
+  "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "CJ Van Eyk",
   "rhe_away": [
    0,
    2,
@@ -1690,8 +1697,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 10.0,
-  "wp_home": 90.0
+  "wp_away": 7.5,
+  "wp_home": 92.5
  },
  "9537e2c00a118edc54c7b2b5ed0c6f55": {
   "abstract": "Preview",
@@ -1859,7 +1866,7 @@
   "home_p": "Kevin Gausman",
   "home_p_hand": "R",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "innings": [
    {
@@ -1882,10 +1889,12 @@
    0
   ],
   "save_p": null,
-  "status": "Warmup",
-  "warmup": true,
+  "status": "In Progress",
+  "warmup": false,
   "win_p": null,
-  "win_side": null
+  "win_side": null,
+  "wp_away": 50.0,
+  "wp_home": 50.0
  },
  "ad00c94ceb671349678549cf07c393d5": {
   "abstract": "Final",
@@ -2052,10 +2061,10 @@
   "away_p": "Foster Griffin",
   "away_p_hand": "L",
   "away_r": 0,
-  "cur_batter": "Nathaniel Lowe",
-  "cur_pitcher": "Sonny Gray",
+  "cur_batter": "Caleb Durbin",
+  "cur_pitcher": "Foster Griffin",
   "game_pk": 824710,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Sonny Gray",
   "home_p_hand": "R",
   "home_r": 0,
@@ -2068,14 +2077,16 @@
     "n": 1
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 2
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Sonny Gray",
   "rhe_away": [
    0,
    0,
@@ -2083,7 +2094,7 @@
   ],
   "rhe_home": [
    0,
-   2,
+   3,
    0
   ],
   "save_p": null,
@@ -2091,8 +2102,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 46.0,
-  "wp_home": 54.0
+  "wp_away": 41.1,
+  "wp_home": 58.9
  },
  "c862b8f01d10ebafd1c1ee08cf8ba9ce": {
   "abstract": "Preview",
