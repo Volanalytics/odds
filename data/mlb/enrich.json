@@ -277,29 +277,35 @@
   "abstract": "Preview",
   "away_p": "Robbie Ray",
   "away_p_hand": "L",
-  "away_r": null,
-  "cur_batter": null,
-  "cur_pitcher": null,
+  "away_r": 0,
+  "cur_batter": "Fernando Tatis Jr.",
+  "cur_pitcher": "Yoshinobu Yamamoto",
   "game_pk": 823894,
-  "half": null,
+  "half": "Top",
   "home_p": "Yoshinobu Yamamoto",
   "home_p_hand": "R",
-  "home_r": null,
+  "home_r": 0,
   "in_play": false,
-  "inning": null,
-  "innings": [],
+  "inning": 1,
+  "innings": [
+   {
+    "a": null,
+    "h": null,
+    "n": 1
+   }
+  ],
   "lose_p": null,
-  "outs": null,
-  "pitch_side": "away",
+  "outs": 0,
+  "pitch_side": "home",
   "rhe_away": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "rhe_home": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "save_p": null,
   "status": "Pre-Game",
@@ -574,7 +580,7 @@
   "rhe_away": [
    0,
    1,
-   1
+   0
   ],
   "rhe_home": [
    2,
@@ -1032,14 +1038,14 @@
   "away_p": "Logan Henderson",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Garrett Mitchell",
+  "cur_batter": "Jackson Chourio",
   "cur_pitcher": "Aaron Nola",
   "game_pk": 823410,
   "half": "Top",
   "home_p": "Aaron Nola",
   "home_p_hand": "R",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "innings": [
    {
@@ -1049,7 +1055,7 @@
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 1,
   "pitch_side": "home",
   "rhe_away": [
    0,
@@ -1062,10 +1068,12 @@
    0
   ],
   "save_p": null,
-  "status": "Warmup",
-  "warmup": true,
+  "status": "In Progress",
+  "warmup": false,
   "win_p": null,
-  "win_side": null
+  "win_side": null,
+  "wp_away": 47.8,
+  "wp_home": 52.2
  },
  "7294e99a67c70c66b6edecf9841d4f03": {
   "abstract": "Final",
@@ -1164,7 +1172,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -1186,14 +1194,14 @@
   "away_p": "Matthew Liberatore",
   "away_p_hand": "L",
   "away_r": 0,
-  "cur_batter": "JJ Wetherholt",
+  "cur_batter": "Iv\u00e1n Herrera",
   "cur_pitcher": "Lake Bachar",
   "game_pk": 823327,
   "half": "Top",
   "home_p": "Lake Bachar",
   "home_p_hand": "R",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "innings": [
    {
@@ -1216,10 +1224,12 @@
    0
   ],
   "save_p": null,
-  "status": "Warmup",
-  "warmup": true,
+  "status": "In Progress",
+  "warmup": false,
   "win_p": null,
-  "win_side": null
+  "win_side": null,
+  "wp_away": 53.599999999999994,
+  "wp_home": 46.400000000000006
  },
  "7d11a20c7ec2247d0ce57f87cda008ca": {
   "abstract": "Preview",
@@ -1589,10 +1599,10 @@
   "away_p": "CJ Van Eyk",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Alejandro Kirk",
-  "cur_pitcher": "Trey Gibson",
+  "cur_batter": "Pete Alonso",
+  "cur_pitcher": "CJ Van Eyk",
   "game_pk": 824784,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Trey Gibson",
   "home_p_hand": "R",
   "home_r": 0,
@@ -1600,14 +1610,16 @@
   "inning": 1,
   "innings": [
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 1
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "home",
+  "outs": 1,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Trey Gibson",
   "rhe_away": [
    0,
    0,
@@ -1623,8 +1635,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 47.8,
-  "wp_home": 52.2
+  "wp_away": 45.199999999999996,
+  "wp_home": 54.800000000000004
  },
  "9537e2c00a118edc54c7b2b5ed0c6f55": {
   "abstract": "Preview",
@@ -1683,7 +1695,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -2071,7 +2083,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -2437,7 +2449,7 @@
    1
   ],
   "save_p": "Andrew Morris",
-  "status": "Game Over",
+  "status": "Final",
   "warmup": false,
   "win_p": "Yoendrys G\u00f3mez",
   "win_side": "away"
