@@ -4,7 +4,7 @@
   "away_p": "Yusei Kikuchi",
   "away_p_hand": "L",
   "away_r": 5,
-  "cur_batter": "Bryce Teodosio",
+  "cur_batter": "Mike Trout",
   "cur_pitcher": "Seth Johnson",
   "game_pk": 824953,
   "half": "Top",
@@ -46,10 +46,8 @@
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 1,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "Yusei Kikuchi",
   "rhe_away": [
    5,
    10,
@@ -65,8 +63,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 95.2,
-  "wp_home": 4.8
+  "wp_away": 95.3,
+  "wp_home": 4.7
  },
  "0c17c76059d99e5bb249df6a7c540127": {
   "abstract": "Final",
@@ -245,7 +243,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -793,7 +791,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -1111,8 +1109,8 @@
   "away_p": "Taj Bradley",
   "away_p_hand": "R",
   "away_r": 2,
-  "cur_batter": "Turner Hill",
-  "cur_pitcher": "Taj Bradley",
+  "cur_batter": "Walker Jenkins",
+  "cur_pitcher": "Anthony Molina",
   "game_pk": 823166,
   "half": "Bottom",
   "home_p": "Anthony Molina",
@@ -1148,13 +1146,15 @@
    },
    {
     "a": 2,
-    "h": null,
+    "h": 0,
     "n": 6
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "away",
+  "outs": 3,
+  "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Taj Bradley",
   "rhe_away": [
    2,
    4,
@@ -1170,18 +1170,18 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 64.4,
-  "wp_home": 35.6
+  "wp_away": 65.1,
+  "wp_home": 34.9
  },
  "82b37a47daa08ef041c888d37b999303": {
   "abstract": "Live",
   "away_p": "Janson Junk",
   "away_p_hand": "R",
   "away_r": 2,
-  "cur_batter": "Esteury Ruiz",
-  "cur_pitcher": "Caleb Thielbar",
+  "cur_batter": "Carson Kelly",
+  "cur_pitcher": "Josh Ekness",
   "game_pk": 824624,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Shota Imanaga",
   "home_p_hand": "L",
   "home_r": 2,
@@ -1239,14 +1239,16 @@
     "n": 10
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 11
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Caleb Thielbar",
   "rhe_away": [
    2,
    7,
@@ -1262,15 +1264,15 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 38.7,
-  "wp_home": 61.3
+  "wp_away": 19.5,
+  "wp_home": 80.5
  },
  "85b75fcab1b69e0a4e414382b9f1cc7e": {
   "abstract": "Live",
   "away_p": "Michael King",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Austin Hays",
+  "cur_batter": "Jake Cronenworth",
   "cur_pitcher": "Roki Sasaki",
   "game_pk": 823897,
   "half": "Top",
@@ -1302,13 +1304,11 @@
    }
   ],
   "lose_p": null,
-  "outs": 1,
+  "outs": 2,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "Michael King",
   "rhe_away": [
    0,
-   2,
+   4,
    0
   ],
   "rhe_home": [
@@ -1321,8 +1321,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 12.400000000000006,
-  "wp_home": 87.6
+  "wp_away": 10.299999999999997,
+  "wp_home": 89.7
  },
  "8a7f796244408c6c830bfc2be2edb9a9": {
   "abstract": "Preview",
@@ -1397,15 +1397,15 @@
   "away_p": "Cristian Javier",
   "away_p_hand": "R",
   "away_r": 4,
-  "cur_batter": "Cole Young",
-  "cur_pitcher": "Miguel Ullola",
+  "cur_batter": "Taylor Trammell",
+  "cur_pitcher": "Jos\u00e9 A. Ferrer",
   "game_pk": 823089,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Logan Gilbert",
   "home_p_hand": "R",
   "home_r": 0,
   "in_play": true,
-  "inning": 4,
+  "inning": 5,
   "innings": [
    {
     "a": 1,
@@ -1424,13 +1424,20 @@
    },
    {
     "a": 0,
-    "h": null,
+    "h": 0,
     "n": 4
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 5
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "away",
+  "outs": 0,
+  "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Miguel Ullola",
   "rhe_away": [
    4,
    10,
@@ -1446,8 +1453,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 85.3,
-  "wp_home": 14.7
+  "wp_away": 87.9,
+  "wp_home": 12.1
  },
  "abd20077e0d7c1491fcc361d264cbc3d": {
   "abstract": "Preview",
@@ -1466,7 +1473,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -1592,7 +1599,7 @@
    1
   ],
   "save_p": null,
-  "status": "Game Over",
+  "status": "Final",
   "warmup": false,
   "win_p": "Michael Soroka",
   "win_side": "away"
@@ -1842,7 +1849,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
