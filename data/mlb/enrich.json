@@ -198,8 +198,8 @@
   "away_p": "Zac Thornton",
   "away_p_hand": "L",
   "away_r": 1,
-  "cur_batter": "Marcus Semien",
-  "cur_pitcher": "Tyler Alexander",
+  "cur_batter": "Ezequiel Duran",
+  "cur_pitcher": "Austin Warren",
   "game_pk": 822842,
   "half": "Top",
   "home_p": "Kumar Rocker",
@@ -239,14 +239,16 @@
     "n": 6
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 7
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "home",
+  "outs": 3,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Tyler Alexander",
   "rhe_away": [
    1,
    4,
@@ -262,16 +264,16 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 19.099999999999994,
-  "wp_home": 80.9
+  "wp_away": 14.600000000000009,
+  "wp_home": 85.39999999999999
  },
  "1b1dbd4e7d948a1910402a33850d77c8": {
   "abstract": "Live",
   "away_p": "Tyler Phillips",
   "away_p_hand": "R",
   "away_r": 1,
-  "cur_batter": "Heriberto Hern\u00e1ndez",
-  "cur_pitcher": "Daniel Palencia",
+  "cur_batter": "Ian Happ",
+  "cur_pitcher": "Josh Ekness",
   "game_pk": 824623,
   "half": "Top",
   "home_p": "Matthew Boyd",
@@ -316,16 +318,16 @@
     "n": 7
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 8
    }
   ],
   "lose_p": null,
-  "outs": 0,
-  "pitch_side": "home",
+  "outs": 3,
+  "pitch_side": "away",
   "pitcher_changed": true,
-  "prev_pitcher": "Matthew Boyd",
+  "prev_pitcher": "Daniel Palencia",
   "rhe_away": [
    1,
    5,
@@ -341,8 +343,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 34.3,
-  "wp_home": 65.7
+  "wp_away": 30.400000000000006,
+  "wp_home": 69.6
  },
  "1cc251b3308daacf4f549c56ad233607": {
   "abstract": "Final",
@@ -2772,10 +2774,10 @@
   "away_p": "Eduardo Rodriguez",
   "away_p_hand": "L",
   "away_r": 10,
-  "cur_batter": "TJ Rumfield",
+  "cur_batter": "Brett Sullivan",
   "cur_pitcher": "Eduardo Rodriguez",
   "game_pk": 824298,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Tanner Gordon",
   "home_p_hand": "R",
   "home_r": 0,
@@ -2804,10 +2806,8 @@
    }
   ],
   "lose_p": null,
-  "outs": 3,
+  "outs": 0,
   "pitch_side": "away",
-  "pitcher_changed": true,
-  "prev_pitcher": "Jimmy Herget",
   "rhe_away": [
    10,
    13,
@@ -2815,7 +2815,7 @@
   ],
   "rhe_home": [
    0,
-   3,
+   6,
    0
   ],
   "save_p": null,
@@ -2823,8 +2823,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 99.4,
-  "wp_home": 0.6
+  "wp_away": 98.3,
+  "wp_home": 1.7000000000000002
  },
  "ca2c6af9c65d99ec92728e8b8c76fae9": {
   "abstract": "Final",
@@ -3064,29 +3064,35 @@
   "abstract": "Preview",
   "away_p": "Ian Seymour",
   "away_p_hand": "L",
-  "away_r": null,
-  "cur_batter": null,
-  "cur_pitcher": null,
+  "away_r": 0,
+  "cur_batter": "Yandy D\u00edaz",
+  "cur_pitcher": "Cam Schlittler",
   "game_pk": 823493,
-  "half": null,
+  "half": "Top",
   "home_p": "Cam Schlittler",
   "home_p_hand": "R",
-  "home_r": null,
+  "home_r": 0,
   "in_play": false,
-  "inning": null,
-  "innings": [],
+  "inning": 1,
+  "innings": [
+   {
+    "a": null,
+    "h": null,
+    "n": 1
+   }
+  ],
   "lose_p": null,
-  "outs": null,
-  "pitch_side": "away",
+  "outs": 0,
+  "pitch_side": "home",
   "rhe_away": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "rhe_home": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "save_p": null,
   "status": "Pre-Game",
@@ -3259,7 +3265,7 @@
   "away_p": "David Sandlin",
   "away_p_hand": "R",
   "away_r": 9,
-  "cur_batter": "Braden Montgomery",
+  "cur_batter": "Miguel Vargas",
   "cur_pitcher": "Nolan Hoffman",
   "game_pk": 824059,
   "half": "Top",
@@ -3316,13 +3322,11 @@
    }
   ],
   "lose_p": null,
-  "outs": 1,
+  "outs": 2,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "Tyler Davis",
   "rhe_away": [
    9,
-   11,
+   12,
    0
   ],
   "rhe_home": [
