@@ -779,7 +779,7 @@
   "rhe_away": [
    0,
    1,
-   0
+   1
   ],
   "rhe_home": [
    2,
@@ -1579,10 +1579,10 @@
   "away_p": "Shane Drohan",
   "away_p_hand": "L",
   "away_r": 0,
-  "cur_batter": "William Contreras",
-  "cur_pitcher": "Andrew Painter",
+  "cur_batter": "Kyle Schwarber",
+  "cur_pitcher": "Shane Drohan",
   "game_pk": 823411,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Andrew Painter",
   "home_p_hand": "R",
   "home_r": 0,
@@ -1590,14 +1590,16 @@
   "inning": 1,
   "innings": [
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 1
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Andrew Painter",
   "rhe_away": [
    0,
    0,
@@ -1613,8 +1615,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 46.199999999999996,
-  "wp_home": 53.800000000000004
+  "wp_away": 47.4,
+  "wp_home": 52.6
  },
  "78fdc82ac76963c18badf5271be59870": {
   "abstract": "Preview",
@@ -1906,7 +1908,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -2195,7 +2197,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -2959,7 +2961,7 @@
   "away_p": "Eduardo Rodriguez",
   "away_p_hand": "L",
   "away_r": 12,
-  "cur_batter": "Ryan Waldschmidt",
+  "cur_batter": "Geraldo Perdomo",
   "cur_pitcher": "Jordan Romano",
   "game_pk": 824298,
   "half": "Top",
@@ -3016,13 +3018,11 @@
    }
   ],
   "lose_p": null,
-  "outs": 1,
+  "outs": 2,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "Taylor Clarke",
   "rhe_away": [
    12,
-   17,
+   18,
    0
   ],
   "rhe_home": [
@@ -3035,8 +3035,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 98.3,
-  "wp_home": 1.7000000000000002
+  "wp_away": 98.5,
+  "wp_home": 1.5
  },
  "ca2c6af9c65d99ec92728e8b8c76fae9": {
   "abstract": "Final",
@@ -3391,6 +3391,40 @@
   "warmup": false,
   "win_p": "Jackson Kent",
   "win_side": "away"
+ },
+ "e47efe97f629cae0287ca6f3ea6d6794": {
+  "abstract": "Preview",
+  "away_p": null,
+  "away_p_hand": null,
+  "away_r": null,
+  "cur_batter": null,
+  "cur_pitcher": null,
+  "game_pk": 823167,
+  "half": null,
+  "home_p": "Yunior Marte",
+  "home_p_hand": "R",
+  "home_r": null,
+  "in_play": false,
+  "inning": null,
+  "innings": [],
+  "lose_p": null,
+  "outs": null,
+  "pitch_side": "away",
+  "rhe_away": [
+   null,
+   null,
+   null
+  ],
+  "rhe_home": [
+   null,
+   null,
+   null
+  ],
+  "save_p": null,
+  "status": "Scheduled",
+  "warmup": false,
+  "win_p": null,
+  "win_side": null
  },
  "eb8b9160f66fc6d5f6bd58bf4a888011": {
   "abstract": "Preview",
