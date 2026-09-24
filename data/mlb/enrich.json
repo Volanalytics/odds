@@ -779,7 +779,7 @@
   "rhe_away": [
    0,
    1,
-   1
+   0
   ],
   "rhe_home": [
    2,
@@ -1579,8 +1579,8 @@
   "away_p": "Shane Drohan",
   "away_p_hand": "L",
   "away_r": 1,
-  "cur_batter": "J.T. Realmuto",
-  "cur_pitcher": "Shane Drohan",
+  "cur_batter": "Brice Turang",
+  "cur_pitcher": "Andrew Painter",
   "game_pk": 823411,
   "half": "Bottom",
   "home_p": "Andrew Painter",
@@ -1596,13 +1596,15 @@
    },
    {
     "a": 1,
-    "h": null,
+    "h": 0,
     "n": 2
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "away",
+  "outs": 3,
+  "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Shane Drohan",
   "rhe_away": [
    1,
    2,
@@ -1618,11 +1620,11 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 58.7,
-  "wp_home": 41.3
+  "wp_away": 56.3,
+  "wp_home": 43.7
  },
  "78fdc82ac76963c18badf5271be59870": {
-  "abstract": "Preview",
+  "abstract": "Live",
   "away_p": "Brady Singer",
   "away_p_hand": "R",
   "away_r": 0,
@@ -1656,8 +1658,8 @@
    0
   ],
   "save_p": null,
-  "status": "Pre-Game",
-  "warmup": false,
+  "status": "Warmup",
+  "warmup": true,
   "win_p": null,
   "win_side": null
  },
@@ -1911,7 +1913,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -2200,7 +2202,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -2495,29 +2497,35 @@
   "abstract": "Preview",
   "away_p": "Nick Pivetta",
   "away_p_hand": "R",
-  "away_r": null,
-  "cur_batter": null,
-  "cur_pitcher": null,
+  "away_r": 0,
+  "cur_batter": "Fernando Tatis Jr.",
+  "cur_pitcher": "Tyler Glasnow",
   "game_pk": 823895,
-  "half": null,
+  "half": "Top",
   "home_p": "Tyler Glasnow",
   "home_p_hand": "R",
-  "home_r": null,
+  "home_r": 0,
   "in_play": false,
-  "inning": null,
-  "innings": [],
+  "inning": 1,
+  "innings": [
+   {
+    "a": null,
+    "h": null,
+    "n": 1
+   }
+  ],
   "lose_p": null,
-  "outs": null,
-  "pitch_side": "away",
+  "outs": 0,
+  "pitch_side": "home",
   "rhe_away": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "rhe_home": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "save_p": null,
   "status": "Pre-Game",
@@ -3204,14 +3212,14 @@
   "away_p": "Daniel Espino",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Steven Kwan",
+  "cur_batter": "Jos\u00e9 Ram\u00edrez",
   "cur_pitcher": "Ranger Suarez",
   "game_pk": 824707,
   "half": "Top",
   "home_p": "Ranger Suarez",
   "home_p_hand": "L",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "innings": [
    {
@@ -3221,7 +3229,7 @@
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 1,
   "pitch_side": "home",
   "rhe_away": [
    0,
@@ -3234,10 +3242,12 @@
    0
   ],
   "save_p": null,
-  "status": "Warmup",
-  "warmup": true,
+  "status": "In Progress",
+  "warmup": false,
   "win_p": null,
-  "win_side": null
+  "win_side": null,
+  "wp_away": 50.0,
+  "wp_home": 50.0
  },
  "d1094cf64d0cccf98c76920fd2548c38": {
   "abstract": "Preview",
