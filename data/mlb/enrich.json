@@ -198,8 +198,8 @@
   "away_p": "Zac Thornton",
   "away_p_hand": "L",
   "away_r": 1,
-  "cur_batter": "Ezequiel Duran",
-  "cur_pitcher": "Zac Thornton",
+  "cur_batter": "Nick Morabito",
+  "cur_pitcher": "Kumar Rocker",
   "game_pk": 822842,
   "half": "Bottom",
   "home_p": "Kumar Rocker",
@@ -215,13 +215,15 @@
    },
    {
     "a": 0,
-    "h": null,
+    "h": 0,
     "n": 2
    }
   ],
   "lose_p": null,
-  "outs": 0,
-  "pitch_side": "away",
+  "outs": 3,
+  "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Zac Thornton",
   "rhe_away": [
    1,
    2,
@@ -237,16 +239,16 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 31.299999999999997,
-  "wp_home": 68.7
+  "wp_away": 34.2,
+  "wp_home": 65.8
  },
  "1b1dbd4e7d948a1910402a33850d77c8": {
   "abstract": "Live",
   "away_p": "Tyler Phillips",
   "away_p_hand": "R",
   "away_r": 1,
-  "cur_batter": "Michael Busch",
-  "cur_pitcher": "Tyler Phillips",
+  "cur_batter": "Agust\u00edn Ram\u00edrez",
+  "cur_pitcher": "Matthew Boyd",
   "game_pk": 824623,
   "half": "Bottom",
   "home_p": "Matthew Boyd",
@@ -267,13 +269,15 @@
    },
    {
     "a": 1,
-    "h": null,
+    "h": 0,
     "n": 3
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "away",
+  "outs": 3,
+  "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Tyler Phillips",
   "rhe_away": [
    1,
    4,
@@ -289,8 +293,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 56.0,
-  "wp_home": 44.0
+  "wp_away": 53.199999999999996,
+  "wp_home": 46.800000000000004
  },
  "1cc251b3308daacf4f549c56ad233607": {
   "abstract": "Final",
@@ -2674,14 +2678,14 @@
   "away_p": "Eduardo Rodriguez",
   "away_p_hand": "L",
   "away_r": 0,
-  "cur_batter": "Lars Nootbaar",
+  "cur_batter": "Ketel Marte",
   "cur_pitcher": "Tanner Gordon",
   "game_pk": 824298,
   "half": "Top",
   "home_p": "Tanner Gordon",
   "home_p_hand": "R",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "innings": [
    {
@@ -2695,7 +2699,7 @@
   "pitch_side": "home",
   "rhe_away": [
    0,
-   0,
+   1,
    0
   ],
   "rhe_home": [
@@ -2704,25 +2708,27 @@
    0
   ],
   "save_p": null,
-  "status": "Warmup",
-  "warmup": true,
+  "status": "In Progress",
+  "warmup": false,
   "win_p": null,
-  "win_side": null
+  "win_side": null,
+  "wp_away": 53.599999999999994,
+  "wp_home": 46.400000000000006
  },
  "ca2c6af9c65d99ec92728e8b8c76fae9": {
   "abstract": "Live",
   "away_p": "Kyle Leahy",
   "away_p_hand": "R",
   "away_r": 1,
-  "cur_batter": "Henry Davis",
-  "cur_pitcher": "Ryne Stanek",
+  "cur_batter": "Jos\u00e9 Ferm\u00edn",
+  "cur_pitcher": "Mason Montgomery",
   "game_pk": 823326,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Paul Skenes",
   "home_p_hand": "R",
   "home_r": 2,
   "in_play": true,
-  "inning": 8,
+  "inning": 9,
   "innings": [
    {
     "a": 1,
@@ -2763,11 +2769,18 @@
     "a": 0,
     "h": 1,
     "n": 8
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 9
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "away",
+  "outs": 1,
+  "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Ryne Stanek",
   "rhe_away": [
    1,
    5,
@@ -2783,8 +2796,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 15.0,
-  "wp_home": 85.0
+  "wp_away": 9.200000000000003,
+  "wp_home": 90.8
  },
  "cc3886440708c8649f6f878183416628": {
   "abstract": "Final",
@@ -3133,7 +3146,7 @@
   "away_p": "David Sandlin",
   "away_p_hand": "R",
   "away_r": 7,
-  "cur_batter": "Miguel Vargas",
+  "cur_batter": "Tristan Peters",
   "cur_pitcher": "Alex Lange",
   "game_pk": 824059,
   "half": "Top",
@@ -3167,11 +3180,9 @@
   "lose_p": null,
   "outs": 0,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "David Sandlin",
   "rhe_away": [
    7,
-   8,
+   9,
    0
   ],
   "rhe_home": [
@@ -3184,8 +3195,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 97.0,
-  "wp_home": 3.0
+  "wp_away": 98.5,
+  "wp_home": 1.5
  },
  "fce8a3b6e5ec9490fc276cdafa8beed8": {
   "abstract": "Final",
