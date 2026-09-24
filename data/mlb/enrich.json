@@ -198,10 +198,10 @@
   "away_p": "Zac Thornton",
   "away_p_hand": "L",
   "away_r": 1,
-  "cur_batter": "Bo Bichette",
-  "cur_pitcher": "Kumar Rocker",
+  "cur_batter": "Danny Jansen",
+  "cur_pitcher": "Zac Thornton",
   "game_pk": 822842,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Kumar Rocker",
   "home_p_hand": "R",
   "home_r": 2,
@@ -219,14 +219,16 @@
     "n": 2
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 3
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Kumar Rocker",
   "rhe_away": [
    1,
    3,
@@ -242,18 +244,18 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 41.0,
-  "wp_home": 59.0
+  "wp_away": 43.7,
+  "wp_home": 56.3
  },
  "1b1dbd4e7d948a1910402a33850d77c8": {
   "abstract": "Live",
   "away_p": "Tyler Phillips",
   "away_p_hand": "R",
   "away_r": 1,
-  "cur_batter": "Deyvison De Los Santos",
-  "cur_pitcher": "Matthew Boyd",
+  "cur_batter": "Nico Hoerner",
+  "cur_pitcher": "Tyler Phillips",
   "game_pk": 824623,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Matthew Boyd",
   "home_p_hand": "L",
   "home_r": 0,
@@ -276,14 +278,16 @@
     "n": 3
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 4
    }
   ],
   "lose_p": null,
   "outs": 0,
-  "pitch_side": "home",
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Matthew Boyd",
   "rhe_away": [
    1,
    5,
@@ -299,8 +303,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 65.9,
-  "wp_home": 34.1
+  "wp_away": 66.3,
+  "wp_home": 33.7
  },
  "1cc251b3308daacf4f549c56ad233607": {
   "abstract": "Final",
@@ -1487,29 +1491,35 @@
   "abstract": "Preview",
   "away_p": "Shane Drohan",
   "away_p_hand": "L",
-  "away_r": null,
-  "cur_batter": null,
-  "cur_pitcher": null,
+  "away_r": 0,
+  "cur_batter": "Garrett Mitchell",
+  "cur_pitcher": "Andrew Painter",
   "game_pk": 823411,
-  "half": null,
+  "half": "Top",
   "home_p": "Andrew Painter",
   "home_p_hand": "R",
-  "home_r": null,
+  "home_r": 0,
   "in_play": false,
-  "inning": null,
-  "innings": [],
+  "inning": 1,
+  "innings": [
+   {
+    "a": null,
+    "h": null,
+    "n": 1
+   }
+  ],
   "lose_p": null,
-  "outs": null,
-  "pitch_side": "away",
+  "outs": 0,
+  "pitch_side": "home",
   "rhe_away": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "rhe_home": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "save_p": null,
   "status": "Pre-Game",
@@ -2683,8 +2693,8 @@
   "abstract": "Live",
   "away_p": "Eduardo Rodriguez",
   "away_p_hand": "L",
-  "away_r": 4,
-  "cur_batter": "Pavin Smith",
+  "away_r": 6,
+  "cur_batter": "James McCann",
   "cur_pitcher": "Tanner Gordon",
   "game_pk": 824298,
   "half": "Top",
@@ -2695,7 +2705,7 @@
   "inning": 1,
   "innings": [
    {
-    "a": 4,
+    "a": 6,
     "h": null,
     "n": 1
    }
@@ -2704,8 +2714,8 @@
   "outs": 0,
   "pitch_side": "home",
   "rhe_away": [
-   4,
-   4,
+   6,
+   5,
    0
   ],
   "rhe_home": [
@@ -2718,8 +2728,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 81.7,
-  "wp_home": 18.3
+  "wp_away": 91.6,
+  "wp_home": 8.4
  },
  "ca2c6af9c65d99ec92728e8b8c76fae9": {
   "abstract": "Final",
@@ -2796,7 +2806,7 @@
    0
   ],
   "save_p": "Mason Montgomery",
-  "status": "Game Over",
+  "status": "Final",
   "warmup": false,
   "win_p": "Luke Weaver",
   "win_side": "home"
@@ -2885,29 +2895,35 @@
   "abstract": "Preview",
   "away_p": "Daniel Espino",
   "away_p_hand": "R",
-  "away_r": null,
-  "cur_batter": null,
-  "cur_pitcher": null,
+  "away_r": 0,
+  "cur_batter": "Steven Kwan",
+  "cur_pitcher": "Ranger Suarez",
   "game_pk": 824707,
-  "half": null,
+  "half": "Top",
   "home_p": "Ranger Suarez",
   "home_p_hand": "L",
-  "home_r": null,
+  "home_r": 0,
   "in_play": false,
-  "inning": null,
-  "innings": [],
+  "inning": 1,
+  "innings": [
+   {
+    "a": null,
+    "h": null,
+    "n": 1
+   }
+  ],
   "lose_p": null,
-  "outs": null,
-  "pitch_side": "away",
+  "outs": 0,
+  "pitch_side": "home",
   "rhe_away": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "rhe_home": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "save_p": null,
   "status": "Pre-Game",
@@ -3148,15 +3164,15 @@
   "away_p": "David Sandlin",
   "away_p_hand": "R",
   "away_r": 8,
-  "cur_batter": "Michael Massey",
-  "cur_pitcher": "David Sandlin",
+  "cur_batter": "Braden Montgomery",
+  "cur_pitcher": "Jose Cuas",
   "game_pk": 824059,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Randy Dobnak",
   "home_p_hand": "R",
   "home_r": 1,
   "in_play": true,
-  "inning": 4,
+  "inning": 5,
   "innings": [
    {
     "a": 3,
@@ -3177,13 +3193,18 @@
     "a": 2,
     "h": 1,
     "n": 4
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 5
    }
   ],
   "lose_p": null,
   "outs": 0,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "pitcher_changed": true,
-  "prev_pitcher": "Alex Lange",
+  "prev_pitcher": "David Sandlin",
   "rhe_away": [
    8,
    9,
@@ -3199,8 +3220,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 96.4,
-  "wp_home": 3.5999999999999996
+  "wp_away": 97.6,
+  "wp_home": 2.4
  },
  "fce8a3b6e5ec9490fc276cdafa8beed8": {
   "abstract": "Final",
