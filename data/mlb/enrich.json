@@ -779,7 +779,7 @@
   "rhe_away": [
    0,
    1,
-   1
+   0
   ],
   "rhe_home": [
    2,
@@ -990,29 +990,35 @@
   "abstract": "Preview",
   "away_p": "Grayson Rodriguez",
   "away_p_hand": "R",
-  "away_r": null,
-  "cur_batter": null,
-  "cur_pitcher": null,
+  "away_r": 0,
+  "cur_batter": "Zach Neto",
+  "cur_pitcher": "Bryan Woo",
   "game_pk": 823087,
-  "half": null,
+  "half": "Top",
   "home_p": "Bryan Woo",
   "home_p_hand": "R",
-  "home_r": null,
+  "home_r": 0,
   "in_play": false,
-  "inning": null,
-  "innings": [],
+  "inning": 1,
+  "innings": [
+   {
+    "a": null,
+    "h": null,
+    "n": 1
+   }
+  ],
   "lose_p": null,
-  "outs": null,
-  "pitch_side": "away",
+  "outs": 0,
+  "pitch_side": "home",
   "rhe_away": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "rhe_home": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "save_p": null,
   "status": "Pre-Game",
@@ -1573,14 +1579,14 @@
   "away_p": "Shane Drohan",
   "away_p_hand": "L",
   "away_r": 0,
-  "cur_batter": "Garrett Mitchell",
+  "cur_batter": "William Contreras",
   "cur_pitcher": "Andrew Painter",
   "game_pk": 823411,
   "half": "Top",
   "home_p": "Andrew Painter",
   "home_p_hand": "R",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "innings": [
    {
@@ -1590,7 +1596,7 @@
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 2,
   "pitch_side": "home",
   "rhe_away": [
    0,
@@ -1603,10 +1609,12 @@
    0
   ],
   "save_p": null,
-  "status": "Warmup",
-  "warmup": true,
+  "status": "In Progress",
+  "warmup": false,
   "win_p": null,
-  "win_side": null
+  "win_side": null,
+  "wp_away": 46.199999999999996,
+  "wp_home": 53.800000000000004
  },
  "78fdc82ac76963c18badf5271be59870": {
   "abstract": "Preview",
@@ -1898,7 +1906,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -2187,7 +2195,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -2951,15 +2959,15 @@
   "away_p": "Eduardo Rodriguez",
   "away_p_hand": "L",
   "away_r": 12,
-  "cur_batter": "Kyle Karros",
-  "cur_pitcher": "Taylor Clarke",
+  "cur_batter": "Ryan Waldschmidt",
+  "cur_pitcher": "Jordan Romano",
   "game_pk": 824298,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Tanner Gordon",
   "home_p_hand": "R",
   "home_r": 8,
   "in_play": true,
-  "inning": 8,
+  "inning": 9,
   "innings": [
    {
     "a": 6,
@@ -3000,11 +3008,18 @@
     "a": 0,
     "h": 2,
     "n": 8
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 9
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "away",
+  "outs": 1,
+  "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Taylor Clarke",
   "rhe_away": [
    12,
    17,
@@ -3020,8 +3035,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 95.7,
-  "wp_home": 4.3
+  "wp_away": 98.3,
+  "wp_home": 1.7000000000000002
  },
  "ca2c6af9c65d99ec92728e8b8c76fae9": {
   "abstract": "Final",
