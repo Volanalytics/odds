@@ -591,10 +591,10 @@
   "away_p": "Grayson Rodriguez",
   "away_p_hand": "R",
   "away_r": 1,
-  "cur_batter": "Bryce Teodosio",
-  "cur_pitcher": "Bryan Woo",
+  "cur_batter": "Julio Rodr\u00edguez",
+  "cur_pitcher": "Grayson Rodriguez",
   "game_pk": 823087,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Bryan Woo",
   "home_p_hand": "R",
   "home_r": 0,
@@ -613,8 +613,10 @@
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Bryan Woo",
   "rhe_away": [
    1,
    3,
@@ -630,8 +632,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 57.800000000000004,
-  "wp_home": 42.199999999999996
+  "wp_away": 55.7,
+  "wp_home": 44.3
  },
  "4e1d4c17ae27eeb2388a146c248b5fb6": {
   "abstract": "Final",
@@ -1176,7 +1178,7 @@
    0
   ],
   "save_p": "Emilio Pag\u00e1n",
-  "status": "Game Over",
+  "status": "Final",
   "warmup": false,
   "win_p": "Connor Phillips",
   "win_side": "away"
@@ -1894,7 +1896,7 @@
   "home_p": "Tyler Glasnow",
   "home_p_hand": "R",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "innings": [
    {
@@ -1917,10 +1919,12 @@
    0
   ],
   "save_p": null,
-  "status": "Warmup",
-  "warmup": true,
+  "status": "In Progress",
+  "warmup": false,
   "win_p": null,
-  "win_side": null
+  "win_side": null,
+  "wp_away": 50.0,
+  "wp_home": 50.0
  },
  "a5e0deb6f51b7edebbd82d0eaf966294": {
   "abstract": "Final",
@@ -2681,10 +2685,10 @@
   "away_p": "Peter Lambert",
   "away_p_hand": "R",
   "away_r": 3,
-  "cur_batter": "Jeff McNeil",
+  "cur_batter": "Donovan Walton",
   "cur_pitcher": "Peter Lambert",
   "game_pk": 824950,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Mason Barnett",
   "home_p_hand": "R",
   "home_r": 0,
@@ -2703,10 +2707,8 @@
    }
   ],
   "lose_p": null,
-  "outs": 3,
+  "outs": 0,
   "pitch_side": "away",
-  "pitcher_changed": true,
-  "prev_pitcher": "Mason Barnett",
   "rhe_away": [
    3,
    3,
@@ -2714,7 +2716,7 @@
   ],
   "rhe_home": [
    0,
-   1,
+   2,
    0
   ],
   "save_p": null,
@@ -2722,8 +2724,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 75.4,
-  "wp_home": 24.6
+  "wp_away": 65.0,
+  "wp_home": 35.0
  },
  "db3b790ee721c10b3644dbeef61f370c": {
   "abstract": "Final",
@@ -2789,8 +2791,6 @@
   "lose_p": "Steven Matz",
   "outs": 3,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "Steven Matz",
   "rhe_away": [
    4,
    9,
@@ -2802,7 +2802,7 @@
    2
   ],
   "save_p": null,
-  "status": "Game Over",
+  "status": "Final",
   "warmup": false,
   "win_p": "Bradley Hanner",
   "win_side": "home"
