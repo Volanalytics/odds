@@ -587,7 +587,7 @@
   "win_side": null
  },
  "4984d3511b9db396e1a2c120b9623bbb": {
-  "abstract": "Preview",
+  "abstract": "Live",
   "away_p": "Grayson Rodriguez",
   "away_p_hand": "R",
   "away_r": 0,
@@ -621,8 +621,8 @@
    0
   ],
   "save_p": null,
-  "status": "Pre-Game",
-  "warmup": false,
+  "status": "Warmup",
+  "warmup": true,
   "win_p": null,
   "win_side": null
  },
@@ -1099,15 +1099,15 @@
   "away_p": "Brady Singer",
   "away_p_hand": "R",
   "away_r": 7,
-  "cur_batter": "Mauricio Dub\u00f3n",
-  "cur_pitcher": "Connor Phillips",
+  "cur_batter": "Carlos Jorge",
+  "cur_pitcher": "AJ Smith-Shawver",
   "game_pk": 824866,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Tyler Mahle",
   "home_p_hand": "R",
   "home_r": 6,
   "in_play": true,
-  "inning": 6,
+  "inning": 7,
   "innings": [
    {
     "a": 1,
@@ -1136,13 +1136,20 @@
    },
    {
     "a": 2,
-    "h": null,
+    "h": 0,
     "n": 6
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 7
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "away",
+  "outs": 0,
+  "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Connor Phillips",
   "rhe_away": [
    7,
    7,
@@ -1158,8 +1165,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 63.2,
-  "wp_home": 36.8
+  "wp_away": 62.3,
+  "wp_home": 37.7
  },
  "7a8ac2f452e72170b3aef83e4cb8e28b": {
   "abstract": "Final",
@@ -1377,7 +1384,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -1571,7 +1578,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -2577,18 +2584,18 @@
   "win_side": "home"
  },
  "d0e9c7cf726e88320154be5ef2ccf0a1": {
-  "abstract": "Live",
+  "abstract": "Final",
   "away_p": "Daniel Espino",
   "away_p_hand": "R",
   "away_r": 1,
-  "cur_batter": "Wilyer Abreu",
+  "cur_batter": "Ceddanne Rafaela",
   "cur_pitcher": "Cade Smith",
   "game_pk": 824707,
   "half": "Bottom",
   "home_p": "Ranger Suarez",
   "home_p_hand": "L",
   "home_r": 0,
-  "in_play": true,
+  "in_play": false,
   "inning": 9,
   "innings": [
    {
@@ -2633,15 +2640,13 @@
    },
    {
     "a": 0,
-    "h": null,
+    "h": 0,
     "n": 9
    }
   ],
-  "lose_p": null,
-  "outs": 0,
+  "lose_p": "Ranger Suarez",
+  "outs": 3,
   "pitch_side": "away",
-  "pitcher_changed": true,
-  "prev_pitcher": "Raymond Burgos",
   "rhe_away": [
    1,
    4,
@@ -2652,16 +2657,14 @@
    2,
    1
   ],
-  "save_p": null,
-  "status": "In Progress",
+  "save_p": "Cade Smith",
+  "status": "Game Over",
   "warmup": false,
-  "win_p": null,
-  "win_side": "away",
-  "wp_away": 79.6,
-  "wp_home": 20.4
+  "win_p": "Joey Cantillo",
+  "win_side": "away"
  },
  "d1094cf64d0cccf98c76920fd2548c38": {
-  "abstract": "Preview",
+  "abstract": "Live",
   "away_p": "Peter Lambert",
   "away_p_hand": "R",
   "away_r": 0,
@@ -2695,8 +2698,8 @@
    0
   ],
   "save_p": null,
-  "status": "Pre-Game",
-  "warmup": false,
+  "status": "Warmup",
+  "warmup": true,
   "win_p": null,
   "win_side": null
  },
@@ -2705,10 +2708,10 @@
   "away_p": "Ian Seymour",
   "away_p_hand": "L",
   "away_r": 4,
-  "cur_batter": "Ben Rice",
+  "cur_batter": "Amed Rosario",
   "cur_pitcher": "Jake Woodford",
   "game_pk": 823493,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Cam Schlittler",
   "home_p_hand": "R",
   "home_r": 1,
@@ -2752,10 +2755,8 @@
    }
   ],
   "lose_p": null,
-  "outs": 3,
+  "outs": 0,
   "pitch_side": "away",
-  "pitcher_changed": true,
-  "prev_pitcher": "Luis Gil",
   "rhe_away": [
    4,
    7,
@@ -2767,12 +2768,12 @@
    2
   ],
   "save_p": null,
-  "status": "In Progress",
+  "status": "Player challenge",
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 89.1,
-  "wp_home": 10.9
+  "wp_away": 82.1,
+  "wp_home": 17.9
  },
  "e47efe97f629cae0287ca6f3ea6d6794": {
   "abstract": "Preview",
