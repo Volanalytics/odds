@@ -559,7 +559,7 @@
   "win_side": "home"
  },
  "2d3d378044cc538b0a3d77acaacd15a1": {
-  "abstract": "Preview",
+  "abstract": "Live",
   "away_p": "Ray Kerr",
   "away_p_hand": "L",
   "away_r": 0,
@@ -593,8 +593,8 @@
    0
   ],
   "save_p": null,
-  "status": "Pre-Game",
-  "warmup": false,
+  "status": "Warmup",
+  "warmup": true,
   "win_p": null,
   "win_side": null
  },
@@ -1179,14 +1179,14 @@
   "away_p": "Freddy Peralta",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Yandy D\u00edaz",
+  "cur_batter": "Junior Caminero",
   "cur_pitcher": "Cristopher S\u00e1nchez",
   "game_pk": 823409,
   "half": "Top",
   "home_p": "Cristopher S\u00e1nchez",
   "home_p_hand": "L",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "innings": [
    {
@@ -1196,7 +1196,7 @@
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 2,
   "pitch_side": "home",
   "rhe_away": [
    0,
@@ -1209,10 +1209,12 @@
    0
   ],
   "save_p": null,
-  "status": "Warmup",
-  "warmup": true,
+  "status": "In Progress",
+  "warmup": false,
   "win_p": null,
-  "win_side": null
+  "win_side": null,
+  "wp_away": 46.199999999999996,
+  "wp_home": 53.800000000000004
  },
  "73db56fa7f40cff18d189c5d7dc7d903": {
   "abstract": "Final",
@@ -1591,7 +1593,7 @@
   "home_p": "Andrew Alvarez",
   "home_p_hand": "L",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "innings": [
    {
@@ -1614,10 +1616,12 @@
    0
   ],
   "save_p": null,
-  "status": "Warmup",
-  "warmup": true,
+  "status": "In Progress",
+  "warmup": false,
   "win_p": null,
-  "win_side": null
+  "win_side": null,
+  "wp_away": 50.0,
+  "wp_home": 50.0
  },
  "81f539754930db6ffbd116ca2d30ee9c": {
   "abstract": "Final",
@@ -2760,8 +2764,8 @@
   "away_p": "David Peterson",
   "away_p_hand": "L",
   "away_r": 0,
-  "cur_batter": "Andruw Monasterio",
-  "cur_pitcher": "David Peterson",
+  "cur_batter": "Nico Hoerner",
+  "cur_pitcher": "Brayan Bello",
   "game_pk": 824706,
   "half": "Bottom",
   "home_p": "Brayan Bello",
@@ -2787,13 +2791,15 @@
    },
    {
     "a": 0,
-    "h": null,
+    "h": 0,
     "n": 4
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "away",
+  "outs": 3,
+  "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "David Peterson",
   "rhe_away": [
    0,
    3,
@@ -2809,8 +2815,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 46.699999999999996,
-  "wp_home": 53.300000000000004
+  "wp_away": 41.5,
+  "wp_home": 58.5
  },
  "c2e9498aaeb076eb5c7ec70719c85b49": {
   "abstract": "Final",
@@ -3489,8 +3495,8 @@
   "cur_pitcher": null,
   "game_pk": 823248,
   "half": null,
-  "home_p": null,
-  "home_p_hand": null,
+  "home_p": "Casey Mize",
+  "home_p_hand": "R",
   "home_r": null,
   "in_play": false,
   "inning": null,
