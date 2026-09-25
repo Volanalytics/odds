@@ -1157,10 +1157,10 @@
   "away_rank": 99,
   "away_short": "Navy",
   "city": "Birmingham",
-  "clock": "13:21",
+  "clock": "12:22",
   "conf_comp": true,
-  "detail": "13:21 - 1st",
-  "down": null,
+  "detail": "12:22 - 1st",
+  "down": "2nd & 4 at NAVY 21",
   "espn_id": "401862778",
   "final": false,
   "home_abbr": "UAB",
@@ -1168,7 +1168,20 @@
   "home_rank": 99,
   "home_short": "UAB",
   "in_play": true,
-  "leaders": [],
+  "leaders": [
+   {
+    "cat": "PASS",
+    "team": "home",
+    "val": "1, 0 YDS",
+    "who": "R. Burton"
+   },
+   {
+    "cat": "RUSH",
+    "team": "home",
+    "val": "2 CAR, 17 YDS",
+    "who": "J. Simpkins"
+   }
+  ],
   "line_away": [
    0.0
   ],
@@ -1177,9 +1190,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "NAVY 21",
   "state": "AL",
   "status": "In Progress",
   "venue": "Protective Stadium"
@@ -1382,10 +1395,10 @@
   "away_rank": 99,
   "away_short": "Howard",
   "city": "Piscataway",
-  "clock": "12:21",
+  "clock": "10:10",
   "conf_comp": false,
-  "detail": "12:21 - 1st",
-  "down": null,
+  "detail": "10:10 - 1st",
+  "down": "1st & 10 at RUTG 23",
   "espn_id": "401858468",
   "final": false,
   "home_abbr": "RUTG",
@@ -1421,9 +1434,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "RUTG 23",
   "state": "NJ",
   "status": "In Progress",
   "venue": "SHI Stadium"
@@ -4800,14 +4813,14 @@
  },
  "d9a781a64fc2c4b45290db32b5ec3f20": {
   "away_abbr": "ARMY",
-  "away_r": "14",
+  "away_r": "21",
   "away_rank": 99,
   "away_short": "Army",
   "city": "Philadelphia",
-  "clock": "1:49",
+  "clock": "1:15",
   "conf_comp": true,
-  "detail": "1:49 - 4th",
-  "down": "1st & Goal at TEM 3",
+  "detail": "1:15 - 4th",
+  "down": "2nd & 1 at ARMY 34",
   "espn_id": "401862779",
   "final": false,
   "home_abbr": "TEM",
@@ -4819,13 +4832,13 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "8/15, 215 YDS, 2 TD",
+    "val": "9/16, 235 YDS, 2 TD",
     "who": "A. Sheppard"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "21 CAR, 101 YDS, 2 TD",
+    "val": "22 CAR, 104 YDS, 3 TD",
     "who": "C. Hellums"
    },
    {
@@ -4839,7 +4852,7 @@
    7.0,
    0.0,
    7.0,
-   0.0
+   7.0
   ],
   "line_home": [
    7.0,
@@ -4849,9 +4862,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
-  "redzone": true,
-  "spot": "TEM 3",
+  "poss": "home",
+  "redzone": false,
+  "spot": "ARMY 34",
   "state": "PA",
   "status": "In Progress",
   "venue": "Lincoln Financial Field"
