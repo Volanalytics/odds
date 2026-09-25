@@ -883,7 +883,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -2760,10 +2760,10 @@
   "away_p": "David Peterson",
   "away_p_hand": "L",
   "away_r": 0,
-  "cur_batter": "Carson Kelly",
-  "cur_pitcher": "Brayan Bello",
+  "cur_batter": "Jarren Duran",
+  "cur_pitcher": "David Peterson",
   "game_pk": 824706,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Brayan Bello",
   "home_p_hand": "R",
   "home_r": 0,
@@ -2776,14 +2776,16 @@
     "n": 1
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 2
    }
   ],
   "lose_p": null,
   "outs": 2,
-  "pitch_side": "home",
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Brayan Bello",
   "rhe_away": [
    0,
    2,
@@ -2799,8 +2801,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 46.0,
-  "wp_home": 54.0
+  "wp_away": 48.9,
+  "wp_home": 51.1
  },
  "c2e9498aaeb076eb5c7ec70719c85b49": {
   "abstract": "Final",
@@ -3434,32 +3436,38 @@
   "abstract": "Preview",
   "away_p": "Tarik Skubal",
   "away_p_hand": "L",
-  "away_r": null,
-  "cur_batter": null,
-  "cur_pitcher": null,
+  "away_r": 0,
+  "cur_batter": "Shohei Ohtani",
+  "cur_pitcher": "Yunior Marte",
   "game_pk": 823167,
-  "half": null,
+  "half": "Top",
   "home_p": "Yunior Marte",
   "home_p_hand": "R",
-  "home_r": null,
+  "home_r": 0,
   "in_play": false,
-  "inning": null,
-  "innings": [],
+  "inning": 1,
+  "innings": [
+   {
+    "a": null,
+    "h": null,
+    "n": 1
+   }
+  ],
   "lose_p": null,
-  "outs": null,
+  "outs": 0,
   "pitch_side": "home",
   "rhe_away": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "rhe_home": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "save_p": null,
-  "status": "Scheduled",
+  "status": "Pre-Game",
   "warmup": false,
   "win_p": null,
   "win_side": null
@@ -3481,7 +3489,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
