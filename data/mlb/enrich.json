@@ -591,10 +591,10 @@
   "away_p": "Grayson Rodriguez",
   "away_p_hand": "R",
   "away_r": 6,
-  "cur_batter": "Denzer Guzman",
-  "cur_pitcher": "Hoby Milner",
+  "cur_batter": "Lazaro Montes",
+  "cur_pitcher": "Ryan Watson",
   "game_pk": 823087,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Bryan Woo",
   "home_p_hand": "R",
   "home_r": 4,
@@ -642,14 +642,16 @@
     "n": 8
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 9
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Hoby Milner",
   "rhe_away": [
    6,
    9,
@@ -665,8 +667,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 91.0,
-  "wp_home": 9.0
+  "wp_away": 90.5,
+  "wp_home": 9.5
  },
  "4e1d4c17ae27eeb2388a146c248b5fb6": {
   "abstract": "Final",
@@ -1922,10 +1924,10 @@
   "away_p": "Nick Pivetta",
   "away_p_hand": "R",
   "away_r": 4,
-  "cur_batter": "Dustin Harris",
-  "cur_pitcher": "Justin Wrobleski",
+  "cur_batter": "Hunter Feduccia",
+  "cur_pitcher": "Jason Adam",
   "game_pk": 823895,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Tyler Glasnow",
   "home_p_hand": "R",
   "home_r": 0,
@@ -1969,8 +1971,10 @@
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Justin Wrobleski",
   "rhe_away": [
    4,
    6,
@@ -1986,8 +1990,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 89.1,
-  "wp_home": 10.9
+  "wp_away": 92.9,
+  "wp_home": 7.1
  },
  "a5e0deb6f51b7edebbd82d0eaf966294": {
   "abstract": "Final",
@@ -2812,18 +2816,18 @@
   "win_side": "away"
  },
  "d1094cf64d0cccf98c76920fd2548c38": {
-  "abstract": "Live",
+  "abstract": "Final",
   "away_p": "Peter Lambert",
   "away_p_hand": "R",
   "away_r": 7,
-  "cur_batter": "Henry Bolte",
+  "cur_batter": "Shea Langeliers",
   "cur_pitcher": "Bryan Abreu",
   "game_pk": 824950,
   "half": "Bottom",
   "home_p": "Mason Barnett",
   "home_p_hand": "R",
   "home_r": 5,
-  "in_play": true,
+  "in_play": false,
   "inning": 9,
   "innings": [
    {
@@ -2868,15 +2872,13 @@
    },
    {
     "a": 1,
-    "h": null,
+    "h": 0,
     "n": 9
    }
   ],
-  "lose_p": null,
-  "outs": 0,
+  "lose_p": "Scott Blewett",
+  "outs": 3,
   "pitch_side": "away",
-  "pitcher_changed": true,
-  "prev_pitcher": "Elvis Alvarado",
   "rhe_away": [
    7,
    10,
@@ -2884,16 +2886,14 @@
   ],
   "rhe_home": [
    5,
-   10,
+   11,
    0
   ],
-  "save_p": null,
-  "status": "In Progress",
+  "save_p": "Bryan Abreu",
+  "status": "Game Over",
   "warmup": false,
-  "win_p": null,
-  "win_side": "away",
-  "wp_away": 90.5,
-  "wp_home": 9.5
+  "win_p": "Miguel Ullola",
+  "win_side": "away"
  },
  "db3b790ee721c10b3644dbeef61f370c": {
   "abstract": "Final",
