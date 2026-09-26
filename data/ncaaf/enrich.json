@@ -101,14 +101,14 @@
   "away_rank": 99,
   "away_short": "Bucknell",
   "city": "Pittsburgh",
-  "clock": "4:02",
+  "clock": "2:02",
   "conf_comp": false,
-  "detail": "4:02 - 2nd",
-  "down": "3rd & 2 at PITT 48",
+  "detail": "2:02 - 2nd",
+  "down": null,
   "espn_id": "401858236",
   "final": false,
   "home_abbr": "PITT",
-  "home_r": "21",
+  "home_r": "28",
   "home_rank": 99,
   "home_short": "Pitt",
   "in_play": true,
@@ -116,20 +116,20 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "17/25, 181 YDS, 3 TD",
+    "val": "20/28, 235 YDS, 4 TD",
     "who": "M. Heintschel"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "6 CAR, 34 YDS",
-    "who": "D. Ferguson Jr."
+    "val": "3 CAR, 33 YDS",
+    "who": "M. Heintschel"
    },
    {
     "cat": "REC",
     "team": "home",
-    "val": "2 REC, 40 YDS",
-    "who": "C. Hicks"
+    "val": "6 REC, 57 YDS, 1 TD",
+    "who": "C. Kent"
    }
   ],
   "line_away": [
@@ -138,13 +138,13 @@
   ],
   "line_home": [
    14.0,
-   7.0
+   14.0
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "PITT 48",
+  "spot": null,
   "state": "PA",
   "status": "In Progress",
   "venue": "Acrisure Stadium"
@@ -635,10 +635,10 @@
   "away_rank": 99,
   "away_short": "South Alabama",
   "city": "Lexington",
-  "clock": "5:19",
+  "clock": "2:35",
   "conf_comp": false,
-  "detail": "5:19 - 1st",
-  "down": "3rd & 5 at USA 49",
+  "detail": "2:35 - 1st",
+  "down": "2nd & 9 at USA 10",
   "espn_id": "401864576",
   "final": false,
   "home_abbr": "UK",
@@ -650,7 +650,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "4/8, 33 YDS",
+    "val": "6/10, 64 YDS",
     "who": "K. Minchey"
    },
    {
@@ -675,8 +675,8 @@
   "neutral": false,
   "period": 1,
   "poss": "home",
-  "redzone": false,
-  "spot": "USA 49",
+  "redzone": true,
+  "spot": "USA 10",
   "state": "KY",
   "status": "In Progress",
   "venue": "Kroger Field"
@@ -687,9 +687,9 @@
   "away_rank": 99,
   "away_short": "UNLV",
   "city": "Akron",
-  "clock": "1:57",
+  "clock": "1:07",
   "conf_comp": false,
-  "detail": "1:57 - 2nd",
+  "detail": "1:07 - 2nd",
   "down": null,
   "espn_id": "401864512",
   "final": false,
@@ -708,7 +708,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "11 CAR, 55 YDS, 1 TD",
+    "val": "13 CAR, 62 YDS, 1 TD",
     "who": "J. Gant"
    },
    {
@@ -729,7 +729,7 @@
   "neutral": false,
   "period": 2,
   "poss": null,
-  "redzone": false,
+  "redzone": true,
   "spot": null,
   "state": "OH",
   "status": "In Progress",
@@ -741,10 +741,10 @@
   "away_rank": 99,
   "away_short": "Lindenwood",
   "city": "Ypsilanti",
-  "clock": "9:58",
+  "clock": "8:19",
   "conf_comp": false,
-  "detail": "9:58 - 1st",
-  "down": "1st & 10 at LIN 25",
+  "detail": "8:19 - 1st",
+  "down": null,
   "espn_id": "401866427",
   "final": false,
   "home_abbr": "EMU",
@@ -782,7 +782,7 @@
   "period": 1,
   "poss": null,
   "redzone": false,
-  "spot": "LIN 25",
+  "spot": null,
   "state": "MI",
   "status": "In Progress",
   "venue": "Rynearson Stadium"
@@ -2407,10 +2407,10 @@
   "away_rank": 99,
   "away_short": "Sam Houston",
   "city": "Lubbock",
-  "clock": "8:04",
+  "clock": "4:24",
   "conf_comp": false,
-  "detail": "8:04 - 2nd",
-  "down": null,
+  "detail": "4:24 - 2nd",
+  "down": "2nd & 7 at SHSU 23",
   "espn_id": "401856805",
   "final": false,
   "home_abbr": "TTU",
@@ -2427,9 +2427,9 @@
    },
    {
     "cat": "RUSH",
-    "team": "away",
-    "val": "3 CAR, 24 YDS",
-    "who": "L. Locke"
+    "team": "home",
+    "val": "4 CAR, 24 YDS, 1 TD",
+    "who": "C. Dickey"
    },
    {
     "cat": "REC",
@@ -2448,9 +2448,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "SHSU 23",
   "state": "TX",
   "status": "In Progress",
   "venue": "Galaxy Stadium"
@@ -2701,10 +2701,10 @@
   "away_rank": 1,
   "away_short": "Texas",
   "city": "Knoxville",
-  "clock": "10:17",
+  "clock": "8:28",
   "conf_comp": true,
-  "detail": "10:17 - 2nd",
-  "down": null,
+  "detail": "8:28 - 2nd",
+  "down": "1st & 10 at TENN 8",
   "espn_id": "401856704",
   "final": false,
   "home_abbr": "TENN",
@@ -2721,9 +2721,9 @@
    },
    {
     "cat": "RUSH",
-    "team": "home",
-    "val": "7 CAR, 22 YDS",
-    "who": "D. Bishop"
+    "team": "away",
+    "val": "6 CAR, 24 YDS, 1 TD",
+    "who": "R. Brown"
    },
    {
     "cat": "REC",
@@ -2742,9 +2742,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "TENN 8",
   "state": "TN",
   "status": "In Progress",
   "venue": "Neyland Stadium"
@@ -2899,10 +2899,10 @@
   "away_rank": 99,
   "away_short": "Illinois",
   "city": "Columbus",
-  "clock": "7:09",
+  "clock": "4:56",
   "conf_comp": true,
-  "detail": "7:09 - 2nd",
-  "down": "1st & 10 at ILL 23",
+  "detail": "4:56 - 2nd",
+  "down": null,
   "espn_id": "401858465",
   "final": false,
   "home_abbr": "OSU",
@@ -2914,7 +2914,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "13/16, 171 YDS, 2 TD",
+    "val": "15/20, 202 YDS, 3 TD",
     "who": "J. Sayin"
    },
    {
@@ -2926,7 +2926,7 @@
    {
     "cat": "REC",
     "team": "home",
-    "val": "5 REC, 123 YDS, 2 TD",
+    "val": "6 REC, 132 YDS, 3 TD",
     "who": "J. Smith"
    }
   ],
@@ -2940,9 +2940,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
-  "redzone": false,
-  "spot": "ILL 23",
+  "poss": null,
+  "redzone": true,
+  "spot": null,
   "state": "OH",
   "status": "In Progress",
   "venue": "Ohio Stadium"
@@ -3539,10 +3539,10 @@
   "away_rank": 99,
   "away_short": "Colorado",
   "city": "Waco",
-  "clock": "5:02",
+  "clock": "4:21",
   "conf_comp": true,
-  "detail": "5:02 - 2nd",
-  "down": "3rd & 4 at COLO 41",
+  "detail": "4:21 - 2nd",
+  "down": "1st & 10 at BAY 22",
   "espn_id": "401856813",
   "final": false,
   "home_abbr": "BAY",
@@ -3580,9 +3580,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "COLO 41",
+  "spot": "BAY 22",
   "state": "TX",
   "status": "In Progress",
   "venue": "McLane Stadium"
@@ -3689,9 +3689,9 @@
   "away_rank": 99,
   "away_short": "Virginia Tech",
   "city": "Chestnut Hill",
-  "clock": "2:00",
+  "clock": "0:48",
   "conf_comp": true,
-  "detail": "2:00 - 2nd",
+  "detail": "0:48 - 2nd",
   "down": null,
   "espn_id": "401858242",
   "final": false,
@@ -3945,10 +3945,10 @@
   "away_rank": 99,
   "away_short": "Ball State",
   "city": "Kent",
-  "clock": "1:48",
+  "clock": "0:26",
   "conf_comp": true,
-  "detail": "1:48 - 2nd",
-  "down": "1st & 10 at KENT 25",
+  "detail": "0:26 - 2nd",
+  "down": "2nd & 10 at BALL 30",
   "espn_id": "401866425",
   "final": false,
   "home_abbr": "KENT",
@@ -3960,7 +3960,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "9/11, 90 YDS, 1 TD",
+    "val": "10/14, 115 YDS, 1 TD",
     "who": "D. DeShields"
    },
    {
@@ -3988,7 +3988,7 @@
   "period": 2,
   "poss": "home",
   "redzone": false,
-  "spot": "KENT 25",
+  "spot": "BALL 30",
   "state": "OH",
   "status": "In Progress",
   "venue": "Zoeller Field at Dix Stadium"
@@ -5161,10 +5161,10 @@
   "away_rank": 99,
   "away_short": "San Diego St",
   "city": "Toledo",
-  "clock": "3:27",
+  "clock": "2:00",
   "conf_comp": false,
-  "detail": "3:27 - 2nd",
-  "down": "3rd & 10 at 50",
+  "detail": "2:00 - 2nd",
+  "down": null,
   "espn_id": "401860893",
   "final": false,
   "home_abbr": "TOL",
@@ -5202,9 +5202,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "50",
+  "spot": null,
   "state": "OH",
   "status": "In Progress",
   "venue": "Glass Bowl"
@@ -5739,13 +5739,13 @@
  },
  "f6b6590d0b66bbb4fcbb391289794963": {
   "away_abbr": "WAKE",
-  "away_r": "10",
+  "away_r": "17",
   "away_rank": 99,
   "away_short": "Wake Forest",
   "city": "Louisville",
-  "clock": "7:17",
+  "clock": "5:49",
   "conf_comp": true,
-  "detail": "7:17 - 2nd",
+  "detail": "5:49 - 2nd",
   "down": null,
   "espn_id": "401858243",
   "final": false,
@@ -5757,9 +5757,9 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "9/11, 105 YDS",
-    "who": "L. Kienholz"
+    "team": "away",
+    "val": "7/12, 162 YDS, 1 TD",
+    "who": "G. Lopez"
    },
    {
     "cat": "RUSH",
@@ -5770,13 +5770,13 @@
    {
     "cat": "REC",
     "team": "away",
-    "val": "4 REC, 62 YDS",
+    "val": "5 REC, 139 YDS, 1 TD",
     "who": "C. Hernandez"
    }
   ],
   "line_away": [
    3.0,
-   7.0
+   14.0
   ],
   "line_home": [
    7.0,
@@ -5989,14 +5989,14 @@
   "away_rank": 99,
   "away_short": "Colorado St",
   "city": "San Antonio",
-  "clock": "11:42",
+  "clock": "6:48",
   "conf_comp": false,
-  "detail": "11:42 - 2nd",
-  "down": "4th & 1 at 50",
+  "detail": "6:48 - 2nd",
+  "down": null,
   "espn_id": "401860896",
   "final": false,
   "home_abbr": "UTSA",
-  "home_r": "28",
+  "home_r": "34",
   "home_rank": 99,
   "home_short": "UTSA",
   "in_play": true,
@@ -6004,7 +6004,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "11/17, 193 YDS, 2 TD",
+    "val": "12/18, 197 YDS, 2 TD",
     "who": "O. McCown"
    },
    {
@@ -6026,13 +6026,13 @@
   ],
   "line_home": [
    21.0,
-   7.0
+   13.0
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
-  "redzone": false,
-  "spot": "50",
+  "poss": null,
+  "redzone": true,
+  "spot": null,
   "state": "TX",
   "status": "In Progress",
   "venue": "Alamodome"
