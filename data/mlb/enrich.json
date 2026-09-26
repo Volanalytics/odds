@@ -4,15 +4,15 @@
   "away_p": "Rhett Lowder",
   "away_p_hand": "R",
   "away_r": 3,
-  "cur_batter": "Sean Keys",
-  "cur_pitcher": "Rhett Lowder",
+  "cur_batter": "Eugenio Su\u00e1rez",
+  "cur_pitcher": "John Klein",
   "game_pk": 822759,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Trey Yesavage",
   "home_p_hand": "R",
   "home_r": 0,
   "in_play": true,
-  "inning": 4,
+  "inning": 5,
   "innings": [
    {
     "a": 0,
@@ -31,16 +31,23 @@
    },
    {
     "a": 0,
-    "h": null,
+    "h": 0,
     "n": 4
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 5
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "away",
+  "outs": 0,
+  "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Rhett Lowder",
   "rhe_away": [
    3,
-   4,
+   5,
    0
   ],
   "rhe_home": [
@@ -53,8 +60,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 82.6,
-  "wp_home": 17.4
+  "wp_away": 85.5,
+  "wp_home": 14.499999999999998
  },
  "12c52c4f4de763e9a171ffac0f4f02ef": {
   "abstract": "Final",
@@ -1768,7 +1775,7 @@
   "away_p": "Blake Snell",
   "away_p_hand": "L",
   "away_r": 0,
-  "cur_batter": "Victor Bericoto",
+  "cur_batter": "Brett Harris",
   "cur_pitcher": "Blake Snell",
   "game_pk": 823165,
   "half": "Bottom",
@@ -1794,7 +1801,7 @@
   ],
   "rhe_home": [
    0,
-   0,
+   2,
    0
   ],
   "save_p": null,
@@ -1802,8 +1809,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 49.0,
-  "wp_home": 51.0
+  "wp_away": 45.199999999999996,
+  "wp_home": 54.800000000000004
  },
  "9537e2c00a118edc54c7b2b5ed0c6f55": {
   "abstract": "Final",
@@ -2425,9 +2432,9 @@
   "abstract": "Live",
   "away_p": "Brent Suter",
   "away_p_hand": "L",
-  "away_r": 0,
-  "cur_batter": "Matt Olson",
-  "cur_pitcher": "Jack Ralston",
+  "away_r": 1,
+  "cur_batter": "Otto Lopez",
+  "cur_pitcher": "Brent Suter",
   "game_pk": 823813,
   "half": "Top",
   "home_p": "Jack Ralston",
@@ -2437,17 +2444,19 @@
   "inning": 1,
   "innings": [
    {
-    "a": null,
+    "a": 1,
     "h": null,
     "n": 1
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "home",
+  "outs": 3,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Jack Ralston",
   "rhe_away": [
-   0,
    1,
+   2,
    0
   ],
   "rhe_home": [
@@ -2459,9 +2468,9 @@
   "status": "In Progress",
   "warmup": false,
   "win_p": null,
-  "win_side": null,
-  "wp_away": 55.9,
-  "wp_home": 44.1
+  "win_side": "away",
+  "wp_away": 57.300000000000004,
+  "wp_home": 42.699999999999996
  },
  "c1c95aa0c77e6735bae6602eec2b42be": {
   "abstract": "Final",
@@ -3480,7 +3489,7 @@
    0
   ],
   "save_p": null,
-  "status": "Game Over",
+  "status": "Final",
   "warmup": false,
   "win_p": "Jacob Waguespack",
   "win_side": "home"
