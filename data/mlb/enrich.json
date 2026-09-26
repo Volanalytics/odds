@@ -826,13 +826,13 @@
   "away_p": "Reid Detmers",
   "away_p_hand": "L",
   "away_r": 6,
-  "cur_batter": "Josh Naylor",
-  "cur_pitcher": "Sam Bachman",
+  "cur_batter": "Cole Young",
+  "cur_pitcher": "Tayler Saucedo",
   "game_pk": 823085,
   "half": "Bottom",
   "home_p": "Bryce Miller",
   "home_p_hand": "R",
-  "home_r": 1,
+  "home_r": 2,
   "in_play": true,
   "inning": 8,
   "innings": [
@@ -873,21 +873,23 @@
    },
    {
     "a": 0,
-    "h": 1,
+    "h": 2,
     "n": 8
    }
   ],
   "lose_p": null,
   "outs": 2,
   "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Sam Bachman",
   "rhe_away": [
    6,
    8,
    1
   ],
   "rhe_home": [
-   1,
-   4,
+   2,
+   5,
    1
   ],
   "save_p": null,
@@ -895,8 +897,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 92.1,
-  "wp_home": 7.9
+  "wp_away": 92.5,
+  "wp_home": 7.5
  },
  "6ae37d18d4a5fb4d9c92a8aee3f54186": {
   "abstract": "Final",
@@ -2746,15 +2748,15 @@
   "away_p": "Hunter Brown",
   "away_p_hand": "R",
   "away_r": 5,
-  "cur_batter": "Lawrence Butler",
-  "cur_pitcher": "Logan VanWey",
+  "cur_batter": "Lucas Spence",
+  "cur_pitcher": "Hogan Harris",
   "game_pk": 824947,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Jacob Lopez",
   "home_p_hand": "L",
   "home_r": 6,
   "in_play": true,
-  "inning": 8,
+  "inning": 9,
   "innings": [
    {
     "a": 0,
@@ -2793,13 +2795,20 @@
    },
    {
     "a": 3,
-    "h": null,
+    "h": 0,
     "n": 8
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 9
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "away",
+  "outs": 0,
+  "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Logan VanWey",
   "rhe_away": [
    5,
    5,
@@ -2815,8 +2824,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 11.299999999999997,
-  "wp_home": 88.7
+  "wp_away": 16.5,
+  "wp_home": 83.5
  },
  "e47efe97f629cae0287ca6f3ea6d6794": {
   "abstract": "Final",
@@ -2899,18 +2908,18 @@
   "win_side": "away"
  },
  "eb8b9160f66fc6d5f6bd58bf4a888011": {
-  "abstract": "Live",
+  "abstract": "Final",
   "away_p": "Brandon Pfaadt",
   "away_p_hand": "R",
   "away_r": 11,
-  "cur_batter": "Luis Campusano",
-  "cur_pitcher": "Ryne Nelson",
+  "cur_batter": "Samad Taylor",
+  "cur_pitcher": "Zac Gallen",
   "game_pk": 823248,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Casey Mize",
   "home_p_hand": "R",
   "home_r": 4,
-  "in_play": true,
+  "in_play": false,
   "inning": 9,
   "innings": [
    {
@@ -2955,15 +2964,15 @@
    },
    {
     "a": 0,
-    "h": null,
+    "h": 0,
     "n": 9
    }
   ],
-  "lose_p": null,
+  "lose_p": "Casey Mize",
   "outs": 3,
   "pitch_side": "away",
   "pitcher_changed": true,
-  "prev_pitcher": "Wandy Peralta",
+  "prev_pitcher": "Ryne Nelson",
   "rhe_away": [
    11,
    8,
@@ -2975,12 +2984,10 @@
    0
   ],
   "save_p": null,
-  "status": "In Progress",
+  "status": "Game Over",
   "warmup": false,
-  "win_p": null,
-  "win_side": "away",
-  "wp_away": 99.9,
-  "wp_home": 0.1
+  "win_p": "Brandon Pfaadt",
+  "win_side": "away"
  },
  "eba81e8f90abe50ccdfcee55fe0080b8": {
   "abstract": "Preview",
