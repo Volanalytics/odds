@@ -850,7 +850,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -948,7 +948,7 @@
   "win_side": "away"
  },
  "5e96347a5c09f2be46dc616aa404bf27": {
-  "abstract": "Preview",
+  "abstract": "Live",
   "away_p": "Jose Quintana",
   "away_p_hand": "L",
   "away_r": 0,
@@ -961,7 +961,13 @@
   "home_r": 0,
   "in_play": false,
   "inning": 1,
-  "innings": [],
+  "innings": [
+   {
+    "a": null,
+    "h": null,
+    "n": 1
+   }
+  ],
   "lose_p": null,
   "outs": 0,
   "pitch_side": "home",
@@ -976,8 +982,8 @@
    0
   ],
   "save_p": null,
-  "status": "Pre-Game",
-  "warmup": false,
+  "status": "Warmup",
+  "warmup": true,
   "win_p": null,
   "win_side": null
  },
@@ -1438,7 +1444,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -1819,10 +1825,10 @@
   "away_p": "Blake Snell",
   "away_p_hand": "L",
   "away_r": 4,
-  "cur_batter": "Shohei Ohtani",
-  "cur_pitcher": "Trent Harris",
+  "cur_batter": "Drew Gilbert",
+  "cur_pitcher": "Tanner Scott",
   "game_pk": 823165,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Matt Wilkinson",
   "home_p_hand": "L",
   "home_r": 3,
@@ -1876,8 +1882,10 @@
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Trent Harris",
   "rhe_away": [
    4,
    9,
@@ -1893,8 +1901,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 85.9,
-  "wp_home": 14.099999999999998
+  "wp_away": 79.6,
+  "wp_home": 20.4
  },
  "9537e2c00a118edc54c7b2b5ed0c6f55": {
   "abstract": "Final",
@@ -2534,11 +2542,11 @@
   "abstract": "Live",
   "away_p": "Brent Suter",
   "away_p_hand": "L",
-  "away_r": 6,
-  "cur_batter": "Drake Baldwin",
-  "cur_pitcher": "Bradley Blalock",
+  "away_r": 8,
+  "cur_batter": "Griffin Conine",
+  "cur_pitcher": "Raisel Iglesias",
   "game_pk": 823813,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Jack Ralston",
   "home_p_hand": "R",
   "home_r": 3,
@@ -2586,17 +2594,19 @@
     "n": 8
    },
    {
-    "a": null,
+    "a": 2,
     "h": null,
     "n": 9
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Bradley Blalock",
   "rhe_away": [
-   6,
-   9,
+   8,
+   10,
    0
   ],
   "rhe_home": [
@@ -2609,8 +2619,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 96.1,
-  "wp_home": 3.9
+  "wp_away": 99.2,
+  "wp_home": 0.8
  },
  "c1c95aa0c77e6735bae6602eec2b42be": {
   "abstract": "Final",
@@ -3451,10 +3461,10 @@
   "away_p": "Nathan Eovaldi",
   "away_p_hand": "R",
   "away_r": 4,
-  "cur_batter": "Wyatt Langford",
-  "cur_pitcher": "Bailey Ober",
+  "cur_batter": "Walker Jenkins",
+  "cur_pitcher": "Nathan Eovaldi",
   "game_pk": 823653,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Bailey Ober",
   "home_p_hand": "R",
   "home_r": 1,
@@ -3473,8 +3483,10 @@
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Bailey Ober",
   "rhe_away": [
    4,
    5,
@@ -3490,8 +3502,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 68.6,
-  "wp_home": 31.4
+  "wp_away": 77.2,
+  "wp_home": 22.8
  },
  "f4a70a1cc28098ce3bd4a521555ad809": {
   "abstract": "Preview",
@@ -3510,7 +3522,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -3544,7 +3556,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -3806,7 +3818,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
