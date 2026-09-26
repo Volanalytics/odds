@@ -826,15 +826,15 @@
   "away_p": "Reid Detmers",
   "away_p_hand": "L",
   "away_r": 6,
-  "cur_batter": "Vaughn Grissom",
-  "cur_pitcher": "Eduard Bazardo",
+  "cur_batter": "Mois\u00e9s Ballesteros",
+  "cur_pitcher": "Troy Taylor",
   "game_pk": 823085,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Bryce Miller",
   "home_p_hand": "R",
   "home_r": 0,
   "in_play": true,
-  "inning": 7,
+  "inning": 8,
   "innings": [
    {
     "a": 1,
@@ -870,14 +870,21 @@
     "a": 1,
     "h": 0,
     "n": 7
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 8
    }
   ],
   "lose_p": null,
-  "outs": 3,
+  "outs": 0,
   "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Eduard Bazardo",
   "rhe_away": [
    6,
-   7,
+   8,
    1
   ],
   "rhe_home": [
@@ -890,8 +897,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 99.0,
-  "wp_home": 1.0
+  "wp_away": 99.3,
+  "wp_home": 0.7000000000000001
  },
  "6ae37d18d4a5fb4d9c92a8aee3f54186": {
   "abstract": "Final",
@@ -2091,7 +2098,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -2740,9 +2747,9 @@
   "abstract": "Live",
   "away_p": "Hunter Brown",
   "away_p_hand": "R",
-  "away_r": 2,
-  "cur_batter": "Isaac Paredes",
-  "cur_pitcher": "Geoff Hartlieb",
+  "away_r": 3,
+  "cur_batter": "Yainer Diaz",
+  "cur_pitcher": "Luis Medina",
   "game_pk": 824947,
   "half": "Top",
   "home_p": "Jacob Lopez",
@@ -2787,16 +2794,18 @@
     "n": 7
    },
    {
-    "a": null,
+    "a": 1,
     "h": null,
     "n": 8
    }
   ],
   "lose_p": null,
-  "outs": 1,
+  "outs": 2,
   "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Geoff Hartlieb",
   "rhe_away": [
-   2,
+   3,
    4,
    2
   ],
@@ -2810,22 +2819,22 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 6.599999999999994,
-  "wp_home": 93.4
+  "wp_away": 12.299999999999997,
+  "wp_home": 87.7
  },
  "e47efe97f629cae0287ca6f3ea6d6794": {
-  "abstract": "Live",
+  "abstract": "Final",
   "away_p": "Tarik Skubal",
   "away_p_hand": "L",
   "away_r": 2,
-  "cur_batter": "Christian Koss",
+  "cur_batter": "Brett Harris",
   "cur_pitcher": "Tanner Scott",
   "game_pk": 823167,
   "half": "Bottom",
   "home_p": "Yunior Marte",
   "home_p_hand": "R",
   "home_r": 0,
-  "in_play": true,
+  "in_play": false,
   "inning": 9,
   "innings": [
    {
@@ -2870,15 +2879,13 @@
    },
    {
     "a": 0,
-    "h": null,
+    "h": 0,
     "n": 9
    }
   ],
-  "lose_p": null,
-  "outs": 0,
+  "lose_p": "Yunior Marte",
+  "outs": 3,
   "pitch_side": "away",
-  "pitcher_changed": true,
-  "prev_pitcher": "Tristan Beck",
   "rhe_away": [
    2,
    7,
@@ -2889,21 +2896,19 @@
    3,
    1
   ],
-  "save_p": null,
-  "status": "In Progress",
+  "save_p": "Tanner Scott",
+  "status": "Game Over",
   "warmup": false,
-  "win_p": null,
-  "win_side": "away",
-  "wp_away": 90.5,
-  "wp_home": 9.5
+  "win_p": "Tarik Skubal",
+  "win_side": "away"
  },
  "eb8b9160f66fc6d5f6bd58bf4a888011": {
   "abstract": "Live",
   "away_p": "Brandon Pfaadt",
   "away_p_hand": "R",
   "away_r": 11,
-  "cur_batter": "Dustin Harris",
-  "cur_pitcher": "Brandon Pfaadt",
+  "cur_batter": "Sung-Mun Song",
+  "cur_pitcher": "Ryne Nelson",
   "game_pk": 823248,
   "half": "Bottom",
   "home_p": "Casey Mize",
@@ -2954,10 +2959,10 @@
    }
   ],
   "lose_p": null,
-  "outs": 1,
+  "outs": 2,
   "pitch_side": "away",
   "pitcher_changed": true,
-  "prev_pitcher": "Wandy Peralta",
+  "prev_pitcher": "Brandon Pfaadt",
   "rhe_away": [
    11,
    8,
