@@ -4,8 +4,8 @@
   "away_p": "Rhett Lowder",
   "away_p_hand": "R",
   "away_r": 3,
-  "cur_batter": "Matt McLain",
-  "cur_pitcher": "Braydon Fisher",
+  "cur_batter": "Alejandro Kirk",
+  "cur_pitcher": "Rhett Lowder",
   "game_pk": 822759,
   "half": "Top",
   "home_p": "Trey Yesavage",
@@ -30,14 +30,16 @@
     "n": 3
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 4
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "home",
+  "outs": 3,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Braydon Fisher",
   "rhe_away": [
    3,
    4,
@@ -53,8 +55,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 81.5,
-  "wp_home": 18.5
+  "wp_away": 81.0,
+  "wp_home": 19.0
  },
  "12c52c4f4de763e9a171ffac0f4f02ef": {
   "abstract": "Final",
@@ -1387,7 +1389,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -1768,8 +1770,8 @@
   "away_p": "Blake Snell",
   "away_p_hand": "L",
   "away_r": 0,
-  "cur_batter": "Mookie Betts",
-  "cur_pitcher": "Matt Wilkinson",
+  "cur_batter": "Jonah Cox",
+  "cur_pitcher": "Blake Snell",
   "game_pk": 823165,
   "half": "Top",
   "home_p": "Matt Wilkinson",
@@ -1779,14 +1781,16 @@
   "inning": 1,
   "innings": [
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 1
    }
   ],
   "lose_p": null,
-  "outs": 0,
-  "pitch_side": "home",
+  "outs": 3,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Matt Wilkinson",
   "rhe_away": [
    0,
    0,
@@ -1802,8 +1806,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 50.0,
-  "wp_home": 50.0
+  "wp_away": 46.199999999999996,
+  "wp_home": 53.800000000000004
  },
  "9537e2c00a118edc54c7b2b5ed0c6f55": {
   "abstract": "Final",
@@ -1902,7 +1906,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -2016,7 +2020,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -2416,7 +2420,7 @@
    null
   ],
   "save_p": null,
-  "status": "Scheduled",
+  "status": "Pre-Game",
   "warmup": false,
   "win_p": null,
   "win_side": null
@@ -3352,7 +3356,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -3386,7 +3390,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
@@ -3404,18 +3408,18 @@
   "win_side": null
  },
  "f6f4976b029249f664cf53c32044f64a": {
-  "abstract": "Live",
+  "abstract": "Final",
   "away_p": "Kirby Yates",
   "away_p_hand": "R",
   "away_r": 3,
-  "cur_batter": "Hao-Yu Lee",
+  "cur_batter": "Eduardo Valencia",
   "cur_pitcher": "Mason Montgomery",
   "game_pk": 824219,
   "half": "Bottom",
   "home_p": "Justin Verlander",
   "home_p_hand": "R",
-  "home_r": 1,
-  "in_play": true,
+  "home_r": 4,
+  "in_play": false,
   "inning": 9,
   "innings": [
    {
@@ -3460,12 +3464,12 @@
    },
    {
     "a": 0,
-    "h": null,
+    "h": 3,
     "n": 9
    }
   ],
-  "lose_p": null,
-  "outs": 1,
+  "lose_p": "Mason Montgomery",
+  "outs": 2,
   "pitch_side": "away",
   "rhe_away": [
    3,
@@ -3473,17 +3477,15 @@
    1
   ],
   "rhe_home": [
-   1,
-   8,
+   4,
+   10,
    0
   ],
   "save_p": null,
-  "status": "In Progress",
+  "status": "Game Over",
   "warmup": false,
-  "win_p": null,
-  "win_side": "away",
-  "wp_away": 88.8,
-  "wp_home": 11.200000000000001
+  "win_p": "Jacob Waguespack",
+  "win_side": "home"
  },
  "f8c336fa447564a17616c2127dc61bf7": {
   "abstract": "Preview",
