@@ -825,8 +825,8 @@
   "abstract": "Live",
   "away_p": "Reid Detmers",
   "away_p_hand": "L",
-  "away_r": 6,
-  "cur_batter": "Bryce Teodosio",
+  "away_r": 7,
+  "cur_batter": "Vaughn Grissom",
   "cur_pitcher": "Troy Taylor",
   "game_pk": 823085,
   "half": "Top",
@@ -877,19 +877,17 @@
     "n": 8
    },
    {
-    "a": null,
+    "a": 1,
     "h": null,
     "n": 9
    }
   ],
   "lose_p": null,
-  "outs": 1,
+  "outs": 2,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "Tayler Saucedo",
   "rhe_away": [
-   6,
-   8,
+   7,
+   10,
    1
   ],
   "rhe_home": [
@@ -902,8 +900,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 98.3,
-  "wp_home": 1.7000000000000002
+  "wp_away": 99.4,
+  "wp_home": 0.6
  },
  "6ae37d18d4a5fb4d9c92a8aee3f54186": {
   "abstract": "Final",
@@ -2103,7 +2101,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -2749,7 +2747,7 @@
   "win_side": "home"
  },
  "de8bbf8d379bf416df612c557ddd338a": {
-  "abstract": "Live",
+  "abstract": "Final",
   "away_p": "Hunter Brown",
   "away_p_hand": "R",
   "away_r": 5,
@@ -2760,7 +2758,7 @@
   "home_p": "Jacob Lopez",
   "home_p_hand": "L",
   "home_r": 6,
-  "in_play": true,
+  "in_play": false,
   "inning": 9,
   "innings": [
    {
@@ -2804,13 +2802,13 @@
     "n": 8
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 9
    }
   ],
-  "lose_p": null,
-  "outs": 1,
+  "lose_p": "Hunter Brown",
+  "outs": 3,
   "pitch_side": "home",
   "rhe_away": [
    5,
@@ -2822,13 +2820,11 @@
    8,
    0
   ],
-  "save_p": null,
-  "status": "In Progress",
+  "save_p": "Hogan Harris",
+  "status": "Final",
   "warmup": false,
-  "win_p": null,
-  "win_side": "home",
-  "wp_away": 17.5,
-  "wp_home": 82.5
+  "win_p": "Jacob Lopez",
+  "win_side": "home"
  },
  "e47efe97f629cae0287ca6f3ea6d6794": {
   "abstract": "Final",
@@ -2985,7 +2981,7 @@
    0
   ],
   "save_p": null,
-  "status": "Game Over",
+  "status": "Final",
   "warmup": false,
   "win_p": "Brandon Pfaadt",
   "win_side": "away"
