@@ -850,7 +850,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -952,7 +952,7 @@
   "away_p": "Jose Quintana",
   "away_p_hand": "L",
   "away_r": 0,
-  "cur_batter": "Jake McCarthy",
+  "cur_batter": "TJ Rumfield",
   "cur_pitcher": "Davis Martin",
   "game_pk": 824543,
   "half": "Top",
@@ -969,25 +969,25 @@
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 1,
   "pitch_side": "home",
   "rhe_away": [
    0,
-   0,
+   1,
    0
   ],
   "rhe_home": [
    0,
    0,
-   0
+   1
   ],
   "save_p": null,
   "status": "In Progress",
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 50.0,
-  "wp_home": 50.0
+  "wp_away": 61.7,
+  "wp_home": 38.3
  },
  "60b3d02ac77cf6a81e234358cfe187bb": {
   "abstract": "Final",
@@ -1154,8 +1154,8 @@
   "away_p": "Tanner Bibee",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Steven Kwan",
-  "cur_pitcher": "Michael Wacha",
+  "cur_batter": "Carter Jensen",
+  "cur_pitcher": "Tanner Bibee",
   "game_pk": 824057,
   "half": "Top",
   "home_p": "Michael Wacha",
@@ -1165,14 +1165,16 @@
   "inning": 1,
   "innings": [
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 1
    }
   ],
   "lose_p": null,
-  "outs": 0,
-  "pitch_side": "home",
+  "outs": 3,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Michael Wacha",
   "rhe_away": [
    0,
    0,
@@ -1188,8 +1190,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 50.0,
-  "wp_home": 50.0
+  "wp_away": 46.199999999999996,
+  "wp_home": 53.800000000000004
  },
  "6e8b1f358bb5c3837f473e61ecb68650": {
   "abstract": "Final",
@@ -1448,7 +1450,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -2543,7 +2545,7 @@
   "away_p": "Quinn Mathews",
   "away_p_hand": "L",
   "away_r": 0,
-  "cur_batter": "JJ Wetherholt",
+  "cur_batter": "Alec Burleson",
   "cur_pitcher": "Dustin May",
   "game_pk": 823733,
   "half": "Top",
@@ -2560,7 +2562,7 @@
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 2,
   "pitch_side": "home",
   "rhe_away": [
    0,
@@ -2577,8 +2579,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 50.0,
-  "wp_home": 50.0
+  "wp_away": 46.199999999999996,
+  "wp_home": 53.800000000000004
  },
  "c067c47b7d8f62f37eeeaba15f35ae55": {
   "abstract": "Final",
@@ -3464,29 +3466,35 @@
   "abstract": "Preview",
   "away_p": "Ryan Johnson",
   "away_p_hand": "R",
-  "away_r": null,
-  "cur_batter": null,
-  "cur_pitcher": null,
+  "away_r": 0,
+  "cur_batter": "Zach Neto",
+  "cur_pitcher": "Kade Anderson",
   "game_pk": 823083,
-  "half": null,
+  "half": "Top",
   "home_p": "Kade Anderson",
   "home_p_hand": "L",
-  "home_r": null,
+  "home_r": 0,
   "in_play": false,
-  "inning": null,
-  "innings": [],
+  "inning": 1,
+  "innings": [
+   {
+    "a": null,
+    "h": null,
+    "n": 1
+   }
+  ],
   "lose_p": null,
-  "outs": null,
-  "pitch_side": "away",
+  "outs": 0,
+  "pitch_side": "home",
   "rhe_away": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "rhe_home": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "save_p": null,
   "status": "Pre-Game",
@@ -3499,7 +3507,7 @@
   "away_p": "Nathan Eovaldi",
   "away_p_hand": "R",
   "away_r": 5,
-  "cur_batter": "Evan Carter",
+  "cur_batter": "Wyatt Langford",
   "cur_pitcher": "Bailey Ober",
   "game_pk": 823653,
   "half": "Top",
@@ -3531,13 +3539,11 @@
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 2,
   "pitch_side": "home",
-  "pitcher_changed": true,
-  "prev_pitcher": "Nathan Eovaldi",
   "rhe_away": [
    5,
-   7,
+   8,
    0
   ],
   "rhe_home": [
@@ -3550,8 +3556,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 81.4,
-  "wp_home": 18.6
+  "wp_away": 87.1,
+  "wp_home": 12.9
  },
  "f4a70a1cc28098ce3bd4a521555ad809": {
   "abstract": "Preview",
@@ -3570,7 +3576,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -3604,7 +3610,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -3866,7 +3872,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
