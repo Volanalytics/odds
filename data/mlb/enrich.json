@@ -63,8 +63,6 @@
   "lose_p": "Trey Yesavage",
   "outs": 3,
   "pitch_side": "away",
-  "pitcher_changed": true,
-  "prev_pitcher": "Brendon Little",
   "rhe_away": [
    5,
    6,
@@ -76,7 +74,7 @@
    2
   ],
   "save_p": null,
-  "status": "Game Over",
+  "status": "Final",
   "warmup": false,
   "win_p": "Rhett Lowder",
   "win_side": "away"
@@ -1793,8 +1791,8 @@
   "away_p": "Blake Snell",
   "away_p_hand": "L",
   "away_r": 3,
-  "cur_batter": "Christian Koss",
-  "cur_pitcher": "Alex Vesia",
+  "cur_batter": "Andy Pages",
+  "cur_pitcher": "Tristan Beck",
   "game_pk": 823165,
   "half": "Bottom",
   "home_p": "Matt Wilkinson",
@@ -1825,15 +1823,15 @@
    },
    {
     "a": 0,
-    "h": null,
+    "h": 0,
     "n": 5
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "away",
+  "outs": 3,
+  "pitch_side": "home",
   "pitcher_changed": true,
-  "prev_pitcher": "Tristan Beck",
+  "prev_pitcher": "Alex Vesia",
   "rhe_away": [
    3,
    7,
@@ -1849,8 +1847,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 71.1,
-  "wp_home": 28.9
+  "wp_away": 76.5,
+  "wp_home": 23.5
  },
  "9537e2c00a118edc54c7b2b5ed0c6f55": {
   "abstract": "Final",
@@ -2491,10 +2489,10 @@
   "away_p": "Brent Suter",
   "away_p_hand": "L",
   "away_r": 6,
-  "cur_batter": "Dominic Smith",
-  "cur_pitcher": "Dax Fulton",
+  "cur_batter": "Jared Serna",
+  "cur_pitcher": "Victor Mederos",
   "game_pk": 823813,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Jack Ralston",
   "home_p_hand": "R",
   "home_r": 2,
@@ -2522,14 +2520,16 @@
     "n": 4
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 5
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "home",
+  "outs": 0,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Dax Fulton",
   "rhe_away": [
    6,
    8,
@@ -2545,8 +2545,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 88.8,
-  "wp_home": 11.200000000000001
+  "wp_away": 88.2,
+  "wp_home": 11.799999999999999
  },
  "c1c95aa0c77e6735bae6602eec2b42be": {
   "abstract": "Final",
@@ -3383,7 +3383,7 @@
   "win_side": null
  },
  "f02fbe7c7bb8a6741f285b306e7d8fa8": {
-  "abstract": "Preview",
+  "abstract": "Live",
   "away_p": "Nathan Eovaldi",
   "away_p_hand": "R",
   "away_r": 0,
@@ -3417,8 +3417,8 @@
    0
   ],
   "save_p": null,
-  "status": "Delayed Start",
-  "warmup": false,
+  "status": "Warmup",
+  "warmup": true,
   "win_p": null,
   "win_side": null
  },
