@@ -1791,15 +1791,15 @@
   "away_p": "Blake Snell",
   "away_p_hand": "L",
   "away_r": 3,
-  "cur_batter": "Christian Koss",
-  "cur_pitcher": "Brock Stewart",
+  "cur_batter": "Alex Call",
+  "cur_pitcher": "Jason Foley",
   "game_pk": 823165,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Matt Wilkinson",
   "home_p_hand": "L",
   "home_r": 2,
   "in_play": true,
-  "inning": 7,
+  "inning": 8,
   "innings": [
    {
     "a": 0,
@@ -1835,11 +1835,18 @@
     "a": 0,
     "h": 1,
     "n": 7
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 8
    }
   ],
   "lose_p": null,
-  "outs": 1,
-  "pitch_side": "away",
+  "outs": 0,
+  "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Brock Stewart",
   "rhe_away": [
    3,
    7,
@@ -1855,8 +1862,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 52.5,
-  "wp_home": 47.5
+  "wp_away": 74.5,
+  "wp_home": 25.5
  },
  "9537e2c00a118edc54c7b2b5ed0c6f55": {
   "abstract": "Final",
@@ -2497,10 +2504,10 @@
   "away_p": "Brent Suter",
   "away_p_hand": "L",
   "away_r": 6,
-  "cur_batter": "Austin Riley",
-  "cur_pitcher": "Bradley Blalock",
+  "cur_batter": "Heriberto Hern\u00e1ndez",
+  "cur_pitcher": "Robert Suarez",
   "game_pk": 823813,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Jack Ralston",
   "home_p_hand": "R",
   "home_r": 2,
@@ -2538,14 +2545,16 @@
     "n": 6
    },
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 7
    }
   ],
   "lose_p": null,
   "outs": 2,
-  "pitch_side": "home",
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Bradley Blalock",
   "rhe_away": [
    6,
    8,
@@ -2553,7 +2562,7 @@
   ],
   "rhe_home": [
    2,
-   4,
+   5,
    1
   ],
   "save_p": null,
@@ -2561,8 +2570,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 93.2,
-  "wp_home": 6.800000000000001
+  "wp_away": 95.8,
+  "wp_home": 4.2
  },
  "c1c95aa0c77e6735bae6602eec2b42be": {
   "abstract": "Final",
@@ -3403,25 +3412,27 @@
   "away_p": "Nathan Eovaldi",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Brandon Nimmo",
-  "cur_pitcher": "Bailey Ober",
+  "cur_batter": "Luke Keaschall",
+  "cur_pitcher": "Nathan Eovaldi",
   "game_pk": 823653,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Bailey Ober",
   "home_p_hand": "R",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "innings": [
    {
-    "a": null,
+    "a": 0,
     "h": null,
     "n": 1
    }
   ],
   "lose_p": null,
   "outs": 0,
-  "pitch_side": "home",
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Bailey Ober",
   "rhe_away": [
    0,
    0,
@@ -3433,10 +3444,12 @@
    0
   ],
   "save_p": null,
-  "status": "Warmup",
-  "warmup": true,
+  "status": "In Progress",
+  "warmup": false,
   "win_p": null,
-  "win_side": null
+  "win_side": null,
+  "wp_away": 46.199999999999996,
+  "wp_home": 53.800000000000004
  },
  "f4a70a1cc28098ce3bd4a521555ad809": {
   "abstract": "Preview",
