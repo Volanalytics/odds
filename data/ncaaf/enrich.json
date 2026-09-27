@@ -487,10 +487,10 @@
   "away_rank": 99,
   "away_short": "Georgia Tech",
   "city": "Stanford",
-  "clock": "0:00",
+  "clock": "15:00",
   "conf_comp": true,
-  "detail": "Halftime",
-  "down": "3rd & 10 at GT 23",
+  "detail": "15:00 - 3rd",
+  "down": "3rd & 7 at STAN 28",
   "espn_id": "401858240",
   "final": false,
   "home_abbr": "STAN",
@@ -502,7 +502,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "13/20, 197 YDS",
+    "val": "13/22, 197 YDS",
     "who": "D. Warren"
    },
    {
@@ -520,19 +520,21 @@
   ],
   "line_away": [
    10.0,
-   10.0
+   10.0,
+   0.0
   ],
   "line_home": [
    7.0,
-   3.0
+   3.0,
+   0.0
   ],
   "neutral": false,
-  "period": 2,
-  "poss": null,
+  "period": 3,
+  "poss": "home",
   "redzone": false,
-  "spot": "GT 23",
+  "spot": "STAN 28",
   "state": "CA",
-  "status": "Halftime",
+  "status": "In Progress",
   "venue": "Stanford Stadium"
  },
  "0cdac6d2b6c2cbfb0f734a8cdfbe086e": {
@@ -1091,10 +1093,10 @@
   "away_rank": 99,
   "away_short": "Rice",
   "city": "Fresno",
-  "clock": "3:09",
+  "clock": "2:38",
   "conf_comp": false,
-  "detail": "3:09 - 3rd",
-  "down": null,
+  "detail": "2:38 - 3rd",
+  "down": "2nd & 20 at FRES 25",
   "espn_id": "401860891",
   "final": false,
   "home_abbr": "FRES",
@@ -1106,7 +1108,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "17/28, 143 YDS, 3 TD",
+    "val": "17/29, 143 YDS, 3 TD",
     "who": "J. Mandal"
    },
    {
@@ -1134,9 +1136,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "FRES 25",
   "state": "CA",
   "status": "In Progress",
   "venue": "Valley Children's Stadium"
@@ -5677,10 +5679,10 @@
   "away_rank": 99,
   "away_short": "Minnesota",
   "city": "Seattle",
-  "clock": "1:25",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "1:25 - 2nd",
-  "down": null,
+  "detail": "End of 2nd",
+  "down": "4th & 11 at MINN 41",
   "espn_id": "401858470",
   "final": false,
   "home_abbr": "WASH",
@@ -5692,7 +5694,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "14/15, 124 YDS, 3 TD",
+    "val": "15/16, 125 YDS, 3 TD",
     "who": "D. Lindsey"
    },
    {
@@ -5704,7 +5706,7 @@
    {
     "cat": "REC",
     "team": "away",
-    "val": "5 REC, 37 YDS, 1 TD",
+    "val": "6 REC, 38 YDS, 1 TD",
     "who": "J. Tracy"
    }
   ],
@@ -5718,9 +5720,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "MINN 41",
   "state": "WA",
   "status": "In Progress",
   "venue": "Husky Stadium"
@@ -5837,10 +5839,10 @@
   "away_rank": 99,
   "away_short": "Air Force",
   "city": "Reno",
-  "clock": "7:50",
+  "clock": "6:44",
   "conf_comp": true,
-  "detail": "7:50 - 3rd",
-  "down": "1st & 10 at NEV 25",
+  "detail": "6:44 - 3rd",
+  "down": "1st & 10 at AF 38",
   "espn_id": "401864509",
   "final": false,
   "home_abbr": "NEV",
@@ -5880,9 +5882,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": "NEV 25",
+  "spot": "AF 38",
   "state": "NV",
   "status": "In Progress",
   "venue": "Mackay Stadium"
