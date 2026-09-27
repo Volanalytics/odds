@@ -1118,7 +1118,7 @@
   "away_p": "Nick Martinez",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Brandon Marsh",
+  "cur_batter": "Justin Crawford",
   "cur_pitcher": "Nick Martinez",
   "game_pk": 823408,
   "half": "Bottom",
@@ -1140,10 +1140,8 @@
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 1,
   "pitch_side": "away",
-  "pitcher_changed": true,
-  "prev_pitcher": "Zack Wheeler",
   "rhe_away": [
    0,
    1,
@@ -1151,7 +1149,7 @@
   ],
   "rhe_home": [
    1,
-   2,
+   3,
    0
   ],
   "save_p": null,
@@ -1159,8 +1157,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 34.39999999999999,
-  "wp_home": 65.60000000000001
+  "wp_away": 32.599999999999994,
+  "wp_home": 67.4
  },
  "7bd30076728c7fcf1f893c1d269a60af": {
   "abstract": "Final",
@@ -2968,7 +2966,7 @@
   "home_p": "Tanner Houck",
   "home_p_hand": "R",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "innings": [
    {
@@ -2991,10 +2989,12 @@
    0
   ],
   "save_p": null,
-  "status": "Warmup",
-  "warmup": true,
+  "status": "In Progress",
+  "warmup": false,
   "win_p": null,
-  "win_side": null
+  "win_side": null,
+  "wp_away": 50.0,
+  "wp_home": 50.0
  },
  "eb8b9160f66fc6d5f6bd58bf4a888011": {
   "abstract": "Final",
@@ -3441,15 +3441,15 @@
   "away_p": "Sean Manaea",
   "away_p_hand": "L",
   "away_r": 4,
-  "cur_batter": "Jacob Young",
-  "cur_pitcher": "Sean Manaea",
+  "cur_batter": "A.J. Ewing",
+  "cur_pitcher": "Will Dion",
   "game_pk": 822679,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "DJ Herz",
   "home_p_hand": "L",
-  "home_r": 3,
+  "home_r": 4,
   "in_play": true,
-  "inning": 3,
+  "inning": 4,
   "innings": [
    {
     "a": 1,
@@ -3463,20 +3463,27 @@
    },
    {
     "a": 0,
-    "h": 1,
+    "h": 2,
     "n": 3
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 4
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "away",
+  "outs": 0,
+  "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Sean Manaea",
   "rhe_away": [
    4,
    6,
-   0
+   1
   ],
   "rhe_home": [
-   3,
+   4,
    5,
    0
   ],
@@ -3484,9 +3491,9 @@
   "status": "In Progress",
   "warmup": false,
   "win_p": null,
-  "win_side": "away",
-  "wp_away": 58.300000000000004,
-  "wp_home": 41.699999999999996
+  "win_side": null,
+  "wp_away": 50.0,
+  "wp_home": 50.0
  },
  "febfe492bcd191327b90c25777e21db4": {
   "abstract": "Live",
