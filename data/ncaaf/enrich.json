@@ -483,14 +483,14 @@
  },
  "0c86537a10b805d25a4ab4f4efdd4c30": {
   "away_abbr": "GT",
-  "away_r": "20",
+  "away_r": "27",
   "away_rank": 99,
   "away_short": "Georgia Tech",
   "city": "Stanford",
-  "clock": "10:19",
+  "clock": "9:11",
   "conf_comp": true,
-  "detail": "10:19 - 4th",
-  "down": "4th & 5 at GT 45",
+  "detail": "9:11 - 4th",
+  "down": null,
   "espn_id": "401858240",
   "final": false,
   "home_abbr": "STAN",
@@ -508,7 +508,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "15 CAR, 81 YDS",
+    "val": "16 CAR, 107 YDS",
     "who": "J. Haynes"
    },
    {
@@ -522,7 +522,7 @@
    10.0,
    10.0,
    0.0,
-   0.0
+   7.0
   ],
   "line_home": [
    7.0,
@@ -532,9 +532,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "GT 45",
+  "spot": null,
   "state": "CA",
   "status": "In Progress",
   "venue": "Stanford Stadium"
@@ -5875,10 +5875,10 @@
   "away_rank": 99,
   "away_short": "Minnesota",
   "city": "Seattle",
-  "clock": "15:00",
+  "clock": "14:47",
   "conf_comp": true,
-  "detail": "15:00 - 3rd",
-  "down": "2nd & 10 at WASH 43",
+  "detail": "14:47 - 4th",
+  "down": "1st & 10 at WASH 34",
   "espn_id": "401858470",
   "final": false,
   "home_abbr": "WASH",
@@ -5890,7 +5890,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "20/26, 182 YDS, 3 TD",
+    "val": "20/28, 182 YDS, 3 TD, 1 INT",
     "who": "D. Lindsey"
    },
    {
@@ -5909,18 +5909,20 @@
   "line_away": [
    14.0,
    7.0,
-   3.0
+   3.0,
+   0.0
   ],
   "line_home": [
    0.0,
    10.0,
+   0.0,
    0.0
   ],
   "neutral": false,
-  "period": 3,
-  "poss": "away",
+  "period": 4,
+  "poss": "home",
   "redzone": false,
-  "spot": "WASH 43",
+  "spot": "WASH 34",
   "state": "WA",
   "status": "In Progress",
   "venue": "Husky Stadium"
@@ -6037,10 +6039,10 @@
   "away_rank": 99,
   "away_short": "Air Force",
   "city": "Reno",
-  "clock": "1:49",
+  "clock": "0:19",
   "conf_comp": true,
-  "detail": "1:49 - 4th",
-  "down": "1st & 10 at AF 25",
+  "detail": "0:19 - 4th",
+  "down": "2nd & 10 at 50",
   "espn_id": "401864509",
   "final": false,
   "home_abbr": "NEV",
@@ -6058,7 +6060,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "24 CAR, 126 YDS, 2 TD",
+    "val": "27 CAR, 145 YDS, 2 TD",
     "who": "L. Szarka"
    },
    {
@@ -6082,9 +6084,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": "AF 25",
+  "spot": "50",
   "state": "NV",
   "status": "In Progress",
   "venue": "Mackay Stadium"
