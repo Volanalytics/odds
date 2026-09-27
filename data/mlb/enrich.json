@@ -1118,10 +1118,10 @@
   "away_p": "Nick Martinez",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Trea Turner",
+  "cur_batter": "Bryce Harper",
   "cur_pitcher": "Nick Martinez",
   "game_pk": 823408,
-  "half": "Top",
+  "half": "Bottom",
   "home_p": "Zack Wheeler",
   "home_p_hand": "R",
   "home_r": 0,
@@ -1135,10 +1135,8 @@
    }
   ],
   "lose_p": null,
-  "outs": 3,
+  "outs": 1,
   "pitch_side": "away",
-  "pitcher_changed": true,
-  "prev_pitcher": "Zack Wheeler",
   "rhe_away": [
    0,
    0,
@@ -1146,7 +1144,7 @@
   ],
   "rhe_home": [
    0,
-   0,
+   1,
    0
   ],
   "save_p": null,
@@ -1154,8 +1152,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": null,
-  "wp_away": 46.199999999999996,
-  "wp_home": 53.800000000000004
+  "wp_away": 44.9,
+  "wp_home": 55.1
  },
  "7bd30076728c7fcf1f893c1d269a60af": {
   "abstract": "Final",
@@ -1792,7 +1790,7 @@
   "win_side": "home"
  },
  "a30b8084ec3236e2dfd36571563a17b8": {
-  "abstract": "Preview",
+  "abstract": "Live",
   "away_p": "Michael Soroka",
   "away_p_hand": "R",
   "away_r": 0,
@@ -1826,8 +1824,8 @@
    0
   ],
   "save_p": null,
-  "status": "Pre-Game",
-  "warmup": false,
+  "status": "Warmup",
+  "warmup": true,
   "win_p": null,
   "win_side": null
  },
@@ -3436,15 +3434,15 @@
   "away_p": "Sean Manaea",
   "away_p_hand": "L",
   "away_r": 4,
-  "cur_batter": "Nasim Nu\u00f1ez",
-  "cur_pitcher": "Sean Manaea",
+  "cur_batter": "Bo Bichette",
+  "cur_pitcher": "DJ Herz",
   "game_pk": 822679,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "DJ Herz",
   "home_p_hand": "L",
-  "home_r": 1,
+  "home_r": 2,
   "in_play": true,
-  "inning": 2,
+  "inning": 3,
   "innings": [
    {
     "a": 1,
@@ -3453,21 +3451,28 @@
    },
    {
     "a": 3,
-    "h": null,
+    "h": 1,
     "n": 2
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 3
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "away",
+  "outs": 0,
+  "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Sean Manaea",
   "rhe_away": [
    4,
    4,
    0
   ],
   "rhe_home": [
-   1,
    2,
+   3,
    0
   ],
   "save_p": null,
@@ -3475,8 +3480,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 76.5,
-  "wp_home": 23.5
+  "wp_away": 67.69999999999999,
+  "wp_home": 32.300000000000004
  },
  "febfe492bcd191327b90c25777e21db4": {
   "abstract": "Preview",
