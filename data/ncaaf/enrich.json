@@ -487,10 +487,10 @@
   "away_rank": 99,
   "away_short": "Georgia Tech",
   "city": "Stanford",
-  "clock": "8:27",
+  "clock": "5:49",
   "conf_comp": true,
-  "detail": "8:27 - 4th",
-  "down": "3rd & 5 at STAN 30",
+  "detail": "5:49 - 4th",
+  "down": "3rd & 7 at 50",
   "espn_id": "401858240",
   "final": false,
   "home_abbr": "STAN",
@@ -502,13 +502,13 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "21/34, 398 YDS, 3 TD",
+    "val": "22/35, 396 YDS, 3 TD",
     "who": "D. Warren"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "16 CAR, 107 YDS",
+    "val": "17 CAR, 110 YDS",
     "who": "J. Haynes"
    },
    {
@@ -532,9 +532,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "STAN 30",
+  "spot": "50",
   "state": "CA",
   "status": "In Progress",
   "venue": "Stanford Stadium"
@@ -5875,14 +5875,14 @@
   "away_rank": 99,
   "away_short": "Minnesota",
   "city": "Seattle",
-  "clock": "11:03",
+  "clock": "10:48",
   "conf_comp": true,
-  "detail": "11:03 - 4th",
-  "down": null,
+  "detail": "10:48 - 4th",
+  "down": "1st & 10 at MINN 46",
   "espn_id": "401858470",
   "final": false,
   "home_abbr": "WASH",
-  "home_r": "16",
+  "home_r": "17",
   "home_rank": 99,
   "home_short": "Washington",
   "in_play": true,
@@ -5890,7 +5890,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "20/28, 182 YDS, 3 TD, 1 INT",
+    "val": "21/29, 204 YDS, 3 TD, 1 INT",
     "who": "D. Lindsey"
    },
    {
@@ -5916,13 +5916,13 @@
    0.0,
    10.0,
    0.0,
-   6.0
+   7.0
   ],
   "neutral": false,
   "period": 4,
-  "poss": null,
-  "redzone": true,
-  "spot": null,
+  "poss": "away",
+  "redzone": false,
+  "spot": "MINN 46",
   "state": "WA",
   "status": "In Progress",
   "venue": "Husky Stadium"
@@ -6041,8 +6041,8 @@
   "city": "Reno",
   "clock": "0:00",
   "conf_comp": true,
-  "detail": "End of 4th",
-  "down": "4th & 3 at AF 46",
+  "detail": "OT",
+  "down": null,
   "espn_id": "401864509",
   "final": false,
   "home_abbr": "NEV",
@@ -6074,19 +6074,21 @@
    3.0,
    7.0,
    3.0,
-   14.0
+   14.0,
+   0.0
   ],
   "line_home": [
    10.0,
    0.0,
    7.0,
-   10.0
+   10.0,
+   0.0
   ],
   "neutral": false,
-  "period": 4,
+  "period": 5,
   "poss": "home",
-  "redzone": false,
-  "spot": "AF 46",
+  "redzone": true,
+  "spot": null,
   "state": "NV",
   "status": "In Progress",
   "venue": "Mackay Stadium"
