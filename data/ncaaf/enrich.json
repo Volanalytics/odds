@@ -487,10 +487,10 @@
   "away_rank": 99,
   "away_short": "Georgia Tech",
   "city": "Stanford",
-  "clock": "2:00",
+  "clock": "1:29",
   "conf_comp": true,
-  "detail": "2:00 - 2nd",
-  "down": null,
+  "detail": "1:29 - 2nd",
+  "down": "4th & 5 at GT 35",
   "espn_id": "401858240",
   "final": false,
   "home_abbr": "STAN",
@@ -501,9 +501,9 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "away",
-    "val": "14/19, 168 YDS, 1 TD",
-    "who": "A. Mendoza"
+    "team": "home",
+    "val": "10/16, 171 YDS",
+    "who": "D. Warren"
    },
    {
     "cat": "RUSH",
@@ -528,9 +528,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "GT 35",
   "state": "CA",
   "status": "In Progress",
   "venue": "Stanford Stadium"
@@ -2137,14 +2137,14 @@
   "away_rank": 99,
   "away_short": "Missouri St",
   "city": "Dallas",
-  "clock": "8:33",
+  "clock": "5:33",
   "conf_comp": false,
-  "detail": "8:33 - 4th",
-  "down": "1st & 10 at MOST 43",
+  "detail": "5:33 - 4th",
+  "down": null,
   "espn_id": "401858241",
   "final": false,
   "home_abbr": "SMU",
-  "home_r": "21",
+  "home_r": "28",
   "home_rank": 22,
   "home_short": "SMU",
   "in_play": true,
@@ -2152,19 +2152,19 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "30/36, 398 YDS, 1 TD, 1 INT",
+    "val": "32/38, 441 YDS, 2 TD, 1 INT",
     "who": "K. Jennings"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "19 CAR, 90 YDS, 1 TD",
+    "val": "22 CAR, 96 YDS, 1 TD",
     "who": "K. Raphael"
    },
    {
     "cat": "REC",
     "team": "home",
-    "val": "10 REC, 136 YDS",
+    "val": "11 REC, 164 YDS, 1 TD",
     "who": "Y. Knight"
    }
   ],
@@ -2178,13 +2178,13 @@
    0.0,
    14.0,
    7.0,
-   0.0
+   7.0
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "MOST 43",
+  "spot": null,
   "state": "TX",
   "status": "In Progress",
   "venue": "Gerald J. Ford Stadium"
@@ -4343,10 +4343,10 @@
   "away_rank": 99,
   "away_short": "Oregon St",
   "city": "El Paso",
-  "clock": "4:11",
+  "clock": "1:52",
   "conf_comp": false,
-  "detail": "4:11 - 4th",
-  "down": "1st & 10 at ORST 39",
+  "detail": "1:52 - 4th",
+  "down": null,
   "espn_id": "401860895",
   "final": false,
   "home_abbr": "UTEP",
@@ -4388,9 +4388,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
-  "redzone": false,
-  "spot": "ORST 39",
+  "poss": null,
+  "redzone": true,
+  "spot": null,
   "state": "TX",
   "status": "In Progress",
   "venue": "Sun Bowl"
@@ -5395,10 +5395,10 @@
   "away_rank": 99,
   "away_short": "UMass",
   "city": "Sacramento",
-  "clock": "9:55",
+  "clock": "6:31",
   "conf_comp": true,
-  "detail": "9:55 - 4th",
-  "down": "1st & 10 at SAC 23",
+  "detail": "6:31 - 4th",
+  "down": "3rd & 8 at MASS 27",
   "espn_id": "401866429",
   "final": false,
   "home_abbr": "SAC",
@@ -5410,7 +5410,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "20/35, 191 YDS, 1 INT",
+    "val": "23/38, 212 YDS, 1 INT",
     "who": "J. Sharman"
    },
    {
@@ -5422,7 +5422,7 @@
    {
     "cat": "REC",
     "team": "home",
-    "val": "5 REC, 56 YDS",
+    "val": "6 REC, 61 YDS",
     "who": "R. Brown"
    }
   ],
@@ -5440,9 +5440,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "SAC 23",
+  "spot": "MASS 27",
   "state": "CA",
   "status": "In Progress",
   "venue": "Hornet Stadium"
@@ -5678,7 +5678,7 @@
   "clock": "0:00",
   "conf_comp": true,
   "detail": "End of 1st",
-  "down": null,
+  "down": "1st & 10 at WASH 41",
   "espn_id": "401858470",
   "final": false,
   "home_abbr": "WASH",
@@ -5690,7 +5690,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "6/6, 53 YDS, 2 TD",
+    "val": "8/8, 71 YDS, 2 TD",
     "who": "D. Lindsey"
    },
    {
@@ -5701,9 +5701,9 @@
    },
    {
     "cat": "REC",
-    "team": "home",
-    "val": "2 REC, 17 YDS",
-    "who": "B. Naone"
+    "team": "away",
+    "val": "2 REC, 18 YDS",
+    "who": "D. Taylor"
    }
   ],
   "line_away": [
@@ -5714,9 +5714,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": null,
-  "redzone": true,
-  "spot": null,
+  "poss": "away",
+  "redzone": false,
+  "spot": "WASH 41",
   "state": "WA",
   "status": "End of Period",
   "venue": "Husky Stadium"
@@ -5833,10 +5833,10 @@
   "away_rank": 99,
   "away_short": "Air Force",
   "city": "Reno",
-  "clock": "1:16",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "1:16 - 2nd",
-  "down": null,
+  "detail": "Halftime",
+  "down": "1st & 10 at AF 44",
   "espn_id": "401864509",
   "final": false,
   "home_abbr": "NEV",
@@ -5876,9 +5876,9 @@
   "period": 2,
   "poss": null,
   "redzone": false,
-  "spot": null,
+  "spot": "AF 44",
   "state": "NV",
-  "status": "In Progress",
+  "status": "Halftime",
   "venue": "Mackay Stadium"
  },
  "ea19c798fc1f9c5f8c38a3a60be9448f": {
