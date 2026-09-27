@@ -487,14 +487,14 @@
   "away_rank": 99,
   "away_short": "Georgia Tech",
   "city": "Stanford",
-  "clock": "11:45",
+  "clock": "10:33",
   "conf_comp": true,
-  "detail": "11:45 - 3rd",
-  "down": "1st & Goal at GT 6",
+  "detail": "10:33 - 3rd",
+  "down": null,
   "espn_id": "401858240",
   "final": false,
   "home_abbr": "STAN",
-  "home_r": "10",
+  "home_r": "13",
   "home_rank": 99,
   "home_short": "Stanford",
   "in_play": true,
@@ -502,7 +502,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "15/24, 279 YDS",
+    "val": "15/26, 279 YDS",
     "who": "D. Warren"
    },
    {
@@ -526,13 +526,13 @@
   "line_home": [
    7.0,
    3.0,
-   0.0
+   3.0
   ],
   "neutral": false,
   "period": 3,
-  "poss": "home",
+  "poss": null,
   "redzone": true,
-  "spot": "GT 6",
+  "spot": null,
   "state": "CA",
   "status": "In Progress",
   "venue": "Stanford Stadium"
@@ -1093,14 +1093,14 @@
   "away_rank": 99,
   "away_short": "Rice",
   "city": "Fresno",
-  "clock": "15:00",
+  "clock": "12:59",
   "conf_comp": false,
-  "detail": "15:00 - 3rd",
-  "down": "2nd & 10 at RICE 42",
+  "detail": "12:59 - 4th",
+  "down": null,
   "espn_id": "401860891",
   "final": false,
   "home_abbr": "FRES",
-  "home_r": "24",
+  "home_r": "30",
   "home_rank": 99,
   "home_short": "Fresno St",
   "in_play": true,
@@ -1108,37 +1108,39 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "19/31, 167 YDS, 3 TD",
+    "val": "20/32, 184 YDS, 3 TD",
     "who": "J. Mandal"
    },
    {
     "cat": "RUSH",
-    "team": "away",
-    "val": "6 CAR, 100 YDS, 1 TD",
-    "who": "B. Grice"
+    "team": "home",
+    "val": "8 CAR, 103 YDS",
+    "who": "R. Luke"
    },
    {
     "cat": "REC",
     "team": "home",
-    "val": "5 REC, 49 YDS, 1 TD",
+    "val": "6 REC, 66 YDS, 1 TD",
     "who": "J. Freeman"
    }
   ],
   "line_away": [
    7.0,
    10.0,
+   0.0,
    0.0
   ],
   "line_home": [
    0.0,
    14.0,
-   10.0
+   10.0,
+   6.0
   ],
   "neutral": false,
-  "period": 3,
-  "poss": "home",
-  "redzone": false,
-  "spot": "RICE 42",
+  "period": 4,
+  "poss": null,
+  "redzone": true,
+  "spot": null,
   "state": "CA",
   "status": "In Progress",
   "venue": "Valley Children's Stadium"
@@ -5839,14 +5841,14 @@
   "away_rank": 99,
   "away_short": "Air Force",
   "city": "Reno",
-  "clock": "5:14",
+  "clock": "4:43",
   "conf_comp": true,
-  "detail": "5:14 - 3rd",
-  "down": "2nd & 8 at AF 9",
+  "detail": "4:43 - 3rd",
+  "down": "1st & 10 at AF 25",
   "espn_id": "401864509",
   "final": false,
   "home_abbr": "NEV",
-  "home_r": "10",
+  "home_r": "17",
   "home_rank": 99,
   "home_short": "Nevada",
   "in_play": true,
@@ -5878,13 +5880,13 @@
   "line_home": [
    10.0,
    0.0,
-   0.0
+   7.0
   ],
   "neutral": false,
   "period": 3,
-  "poss": "home",
-  "redzone": true,
-  "spot": "AF 9",
+  "poss": null,
+  "redzone": false,
+  "spot": "AF 25",
   "state": "NV",
   "status": "In Progress",
   "venue": "Mackay Stadium"
