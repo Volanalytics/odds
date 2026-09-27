@@ -487,10 +487,10 @@
   "away_rank": 99,
   "away_short": "Georgia Tech",
   "city": "Stanford",
-  "clock": "0:26",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:26 - 2nd",
-  "down": "1st & 10 at GT 13",
+  "detail": "Halftime",
+  "down": "3rd & 10 at GT 23",
   "espn_id": "401858240",
   "final": false,
   "home_abbr": "STAN",
@@ -502,7 +502,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "12/19, 187 YDS",
+    "val": "13/20, 197 YDS",
     "who": "D. Warren"
    },
    {
@@ -514,8 +514,8 @@
    {
     "cat": "REC",
     "team": "home",
-    "val": "2 REC, 65 YDS",
-    "who": "Z. Robinson"
+    "val": "4 REC, 65 YDS",
+    "who": "N. Brown"
    }
   ],
   "line_away": [
@@ -528,11 +528,11 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
-  "redzone": true,
-  "spot": "GT 13",
+  "poss": null,
+  "redzone": false,
+  "spot": "GT 23",
   "state": "CA",
-  "status": "In Progress",
+  "status": "Halftime",
   "venue": "Stanford Stadium"
  },
  "0cdac6d2b6c2cbfb0f734a8cdfbe086e": {
@@ -1091,10 +1091,10 @@
   "away_rank": 99,
   "away_short": "Rice",
   "city": "Fresno",
-  "clock": "14:04",
+  "clock": "10:15",
   "conf_comp": false,
-  "detail": "14:04 - 3rd",
-  "down": "1st & 15 at RICE 39",
+  "detail": "10:15 - 3rd",
+  "down": "4th & Goal at RICE 11",
   "espn_id": "401860891",
   "final": false,
   "home_abbr": "FRES",
@@ -1106,7 +1106,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "13/23, 124 YDS, 2 TD",
+    "val": "15/26, 130 YDS, 2 TD",
     "who": "J. Mandal"
    },
    {
@@ -1118,7 +1118,7 @@
    {
     "cat": "REC",
     "team": "home",
-    "val": "4 REC, 40 YDS, 1 TD",
+    "val": "5 REC, 49 YDS, 1 TD",
     "who": "J. Freeman"
    }
   ],
@@ -1135,8 +1135,8 @@
   "neutral": false,
   "period": 3,
   "poss": "home",
-  "redzone": false,
-  "spot": "RICE 39",
+  "redzone": true,
+  "spot": "RICE 11",
   "state": "CA",
   "status": "In Progress",
   "venue": "Valley Children's Stadium"
@@ -2139,14 +2139,14 @@
   "away_rank": 99,
   "away_short": "Missouri St",
   "city": "Dallas",
-  "clock": "5:26",
+  "clock": "4:07",
   "conf_comp": false,
-  "detail": "5:26 - 4th",
-  "down": "2nd & 25 at MOST 10",
+  "detail": "4:07 - 4th",
+  "down": null,
   "espn_id": "401858241",
   "final": false,
   "home_abbr": "SMU",
-  "home_r": "28",
+  "home_r": "34",
   "home_rank": 22,
   "home_short": "SMU",
   "in_play": true,
@@ -2154,7 +2154,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "32/38, 441 YDS, 2 TD, 1 INT",
+    "val": "33/39, 464 YDS, 3 TD, 1 INT",
     "who": "K. Jennings"
    },
    {
@@ -2180,13 +2180,13 @@
    0.0,
    14.0,
    7.0,
-   7.0
+   13.0
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
-  "redzone": false,
-  "spot": "MOST 10",
+  "poss": null,
+  "redzone": true,
+  "spot": null,
   "state": "TX",
   "status": "In Progress",
   "venue": "Gerald J. Ford Stadium"
@@ -5397,10 +5397,10 @@
   "away_rank": 99,
   "away_short": "UMass",
   "city": "Sacramento",
-  "clock": "3:59",
+  "clock": "2:00",
   "conf_comp": true,
-  "detail": "3:59 - 4th",
-  "down": "3rd & 10 at SAC 20",
+  "detail": "2:00 - 4th",
+  "down": "3rd & 1 at SAC 41",
   "espn_id": "401866429",
   "final": false,
   "home_abbr": "SAC",
@@ -5442,9 +5442,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "SAC 20",
+  "spot": "SAC 41",
   "state": "CA",
   "status": "In Progress",
   "venue": "Hornet Stadium"
@@ -5673,18 +5673,18 @@
  },
  "e497e36c59bded468da11878568e7c80": {
   "away_abbr": "MINN",
-  "away_r": "14",
+  "away_r": "21",
   "away_rank": 99,
   "away_short": "Minnesota",
   "city": "Seattle",
-  "clock": "0:00",
+  "clock": "5:48",
   "conf_comp": true,
-  "detail": "End of 1st",
-  "down": "2nd & 8 at WASH 18",
+  "detail": "5:48 - 2nd",
+  "down": null,
   "espn_id": "401858470",
   "final": false,
   "home_abbr": "WASH",
-  "home_r": "0",
+  "home_r": "7",
   "home_rank": 99,
   "home_short": "Washington",
   "in_play": true,
@@ -5692,35 +5692,37 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "11/12, 99 YDS, 2 TD",
+    "val": "13/14, 108 YDS, 3 TD",
     "who": "D. Lindsey"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "4 CAR, 51 YDS",
+    "val": "3 CAR, 51 YDS",
     "who": "T. Thomas"
    },
    {
     "cat": "REC",
     "team": "away",
-    "val": "3 REC, 28 YDS",
+    "val": "5 REC, 37 YDS, 1 TD",
     "who": "J. Tracy"
    }
   ],
   "line_away": [
-   14.0
+   14.0,
+   7.0
   ],
   "line_home": [
-   0.0
+   0.0,
+   7.0
   ],
   "neutral": false,
-  "period": 1,
-  "poss": "away",
-  "redzone": true,
-  "spot": "WASH 18",
+  "period": 2,
+  "poss": null,
+  "redzone": false,
+  "spot": null,
   "state": "WA",
-  "status": "End of Period",
+  "status": "In Progress",
   "venue": "Husky Stadium"
  },
  "e61c74f0e28b46ad83270a6234b425f4": {
