@@ -60,6 +60,12 @@ jobs:
       # in the local instructions.
       - run: pip install -r requirements.txt
 
+      # Every loop below reads the league list from sports.py, so adding a
+      # sport there is the only change needed -- the loops used to hardcode
+      # "mlb ncaaf" and a new league silently never polled.
+      - name: Sport list
+        run: echo "SPORTS=$(python -c 'import sports; print(" ".join(sports.DEFAULT_ORDER))')" >> "$GITHUB_ENV"
+
       # One-time layout change, safe to leave here forever: moves the flat
       # data/odds + data/events.json into data/mlb/. Idempotent -- prints
       # "nothing to migrate" on every run after the first. Keeping it in the
@@ -72,7 +78,7 @@ jobs:
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: |
-          for S in mlb ncaaf; do
+          for S in $SPORTS; do
             python odds_poller.py --sport "$S" --mode skeleton
           done
 
@@ -85,7 +91,7 @@ jobs:
         run: |
           ARGS=""
           if [ "${{ github.event.inputs.force }}" = "true" ]; then ARGS="--force"; fi
-          for S in mlb ncaaf; do
+          for S in $SPORTS; do
             python odds_poller.py --sport "$S" --mode main $ARGS
           done
 
@@ -103,7 +109,7 @@ jobs:
         run: |
           ARGS=""
           if [ "${{ github.event.inputs.force }}" = "true" ]; then ARGS="--force"; fi
-          for S in mlb ncaaf; do
+          for S in $SPORTS; do
             python odds_poller.py --sport "$S" --mode deep $ARGS
           done
 
@@ -121,11 +127,15 @@ jobs:
         continue-on-error: true
         run: python espn_cfb_enrich.py
 
+      - name: Scores and period line (NHL)
+        continue-on-error: true
+        run: python espn_nhl_enrich.py
+
       - name: Build site
         env:
           ODDS_TZ: America/Chicago
-          # Hours after first pitch a finished game stays on the board.
-          ODDS_KEEP_HOURS: "12"
+          # keep_hours now comes from each sport in sports.py. The old global
+          # ODDS_KEEP_HOURS=12 here overrode all of them, including NCAAF's 16.
         run: python build_site.py --outdir site
 
       # Reads the NDJSON we already have; costs no odds credits.
