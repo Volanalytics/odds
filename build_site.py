@@ -81,7 +81,10 @@ def status_text(m, sport):
     if not m:
         return None
     if m.get("final") or m.get("abstract") == "Final":
-        return "Final"
+        # ESPN says "Final/OT" or "Final/SO"; keep the suffix, since it
+        # decides every regulation-time bet on a hockey board.
+        det = m.get("detail") or ""
+        return det if det.startswith("Final") else "Final"
     if m.get("in_play"):
         if sport == "mlb":
             half, inn = m.get("half") or "", m.get("inning") or ""
@@ -94,7 +97,8 @@ def status_text(m, sport):
         if m.get("detail"):
             return m["detail"]
         if m.get("period"):
-            return f"Q{m['period']} {m.get('clock') or ''}".strip()
+            pre = "P" if sport == "nhl" else "Q"
+            return f"{pre}{m['period']} {m.get('clock') or ''}".strip()
         return "Live"
     if m.get("warmup"):
         return "Warmup"
@@ -151,7 +155,9 @@ def side_order(label, away, home):
         return (0 if team == away else 1, 0 if ou == "Over" else 1)
     if label in ("Over", "Under"):
         return (0 if label == "Over" else 1, 0)
-    return (0 if label == away else 1, 0)    # h2h / spreads: team code
+    if label == "Draw":                      # 3-way: sits between the teams
+        return (1, 0)
+    return (0 if label == away else 2, 0)    # h2h / spreads: team code
 
 
 def side_label(r, names=None):

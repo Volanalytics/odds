@@ -130,7 +130,10 @@ def fmt_price(p):
     return "" if p is None else (f"+{p}" if p > 0 else str(p))
 
 
-SPREAD_MARKETS = {"spreads", "spreads_1st_5_innings"}
+# Union of every sport's spread keys, so a new league's run/puck line gets its
+# + sign without editing this file.
+SPREAD_MARKETS = set().union(*(c.get("spread_markets", set())
+                               for c in sports.SPORTS.values()))
 
 
 def fmt_point(v, market=None):

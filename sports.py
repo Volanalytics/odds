@@ -61,6 +61,54 @@ MLB_SHORT = {
 }
 
 
+# NHL codes: the league's own three-letter abbreviations (LAK, NJD, SJS, TBL),
+# which is what NHL.com and most hockey datasets key on. Hard map, same
+# reasoning as MLB -- 32 clubs is small enough to be exact.
+NHL_TEAMS = {
+    "Anaheim Ducks": "ANA", "Boston Bruins": "BOS",
+    "Buffalo Sabres": "BUF", "Calgary Flames": "CGY",
+    "Carolina Hurricanes": "CAR", "Chicago Blackhawks": "CHI",
+    "Colorado Avalanche": "COL", "Columbus Blue Jackets": "CBJ",
+    "Dallas Stars": "DAL", "Detroit Red Wings": "DET",
+    "Edmonton Oilers": "EDM", "Florida Panthers": "FLA",
+    "Los Angeles Kings": "LAK", "Minnesota Wild": "MIN",
+    "Montreal Canadiens": "MTL", "Nashville Predators": "NSH",
+    "New Jersey Devils": "NJD", "New York Islanders": "NYI",
+    "New York Rangers": "NYR", "Ottawa Senators": "OTT",
+    "Philadelphia Flyers": "PHI", "Pittsburgh Penguins": "PIT",
+    "San Jose Sharks": "SJS", "Seattle Kraken": "SEA",
+    "St Louis Blues": "STL", "Tampa Bay Lightning": "TBL",
+    "Toronto Maple Leafs": "TOR", "Utah Mammoth": "UTA",
+    "Vancouver Canucks": "VAN", "Vegas Golden Knights": "VGK",
+    "Washington Capitals": "WSH", "Winnipeg Jets": "WPG",
+    # tolerated drift: accents, the period in St. Louis, Utah's first name
+    "Montr\u00e9al Canadiens": "MTL", "St. Louis Blues": "STL",
+    "Utah Hockey Club": "UTA", "Utah HC": "UTA",
+}
+assert len(set(NHL_TEAMS.values())) == 32, "NHL map must cover exactly 32 clubs"
+
+NHL_SHORT = {name: city for name, city in [
+    ("Anaheim Ducks", "Anaheim"), ("Boston Bruins", "Boston"),
+    ("Buffalo Sabres", "Buffalo"), ("Calgary Flames", "Calgary"),
+    ("Carolina Hurricanes", "Carolina"), ("Chicago Blackhawks", "Chicago"),
+    ("Colorado Avalanche", "Colorado"), ("Columbus Blue Jackets", "Columbus"),
+    ("Dallas Stars", "Dallas"), ("Detroit Red Wings", "Detroit"),
+    ("Edmonton Oilers", "Edmonton"), ("Florida Panthers", "Florida"),
+    ("Los Angeles Kings", "Los Angeles"), ("Minnesota Wild", "Minnesota"),
+    ("Montreal Canadiens", "Montreal"), ("Montr\u00e9al Canadiens", "Montreal"),
+    ("Nashville Predators", "Nashville"), ("New Jersey Devils", "New Jersey"),
+    ("New York Islanders", "NY Islanders"), ("New York Rangers", "NY Rangers"),
+    ("Ottawa Senators", "Ottawa"), ("Philadelphia Flyers", "Philadelphia"),
+    ("Pittsburgh Penguins", "Pittsburgh"), ("San Jose Sharks", "San Jose"),
+    ("Seattle Kraken", "Seattle"), ("St Louis Blues", "St. Louis"),
+    ("St. Louis Blues", "St. Louis"), ("Tampa Bay Lightning", "Tampa Bay"),
+    ("Toronto Maple Leafs", "Toronto"), ("Utah Mammoth", "Utah"),
+    ("Utah Hockey Club", "Utah"), ("Utah HC", "Utah"),
+    ("Vancouver Canucks", "Vancouver"), ("Vegas Golden Knights", "Vegas"),
+    ("Washington Capitals", "Washington"), ("Winnipeg Jets", "Winnipeg"),
+]}
+
+
 # Books to request. 1-10 bookmakers count as ONE region, so a second book
 # costs nothing extra -- the quota is [markets] x [regions], not per book.
 # The first entry is primary and drives the board; the rest render alongside.
@@ -176,9 +224,55 @@ SPORTS = {
         "keep_hours": 16,
         "enrich": "espn_cfb",
     },
+    "nhl": {
+        "key":    "icehockey_nhl",
+        "label":  "NHL",
+        "slate":  ["h2h", "spreads", "totals"],
+        # Regulation 3-way (a tie after 60 is a Draw -- the market that
+        # actually prices OT risk), 1st period, and team totals. As with NCAAF,
+        # a key BetOnline doesn't post costs nothing, so listing it is safe.
+        "event":  ["h2h_3_way", "h2h_p1", "spreads_p1", "totals_p1",
+                   "team_totals"],
+        "columns": [
+            ("h2h",         "ML"),
+            ("spreads",     "PL"),
+            ("totals",      "Total"),
+            ("h2h_3_way",   "Reg 3W"),
+            ("h2h_p1",      "P1 ML"),
+            ("spreads_p1",  "P1 PL"),
+            ("totals_p1",   "P1 Tot"),
+            ("team_totals", "TT"),
+        ],
+        # Flat for the same reason as MLB: a daily sport, so a proximity tier
+        # keyed off the soonest game throttles the board overnight while the
+        # next day's lines (and goalie news) move. 20 min rather than MLB's 15
+        # -- hockey lines move far less between morning skate and puck drop.
+        # ~216 credits/day.
+        "slate_cadence": [(999, 1200)],
+        # Per game. Goalie confirmations land in the last few hours, so that's
+        # where the sweeps go. Roughly 3 sweeps x 5 keys x slate size;
+        # ~120/day on an average 8-game night.
+        "event_cadence": [(1, 3600), (6, 10800), (999, None)],
+        "spread_markets": {"spreads", "spreads_p1"},
+        "teams":  NHL_TEAMS,
+        "short":  NHL_SHORT,
+        # Puck line is almost always +/-1.5, so the point never crosses
+        # anything, and the cents rule only watches money markets -- the ML
+        # (and Reg 3W) carry the same information and do alert. Totals cluster
+        # on 5.5-6.5; a move across 6 is the big one.
+        "alerts": {
+            "cents": 10,
+            "keys":  {"totals": [5.5, 6, 6.5],
+                      "totals_p1": [1.5]},
+        },
+        "days_shown": 2,
+        "history_days": 4,
+        "keep_hours": 12,
+        "enrich": "espn_nhl",
+    },
 }
 
-DEFAULT_ORDER = ["mlb", "ncaaf"]
+DEFAULT_ORDER = ["mlb", "nhl", "ncaaf"]
 
 
 def cfg(sport):
