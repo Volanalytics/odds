@@ -319,20 +319,26 @@ function boxTable(g){
   // periods
   const n = Math.max(b.away.length, b.home.length);
   if(!n) return '<div class="bmsg">Game has not started.</div>';
-  const lbl = i => i < 4 ? "Q" + (i + 1) : (n === 5 ? "OT" : "OT" + (i - 3));
+  /* Hockey: 1 2 3 OT SO (regular season has one OT, then a shootout;
+     playoffs keep going, so number any further OTs). */
+  const lbl = DATA.sport === "nhl"
+    ? i => i < 3 ? String(i + 1) : (i === 3 ? "OT" : (/SO/.test(g.status_text || "") && i === n - 1 ? "SO" : "OT" + (i - 2)))
+    : i => i < 4 ? "Q" + (i + 1) : (n === 5 ? "OT" : "OT" + (i - 3));
   const sum = a => a.reduce((x, y) => x + (Number(y) || 0), 0);
   const head = Array.from({length: n}, (_, i) => `<th>${lbl(i)}</th>`).join("")
              + '<th class="tot">T</th>';
-  const row = (name, arr) =>
+  /* The posted score, not the column sum: a shootout winner is credited one
+     goal that the period line doesn't carry the same way. */
+  const row = (name, arr, tot) =>
     `<tr><td class="bt">${name}</td>`
     + Array.from({length: n}, (_, i) => `<td>${arr[i] ?? "-"}</td>`).join("")
-    + `<td class="tot">${sum(arr)}</td></tr>`;
+    + `<td class="tot">${tot ?? sum(arr)}</td></tr>`;
   const lead = (b.leaders || []).map(l =>
     `<div class="lead"><span class="lcat">${l.cat}</span>`
     + `<span class="lwho">${l.who}${l.team ? " (" + (l.team === "away" ? A : H) + ")" : ""}</span>`
     + `<span class="lval">${l.val}</span></div>`).join("");
   return `<table class="box"><thead><tr><th></th>${head}</tr></thead><tbody>`
-       + row(A, b.away) + row(H, b.home) + "</tbody></table>"
+       + row(A, b.away, g.away_r) + row(H, b.home, g.home_r) + "</tbody></table>"
        + (lead ? `<div class="leads">${lead}</div>` : "");
 }
 
@@ -721,6 +727,28 @@ async function liveMLB(games){
   }
 }
 
+async function liveNHL(games){
+  const r = await fetch("https://site.api.espn.com/apis/site/v2/sports/"
+    + "hockey/nhl/scoreboard?limit=100");
+  if(!r.ok) throw new Error("HTTP " + r.status);
+  const j = await r.json();
+  const by = {};
+  for(const ev of (j.events || [])) by[ev.id] = ev;
+  for(const g of games){
+    const ev = by[g.espn_id];
+    if(!ev) continue;
+    const comp = (ev.competitions || [{}])[0];
+    const st = (ev.status || {}).type || {};
+    const side = {};
+    for(const c of (comp.competitors || [])) side[c.homeAway] = c;
+    patch(g, {
+      away_r: (side.away || {}).score, home_r: (side.home || {}).score,
+      live: st.state === "in", final: st.state === "post",
+      status_text: st.shortDetail || g.status_text,
+    });
+  }
+}
+
 async function liveCFB(games){
   const r = await fetch("https://site.api.espn.com/apis/site/v2/sports/"
     + "football/college-football/scoreboard?limit=300");
@@ -756,6 +784,7 @@ async function refreshLive(){
   try{
     if(DATA.sport === "mlb")        await liveMLB(live);
     else if(DATA.sport === "ncaaf") await liveCFB(live);
+    else if(DATA.sport === "nhl")   await liveNHL(live);
     else return;
     render();
   }catch(e){
