@@ -53,10 +53,10 @@
   "away_rank": 99,
   "away_short": "W Michigan",
   "city": "Buffalo",
-  "clock": "7:15",
+  "clock": "5:11",
   "conf_comp": true,
-  "detail": "7:15 - 2nd",
-  "down": "2nd & 13 at WMU 43",
+  "detail": "5:11 - 2nd",
+  "down": "1st & 10 at WMU 25",
   "espn_id": "401866432",
   "final": false,
   "home_abbr": "BUFF",
@@ -94,9 +94,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "WMU 43",
+  "spot": "WMU 25",
   "state": "NY",
   "status": "In Progress",
   "venue": "Broadview Stadium"
@@ -843,10 +843,10 @@
   "away_rank": 3,
   "away_short": "Notre Dame",
   "city": "Chapel Hill",
-  "clock": "14:46",
+  "clock": "11:35",
   "conf_comp": false,
-  "detail": "14:46 - 3rd",
-  "down": null,
+  "detail": "11:35 - 3rd",
+  "down": "3rd & 7 at UNC 48",
   "espn_id": "401858250",
   "final": false,
   "home_abbr": "UNC",
@@ -858,14 +858,14 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "13/18, 169 YDS, 3 TD",
+    "val": "13/19, 169 YDS, 3 TD",
     "who": "C. Carr"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "4 CAR, 29 YDS",
-    "who": "A. Williams"
+    "val": "10 CAR, 46 YDS",
+    "who": "J. Walton"
    },
    {
     "cat": "REC",
@@ -886,9 +886,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": null,
-  "redzone": true,
-  "spot": null,
+  "poss": "away",
+  "redzone": false,
+  "spot": "UNC 48",
   "state": "NC",
   "status": "In Progress",
   "venue": "Kenan Stadium"
@@ -1043,10 +1043,10 @@
   "away_rank": 99,
   "away_short": "Boston College",
   "city": "Dallas",
-  "clock": "0:00",
+  "clock": "14:48",
   "conf_comp": true,
-  "detail": "Halftime",
-  "down": "4th & 13 at SMU 29",
+  "detail": "14:48 - 3rd",
+  "down": "2nd & 13 at BC 22",
   "espn_id": "401858246",
   "final": false,
   "home_abbr": "SMU",
@@ -1058,7 +1058,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "9/12, 91 YDS, 1 TD",
+    "val": "10/13, 93 YDS, 1 TD",
     "who": "M. McKenzie"
    },
    {
@@ -1076,19 +1076,21 @@
   ],
   "line_away": [
    10.0,
+   0.0,
    0.0
   ],
   "line_home": [
    6.0,
-   7.0
+   7.0,
+   0.0
   ],
   "neutral": false,
-  "period": 2,
-  "poss": null,
+  "period": 3,
+  "poss": "away",
   "redzone": false,
-  "spot": "SMU 29",
+  "spot": "BC 22",
   "state": "TX",
-  "status": "Halftime",
+  "status": "In Progress",
   "venue": "Gerald J. Ford Stadium"
  },
  "38e6b42c07f8da2e57e0b4dd09d6174c": {
@@ -1097,14 +1099,14 @@
   "away_rank": 99,
   "away_short": "MTSU",
   "city": "Lawrence",
-  "clock": "15:00",
+  "clock": "12:20",
   "conf_comp": false,
-  "detail": "15:00 - 3rd",
-  "down": "2nd & 10 at MTSU 24",
+  "detail": "12:20 - 3rd",
+  "down": null,
   "espn_id": "401856807",
   "final": false,
   "home_abbr": "KU",
-  "home_r": "20",
+  "home_r": "26",
   "home_rank": 99,
   "home_short": "Kansas",
   "in_play": true,
@@ -1112,20 +1114,20 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "8/15, 76 YDS",
+    "val": "9/17, 94 YDS",
     "who": "I. Marshall"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "10 CAR, 100 YDS",
+    "val": "11 CAR, 110 YDS",
     "who": "I. Marshall"
    },
    {
     "cat": "REC",
     "team": "home",
-    "val": "1 REC, 30 YDS",
-    "who": "D. Edwards"
+    "val": "5 REC, 43 YDS",
+    "who": "C. Pickett"
    }
   ],
   "line_away": [
@@ -1136,13 +1138,13 @@
   "line_home": [
    3.0,
    17.0,
-   0.0
+   6.0
   ],
   "neutral": false,
   "period": 3,
-  "poss": "away",
-  "redzone": false,
-  "spot": "MTSU 24",
+  "poss": null,
+  "redzone": true,
+  "spot": null,
   "state": "KS",
   "status": "In Progress",
   "venue": "David Booth Kansas Memorial Stadium"
@@ -1405,14 +1407,14 @@
   "away_rank": 99,
   "away_short": "Vanderbilt",
   "city": "Athens",
-  "clock": "4:56",
+  "clock": "3:58",
   "conf_comp": true,
-  "detail": "4:56 - 2nd",
-  "down": "1st & 10 at VAN 31",
+  "detail": "3:58 - 2nd",
+  "down": null,
   "espn_id": "401856705",
   "final": false,
   "home_abbr": "UGA",
-  "home_r": "14",
+  "home_r": "21",
   "home_rank": 2,
   "home_short": "Georgia",
   "in_play": true,
@@ -1420,7 +1422,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "14/16, 162 YDS, 1 TD",
+    "val": "15/18, 192 YDS, 1 TD",
     "who": "G. Stockton"
    },
    {
@@ -1442,13 +1444,13 @@
   ],
   "line_home": [
    7.0,
-   7.0
+   14.0
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "VAN 31",
+  "spot": null,
   "state": "GA",
   "status": "In Progress",
   "venue": "Sanford Stadium"
@@ -1843,10 +1845,10 @@
   "away_rank": 99,
   "away_short": "Navy",
   "city": "USAF Academy",
-  "clock": "12:36",
+  "clock": "9:24",
   "conf_comp": false,
-  "detail": "12:36 - 3rd",
-  "down": "2nd & 10 at AF 38",
+  "detail": "9:24 - 3rd",
+  "down": "4th & 10 at AF 49",
   "espn_id": "401862791",
   "final": false,
   "home_abbr": "AFA",
@@ -1858,20 +1860,20 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "3/7, 60 YDS, 1 INT",
+    "val": "5/9, 68 YDS, 1 INT",
     "who": "L. Szarka"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "13 CAR, 56 YDS, 2 TD",
+    "val": "16 CAR, 58 YDS, 2 TD",
     "who": "L. Szarka"
    },
    {
     "cat": "REC",
     "team": "home",
-    "val": "1 REC, 23 YDS",
-    "who": "S. Kibbee"
+    "val": "2 REC, 25 YDS",
+    "who": "J. Dawson"
    }
   ],
   "line_away": [
@@ -1888,7 +1890,7 @@
   "period": 3,
   "poss": "home",
   "redzone": false,
-  "spot": "AF 38",
+  "spot": "AF 49",
   "state": "CO",
   "status": "In Progress",
   "venue": "Falcon Stadium"
@@ -1949,8 +1951,8 @@
   "city": "Madison",
   "clock": "0:00",
   "conf_comp": true,
-  "detail": "End of 2nd",
-  "down": "2nd & 11 at WIS 24",
+  "detail": "Halftime",
+  "down": "2nd & 10 at WIS 24",
   "espn_id": "401858479",
   "final": false,
   "home_abbr": "WIS",
@@ -1988,11 +1990,11 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
   "spot": "WIS 24",
   "state": "WI",
-  "status": "In Progress",
+  "status": "Halftime",
   "venue": "Camp Randall Stadium"
  },
  "57ad14afc7db1843fd56f5971dadb058": {
@@ -2919,10 +2921,10 @@
   "away_rank": 99,
   "away_short": "West Virginia",
   "city": "Ames",
-  "clock": "0:00",
+  "clock": "14:09",
   "conf_comp": true,
-  "detail": "Halftime",
-  "down": null,
+  "detail": "14:09 - 3rd",
+  "down": "1st & 10 at ISU 46",
   "espn_id": "401856822",
   "final": false,
   "home_abbr": "ISU",
@@ -2952,19 +2954,21 @@
   ],
   "line_away": [
    7.0,
-   7.0
+   7.0,
+   0.0
   ],
   "line_home": [
    7.0,
-   14.0
+   14.0,
+   0.0
   ],
   "neutral": false,
-  "period": 2,
-  "poss": null,
+  "period": 3,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "ISU 46",
   "state": "IA",
-  "status": "Halftime",
+  "status": "In Progress",
   "venue": "Jack Trice Stadium"
  },
  "7da02c5fd7efe20c2f61f665def9cbef": {
@@ -3561,10 +3565,10 @@
   "away_rank": 99,
   "away_short": "Memphis",
   "city": "Charlotte",
-  "clock": "10:21",
+  "clock": "6:52",
   "conf_comp": true,
-  "detail": "10:21 - 4th",
-  "down": "2nd & 8 at MEM 46",
+  "detail": "6:52 - 4th",
+  "down": "4th & 1 at CLT 14",
   "espn_id": "401862787",
   "final": false,
   "home_abbr": "CLT",
@@ -3607,8 +3611,8 @@
   "neutral": false,
   "period": 4,
   "poss": "away",
-  "redzone": false,
-  "spot": "MEM 46",
+  "redzone": true,
+  "spot": "CLT 14",
   "state": "NC",
   "status": "In Progress",
   "venue": "Jerry Richardson Stadium"
@@ -3907,10 +3911,10 @@
   "away_rank": 99,
   "away_short": "Michigan",
   "city": "Minneapolis",
-  "clock": "0:00",
+  "clock": "13:49",
   "conf_comp": true,
-  "detail": "Halftime",
-  "down": "1st & 10 at MINN 30",
+  "detail": "13:49 - 3rd",
+  "down": "1st & 10 at MINN 35",
   "espn_id": "401858474",
   "final": false,
   "home_abbr": "MINN",
@@ -3922,7 +3926,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "7/12, 96 YDS, 2 INT",
+    "val": "8/13, 103 YDS, 2 INT",
     "who": "D. Lindsey"
    },
    {
@@ -3934,25 +3938,27 @@
    {
     "cat": "REC",
     "team": "home",
-    "val": "5 REC, 64 YDS",
+    "val": "6 REC, 71 YDS",
     "who": "N. Jennings"
    }
   ],
   "line_away": [
    0.0,
-   14.0
+   14.0,
+   0.0
   ],
   "line_home": [
    7.0,
+   0.0,
    0.0
   ],
   "neutral": false,
-  "period": 2,
-  "poss": null,
+  "period": 3,
+  "poss": "home",
   "redzone": false,
-  "spot": "MINN 30",
+  "spot": "MINN 35",
   "state": "MN",
-  "status": "Halftime",
+  "status": "In Progress",
   "venue": "Huntington Bank Stadium"
  },
  "a2f7df0b000c054abd3cbc6f4a4b2432": {
