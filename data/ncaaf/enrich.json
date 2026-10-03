@@ -101,14 +101,14 @@
   "away_rank": 99,
   "away_short": "Penn State",
   "city": "Evanston",
-  "clock": "2:00",
+  "clock": "1:16",
   "conf_comp": true,
-  "detail": "2:00 - 2nd",
-  "down": null,
+  "detail": "1:16 - 2nd",
+  "down": "1st & 10 at PSU 45",
   "espn_id": "401858476",
   "final": false,
   "home_abbr": "NU",
-  "home_r": "17",
+  "home_r": "24",
   "home_rank": 99,
   "home_short": "Northwestern",
   "in_play": true,
@@ -116,13 +116,13 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "7/12, 53 YDS",
+    "val": "8/13, 72 YDS",
     "who": "R. Becht"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "4 CAR, 123 YDS, 1 TD",
+    "val": "5 CAR, 134 YDS, 2 TD",
     "who": "J. Himon II"
    },
    {
@@ -138,13 +138,13 @@
   ],
   "line_home": [
    10.0,
-   7.0
+   14.0
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "PSU 45",
   "state": "IL",
   "status": "In Progress",
   "venue": "Ryan Field"
@@ -3907,14 +3907,14 @@
  },
  "a39f3695781e9b2f76011e921d63b124": {
   "away_abbr": "LIB",
-  "away_r": "23",
+  "away_r": "29",
   "away_rank": 99,
   "away_short": "Liberty",
   "city": "Newark",
-  "clock": "14:53",
+  "clock": "11:19",
   "conf_comp": true,
-  "detail": "14:53 - 4th",
-  "down": "3rd & 17 at DEL 14",
+  "detail": "11:19 - 4th",
+  "down": null,
   "espn_id": "401871050",
   "final": false,
   "home_abbr": "DEL",
@@ -3932,7 +3932,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "13 CAR, 131 YDS, 1 TD",
+    "val": "17 CAR, 147 YDS, 2 TD",
     "who": "K. Davis"
    },
    {
@@ -3946,7 +3946,7 @@
    6.0,
    14.0,
    3.0,
-   0.0
+   6.0
   ],
   "line_home": [
    0.0,
@@ -3956,9 +3956,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
-  "redzone": false,
-  "spot": "DEL 14",
+  "poss": null,
+  "redzone": true,
+  "spot": null,
   "state": "DE",
   "status": "In Progress",
   "venue": "Delaware Stadium"
@@ -4747,10 +4747,10 @@
   "away_rank": 99,
   "away_short": "Pitt",
   "city": "Blacksburg",
-  "clock": "6:09",
+  "clock": "4:50",
   "conf_comp": true,
-  "detail": "6:09 - 3rd",
-  "down": "4th & 1 at VT 19",
+  "detail": "4:50 - 3rd",
+  "down": "2nd & 1 at VT 40",
   "espn_id": "401858245",
   "final": false,
   "home_abbr": "VT",
@@ -4762,7 +4762,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "19/25, 279 YDS, 2 TD, 1 INT",
+    "val": "20/26, 291 YDS, 2 TD, 1 INT",
     "who": "E. Grunkemeyer"
    },
    {
@@ -4790,9 +4790,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "away",
-  "redzone": true,
-  "spot": "VT 19",
+  "poss": "home",
+  "redzone": false,
+  "spot": "VT 40",
   "state": "VA",
   "status": "In Progress",
   "venue": "Lane Stadium"
