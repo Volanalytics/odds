@@ -101,10 +101,10 @@
   "away_rank": 99,
   "away_short": "Penn State",
   "city": "Evanston",
-  "clock": "5:02",
+  "clock": "1:14",
   "conf_comp": true,
-  "detail": "5:02 - 1st",
-  "down": "1st & 10 at PSU 25",
+  "detail": "1:14 - 1st",
+  "down": "2nd & 4 at NU 25",
   "espn_id": "401858476",
   "final": false,
   "home_abbr": "NU",
@@ -115,9 +115,9 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "5/6, 35 YDS",
-    "who": "A. Chiles"
+    "team": "away",
+    "val": "4/6, 44 YDS",
+    "who": "R. Becht"
    },
    {
     "cat": "RUSH",
@@ -140,9 +140,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": "PSU 25",
+  "spot": "NU 25",
   "state": "IL",
   "status": "In Progress",
   "venue": "Ryan Field"
@@ -3909,10 +3909,10 @@
   "away_rank": 99,
   "away_short": "Liberty",
   "city": "Newark",
-  "clock": "0:00",
+  "clock": "13:32",
   "conf_comp": true,
-  "detail": "Halftime",
-  "down": "1st & 10 at DEL 45",
+  "detail": "13:32 - 3rd",
+  "down": "2nd & 9 at DEL 38",
   "espn_id": "401871050",
   "final": false,
   "home_abbr": "DEL",
@@ -3923,9 +3923,9 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "away",
-    "val": "10/13, 139 YDS",
-    "who": "D. Purdie"
+    "team": "home",
+    "val": "9/15, 140 YDS",
+    "who": "E. Archield Jr."
    },
    {
     "cat": "RUSH",
@@ -3942,19 +3942,21 @@
   ],
   "line_away": [
    6.0,
-   14.0
+   14.0,
+   0.0
   ],
   "line_home": [
+   0.0,
    0.0,
    0.0
   ],
   "neutral": false,
-  "period": 2,
-  "poss": null,
+  "period": 3,
+  "poss": "home",
   "redzone": false,
-  "spot": "DEL 45",
+  "spot": "DEL 38",
   "state": "DE",
-  "status": "Halftime",
+  "status": "In Progress",
   "venue": "Delaware Stadium"
  },
  "a77fd3143159a9d16a75685528d9960b": {
@@ -4737,14 +4739,14 @@
  },
  "e61c74f0e28b46ad83270a6234b425f4": {
   "away_abbr": "PITT",
-  "away_r": "14",
+  "away_r": "21",
   "away_rank": 99,
   "away_short": "Pitt",
   "city": "Blacksburg",
-  "clock": "1:06",
+  "clock": "0:31",
   "conf_comp": true,
-  "detail": "1:06 - 2nd",
-  "down": "1st & 10 at VT 23",
+  "detail": "0:31 - 2nd",
+  "down": null,
   "espn_id": "401858245",
   "final": false,
   "home_abbr": "VT",
@@ -4774,7 +4776,7 @@
   ],
   "line_away": [
    7.0,
-   7.0
+   14.0
   ],
   "line_home": [
    14.0,
@@ -4782,9 +4784,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "VT 23",
+  "spot": null,
   "state": "VA",
   "status": "In Progress",
   "venue": "Lane Stadium"
