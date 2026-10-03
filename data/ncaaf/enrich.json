@@ -53,10 +53,10 @@
   "away_rank": 99,
   "away_short": "W Michigan",
   "city": "Buffalo",
-  "clock": "14:23",
+  "clock": "12:32",
   "conf_comp": true,
-  "detail": "14:23 - 2nd",
-  "down": null,
+  "detail": "12:32 - 2nd",
+  "down": "2nd & 8 at WMU 39",
   "espn_id": "401866432",
   "final": false,
   "home_abbr": "BUFF",
@@ -94,9 +94,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "WMU 39",
   "state": "NY",
   "status": "In Progress",
   "venue": "Broadview Stadium"
@@ -405,10 +405,10 @@
   "away_rank": 99,
   "away_short": "UCF",
   "city": "Houston",
-  "clock": "0:01",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:01 - 2nd",
-  "down": "2nd & 10 at UCF 33",
+  "detail": "Halftime",
+  "down": "1st & 10 at HOU 49",
   "espn_id": "401856819",
   "final": false,
   "home_abbr": "HOU",
@@ -420,7 +420,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "9/15, 151 YDS, 1 TD",
+    "val": "10/16, 169 YDS, 1 TD",
     "who": "K. Jenkins"
    },
    {
@@ -446,11 +446,11 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "UCF 33",
+  "spot": "HOU 49",
   "state": "TX",
-  "status": "In Progress",
+  "status": "Halftime",
   "venue": "TDECU Stadium"
  },
  "173057d32ff5946d42566a0d164de287": {
@@ -1401,10 +1401,10 @@
   "away_rank": 99,
   "away_short": "Vanderbilt",
   "city": "Athens",
-  "clock": "10:41",
+  "clock": "9:13",
   "conf_comp": true,
-  "detail": "10:41 - 2nd",
-  "down": "2nd & 17 at UGA 1",
+  "detail": "9:13 - 2nd",
+  "down": "2nd & 14 at UGA 46",
   "espn_id": "401856705",
   "final": false,
   "home_abbr": "UGA",
@@ -1416,7 +1416,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "11/12, 142 YDS, 1 TD",
+    "val": "11/13, 142 YDS, 1 TD",
     "who": "G. Stockton"
    },
    {
@@ -1442,9 +1442,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "UGA 1",
+  "spot": "UGA 46",
   "state": "GA",
   "status": "In Progress",
   "venue": "Sanford Stadium"
@@ -1941,10 +1941,10 @@
   "away_rank": 99,
   "away_short": "Michigan St",
   "city": "Madison",
-  "clock": "1:53",
+  "clock": "0:53",
   "conf_comp": true,
-  "detail": "1:53 - 2nd",
-  "down": "2nd & 8 at WIS 22",
+  "detail": "0:53 - 2nd",
+  "down": "1st & 10 at MSU 36",
   "espn_id": "401858479",
   "final": false,
   "home_abbr": "WIS",
@@ -1956,13 +1956,13 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "7/13, 82 YDS, 2 TD",
+    "val": "7/14, 82 YDS, 2 TD",
     "who": "C. Joseph"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "7 CAR, 74 YDS",
+    "val": "8 CAR, 79 YDS",
     "who": "C. Joseph"
    },
    {
@@ -1982,9 +1982,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "WIS 22",
+  "spot": "MSU 36",
   "state": "WI",
   "status": "In Progress",
   "venue": "Camp Randall Stadium"
@@ -2759,14 +2759,14 @@
  },
  "6b22daf46195be6b3748584efe89dac1": {
   "away_abbr": "ALA",
-  "away_r": "27",
+  "away_r": "28",
   "away_rank": 7,
   "away_short": "Alabama",
   "city": "Starkville",
-  "clock": "1:56",
+  "clock": "1:24",
   "conf_comp": true,
-  "detail": "1:56 - 2nd",
-  "down": null,
+  "detail": "1:24 - 2nd",
+  "down": "1st & 10 at ALA 42",
   "espn_id": "401856707",
   "final": false,
   "home_abbr": "MSST",
@@ -2778,7 +2778,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "13/21, 157 YDS, 2 TD, 1 INT",
+    "val": "14/24, 175 YDS, 2 TD, 1 INT",
     "who": "K. Taylor"
    },
    {
@@ -2789,14 +2789,14 @@
    },
    {
     "cat": "REC",
-    "team": "away",
-    "val": "3 REC, 90 YDS",
-    "who": "L. Brooks"
+    "team": "home",
+    "val": "9 REC, 107 YDS, 1 TD",
+    "who": "A. Evans III"
    }
   ],
   "line_away": [
    14.0,
-   13.0
+   14.0
   ],
   "line_home": [
    7.0,
@@ -2804,9 +2804,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
-  "redzone": true,
-  "spot": null,
+  "poss": "home",
+  "redzone": false,
+  "spot": "ALA 42",
   "state": "MS",
   "status": "In Progress",
   "venue": "Davis Wade Stadium"
@@ -3453,14 +3453,14 @@
   "away_rank": 99,
   "away_short": "Syracuse",
   "city": "East Hartford",
-  "clock": "0:26",
+  "clock": "0:00",
   "conf_comp": false,
-  "detail": "0:26 - 2nd",
-  "down": "1st & Goal at SYR 4",
+  "detail": "End of 2nd",
+  "down": "2nd & 11 at SYR 24",
   "espn_id": "401858252",
   "final": false,
   "home_abbr": "CONN",
-  "home_r": "7",
+  "home_r": "14",
   "home_rank": 99,
   "home_short": "UConn",
   "in_play": true,
@@ -3490,13 +3490,13 @@
   ],
   "line_home": [
    7.0,
-   0.0
+   7.0
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
-  "redzone": true,
-  "spot": "SYR 4",
+  "poss": "away",
+  "redzone": false,
+  "spot": "SYR 24",
   "state": "CT",
   "status": "In Progress",
   "venue": "Pratt & Whitney Stadium"
@@ -3551,14 +3551,14 @@
  },
  "9b2bcb758c7d7f4cb25d5102e4e9068e": {
   "away_abbr": "MEM",
-  "away_r": "45",
+  "away_r": "51",
   "away_rank": 99,
   "away_short": "Memphis",
   "city": "Charlotte",
-  "clock": "15:00",
+  "clock": "12:35",
   "conf_comp": true,
-  "detail": "15:00 - 4th",
-  "down": "2nd & 10 at CLT 45",
+  "detail": "12:35 - 4th",
+  "down": null,
   "espn_id": "401862787",
   "final": false,
   "home_abbr": "CLT",
@@ -3590,7 +3590,7 @@
    14.0,
    10.0,
    21.0,
-   0.0
+   6.0
   ],
   "line_home": [
    0.0,
@@ -3600,9 +3600,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
-  "redzone": false,
-  "spot": "CLT 45",
+  "poss": null,
+  "redzone": true,
+  "spot": null,
   "state": "NC",
   "status": "In Progress",
   "venue": "Jerry Richardson Stadium"
