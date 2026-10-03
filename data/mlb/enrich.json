@@ -83,29 +83,35 @@
   "abstract": "Preview",
   "away_p": "Dylan Dodd",
   "away_p_hand": "L",
-  "away_r": null,
-  "cur_batter": null,
-  "cur_pitcher": null,
+  "away_r": 0,
+  "cur_batter": "Drake Baldwin",
+  "cur_pitcher": "Tarik Skubal",
   "game_pk": 849828,
-  "half": null,
+  "half": "Top",
   "home_p": "Tarik Skubal",
   "home_p_hand": "L",
-  "home_r": null,
+  "home_r": 0,
   "in_play": false,
-  "inning": null,
-  "innings": [],
+  "inning": 1,
+  "innings": [
+   {
+    "a": null,
+    "h": null,
+    "n": 1
+   }
+  ],
   "lose_p": null,
-  "outs": null,
-  "pitch_side": "away",
+  "outs": 0,
+  "pitch_side": "home",
   "rhe_away": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "rhe_home": [
-   null,
-   null,
-   null
+   0,
+   0,
+   0
   ],
   "save_p": null,
   "status": "Pre-Game",
@@ -210,7 +216,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
@@ -312,15 +318,15 @@
   "away_p": "Hagen Smith",
   "away_p_hand": "L",
   "away_r": 2,
-  "cur_batter": "Brayan Rocchio",
-  "cur_pitcher": "Anthony Kay",
+  "cur_batter": "Colson Montgomery",
+  "cur_pitcher": "Parker Messick",
   "game_pk": 849829,
-  "half": "Bottom",
+  "half": "Top",
   "home_p": "Parker Messick",
   "home_p_hand": "L",
   "home_r": 0,
   "in_play": true,
-  "inning": 4,
+  "inning": 5,
   "innings": [
    {
     "a": 0,
@@ -339,13 +345,20 @@
    },
    {
     "a": 2,
-    "h": null,
+    "h": 0,
     "n": 4
+   },
+   {
+    "a": null,
+    "h": null,
+    "n": 5
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "away",
+  "outs": 1,
+  "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Anthony Kay",
   "rhe_away": [
    2,
    3,
@@ -361,8 +374,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 65.30000000000001,
-  "wp_home": 34.699999999999996
+  "wp_away": 73.3,
+  "wp_home": 26.700000000000003
  },
  "66c0c13a06424600557af241371043fc": {
   "abstract": "Final",
@@ -461,7 +474,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
