@@ -593,10 +593,10 @@
   "away_rank": 99,
   "away_short": "Fresno St",
   "city": "Pullman",
-  "clock": "0:00",
+  "clock": "12:53",
   "conf_comp": true,
-  "detail": "Halftime",
-  "down": "4th & 5 at WSU 35",
+  "detail": "12:53 - 3rd",
+  "down": "1st & 10 at FRES 44",
   "espn_id": "401860921",
   "final": false,
   "home_abbr": "WSU",
@@ -626,19 +626,21 @@
   ],
   "line_away": [
    3.0,
-   3.0
+   3.0,
+   0.0
   ],
   "line_home": [
    0.0,
-   6.0
+   6.0,
+   0.0
   ],
   "neutral": false,
-  "period": 2,
-  "poss": null,
+  "period": 3,
+  "poss": "away",
   "redzone": false,
-  "spot": "WSU 35",
+  "spot": "FRES 44",
   "state": "WA",
-  "status": "Halftime",
+  "status": "In Progress",
   "venue": "Martin Stadium"
  },
  "253e389201e449a2984a194e3eebf7f8": {
@@ -1901,14 +1903,14 @@
   "away_rank": 99,
   "away_short": "Baylor",
   "city": "Tempe",
-  "clock": "10:45",
+  "clock": "9:59",
   "conf_comp": true,
-  "detail": "10:45 - 2nd",
-  "down": "1st & 10 at BAY 14",
+  "detail": "9:59 - 2nd",
+  "down": null,
   "espn_id": "401856817",
   "final": false,
   "home_abbr": "ASU",
-  "home_r": "3",
+  "home_r": "6",
   "home_rank": 99,
   "home_short": "Arizona St",
   "in_play": true,
@@ -1916,7 +1918,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "9/14, 105 YDS",
+    "val": "10/17, 111 YDS",
     "who": "C. Boley"
    },
    {
@@ -1938,13 +1940,13 @@
   ],
   "line_home": [
    3.0,
-   0.0
+   3.0
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
-  "redzone": true,
-  "spot": "BAY 14",
+  "poss": null,
+  "redzone": false,
+  "spot": null,
   "state": "AZ",
   "status": "In Progress",
   "venue": "Mountain America Stadium"
@@ -2785,10 +2787,10 @@
   "away_rank": 99,
   "away_short": "Cincinnati",
   "city": "Tucson",
-  "clock": "3:02",
+  "clock": "0:46",
   "conf_comp": true,
-  "detail": "3:02 - 1st",
-  "down": "1st & 10 at CIN 21",
+  "detail": "0:46 - 1st",
+  "down": "2nd & 10 at CIN 35",
   "espn_id": "401856820",
   "final": false,
   "home_abbr": "ARIZ",
@@ -2826,7 +2828,7 @@
   "period": 1,
   "poss": "away",
   "redzone": false,
-  "spot": "CIN 21",
+  "spot": "CIN 35",
   "state": "AZ",
   "status": "In Progress",
   "venue": "Casino Del Sol Stadium"
@@ -3042,6 +3044,54 @@
   "state": "MO",
   "status": "Final",
   "venue": "Memorial Stadium"
+ },
+ "7556739cc30a38511b7f631581a416e4": {
+  "away_abbr": "FSU",
+  "away_r": "0",
+  "away_rank": 99,
+  "away_short": "Florida St",
+  "city": "Louisville",
+  "clock": "0:00",
+  "conf_comp": true,
+  "detail": "10/9 - 7:00 PM EDT",
+  "down": null,
+  "espn_id": "401858254",
+  "final": false,
+  "home_abbr": "LOU",
+  "home_r": "0",
+  "home_rank": 99,
+  "home_short": "Louisville",
+  "in_play": false,
+  "leaders": [
+   {
+    "cat": "PASS",
+    "team": "home",
+    "val": "1140 YDS, 7 TD, 1 INT",
+    "who": "L. Kienholz"
+   },
+   {
+    "cat": "RUSH",
+    "team": "away",
+    "val": "64 CAR, 397 YDS, 5 TD",
+    "who": "O. Kromah"
+   },
+   {
+    "cat": "REC",
+    "team": "home",
+    "val": "20 REC, 328 YDS, 1 TD",
+    "who": "T. Richardson"
+   }
+  ],
+  "line_away": [],
+  "line_home": [],
+  "neutral": false,
+  "period": 0,
+  "poss": null,
+  "redzone": false,
+  "spot": null,
+  "state": "KY",
+  "status": "Scheduled",
+  "venue": "L&N Federal Credit Union Stadium"
  },
  "766a0470521ac4a0fad476df45c1438b": {
   "away_abbr": "BGSU",
@@ -5481,10 +5531,10 @@
   "away_rank": 99,
   "away_short": "Texas St",
   "city": "San Diego",
-  "clock": "8:47",
+  "clock": "8:16",
   "conf_comp": true,
-  "detail": "8:47 - 2nd",
-  "down": "4th & 9 at SDSU 26",
+  "detail": "8:16 - 2nd",
+  "down": "1st & 10 at TXST 37",
   "espn_id": "401860900",
   "final": false,
   "home_abbr": "SDSU",
@@ -5496,7 +5546,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "10/13, 147 YDS, 2 TD",
+    "val": "11/14, 164 YDS, 2 TD",
     "who": "B. Jackson"
    },
    {
@@ -5522,9 +5572,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "SDSU 26",
+  "spot": "TXST 37",
   "state": "CA",
   "status": "In Progress",
   "venue": "Snapdragon Stadium"
