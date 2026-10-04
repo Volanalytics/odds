@@ -589,14 +589,14 @@
  },
  "23025b717a93bdd8f30424e90a97d68f": {
   "away_abbr": "FRES",
-  "away_r": "13",
+  "away_r": "16",
   "away_rank": 99,
   "away_short": "Fresno St",
   "city": "Pullman",
-  "clock": "13:31",
+  "clock": "11:00",
   "conf_comp": true,
-  "detail": "13:31 - 4th",
-  "down": "1st & 10 at FRES 42",
+  "detail": "11:00 - 4th",
+  "down": null,
   "espn_id": "401860921",
   "final": false,
   "home_abbr": "WSU",
@@ -608,7 +608,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "19/28, 190 YDS",
+    "val": "21/30, 234 YDS",
     "who": "J. Mandal"
    },
    {
@@ -628,7 +628,7 @@
    3.0,
    3.0,
    7.0,
-   0.0
+   3.0
   ],
   "line_home": [
    0.0,
@@ -638,9 +638,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "FRES 42",
+  "spot": null,
   "state": "WA",
   "status": "In Progress",
   "venue": "Martin Stadium"
@@ -1905,10 +1905,10 @@
   "away_rank": 99,
   "away_short": "San Jos\u00e9 St",
   "city": "Honolulu",
-  "clock": "8:05",
+  "clock": "7:36",
   "conf_comp": true,
-  "detail": "8:05 - 1st",
-  "down": null,
+  "detail": "7:36 - 1st",
+  "down": "3rd & 5 at SJSU 8",
   "espn_id": "401864513",
   "final": false,
   "home_abbr": "HAW",
@@ -1926,7 +1926,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "4 CAR, 6 YDS",
+    "val": "5 CAR, 11 YDS",
     "who": "J. Bates"
    },
    {
@@ -1944,9 +1944,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "SJSU 8",
   "state": "HI",
   "status": "In Progress",
   "venue": "Clarence T.C. Ching Athletics Complex"
@@ -2841,10 +2841,10 @@
   "away_rank": 99,
   "away_short": "Cincinnati",
   "city": "Tucson",
-  "clock": "1:58",
+  "clock": "0:12",
   "conf_comp": true,
-  "detail": "1:58 - 2nd",
-  "down": "1st & 10 at CIN 27",
+  "detail": "0:12 - 2nd",
+  "down": "2nd & Goal at CIN 10",
   "espn_id": "401856820",
   "final": false,
   "home_abbr": "ARIZ",
@@ -2856,7 +2856,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "13/18, 122 YDS, 1 INT",
+    "val": "14/20, 132 YDS, 1 INT",
     "who": "N. Fifita"
    },
    {
@@ -2868,7 +2868,7 @@
    {
     "cat": "REC",
     "team": "home",
-    "val": "2 REC, 26 YDS",
+    "val": "3 REC, 36 YDS",
     "who": "T. Spivey"
    }
   ],
@@ -2883,8 +2883,8 @@
   "neutral": false,
   "period": 2,
   "poss": "home",
-  "redzone": false,
-  "spot": "CIN 27",
+  "redzone": true,
+  "spot": "CIN 10",
   "state": "AZ",
   "status": "In Progress",
   "venue": "Casino Del Sol Stadium"
