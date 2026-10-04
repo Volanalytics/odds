@@ -593,10 +593,10 @@
   "away_rank": 99,
   "away_short": "Fresno St",
   "city": "Pullman",
-  "clock": "2:00",
+  "clock": "1:06",
   "conf_comp": true,
-  "detail": "2:00 - 2nd",
-  "down": "3rd & 7 at FRES 45",
+  "detail": "1:06 - 2nd",
+  "down": "2nd & 10 at WSU 35",
   "espn_id": "401860921",
   "final": false,
   "home_abbr": "WSU",
@@ -608,7 +608,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "10/19, 108 YDS",
+    "val": "11/20, 112 YDS",
     "who": "J. Mandal"
    },
    {
@@ -634,9 +634,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "FRES 45",
+  "spot": "WSU 35",
   "state": "WA",
   "status": "In Progress",
   "venue": "Martin Stadium"
@@ -662,7 +662,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "26/44, 292 YDS, 1 TD, 3 INT",
+    "val": "26/44, 290 YDS, 1 TD, 3 INT",
     "who": "I. Wilson"
    },
    {
@@ -1901,10 +1901,10 @@
   "away_rank": 99,
   "away_short": "Baylor",
   "city": "Tempe",
-  "clock": "6:11",
+  "clock": "3:35",
   "conf_comp": true,
-  "detail": "6:11 - 1st",
-  "down": "4th & 10 at BAY 28",
+  "detail": "3:35 - 1st",
+  "down": "2nd & Goal at ASU 8",
   "espn_id": "401856817",
   "final": false,
   "home_abbr": "ASU",
@@ -1922,14 +1922,14 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "1 CAR, 63 YDS, 1 TD",
+    "val": "3 CAR, 74 YDS, 1 TD",
     "who": "R. Morris"
    },
    {
     "cat": "REC",
-    "team": "home",
-    "val": "1 REC, 29 YDS",
-    "who": "C. Mack"
+    "team": "away",
+    "val": "1 REC, 32 YDS",
+    "who": "J. Porter"
    }
   ],
   "line_away": [
@@ -1941,8 +1941,8 @@
   "neutral": false,
   "period": 1,
   "poss": "away",
-  "redzone": false,
-  "spot": "BAY 28",
+  "redzone": true,
+  "spot": "ASU 8",
   "state": "AZ",
   "status": "In Progress",
   "venue": "Mountain America Stadium"
@@ -2783,46 +2783,50 @@
   "away_rank": 99,
   "away_short": "Cincinnati",
   "city": "Tucson",
-  "clock": "0:00",
+  "clock": "11:47",
   "conf_comp": true,
-  "detail": "10/3 - 11:00 PM EDT",
-  "down": null,
+  "detail": "11:47 - 1st",
+  "down": "3rd & 3 at CIN 37",
   "espn_id": "401856820",
   "final": false,
   "home_abbr": "ARIZ",
   "home_r": "0",
   "home_rank": 99,
   "home_short": "Arizona",
-  "in_play": false,
+  "in_play": true,
   "leaders": [
    {
     "cat": "PASS",
     "team": "home",
-    "val": "1131 YDS, 11 TD, 2 INT",
+    "val": "3/4, 28 YDS",
     "who": "N. Fifita"
    },
    {
     "cat": "RUSH",
-    "team": "away",
-    "val": "51 CAR, 368 YDS, 2 TD",
-    "who": "G. Payne"
+    "team": "home",
+    "val": "1 CAR, 7 YDS",
+    "who": "Q. Craig"
    },
    {
     "cat": "REC",
     "team": "home",
-    "val": "19 REC, 278 YDS, 4 TD",
-    "who": "T. Spivey"
+    "val": "1 REC, 13 YDS",
+    "who": "C. Hunter III"
    }
   ],
-  "line_away": [],
-  "line_home": [],
+  "line_away": [
+   0.0
+  ],
+  "line_home": [
+   0.0
+  ],
   "neutral": false,
-  "period": 0,
-  "poss": null,
+  "period": 1,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "CIN 37",
   "state": "AZ",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "Casino Del Sol Stadium"
  },
  "6474599b7377102869153e25af140533": {
@@ -3573,10 +3577,10 @@
   "away_rank": 4,
   "away_short": "Miami",
   "city": "Clemson",
-  "clock": "5:35",
+  "clock": "2:09",
   "conf_comp": true,
-  "detail": "5:35 - 4th",
-  "down": "1st & 10 at CLEM 44",
+  "detail": "2:09 - 4th",
+  "down": "3rd & 7 at CLEM 32",
   "espn_id": "401858249",
   "final": false,
   "home_abbr": "CLEM",
@@ -3588,7 +3592,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "27/39, 292 YDS",
+    "val": "29/43, 295 YDS",
     "who": "T. Reynolds"
    },
    {
@@ -3620,7 +3624,7 @@
   "period": 4,
   "poss": "home",
   "redzone": false,
-  "spot": "CLEM 44",
+  "spot": "CLEM 32",
   "state": "SC",
   "status": "In Progress",
   "venue": "Memorial Stadium (Clemson, SC)"
@@ -3841,14 +3845,14 @@
  },
  "9dcccf34095cde7b0fe36250bb5be6f6": {
   "away_abbr": "IU",
-  "away_r": "44",
+  "away_r": "47",
   "away_rank": 6,
   "away_short": "Indiana",
   "city": "Piscataway",
-  "clock": "2:28",
+  "clock": "2:00",
   "conf_comp": true,
-  "detail": "2:28 - 4th",
-  "down": "4th & 9 at RUTG 30",
+  "detail": "2:00 - 4th",
+  "down": null,
   "espn_id": "401858477",
   "final": false,
   "home_abbr": "RUTG",
@@ -3880,7 +3884,7 @@
    10.0,
    13.0,
    14.0,
-   7.0
+   10.0
   ],
   "line_home": [
    0.0,
@@ -3890,9 +3894,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "RUTG 30",
+  "spot": null,
   "state": "NJ",
   "status": "In Progress",
   "venue": "SHI Stadium"
@@ -5475,10 +5479,10 @@
   "away_rank": 99,
   "away_short": "Texas St",
   "city": "San Diego",
-  "clock": "4:21",
+  "clock": "3:37",
   "conf_comp": true,
-  "detail": "4:21 - 1st",
-  "down": null,
+  "detail": "3:37 - 1st",
+  "down": "3rd & 2 at SDSU 33",
   "espn_id": "401860900",
   "final": false,
   "home_abbr": "SDSU",
@@ -5514,9 +5518,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "SDSU 33",
   "state": "CA",
   "status": "In Progress",
   "venue": "Snapdragon Stadium"
@@ -5623,17 +5627,17 @@
   "away_rank": 99,
   "away_short": "Washington",
   "city": "Los Angeles",
-  "clock": "0:45",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:45 - 4th",
+  "detail": "Final",
   "down": null,
   "espn_id": "401858478",
-  "final": false,
+  "final": true,
   "home_abbr": "USC",
   "home_r": "25",
   "home_rank": 18,
   "home_short": "USC",
-  "in_play": true,
+  "in_play": false,
   "leaders": [
    {
     "cat": "PASS",
@@ -5669,10 +5673,10 @@
   "neutral": false,
   "period": 4,
   "poss": null,
-  "redzone": true,
+  "redzone": false,
   "spot": null,
   "state": "CA",
-  "status": "In Progress",
+  "status": "Final",
   "venue": "Los Angeles Memorial Coliseum"
  },
  "fa98066b4b400fb6af0672e170cc584a": {
