@@ -47,6 +47,54 @@
   "status": "Scheduled",
   "venue": "Tiger Stadium (LA)"
  },
+ "031164b8d704599d8023a3e104f9a6c0": {
+  "away_abbr": "MD",
+  "away_r": "0",
+  "away_rank": 99,
+  "away_short": "Maryland",
+  "city": "Columbus",
+  "clock": "0:00",
+  "conf_comp": true,
+  "detail": "10/10 - 4:15 PM EDT",
+  "down": null,
+  "espn_id": "401858483",
+  "final": false,
+  "home_abbr": "OSU",
+  "home_r": "0",
+  "home_rank": 5,
+  "home_short": "Ohio State",
+  "in_play": false,
+  "leaders": [
+   {
+    "cat": "PASS",
+    "team": "home",
+    "val": "1206 YDS, 10 TD, 1 INT",
+    "who": "J. Sayin"
+   },
+   {
+    "cat": "RUSH",
+    "team": "home",
+    "val": "50 CAR, 283 YDS, 2 TD",
+    "who": "B. Jackson"
+   },
+   {
+    "cat": "REC",
+    "team": "home",
+    "val": "33 REC, 617 YDS, 7 TD",
+    "who": "J. Smith"
+   }
+  ],
+  "line_away": [],
+  "line_home": [],
+  "neutral": false,
+  "period": 0,
+  "poss": null,
+  "redzone": false,
+  "spot": null,
+  "state": "OH",
+  "status": "Scheduled",
+  "venue": "Ohio Stadium"
+ },
  "031ad65ec032d459cda2cee30378e4a4": {
   "away_abbr": "WMU",
   "away_r": "20",
@@ -593,10 +641,10 @@
   "away_rank": 99,
   "away_short": "Fresno St",
   "city": "Pullman",
-  "clock": "11:00",
+  "clock": "9:32",
   "conf_comp": true,
-  "detail": "11:00 - 4th",
-  "down": null,
+  "detail": "9:32 - 4th",
+  "down": "1st & 10 at FRES 35",
   "espn_id": "401860921",
   "final": false,
   "home_abbr": "WSU",
@@ -638,9 +686,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "FRES 35",
   "state": "WA",
   "status": "In Progress",
   "venue": "Martin Stadium"
@@ -1905,10 +1953,10 @@
   "away_rank": 99,
   "away_short": "San Jos\u00e9 St",
   "city": "Honolulu",
-  "clock": "7:36",
+  "clock": "3:21",
   "conf_comp": true,
-  "detail": "7:36 - 1st",
-  "down": "3rd & 5 at SJSU 8",
+  "detail": "3:21 - 1st",
+  "down": null,
   "espn_id": "401864513",
   "final": false,
   "home_abbr": "HAW",
@@ -1920,20 +1968,20 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "2/3, 17 YDS",
+    "val": "5/6, 74 YDS",
     "who": "M. Alejado"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "5 CAR, 11 YDS",
+    "val": "7 CAR, 20 YDS",
     "who": "J. Bates"
    },
    {
     "cat": "REC",
     "team": "home",
-    "val": "1 REC, 11 YDS",
-    "who": "S. Mikaele"
+    "val": "2 REC, 42 YDS",
+    "who": "C. Brown"
    }
   ],
   "line_away": [
@@ -1944,9 +1992,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "SJSU 8",
+  "spot": null,
   "state": "HI",
   "status": "In Progress",
   "venue": "Clarence T.C. Ching Athletics Complex"
@@ -2841,14 +2889,14 @@
   "away_rank": 99,
   "away_short": "Cincinnati",
   "city": "Tucson",
-  "clock": "0:12",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:12 - 2nd",
-  "down": "2nd & Goal at CIN 10",
+  "detail": "Halftime",
+  "down": "2nd & 10 at CIN 25",
   "espn_id": "401856820",
   "final": false,
   "home_abbr": "ARIZ",
-  "home_r": "7",
+  "home_r": "10",
   "home_rank": 99,
   "home_short": "Arizona",
   "in_play": true,
@@ -2856,7 +2904,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "14/20, 132 YDS, 1 INT",
+    "val": "15/21, 136 YDS, 1 INT",
     "who": "N. Fifita"
    },
    {
@@ -2878,15 +2926,15 @@
   ],
   "line_home": [
    7.0,
-   0.0
+   3.0
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
-  "redzone": true,
-  "spot": "CIN 10",
+  "poss": null,
+  "redzone": false,
+  "spot": "CIN 25",
   "state": "AZ",
-  "status": "In Progress",
+  "status": "Halftime",
   "venue": "Casino Del Sol Stadium"
  },
  "6474599b7377102869153e25af140533": {
@@ -5587,14 +5635,14 @@
   "away_rank": 99,
   "away_short": "Texas St",
   "city": "San Diego",
-  "clock": "0:00",
+  "clock": "14:49",
   "conf_comp": true,
-  "detail": "Halftime",
-  "down": "3rd & 8 at TXST 24",
+  "detail": "14:49 - 3rd",
+  "down": null,
   "espn_id": "401860900",
   "final": false,
   "home_abbr": "SDSU",
-  "home_r": "3",
+  "home_r": "10",
   "home_rank": 99,
   "home_short": "San Diego St",
   "in_play": true,
@@ -5620,19 +5668,21 @@
   ],
   "line_away": [
    10.0,
-   7.0
+   7.0,
+   0.0
   ],
   "line_home": [
    3.0,
-   0.0
+   0.0,
+   7.0
   ],
   "neutral": false,
-  "period": 2,
+  "period": 3,
   "poss": null,
   "redzone": false,
-  "spot": "TXST 24",
+  "spot": null,
   "state": "CA",
-  "status": "Halftime",
+  "status": "In Progress",
   "venue": "Snapdragon Stadium"
  },
  "f825e4c4d512e1c0a6db6ac7d8bc0326": {
