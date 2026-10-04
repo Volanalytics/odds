@@ -589,14 +589,14 @@
  },
  "23025b717a93bdd8f30424e90a97d68f": {
   "away_abbr": "FRES",
-  "away_r": "6",
+  "away_r": "13",
   "away_rank": 99,
   "away_short": "Fresno St",
   "city": "Pullman",
-  "clock": "10:59",
+  "clock": "9:41",
   "conf_comp": true,
-  "detail": "10:59 - 3rd",
-  "down": "1st & Goal at WSU 1",
+  "detail": "9:41 - 3rd",
+  "down": null,
   "espn_id": "401860921",
   "final": false,
   "home_abbr": "WSU",
@@ -627,7 +627,7 @@
   "line_away": [
    3.0,
    3.0,
-   0.0
+   7.0
   ],
   "line_home": [
    0.0,
@@ -636,9 +636,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "away",
-  "redzone": true,
-  "spot": "WSU 1",
+  "poss": null,
+  "redzone": false,
+  "spot": null,
   "state": "WA",
   "status": "In Progress",
   "venue": "Martin Stadium"
@@ -1903,10 +1903,10 @@
   "away_rank": 99,
   "away_short": "Baylor",
   "city": "Tempe",
-  "clock": "5:57",
+  "clock": "5:03",
   "conf_comp": true,
-  "detail": "5:57 - 2nd",
-  "down": "2nd & 10 at ASU 20",
+  "detail": "5:03 - 2nd",
+  "down": "1st & 10 at ASU 20",
   "espn_id": "401856817",
   "final": false,
   "home_abbr": "ASU",
@@ -1918,7 +1918,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "11/17, 120 YDS, 2 TD",
+    "val": "11/18, 120 YDS, 2 TD",
     "who": "D. Lagway"
    },
    {
@@ -1944,8 +1944,8 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
-  "redzone": true,
+  "poss": "home",
+  "redzone": false,
   "spot": "ASU 20",
   "state": "AZ",
   "status": "In Progress",
@@ -2787,10 +2787,10 @@
   "away_rank": 99,
   "away_short": "Cincinnati",
   "city": "Tucson",
-  "clock": "0:00",
+  "clock": "13:50",
   "conf_comp": true,
-  "detail": "End of 1st",
-  "down": "2nd & 10 at ARIZ 18",
+  "detail": "13:50 - 2nd",
+  "down": "1st & 10 at ARIZ 39",
   "espn_id": "401856820",
   "final": false,
   "home_abbr": "ARIZ",
@@ -2802,7 +2802,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "7/10, 67 YDS, 1 INT",
+    "val": "9/12, 93 YDS, 1 INT",
     "who": "N. Fifita"
    },
    {
@@ -2815,20 +2815,22 @@
     "cat": "REC",
     "team": "home",
     "val": "2 REC, 26 YDS",
-    "who": "G. Richardson"
+    "who": "T. Spivey"
    }
   ],
   "line_away": [
+   0.0,
    0.0
   ],
   "line_home": [
-   7.0
+   7.0,
+   0.0
   ],
   "neutral": false,
-  "period": 1,
+  "period": 2,
   "poss": "home",
   "redzone": false,
-  "spot": "ARIZ 18",
+  "spot": "ARIZ 39",
   "state": "AZ",
   "status": "In Progress",
   "venue": "Casino Del Sol Stadium"
@@ -3689,7 +3691,7 @@
   "city": "Gainesville",
   "clock": "0:00",
   "conf_comp": true,
-  "detail": "TBD",
+  "detail": "10/10 - 12:45 PM EDT",
   "down": null,
   "espn_id": "401856714",
   "final": false,
@@ -5531,10 +5533,10 @@
   "away_rank": 99,
   "away_short": "Texas St",
   "city": "San Diego",
-  "clock": "4:35",
+  "clock": "2:44",
   "conf_comp": true,
-  "detail": "4:35 - 2nd",
-  "down": "4th & 3 at SDSU 17",
+  "detail": "2:44 - 2nd",
+  "down": "3rd & 9 at SDSU 46",
   "espn_id": "401860900",
   "final": false,
   "home_abbr": "SDSU",
@@ -5572,9 +5574,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
-  "redzone": true,
-  "spot": "SDSU 17",
+  "poss": "home",
+  "redzone": false,
+  "spot": "SDSU 46",
   "state": "CA",
   "status": "In Progress",
   "venue": "Snapdragon Stadium"
