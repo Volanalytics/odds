@@ -741,6 +741,54 @@
   "status": "Final",
   "venue": "Martin Stadium"
  },
+ "234d9123fdc010716a5a844efaf7ab43": {
+  "away_abbr": "MINN",
+  "away_r": "0",
+  "away_rank": 99,
+  "away_short": "Minnesota",
+  "city": "West Lafayette",
+  "clock": "0:00",
+  "conf_comp": true,
+  "detail": "10/10 - 8:00 PM EDT",
+  "down": null,
+  "espn_id": "401858486",
+  "final": false,
+  "home_abbr": "PUR",
+  "home_r": "0",
+  "home_rank": 99,
+  "home_short": "Purdue",
+  "in_play": false,
+  "leaders": [
+   {
+    "cat": "PASS",
+    "team": "home",
+    "val": "1135 YDS, 7 TD, 1 INT",
+    "who": "R. Browne"
+   },
+   {
+    "cat": "RUSH",
+    "team": "home",
+    "val": "67 CAR, 289 YDS, 6 TD",
+    "who": "F. Ijeboi"
+   },
+   {
+    "cat": "REC",
+    "team": "home",
+    "val": "24 REC, 355 YDS, 1 TD",
+    "who": "A. Waseem"
+   }
+  ],
+  "line_away": [],
+  "line_home": [],
+  "neutral": false,
+  "period": 0,
+  "poss": null,
+  "redzone": false,
+  "spot": null,
+  "state": "IN",
+  "status": "Scheduled",
+  "venue": "Ross-Ade Stadium"
+ },
  "253e389201e449a2984a194e3eebf7f8": {
   "away_abbr": "TTU",
   "away_r": "29",
@@ -1543,6 +1591,54 @@
   "status": "Scheduled",
   "venue": "Ohio Stadium"
  },
+ "43457c08aa50a7e0038aa06eb3437680": {
+  "away_abbr": "DUKE",
+  "away_r": "0",
+  "away_rank": 99,
+  "away_short": "Duke",
+  "city": "Atlanta",
+  "clock": "0:00",
+  "conf_comp": true,
+  "detail": "10/10 - 3:30 PM EDT",
+  "down": null,
+  "espn_id": "401858255",
+  "final": false,
+  "home_abbr": "GT",
+  "home_r": "0",
+  "home_rank": 99,
+  "home_short": "Georgia Tech",
+  "in_play": false,
+  "leaders": [
+   {
+    "cat": "PASS",
+    "team": "home",
+    "val": "975 YDS, 6 TD, 3 INT",
+    "who": "A. Mendoza"
+   },
+   {
+    "cat": "RUSH",
+    "team": "away",
+    "val": "91 CAR, 644 YDS, 6 TD",
+    "who": "N. Sheppard"
+   },
+   {
+    "cat": "REC",
+    "team": "home",
+    "val": "16 REC, 241 YDS",
+    "who": "D. Penson"
+   }
+  ],
+  "line_away": [],
+  "line_home": [],
+  "neutral": false,
+  "period": 0,
+  "poss": null,
+  "redzone": false,
+  "spot": null,
+  "state": "GA",
+  "status": "Scheduled",
+  "venue": "Bobby Dodd Stadium"
+ },
  "4462f1fa168ab2a5a25fe2807ebec8ac": {
   "away_abbr": "USC",
   "away_r": "0",
@@ -2001,14 +2097,14 @@
   "away_rank": 99,
   "away_short": "San Jos\u00e9 St",
   "city": "Honolulu",
-  "clock": "13:48",
+  "clock": "11:46",
   "conf_comp": true,
-  "detail": "13:48 - 3rd",
-  "down": "2nd & 10 at SJSU 26",
+  "detail": "11:46 - 3rd",
+  "down": null,
   "espn_id": "401864513",
   "final": false,
   "home_abbr": "HAW",
-  "home_r": "0",
+  "home_r": "3",
   "home_rank": 99,
   "home_short": "Hawai'i",
   "in_play": true,
@@ -2016,7 +2112,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "11/15, 195 YDS, 1 INT",
+    "val": "12/17, 207 YDS, 1 INT",
     "who": "M. Alejado"
    },
    {
@@ -2040,13 +2136,13 @@
   "line_home": [
    0.0,
    0.0,
-   0.0
+   3.0
   ],
   "neutral": false,
   "period": 3,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "SJSU 26",
+  "spot": null,
   "state": "HI",
   "status": "In Progress",
   "venue": "Clarence T.C. Ching Athletics Complex"
@@ -2057,10 +2153,10 @@
   "away_rank": 99,
   "away_short": "Baylor",
   "city": "Tempe",
-  "clock": "5:58",
+  "clock": "4:25",
   "conf_comp": true,
-  "detail": "5:58 - 4th",
-  "down": null,
+  "detail": "4:25 - 4th",
+  "down": "3rd & 9 at ASU 10",
   "espn_id": "401856817",
   "final": false,
   "home_abbr": "ASU",
@@ -2102,9 +2198,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": null,
-  "redzone": false,
-  "spot": null,
+  "poss": "away",
+  "redzone": true,
+  "spot": "ASU 10",
   "state": "AZ",
   "status": "In Progress",
   "venue": "Mountain America Stadium"
@@ -2945,10 +3041,10 @@
   "away_rank": 99,
   "away_short": "Cincinnati",
   "city": "Tucson",
-  "clock": "12:11",
+  "clock": "11:25",
   "conf_comp": true,
-  "detail": "12:11 - 4th",
-  "down": "1st & 10 at CIN 25",
+  "detail": "11:25 - 4th",
+  "down": "1st & 10 at ARIZ 29",
   "espn_id": "401856820",
   "final": false,
   "home_abbr": "ARIZ",
@@ -2990,9 +3086,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": "CIN 25",
+  "spot": "ARIZ 29",
   "state": "AZ",
   "status": "In Progress",
   "venue": "Casino Del Sol Stadium"
@@ -5791,14 +5887,14 @@
   "away_rank": 99,
   "away_short": "Texas St",
   "city": "San Diego",
-  "clock": "2:53",
+  "clock": "2:29",
   "conf_comp": true,
-  "detail": "2:53 - 4th",
-  "down": "1st & 10 at TXST 30",
+  "detail": "2:29 - 4th",
+  "down": "1st & 10 at TXST 36",
   "espn_id": "401860900",
   "final": false,
   "home_abbr": "SDSU",
-  "home_r": "24",
+  "home_r": "31",
   "home_rank": 99,
   "home_short": "San Diego St",
   "in_play": true,
@@ -5806,7 +5902,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "22/31, 270 YDS, 2 TD, 1 INT",
+    "val": "23/33, 286 YDS, 2 TD, 2 INT",
     "who": "B. Jackson"
    },
    {
@@ -5832,13 +5928,13 @@
    3.0,
    0.0,
    21.0,
-   0.0
+   7.0
   ],
   "neutral": false,
   "period": 4,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": "TXST 30",
+  "spot": "TXST 36",
   "state": "CA",
   "status": "In Progress",
   "venue": "Snapdragon Stadium"
