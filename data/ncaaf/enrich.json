@@ -593,10 +593,10 @@
   "away_rank": 99,
   "away_short": "Fresno St",
   "city": "Pullman",
-  "clock": "0:00",
+  "clock": "13:31",
   "conf_comp": true,
-  "detail": "End of 3rd",
-  "down": "2nd & 10 at WSU 5",
+  "detail": "13:31 - 4th",
+  "down": "1st & 10 at FRES 42",
   "espn_id": "401860921",
   "final": false,
   "home_abbr": "WSU",
@@ -627,20 +627,22 @@
   "line_away": [
    3.0,
    3.0,
-   7.0
+   7.0,
+   0.0
   ],
   "line_home": [
    0.0,
    6.0,
+   0.0,
    0.0
   ],
   "neutral": false,
-  "period": 3,
-  "poss": "home",
+  "period": 4,
+  "poss": "away",
   "redzone": false,
-  "spot": "WSU 5",
+  "spot": "FRES 42",
   "state": "WA",
-  "status": "End of Period",
+  "status": "In Progress",
   "venue": "Martin Stadium"
  },
  "253e389201e449a2984a194e3eebf7f8": {
@@ -1903,10 +1905,10 @@
   "away_rank": 99,
   "away_short": "San Jos\u00e9 St",
   "city": "Honolulu",
-  "clock": "9:16",
+  "clock": "8:05",
   "conf_comp": true,
-  "detail": "9:16 - 1st",
-  "down": "3rd & 8 at HAW 35",
+  "detail": "8:05 - 1st",
+  "down": null,
   "espn_id": "401864513",
   "final": false,
   "home_abbr": "HAW",
@@ -1918,7 +1920,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "1/1, 11 YDS",
+    "val": "2/3, 17 YDS",
     "who": "M. Alejado"
    },
    {
@@ -1942,23 +1944,23 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "HAW 35",
+  "spot": null,
   "state": "HI",
   "status": "In Progress",
   "venue": "Clarence T.C. Ching Athletics Complex"
  },
  "4ec93b02d04c2a019ebd6f4ccd9f7af5": {
   "away_abbr": "BAY",
-  "away_r": "21",
+  "away_r": "24",
   "away_rank": 99,
   "away_short": "Baylor",
   "city": "Tempe",
-  "clock": "0:10",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:10 - 2nd",
-  "down": "2nd & 10 at ASU 18",
+  "detail": "Halftime",
+  "down": "4th & 10 at BAY 35",
   "espn_id": "401856817",
   "final": false,
   "home_abbr": "ASU",
@@ -1988,7 +1990,7 @@
   ],
   "line_away": [
    14.0,
-   7.0
+   10.0
   ],
   "line_home": [
    3.0,
@@ -1996,11 +1998,11 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
-  "redzone": true,
-  "spot": "ASU 18",
+  "poss": null,
+  "redzone": false,
+  "spot": "BAY 35",
   "state": "AZ",
-  "status": "In Progress",
+  "status": "Halftime",
   "venue": "Mountain America Stadium"
  },
  "4fcb5b7ec04cad7acc5d048bdd24be4c": {
@@ -2839,10 +2841,10 @@
   "away_rank": 99,
   "away_short": "Cincinnati",
   "city": "Tucson",
-  "clock": "2:07",
+  "clock": "1:58",
   "conf_comp": true,
-  "detail": "2:07 - 2nd",
-  "down": null,
+  "detail": "1:58 - 2nd",
+  "down": "1st & 10 at CIN 27",
   "espn_id": "401856820",
   "final": false,
   "home_abbr": "ARIZ",
@@ -2854,7 +2856,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "12/16, 112 YDS, 1 INT",
+    "val": "13/18, 122 YDS, 1 INT",
     "who": "N. Fifita"
    },
    {
@@ -2880,9 +2882,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "CIN 27",
   "state": "AZ",
   "status": "In Progress",
   "venue": "Casino Del Sol Stadium"
