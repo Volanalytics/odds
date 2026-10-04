@@ -84,14 +84,14 @@
   "away_p": "Robbie Ray",
   "away_p_hand": "L",
   "away_r": 0,
-  "cur_batter": "Fernando Tatis Jr.",
+  "cur_batter": "Dustin Harris",
   "cur_pitcher": "Jacob Misiorowski",
   "game_pk": 849830,
   "half": "Top",
   "home_p": "Jacob Misiorowski",
   "home_p_hand": "R",
   "home_r": 0,
-  "in_play": false,
+  "in_play": true,
   "inning": 1,
   "innings": [
    {
@@ -101,7 +101,7 @@
    }
   ],
   "lose_p": null,
-  "outs": 0,
+  "outs": 1,
   "pitch_side": "home",
   "rhe_away": [
    0,
@@ -114,10 +114,12 @@
    0
   ],
   "save_p": null,
-  "status": "Warmup",
-  "warmup": true,
+  "status": "In Progress",
+  "warmup": false,
   "win_p": null,
-  "win_side": null
+  "win_side": null,
+  "wp_away": 50.0,
+  "wp_home": 50.0
  },
  "5524c44b05e28aa899909c9e001184ec": {
   "abstract": "Final",
@@ -318,8 +320,8 @@
   "away_p": "Gerrit Cole",
   "away_p_hand": "R",
   "away_r": 0,
-  "cur_batter": "Taylor Walls",
-  "cur_pitcher": "Paul Blackburn",
+  "cur_batter": "Jazz Chisholm Jr.",
+  "cur_pitcher": "Drew Rasmussen",
   "game_pk": 849835,
   "half": "Bottom",
   "home_p": "Drew Rasmussen",
@@ -360,13 +362,15 @@
    },
    {
     "a": 0,
-    "h": null,
+    "h": 0,
     "n": 7
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "away",
+  "outs": 3,
+  "pitch_side": "home",
+  "pitcher_changed": true,
+  "prev_pitcher": "Paul Blackburn",
   "rhe_away": [
    0,
    0,
@@ -382,8 +386,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "home",
-  "wp_away": 23.0,
-  "wp_home": 77.0
+  "wp_away": 24.5,
+  "wp_home": 75.5
  },
  "ccd487a87bb73145e3f12dd3a765ad47": {
   "abstract": "Preview",
@@ -402,7 +406,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "away",
+  "pitch_side": "home",
   "rhe_away": [
    null,
    null,
