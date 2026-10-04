@@ -689,10 +689,10 @@
   "away_rank": 99,
   "away_short": "Fresno St",
   "city": "Pullman",
-  "clock": "1:54",
+  "clock": "1:26",
   "conf_comp": true,
-  "detail": "1:54 - 4th",
-  "down": "2nd & 17 at WSU 29",
+  "detail": "1:26 - 4th",
+  "down": null,
   "espn_id": "401860921",
   "final": false,
   "home_abbr": "WSU",
@@ -735,8 +735,8 @@
   "neutral": false,
   "period": 4,
   "poss": "home",
-  "redzone": false,
-  "spot": "WSU 29",
+  "redzone": true,
+  "spot": null,
   "state": "WA",
   "status": "In Progress",
   "venue": "Martin Stadium"
@@ -2001,10 +2001,10 @@
   "away_rank": 99,
   "away_short": "San Jos\u00e9 St",
   "city": "Honolulu",
-  "clock": "11:49",
+  "clock": "8:23",
   "conf_comp": true,
-  "detail": "11:49 - 2nd",
-  "down": null,
+  "detail": "8:23 - 2nd",
+  "down": "2nd & 10 at HAW 43",
   "espn_id": "401864513",
   "final": false,
   "home_abbr": "HAW",
@@ -2015,14 +2015,14 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "6/9, 81 YDS, 1 INT",
-    "who": "M. Alejado"
+    "team": "away",
+    "val": "7/11, 93 YDS, 1 TD",
+    "who": "L. Weaver"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "10 CAR, 34 YDS",
+    "val": "11 CAR, 34 YDS",
     "who": "J. Bates"
    },
    {
@@ -2042,23 +2042,23 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "HAW 43",
   "state": "HI",
   "status": "In Progress",
   "venue": "Clarence T.C. Ching Athletics Complex"
  },
  "4ec93b02d04c2a019ebd6f4ccd9f7af5": {
   "away_abbr": "BAY",
-  "away_r": "31",
+  "away_r": "38",
   "away_rank": 99,
   "away_short": "Baylor",
   "city": "Tempe",
-  "clock": "10:06",
+  "clock": "9:29",
   "conf_comp": true,
-  "detail": "10:06 - 3rd",
-  "down": "1st & 10 at ASU 12",
+  "detail": "9:29 - 3rd",
+  "down": null,
   "espn_id": "401856817",
   "final": false,
   "home_abbr": "ASU",
@@ -2070,7 +2070,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "21/34, 282 YDS, 3 TD",
+    "val": "22/36, 290 YDS, 4 TD",
     "who": "D. Lagway"
    },
    {
@@ -2089,7 +2089,7 @@
   "line_away": [
    14.0,
    10.0,
-   7.0
+   14.0
   ],
   "line_home": [
    3.0,
@@ -2098,9 +2098,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "away",
-  "redzone": true,
-  "spot": "ASU 12",
+  "poss": null,
+  "redzone": false,
+  "spot": null,
   "state": "AZ",
   "status": "In Progress",
   "venue": "Mountain America Stadium"
@@ -2941,10 +2941,10 @@
   "away_rank": 99,
   "away_short": "Cincinnati",
   "city": "Tucson",
-  "clock": "13:07",
+  "clock": "11:19",
   "conf_comp": true,
-  "detail": "13:07 - 3rd",
-  "down": "1st & 10 at ARIZ 20",
+  "detail": "11:19 - 3rd",
+  "down": "1st & 10 at ARIZ 30",
   "espn_id": "401856820",
   "final": false,
   "home_abbr": "ARIZ",
@@ -2956,7 +2956,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "15/21, 136 YDS, 1 INT",
+    "val": "16/22, 150 YDS, 1 INT",
     "who": "N. Fifita"
    },
    {
@@ -2986,7 +2986,7 @@
   "period": 3,
   "poss": "home",
   "redzone": false,
-  "spot": "ARIZ 20",
+  "spot": "ARIZ 30",
   "state": "AZ",
   "status": "In Progress",
   "venue": "Casino Del Sol Stadium"
@@ -5737,14 +5737,14 @@
   "away_rank": 99,
   "away_short": "Texas St",
   "city": "San Diego",
-  "clock": "8:04",
+  "clock": "6:45",
   "conf_comp": true,
-  "detail": "8:04 - 3rd",
+  "detail": "6:45 - 3rd",
   "down": null,
   "espn_id": "401860900",
   "final": false,
   "home_abbr": "SDSU",
-  "home_r": "17",
+  "home_r": "23",
   "home_rank": 99,
   "home_short": "San Diego St",
   "in_play": true,
@@ -5752,13 +5752,13 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "13/18, 196 YDS, 2 TD, 1 INT",
+    "val": "13/19, 196 YDS, 2 TD, 1 INT",
     "who": "B. Jackson"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "15 CAR, 89 YDS, 1 TD",
+    "val": "16 CAR, 96 YDS, 2 TD",
     "who": "J. Lucas"
    },
    {
@@ -5776,7 +5776,7 @@
   "line_home": [
    3.0,
    0.0,
-   14.0
+   20.0
   ],
   "neutral": false,
   "period": 3,
