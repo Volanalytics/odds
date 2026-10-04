@@ -2055,10 +2055,10 @@
   "away_rank": 99,
   "away_short": "Baylor",
   "city": "Tempe",
-  "clock": "11:36",
+  "clock": "10:51",
   "conf_comp": true,
-  "detail": "11:36 - 4th",
-  "down": null,
+  "detail": "10:51 - 4th",
+  "down": "2nd & 5 at ASU 44",
   "espn_id": "401856817",
   "final": false,
   "home_abbr": "ASU",
@@ -2100,9 +2100,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "ASU 44",
   "state": "AZ",
   "status": "In Progress",
   "venue": "Mountain America Stadium"
@@ -2943,10 +2943,10 @@
   "away_rank": 99,
   "away_short": "Cincinnati",
   "city": "Tucson",
-  "clock": "15:00",
+  "clock": "14:33",
   "conf_comp": true,
-  "detail": "15:00 - 3rd",
-  "down": "2nd & 20 at ARIZ 46",
+  "detail": "14:33 - 4th",
+  "down": "2nd & 10 at CIN 41",
   "espn_id": "401856820",
   "final": false,
   "home_abbr": "ARIZ",
@@ -2958,7 +2958,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "19/26, 222 YDS, 1 TD, 1 INT",
+    "val": "19/27, 222 YDS, 1 TD, 1 INT",
     "who": "N. Fifita"
    },
    {
@@ -2977,18 +2977,20 @@
   "line_away": [
    0.0,
    0.0,
+   0.0,
    0.0
   ],
   "line_home": [
    7.0,
    3.0,
-   14.0
+   14.0,
+   0.0
   ],
   "neutral": false,
-  "period": 3,
+  "period": 4,
   "poss": "home",
   "redzone": false,
-  "spot": "ARIZ 46",
+  "spot": "CIN 41",
   "state": "AZ",
   "status": "In Progress",
   "venue": "Casino Del Sol Stadium"
@@ -5787,10 +5789,10 @@
   "away_rank": 99,
   "away_short": "Texas St",
   "city": "San Diego",
-  "clock": "8:15",
+  "clock": "3:49",
   "conf_comp": true,
-  "detail": "8:15 - 4th",
-  "down": "2nd & 7 at SDSU 27",
+  "detail": "3:49 - 4th",
+  "down": "4th & Goal at SDSU 2",
   "espn_id": "401860900",
   "final": false,
   "home_abbr": "SDSU",
@@ -5802,7 +5804,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "19/28, 256 YDS, 2 TD, 1 INT",
+    "val": "22/31, 269 YDS, 2 TD, 1 INT",
     "who": "B. Jackson"
    },
    {
@@ -5814,7 +5816,7 @@
    {
     "cat": "REC",
     "team": "away",
-    "val": "6 REC, 76 YDS",
+    "val": "7 REC, 82 YDS",
     "who": "B. Sparks"
    }
   ],
@@ -5833,8 +5835,8 @@
   "neutral": false,
   "period": 4,
   "poss": "away",
-  "redzone": false,
-  "spot": "SDSU 27",
+  "redzone": true,
+  "spot": "SDSU 2",
   "state": "CA",
   "status": "In Progress",
   "venue": "Snapdragon Stadium"
