@@ -287,7 +287,13 @@
   "home_r": 0,
   "in_play": false,
   "inning": 1,
-  "innings": [],
+  "innings": [
+   {
+    "a": null,
+    "h": null,
+    "n": 1
+   }
+  ],
   "lose_p": null,
   "outs": 0,
   "pitch_side": "home",
@@ -391,9 +397,9 @@
   "abstract": "Live",
   "away_p": "Michael King",
   "away_p_hand": "R",
-  "away_r": 2,
-  "cur_batter": "Manny Machado",
-  "cur_pitcher": "Abner Uribe",
+  "away_r": 3,
+  "cur_batter": "Garrett Mitchell",
+  "cur_pitcher": "Yuki Matsui",
   "game_pk": 849825,
   "half": "Top",
   "home_p": "Logan Henderson",
@@ -433,17 +439,19 @@
     "n": 6
    },
    {
-    "a": null,
+    "a": 1,
     "h": null,
     "n": 7
    }
   ],
   "lose_p": null,
-  "outs": 2,
-  "pitch_side": "home",
+  "outs": 3,
+  "pitch_side": "away",
+  "pitcher_changed": true,
+  "prev_pitcher": "Abner Uribe",
   "rhe_away": [
-   2,
-   2,
+   3,
+   3,
    0
   ],
   "rhe_home": [
@@ -456,8 +464,8 @@
   "warmup": false,
   "win_p": null,
   "win_side": "away",
-  "wp_away": 66.19999999999999,
-  "wp_home": 33.800000000000004
+  "wp_away": 68.5,
+  "wp_home": 31.5
  },
  "cb4d07dc15440acf3d9ebe1ad41756c1": {
   "abstract": "Final",
@@ -556,7 +564,7 @@
   "innings": [],
   "lose_p": null,
   "outs": null,
-  "pitch_side": "home",
+  "pitch_side": "away",
   "rhe_away": [
    null,
    null,
