@@ -501,12 +501,15 @@ function mergedHist(s){
   const rows = [];
   const add = (arr, fallback, book) =>
     (arr || (fallback ? [fallback] : [])).forEach(h =>
-      rows.push({ts: h.ts || "\u2014", iso: h.iso || h.iso_open || "",
+      rows.push({ts: h.ts || h.observed_at || "\u2014",
+                 iso: h.iso || h.iso_observed || h.iso_open || "",
                  line: h.line, book: book}));
 
-  add(s.hist, {ts: s.opened_at, iso: s.iso_open, line: s.cur}, s.book || "bol");
+  add(s.hist, {ts: s.observed_at || s.opened_at,
+               iso: s.iso_observed || s.iso_open, line: s.cur}, s.book || "bol");
   if(s.alt)
-    add(s.alt.hist, {ts: s.alt.opened_at, iso: s.alt.iso_open, line: s.alt.cur},
+    add(s.alt.hist, {ts: s.alt.observed_at || s.alt.opened_at,
+                     iso: s.alt.iso_observed || s.alt.iso_open, line: s.alt.cur},
         s.alt.book);
 
   // Sort on the ISO value; the display stamp is 12-hour and would put
@@ -515,7 +518,7 @@ function mergedHist(s){
   return rows;
 }
 
-function histRows(s){
+function histRows(s, g){
   const rows = mergedHist(s);
   const prim = (DATA.books || [])[0] || "betonlineag";
   const multi = !!s.alt || (s.book && s.book !== prim);
@@ -523,11 +526,16 @@ function histRows(s){
   return rows.map(h => {
     const isNew = !newest[h.book] && (newest[h.book] = 1);
     const isP = h.book === prim || h.book === "bol";
+    const live = quoteIsLive(g, {iso_observed: h.iso});
     const tag = multi
       ? `<td><span class="bk ${isP ? "bol" : "k"}">`
       + `${isP ? "BOL" : (BOOKLBL[h.book] || "ALT")}</span></td>` : "";
-    return `<tr><td class="dts">${h.ts}</td>${tag}`
-         + `<td class="${isNew ? "dnow" : ""} ${isP ? "" : "altp"}">${h.line}</td></tr>`;
+    const liveMark = live
+      ? `<span class="live-badge" title="Live market · captured ${h.ts}">&#9679; LIVE</span>`
+      : "";
+    const cls = `${isNew ? "dnow " : ""}${isP ? "" : "altp "}${live ? "q-live" : ""}`.trim();
+    return `<tr><td class="dts">${h.ts}${liveMark}</td>${tag}`
+         + `<td class="${cls}">${h.line}</td></tr>`;
   }).join("");
 }
 
@@ -541,7 +549,7 @@ function detailRow(gi, key){
   const blocks = (g.markets[key] || []).map(s =>
     `<div style="display:inline-block;vertical-align:top;margin-right:36px">
        <div class="dhead">${g.away} @ ${g.home} &mdash; ${label} &mdash; ${s.label}</div>
-       <table>${histRows(s)}</table></div>`).join("");
+       <table>${histRows(s, g)}</table></div>`).join("");
   return `<tr class="det"><td colspan="${DATA.columns.length + 2}">
             <div class="dwrap">${blocks}</div></td></tr>`;
 }
@@ -571,12 +579,18 @@ function cardHist(gi, key){
         const rows = mergedHist(s), newest = {};
         return rows.map(h => {
           const isNew = !newest[h.book] && (newest[h.book] = 1);
+          const prim = (DATA.books || [])[0] || "betonlineag";
+          const isP = h.book === prim || h.book === "bol";
+          const live = quoteIsLive(g, {iso_observed: h.iso});
           const tag = s.alt
-            ? `<span class="bk ${h.book}">${h.book === "k"
-                ? (BOOKLBL[s.alt.book] || "ALT") : "BOL"}</span>` : "";
-          return `<div class="hrow"><span class="dts">${h.ts}</span>`
-               + `<span>${tag}<span class="${isNew ? "dnow" : ""} `
-               + `${h.book === "k" ? "altp" : ""}">${h.line}</span></span></div>`;
+            ? `<span class="bk ${isP ? "bol" : "k"}">${isP
+                ? "BOL" : (BOOKLBL[h.book] || "ALT")}</span>` : "";
+          const liveMark = live
+            ? `<span class="live-badge" title="Live market · captured ${h.ts}">&#9679; LIVE</span>`
+            : "";
+          const cls = `${isNew ? "dnow " : ""}${isP ? "" : "altp "}${live ? "q-live" : ""}`.trim();
+          return `<div class="hrow"><span class="dts">${h.ts}${liveMark}</span>`
+               + `<span>${tag}<span class="${cls}">${h.line}</span></span></div>`;
         }).join("");
       })()
   ).join("") + "</div>";
