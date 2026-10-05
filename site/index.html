@@ -433,10 +433,13 @@ function statusLine(g){
 }
 
 function quoteIsLive(g, q){
-  /* A quote is LIVE only if that actual observation was captured at/after the
-     scheduled start.  This deliberately does NOT use g.live/g.started: a
-     stale pregame quote can remain on screen after the game begins. */
-  if(!g || !g.start_iso || !q || !q.iso_observed) return false;
+  /* Prefer the builder's explicit classification.  This avoids browser/date
+     parsing differences and treats BetOnline (primary) exactly like Kalshi.
+     Fall back to timestamps so older generated JSON remains compatible. */
+  if(!q) return false;
+  if(q.live === true) return true;
+  if(q.live === false) return false;
+  if(!g || !g.start_iso || !q.iso_observed) return false;
   const obs = Date.parse(q.iso_observed), start = Date.parse(g.start_iso);
   return Number.isFinite(obs) && Number.isFinite(start) && obs >= start;
 }
@@ -503,14 +506,14 @@ function mergedHist(s){
     (arr || (fallback ? [fallback] : [])).forEach(h =>
       rows.push({ts: h.ts || h.observed_at || "\u2014",
                  iso: h.iso || h.iso_observed || h.iso_open || "",
-                 line: h.line, book: book}));
+                 line: h.line, book: book, live: h.live}));
 
   add(s.hist, {ts: s.observed_at || s.opened_at,
-               iso: s.iso_observed || s.iso_open, line: s.cur}, s.book || "bol");
+               iso: s.iso_observed || s.iso_open, line: s.cur, live: s.live}, s.book || "bol");
   if(s.alt)
     add(s.alt.hist, {ts: s.alt.observed_at || s.alt.opened_at,
-                     iso: s.alt.iso_observed || s.alt.iso_open, line: s.alt.cur},
-        s.alt.book);
+                     iso: s.alt.iso_observed || s.alt.iso_open, line: s.alt.cur,
+                     live: s.alt.live}, s.alt.book);
 
   // Sort on the ISO value; the display stamp is 12-hour and would put
   // 01:10 PM ahead of 09:30 AM.
@@ -526,7 +529,7 @@ function histRows(s, g){
   return rows.map(h => {
     const isNew = !newest[h.book] && (newest[h.book] = 1);
     const isP = h.book === prim || h.book === "bol";
-    const live = quoteIsLive(g, {iso_observed: h.iso});
+    const live = quoteIsLive(g, {iso_observed: h.iso, live: h.live});
     const tag = multi
       ? `<td><span class="bk ${isP ? "bol" : "k"}">`
       + `${isP ? "BOL" : (BOOKLBL[h.book] || "ALT")}</span></td>` : "";
@@ -581,7 +584,7 @@ function cardHist(gi, key){
           const isNew = !newest[h.book] && (newest[h.book] = 1);
           const prim = (DATA.books || [])[0] || "betonlineag";
           const isP = h.book === prim || h.book === "bol";
-          const live = quoteIsLive(g, {iso_observed: h.iso});
+          const live = quoteIsLive(g, {iso_observed: h.iso, live: h.live});
           const tag = s.alt
             ? `<span class="bk ${isP ? "bol" : "k"}">${isP
                 ? "BOL" : (BOOKLBL[h.book] || "ALT")}</span>` : "";
