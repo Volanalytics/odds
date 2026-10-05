@@ -284,6 +284,12 @@ def build(days_shown=2, history_days=4, keep_hours=12):
                 "moved_min": round((now - moved_at).total_seconds() / 60, 1),
                 "opened_at": stamp(first["ts"]),
                 "iso_open":  first["ts"],
+                # Preserve the latest observation timestamp.  The page can use
+                # this with game start_iso to distinguish a genuinely live
+                # quote from a pregame quote that simply remains on screen
+                # after puck drop/kickoff/first pitch.
+                "observed_at": stamp(last["ts"]),
+                "iso_observed": last["ts"],
             }
             if changed:
                 side["hist"] = [{"ts": stamp(r["ts"]), "iso": r["ts"],
@@ -304,7 +310,9 @@ def build(days_shown=2, history_days=4, keep_hours=12):
                         p["alt"] = {"book": a["book"], "cur": a["cur"],
                                     "hist": a.get("hist"),
                                     "opened_at": a.get("opened_at"),
-                                    "iso_open": a.get("iso_open")}
+                                    "iso_open": a.get("iso_open"),
+                                    "observed_at": a.get("observed_at"),
+                                    "iso_observed": a.get("iso_observed")}
                         break
             # A market the primary book doesn't price at all still shows,
             # so an exchange-only line isn't invisible.
