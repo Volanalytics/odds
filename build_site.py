@@ -290,10 +290,16 @@ def build(days_shown=2, history_days=4, keep_hours=12):
                 # after puck drop/kickoff/first pitch.
                 "observed_at": stamp(last["ts"]),
                 "iso_observed": last["ts"],
+                # Classify at build time rather than relying on browser Date.parse.
+                # This is authoritative for both the primary book (BetOnline)
+                # and secondary/exchange books.
+                "live": parse_iso(last["ts"]) >= start_utc,
             }
             if changed:
                 side["hist"] = [{"ts": stamp(r["ts"]), "iso": r["ts"],
-                                 "line": fmt_line(r)} for r in reversed(seq)]
+                                 "line": fmt_line(r),
+                                 "live": parse_iso(r["ts"]) >= start_utc}
+                                for r in reversed(seq)]
             side["book"] = book
             # Secondary books hang off the primary side rather than forming
             # their own row: an exchange quote is a comparison, not a separate
@@ -312,7 +318,8 @@ def build(days_shown=2, history_days=4, keep_hours=12):
                                     "opened_at": a.get("opened_at"),
                                     "iso_open": a.get("iso_open"),
                                     "observed_at": a.get("observed_at"),
-                                    "iso_observed": a.get("iso_observed")}
+                                    "iso_observed": a.get("iso_observed"),
+                                    "live": a.get("live", False)}
                         break
             # A market the primary book doesn't price at all still shows,
             # so an exchange-only line isn't invisible.
