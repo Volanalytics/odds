@@ -145,6 +145,13 @@ td.sel{outline:1px solid var(--chalk);outline-offset:-1px}
 .arow{line-height:1.5}
 .altp{color:#8FC7E8}
 .cur{color:var(--ink)}
+/* Quote-level live state.  A game row can be live while the last available
+   price is still pregame, so this is driven by each quote's observation time
+   rather than by the row's started/live class. */
+.q-live{color:var(--m5)!important;font-weight:700}
+.live-badge{display:inline-block;margin-left:5px;padding:0 4px;border:1px solid var(--m5);
+           border-radius:3px;color:var(--m5);font-size:9px;font-weight:700;
+           letter-spacing:.5px;line-height:1.35;vertical-align:1px}
 tr.det td{background:#061014;padding:0;text-align:left}
 .dwrap{padding:10px 16px;white-space:normal}
 .dhead{color:var(--chalk);font-weight:500;margin-bottom:6px;font-size:12px}
@@ -425,16 +432,29 @@ function statusLine(g){
   return `<div class="${cls}">${g.status_text}</div>`;
 }
 
-function sideHTML(s, which){
+function quoteIsLive(g, q){
+  /* A quote is LIVE only if that actual observation was captured at/after the
+     scheduled start.  This deliberately does NOT use g.live/g.started: a
+     stale pregame quote can remain on screen after the game begins. */
+  if(!g || !g.start_iso || !q || !q.iso_observed) return false;
+  const obs = Date.parse(q.iso_observed), start = Date.parse(g.start_iso);
+  return Number.isFinite(obs) && Number.isFinite(start) && obs >= start;
+}
+
+function liveBadge(g, q){
+  if(!quoteIsLive(g, q)) return "";
+  const when = q.observed_at ? ` · captured ${q.observed_at}` : "";
+  return `<span class="live-badge" title="Live market${when}">&#9679; LIVE</span>`;
+}
+
+function sideHTML(s, which, g){
   const v = s[which] || "&mdash;";
   const k = which === "cur" ? mvClass(s.moved_min, s.changed) : "";
   const d = which === "cur" && s.changed ? '<span class="dot">&#9679;</span>' : "";
 
   /* Tag by the side's ACTUAL book. Some markets are priced by only one of the
      two -- college moneylines are frequently Kalshi-only -- and hardcoding
-     "BOL" made an exchange price look like a book price, which is why football
-     appeared to have no Kalshi data at all. No tag only when the single quote
-     comes from the primary book. */
+     "BOL" made an exchange price look like a book price. */
   const prim = (DATA.books || [])[0] || "betonlineag";
   const own  = s.book || prim;
   const tagged = which === "cur" && (!!s.alt || own !== prim);
@@ -442,12 +462,18 @@ function sideHTML(s, which){
                    + `${b === prim ? "BOL" : (BOOKLBL[b] || "ALT")}</span>`;
   const tag = b => tagged ? bkTag(b) : "";
   const ownAlt = own !== prim ? " altp" : "";
+  const ownLive = which === "cur" && quoteIsLive(g, s);
+  const ownLiveCls = ownLive ? " q-live" : "";
 
   let out = `<span class="side">${s.label}</span>${tag(own)}`
-          + `<span class="${which === "cur" ? "cur " + k + ownAlt : "open"}">${v}</span>${d}`;
+          + `<span class="${which === "cur" ? "cur " + k + ownAlt + ownLiveCls : "open"}">${v}</span>`
+          + (which === "cur" ? liveBadge(g, s) : "") + d;
+
   if(which === "cur" && s.alt){
+    const altLiveCls = quoteIsLive(g, s.alt) ? " q-live" : "";
     out += `<div class="arow"><span class="side"></span>${tag(s.alt.book)}`
-         + `<span class="cur altp">${s.alt.cur}</span></div>`;
+         + `<span class="cur altp${altLiveCls}">${s.alt.cur}</span>`
+         + liveBadge(g, s.alt) + `</div>`;
   }
   if(which === "cur" && s.changed && s.open && s.open !== s.cur){
     out += `<div class="opn"><span class="side"></span>`
@@ -458,14 +484,14 @@ function sideHTML(s, which){
 }
 
 /* ── desktop ─────────────────────────────────────────────────── */
-function cell(sides, which, gi, key){
+function cell(sides, which, gi, key, g){
   if(!sides || !sides.length) return "<td>&mdash;</td>";
   const any = sides.some(s => s.changed);
   const cls = (which === "cur" && any ? "hot" : "")
             + (OPEN && OPEN[0] === gi && OPEN[1] === key ? " sel" : "");
   const click = which === "cur" && any ? ` onclick="det(${gi},'${key}')"` : "";
   return `<td class="${cls}"${click}>`
-       + sides.map(s => `<div>${sideHTML(s, which)}</div>`).join("") + "</td>";
+       + sides.map(s => `<div>${sideHTML(s, which, g)}</div>`).join("") + "</td>";
 }
 
 /* One chronological stream covering both books rather than two separate
@@ -531,7 +557,7 @@ function mkBlock(g, gi, col){
             + (OPEN && OPEN[0] === gi && OPEN[1] === col.key ? " sel" : "");
   const click = any ? ` onclick="det(${gi},'${col.key}')"` : "";
   return `<div class="mk${cls}"${click}><div class="mklbl">${col.label}</div>`
-       + sides.map(s => `<div class="mkln">${sideHTML(s, "cur")}</div>`).join("")
+       + sides.map(s => `<div class="mkln">${sideHTML(s, "cur", g)}</div>`).join("")
        + "</div>";
 }
 
@@ -635,7 +661,7 @@ function render(){
           ${(g.home_p && !g.live && !g.final) ? pit(g.home_p, g.home_ph) : ""}
           ${venueLine(g)}
         </td>
-        ${d.columns.map(c => cell(g.markets[c.key], "cur", i, c.key)).join("")}
+        ${d.columns.map(c => cell(g.markets[c.key], "cur", i, c.key, g)).join("")}
       </tr>`);
     if(OPEN && OPEN[0] === i) rows.push(detailRow(i, OPEN[1]));
     cards.push(card(g, i));
