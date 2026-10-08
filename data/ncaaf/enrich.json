@@ -2021,10 +2021,10 @@
   "away_rank": 99,
   "away_short": "Missouri St",
   "city": "Bowling Green",
-  "clock": "14:02",
+  "clock": "12:54",
   "conf_comp": true,
-  "detail": "14:02 - 1st",
-  "down": "4th & 3 at MOST 40",
+  "detail": "12:54 - 1st",
+  "down": "1st & 10 at MOST 32",
   "espn_id": "401871052",
   "final": false,
   "home_abbr": "WKU",
@@ -2035,21 +2035,15 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "away",
-    "val": "1/2, 0 YDS",
-    "who": "S. Locklear"
+    "team": "home",
+    "val": "2, 0 YDS",
+    "who": "B. Glenn"
    },
    {
     "cat": "RUSH",
     "team": "away",
     "val": "1 CAR, 7 YDS",
     "who": "R. Green Jr."
-   },
-   {
-    "cat": "REC",
-    "team": "away",
-    "val": "1 REC, 0 YDS",
-    "who": "J. Askren"
    }
   ],
   "line_away": [
@@ -2062,7 +2056,7 @@
   "period": 1,
   "poss": "away",
   "redzone": false,
-  "spot": "MOST 40",
+  "spot": "MOST 32",
   "state": "KY",
   "status": "In Progress",
   "venue": "Houchens Industries-L.T. Smith Stadium"
@@ -4349,29 +4343,48 @@
   "away_rank": 99,
   "away_short": "Sam Houston",
   "city": "Lynchburg",
-  "clock": "14:39",
+  "clock": "10:48",
   "conf_comp": true,
-  "detail": "14:39 - 1st",
-  "down": "1st & 10 at SHSU 0",
+  "detail": "10:48 - 1st",
+  "down": null,
   "espn_id": "401870766",
   "final": false,
   "home_abbr": "LIB",
-  "home_r": "0",
+  "home_r": "6",
   "home_rank": 99,
   "home_short": "Liberty",
   "in_play": true,
-  "leaders": [],
+  "leaders": [
+   {
+    "cat": "PASS",
+    "team": "home",
+    "val": "2/3, 37 YDS, 1 TD",
+    "who": "D. Purdie"
+   },
+   {
+    "cat": "RUSH",
+    "team": "home",
+    "val": "3 CAR, 20 YDS",
+    "who": "K. Davis"
+   },
+   {
+    "cat": "REC",
+    "team": "home",
+    "val": "1 REC, 22 YDS",
+    "who": "M. Jackson"
+   }
+  ],
   "line_away": [
    0.0
   ],
   "line_home": [
-   0.0
+   6.0
   ],
   "neutral": false,
   "period": 1,
   "poss": null,
   "redzone": true,
-  "spot": "SHSU 0",
+  "spot": null,
   "state": "VA",
   "status": "In Progress",
   "venue": "Williams Stadium (VA)"
