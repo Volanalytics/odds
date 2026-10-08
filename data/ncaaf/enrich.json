@@ -821,46 +821,50 @@
   "away_rank": 99,
   "away_short": "South Florida",
   "city": "San Antonio",
-  "clock": "0:00",
+  "clock": "11:56",
   "conf_comp": true,
-  "detail": "10/8 - 7:30 PM EDT",
-  "down": null,
+  "detail": "11:56 - 1st",
+  "down": "2nd & 10 at UTSA 30",
   "espn_id": "401862794",
   "final": false,
   "home_abbr": "UTSA",
   "home_r": "0",
   "home_rank": 99,
   "home_short": "UTSA",
-  "in_play": false,
+  "in_play": true,
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "1010 YDS, 7 TD, 2 INT",
-    "who": "O. McCown"
+    "team": "away",
+    "val": "3/4, 29 YDS",
+    "who": "M. Van Buren Jr."
    },
    {
     "cat": "RUSH",
-    "team": "home",
-    "val": "65 CAR, 398 YDS, 3 TD",
-    "who": "W. Henderson III"
+    "team": "away",
+    "val": "2 CAR, 6 YDS",
+    "who": "D.J. Crowther"
    },
    {
     "cat": "REC",
-    "team": "home",
-    "val": "18 REC, 269 YDS, 2 TD",
-    "who": "D. Allen Jr."
+    "team": "away",
+    "val": "1 REC, 14 YDS",
+    "who": "M. Reuben"
    }
   ],
-  "line_away": [],
-  "line_home": [],
+  "line_away": [
+   0.0
+  ],
+  "line_home": [
+   0.0
+  ],
   "neutral": false,
-  "period": 0,
-  "poss": null,
+  "period": 1,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "UTSA 30",
   "state": "TX",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "Alamodome"
  },
  "2c3f80e228a486e04f6f7a38e4f00fb4": {
@@ -1925,46 +1929,44 @@
   "away_rank": 99,
   "away_short": "South Alabama",
   "city": "Jonesboro",
-  "clock": "0:00",
+  "clock": "13:30",
   "conf_comp": true,
-  "detail": "10/8 - 7:30 PM EDT",
-  "down": null,
+  "detail": "13:30 - 1st",
+  "down": "4th & 10 at USA 22",
   "espn_id": "401869933",
   "final": false,
   "home_abbr": "ARST",
   "home_r": "0",
   "home_rank": 99,
   "home_short": "Arkansas St",
-  "in_play": false,
+  "in_play": true,
   "leaders": [
    {
     "cat": "PASS",
     "team": "home",
-    "val": "1043 YDS, 5 TD, 4 INT",
+    "val": "1, 0 YDS",
     "who": "T. Owens"
    },
    {
     "cat": "RUSH",
-    "team": "away",
-    "val": "76 CAR, 328 YDS, 5 TD",
-    "who": "P. Martin"
-   },
-   {
-    "cat": "REC",
-    "team": "away",
-    "val": "20 REC, 319 YDS, 3 TD",
-    "who": "B. Jenkins"
+    "team": "home",
+    "val": "1 CAR, 4 YDS",
+    "who": "S. Baggett"
    }
   ],
-  "line_away": [],
-  "line_home": [],
+  "line_away": [
+   0.0
+  ],
+  "line_home": [
+   0.0
+  ],
   "neutral": false,
-  "period": 0,
-  "poss": null,
+  "period": 1,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "USA 22",
   "state": "AR",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "Centennial Bank Stadium"
  },
  "55d9636153ca5741d460ef2f78b663d9": {
@@ -2021,10 +2023,10 @@
   "away_rank": 99,
   "away_short": "Missouri St",
   "city": "Bowling Green",
-  "clock": "2:16",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "2:16 - 1st",
-  "down": null,
+  "detail": "End of 1st",
+  "down": "1st & 10 at MOST 38",
   "espn_id": "401871052",
   "final": false,
   "home_abbr": "WKU",
@@ -2036,7 +2038,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "4/8, 44 YDS",
+    "val": "5/10, 50 YDS",
     "who": "B. Glenn"
    },
    {
@@ -2060,11 +2062,11 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "MOST 38",
   "state": "KY",
-  "status": "In Progress",
+  "status": "End of Period",
   "venue": "Houchens Industries-L.T. Smith Stadium"
  },
  "57ad14afc7db1843fd56f5971dadb058": {
@@ -4349,10 +4351,10 @@
   "away_rank": 99,
   "away_short": "Sam Houston",
   "city": "Lynchburg",
-  "clock": "1:13",
+  "clock": "15:00",
   "conf_comp": true,
-  "detail": "1:13 - 1st",
-  "down": "1st & 10 at SHSU 37",
+  "detail": "15:00 - 2nd",
+  "down": "1st & 10 at SHSU 0",
   "espn_id": "401870766",
   "final": false,
   "home_abbr": "LIB",
@@ -4364,13 +4366,13 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "4/6, 50 YDS, 1 TD",
+    "val": "4/5, 50 YDS, 1 TD",
     "who": "D. Purdie"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "4 CAR, 26 YDS",
+    "val": "5 CAR, 45 YDS",
     "who": "K. Davis"
    },
    {
@@ -4381,16 +4383,18 @@
    }
   ],
   "line_away": [
+   0.0,
    0.0
   ],
   "line_home": [
-   7.0
+   7.0,
+   0.0
   ],
   "neutral": false,
-  "period": 1,
+  "period": 2,
   "poss": "home",
   "redzone": false,
-  "spot": "SHSU 37",
+  "spot": "SHSU 0",
   "state": "VA",
   "status": "In Progress",
   "venue": "Williams Stadium (VA)"
