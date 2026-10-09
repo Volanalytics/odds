@@ -821,10 +821,10 @@
   "away_rank": 99,
   "away_short": "South Florida",
   "city": "San Antonio",
-  "clock": "0:09",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:09 - 2nd",
-  "down": "1st & 10 at UTSA 14",
+  "detail": "Halftime",
+  "down": "2nd & 10 at UTSA 13",
   "espn_id": "401862794",
   "final": false,
   "home_abbr": "UTSA",
@@ -862,11 +862,11 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "UTSA 14",
+  "spot": "UTSA 13",
   "state": "TX",
-  "status": "In Progress",
+  "status": "Halftime",
   "venue": "Alamodome"
  },
  "2c3f80e228a486e04f6f7a38e4f00fb4": {
@@ -1931,14 +1931,14 @@
   "away_rank": 99,
   "away_short": "South Alabama",
   "city": "Jonesboro",
-  "clock": "0:36",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:36 - 2nd",
-  "down": "2nd & 10 at USA 35",
+  "detail": "End of 2nd",
+  "down": null,
   "espn_id": "401869933",
   "final": false,
   "home_abbr": "ARST",
-  "home_r": "21",
+  "home_r": "28",
   "home_rank": 99,
   "home_short": "Arkansas St",
   "in_play": true,
@@ -1946,7 +1946,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "15/21, 195 YDS, 1 TD, 1 INT",
+    "val": "16/21, 215 YDS, 2 TD, 1 INT",
     "who": "T. Owens"
    },
    {
@@ -1958,7 +1958,7 @@
    {
     "cat": "REC",
     "team": "home",
-    "val": "6 REC, 104 YDS, 1 TD",
+    "val": "7 REC, 124 YDS, 2 TD",
     "who": "H. Summers"
    }
   ],
@@ -1968,13 +1968,13 @@
   ],
   "line_home": [
    7.0,
-   14.0
+   21.0
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "USA 35",
+  "spot": null,
   "state": "AR",
   "status": "In Progress",
   "venue": "Centennial Bank Stadium"
@@ -2033,10 +2033,10 @@
   "away_rank": 99,
   "away_short": "Missouri St",
   "city": "Bowling Green",
-  "clock": "7:23",
+  "clock": "4:55",
   "conf_comp": true,
-  "detail": "7:23 - 3rd",
-  "down": null,
+  "detail": "4:55 - 3rd",
+  "down": "1st & Goal at MOST 10",
   "espn_id": "401871052",
   "final": false,
   "home_abbr": "WKU",
@@ -2048,7 +2048,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "14/24, 174 YDS, 1 TD",
+    "val": "19/29, 210 YDS, 1 TD",
     "who": "B. Glenn"
    },
    {
@@ -2060,7 +2060,7 @@
    {
     "cat": "REC",
     "team": "home",
-    "val": "5 REC, 66 YDS, 1 TD",
+    "val": "6 REC, 72 YDS, 1 TD",
     "who": "J. Stafford Jr."
    }
   ],
@@ -2076,9 +2076,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": null,
-  "redzone": false,
-  "spot": null,
+  "poss": "home",
+  "redzone": true,
+  "spot": "MOST 10",
   "state": "KY",
   "status": "In Progress",
   "venue": "Houchens Industries-L.T. Smith Stadium"
@@ -4365,10 +4365,10 @@
   "away_rank": 99,
   "away_short": "Sam Houston",
   "city": "Lynchburg",
-  "clock": "7:44",
+  "clock": "5:20",
   "conf_comp": true,
-  "detail": "7:44 - 3rd",
-  "down": "2nd & 3 at SHSU 26",
+  "detail": "5:20 - 3rd",
+  "down": "2nd & -7 at LIB 36",
   "espn_id": "401870766",
   "final": false,
   "home_abbr": "LIB",
@@ -4380,7 +4380,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "11/18, 95 YDS",
+    "val": "13/21, 103 YDS",
     "who": "L. Locke"
    },
    {
@@ -4410,7 +4410,7 @@
   "period": 3,
   "poss": "away",
   "redzone": false,
-  "spot": "SHSU 26",
+  "spot": "LIB 36",
   "state": "VA",
   "status": "In Progress",
   "venue": "Williams Stadium (VA)"
