@@ -821,10 +821,10 @@
   "away_rank": 99,
   "away_short": "South Florida",
   "city": "San Antonio",
-  "clock": "0:00",
+  "clock": "12:10",
   "conf_comp": true,
-  "detail": "Halftime",
-  "down": "2nd & 10 at UTSA 13",
+  "detail": "12:10 - 3rd",
+  "down": "1st & 10 at USF 14",
   "espn_id": "401862794",
   "final": false,
   "home_abbr": "UTSA",
@@ -835,9 +835,9 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "away",
-    "val": "10/18, 121 YDS, 1 TD",
-    "who": "M. Van Buren Jr."
+    "team": "home",
+    "val": "14/20, 132 YDS",
+    "who": "O. McCown"
    },
    {
     "cat": "RUSH",
@@ -847,26 +847,28 @@
    },
    {
     "cat": "REC",
-    "team": "away",
-    "val": "2 REC, 48 YDS, 1 TD",
-    "who": "B. Rodgers"
+    "team": "home",
+    "val": "7 REC, 49 YDS",
+    "who": "D. Amador II"
    }
   ],
   "line_away": [
    14.0,
-   3.0
+   3.0,
+   0.0
   ],
   "line_home": [
    7.0,
-   3.0
+   3.0,
+   0.0
   ],
   "neutral": false,
-  "period": 2,
-  "poss": null,
-  "redzone": false,
-  "spot": "UTSA 13",
+  "period": 3,
+  "poss": "home",
+  "redzone": true,
+  "spot": "USF 14",
   "state": "TX",
-  "status": "Halftime",
+  "status": "In Progress",
   "venue": "Alamodome"
  },
  "2c3f80e228a486e04f6f7a38e4f00fb4": {
@@ -2033,10 +2035,10 @@
   "away_rank": 99,
   "away_short": "Missouri St",
   "city": "Bowling Green",
-  "clock": "0:37",
+  "clock": "14:54",
   "conf_comp": true,
-  "detail": "0:37 - 3rd",
-  "down": "1st & 10 at WKU 38",
+  "detail": "14:54 - 4th",
+  "down": "3rd & 2 at WKU 46",
   "espn_id": "401871052",
   "final": false,
   "home_abbr": "WKU",
@@ -2048,7 +2050,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "19/31, 226 YDS, 1 TD",
+    "val": "19/32, 226 YDS, 1 TD",
     "who": "B. Glenn"
    },
    {
@@ -2067,18 +2069,20 @@
   "line_away": [
    3.0,
    3.0,
-   7.0
+   7.0,
+   0.0
   ],
   "line_home": [
    7.0,
    14.0,
-   3.0
+   3.0,
+   0.0
   ],
   "neutral": false,
-  "period": 3,
+  "period": 4,
   "poss": "home",
   "redzone": false,
-  "spot": "WKU 38",
+  "spot": "WKU 46",
   "state": "KY",
   "status": "In Progress",
   "venue": "Houchens Industries-L.T. Smith Stadium"
@@ -4365,14 +4369,14 @@
   "away_rank": 99,
   "away_short": "Sam Houston",
   "city": "Lynchburg",
-  "clock": "14:58",
+  "clock": "13:34",
   "conf_comp": true,
-  "detail": "14:58 - 4th",
-  "down": null,
+  "detail": "13:34 - 4th",
+  "down": "4th & 7 at SHSU 11",
   "espn_id": "401870766",
   "final": false,
   "home_abbr": "LIB",
-  "home_r": "27",
+  "home_r": "28",
   "home_rank": 99,
   "home_short": "Liberty",
   "in_play": true,
@@ -4380,7 +4384,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "13/21, 109 YDS",
+    "val": "14/23, 114 YDS",
     "who": "L. Locke"
    },
    {
@@ -4406,13 +4410,13 @@
    7.0,
    7.0,
    7.0,
-   6.0
+   7.0
   ],
   "neutral": false,
   "period": 4,
-  "poss": null,
-  "redzone": true,
-  "spot": null,
+  "poss": "away",
+  "redzone": false,
+  "spot": "SHSU 11",
   "state": "VA",
   "status": "In Progress",
   "venue": "Williams Stadium (VA)"
