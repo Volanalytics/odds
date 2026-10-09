@@ -821,14 +821,14 @@
   "away_rank": 99,
   "away_short": "South Florida",
   "city": "San Antonio",
-  "clock": "12:10",
+  "clock": "10:28",
   "conf_comp": true,
-  "detail": "12:10 - 3rd",
-  "down": "1st & 10 at USF 14",
+  "detail": "10:28 - 3rd",
+  "down": null,
   "espn_id": "401862794",
   "final": false,
   "home_abbr": "UTSA",
-  "home_r": "10",
+  "home_r": "17",
   "home_rank": 99,
   "home_short": "UTSA",
   "in_play": true,
@@ -860,13 +860,13 @@
   "line_home": [
    7.0,
    3.0,
-   0.0
+   7.0
   ],
   "neutral": false,
   "period": 3,
-  "poss": "home",
+  "poss": null,
   "redzone": true,
-  "spot": "USF 14",
+  "spot": null,
   "state": "TX",
   "status": "In Progress",
   "venue": "Alamodome"
@@ -1933,10 +1933,10 @@
   "away_rank": 99,
   "away_short": "South Alabama",
   "city": "Jonesboro",
-  "clock": "0:00",
+  "clock": "13:16",
   "conf_comp": true,
-  "detail": "Halftime",
-  "down": null,
+  "detail": "13:16 - 3rd",
+  "down": "1st & Goal at ARST 1",
   "espn_id": "401869933",
   "final": false,
   "home_abbr": "ARST",
@@ -1954,8 +1954,8 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "6 CAR, 55 YDS, 1 TD",
-    "who": "K. Phillips"
+    "val": "11 CAR, 83 YDS, 1 TD",
+    "who": "P. Martin"
    },
    {
     "cat": "REC",
@@ -1966,19 +1966,21 @@
   ],
   "line_away": [
    14.0,
-   20.0
+   20.0,
+   0.0
   ],
   "line_home": [
    7.0,
-   21.0
+   21.0,
+   0.0
   ],
   "neutral": false,
-  "period": 2,
-  "poss": null,
-  "redzone": false,
-  "spot": null,
+  "period": 3,
+  "poss": "away",
+  "redzone": true,
+  "spot": "ARST 1",
   "state": "AR",
-  "status": "Halftime",
+  "status": "In Progress",
   "venue": "Centennial Bank Stadium"
  },
  "55d9636153ca5741d460ef2f78b663d9": {
@@ -2035,10 +2037,10 @@
   "away_rank": 99,
   "away_short": "Missouri St",
   "city": "Bowling Green",
-  "clock": "14:54",
+  "clock": "12:28",
   "conf_comp": true,
-  "detail": "14:54 - 4th",
-  "down": "3rd & 2 at WKU 46",
+  "detail": "12:28 - 4th",
+  "down": "3rd & 11 at MOST 30",
   "espn_id": "401871052",
   "final": false,
   "home_abbr": "WKU",
@@ -2050,14 +2052,14 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "19/32, 226 YDS, 1 TD",
+    "val": "19/34, 226 YDS, 1 TD",
     "who": "B. Glenn"
    },
    {
     "cat": "RUSH",
-    "team": "away",
-    "val": "8 CAR, 76 YDS",
-    "who": "S. Locklear"
+    "team": "home",
+    "val": "13 CAR, 86 YDS, 1 TD",
+    "who": "B. Glenn"
    },
    {
     "cat": "REC",
@@ -2082,7 +2084,7 @@
   "period": 4,
   "poss": "home",
   "redzone": false,
-  "spot": "WKU 46",
+  "spot": "MOST 30",
   "state": "KY",
   "status": "In Progress",
   "venue": "Houchens Industries-L.T. Smith Stadium"
@@ -4369,10 +4371,10 @@
   "away_rank": 99,
   "away_short": "Sam Houston",
   "city": "Lynchburg",
-  "clock": "13:34",
+  "clock": "11:51",
   "conf_comp": true,
-  "detail": "13:34 - 4th",
-  "down": "4th & 7 at SHSU 11",
+  "detail": "11:51 - 4th",
+  "down": "1st & 10 at SHSU 39",
   "espn_id": "401870766",
   "final": false,
   "home_abbr": "LIB",
@@ -4414,9 +4416,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "SHSU 11",
+  "spot": "SHSU 39",
   "state": "VA",
   "status": "In Progress",
   "venue": "Williams Stadium (VA)"
