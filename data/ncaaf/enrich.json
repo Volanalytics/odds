@@ -821,10 +821,10 @@
   "away_rank": 99,
   "away_short": "South Florida",
   "city": "San Antonio",
-  "clock": "0:00",
+  "clock": "13:53",
   "conf_comp": true,
-  "detail": "End of 1st",
-  "down": "2nd & 10 at UTSA 31",
+  "detail": "13:53 - 2nd",
+  "down": "1st & 10 at USF 36",
   "espn_id": "401862794",
   "final": false,
   "home_abbr": "UTSA",
@@ -853,18 +853,20 @@
    }
   ],
   "line_away": [
-   14.0
+   14.0,
+   0.0
   ],
   "line_home": [
-   7.0
+   7.0,
+   0.0
   ],
   "neutral": false,
-  "period": 1,
+  "period": 2,
   "poss": "home",
   "redzone": false,
-  "spot": "UTSA 31",
+  "spot": "USF 36",
   "state": "TX",
-  "status": "End of Period",
+  "status": "In Progress",
   "venue": "Alamodome"
  },
  "2c3f80e228a486e04f6f7a38e4f00fb4": {
@@ -1929,14 +1931,14 @@
   "away_rank": 99,
   "away_short": "South Alabama",
   "city": "Jonesboro",
-  "clock": "0:00",
+  "clock": "12:56",
   "conf_comp": true,
-  "detail": "End of 1st",
-  "down": "3rd & 2 at ARST 44",
+  "detail": "12:56 - 2nd",
+  "down": null,
   "espn_id": "401869933",
   "final": false,
   "home_abbr": "ARST",
-  "home_r": "7",
+  "home_r": "13",
   "home_rank": 99,
   "home_short": "Arkansas St",
   "in_play": true,
@@ -1944,7 +1946,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "7/9, 83 YDS",
+    "val": "10/12, 134 YDS, 1 TD",
     "who": "T. Owens"
    },
    {
@@ -1956,23 +1958,25 @@
    {
     "cat": "REC",
     "team": "home",
-    "val": "2 REC, 31 YDS",
-    "who": "J. Bonelli"
+    "val": "4 REC, 60 YDS, 1 TD",
+    "who": "H. Summers"
    }
   ],
   "line_away": [
-   14.0
+   14.0,
+   0.0
   ],
   "line_home": [
-   7.0
+   7.0,
+   6.0
   ],
   "neutral": false,
-  "period": 1,
-  "poss": "home",
-  "redzone": false,
-  "spot": "ARST 44",
+  "period": 2,
+  "poss": null,
+  "redzone": true,
+  "spot": null,
   "state": "AR",
-  "status": "End of Period",
+  "status": "In Progress",
   "venue": "Centennial Bank Stadium"
  },
  "55d9636153ca5741d460ef2f78b663d9": {
@@ -2029,10 +2033,10 @@
   "away_rank": 99,
   "away_short": "Missouri St",
   "city": "Bowling Green",
-  "clock": "4:57",
+  "clock": "3:22",
   "conf_comp": true,
-  "detail": "4:57 - 2nd",
-  "down": null,
+  "detail": "3:22 - 2nd",
+  "down": "1st & 10 at WKU 44",
   "espn_id": "401871052",
   "final": false,
   "home_abbr": "WKU",
@@ -2050,7 +2054,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "6 CAR, 74 YDS",
+    "val": "7 CAR, 72 YDS",
     "who": "S. Locklear"
    },
    {
@@ -2070,9 +2074,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "WKU 44",
   "state": "KY",
   "status": "In Progress",
   "venue": "Houchens Industries-L.T. Smith Stadium"
@@ -4359,10 +4363,10 @@
   "away_rank": 99,
   "away_short": "Sam Houston",
   "city": "Lynchburg",
-  "clock": "2:43",
+  "clock": "2:00",
   "conf_comp": true,
-  "detail": "2:43 - 2nd",
-  "down": "3rd & 13 at LIB 14",
+  "detail": "2:00 - 2nd",
+  "down": null,
   "espn_id": "401870766",
   "final": false,
   "home_abbr": "LIB",
@@ -4380,7 +4384,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "7 CAR, 47 YDS",
+    "val": "8 CAR, 57 YDS",
     "who": "K. Davis"
    },
    {
@@ -4400,9 +4404,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "LIB 14",
+  "spot": null,
   "state": "VA",
   "status": "In Progress",
   "venue": "Williams Stadium (VA)"
