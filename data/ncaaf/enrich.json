@@ -629,10 +629,10 @@
   "away_rank": 99,
   "away_short": "Wyoming",
   "city": "San Jose",
-  "clock": "11:05",
+  "clock": "10:35",
   "conf_comp": true,
-  "detail": "11:05 - 1st",
-  "down": null,
+  "detail": "10:35 - 1st",
+  "down": "1st & 10 at WYO 22",
   "espn_id": "401864519",
   "final": false,
   "home_abbr": "SJSU",
@@ -643,9 +643,9 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "away",
-    "val": "1/1, 4 YDS",
-    "who": "T. Hughes"
+    "team": "home",
+    "val": "1/2, 35 YDS",
+    "who": "L. Weaver"
    },
    {
     "cat": "RUSH",
@@ -655,9 +655,9 @@
    },
    {
     "cat": "REC",
-    "team": "away",
-    "val": "1 REC, 4 YDS",
-    "who": "J. Wilson"
+    "team": "home",
+    "val": "1 REC, 35 YDS",
+    "who": "C. Hoch"
    }
   ],
   "line_away": [
@@ -668,9 +668,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "WYO 22",
   "state": "CA",
   "status": "In Progress",
   "venue": "CEFCU Stadium"
@@ -927,13 +927,13 @@
  },
  "2ec27bbe3b14c521ba8a3f3f6e46f4ac": {
   "away_abbr": "WSU",
-  "away_r": "0",
+  "away_r": "3",
   "away_rank": 99,
   "away_short": "Washington St",
   "city": "Logan",
-  "clock": "0:00",
+  "clock": "13:27",
   "conf_comp": true,
-  "detail": "10/9 - 9:00 PM EDT",
+  "detail": "13:27 - 1st",
   "down": null,
   "espn_id": "401860922",
   "final": false,
@@ -941,36 +941,34 @@
   "home_r": "0",
   "home_rank": 99,
   "home_short": "Utah State",
-  "in_play": false,
+  "in_play": true,
   "leaders": [
    {
     "cat": "PASS",
     "team": "away",
-    "val": "796 YDS, 3 TD, 5 INT",
+    "val": "1, 0 YDS",
     "who": "C. Pinnick"
    },
    {
     "cat": "RUSH",
-    "team": "home",
-    "val": "55 CAR, 331 YDS, 1 TD",
-    "who": "J. Jacobs"
-   },
-   {
-    "cat": "REC",
-    "team": "home",
-    "val": "30 REC, 388 YDS, 4 TD",
-    "who": "E. Wood"
+    "team": "away",
+    "val": "1 CAR, 2 YDS",
+    "who": "T. Hawkins Jr."
    }
   ],
-  "line_away": [],
-  "line_home": [],
+  "line_away": [
+   3.0
+  ],
+  "line_home": [
+   0.0
+  ],
   "neutral": false,
-  "period": 0,
+  "period": 1,
   "poss": null,
   "redzone": false,
   "spot": null,
   "state": "UT",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "Maverik Stadium"
  },
  "310dd8851a99203930a45881b0156d36": {
@@ -3111,35 +3109,35 @@
   "away_rank": 99,
   "away_short": "Florida St",
   "city": "Louisville",
-  "clock": "11:14",
+  "clock": "8:06",
   "conf_comp": true,
-  "detail": "11:14 - 3rd",
-  "down": "2nd & 8 at LOU 26",
+  "detail": "8:06 - 3rd",
+  "down": null,
   "espn_id": "401858254",
   "final": false,
   "home_abbr": "LOU",
-  "home_r": "21",
+  "home_r": "27",
   "home_rank": 99,
   "home_short": "Louisville",
   "in_play": true,
   "leaders": [
    {
     "cat": "PASS",
-    "team": "away",
-    "val": "12/20, 117 YDS, 1 TD",
-    "who": "A. Daniels"
+    "team": "home",
+    "val": "10/13, 141 YDS",
+    "who": "L. Kienholz"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "9 CAR, 110 YDS, 1 TD",
+    "val": "10 CAR, 112 YDS, 1 TD",
     "who": "I. Brown"
    },
    {
     "cat": "REC",
-    "team": "away",
-    "val": "3 REC, 48 YDS, 1 TD",
-    "who": "M. Danzy"
+    "team": "home",
+    "val": "3 REC, 78 YDS",
+    "who": "L. McCoy"
    }
   ],
   "line_away": [
@@ -3150,13 +3148,13 @@
   "line_home": [
    0.0,
    14.0,
-   7.0
+   13.0
   ],
   "neutral": false,
   "period": 3,
-  "poss": "home",
-  "redzone": false,
-  "spot": "LOU 26",
+  "poss": null,
+  "redzone": true,
+  "spot": null,
   "state": "KY",
   "status": "In Progress",
   "venue": "L&N Federal Credit Union Stadium"
@@ -4027,14 +4025,14 @@
  },
  "a168f1bed30ce7d56dc2b77dbfe37705": {
   "away_abbr": "IOWA",
-  "away_r": "0",
+  "away_r": "3",
   "away_rank": 20,
   "away_short": "Iowa",
   "city": "Seattle",
-  "clock": "12:34",
+  "clock": "11:48",
   "conf_comp": true,
-  "detail": "12:34 - 1st",
-  "down": "4th & 12 at WASH 33",
+  "detail": "11:48 - 1st",
+  "down": "2nd & 6 at WASH 23",
   "espn_id": "401858487",
   "final": false,
   "home_abbr": "WASH",
@@ -4057,16 +4055,16 @@
    }
   ],
   "line_away": [
-   0.0
+   3.0
   ],
   "line_home": [
    0.0
   ],
   "neutral": false,
   "period": 1,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "WASH 33",
+  "spot": "WASH 23",
   "state": "WA",
   "status": "In Progress",
   "venue": "Husky Stadium"
