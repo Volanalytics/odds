@@ -629,14 +629,14 @@
   "away_rank": 99,
   "away_short": "Wyoming",
   "city": "San Jose",
-  "clock": "10:47",
+  "clock": "10:35",
   "conf_comp": true,
-  "detail": "10:47 - 2nd",
-  "down": null,
+  "detail": "10:35 - 2nd",
+  "down": "1st & 10 at WYO 47",
   "espn_id": "401864519",
   "final": false,
   "home_abbr": "SJSU",
-  "home_r": "6",
+  "home_r": "7",
   "home_rank": 99,
   "home_short": "San Jos\u00e9 St",
   "in_play": true,
@@ -650,7 +650,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "11 CAR, 38 YDS",
+    "val": "12 CAR, 60 YDS",
     "who": "T. Hughes"
    },
    {
@@ -666,13 +666,13 @@
   ],
   "line_home": [
    0.0,
-   6.0
+   7.0
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
-  "redzone": true,
-  "spot": null,
+  "poss": "away",
+  "redzone": false,
+  "spot": "WYO 47",
   "state": "CA",
   "status": "In Progress",
   "venue": "CEFCU Stadium"
@@ -933,10 +933,10 @@
   "away_rank": 99,
   "away_short": "Washington St",
   "city": "Logan",
-  "clock": "1:02",
+  "clock": "15:00",
   "conf_comp": true,
-  "detail": "1:02 - 1st",
-  "down": "4th & 13 at USU 25",
+  "detail": "15:00 - 1st",
+  "down": "1st & 10 at WSU 30",
   "espn_id": "401860922",
   "final": false,
   "home_abbr": "USU",
@@ -954,14 +954,14 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "3 CAR, 23 YDS",
+    "val": "4 CAR, 25 YDS",
     "who": "J. Jacobs"
    },
    {
     "cat": "REC",
-    "team": "away",
-    "val": "1 REC, 18 YDS",
-    "who": "T. Leckner"
+    "team": "home",
+    "val": "2 REC, 39 YDS",
+    "who": "E. Wood"
    }
   ],
   "line_away": [
@@ -972,9 +972,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "USU 25",
+  "spot": "WSU 30",
   "state": "UT",
   "status": "In Progress",
   "venue": "Maverik Stadium"
@@ -3117,14 +3117,14 @@
   "away_rank": 99,
   "away_short": "Florida St",
   "city": "Louisville",
-  "clock": "14:20",
+  "clock": "12:57",
   "conf_comp": true,
-  "detail": "14:20 - 4th",
-  "down": "1st & 10 at LOU 29",
+  "detail": "12:57 - 4th",
+  "down": null,
   "espn_id": "401858254",
   "final": false,
   "home_abbr": "LOU",
-  "home_r": "28",
+  "home_r": "35",
   "home_rank": 99,
   "home_short": "Louisville",
   "in_play": true,
@@ -3138,7 +3138,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "13 CAR, 133 YDS, 1 TD",
+    "val": "15 CAR, 160 YDS, 1 TD",
     "who": "I. Brown"
    },
    {
@@ -3158,13 +3158,13 @@
    0.0,
    14.0,
    14.0,
-   0.0
+   7.0
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "LOU 29",
+  "spot": null,
   "state": "KY",
   "status": "In Progress",
   "venue": "L&N Federal Credit Union Stadium"
@@ -4039,10 +4039,10 @@
   "away_rank": 20,
   "away_short": "Iowa",
   "city": "Seattle",
-  "clock": "0:03",
+  "clock": "14:51",
   "conf_comp": true,
-  "detail": "0:03 - 1st",
-  "down": "1st & 10 at WASH 20",
+  "detail": "14:51 - 2nd",
+  "down": "3rd & 2 at WASH 28",
   "espn_id": "401858487",
   "final": false,
   "home_abbr": "WASH",
@@ -4071,16 +4071,18 @@
    }
   ],
   "line_away": [
-   13.0
+   13.0,
+   0.0
   ],
   "line_home": [
+   0.0,
    0.0
   ],
   "neutral": false,
-  "period": 1,
-  "poss": null,
+  "period": 2,
+  "poss": "home",
   "redzone": false,
-  "spot": "WASH 20",
+  "spot": "WASH 28",
   "state": "WA",
   "status": "In Progress",
   "venue": "Husky Stadium"
