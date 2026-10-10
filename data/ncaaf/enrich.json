@@ -563,10 +563,10 @@
   "away_rank": 99,
   "away_short": "Coastal",
   "city": "Huntington",
-  "clock": "1:32",
+  "clock": "15:00",
   "conf_comp": true,
-  "detail": "1:32 - 1st",
-  "down": "2nd & 3 at MRSH 30",
+  "detail": "15:00 - 2nd",
+  "down": "2nd & 10 at MRSH 31",
   "espn_id": "401869943",
   "final": false,
   "home_abbr": "MRSH",
@@ -595,16 +595,18 @@
    }
   ],
   "line_away": [
-   3.0
+   3.0,
+   0.0
   ],
   "line_home": [
+   0.0,
    0.0
   ],
   "neutral": false,
-  "period": 1,
+  "period": 2,
   "poss": "home",
   "redzone": false,
-  "spot": "MRSH 30",
+  "spot": "MRSH 31",
   "state": "WV",
   "status": "In Progress",
   "venue": "Joan C. Edwards Stadium"
@@ -1635,14 +1637,14 @@
  },
  "4462f1fa168ab2a5a25fe2807ebec8ac": {
   "away_abbr": "USC",
-  "away_r": "0",
+  "away_r": "7",
   "away_rank": 19,
   "away_short": "USC",
   "city": "University Park",
-  "clock": "15:00",
+  "clock": "10:37",
   "conf_comp": true,
-  "detail": "15:00 - 1st",
-  "down": "1st & 10 at PSU 42",
+  "detail": "10:37 - 1st",
+  "down": null,
   "espn_id": "401858485",
   "final": false,
   "home_abbr": "PSU",
@@ -1654,7 +1656,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "3/3, 24 YDS",
+    "val": "5/5, 62 YDS, 1 TD",
     "who": "J. Maiava"
    },
    {
@@ -1671,16 +1673,16 @@
    }
   ],
   "line_away": [
-   0.0
+   7.0
   ],
   "line_home": [
    0.0
   ],
   "neutral": false,
   "period": 1,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "PSU 42",
+  "spot": null,
   "state": "PA",
   "status": "In Progress",
   "venue": "Beaver Stadium"
@@ -2037,10 +2039,10 @@
   "away_rank": 99,
   "away_short": "N Dakota St",
   "city": "Las Vegas",
-  "clock": "6:52",
+  "clock": "4:53",
   "conf_comp": true,
-  "detail": "6:52 - 1st",
-  "down": "1st & 10 at UNLV 46",
+  "detail": "4:53 - 1st",
+  "down": "1st & 10 at NDSU 28",
   "espn_id": "401864518",
   "final": false,
   "home_abbr": "UNLV",
@@ -2076,9 +2078,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "UNLV 46",
+  "spot": "NDSU 28",
   "state": "NV",
   "status": "In Progress",
   "venue": "Allegiant Stadium"
@@ -3225,10 +3227,10 @@
   "away_rank": 99,
   "away_short": "San Diego St",
   "city": "Corvallis",
-  "clock": "0:25",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:25 - 2nd",
-  "down": null,
+  "detail": "End of 2nd",
+  "down": "2nd & 10 at 50",
   "espn_id": "401860902",
   "final": false,
   "home_abbr": "ORST",
@@ -3240,7 +3242,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "20/27, 236 YDS, 3 TD",
+    "val": "21/30, 246 YDS, 3 TD",
     "who": "B. Atkinson"
    },
    {
@@ -3266,9 +3268,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "50",
   "state": "OR",
   "status": "In Progress",
   "venue": "Reser Stadium"
@@ -3443,10 +3445,10 @@
   "away_rank": 99,
   "away_short": "UAB",
   "city": "Memphis",
-  "clock": "4:44",
+  "clock": "1:57",
   "conf_comp": true,
-  "detail": "4:44 - 1st",
-  "down": "2nd & 5 at MEM 16",
+  "detail": "1:57 - 1st",
+  "down": "4th & 10 at MEM 8",
   "espn_id": "401862798",
   "final": false,
   "home_abbr": "MEM",
@@ -3482,9 +3484,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": "away",
-  "redzone": true,
-  "spot": "MEM 16",
+  "poss": "home",
+  "redzone": false,
+  "spot": "MEM 8",
   "state": "TN",
   "status": "In Progress",
   "venue": "Simmons Bank Liberty Stadium"
@@ -3707,10 +3709,10 @@
   "away_rank": 99,
   "away_short": "Louisiana",
   "city": "Ruston",
-  "clock": "13:52",
+  "clock": "10:57",
   "conf_comp": true,
-  "detail": "13:52 - 1st",
-  "down": "2nd & 5 at UL 43",
+  "detail": "10:57 - 1st",
+  "down": "2nd & 10 at LT 13",
   "espn_id": "401869965",
   "final": false,
   "home_abbr": "LT",
@@ -3722,7 +3724,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "1/1, 4 YDS",
+    "val": "2/2, 45 YDS",
     "who": "L. Winfield"
    },
    {
@@ -3734,8 +3736,8 @@
    {
     "cat": "REC",
     "team": "away",
-    "val": "1 REC, 4 YDS",
-    "who": "S. Blanco"
+    "val": "1 REC, 41 YDS",
+    "who": "S. Sampson Jr."
    }
   ],
   "line_away": [
@@ -3746,9 +3748,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "UL 43",
+  "spot": "LT 13",
   "state": "LA",
   "status": "In Progress",
   "venue": "Joe Aillet Stadium"
@@ -4445,10 +4447,10 @@
   "away_rank": 99,
   "away_short": "Nevada",
   "city": "El Paso",
-  "clock": "6:12",
+  "clock": "4:50",
   "conf_comp": true,
-  "detail": "6:12 - 1st",
-  "down": "2nd & 10 at UTEP 25",
+  "detail": "4:50 - 1st",
+  "down": "4th & 10 at NEV 13",
   "espn_id": "401864517",
   "final": false,
   "home_abbr": "UTEP",
@@ -4484,9 +4486,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "UTEP 25",
+  "spot": "NEV 13",
   "state": "TX",
   "status": "In Progress",
   "venue": "Sun Bowl"
@@ -4497,10 +4499,10 @@
   "away_rank": 99,
   "away_short": "Air Force",
   "city": "Dekalb",
-  "clock": "14:23",
+  "clock": "10:17",
   "conf_comp": true,
-  "detail": "14:23 - 1st",
-  "down": "2nd & 10 at NIU 25",
+  "detail": "10:17 - 1st",
+  "down": "1st & 10 at AF 44",
   "espn_id": "401864516",
   "final": false,
   "home_abbr": "NIU",
@@ -4510,10 +4512,22 @@
   "in_play": true,
   "leaders": [
    {
-    "cat": "RUSH",
+    "cat": "PASS",
     "team": "home",
-    "val": "1 CAR, 5 YDS",
-    "who": "E. Porter"
+    "val": "1/1, 7 YDS",
+    "who": "T. Dickens"
+   },
+   {
+    "cat": "RUSH",
+    "team": "away",
+    "val": "2 CAR, 16 YDS",
+    "who": "M. Long"
+   },
+   {
+    "cat": "REC",
+    "team": "home",
+    "val": "1 REC, 7 YDS",
+    "who": "D. Rogers"
    }
   ],
   "line_away": [
@@ -4524,9 +4538,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "NIU 25",
+  "spot": "AF 44",
   "state": "IL",
   "status": "In Progress",
   "venue": "Huskie Stadium"
@@ -4697,14 +4711,14 @@
  },
  "bdfaffbf5873812f3e04de2cbd273aa6": {
   "away_abbr": "LSU",
-  "away_r": "3",
+  "away_r": "10",
   "away_rank": 10,
   "away_short": "LSU",
   "city": "Lexington",
-  "clock": "4:04",
+  "clock": "1:39",
   "conf_comp": true,
-  "detail": "4:04 - 1st",
-  "down": "1st & 15 at UK 33",
+  "detail": "1:39 - 1st",
+  "down": null,
   "espn_id": "401856715",
   "final": false,
   "home_abbr": "UK",
@@ -4716,7 +4730,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "8/9, 93 YDS",
+    "val": "10/12, 126 YDS, 1 TD",
     "who": "S. Leavitt"
    },
    {
@@ -4728,21 +4742,21 @@
    {
     "cat": "REC",
     "team": "away",
-    "val": "3 REC, 30 YDS",
-    "who": "D. Jones"
+    "val": "3 REC, 39 YDS",
+    "who": "W. Watkins Jr."
    }
   ],
   "line_away": [
-   3.0
+   10.0
   ],
   "line_home": [
    7.0
   ],
   "neutral": false,
   "period": 1,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "UK 33",
+  "spot": null,
   "state": "KY",
   "status": "In Progress",
   "venue": "Kroger Field"
@@ -5225,46 +5239,50 @@
   "away_rank": 99,
   "away_short": "Syracuse",
   "city": "Charlottesville",
-  "clock": "0:00",
+  "clock": "11:42",
   "conf_comp": true,
-  "detail": "10/10 - 7:30 PM EDT",
-  "down": null,
+  "detail": "11:42 - 1st",
+  "down": "2nd & 11 at SYR 39",
   "espn_id": "401858258",
   "final": false,
   "home_abbr": "UVA",
   "home_r": "0",
   "home_rank": 99,
   "home_short": "Virginia",
-  "in_play": false,
+  "in_play": true,
   "leaders": [
    {
     "cat": "PASS",
     "team": "home",
-    "val": "961 YDS, 12 TD, 1 INT",
+    "val": "2/2, 22 YDS",
     "who": "B. Pribula"
    },
    {
     "cat": "RUSH",
-    "team": "away",
-    "val": "46 CAR, 287 YDS, 1 TD",
-    "who": "T. Hill"
+    "team": "home",
+    "val": "2 CAR, 8 YDS",
+    "who": "J. Middlebrook"
    },
    {
     "cat": "REC",
-    "team": "away",
-    "val": "29 REC, 434 YDS, 5 TD",
-    "who": "U. Hatcher"
+    "team": "home",
+    "val": "1 REC, 16 YDS",
+    "who": "J. Rogers"
    }
   ],
-  "line_away": [],
-  "line_home": [],
+  "line_away": [
+   0.0
+  ],
+  "line_home": [
+   0.0
+  ],
   "neutral": false,
-  "period": 0,
-  "poss": null,
+  "period": 1,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "SYR 39",
   "state": "VA",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "Scott Stadium"
  },
  "f825e4c4d512e1c0a6db6ac7d8bc0326": {
