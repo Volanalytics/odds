@@ -997,10 +997,10 @@
   "away_rank": 99,
   "away_short": "Old Dominion",
   "city": "Boone",
-  "clock": "14:52",
+  "clock": "11:05",
   "conf_comp": true,
-  "detail": "14:52 - 2nd",
-  "down": "1st & 10 at ODU 44",
+  "detail": "11:05 - 2nd",
+  "down": null,
   "espn_id": "401869843",
   "final": false,
   "home_abbr": "APP",
@@ -1011,21 +1011,21 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "2/7, 32 YDS",
-    "who": "M. Singleton"
+    "team": "away",
+    "val": "5/9, 54 YDS",
+    "who": "Q. Henicle"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "7 CAR, 54 YDS",
+    "val": "9 CAR, 43 YDS",
     "who": "Q. Henicle"
    },
    {
     "cat": "REC",
-    "team": "home",
-    "val": "1 REC, 20 YDS",
-    "who": "C. Lofton"
+    "team": "away",
+    "val": "1 REC, 26 YDS",
+    "who": "K. Harris"
    }
   ],
   "line_away": [
@@ -1038,9 +1038,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "ODU 44",
+  "spot": null,
   "state": "NC",
   "status": "In Progress",
   "venue": "Kidd Brewer Stadium"
@@ -1099,10 +1099,10 @@
   "away_rank": 99,
   "away_short": "Tulane",
   "city": "West Point",
-  "clock": "0:00",
+  "clock": "14:54",
   "conf_comp": true,
-  "detail": "Halftime",
-  "down": "3rd & 10 at TULN 38",
+  "detail": "14:54 - 3rd",
+  "down": "4th & 7 at TULN 31",
   "espn_id": "401862795",
   "final": false,
   "home_abbr": "ARMY",
@@ -1114,7 +1114,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "8/13, 71 YDS, 1 INT",
+    "val": "8/14, 71 YDS, 1 INT",
     "who": "K. Semonza"
    },
    {
@@ -1132,19 +1132,21 @@
   ],
   "line_away": [
    0.0,
-   3.0
+   3.0,
+   0.0
   ],
   "line_home": [
    7.0,
+   0.0,
    0.0
   ],
   "neutral": false,
-  "period": 2,
-  "poss": null,
+  "period": 3,
+  "poss": "away",
   "redzone": false,
-  "spot": "TULN 38",
+  "spot": "TULN 31",
   "state": "NY",
-  "status": "Halftime",
+  "status": "In Progress",
   "venue": "Michie Stadium"
  },
  "33f259d8951535f271a8df5c790a832e": {
@@ -1297,9 +1299,9 @@
   "away_rank": 7,
   "away_short": "Indiana",
   "city": "Lincoln",
-  "clock": "0:00",
+  "clock": "13:28",
   "conf_comp": true,
-  "detail": "Halftime",
+  "detail": "13:28 - 2nd",
   "down": "2nd & 10 at IU 26",
   "espn_id": "401858481",
   "final": false,
@@ -1338,11 +1340,11 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
   "spot": "IU 26",
   "state": "NE",
-  "status": "Halftime",
+  "status": "In Progress",
   "venue": "Memorial Stadium (Lincoln, NE)"
  },
  "416ce0307b7b9d97f5365a29c1729339": {
@@ -3133,14 +3135,14 @@
   "away_rank": 99,
   "away_short": "Ball State",
   "city": "Evanston",
-  "clock": "4:38",
+  "clock": "3:04",
   "conf_comp": false,
-  "detail": "4:38 - 2nd",
-  "down": "1st & 10 at BALL 7",
+  "detail": "3:04 - 2nd",
+  "down": null,
   "espn_id": "401858482",
   "final": false,
   "home_abbr": "NU",
-  "home_r": "24",
+  "home_r": "30",
   "home_rank": 99,
   "home_short": "Northwestern",
   "in_play": true,
@@ -3170,13 +3172,13 @@
   ],
   "line_home": [
    14.0,
-   10.0
+   16.0
   ],
   "neutral": false,
   "period": 2,
   "poss": null,
-  "redzone": false,
-  "spot": "BALL 7",
+  "redzone": true,
+  "spot": null,
   "state": "IL",
   "status": "In Progress",
   "venue": "Ryan Field"
@@ -3773,14 +3775,14 @@
   "away_rank": 99,
   "away_short": "South Carolina",
   "city": "Gainesville",
-  "clock": "11:52",
+  "clock": "8:50",
   "conf_comp": true,
-  "detail": "11:52 - 2nd",
-  "down": "2nd & 7 at SC 16",
+  "detail": "8:50 - 2nd",
+  "down": null,
   "espn_id": "401856714",
   "final": false,
   "home_abbr": "FLA",
-  "home_r": "7",
+  "home_r": "10",
   "home_rank": 16,
   "home_short": "Florida",
   "in_play": true,
@@ -3793,9 +3795,9 @@
    },
    {
     "cat": "RUSH",
-    "team": "away",
-    "val": "5 CAR, 20 YDS",
-    "who": "L. Sellers"
+    "team": "home",
+    "val": "5 CAR, 27 YDS",
+    "who": "A. Philo"
    },
    {
     "cat": "REC",
@@ -3810,13 +3812,13 @@
   ],
   "line_home": [
    7.0,
-   0.0
+   3.0
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
-  "redzone": true,
-  "spot": "SC 16",
+  "poss": null,
+  "redzone": false,
+  "spot": null,
   "state": "FL",
   "status": "In Progress",
   "venue": "Ben Hill Griffin Stadium"
@@ -3877,8 +3879,8 @@
   "city": "Columbia",
   "clock": "0:00",
   "conf_comp": true,
-  "detail": "End of 2nd",
-  "down": null,
+  "detail": "Halftime",
+  "down": "1st & 10 at TA&M 27",
   "espn_id": "401856716",
   "final": false,
   "home_abbr": "MIZ",
@@ -3918,9 +3920,9 @@
   "period": 2,
   "poss": null,
   "redzone": false,
-  "spot": null,
+  "spot": "TA&M 27",
   "state": "MO",
-  "status": "In Progress",
+  "status": "Halftime",
   "venue": "Memorial Stadium"
  },
  "9e7a1e65bd6ffb3ff108db2a5e125170": {
@@ -4356,11 +4358,13 @@
   ],
   "line_away": [
    0.0,
-   7.0
+   7.0,
+   0.0
   ],
   "line_home": [
    7.0,
-   3.0
+   3.0,
+   0.0
   ],
   "neutral": false,
   "period": 2,
@@ -4915,10 +4919,10 @@
   "away_rank": 99,
   "away_short": "Rice",
   "city": "Greenville",
-  "clock": "15:00",
+  "clock": "14:46",
   "conf_comp": true,
-  "detail": "15:00 - 2nd",
-  "down": "3rd & 7 at RICE 24",
+  "detail": "14:46 - 2nd",
+  "down": "1st & 10 at RICE 49",
   "espn_id": "401862797",
   "final": false,
   "home_abbr": "ECU",
@@ -4956,9 +4960,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "RICE 24",
+  "spot": "RICE 49",
   "state": "NC",
   "status": "In Progress",
   "venue": "Dowdy-Ficklen Stadium"
