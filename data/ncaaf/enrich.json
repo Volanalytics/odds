@@ -629,9 +629,9 @@
   "away_rank": 99,
   "away_short": "Wyoming",
   "city": "San Jose",
-  "clock": "0:00",
+  "clock": "14:28",
   "conf_comp": true,
-  "detail": "10/9 - 9:00 PM EDT",
+  "detail": "14:28 - 1st",
   "down": null,
   "espn_id": "401864519",
   "final": false,
@@ -639,36 +639,34 @@
   "home_r": "0",
   "home_rank": 99,
   "home_short": "San Jos\u00e9 St",
-  "in_play": false,
+  "in_play": true,
   "leaders": [
    {
     "cat": "PASS",
     "team": "home",
-    "val": "1278 YDS, 11 TD, 5 INT",
+    "val": "1, 0 YDS",
     "who": "L. Weaver"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "104 CAR, 487 YDS",
+    "val": "1 CAR, 1 YDS",
     "who": "J. Bates"
-   },
-   {
-    "cat": "REC",
-    "team": "home",
-    "val": "29 REC, 314 YDS, 4 TD",
-    "who": "C. Clark"
    }
   ],
-  "line_away": [],
-  "line_home": [],
+  "line_away": [
+   0.0
+  ],
+  "line_home": [
+   0.0
+  ],
   "neutral": false,
-  "period": 0,
-  "poss": null,
-  "redzone": false,
+  "period": 1,
+  "poss": "home",
+  "redzone": true,
   "spot": null,
   "state": "CA",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "CEFCU Stadium"
  },
  "259f3312084b229ac2b74d414d36869f": {
@@ -3107,14 +3105,14 @@
   "away_rank": 99,
   "away_short": "Florida St",
   "city": "Louisville",
-  "clock": "14:06",
+  "clock": "12:45",
   "conf_comp": true,
-  "detail": "14:06 - 3rd",
-  "down": "2nd & 4 at FSU 8",
+  "detail": "12:45 - 3rd",
+  "down": null,
   "espn_id": "401858254",
   "final": false,
   "home_abbr": "LOU",
-  "home_r": "14",
+  "home_r": "21",
   "home_rank": 99,
   "home_short": "Louisville",
   "in_play": true,
@@ -3146,13 +3144,13 @@
   "line_home": [
    0.0,
    14.0,
-   0.0
+   7.0
   ],
   "neutral": false,
   "period": 3,
-  "poss": "home",
-  "redzone": true,
-  "spot": "FSU 8",
+  "poss": null,
+  "redzone": false,
+  "spot": null,
   "state": "KY",
   "status": "In Progress",
   "venue": "L&N Federal Credit Union Stadium"
