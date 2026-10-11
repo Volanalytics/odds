@@ -669,10 +669,10 @@
   "away_rank": 99,
   "away_short": "Minnesota",
   "city": "West Lafayette",
-  "clock": "11:44",
+  "clock": "9:59",
   "conf_comp": true,
-  "detail": "11:44 - 4th",
-  "down": null,
+  "detail": "9:59 - 4th",
+  "down": "1st & 10 at MINN 9",
   "espn_id": "401858486",
   "final": false,
   "home_abbr": "PUR",
@@ -714,9 +714,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": null,
-  "redzone": false,
-  "spot": null,
+  "poss": "home",
+  "redzone": true,
+  "spot": "MINN 9",
   "state": "IN",
   "status": "In Progress",
   "venue": "Ross-Ade Stadium"
@@ -883,10 +883,10 @@
   "away_rank": 99,
   "away_short": "James Madison",
   "city": "Statesboro",
-  "clock": "2:25",
+  "clock": "15:00",
   "conf_comp": true,
-  "detail": "2:25 - 3rd",
-  "down": "1st & 10 at GASO 37",
+  "detail": "15:00 - 4th",
+  "down": "2nd & 10 at JMU 47",
   "espn_id": "401869949",
   "final": false,
   "home_abbr": "GASO",
@@ -898,7 +898,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "13/21, 166 YDS, 1 TD, 1 INT",
+    "val": "15/23, 182 YDS, 1 TD, 1 INT",
     "who": "M. Johnson"
    },
    {
@@ -917,18 +917,20 @@
   "line_away": [
    3.0,
    3.0,
-   14.0
+   14.0,
+   0.0
   ],
   "line_home": [
    7.0,
    3.0,
+   0.0,
    0.0
   ],
   "neutral": false,
-  "period": 3,
+  "period": 4,
   "poss": "home",
   "redzone": false,
-  "spot": "GASO 37",
+  "spot": "JMU 47",
   "state": "GA",
   "status": "In Progress",
   "venue": "Allen E. Paulson Stadium"
@@ -1704,7 +1706,7 @@
   "clock": "3:59",
   "conf_comp": true,
   "detail": "3:59 - 4th",
-  "down": null,
+  "down": "1st & 10 at PSU 26",
   "espn_id": "401858485",
   "final": false,
   "home_abbr": "PSU",
@@ -1722,7 +1724,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "18 CAR, 99 YDS, 1 TD",
+    "val": "19 CAR, 102 YDS, 1 TD",
     "who": "K. Miller"
    },
    {
@@ -1746,9 +1748,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "PSU 26",
   "state": "PA",
   "status": "In Progress",
   "venue": "Beaver Stadium"
@@ -2317,10 +2319,10 @@
   "away_rank": 2,
   "away_short": "Georgia",
   "city": "Tuscaloosa",
-  "clock": "5:12",
+  "clock": "3:10",
   "conf_comp": true,
-  "detail": "5:12 - 4th",
-  "down": "1st & 10 at UGA 48",
+  "detail": "3:10 - 4th",
+  "down": "1st & 10 at UGA 7",
   "espn_id": "401856712",
   "final": false,
   "home_abbr": "ALA",
@@ -2362,9 +2364,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "UGA 48",
+  "spot": "UGA 7",
   "state": "AL",
   "status": "In Progress",
   "venue": "Bryant-Denny Stadium"
@@ -2837,10 +2839,10 @@
   "away_rank": 99,
   "away_short": "Kansas",
   "city": "Salt Lake City",
-  "clock": "0:27",
+  "clock": "15:00",
   "conf_comp": true,
-  "detail": "0:27 - 3rd",
-  "down": null,
+  "detail": "15:00 - 3rd",
+  "down": "1st & 10 at UTAH 37",
   "espn_id": "401856827",
   "final": false,
   "home_abbr": "UTAH",
@@ -2880,9 +2882,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "UTAH 37",
   "state": "UT",
   "status": "In Progress",
   "venue": "Rice-Eccles Stadium"
@@ -3529,14 +3531,14 @@
   "away_rank": 99,
   "away_short": "Hawai'i",
   "city": "Tempe",
-  "clock": "9:16",
+  "clock": "8:13",
   "conf_comp": false,
-  "detail": "9:16 - 1st",
-  "down": "2nd & 4 at HAW 23",
+  "detail": "8:13 - 1st",
+  "down": null,
   "espn_id": "401856808",
   "final": false,
   "home_abbr": "ASU",
-  "home_r": "0",
+  "home_r": "7",
   "home_rank": 99,
   "home_short": "Arizona St",
   "in_play": true,
@@ -3564,13 +3566,13 @@
    3.0
   ],
   "line_home": [
-   0.0
+   7.0
   ],
   "neutral": false,
   "period": 1,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "HAW 23",
+  "spot": null,
   "state": "AZ",
   "status": "In Progress",
   "venue": "Mountain America Stadium"
@@ -4707,18 +4709,18 @@
  },
  "bdfaffbf5873812f3e04de2cbd273aa6": {
   "away_abbr": "LSU",
-  "away_r": "27",
+  "away_r": "34",
   "away_rank": 10,
   "away_short": "LSU",
   "city": "Lexington",
   "clock": "0:00",
   "conf_comp": true,
   "detail": "OT",
-  "down": "1st & 10 at UK 15",
+  "down": null,
   "espn_id": "401856715",
   "final": false,
   "home_abbr": "UK",
-  "home_r": "27",
+  "home_r": "33",
   "home_rank": 99,
   "home_short": "Kentucky",
   "in_play": true,
@@ -4732,7 +4734,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "17 CAR, 120 YDS, 1 TD",
+    "val": "19 CAR, 123 YDS, 2 TD",
     "who": "C. Baxter"
    },
    {
@@ -4747,20 +4749,20 @@
    7.0,
    3.0,
    7.0,
-   0.0
+   7.0
   ],
   "line_home": [
    7.0,
    14.0,
    0.0,
    6.0,
-   0.0
+   6.0
   ],
   "neutral": false,
   "period": 5,
-  "poss": "away",
+  "poss": null,
   "redzone": true,
-  "spot": "UK 15",
+  "spot": null,
   "state": "KY",
   "status": "In Progress",
   "venue": "Kroger Field"
@@ -4819,14 +4821,14 @@
   "away_rank": 23,
   "away_short": "Boise St",
   "city": "Fresno",
-  "clock": "12:51",
+  "clock": "10:58",
   "conf_comp": true,
-  "detail": "12:51 - 1st",
-  "down": "2nd & 10 at BOIS 32",
+  "detail": "10:58 - 1st",
+  "down": null,
   "espn_id": "401860901",
   "final": false,
   "home_abbr": "FRES",
-  "home_r": "0",
+  "home_r": "7",
   "home_rank": 99,
   "home_short": "Fresno St",
   "in_play": true,
@@ -4834,14 +4836,14 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "3/4, 52 YDS",
+    "val": "3/6, 52 YDS",
     "who": "J. Mandal"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "1 CAR, 3 YDS",
-    "who": "B. Donelson"
+    "val": "1 CAR, 8 YDS, 1 TD",
+    "who": "J. Mandal"
    },
    {
     "cat": "REC",
@@ -4854,13 +4856,13 @@
    0.0
   ],
   "line_home": [
-   0.0
+   7.0
   ],
   "neutral": false,
   "period": 1,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "BOIS 32",
+  "spot": null,
   "state": "CA",
   "status": "In Progress",
   "venue": "Valley Children's Stadium"
@@ -5247,9 +5249,9 @@
   "away_rank": 99,
   "away_short": "Syracuse",
   "city": "Charlottesville",
-  "clock": "2:50",
+  "clock": "2:27",
   "conf_comp": true,
-  "detail": "2:50 - 4th",
+  "detail": "2:27 - 4th",
   "down": null,
   "espn_id": "401858258",
   "final": false,
@@ -5293,7 +5295,7 @@
   "neutral": false,
   "period": 4,
   "poss": null,
-  "redzone": true,
+  "redzone": false,
   "spot": null,
   "state": "VA",
   "status": "In Progress",
