@@ -669,14 +669,14 @@
   "away_rank": 99,
   "away_short": "Minnesota",
   "city": "West Lafayette",
-  "clock": "13:17",
+  "clock": "12:26",
   "conf_comp": true,
-  "detail": "13:17 - 4th",
-  "down": null,
+  "detail": "12:26 - 4th",
+  "down": "2nd & 4 at MINN 38",
   "espn_id": "401858486",
   "final": false,
   "home_abbr": "PUR",
-  "home_r": "27",
+  "home_r": "34",
   "home_rank": 99,
   "home_short": "Purdue",
   "in_play": true,
@@ -684,7 +684,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "15/30, 223 YDS, 1 TD, 1 INT",
+    "val": "16/31, 229 YDS, 1 TD, 1 INT",
     "who": "D. Lindsey"
    },
    {
@@ -710,13 +710,13 @@
    10.0,
    10.0,
    7.0,
-   6.0
+   7.0
   ],
   "neutral": false,
   "period": 4,
-  "poss": null,
-  "redzone": true,
-  "spot": null,
+  "poss": "away",
+  "redzone": false,
+  "spot": "MINN 38",
   "state": "IN",
   "status": "In Progress",
   "venue": "Ross-Ade Stadium"
@@ -883,10 +883,10 @@
   "away_rank": 99,
   "away_short": "James Madison",
   "city": "Statesboro",
-  "clock": "7:48",
+  "clock": "5:00",
   "conf_comp": true,
-  "detail": "7:48 - 3rd",
-  "down": null,
+  "detail": "5:00 - 3rd",
+  "down": "4th & 10 at JMU 33",
   "espn_id": "401869949",
   "final": false,
   "home_abbr": "GASO",
@@ -898,7 +898,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "11/16, 144 YDS, 1 TD, 1 INT",
+    "val": "13/21, 166 YDS, 1 TD, 1 INT",
     "who": "M. Johnson"
    },
    {
@@ -926,9 +926,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "JMU 33",
   "state": "GA",
   "status": "In Progress",
   "venue": "Allen E. Paulson Stadium"
@@ -1701,10 +1701,10 @@
   "away_rank": 19,
   "away_short": "USC",
   "city": "University Park",
-  "clock": "6:02",
+  "clock": "4:08",
   "conf_comp": true,
-  "detail": "6:02 - 4th",
-  "down": "2nd & 8 at USC 9",
+  "detail": "4:08 - 4th",
+  "down": "1st & 10 at PSU 40",
   "espn_id": "401858485",
   "final": false,
   "home_abbr": "PSU",
@@ -1716,13 +1716,13 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "21/32, 301 YDS, 3 TD",
+    "val": "21/33, 301 YDS, 3 TD",
     "who": "J. Maiava"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "14 CAR, 64 YDS, 1 TD",
+    "val": "15 CAR, 68 YDS, 1 TD",
     "who": "K. Miller"
    },
    {
@@ -1746,9 +1746,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "USC 9",
+  "spot": "PSU 40",
   "state": "PA",
   "status": "In Progress",
   "venue": "Beaver Stadium"
@@ -2317,10 +2317,10 @@
   "away_rank": 2,
   "away_short": "Georgia",
   "city": "Tuscaloosa",
-  "clock": "9:57",
+  "clock": "5:27",
   "conf_comp": true,
-  "detail": "9:57 - 4th",
-  "down": "3rd & 6 at UGA 15",
+  "detail": "5:27 - 4th",
+  "down": "4th & Goal at ALA 5",
   "espn_id": "401856712",
   "final": false,
   "home_abbr": "ALA",
@@ -2332,14 +2332,14 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "17/20, 223 YDS, 1 TD, 1 INT",
+    "val": "17/21, 232 YDS, 1 TD, 1 INT",
     "who": "G. Stockton"
    },
    {
     "cat": "RUSH",
-    "team": "home",
-    "val": "8 CAR, 90 YDS",
-    "who": "T. Brown"
+    "team": "away",
+    "val": "15 CAR, 117 YDS",
+    "who": "D. Phillips Jr."
    },
    {
     "cat": "REC",
@@ -2363,8 +2363,8 @@
   "neutral": false,
   "period": 4,
   "poss": "away",
-  "redzone": false,
-  "spot": "UGA 15",
+  "redzone": true,
+  "spot": "ALA 5",
   "state": "AL",
   "status": "In Progress",
   "venue": "Bryant-Denny Stadium"
@@ -2837,10 +2837,10 @@
   "away_rank": 99,
   "away_short": "Kansas",
   "city": "Salt Lake City",
-  "clock": "4:13",
+  "clock": "1:29",
   "conf_comp": true,
-  "detail": "4:13 - 3rd",
-  "down": "1st & 10 at UTAH 23",
+  "detail": "1:29 - 3rd",
+  "down": "2nd & 12 at UTAH 30",
   "espn_id": "401856827",
   "final": false,
   "home_abbr": "UTAH",
@@ -2852,7 +2852,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "13/22, 199 YDS, 1 TD, 1 INT",
+    "val": "13/23, 182 YDS, 1 TD, 1 INT",
     "who": "I. Marshall"
    },
    {
@@ -2864,7 +2864,7 @@
    {
     "cat": "REC",
     "team": "away",
-    "val": "6 REC, 102 YDS",
+    "val": "7 REC, 112 YDS",
     "who": "C. Pickett"
    }
   ],
@@ -2882,7 +2882,7 @@
   "period": 3,
   "poss": "away",
   "redzone": false,
-  "spot": "UTAH 23",
+  "spot": "UTAH 30",
   "state": "UT",
   "status": "In Progress",
   "venue": "Rice-Eccles Stadium"
@@ -3525,14 +3525,14 @@
  },
  "7dd6e0d9f2657c834974c28b286ff58d": {
   "away_abbr": "HAW",
-  "away_r": "0",
+  "away_r": "3",
   "away_rank": 99,
   "away_short": "Hawai'i",
   "city": "Tempe",
-  "clock": "13:45",
+  "clock": "12:54",
   "conf_comp": false,
-  "detail": "13:45 - 1st",
-  "down": null,
+  "detail": "12:54 - 1st",
+  "down": "2nd & 4 at ASU 26",
   "espn_id": "401856808",
   "final": false,
   "home_abbr": "ASU",
@@ -3561,16 +3561,16 @@
    }
   ],
   "line_away": [
-   0.0
+   3.0
   ],
   "line_home": [
    0.0
   ],
   "neutral": false,
   "period": 1,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "ASU 26",
   "state": "AZ",
   "status": "In Progress",
   "venue": "Mountain America Stadium"
@@ -3745,14 +3745,14 @@
   "away_rank": 99,
   "away_short": "Louisiana",
   "city": "Ruston",
-  "clock": "1:11",
+  "clock": "0:27",
   "conf_comp": true,
-  "detail": "1:11 - 4th",
-  "down": "2nd & 6 at UL 10",
+  "detail": "0:27 - 4th",
+  "down": "3rd & 10 at UL 25",
   "espn_id": "401869965",
   "final": false,
   "home_abbr": "LT",
-  "home_r": "26",
+  "home_r": "32",
   "home_rank": 99,
   "home_short": "Louisiana Tech",
   "in_play": true,
@@ -3760,19 +3760,19 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "31/41, 312 YDS, 2 TD",
+    "val": "32/42, 319 YDS, 3 TD",
     "who": "B. Baker"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "14 CAR, 82 YDS",
+    "val": "14 CAR, 85 YDS",
     "who": "A. Burnette"
    },
    {
     "cat": "REC",
     "team": "home",
-    "val": "8 REC, 107 YDS, 1 TD",
+    "val": "9 REC, 114 YDS, 2 TD",
     "who": "E. Finley"
    }
   ],
@@ -3786,13 +3786,13 @@
    0.0,
    13.0,
    0.0,
-   13.0
+   19.0
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
-  "redzone": true,
-  "spot": "UL 10",
+  "poss": "away",
+  "redzone": false,
+  "spot": "UL 25",
   "state": "LA",
   "status": "In Progress",
   "venue": "Joe Aillet Stadium"
@@ -4711,14 +4711,14 @@
   "away_rank": 10,
   "away_short": "LSU",
   "city": "Lexington",
-  "clock": "0:15",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:15 - 4th",
-  "down": "4th & 1 at LSU 14",
+  "detail": "End of 4th",
+  "down": null,
   "espn_id": "401856715",
   "final": false,
   "home_abbr": "UK",
-  "home_r": "24",
+  "home_r": "27",
   "home_rank": 99,
   "home_short": "Kentucky",
   "in_play": true,
@@ -4752,13 +4752,13 @@
    7.0,
    14.0,
    0.0,
-   3.0
+   6.0
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
+  "poss": "away",
   "redzone": true,
-  "spot": "LSU 14",
+  "spot": null,
   "state": "KY",
   "status": "In Progress",
   "venue": "Kroger Field"
@@ -5241,10 +5241,10 @@
   "away_rank": 99,
   "away_short": "Syracuse",
   "city": "Charlottesville",
-  "clock": "4:46",
+  "clock": "3:55",
   "conf_comp": true,
-  "detail": "4:46 - 4th",
-  "down": "3rd & 10 at UVA 45",
+  "detail": "3:55 - 4th",
+  "down": "1st & 10 at UVA 34",
   "espn_id": "401858258",
   "final": false,
   "home_abbr": "UVA",
@@ -5288,7 +5288,7 @@
   "period": 4,
   "poss": "away",
   "redzone": false,
-  "spot": "UVA 45",
+  "spot": "UVA 34",
   "state": "VA",
   "status": "In Progress",
   "venue": "Scott Stadium"
