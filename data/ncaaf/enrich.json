@@ -1013,46 +1013,44 @@
   "away_rank": 99,
   "away_short": "Western KY",
   "city": "Huntsville",
-  "clock": "0:00",
+  "clock": "13:06",
   "conf_comp": true,
-  "detail": "10/14 - 8:00 PM EDT",
-  "down": null,
+  "detail": "13:06 - 1st",
+  "down": "2nd & 2 at SHSU 40",
   "espn_id": "401871068",
   "final": false,
   "home_abbr": "SHSU",
   "home_r": "0",
   "home_rank": 99,
   "home_short": "Sam Houston",
-  "in_play": false,
+  "in_play": true,
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "1306 YDS, 11 TD, 3 INT",
-    "who": "L. Locke"
-   },
-   {
-    "cat": "RUSH",
     "team": "away",
-    "val": "72 CAR, 321 YDS, 4 TD",
-    "who": "A. Allen"
+    "val": "3/4, 25 YDS",
+    "who": "B. Glenn"
    },
    {
     "cat": "REC",
     "team": "away",
-    "val": "36 REC, 332 YDS, 1 TD",
+    "val": "2 REC, 21 YDS",
     "who": "J. Stafford Jr."
    }
   ],
-  "line_away": [],
-  "line_home": [],
+  "line_away": [
+   0.0
+  ],
+  "line_home": [
+   0.0
+  ],
   "neutral": false,
-  "period": 0,
-  "poss": null,
+  "period": 1,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "SHSU 40",
   "state": "TX",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "Elliott T. Bowers Stadium"
  },
  "2c3f80e228a486e04f6f7a38e4f00fb4": {
@@ -2905,10 +2903,10 @@
   "away_rank": 99,
   "away_short": "Kennesaw St",
   "city": "Springfield",
-  "clock": "1:26",
+  "clock": "15:00",
   "conf_comp": true,
-  "detail": "1:26 - 1st",
-  "down": "3rd & 7 at KENN 47",
+  "detail": "15:00 - 2nd",
+  "down": "2nd & 10 at KENN 15",
   "espn_id": "401871054",
   "final": false,
   "home_abbr": "MOST",
@@ -2920,14 +2918,14 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "8/11, 68 YDS, 1 INT",
+    "val": "8/11, 74 YDS, 1 INT",
     "who": "H. Belin IV"
    },
    {
     "cat": "RUSH",
-    "team": "away",
-    "val": "5 CAR, 13 YDS",
-    "who": "B. Woods III"
+    "team": "home",
+    "val": "4 CAR, 33 YDS",
+    "who": "C. Lair"
    },
    {
     "cat": "REC",
@@ -2937,16 +2935,18 @@
    }
   ],
   "line_away": [
+   0.0,
    0.0
   ],
   "line_home": [
+   0.0,
    0.0
   ],
   "neutral": false,
-  "period": 1,
+  "period": 2,
   "poss": "home",
-  "redzone": false,
-  "spot": "KENN 47",
+  "redzone": true,
+  "spot": "KENN 15",
   "state": "MO",
   "status": "In Progress",
   "venue": "Robert W. Plaster Stadium"
