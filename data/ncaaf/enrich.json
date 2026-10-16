@@ -1697,15 +1697,15 @@
   "city": "Birmingham",
   "clock": "0:00",
   "conf_comp": true,
-  "detail": "OT",
+  "detail": "Final/OT",
   "down": null,
   "espn_id": "401862800",
-  "final": false,
+  "final": true,
   "home_abbr": "UAB",
-  "home_r": "24",
+  "home_r": "30",
   "home_rank": 99,
   "home_short": "UAB",
-  "in_play": true,
+  "in_play": false,
   "leaders": [
    {
     "cat": "PASS",
@@ -1738,15 +1738,15 @@
    3.0,
    6.0,
    8.0,
-   7.0
+   13.0
   ],
   "neutral": false,
   "period": 5,
   "poss": null,
-  "redzone": true,
+  "redzone": false,
   "spot": null,
   "state": "AL",
-  "status": "In Progress",
+  "status": "Final",
   "venue": "Protective Stadium"
  },
  "4c15d7c4261fa1d8b75615a46d4d2ea7": {
@@ -4665,10 +4665,10 @@
   "away_rank": 99,
   "away_short": "Colorado St",
   "city": "San Marcos",
-  "clock": "4:11",
+  "clock": "2:00",
   "conf_comp": true,
-  "detail": "4:11 - 4th",
-  "down": "2nd & 10 at TXST 45",
+  "detail": "2:00 - 4th",
+  "down": null,
   "espn_id": "401860923",
   "final": false,
   "home_abbr": "TXST",
@@ -4680,7 +4680,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "22/34, 271 YDS, 2 TD",
+    "val": "26/39, 282 YDS, 2 TD",
     "who": "K. Farrar"
    },
    {
@@ -4710,9 +4710,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "TXST 45",
+  "spot": null,
   "state": "TX",
   "status": "In Progress",
   "venue": "UFCU Stadium"
