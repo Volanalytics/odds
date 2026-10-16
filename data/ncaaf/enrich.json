@@ -527,6 +527,54 @@
   "status": "Scheduled",
   "venue": "FirstBank Stadium"
  },
+ "0cdac6d2b6c2cbfb0f734a8cdfbe086e": {
+  "away_abbr": "LSU",
+  "away_r": "0",
+  "away_rank": 22,
+  "away_short": "LSU",
+  "city": "Knoxville",
+  "clock": "0:00",
+  "conf_comp": true,
+  "detail": "TBD",
+  "down": null,
+  "espn_id": "401856754",
+  "final": false,
+  "home_abbr": "TENN",
+  "home_r": "0",
+  "home_rank": 14,
+  "home_short": "Tennessee",
+  "in_play": false,
+  "leaders": [
+   {
+    "cat": "PASS",
+    "team": "away",
+    "val": "1496 YDS, 10 TD, 8 INT",
+    "who": "S. Leavitt"
+   },
+   {
+    "cat": "RUSH",
+    "team": "home",
+    "val": "107 CAR, 678 YDS, 8 TD",
+    "who": "D. Bishop"
+   },
+   {
+    "cat": "REC",
+    "team": "away",
+    "val": "29 REC, 416 YDS, 2 TD",
+    "who": "W. Watkins Jr."
+   }
+  ],
+  "line_away": [],
+  "line_home": [],
+  "neutral": false,
+  "period": 0,
+  "poss": null,
+  "redzone": false,
+  "spot": null,
+  "state": "TN",
+  "status": "Scheduled",
+  "venue": "Neyland Stadium"
+ },
  "11430b210e5b57c938e1c95a9db5ffb2": {
   "away_abbr": "OHIO",
   "away_r": "0",
@@ -1649,8 +1697,8 @@
   "city": "Birmingham",
   "clock": "0:00",
   "conf_comp": true,
-  "detail": "End of 4th",
-  "down": "1st & 10 at ECU 49",
+  "detail": "OT",
+  "down": null,
   "espn_id": "401862800",
   "final": false,
   "home_abbr": "UAB",
@@ -1668,7 +1716,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "25 CAR, 96 YDS",
+    "val": "26 CAR, 104 YDS",
     "who": "T. Engleman Jr."
    },
    {
@@ -1682,19 +1730,21 @@
    7.0,
    7.0,
    0.0,
-   3.0
+   3.0,
+   0.0
   ],
   "line_home": [
    0.0,
    3.0,
    6.0,
-   8.0
+   8.0,
+   0.0
   ],
   "neutral": false,
-  "period": 4,
+  "period": 5,
   "poss": "away",
-  "redzone": false,
-  "spot": "ECU 49",
+  "redzone": true,
+  "spot": null,
   "state": "AL",
   "status": "In Progress",
   "venue": "Protective Stadium"
@@ -2082,6 +2132,54 @@
   "state": "MS",
   "status": "Scheduled",
   "venue": "Vaught-Hemingway Stadium"
+ },
+ "5c082e013b5328e3db1def552628765f": {
+  "away_abbr": "TA&M",
+  "away_r": "0",
+  "away_rank": 99,
+  "away_short": "Texas A&M",
+  "city": "Norman",
+  "clock": "0:00",
+  "conf_comp": true,
+  "detail": "TBD",
+  "down": null,
+  "espn_id": "401856752",
+  "final": false,
+  "home_abbr": "OU",
+  "home_r": "0",
+  "home_rank": 99,
+  "home_short": "Oklahoma",
+  "in_play": false,
+  "leaders": [
+   {
+    "cat": "PASS",
+    "team": "away",
+    "val": "1097 YDS, 6 TD, 6 INT",
+    "who": "M. Reed"
+   },
+   {
+    "cat": "RUSH",
+    "team": "away",
+    "val": "74 CAR, 304 YDS, 1 TD",
+    "who": "R. Owens II"
+   },
+   {
+    "cat": "REC",
+    "team": "home",
+    "val": "25 REC, 331 YDS, 2 TD",
+    "who": "I. Sategna III"
+   }
+  ],
+  "line_away": [],
+  "line_home": [],
+  "neutral": false,
+  "period": 0,
+  "poss": null,
+  "redzone": false,
+  "spot": null,
+  "state": "OK",
+  "status": "Scheduled",
+  "venue": "Memorial Stadium (Norman, OK)"
  },
  "5d09c85c1d67e8f9db8db560cb038027": {
   "away_abbr": "MIZ",
@@ -2877,10 +2975,10 @@
   "away_rank": 99,
   "away_short": "GA Southern",
   "city": "Norfolk",
-  "clock": "1:25",
+  "clock": "1:02",
   "conf_comp": true,
-  "detail": "1:25 - 4th",
-  "down": "3rd & 9 at ODU 18",
+  "detail": "1:02 - 4th",
+  "down": "1st & Goal at ODU 5",
   "espn_id": "401869950",
   "final": false,
   "home_abbr": "ODU",
@@ -2898,7 +2996,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "15 CAR, 74 YDS",
+    "val": "16 CAR, 77 YDS",
     "who": "T. Woodgett"
    },
    {
@@ -2922,9 +3020,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
-  "redzone": false,
-  "spot": "ODU 18",
+  "poss": "away",
+  "redzone": true,
+  "spot": "ODU 5",
   "state": "VA",
   "status": "In Progress",
   "venue": "S.B. Ballard Stadium"
@@ -3024,6 +3122,54 @@
   "state": "TX",
   "status": "Scheduled",
   "venue": "Kyle Field"
+ },
+ "8d53f308424d388c9003e02cac8b4cf6": {
+  "away_abbr": "VT",
+  "away_r": "0",
+  "away_rank": 99,
+  "away_short": "Virginia Tech",
+  "city": "Miami Gardens",
+  "clock": "0:00",
+  "conf_comp": true,
+  "detail": "TBD",
+  "down": null,
+  "espn_id": "401858302",
+  "final": false,
+  "home_abbr": "MIA",
+  "home_r": "0",
+  "home_rank": 3,
+  "home_short": "Miami",
+  "in_play": false,
+  "leaders": [
+   {
+    "cat": "PASS",
+    "team": "away",
+    "val": "1734 YDS, 12 TD, 2 INT",
+    "who": "E. Grunkemeyer"
+   },
+   {
+    "cat": "RUSH",
+    "team": "away",
+    "val": "89 CAR, 528 YDS, 4 TD",
+    "who": "J. Overton Jr."
+   },
+   {
+    "cat": "REC",
+    "team": "home",
+    "val": "39 REC, 604 YDS, 6 TD",
+    "who": "M. Toney"
+   }
+  ],
+  "line_away": [],
+  "line_home": [],
+  "neutral": false,
+  "period": 0,
+  "poss": null,
+  "redzone": false,
+  "spot": null,
+  "state": "FL",
+  "status": "Scheduled",
+  "venue": "Hard Rock Stadium"
  },
  "8db5a11826fc84a5a6506c9b85979e70": {
   "away_abbr": "BYU",
@@ -4519,10 +4665,10 @@
   "away_rank": 99,
   "away_short": "Colorado St",
   "city": "San Marcos",
-  "clock": "12:31",
+  "clock": "8:26",
   "conf_comp": true,
-  "detail": "12:31 - 4th",
-  "down": "2nd & 6 at CSU 35",
+  "detail": "8:26 - 4th",
+  "down": "4th & 6 at CSU 13",
   "espn_id": "401860923",
   "final": false,
   "home_abbr": "TXST",
@@ -4565,8 +4711,8 @@
   "neutral": false,
   "period": 4,
   "poss": "home",
-  "redzone": false,
-  "spot": "CSU 35",
+  "redzone": true,
+  "spot": "CSU 13",
   "state": "TX",
   "status": "In Progress",
   "venue": "UFCU Stadium"
@@ -4858,6 +5004,54 @@
   "state": "NY",
   "status": "Scheduled",
   "venue": "JMA Wireless Dome"
+ },
+ "fa98066b4b400fb6af0672e170cc584a": {
+  "away_abbr": "SMU",
+  "away_r": "0",
+  "away_rank": 24,
+  "away_short": "SMU",
+  "city": "Notre Dame",
+  "clock": "0:00",
+  "conf_comp": false,
+  "detail": "11/21 - 7:30 PM EST",
+  "down": null,
+  "espn_id": "401858307",
+  "final": false,
+  "home_abbr": "ND",
+  "home_r": "0",
+  "home_rank": 2,
+  "home_short": "Notre Dame",
+  "in_play": false,
+  "leaders": [
+   {
+    "cat": "PASS",
+    "team": "away",
+    "val": "1588 YDS, 14 TD, 5 INT",
+    "who": "K. Jennings"
+   },
+   {
+    "cat": "RUSH",
+    "team": "away",
+    "val": "77 CAR, 418 YDS, 6 TD",
+    "who": "K. Raphael"
+   },
+   {
+    "cat": "REC",
+    "team": "home",
+    "val": "28 REC, 387 YDS, 4 TD",
+    "who": "J. Faison"
+   }
+  ],
+  "line_away": [],
+  "line_home": [],
+  "neutral": false,
+  "period": 0,
+  "poss": null,
+  "redzone": false,
+  "spot": null,
+  "state": "IN",
+  "status": "Scheduled",
+  "venue": "Notre Dame Stadium"
  },
  "fc01e4b9ad4f39e975b7e1fd9ad124d1": {
   "away_abbr": "NU",
