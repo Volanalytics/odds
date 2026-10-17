@@ -1899,10 +1899,10 @@
   "away_rank": 99,
   "away_short": "Memphis",
   "city": "New Orleans",
-  "clock": "15:00",
+  "clock": "13:25",
   "conf_comp": true,
-  "detail": "15:00 - 3rd",
-  "down": "2nd & 10 at MEM 40",
+  "detail": "13:25 - 4th",
+  "down": "2nd & 8 at MEM 31",
   "espn_id": "401862801",
   "final": false,
   "home_abbr": "TULN",
@@ -1933,18 +1933,20 @@
   "line_away": [
    3.0,
    7.0,
+   0.0,
    0.0
   ],
   "line_home": [
    0.0,
    23.0,
+   0.0,
    0.0
   ],
   "neutral": false,
-  "period": 3,
+  "period": 4,
   "poss": "home",
   "redzone": false,
-  "spot": "MEM 40",
+  "spot": "MEM 31",
   "state": "LA",
   "status": "In Progress",
   "venue": "Yulman Stadium"
@@ -2623,14 +2625,14 @@
  },
  "755ef069f0fe7ee21fbda33f7c93247e": {
   "away_abbr": "APP",
-  "away_r": "14",
+  "away_r": "21",
   "away_rank": 99,
   "away_short": "App State",
   "city": "Conway",
-  "clock": "10:50",
+  "clock": "7:59",
   "conf_comp": true,
-  "detail": "10:50 - 3rd",
-  "down": "2nd & 2 at CCU 40",
+  "detail": "7:59 - 3rd",
+  "down": null,
   "espn_id": "401869844",
   "final": false,
   "home_abbr": "CCU",
@@ -2648,7 +2650,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "9 CAR, 56 YDS",
+    "val": "10 CAR, 57 YDS",
     "who": "H. Hasselbeck"
    },
    {
@@ -2661,7 +2663,7 @@
   "line_away": [
    14.0,
    0.0,
-   0.0
+   7.0
   ],
   "line_home": [
    7.0,
@@ -2670,9 +2672,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "CCU 40",
+  "spot": null,
   "state": "SC",
   "status": "In Progress",
   "venue": "Brooks Stadium (SC)"
@@ -5103,10 +5105,10 @@
   "away_rank": 99,
   "away_short": "Washington",
   "city": "West Lafayette",
-  "clock": "11:51",
+  "clock": "9:54",
   "conf_comp": true,
-  "detail": "11:51 - 3rd",
-  "down": "2nd & 16 at WASH 44",
+  "detail": "9:54 - 3rd",
+  "down": "4th & Goal at PUR 6",
   "espn_id": "401858493",
   "final": false,
   "home_abbr": "PUR",
@@ -5118,7 +5120,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "14/19, 200 YDS, 2 TD, 2 INT",
+    "val": "15/20, 203 YDS, 2 TD, 2 INT",
     "who": "E. Brown"
    },
    {
@@ -5130,7 +5132,7 @@
    {
     "cat": "REC",
     "team": "away",
-    "val": "4 REC, 76 YDS",
+    "val": "5 REC, 79 YDS",
     "who": "C. Lawson"
    }
   ],
@@ -5146,9 +5148,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "away",
-  "redzone": false,
-  "spot": "WASH 44",
+  "poss": "home",
+  "redzone": true,
+  "spot": "PUR 6",
   "state": "IN",
   "status": "In Progress",
   "venue": "Ross-Ade Stadium"
