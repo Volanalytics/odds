@@ -1899,14 +1899,14 @@
   "away_rank": 99,
   "away_short": "Memphis",
   "city": "New Orleans",
-  "clock": "0:06",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:06 - 2nd",
-  "down": "2nd & 10 at TULN 32",
+  "detail": "Halftime",
+  "down": null,
   "espn_id": "401862801",
   "final": false,
   "home_abbr": "TULN",
-  "home_r": "16",
+  "home_r": "23",
   "home_rank": 99,
   "home_short": "Tulane",
   "in_play": true,
@@ -1914,7 +1914,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "6/13, 172 YDS, 1 TD",
+    "val": "6/14, 167 YDS, 1 TD, 1 INT",
     "who": "M. Stokes"
    },
    {
@@ -1936,15 +1936,15 @@
   ],
   "line_home": [
    0.0,
-   16.0
+   23.0
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "TULN 32",
+  "spot": null,
   "state": "LA",
-  "status": "In Progress",
+  "status": "Halftime",
   "venue": "Yulman Stadium"
  },
  "56d8b3e4ae8cb9ce51d5ad6aedd5164e": {
@@ -2625,10 +2625,10 @@
   "away_rank": 99,
   "away_short": "App State",
   "city": "Conway",
-  "clock": "7:04",
+  "clock": "2:39",
   "conf_comp": true,
-  "detail": "7:04 - 2nd",
-  "down": "1st & 10 at CCU 35",
+  "detail": "2:39 - 2nd",
+  "down": "3rd & 1 at APP 10",
   "espn_id": "401869844",
   "final": false,
   "home_abbr": "CCU",
@@ -2640,19 +2640,19 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "7/13, 156 YDS, 2 TD",
+    "val": "9/16, 187 YDS, 2 TD",
     "who": "D. Bailey"
    },
    {
     "cat": "RUSH",
-    "team": "away",
-    "val": "6 CAR, 44 YDS",
-    "who": "H. Hasselbeck"
+    "team": "home",
+    "val": "11 CAR, 52 YDS",
+    "who": "A. Juste"
    },
    {
     "cat": "REC",
     "team": "home",
-    "val": "3 REC, 84 YDS, 1 TD",
+    "val": "4 REC, 96 YDS, 1 TD",
     "who": "R. Washington"
    }
   ],
@@ -2667,8 +2667,8 @@
   "neutral": false,
   "period": 2,
   "poss": "home",
-  "redzone": false,
-  "spot": "CCU 35",
+  "redzone": true,
+  "spot": "APP 10",
   "state": "SC",
   "status": "In Progress",
   "venue": "Brooks Stadium (SC)"
@@ -5099,10 +5099,10 @@
   "away_rank": 99,
   "away_short": "Washington",
   "city": "West Lafayette",
-  "clock": "6:27",
+  "clock": "5:37",
   "conf_comp": true,
-  "detail": "6:27 - 2nd",
-  "down": null,
+  "detail": "5:37 - 2nd",
+  "down": "3rd & 4 at PUR 31",
   "espn_id": "401858493",
   "final": false,
   "home_abbr": "PUR",
@@ -5125,9 +5125,9 @@
    },
    {
     "cat": "REC",
-    "team": "away",
-    "val": "1 REC, 25 YDS, 1 TD",
-    "who": "B. Bonner Jr."
+    "team": "home",
+    "val": "3 REC, 33 YDS",
+    "who": "A. Waseem"
    }
   ],
   "line_away": [
@@ -5140,9 +5140,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "PUR 31",
   "state": "IN",
   "status": "In Progress",
   "venue": "Ross-Ade Stadium"
