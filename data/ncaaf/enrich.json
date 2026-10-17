@@ -53,10 +53,10 @@
   "away_rank": 99,
   "away_short": "Toledo",
   "city": "Ypsilanti",
-  "clock": "3:42",
+  "clock": "1:59",
   "conf_comp": true,
-  "detail": "3:42 - 2nd",
-  "down": "1st & 10 at TOL 45",
+  "detail": "1:59 - 2nd",
+  "down": null,
   "espn_id": "401866444",
   "final": false,
   "home_abbr": "EMU",
@@ -68,7 +68,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "16/18, 202 YDS, 1 TD",
+    "val": "18/20, 227 YDS, 1 TD",
     "who": "J. Richter"
    },
    {
@@ -94,9 +94,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "TOL 45",
+  "spot": null,
   "state": "MI",
   "status": "In Progress",
   "venue": "Rynearson Stadium"
@@ -1049,10 +1049,10 @@
   "away_rank": 99,
   "away_short": "Auburn",
   "city": "Athens",
-  "clock": "6:32",
+  "clock": "4:09",
   "conf_comp": true,
-  "detail": "6:32 - 2nd",
-  "down": null,
+  "detail": "4:09 - 2nd",
+  "down": "1st & 20 at AUB 26",
   "espn_id": "401856719",
   "final": false,
   "home_abbr": "UGA",
@@ -1064,13 +1064,13 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "6/8, 87 YDS, 1 TD",
+    "val": "7/11, 118 YDS, 1 TD",
     "who": "G. Stockton"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "8 CAR, 58 YDS",
+    "val": "9 CAR, 58 YDS",
     "who": "B. Brown"
    },
    {
@@ -1090,9 +1090,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "AUB 26",
   "state": "GA",
   "status": "In Progress",
   "venue": "Sanford Stadium"
@@ -1449,14 +1449,14 @@
   "away_rank": 99,
   "away_short": "UNLV",
   "city": "USAF Academy",
-  "clock": "1:08",
+  "clock": "0:49",
   "conf_comp": true,
-  "detail": "1:08 - 2nd",
+  "detail": "0:49 - 2nd",
   "down": null,
   "espn_id": "401864524",
   "final": false,
   "home_abbr": "AFA",
-  "home_r": "10",
+  "home_r": "13",
   "home_rank": 99,
   "home_short": "Air Force",
   "in_play": true,
@@ -1470,7 +1470,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "7 CAR, 87 YDS, 1 TD",
+    "val": "8 CAR, 90 YDS, 1 TD",
     "who": "E. Medders"
    },
    {
@@ -1486,12 +1486,12 @@
   ],
   "line_home": [
    3.0,
-   7.0
+   10.0
   ],
   "neutral": false,
   "period": 2,
   "poss": null,
-  "redzone": true,
+  "redzone": false,
   "spot": null,
   "state": "CO",
   "status": "In Progress",
@@ -2255,10 +2255,10 @@
   "away_rank": 13,
   "away_short": "Missouri",
   "city": "Oxford",
-  "clock": "6:24",
+  "clock": "4:55",
   "conf_comp": true,
-  "detail": "6:24 - 2nd",
-  "down": "3rd & Goal at MISS 5",
+  "detail": "4:55 - 2nd",
+  "down": "2nd & 5 at MISS 25",
   "espn_id": "401856721",
   "final": false,
   "home_abbr": "MISS",
@@ -2270,7 +2270,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "9/13, 131 YDS",
+    "val": "9/14, 131 YDS",
     "who": "A. Simmons"
    },
    {
@@ -2296,9 +2296,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
-  "redzone": true,
-  "spot": "MISS 5",
+  "poss": "home",
+  "redzone": false,
+  "spot": "MISS 25",
   "state": "MS",
   "status": "In Progress",
   "venue": "Vaught-Hemingway Stadium"
@@ -2357,17 +2357,17 @@
   "away_rank": 99,
   "away_short": "W Michigan",
   "city": "Mount Pleasant",
-  "clock": "0:09",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:09 - 4th",
+  "detail": "Final",
   "down": null,
   "espn_id": "401866443",
-  "final": false,
+  "final": true,
   "home_abbr": "CMU",
   "home_r": "14",
   "home_rank": 99,
   "home_short": "C Michigan",
-  "in_play": true,
+  "in_play": false,
   "leaders": [
    {
     "cat": "PASS",
@@ -2406,7 +2406,7 @@
   "redzone": false,
   "spot": null,
   "state": "MI",
-  "status": "In Progress",
+  "status": "Final",
   "venue": "Kelly/Shorts Stadium"
  },
  "5f45291a1a5e01525b2e3aebe791c436": {
@@ -2617,10 +2617,10 @@
   "away_rank": 99,
   "away_short": "Akron",
   "city": "Oxford",
-  "clock": "2:00",
+  "clock": "1:49",
   "conf_comp": true,
-  "detail": "2:00 - 2nd",
-  "down": "2nd & 10 at AKR 25",
+  "detail": "1:49 - 2nd",
+  "down": "1st & 10 at AKR 37",
   "espn_id": "401866478",
   "final": false,
   "home_abbr": "M-OH",
@@ -2658,9 +2658,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "AKR 25",
+  "spot": "AKR 37",
   "state": "OH",
   "status": "In Progress",
   "venue": "Yager Stadium"
@@ -2821,14 +2821,14 @@
  },
  "7926661d4efb4a5fb94233d5e8aca9df": {
   "away_abbr": "NIU",
-  "away_r": "3",
+  "away_r": "6",
   "away_rank": 99,
   "away_short": "N Illinois",
   "city": "Laramie",
-  "clock": "9:35",
+  "clock": "2:41",
   "conf_comp": true,
-  "detail": "9:35 - 2nd",
-  "down": "2nd & 10 at WYO 37",
+  "detail": "2:41 - 2nd",
+  "down": "1st & 10 at WYO 25",
   "espn_id": "401864522",
   "final": false,
   "home_abbr": "WYO",
@@ -2840,7 +2840,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "8/17, 56 YDS",
+    "val": "11/21, 84 YDS",
     "who": "T. Dickens"
    },
    {
@@ -2851,14 +2851,14 @@
    },
    {
     "cat": "REC",
-    "team": "home",
-    "val": "3 REC, 31 YDS",
-    "who": "E. Richardson"
+    "team": "away",
+    "val": "4 REC, 39 YDS",
+    "who": "D. Rogers"
    }
   ],
   "line_away": [
    0.0,
-   3.0
+   6.0
   ],
   "line_home": [
    10.0,
@@ -2866,9 +2866,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "WYO 37",
+  "spot": "WYO 25",
   "state": "WY",
   "status": "In Progress",
   "venue": "War Memorial Stadium"
@@ -3295,10 +3295,10 @@
   "away_rank": 99,
   "away_short": "Arizona St",
   "city": "Lubbock",
-  "clock": "11:51",
+  "clock": "8:24",
   "conf_comp": true,
-  "detail": "11:51 - 2nd",
-  "down": "3rd & 1 at ASU 34",
+  "detail": "8:24 - 2nd",
+  "down": "4th & 11 at TTU 13",
   "espn_id": "401856828",
   "final": false,
   "home_abbr": "TTU",
@@ -3337,8 +3337,8 @@
   "neutral": false,
   "period": 2,
   "poss": "away",
-  "redzone": false,
-  "spot": "ASU 34",
+  "redzone": true,
+  "spot": "TTU 13",
   "state": "TX",
   "status": "In Progress",
   "venue": "Galaxy Stadium"
@@ -3397,10 +3397,10 @@
   "away_rank": 99,
   "away_short": "Tulsa",
   "city": "Houston",
-  "clock": "9:26",
+  "clock": "5:56",
   "conf_comp": true,
-  "detail": "9:26 - 1st",
-  "down": "1st & 10 at RICE 39",
+  "detail": "5:56 - 1st",
+  "down": "1st & 10 at RICE 3",
   "espn_id": "401862805",
   "final": false,
   "home_abbr": "RICE",
@@ -3412,7 +3412,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "2/2, 45 YDS",
+    "val": "4/4, 62 YDS",
     "who": "B. Hayes"
    },
    {
@@ -3424,7 +3424,7 @@
    {
     "cat": "REC",
     "team": "away",
-    "val": "1 REC, 33 YDS",
+    "val": "2 REC, 46 YDS",
     "who": "O. Singleton Jr."
    }
   ],
@@ -3436,9 +3436,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "RICE 39",
+  "spot": "RICE 3",
   "state": "TX",
   "status": "In Progress",
   "venue": "First Community Stadium"
@@ -3449,10 +3449,10 @@
   "away_rank": 99,
   "away_short": "North Carolina",
   "city": "Durham",
-  "clock": "8:37",
+  "clock": "6:09",
   "conf_comp": true,
-  "detail": "8:37 - 2nd",
-  "down": null,
+  "detail": "6:09 - 2nd",
+  "down": "1st & 10 at DUKE 25",
   "espn_id": "401858266",
   "final": false,
   "home_abbr": "DUKE",
@@ -3464,7 +3464,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "8/12, 99 YDS, 1 TD",
+    "val": "9/14, 106 YDS, 1 TD",
     "who": "B. Edwards Jr."
    },
    {
@@ -3490,9 +3490,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "DUKE 25",
   "state": "NC",
   "status": "In Progress",
   "venue": "Wallace Wade Stadium"
@@ -3561,10 +3561,10 @@
   "away_rank": 6,
   "away_short": "Alabama",
   "city": "Knoxville",
-  "clock": "11:46",
+  "clock": "10:20",
   "conf_comp": true,
-  "detail": "11:46 - 2nd",
-  "down": "3rd & 4 at ALA 41",
+  "detail": "10:20 - 2nd",
+  "down": "1st & 15 at TENN 19",
   "espn_id": "401856723",
   "final": false,
   "home_abbr": "TENN",
@@ -3576,7 +3576,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "9/15, 99 YDS",
+    "val": "9/16, 99 YDS, 1 INT",
     "who": "G. MacIntyre"
    },
    {
@@ -3603,8 +3603,8 @@
   "neutral": false,
   "period": 2,
   "poss": "away",
-  "redzone": false,
-  "spot": "ALA 41",
+  "redzone": true,
+  "spot": "TENN 19",
   "state": "TN",
   "status": "In Progress",
   "venue": "Neyland Stadium"
@@ -4367,10 +4367,10 @@
   "away_rank": 99,
   "away_short": "Georgia Tech",
   "city": "Blacksburg",
-  "clock": "2:53",
+  "clock": "1:10",
   "conf_comp": true,
-  "detail": "2:53 - 2nd",
-  "down": "1st & 20 at GT 44",
+  "detail": "1:10 - 2nd",
+  "down": "4th & 10 at VT 46",
   "espn_id": "401858264",
   "final": false,
   "home_abbr": "VT",
@@ -4388,7 +4388,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "7 CAR, 42 YDS",
+    "val": "8 CAR, 43 YDS",
     "who": "T. Maddox"
    },
    {
@@ -4410,7 +4410,7 @@
   "period": 2,
   "poss": "away",
   "redzone": false,
-  "spot": "GT 44",
+  "spot": "VT 46",
   "state": "VA",
   "status": "In Progress",
   "venue": "Lane Stadium"
@@ -5085,10 +5085,10 @@
   "away_rank": 99,
   "away_short": "Penn State",
   "city": "Ann Arbor",
-  "clock": "5:05",
+  "clock": "2:54",
   "conf_comp": true,
-  "detail": "5:05 - 2nd",
-  "down": "1st & 10 at PSU 26",
+  "detail": "2:54 - 2nd",
+  "down": "2nd & 10 at MICH 40",
   "espn_id": "401858490",
   "final": false,
   "home_abbr": "MICH",
@@ -5100,13 +5100,13 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "12/15, 97 YDS",
+    "val": "13/16, 102 YDS",
     "who": "R. Becht"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "7 CAR, 28 YDS",
+    "val": "8 CAR, 30 YDS",
     "who": "C. Hansen"
    },
    {
@@ -5126,9 +5126,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "PSU 26",
+  "spot": "MICH 40",
   "state": "MI",
   "status": "In Progress",
   "venue": "Michigan Stadium"
