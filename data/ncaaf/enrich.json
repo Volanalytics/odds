@@ -1899,9 +1899,9 @@
   "away_rank": 99,
   "away_short": "Memphis",
   "city": "New Orleans",
-  "clock": "3:33",
+  "clock": "2:00",
   "conf_comp": true,
-  "detail": "3:33 - 4th",
+  "detail": "2:00 - 4th",
   "down": null,
   "espn_id": "401862801",
   "final": false,
@@ -2629,10 +2629,10 @@
   "away_rank": 99,
   "away_short": "App State",
   "city": "Conway",
-  "clock": "11:40",
+  "clock": "10:13",
   "conf_comp": true,
-  "detail": "11:40 - 4th",
-  "down": "4th & 1 at APP 36",
+  "detail": "10:13 - 4th",
+  "down": "1st & 10 at CCU 12",
   "espn_id": "401869844",
   "final": false,
   "home_abbr": "CCU",
@@ -2644,7 +2644,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "13/25, 249 YDS, 3 TD, 1 INT",
+    "val": "14/26, 255 YDS, 3 TD, 1 INT",
     "who": "D. Bailey"
    },
    {
@@ -2674,9 +2674,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "APP 36",
+  "spot": "CCU 12",
   "state": "SC",
   "status": "In Progress",
   "venue": "Brooks Stadium (SC)"
@@ -5103,14 +5103,14 @@
  },
  "fd8eda4d35be24559269f63ca7bbb06b": {
   "away_abbr": "WASH",
-  "away_r": "24",
+  "away_r": "31",
   "away_rank": 99,
   "away_short": "Washington",
   "city": "West Lafayette",
-  "clock": "0:00",
+  "clock": "14:12",
   "conf_comp": true,
-  "detail": "End of 3rd",
-  "down": "2nd & Goal at PUR 7",
+  "detail": "14:12 - 4th",
+  "down": null,
   "espn_id": "401858493",
   "final": false,
   "home_abbr": "PUR",
@@ -5122,7 +5122,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "18/24, 270 YDS, 2 TD, 3 INT",
+    "val": "19/25, 274 YDS, 3 TD, 3 INT",
     "who": "E. Brown"
    },
    {
@@ -5141,20 +5141,22 @@
   "line_away": [
    7.0,
    17.0,
-   0.0
+   0.0,
+   7.0
   ],
   "line_home": [
    3.0,
    14.0,
-   3.0
+   3.0,
+   0.0
   ],
   "neutral": false,
-  "period": 3,
-  "poss": "away",
-  "redzone": true,
-  "spot": "PUR 7",
+  "period": 4,
+  "poss": null,
+  "redzone": false,
+  "spot": null,
   "state": "IN",
-  "status": "End of Period",
+  "status": "In Progress",
   "venue": "Ross-Ade Stadium"
  }
 }
