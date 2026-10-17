@@ -149,10 +149,10 @@
   "away_rank": 99,
   "away_short": "Pitt",
   "city": "Chestnut Hill",
-  "clock": "6:40",
+  "clock": "5:55",
   "conf_comp": true,
-  "detail": "6:40 - 2nd",
-  "down": "4th & Goal at PITT 10",
+  "detail": "5:55 - 2nd",
+  "down": "2nd & 10 at PITT 8",
   "espn_id": "401858267",
   "final": false,
   "home_abbr": "BC",
@@ -190,9 +190,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
-  "redzone": true,
-  "spot": "PITT 10",
+  "poss": "away",
+  "redzone": false,
+  "spot": "PITT 8",
   "state": "MA",
   "status": "In Progress",
   "venue": "Alumni Stadium (Chestnut Hill, MA)"
@@ -203,10 +203,10 @@
   "away_rank": 16,
   "away_short": "Mississippi St",
   "city": "Baton Rouge",
-  "clock": "9:13",
+  "clock": "8:44",
   "conf_comp": true,
-  "detail": "9:13 - 2nd",
-  "down": "4th & 1 at LSU 31",
+  "detail": "8:44 - 2nd",
+  "down": "1st & 10 at LSU 47",
   "espn_id": "401856720",
   "final": false,
   "home_abbr": "LSU",
@@ -218,7 +218,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "11/13, 108 YDS, 2 TD",
+    "val": "12/16, 118 YDS, 2 TD",
     "who": "S. Leavitt"
    },
    {
@@ -230,7 +230,7 @@
    {
     "cat": "REC",
     "team": "home",
-    "val": "4 REC, 39 YDS",
+    "val": "5 REC, 49 YDS",
     "who": "D. Jones"
    }
   ],
@@ -244,9 +244,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "LSU 31",
+  "spot": "LSU 47",
   "state": "LA",
   "status": "In Progress",
   "venue": "Tiger Stadium (LA)"
@@ -401,10 +401,10 @@
   "away_rank": 99,
   "away_short": "Virginia",
   "city": "Dallas",
-  "clock": "6:20",
+  "clock": "5:38",
   "conf_comp": true,
-  "detail": "6:20 - 2nd",
-  "down": null,
+  "detail": "5:38 - 2nd",
+  "down": "2nd & 1 at UVA 45",
   "espn_id": "401858268",
   "final": false,
   "home_abbr": "SMU",
@@ -422,7 +422,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "10 CAR, 43 YDS",
+    "val": "11 CAR, 52 YDS",
     "who": "J. Middlebrook"
    },
    {
@@ -442,9 +442,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "UVA 45",
   "state": "TX",
   "status": "In Progress",
   "venue": "Gerald J. Ford Stadium"
@@ -1617,10 +1617,10 @@
   "away_rank": 99,
   "away_short": "Florida",
   "city": "Austin",
-  "clock": "9:28",
+  "clock": "6:38",
   "conf_comp": true,
-  "detail": "9:28 - 2nd",
-  "down": "2nd & 14 at FLA 30",
+  "detail": "6:38 - 2nd",
+  "down": null,
   "espn_id": "401856724",
   "final": false,
   "home_abbr": "TEX",
@@ -1643,9 +1643,9 @@
    },
    {
     "cat": "REC",
-    "team": "home",
-    "val": "3 REC, 24 YDS",
-    "who": "R. Wingo"
+    "team": "away",
+    "val": "4 REC, 33 YDS",
+    "who": "E. Singleton Jr."
    }
   ],
   "line_away": [
@@ -1658,9 +1658,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "FLA 30",
+  "spot": null,
   "state": "TX",
   "status": "In Progress",
   "venue": "DKR-Texas Memorial Stadium"
@@ -2509,14 +2509,14 @@
   "away_rank": 4,
   "away_short": "Ohio State",
   "city": "Bloomington",
-  "clock": "13:54",
+  "clock": "13:14",
   "conf_comp": true,
-  "detail": "13:54 - 2nd",
-  "down": null,
+  "detail": "13:14 - 2nd",
+  "down": "3rd & 10 at OSU 25",
   "espn_id": "401858488",
   "final": false,
   "home_abbr": "IU",
-  "home_r": "6",
+  "home_r": "7",
   "home_rank": 5,
   "home_short": "Indiana",
   "in_play": true,
@@ -2546,13 +2546,13 @@
   ],
   "line_home": [
    0.0,
-   6.0
+   7.0
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
-  "redzone": true,
-  "spot": null,
+  "poss": "away",
+  "redzone": false,
+  "spot": "OSU 25",
   "state": "IN",
   "status": "In Progress",
   "venue": "Memorial Stadium (Bloomington, IN)"
@@ -2857,14 +2857,14 @@
  },
  "7d7f757d2bf4cb7b6d8bbfe9589d25a2": {
   "away_abbr": "MASS",
-  "away_r": "0",
+  "away_r": "7",
   "away_rank": 99,
   "away_short": "UMass",
   "city": "Buffalo",
-  "clock": "13:13",
+  "clock": "10:08",
   "conf_comp": true,
-  "detail": "13:13 - 1st",
-  "down": "2nd & 9 at MASS 45",
+  "detail": "10:08 - 1st",
+  "down": null,
   "espn_id": "401866442",
   "final": false,
   "home_abbr": "BUFF",
@@ -2876,33 +2876,33 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "2/2, 15 YDS",
+    "val": "3/4, 24 YDS",
     "who": "L. Inagawa"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "2 CAR, 5 YDS",
-    "who": "E. Faulkner"
+    "val": "4 CAR, 38 YDS, 1 TD",
+    "who": "L. Inagawa"
    },
    {
     "cat": "REC",
     "team": "away",
-    "val": "1 REC, 15 YDS",
+    "val": "2 REC, 19 YDS",
     "who": "K. Dia-Johnson"
    }
   ],
   "line_away": [
-   0.0
+   7.0
   ],
   "line_home": [
    0.0
   ],
   "neutral": false,
   "period": 1,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "MASS 45",
+  "spot": null,
   "state": "NY",
   "status": "In Progress",
   "venue": "Broadview Stadium"
@@ -3067,10 +3067,10 @@
   "away_rank": 99,
   "away_short": "The Citadel",
   "city": "College Station",
-  "clock": "13:28",
+  "clock": "9:23",
   "conf_comp": false,
-  "detail": "13:28 - 1st",
-  "down": "3rd & 6 at CIT 29",
+  "detail": "9:23 - 1st",
+  "down": "2nd & Goal at CIT 7",
   "espn_id": "401856725",
   "final": false,
   "home_abbr": "TA&M",
@@ -3080,10 +3080,22 @@
   "in_play": true,
   "leaders": [
    {
+    "cat": "PASS",
+    "team": "home",
+    "val": "2/2, 35 YDS",
+    "who": "M. Reed"
+   },
+   {
     "cat": "RUSH",
-    "team": "away",
-    "val": "2 CAR, 4 YDS",
-    "who": "G. Garcia"
+    "team": "home",
+    "val": "4 CAR, 21 YDS",
+    "who": "K. Edwards"
+   },
+   {
+    "cat": "REC",
+    "team": "home",
+    "val": "1 REC, 25 YDS",
+    "who": "T. Norman"
    }
   ],
   "line_away": [
@@ -3094,9 +3106,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": "away",
-  "redzone": false,
-  "spot": "CIT 29",
+  "poss": "home",
+  "redzone": true,
+  "spot": "CIT 7",
   "state": "TX",
   "status": "In Progress",
   "venue": "Kyle Field"
@@ -3395,10 +3407,10 @@
   "away_rank": 99,
   "away_short": "Kansas",
   "city": "Manhattan",
-  "clock": "10:24",
+  "clock": "8:27",
   "conf_comp": true,
-  "detail": "10:24 - 2nd",
-  "down": "4th & 13 at KU 33",
+  "detail": "8:27 - 2nd",
+  "down": "1st & 10 at KU 33",
   "espn_id": "401856830",
   "final": false,
   "home_abbr": "KSU",
@@ -3410,13 +3422,13 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "5/8, 85 YDS",
+    "val": "6/9, 100 YDS",
     "who": "A. Johnson"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "7 CAR, 88 YDS",
+    "val": "9 CAR, 99 YDS",
     "who": "A. Johnson"
    },
    {
@@ -3436,7 +3448,7 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
   "spot": "KU 33",
   "state": "KS",
@@ -3545,10 +3557,10 @@
   "away_rank": 99,
   "away_short": "Ball State",
   "city": "Bowling Green",
-  "clock": "5:11",
+  "clock": "2:00",
   "conf_comp": true,
-  "detail": "5:11 - 2nd",
-  "down": "1st & 10 at BGSU 25",
+  "detail": "2:00 - 2nd",
+  "down": "1st & 10 at BGSU 49",
   "espn_id": "401866441",
   "final": false,
   "home_abbr": "BGSU",
@@ -3560,7 +3572,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "4/7, 91 YDS, 1 TD",
+    "val": "6/9, 102 YDS, 1 TD",
     "who": "J. Kastantin"
    },
    {
@@ -3588,7 +3600,7 @@
   "period": 2,
   "poss": "home",
   "redzone": false,
-  "spot": "BGSU 25",
+  "spot": "BGSU 49",
   "state": "OH",
   "status": "In Progress",
   "venue": "Doyt L. Perry Stadium"
@@ -3887,14 +3899,14 @@
   "away_rank": 99,
   "away_short": "Charleston So",
   "city": "Clemson",
-  "clock": "6:50",
+  "clock": "5:30",
   "conf_comp": false,
-  "detail": "6:50 - 2nd",
-  "down": "2nd & Goal at CHSO 4",
+  "detail": "5:30 - 2nd",
+  "down": null,
   "espn_id": "401858261",
   "final": false,
   "home_abbr": "CLEM",
-  "home_r": "17",
+  "home_r": "24",
   "home_rank": 99,
   "home_short": "Clemson",
   "in_play": true,
@@ -3924,13 +3936,13 @@
   ],
   "line_home": [
    10.0,
-   7.0
+   14.0
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
-  "redzone": true,
-  "spot": "CHSO 4",
+  "poss": null,
+  "redzone": false,
+  "spot": null,
   "state": "SC",
   "status": "In Progress",
   "venue": "Memorial Stadium (Clemson, SC)"
@@ -4033,14 +4045,14 @@
  },
  "c67bc7b2b2b6bf3571ece5117facad42": {
   "away_abbr": "CIN",
-  "away_r": "7",
+  "away_r": "14",
   "away_rank": 99,
   "away_short": "Cincinnati",
   "city": "Morgantown",
-  "clock": "6:55",
+  "clock": "4:55",
   "conf_comp": true,
-  "detail": "6:55 - 2nd",
-  "down": "1st & 10 at CIN 23",
+  "detail": "4:55 - 2nd",
+  "down": null,
   "espn_id": "401856829",
   "final": false,
   "home_abbr": "WVU",
@@ -4052,7 +4064,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "6/9, 97 YDS, 1 TD",
+    "val": "8/12, 167 YDS, 2 TD",
     "who": "J. French IV"
    },
    {
@@ -4070,7 +4082,7 @@
   ],
   "line_away": [
    7.0,
-   0.0
+   7.0
   ],
   "line_home": [
    0.0,
@@ -4078,9 +4090,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "CIN 23",
+  "spot": null,
   "state": "WV",
   "status": "In Progress",
   "venue": "Milan Puskar Stadium"
@@ -4519,14 +4531,14 @@
  },
  "eb7db3ae999676aa80dd5cf7dfa32c1a": {
   "away_abbr": "RUTG",
-  "away_r": "0",
+  "away_r": "7",
   "away_rank": 99,
   "away_short": "Rutgers",
   "city": "College Park",
-  "clock": "2:09",
+  "clock": "0:48",
   "conf_comp": true,
-  "detail": "2:09 - 1st",
-  "down": "1st & 10 at MD 20",
+  "detail": "0:48 - 1st",
+  "down": null,
   "espn_id": "401858489",
   "final": false,
   "home_abbr": "MD",
@@ -4544,27 +4556,27 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "4 CAR, 2 YDS",
-    "who": "A. Raymond"
+    "val": "2 CAR, 6 YDS",
+    "who": "C. Thevenin"
    },
    {
     "cat": "REC",
-    "team": "home",
-    "val": "1 REC, 25 YDS",
-    "who": "P. Howard"
+    "team": "away",
+    "val": "2 REC, 26 YDS, 1 TD",
+    "who": "K. Duff"
    }
   ],
   "line_away": [
-   0.0
+   7.0
   ],
   "line_home": [
    7.0
   ],
   "neutral": false,
   "period": 1,
-  "poss": "away",
-  "redzone": true,
-  "spot": "MD 20",
+  "poss": null,
+  "redzone": false,
+  "spot": null,
   "state": "MD",
   "status": "In Progress",
   "venue": "SECU Stadium"
@@ -4623,10 +4635,10 @@
   "away_rank": 99,
   "away_short": "FAU",
   "city": "West Point",
-  "clock": "7:55",
+  "clock": "3:05",
   "conf_comp": true,
-  "detail": "7:55 - 2nd",
-  "down": "2nd & 8 at FAU 49",
+  "detail": "3:05 - 2nd",
+  "down": "2nd & 15 at FAU 26",
   "espn_id": "401862802",
   "final": false,
   "home_abbr": "ARMY",
@@ -4644,7 +4656,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "6 CAR, 103 YDS, 2 TD",
+    "val": "10 CAR, 124 YDS, 2 TD",
     "who": "C. Hellums"
    },
    {
@@ -4666,7 +4678,7 @@
   "period": 2,
   "poss": "home",
   "redzone": false,
-  "spot": "FAU 49",
+  "spot": "FAU 26",
   "state": "NY",
   "status": "In Progress",
   "venue": "Michie Stadium"
@@ -4783,10 +4795,10 @@
   "away_rank": 99,
   "away_short": "Charlotte",
   "city": "Philadelphia",
-  "clock": "13:48",
+  "clock": "10:13",
   "conf_comp": true,
-  "detail": "13:48 - 1st",
-  "down": "4th & 9 at TEM 23",
+  "detail": "10:13 - 1st",
+  "down": "1st & Goal at TEM 1",
   "espn_id": "401862803",
   "final": false,
   "home_abbr": "TEM",
@@ -4797,15 +4809,21 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "1, 0 YDS",
-    "who": "J. Smolik"
+    "team": "away",
+    "val": "2/3, 35 YDS",
+    "who": "C. Harrell"
    },
    {
     "cat": "RUSH",
-    "team": "home",
-    "val": "1 CAR, 4 YDS",
-    "who": "J. Smolik"
+    "team": "away",
+    "val": "2 CAR, 22 YDS",
+    "who": "H. Rutledge"
+   },
+   {
+    "cat": "REC",
+    "team": "away",
+    "val": "1 REC, 29 YDS",
+    "who": "B. Dawyot"
    }
   ],
   "line_away": [
@@ -4816,9 +4834,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": "home",
-  "redzone": false,
-  "spot": "TEM 23",
+  "poss": "away",
+  "redzone": true,
+  "spot": "TEM 1",
   "state": "PA",
   "status": "In Progress",
   "venue": "Lincoln Financial Field"
@@ -4973,14 +4991,14 @@
   "away_rank": 99,
   "away_short": "Georgia St",
   "city": "Harrisonburg",
-  "clock": "13:18",
+  "clock": "11:43",
   "conf_comp": true,
-  "detail": "13:18 - 2nd",
-  "down": "2nd & 3 at GAST 46",
+  "detail": "11:43 - 2nd",
+  "down": null,
   "espn_id": "401869957",
   "final": false,
   "home_abbr": "JMU",
-  "home_r": "21",
+  "home_r": "28",
   "home_rank": 99,
   "home_short": "James Madison",
   "in_play": true,
@@ -4988,14 +5006,14 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "6/9, 92 YDS, 1 TD",
+    "val": "7/10, 111 YDS, 2 TD",
     "who": "C. Coleman"
    },
    {
     "cat": "RUSH",
-    "team": "away",
-    "val": "2 CAR, 28 YDS",
-    "who": "C. Brown"
+    "team": "home",
+    "val": "6 CAR, 36 YDS",
+    "who": "G. Pettaway"
    },
    {
     "cat": "REC",
@@ -5010,13 +5028,13 @@
   ],
   "line_home": [
    14.0,
-   7.0
+   14.0
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "GAST 46",
+  "spot": null,
   "state": "VA",
   "status": "In Progress",
   "venue": "Bridgeforth Stadium"
@@ -5123,10 +5141,10 @@
   "away_rank": 25,
   "away_short": "Northwestern",
   "city": "East Lansing",
-  "clock": "10:59",
+  "clock": "6:58",
   "conf_comp": true,
-  "detail": "10:59 - 2nd",
-  "down": null,
+  "detail": "6:58 - 2nd",
+  "down": "2nd & 10 at MSU 37",
   "espn_id": "401858491",
   "final": false,
   "home_abbr": "MSU",
@@ -5138,7 +5156,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "9/13, 81 YDS",
+    "val": "9/14, 81 YDS",
     "who": "A. Milivojevic"
    },
    {
@@ -5164,9 +5182,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "MSU 37",
   "state": "MI",
   "status": "In Progress",
   "venue": "Spartan Stadium"
