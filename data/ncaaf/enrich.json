@@ -1899,14 +1899,14 @@
   "away_rank": 99,
   "away_short": "Memphis",
   "city": "New Orleans",
-  "clock": "6:42",
+  "clock": "4:18",
   "conf_comp": true,
-  "detail": "6:42 - 2nd",
-  "down": "1st & 10 at MEM 25",
+  "detail": "4:18 - 2nd",
+  "down": null,
   "espn_id": "401862801",
   "final": false,
   "home_abbr": "TULN",
-  "home_r": "6",
+  "home_r": "13",
   "home_rank": 99,
   "home_short": "Tulane",
   "in_play": true,
@@ -1914,7 +1914,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "4/8, 160 YDS, 1 TD",
+    "val": "5/9, 170 YDS, 1 TD",
     "who": "M. Stokes"
    },
    {
@@ -1926,7 +1926,7 @@
    {
     "cat": "REC",
     "team": "away",
-    "val": "2 REC, 89 YDS, 1 TD",
+    "val": "3 REC, 99 YDS, 1 TD",
     "who": "S. Burnside"
    }
   ],
@@ -1936,13 +1936,13 @@
   ],
   "line_home": [
    0.0,
-   6.0
+   13.0
   ],
   "neutral": false,
   "period": 2,
   "poss": null,
   "redzone": false,
-  "spot": "MEM 25",
+  "spot": null,
   "state": "LA",
   "status": "In Progress",
   "venue": "Yulman Stadium"
@@ -2625,10 +2625,10 @@
   "away_rank": 99,
   "away_short": "App State",
   "city": "Conway",
-  "clock": "15:00",
+  "clock": "13:00",
   "conf_comp": true,
-  "detail": "15:00 - 1st",
-  "down": "2nd & 10 at APP 28",
+  "detail": "13:00 - 2nd",
+  "down": "4th & Goal at CCU 5",
   "espn_id": "401869844",
   "final": false,
   "home_abbr": "CCU",
@@ -2640,14 +2640,14 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "6/6, 97 YDS",
+    "val": "7/8, 96 YDS",
     "who": "M. Singleton"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "5 CAR, 25 YDS, 2 TD",
-    "who": "J. Lewis"
+    "val": "4 CAR, 27 YDS",
+    "who": "H. Hasselbeck"
    },
    {
     "cat": "REC",
@@ -2657,16 +2657,18 @@
    }
   ],
   "line_away": [
-   14.0
+   14.0,
+   0.0
   ],
   "line_home": [
-   7.0
+   7.0,
+   0.0
   ],
   "neutral": false,
-  "period": 1,
-  "poss": "away",
-  "redzone": false,
-  "spot": "APP 28",
+  "period": 2,
+  "poss": "home",
+  "redzone": true,
+  "spot": "CCU 5",
   "state": "SC",
   "status": "In Progress",
   "venue": "Brooks Stadium (SC)"
@@ -5093,14 +5095,14 @@
  },
  "fd8eda4d35be24559269f63ca7bbb06b": {
   "away_abbr": "WASH",
-  "away_r": "7",
+  "away_r": "10",
   "away_rank": 99,
   "away_short": "Washington",
   "city": "West Lafayette",
-  "clock": "14:52",
+  "clock": "12:40",
   "conf_comp": true,
-  "detail": "14:52 - 2nd",
-  "down": "2nd & 10 at WASH 42",
+  "detail": "12:40 - 2nd",
+  "down": null,
   "espn_id": "401858493",
   "final": false,
   "home_abbr": "PUR",
@@ -5111,15 +5113,15 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "4/9, 36 YDS",
-    "who": "R. Browne"
+    "team": "away",
+    "val": "5/8, 38 YDS, 1 TD, 2 INT",
+    "who": "E. Brown"
    },
    {
     "cat": "RUSH",
-    "team": "home",
-    "val": "6 CAR, 15 YDS",
-    "who": "F. Ijeboi"
+    "team": "away",
+    "val": "4 CAR, 58 YDS",
+    "who": "T. Cooley"
    },
    {
     "cat": "REC",
@@ -5130,7 +5132,7 @@
   ],
   "line_away": [
    7.0,
-   0.0
+   3.0
   ],
   "line_home": [
    3.0,
@@ -5138,9 +5140,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "WASH 42",
+  "spot": null,
   "state": "IN",
   "status": "In Progress",
   "venue": "Ross-Ade Stadium"
