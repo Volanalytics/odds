@@ -1452,7 +1452,7 @@
   "clock": "0:00",
   "conf_comp": true,
   "detail": "Halftime",
-  "down": "2nd & 10 at UNLV 42",
+  "down": "3rd & 4 at AF 31",
   "espn_id": "401864524",
   "final": false,
   "home_abbr": "AFA",
@@ -1470,7 +1470,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "8 CAR, 90 YDS, 1 TD",
+    "val": "10 CAR, 96 YDS, 1 TD",
     "who": "E. Medders"
    },
    {
@@ -1492,7 +1492,7 @@
   "period": 2,
   "poss": null,
   "redzone": false,
-  "spot": "UNLV 42",
+  "spot": "AF 31",
   "state": "CO",
   "status": "Halftime",
   "venue": "Falcon Stadium"
@@ -3297,14 +3297,14 @@
   "away_rank": 99,
   "away_short": "Arizona St",
   "city": "Lubbock",
-  "clock": "1:02",
+  "clock": "0:31",
   "conf_comp": true,
-  "detail": "1:02 - 2nd",
-  "down": "1st & 10 at ASU 29",
+  "detail": "0:31 - 2nd",
+  "down": null,
   "espn_id": "401856828",
   "final": false,
   "home_abbr": "TTU",
-  "home_r": "33",
+  "home_r": "39",
   "home_rank": 10,
   "home_short": "Texas Tech",
   "in_play": true,
@@ -3312,7 +3312,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "12/17, 189 YDS",
+    "val": "13/18, 200 YDS, 1 TD",
     "who": "W. Hammond"
    },
    {
@@ -3334,13 +3334,13 @@
   ],
   "line_home": [
    21.0,
-   12.0
+   18.0
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
-  "redzone": false,
-  "spot": "ASU 29",
+  "poss": null,
+  "redzone": true,
+  "spot": null,
   "state": "TX",
   "status": "In Progress",
   "venue": "Galaxy Stadium"
@@ -3399,14 +3399,14 @@
   "away_rank": 99,
   "away_short": "Tulsa",
   "city": "Houston",
-  "clock": "11:58",
+  "clock": "10:59",
   "conf_comp": true,
-  "detail": "11:58 - 2nd",
+  "detail": "10:59 - 2nd",
   "down": null,
   "espn_id": "401862805",
   "final": false,
   "home_abbr": "RICE",
-  "home_r": "10",
+  "home_r": "16",
   "home_rank": 99,
   "home_short": "Rice",
   "in_play": true,
@@ -3420,7 +3420,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "4 CAR, 65 YDS, 1 TD",
+    "val": "5 CAR, 143 YDS, 2 TD",
     "who": "J. Brown"
    },
    {
@@ -3436,12 +3436,12 @@
   ],
   "line_home": [
    7.0,
-   3.0
+   9.0
   ],
   "neutral": false,
   "period": 2,
   "poss": null,
-  "redzone": false,
+  "redzone": true,
   "spot": null,
   "state": "TX",
   "status": "In Progress",
@@ -3565,10 +3565,10 @@
   "away_rank": 6,
   "away_short": "Alabama",
   "city": "Knoxville",
-  "clock": "2:00",
+  "clock": "1:46",
   "conf_comp": true,
-  "detail": "2:00 - 2nd",
-  "down": "4th & 1 at TENN 14",
+  "detail": "1:46 - 2nd",
+  "down": "1st & 10 at TENN 11",
   "espn_id": "401856723",
   "final": false,
   "home_abbr": "TENN",
@@ -3586,7 +3586,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "10 CAR, 60 YDS",
+    "val": "11 CAR, 63 YDS",
     "who": "D. Bishop"
    },
    {
@@ -3606,9 +3606,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
-  "redzone": true,
-  "spot": "TENN 14",
+  "poss": "home",
+  "redzone": false,
+  "spot": "TENN 11",
   "state": "TN",
   "status": "In Progress",
   "venue": "Neyland Stadium"
@@ -4367,14 +4367,14 @@
  },
  "d439d2aca5e246d9cd727f3b1e3fd443": {
   "away_abbr": "GT",
-  "away_r": "3",
+  "away_r": "10",
   "away_rank": 99,
   "away_short": "Georgia Tech",
   "city": "Blacksburg",
-  "clock": "0:00",
+  "clock": "14:12",
   "conf_comp": true,
-  "detail": "Halftime",
-  "down": "1st & 10 at GT 25",
+  "detail": "14:12 - 3rd",
+  "down": null,
   "espn_id": "401858264",
   "final": false,
   "home_abbr": "VT",
@@ -4391,9 +4391,9 @@
    },
    {
     "cat": "RUSH",
-    "team": "home",
-    "val": "7 CAR, 48 YDS",
-    "who": "J. Overton Jr."
+    "team": "away",
+    "val": "9 CAR, 85 YDS, 1 TD",
+    "who": "T. Maddox"
    },
    {
     "cat": "REC",
@@ -4404,19 +4404,21 @@
   ],
   "line_away": [
    0.0,
-   3.0
+   3.0,
+   7.0
   ],
   "line_home": [
    14.0,
-   10.0
+   10.0,
+   0.0
   ],
   "neutral": false,
-  "period": 2,
+  "period": 3,
   "poss": null,
   "redzone": false,
-  "spot": "GT 25",
+  "spot": null,
   "state": "VA",
-  "status": "Halftime",
+  "status": "In Progress",
   "venue": "Lane Stadium"
  },
  "dc65142bf9a0e7652a252b2074037efa": {
@@ -4829,10 +4831,10 @@
   "away_rank": 99,
   "away_short": "Troy",
   "city": "Lafayette",
-  "clock": "12:07",
+  "clock": "10:51",
   "conf_comp": true,
-  "detail": "12:07 - 1st",
-  "down": null,
+  "detail": "10:51 - 1st",
+  "down": "1st & 10 at UL 1",
   "espn_id": "401869966",
   "final": false,
   "home_abbr": "UL",
@@ -4868,9 +4870,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "UL 1",
   "state": "LA",
   "status": "In Progress",
   "venue": "Our Lady of Lourdes Stadium"
