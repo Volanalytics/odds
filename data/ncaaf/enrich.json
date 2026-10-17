@@ -953,14 +953,14 @@
  },
  "24244a1062254de107b2a7f5f79affe1": {
   "away_abbr": "NEV",
-  "away_r": "0",
+  "away_r": "6",
   "away_rank": 99,
   "away_short": "Nevada",
   "city": "Fargo",
-  "clock": "15:00",
+  "clock": "14:15",
   "conf_comp": true,
-  "detail": "15:00 - 1st",
-  "down": "2nd & 10 at NDSU 25",
+  "detail": "14:15 - 2nd",
+  "down": null,
   "espn_id": "401864520",
   "final": false,
   "home_abbr": "NDSU",
@@ -972,33 +972,35 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "6/9, 33 YDS",
+    "val": "7/10, 43 YDS",
     "who": "A. Bianco"
    },
    {
     "cat": "RUSH",
-    "team": "home",
-    "val": "3 CAR, 15 YDS",
-    "who": "N. Punni"
+    "team": "away",
+    "val": "3 CAR, 24 YDS, 1 TD",
+    "who": "A. Bianco"
    },
    {
     "cat": "REC",
     "team": "away",
-    "val": "1 REC, 16 YDS",
-    "who": "M. Brown"
+    "val": "3 REC, 17 YDS",
+    "who": "D. Kelley"
    }
   ],
   "line_away": [
-   0.0
+   0.0,
+   6.0
   ],
   "line_home": [
+   0.0,
    0.0
   ],
   "neutral": false,
-  "period": 1,
-  "poss": "away",
-  "redzone": false,
-  "spot": "NDSU 25",
+  "period": 2,
+  "poss": null,
+  "redzone": true,
+  "spot": null,
   "state": "ND",
   "status": "In Progress",
   "venue": "Fargodome"
@@ -1317,10 +1319,10 @@
   "away_rank": 99,
   "away_short": "Florida St",
   "city": "Miami Gardens",
-  "clock": "3:59",
+  "clock": "3:25",
   "conf_comp": true,
-  "detail": "3:59 - 1st",
-  "down": "3rd & 4 at MIA 5",
+  "detail": "3:25 - 1st",
+  "down": null,
   "espn_id": "401858263",
   "final": false,
   "home_abbr": "MIA",
@@ -1356,9 +1358,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": "away",
+  "poss": null,
   "redzone": true,
-  "spot": "MIA 5",
+  "spot": null,
   "state": "FL",
   "status": "In Progress",
   "venue": "Hard Rock Stadium"
@@ -1567,13 +1569,13 @@
  },
  "473d8828a17151640834e090d9eb46e4": {
   "away_abbr": "WSU",
-  "away_r": "3",
+  "away_r": "10",
   "away_rank": 99,
   "away_short": "Washington St",
   "city": "Corvallis",
-  "clock": "2:00",
+  "clock": "1:48",
   "conf_comp": true,
-  "detail": "2:00 - 2nd",
+  "detail": "1:48 - 2nd",
   "down": null,
   "espn_id": "401860903",
   "final": false,
@@ -1586,7 +1588,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "10/18, 252 YDS, 2 TD",
+    "val": "11/19, 252 YDS, 2 TD",
     "who": "B. Atkinson"
    },
    {
@@ -1604,7 +1606,7 @@
   ],
   "line_away": [
    0.0,
-   3.0
+   10.0
   ],
   "line_home": [
    17.0,
@@ -2041,10 +2043,10 @@
   "away_rank": 99,
   "away_short": "Kent State",
   "city": "Tampa",
-  "clock": "2:50",
+  "clock": "2:05",
   "conf_comp": false,
-  "detail": "2:50 - 1st",
-  "down": null,
+  "detail": "2:05 - 1st",
+  "down": "1st & 10 at USF 3",
   "espn_id": "401862806",
   "final": false,
   "home_abbr": "USF",
@@ -2056,7 +2058,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "7/12, 54 YDS",
+    "val": "8/13, 56 YDS",
     "who": "D. DeShields"
    },
    {
@@ -2080,9 +2082,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": null,
-  "redzone": true,
-  "spot": null,
+  "poss": "home",
+  "redzone": false,
+  "spot": "USF 3",
   "state": "FL",
   "status": "In Progress",
   "venue": "Raymond James Stadium"
@@ -3443,10 +3445,10 @@
   "away_rank": 99,
   "away_short": "Tulsa",
   "city": "Houston",
-  "clock": "2:00",
+  "clock": "1:18",
   "conf_comp": true,
-  "detail": "2:00 - 4th",
-  "down": "1st & 10 at TLSA 32",
+  "detail": "1:18 - 4th",
+  "down": null,
   "espn_id": "401862805",
   "final": false,
   "home_abbr": "RICE",
@@ -3488,9 +3490,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "TLSA 32",
+  "spot": null,
   "state": "TX",
   "status": "In Progress",
   "venue": "First Community Stadium"
@@ -4177,46 +4179,44 @@
   "away_rank": 99,
   "away_short": "Elon",
   "city": "Stanford",
-  "clock": "0:00",
+  "clock": "14:17",
   "conf_comp": false,
-  "detail": "10/17 - 7:30 PM EDT",
-  "down": null,
+  "detail": "14:17 - 1st",
+  "down": "4th & 8 at ELON 27",
   "espn_id": "401858262",
   "final": false,
   "home_abbr": "STAN",
   "home_r": "0",
   "home_rank": 99,
   "home_short": "Stanford",
-  "in_play": false,
+  "in_play": true,
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "1351 YDS, 6 TD, 2 INT",
-    "who": "D. Warren"
+    "team": "away",
+    "val": "2, 0 YDS",
+    "who": "T. Crews IV"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "137 CAR, 916 YDS, 6 TD",
+    "val": "1 CAR, 2 YDS",
     "who": "K. McDowell-Moore"
-   },
-   {
-    "cat": "REC",
-    "team": "home",
-    "val": "20 REC, 330 YDS, 3 TD",
-    "who": "C. High"
    }
   ],
-  "line_away": [],
-  "line_home": [],
+  "line_away": [
+   0.0
+  ],
+  "line_home": [
+   0.0
+  ],
   "neutral": false,
-  "period": 0,
-  "poss": null,
+  "period": 1,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "ELON 27",
   "state": "CA",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "Stanford Stadium"
  },
  "c67bc7b2b2b6bf3571ece5117facad42": {
@@ -4331,10 +4331,10 @@
   "away_rank": 99,
   "away_short": "Arkansas",
   "city": "Nashville",
-  "clock": "3:43",
+  "clock": "1:26",
   "conf_comp": true,
-  "detail": "3:43 - 1st",
-  "down": "1st & 10 at VAN 24",
+  "detail": "1:26 - 1st",
+  "down": "1st & 10 at ARK 12",
   "espn_id": "401856726",
   "final": false,
   "home_abbr": "VAN",
@@ -4345,21 +4345,21 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "away",
-    "val": "3/7, 33 YDS",
-    "who": "K. Jackson"
+    "team": "home",
+    "val": "4/7, 63 YDS",
+    "who": "J. Curtis"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "2 CAR, 15 YDS",
-    "who": "M. Young"
+    "val": "3 CAR, 18 YDS",
+    "who": "S. Alexander"
    },
    {
     "cat": "REC",
-    "team": "away",
-    "val": "1 REC, 13 YDS",
-    "who": "J. Hawkins"
+    "team": "home",
+    "val": "1 REC, 39 YDS",
+    "who": "J. Thomas"
    }
   ],
   "line_away": [
@@ -4371,8 +4371,8 @@
   "neutral": false,
   "period": 1,
   "poss": "home",
-  "redzone": false,
-  "spot": "VAN 24",
+  "redzone": true,
+  "spot": "ARK 12",
   "state": "TN",
   "status": "In Progress",
   "venue": "FirstBank Stadium"
@@ -4633,10 +4633,10 @@
   "away_rank": 99,
   "away_short": "TCU",
   "city": "Waco",
-  "clock": "6:14",
+  "clock": "4:26",
   "conf_comp": true,
-  "detail": "6:14 - 1st",
-  "down": null,
+  "detail": "4:26 - 1st",
+  "down": "1st & 10 at TCU 37",
   "espn_id": "401856832",
   "final": false,
   "home_abbr": "BAY",
@@ -4672,9 +4672,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "TCU 37",
   "state": "TX",
   "status": "In Progress",
   "venue": "McLane Stadium"
@@ -4897,10 +4897,10 @@
   "away_rank": 99,
   "away_short": "Troy",
   "city": "Lafayette",
-  "clock": "0:00",
+  "clock": "12:50",
   "conf_comp": true,
-  "detail": "End of 3rd",
-  "down": "3rd & 6 at TROY 30",
+  "detail": "12:50 - 4th",
+  "down": "3rd & 1 at TROY 16",
   "espn_id": "401869966",
   "final": false,
   "home_abbr": "UL",
@@ -4918,7 +4918,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "14 CAR, 60 YDS",
+    "val": "15 CAR, 65 YDS",
     "who": "L. Winfield"
    },
    {
@@ -4931,18 +4931,20 @@
   "line_away": [
    0.0,
    0.0,
-   6.0
+   6.0,
+   0.0
   ],
   "line_home": [
    7.0,
    12.0,
-   7.0
+   7.0,
+   0.0
   ],
   "neutral": false,
-  "period": 3,
+  "period": 4,
   "poss": "home",
-  "redzone": false,
-  "spot": "TROY 30",
+  "redzone": true,
+  "spot": "TROY 16",
   "state": "LA",
   "status": "In Progress",
   "venue": "Our Lady of Lourdes Stadium"
@@ -5117,9 +5119,9 @@
   "away_rank": 99,
   "away_short": "Arkansas St",
   "city": "Hattiesburg",
-  "clock": "5:20",
+  "clock": "2:09",
   "conf_comp": true,
-  "detail": "5:20 - 1st",
+  "detail": "2:09 - 1st",
   "down": "3rd & 8 at ARST 42",
   "espn_id": "401869934",
   "final": false,
@@ -5138,7 +5140,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "4 CAR, 20 YDS",
+    "val": "4 CAR, 22 YDS",
     "who": "S. Baggett"
    },
    {
