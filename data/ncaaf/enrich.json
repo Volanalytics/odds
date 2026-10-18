@@ -647,14 +647,14 @@
  },
  "11430b210e5b57c938e1c95a9db5ffb2": {
   "away_abbr": "OHIO",
-  "away_r": "27",
+  "away_r": "34",
   "away_rank": 99,
   "away_short": "Ohio",
   "city": "Sacramento",
-  "clock": "13:59",
+  "clock": "12:49",
   "conf_comp": true,
-  "detail": "13:59 - 3rd",
-  "down": "3rd & 5 at OHIO 31",
+  "detail": "12:49 - 3rd",
+  "down": null,
   "espn_id": "401866445",
   "final": false,
   "home_abbr": "SAC",
@@ -666,26 +666,26 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "10/13, 98 YDS",
+    "val": "11/14, 165 YDS, 1 TD",
     "who": "N. Poulos"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "11 CAR, 53 YDS, 2 TD",
+    "val": "12 CAR, 55 YDS, 2 TD",
     "who": "D. Brune"
    },
    {
     "cat": "REC",
     "team": "away",
-    "val": "5 REC, 44 YDS",
-    "who": "R. Neer"
+    "val": "2 REC, 80 YDS, 1 TD",
+    "who": "P. Bowman"
    }
   ],
   "line_away": [
    7.0,
    20.0,
-   0.0
+   7.0
   ],
   "line_home": [
    0.0,
@@ -694,9 +694,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "OHIO 31",
+  "spot": null,
   "state": "CA",
   "status": "In Progress",
   "venue": "Hornet Stadium"
@@ -707,10 +707,10 @@
   "away_rank": 99,
   "away_short": "San Jos\u00e9 St",
   "city": "El Paso",
-  "clock": "5:34",
+  "clock": "2:00",
   "conf_comp": true,
-  "detail": "5:34 - 4th",
-  "down": "3rd & 6 at UTEP 38",
+  "detail": "2:00 - 4th",
+  "down": null,
   "espn_id": "401864523",
   "final": false,
   "home_abbr": "UTEP",
@@ -752,9 +752,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "UTEP 38",
+  "spot": null,
   "state": "TX",
   "status": "In Progress",
   "venue": "Sun Bowl"
@@ -2299,10 +2299,10 @@
   "away_rank": 99,
   "away_short": "Nebraska",
   "city": "Eugene",
-  "clock": "12:08",
+  "clock": "9:36",
   "conf_comp": true,
-  "detail": "12:08 - 2nd",
-  "down": "1st & 10 at NEB 14",
+  "detail": "9:36 - 2nd",
+  "down": "3rd & 19 at NEB 29",
   "espn_id": "401858492",
   "final": false,
   "home_abbr": "ORE",
@@ -2314,13 +2314,13 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "6/11, 43 YDS, 1 INT",
+    "val": "7/14, 54 YDS, 1 INT",
     "who": "A. Colandrea"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "5 CAR, 17 YDS",
+    "val": "5 CAR, 18 YDS",
     "who": "J. Davison"
    },
    {
@@ -2340,9 +2340,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
-  "redzone": true,
-  "spot": "NEB 14",
+  "poss": "away",
+  "redzone": false,
+  "spot": "NEB 29",
   "state": "OR",
   "status": "In Progress",
   "venue": "Autzen Stadium"
@@ -3309,14 +3309,14 @@
   "away_rank": 99,
   "away_short": "Fresno St",
   "city": "San Diego",
-  "clock": "0:06",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:06 - 2nd",
-  "down": null,
+  "detail": "Halftime",
+  "down": "2nd & 10 at FRES 23",
   "espn_id": "401860904",
   "final": false,
   "home_abbr": "SDSU",
-  "home_r": "13",
+  "home_r": "16",
   "home_rank": 99,
   "home_short": "San Diego St",
   "in_play": true,
@@ -3346,15 +3346,15 @@
   ],
   "line_home": [
    10.0,
-   3.0
+   6.0
   ],
   "neutral": false,
   "period": 2,
   "poss": null,
   "redzone": false,
-  "spot": null,
+  "spot": "FRES 23",
   "state": "CA",
-  "status": "In Progress",
+  "status": "Halftime",
   "venue": "Snapdragon Stadium"
  },
  "930dea051dca737443eb7aec0b650f45": {
@@ -3595,10 +3595,10 @@
   "away_rank": 11,
   "away_short": "Utah",
   "city": "Boulder",
-  "clock": "1:07",
+  "clock": "0:31",
   "conf_comp": true,
-  "detail": "1:07 - 2nd",
-  "down": "2nd & 7 at COLO 44",
+  "detail": "0:31 - 2nd",
+  "down": null,
   "espn_id": "401856833",
   "final": false,
   "home_abbr": "COLO",
@@ -3610,7 +3610,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "13/22, 123 YDS, 1 TD, 1 INT",
+    "val": "15/24, 152 YDS, 1 TD, 1 INT",
     "who": "D. Dampier"
    },
    {
@@ -3622,8 +3622,8 @@
    {
     "cat": "REC",
     "team": "away",
-    "val": "2 REC, 28 YDS",
-    "who": "R. Johnson"
+    "val": "3 REC, 37 YDS",
+    "who": "B. Pegan"
    }
   ],
   "line_away": [
@@ -3636,9 +3636,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
-  "redzone": false,
-  "spot": "COLO 44",
+  "poss": null,
+  "redzone": true,
+  "spot": null,
   "state": "CO",
   "status": "In Progress",
   "venue": "Folsom Field"
@@ -3911,10 +3911,10 @@
   "away_rank": 21,
   "away_short": "Wake Forest",
   "city": "Berkeley",
-  "clock": "4:02",
+  "clock": "2:00",
   "conf_comp": true,
-  "detail": "4:02 - 2nd",
-  "down": "2nd & 10 at WAKE 44",
+  "detail": "2:00 - 2nd",
+  "down": "3rd & 9 at WAKE 15",
   "espn_id": "401858269",
   "final": false,
   "home_abbr": "CAL",
@@ -3953,8 +3953,8 @@
   "neutral": false,
   "period": 2,
   "poss": "home",
-  "redzone": false,
-  "spot": "WAKE 44",
+  "redzone": true,
+  "spot": "WAKE 15",
   "state": "CA",
   "status": "In Progress",
   "venue": "California Memorial Stadium"
@@ -4505,10 +4505,10 @@
   "away_rank": 99,
   "away_short": "New Mexico",
   "city": "Honolulu",
-  "clock": "1:04",
+  "clock": "0:36",
   "conf_comp": true,
-  "detail": "1:04 - 2nd",
-  "down": "1st & 10 at UNM 16",
+  "detail": "0:36 - 2nd",
+  "down": "1st & Goal at UNM 2",
   "espn_id": "401864521",
   "final": false,
   "home_abbr": "HAW",
@@ -4520,7 +4520,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "11/16, 92 YDS",
+    "val": "12/18, 110 YDS",
     "who": "M. Alejado"
    },
    {
@@ -4532,7 +4532,7 @@
    {
     "cat": "REC",
     "team": "home",
-    "val": "2 REC, 27 YDS",
+    "val": "3 REC, 45 YDS",
     "who": "D. Alves"
    }
   ],
@@ -4548,7 +4548,7 @@
   "period": 2,
   "poss": "home",
   "redzone": true,
-  "spot": "UNM 16",
+  "spot": "UNM 2",
   "state": "HI",
   "status": "In Progress",
   "venue": "Clarence T.C. Ching Athletics Complex"
