@@ -647,14 +647,14 @@
  },
  "11430b210e5b57c938e1c95a9db5ffb2": {
   "away_abbr": "OHIO",
-  "away_r": "41",
+  "away_r": "47",
   "away_rank": 99,
   "away_short": "Ohio",
   "city": "Sacramento",
-  "clock": "7:39",
+  "clock": "3:28",
   "conf_comp": true,
-  "detail": "7:39 - 4th",
-  "down": "2nd & 9 at OHIO 19",
+  "detail": "3:28 - 4th",
+  "down": null,
   "espn_id": "401866445",
   "final": false,
   "home_abbr": "SAC",
@@ -672,8 +672,8 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "12 CAR, 55 YDS, 2 TD",
-    "who": "D. Brune"
+    "val": "7 CAR, 87 YDS, 1 TD",
+    "who": "I. Brown"
    },
    {
     "cat": "REC",
@@ -686,7 +686,7 @@
    7.0,
    20.0,
    14.0,
-   0.0
+   6.0
   ],
   "line_home": [
    0.0,
@@ -696,9 +696,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
-  "redzone": false,
-  "spot": "OHIO 19",
+  "poss": null,
+  "redzone": true,
+  "spot": null,
   "state": "CA",
   "status": "In Progress",
   "venue": "Hornet Stadium"
@@ -3359,10 +3359,10 @@
   "away_rank": 99,
   "away_short": "Fresno St",
   "city": "San Diego",
-  "clock": "0:00",
+  "clock": "13:53",
   "conf_comp": true,
-  "detail": "End of 3rd",
-  "down": "1st & 10 at SDSU 8",
+  "detail": "13:53 - 4th",
+  "down": null,
   "espn_id": "401860904",
   "final": false,
   "home_abbr": "SDSU",
@@ -3380,8 +3380,8 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "8 CAR, 68 YDS",
-    "who": "J. Kinnard"
+    "val": "18 CAR, 110 YDS",
+    "who": "L. Sutton"
    },
    {
     "cat": "REC",
@@ -3393,18 +3393,20 @@
   "line_away": [
    0.0,
    10.0,
-   7.0
+   7.0,
+   0.0
   ],
   "line_home": [
    10.0,
    6.0,
+   0.0,
    0.0
   ],
   "neutral": false,
-  "period": 3,
-  "poss": "home",
+  "period": 4,
+  "poss": null,
   "redzone": false,
-  "spot": "SDSU 8",
+  "spot": null,
   "state": "CA",
   "status": "In Progress",
   "venue": "Snapdragon Stadium"
@@ -3647,10 +3649,10 @@
   "away_rank": 11,
   "away_short": "Utah",
   "city": "Boulder",
-  "clock": "4:24",
+  "clock": "3:06",
   "conf_comp": true,
-  "detail": "4:24 - 3rd",
-  "down": null,
+  "detail": "3:06 - 3rd",
+  "down": "2nd & 10 at UTAH 37",
   "espn_id": "401856833",
   "final": false,
   "home_abbr": "COLO",
@@ -3662,13 +3664,13 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "19/32, 176 YDS, 1 TD, 2 INT",
+    "val": "19/33, 176 YDS, 1 TD, 2 INT",
     "who": "D. Dampier"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "13 CAR, 51 YDS",
+    "val": "15 CAR, 63 YDS",
     "who": "W. Parker"
    },
    {
@@ -3690,9 +3692,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "UTAH 37",
   "state": "CO",
   "status": "In Progress",
   "venue": "Folsom Field"
@@ -4013,10 +4015,10 @@
   "away_rank": 21,
   "away_short": "Wake Forest",
   "city": "Berkeley",
-  "clock": "6:30",
+  "clock": "5:50",
   "conf_comp": true,
-  "detail": "6:30 - 3rd",
-  "down": "4th & 15 at CAL 12",
+  "detail": "5:50 - 3rd",
+  "down": "1st & 10 at CAL 31",
   "espn_id": "401858269",
   "final": false,
   "home_abbr": "CAL",
@@ -4028,7 +4030,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "14/21, 266 YDS, 3 TD",
+    "val": "15/22, 265 YDS, 3 TD",
     "who": "G. Lopez"
    },
    {
@@ -4056,9 +4058,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "CAL 12",
+  "spot": "CAL 31",
   "state": "CA",
   "status": "In Progress",
   "venue": "California Memorial Stadium"
@@ -4705,10 +4707,10 @@
   "away_rank": 99,
   "away_short": "New Mexico",
   "city": "Honolulu",
-  "clock": "6:09",
+  "clock": "5:56",
   "conf_comp": true,
-  "detail": "6:09 - 3rd",
-  "down": "4th & 15 at HAW 24",
+  "detail": "5:56 - 3rd",
+  "down": "4th & 10 at 50",
   "espn_id": "401864521",
   "final": false,
   "home_abbr": "HAW",
@@ -4748,9 +4750,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "HAW 24",
+  "spot": "50",
   "state": "HI",
   "status": "In Progress",
   "venue": "Clarence T.C. Ching Athletics Complex"
