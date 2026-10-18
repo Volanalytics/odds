@@ -699,17 +699,17 @@
   "away_rank": 99,
   "away_short": "Ohio",
   "city": "Sacramento",
-  "clock": "1:17",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "1:17 - 4th",
-  "down": "3rd & 4 at SAC 42",
+  "detail": "Final",
+  "down": null,
   "espn_id": "401866445",
-  "final": false,
+  "final": true,
   "home_abbr": "SAC",
   "home_r": "7",
   "home_rank": 99,
   "home_short": "Sacramento St",
-  "in_play": true,
+  "in_play": false,
   "leaders": [
    {
     "cat": "PASS",
@@ -744,11 +744,11 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "SAC 42",
+  "spot": null,
   "state": "CA",
-  "status": "In Progress",
+  "status": "Final",
   "venue": "Hornet Stadium"
  },
  "121ada2c134388f8cc2f26ffc54f52d1": {
@@ -2493,10 +2493,10 @@
   "away_rank": 99,
   "away_short": "Nebraska",
   "city": "Eugene",
-  "clock": "12:09",
+  "clock": "11:01",
   "conf_comp": true,
-  "detail": "12:09 - 3rd",
-  "down": null,
+  "detail": "11:01 - 3rd",
+  "down": "1st & 10 at ORE 43",
   "espn_id": "401858492",
   "final": false,
   "home_abbr": "ORE",
@@ -2508,7 +2508,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "14/23, 129 YDS, 1 TD, 1 INT",
+    "val": "14/25, 129 YDS, 1 TD, 1 INT",
     "who": "A. Colandrea"
    },
    {
@@ -2536,9 +2536,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "ORE 43",
   "state": "OR",
   "status": "In Progress",
   "venue": "Autzen Stadium"
@@ -3505,10 +3505,10 @@
   "away_rank": 99,
   "away_short": "Fresno St",
   "city": "San Diego",
-  "clock": "9:49",
+  "clock": "6:00",
   "conf_comp": true,
-  "detail": "9:49 - 4th",
-  "down": "2nd & 6 at SDSU 47",
+  "detail": "6:00 - 4th",
+  "down": "2nd & 10 at SDSU 31",
   "espn_id": "401860904",
   "final": false,
   "home_abbr": "SDSU",
@@ -3552,7 +3552,7 @@
   "period": 4,
   "poss": "away",
   "redzone": false,
-  "spot": "SDSU 47",
+  "spot": "SDSU 31",
   "state": "CA",
   "status": "In Progress",
   "venue": "Snapdragon Stadium"
@@ -3891,10 +3891,10 @@
   "away_rank": 11,
   "away_short": "Utah",
   "city": "Boulder",
-  "clock": "0:00",
+  "clock": "14:02",
   "conf_comp": true,
-  "detail": "End of 3rd",
-  "down": "2nd & 10 at UTAH 41",
+  "detail": "14:02 - 4th",
+  "down": "1st & 10 at UTAH 11",
   "espn_id": "401856833",
   "final": false,
   "home_abbr": "COLO",
@@ -3912,7 +3912,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "16 CAR, 70 YDS",
+    "val": "17 CAR, 70 YDS",
     "who": "W. Parker"
    },
    {
@@ -3925,18 +3925,20 @@
   "line_away": [
    7.0,
    6.0,
-   7.0
+   7.0,
+   0.0
   ],
   "line_home": [
    0.0,
    0.0,
-   17.0
+   17.0,
+   0.0
   ],
   "neutral": false,
-  "period": 3,
-  "poss": "home",
+  "period": 4,
+  "poss": "away",
   "redzone": false,
-  "spot": "UTAH 41",
+  "spot": "UTAH 11",
   "state": "CO",
   "status": "In Progress",
   "venue": "Folsom Field"
@@ -4257,10 +4259,10 @@
   "away_rank": 21,
   "away_short": "Wake Forest",
   "city": "Berkeley",
-  "clock": "2:43",
+  "clock": "15:00",
   "conf_comp": true,
-  "detail": "2:43 - 3rd",
-  "down": null,
+  "detail": "15:00 - 4th",
+  "down": "3rd & 10 at WAKE 19",
   "espn_id": "401858269",
   "final": false,
   "home_abbr": "CAL",
@@ -4291,18 +4293,20 @@
   "line_away": [
    14.0,
    20.0,
-   7.0
+   7.0,
+   0.0
   ],
   "line_home": [
+   0.0,
    0.0,
    0.0,
    0.0
   ],
   "neutral": false,
-  "period": 3,
-  "poss": null,
+  "period": 4,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "WAKE 19",
   "state": "CA",
   "status": "In Progress",
   "venue": "California Memorial Stadium"
@@ -4949,10 +4953,10 @@
   "away_rank": 99,
   "away_short": "New Mexico",
   "city": "Honolulu",
-  "clock": "1:57",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "1:57 - 3rd",
-  "down": "1st & 10 at HAW 41",
+  "detail": "End of 3rd",
+  "down": "1st & 10 at UNM 8",
   "espn_id": "401864521",
   "final": false,
   "home_abbr": "HAW",
@@ -4964,7 +4968,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "18/31, 151 YDS, 1 TD",
+    "val": "20/34, 202 YDS, 1 TD",
     "who": "M. Alejado"
    },
    {
@@ -4993,10 +4997,10 @@
   "neutral": false,
   "period": 3,
   "poss": "home",
-  "redzone": false,
-  "spot": "HAW 41",
+  "redzone": true,
+  "spot": "UNM 8",
   "state": "HI",
-  "status": "In Progress",
+  "status": "End of Period",
   "venue": "Clarence T.C. Ching Athletics Complex"
  },
  "df510525b83238b6e856c80c353bb32a": {
