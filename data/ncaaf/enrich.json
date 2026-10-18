@@ -7,8 +7,8 @@
   "city": "San Antonio",
   "clock": "0:00",
   "conf_comp": true,
-  "detail": "End of 2nd",
-  "down": "2nd & 6 at NAVY 37",
+  "detail": "Halftime",
+  "down": "2nd & 10 at NAVY 37",
   "espn_id": "401862804",
   "final": false,
   "home_abbr": "UTSA",
@@ -46,11 +46,11 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
   "spot": "NAVY 37",
   "state": "TX",
-  "status": "In Progress",
+  "status": "Halftime",
   "venue": "Alamodome"
  },
  "006c37db6769b587a0adde2067498d53": {
@@ -329,10 +329,10 @@
   "away_rank": 99,
   "away_short": "Wisconsin",
   "city": "Pasadena",
-  "clock": "8:12",
+  "clock": "4:51",
   "conf_comp": true,
-  "detail": "8:12 - 3rd",
-  "down": "1st & 10 at UCLA 19",
+  "detail": "4:51 - 3rd",
+  "down": "1st & 10 at WIS 46",
   "espn_id": "401858494",
   "final": false,
   "home_abbr": "UCLA",
@@ -344,7 +344,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "14/22, 148 YDS, 1 INT",
+    "val": "17/25, 193 YDS, 1 INT",
     "who": "T. Dieffenbach"
    },
    {
@@ -356,7 +356,7 @@
    {
     "cat": "REC",
     "team": "home",
-    "val": "3 REC, 41 YDS",
+    "val": "4 REC, 51 YDS",
     "who": "S. Morgan"
    }
   ],
@@ -372,9 +372,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": "UCLA 19",
+  "spot": "WIS 46",
   "state": "CA",
   "status": "In Progress",
   "venue": "Rose Bowl"
@@ -385,10 +385,10 @@
   "away_rank": 15,
   "away_short": "Kentucky",
   "city": "Norman",
-  "clock": "6:32",
+  "clock": "3:11",
   "conf_comp": true,
-  "detail": "6:32 - 3rd",
-  "down": "1st & 10 at UK 25",
+  "detail": "3:11 - 3rd",
+  "down": "1st & 10 at OU 29",
   "espn_id": "401856722",
   "final": false,
   "home_abbr": "OU",
@@ -428,9 +428,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": "UK 25",
+  "spot": "OU 29",
   "state": "OK",
   "status": "In Progress",
   "venue": "Memorial Stadium (Norman, OK)"
@@ -691,10 +691,10 @@
   "away_rank": 99,
   "away_short": "San Jos\u00e9 St",
   "city": "El Paso",
-  "clock": "14:17",
+  "clock": "12:27",
   "conf_comp": true,
-  "detail": "14:17 - 2nd",
-  "down": "2nd & 6 at SJSU 32",
+  "detail": "12:27 - 2nd",
+  "down": "2nd & 5 at UTEP 36",
   "espn_id": "401864523",
   "final": false,
   "home_abbr": "UTEP",
@@ -712,7 +712,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "5 CAR, 40 YDS",
+    "val": "7 CAR, 36 YDS",
     "who": "D. Rolovich"
    },
    {
@@ -732,9 +732,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "SJSU 32",
+  "spot": "UTEP 36",
   "state": "TX",
   "status": "In Progress",
   "venue": "Sun Bowl"
@@ -985,10 +985,10 @@
   "away_rank": 99,
   "away_short": "Nevada",
   "city": "Fargo",
-  "clock": "1:15",
+  "clock": "15:00",
   "conf_comp": true,
-  "detail": "1:15 - 3rd",
-  "down": "1st & 10 at NEV 16",
+  "detail": "15:00 - 4th",
+  "down": "3rd & 8 at NEV 19",
   "espn_id": "401864520",
   "final": false,
   "home_abbr": "NDSU",
@@ -1012,25 +1012,27 @@
    {
     "cat": "REC",
     "team": "home",
-    "val": "5 REC, 53 YDS",
+    "val": "5 REC, 58 YDS",
     "who": "J. Williams"
    }
   ],
   "line_away": [
    0.0,
    11.0,
-   6.0
+   6.0,
+   0.0
   ],
   "line_home": [
    0.0,
    19.0,
-   5.0
+   5.0,
+   0.0
   ],
   "neutral": false,
-  "period": 3,
+  "period": 4,
   "poss": "home",
   "redzone": true,
-  "spot": "NEV 16",
+  "spot": "NEV 19",
   "state": "ND",
   "status": "In Progress",
   "venue": "Fargodome"
@@ -1291,10 +1293,10 @@
   "away_rank": 99,
   "away_short": "Florida St",
   "city": "Miami Gardens",
-  "clock": "4:03",
+  "clock": "0:44",
   "conf_comp": true,
-  "detail": "4:03 - 3rd",
-  "down": null,
+  "detail": "0:44 - 3rd",
+  "down": "2nd & 6 at FSU 23",
   "espn_id": "401858263",
   "final": false,
   "home_abbr": "MIA",
@@ -1306,14 +1308,14 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "14/23, 187 YDS, 1 TD, 1 INT",
+    "val": "16/25, 218 YDS, 1 TD, 1 INT",
     "who": "D. Mensah"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "5 CAR, 54 YDS",
-    "who": "J. Mallory"
+    "val": "14 CAR, 65 YDS, 1 TD",
+    "who": "M. Fletcher Jr."
    },
    {
     "cat": "REC",
@@ -1334,9 +1336,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "FSU 23",
   "state": "FL",
   "status": "In Progress",
   "venue": "Hard Rock Stadium"
@@ -1549,10 +1551,10 @@
   "away_rank": 99,
   "away_short": "Washington St",
   "city": "Corvallis",
-  "clock": "0:55",
+  "clock": "0:06",
   "conf_comp": true,
-  "detail": "0:55 - 4th",
-  "down": "3rd & 9 at WSU 14",
+  "detail": "0:06 - 4th",
+  "down": "1st & 10 at ORST 23",
   "espn_id": "401860903",
   "final": false,
   "home_abbr": "ORST",
@@ -1570,13 +1572,13 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "14 CAR, 129 YDS, 1 TD",
+    "val": "15 CAR, 136 YDS, 1 TD",
     "who": "O. Eshelman"
    },
    {
     "cat": "REC",
     "team": "away",
-    "val": "9 REC, 127 YDS, 1 TD",
+    "val": "11 REC, 147 YDS, 1 TD",
     "who": "B. Ganashamoorthy"
    }
   ],
@@ -1594,9 +1596,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "WSU 14",
+  "spot": "ORST 23",
   "state": "OR",
   "status": "In Progress",
   "venue": "Reser Stadium"
@@ -1963,10 +1965,10 @@
   "away_rank": 99,
   "away_short": "Kent State",
   "city": "Tampa",
-  "clock": "13:47",
+  "clock": "12:18",
   "conf_comp": false,
-  "detail": "13:47 - 4th",
-  "down": "4th & 6 at KENT 21",
+  "detail": "12:18 - 4th",
+  "down": "2nd & 7 at KENT 49",
   "espn_id": "401862806",
   "final": false,
   "home_abbr": "USF",
@@ -2008,9 +2010,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "KENT 21",
+  "spot": "KENT 49",
   "state": "FL",
   "status": "In Progress",
   "venue": "Raymond James Stadium"
@@ -2743,14 +2745,14 @@
   "away_rank": 18,
   "away_short": "Oklahoma St",
   "city": "Houston",
-  "clock": "10:18",
+  "clock": "9:05",
   "conf_comp": true,
-  "detail": "10:18 - 3rd",
-  "down": "1st & Goal at OKST 2",
+  "detail": "9:05 - 3rd",
+  "down": null,
   "espn_id": "401856831",
   "final": false,
   "home_abbr": "HOU",
-  "home_r": "14",
+  "home_r": "21",
   "home_rank": 20,
   "home_short": "Houston",
   "in_play": true,
@@ -2758,13 +2760,13 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "13/17, 174 YDS, 2 TD, 1 INT",
+    "val": "14/19, 176 YDS, 3 TD, 1 INT",
     "who": "C. Weigman"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "14 CAR, 67 YDS",
+    "val": "15 CAR, 66 YDS",
     "who": "M. Hughes"
    },
    {
@@ -2782,13 +2784,13 @@
   "line_home": [
    7.0,
    7.0,
-   0.0
+   7.0
   ],
   "neutral": false,
   "period": 3,
-  "poss": "home",
-  "redzone": true,
-  "spot": "OKST 2",
+  "poss": null,
+  "redzone": false,
+  "spot": null,
   "state": "TX",
   "status": "In Progress",
   "venue": "TDECU Stadium"
@@ -3907,10 +3909,10 @@
   "away_rank": 2,
   "away_short": "Notre Dame",
   "city": "Provo",
-  "clock": "0:00",
+  "clock": "13:35",
   "conf_comp": false,
-  "detail": "Halftime",
-  "down": "2nd & 10 at BYU 5",
+  "detail": "13:35 - 3rd",
+  "down": "1st & 10 at BYU 16",
   "espn_id": "401856809",
   "final": false,
   "home_abbr": "BYU",
@@ -3928,7 +3930,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "10 CAR, 68 YDS, 1 TD",
+    "val": "11 CAR, 69 YDS, 1 TD",
     "who": "N. James Jr."
    },
    {
@@ -3940,19 +3942,21 @@
   ],
   "line_away": [
    3.0,
-   7.0
+   7.0,
+   0.0
   ],
   "line_home": [
    7.0,
-   14.0
+   14.0,
+   0.0
   ],
   "neutral": false,
-  "period": 2,
-  "poss": null,
+  "period": 3,
+  "poss": "home",
   "redzone": false,
-  "spot": "BYU 5",
+  "spot": "BYU 16",
   "state": "UT",
-  "status": "Halftime",
+  "status": "In Progress",
   "venue": "LaVell Edwards Stadium"
  },
  "bdcdf3154bdeea4c2920375945d3f010": {
@@ -4067,10 +4071,10 @@
   "away_rank": 99,
   "away_short": "Elon",
   "city": "Stanford",
-  "clock": "7:57",
+  "clock": "7:14",
   "conf_comp": false,
-  "detail": "7:57 - 3rd",
-  "down": "2nd & 10 at ELON 16",
+  "detail": "7:14 - 3rd",
+  "down": null,
   "espn_id": "401858262",
   "final": false,
   "home_abbr": "STAN",
@@ -4110,9 +4114,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "ELON 16",
+  "spot": null,
   "state": "CA",
   "status": "In Progress",
   "venue": "Stanford Stadium"
@@ -4229,10 +4233,10 @@
   "away_rank": 99,
   "away_short": "Arkansas",
   "city": "Nashville",
-  "clock": "0:00",
+  "clock": "14:13",
   "conf_comp": true,
-  "detail": "End of 3rd",
-  "down": "2nd & 10 at VAN 23",
+  "detail": "14:13 - 4th",
+  "down": "4th & 4 at VAN 26",
   "espn_id": "401856726",
   "final": false,
   "home_abbr": "VAN",
@@ -4263,18 +4267,20 @@
   "line_away": [
    0.0,
    14.0,
-   14.0
+   14.0,
+   0.0
   ],
   "line_home": [
    7.0,
    7.0,
-   7.0
+   7.0,
+   0.0
   ],
   "neutral": false,
-  "period": 3,
+  "period": 4,
   "poss": "home",
   "redzone": false,
-  "spot": "VAN 23",
+  "spot": "VAN 26",
   "state": "TN",
   "status": "In Progress",
   "venue": "FirstBank Stadium"
@@ -4535,10 +4541,10 @@
   "away_rank": 99,
   "away_short": "TCU",
   "city": "Waco",
-  "clock": "1:53",
+  "clock": "15:00",
   "conf_comp": true,
-  "detail": "1:53 - 3rd",
-  "down": "1st & 10 at BAY 12",
+  "detail": "15:00 - 4th",
+  "down": "4th & 5 at BAY 48",
   "espn_id": "401856832",
   "final": false,
   "home_abbr": "BAY",
@@ -4550,7 +4556,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "19/32, 281 YDS, 2 TD, 1 INT",
+    "val": "19/33, 281 YDS, 2 TD, 1 INT",
     "who": "J. Craig"
    },
    {
@@ -4569,18 +4575,20 @@
   "line_away": [
    7.0,
    0.0,
-   10.0
+   10.0,
+   0.0
   ],
   "line_home": [
    0.0,
    6.0,
+   0.0,
    0.0
   ],
   "neutral": false,
-  "period": 3,
-  "poss": "home",
+  "period": 4,
+  "poss": "away",
   "redzone": false,
-  "spot": "BAY 12",
+  "spot": "BAY 48",
   "state": "TX",
   "status": "In Progress",
   "venue": "McLane Stadium"
@@ -5025,14 +5033,14 @@
   "away_rank": 99,
   "away_short": "Arkansas St",
   "city": "Hattiesburg",
-  "clock": "13:10",
+  "clock": "10:02",
   "conf_comp": true,
-  "detail": "13:10 - 4th",
-  "down": "2nd & 7 at ARST 22",
+  "detail": "10:02 - 4th",
+  "down": null,
   "espn_id": "401869934",
   "final": false,
   "home_abbr": "USM",
-  "home_r": "7",
+  "home_r": "13",
   "home_rank": 99,
   "home_short": "Southern Miss",
   "in_play": true,
@@ -5040,13 +5048,13 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "17/29, 184 YDS, 1 TD, 2 INT",
+    "val": "17/30, 204 YDS, 1 TD, 2 INT",
     "who": "L. Lyddy"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "19 CAR, 82 YDS",
+    "val": "21 CAR, 84 YDS, 1 TD",
     "who": "S. Robinson"
    },
    {
@@ -5066,13 +5074,13 @@
    0.0,
    7.0,
    0.0,
-   0.0
+   6.0
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
-  "redzone": false,
-  "spot": "ARST 22",
+  "poss": null,
+  "redzone": true,
+  "spot": null,
   "state": "MS",
   "status": "In Progress",
   "venue": "M. M. Roberts Stadium"
@@ -5199,10 +5207,10 @@
   "away_rank": 99,
   "away_short": "Louisville",
   "city": "Syracuse",
-  "clock": "13:32",
+  "clock": "12:06",
   "conf_comp": true,
-  "detail": "13:32 - 3rd",
-  "down": "1st & 10 at LOU 37",
+  "detail": "12:06 - 3rd",
+  "down": "1st & 10 at SYR 34",
   "espn_id": "401858265",
   "final": false,
   "home_abbr": "SYR",
@@ -5214,7 +5222,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "10/16, 237 YDS, 1 TD, 1 INT",
+    "val": "10/17, 237 YDS, 1 TD, 1 INT",
     "who": "L. Kienholz"
    },
    {
@@ -5242,9 +5250,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "LOU 37",
+  "spot": "SYR 34",
   "state": "NY",
   "status": "In Progress",
   "venue": "JMA Wireless Dome"
