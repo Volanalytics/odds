@@ -647,14 +647,14 @@
  },
  "11430b210e5b57c938e1c95a9db5ffb2": {
   "away_abbr": "OHIO",
-  "away_r": "40",
+  "away_r": "41",
   "away_rank": 99,
   "away_short": "Ohio",
   "city": "Sacramento",
-  "clock": "0:45",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:45 - 3rd",
-  "down": null,
+  "detail": "End of 3rd",
+  "down": "2nd & 10 at SAC 29",
   "espn_id": "401866445",
   "final": false,
   "home_abbr": "SAC",
@@ -685,7 +685,7 @@
   "line_away": [
    7.0,
    20.0,
-   13.0
+   14.0
   ],
   "line_home": [
    0.0,
@@ -694,9 +694,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": null,
-  "redzone": true,
-  "spot": null,
+  "poss": "home",
+  "redzone": false,
+  "spot": "SAC 29",
   "state": "CA",
   "status": "In Progress",
   "venue": "Hornet Stadium"
@@ -2299,9 +2299,9 @@
   "away_rank": 99,
   "away_short": "Nebraska",
   "city": "Eugene",
-  "clock": "1:51",
+  "clock": "1:12",
   "conf_comp": true,
-  "detail": "1:51 - 2nd",
+  "detail": "1:12 - 2nd",
   "down": null,
   "espn_id": "401858492",
   "final": false,
@@ -2314,7 +2314,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "10/17, 76 YDS, 1 INT",
+    "val": "12/19, 81 YDS, 1 INT",
     "who": "A. Colandrea"
    },
    {
@@ -2341,7 +2341,7 @@
   "neutral": false,
   "period": 2,
   "poss": null,
-  "redzone": true,
+  "redzone": false,
   "spot": null,
   "state": "OR",
   "status": "In Progress",
@@ -3309,10 +3309,10 @@
   "away_rank": 99,
   "away_short": "Fresno St",
   "city": "San Diego",
-  "clock": "11:46",
+  "clock": "10:11",
   "conf_comp": true,
-  "detail": "11:46 - 3rd",
-  "down": "1st & 10 at FRES 21",
+  "detail": "10:11 - 3rd",
+  "down": "1st & 10 at FRES 25",
   "espn_id": "401860904",
   "final": false,
   "home_abbr": "SDSU",
@@ -3352,9 +3352,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "FRES 21",
+  "spot": "FRES 25",
   "state": "CA",
   "status": "In Progress",
   "venue": "Snapdragon Stadium"
@@ -3597,14 +3597,14 @@
   "away_rank": 11,
   "away_short": "Utah",
   "city": "Boulder",
-  "clock": "14:54",
+  "clock": "13:20",
   "conf_comp": true,
-  "detail": "14:54 - 3rd",
-  "down": "2nd & 9 at COLO 26",
+  "detail": "13:20 - 3rd",
+  "down": null,
   "espn_id": "401856833",
   "final": false,
   "home_abbr": "COLO",
-  "home_r": "0",
+  "home_r": "7",
   "home_rank": 99,
   "home_short": "Colorado",
   "in_play": true,
@@ -3623,9 +3623,9 @@
    },
    {
     "cat": "REC",
-    "team": "away",
-    "val": "3 REC, 37 YDS",
-    "who": "B. Pegan"
+    "team": "home",
+    "val": "1 REC, 68 YDS, 1 TD",
+    "who": "J. Smith"
    }
   ],
   "line_away": [
@@ -3636,13 +3636,13 @@
   "line_home": [
    0.0,
    0.0,
-   0.0
+   7.0
   ],
   "neutral": false,
   "period": 3,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "COLO 26",
+  "spot": null,
   "state": "CO",
   "status": "In Progress",
   "venue": "Folsom Field"
@@ -3830,7 +3830,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "20 CAR, 123 YDS",
+    "val": "21 CAR, 77 YDS",
     "who": "A. Burnette"
    },
    {
@@ -4509,10 +4509,10 @@
   "away_rank": 99,
   "away_short": "New Mexico",
   "city": "Honolulu",
-  "clock": "0:00",
+  "clock": "13:11",
   "conf_comp": true,
-  "detail": "Halftime",
-  "down": "2nd & 10 at UNM 18",
+  "detail": "13:11 - 3rd",
+  "down": "3rd & 4 at HAW 42",
   "espn_id": "401864521",
   "final": false,
   "home_abbr": "HAW",
@@ -4530,8 +4530,8 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "5 CAR, 43 YDS",
-    "who": "T. Fa'avae"
+    "val": "7 CAR, 53 YDS",
+    "who": "K. Sibley"
    },
    {
     "cat": "REC",
@@ -4542,19 +4542,21 @@
   ],
   "line_away": [
    0.0,
+   0.0,
    0.0
   ],
   "line_home": [
    3.0,
-   7.0
+   7.0,
+   0.0
   ],
   "neutral": false,
-  "period": 2,
-  "poss": null,
+  "period": 3,
+  "poss": "away",
   "redzone": false,
-  "spot": "UNM 18",
+  "spot": "HAW 42",
   "state": "HI",
-  "status": "Halftime",
+  "status": "In Progress",
   "venue": "Clarence T.C. Ching Athletics Complex"
  },
  "df510525b83238b6e856c80c353bb32a": {
