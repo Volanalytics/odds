@@ -2993,46 +2993,50 @@
   "away_rank": 99,
   "away_short": "South Alabama",
   "city": "Huntington",
-  "clock": "0:00",
+  "clock": "13:11",
   "conf_comp": true,
-  "detail": "10/20 - 7:30 PM EDT",
-  "down": null,
+  "detail": "13:11 - 1st",
+  "down": "1st & 10 at USA 10",
   "espn_id": "401871092",
   "final": false,
   "home_abbr": "MRSH",
   "home_r": "0",
   "home_rank": 99,
   "home_short": "Marshall",
-  "in_play": false,
+  "in_play": true,
   "leaders": [
    {
     "cat": "PASS",
     "team": "home",
-    "val": "1041 YDS, 6 TD, 5 INT",
-    "who": "C. Del Rio-Wilson"
+    "val": "2/2, 6 YDS",
+    "who": "Z. Turner"
    },
    {
     "cat": "RUSH",
-    "team": "away",
-    "val": "80 CAR, 444 YDS, 5 TD",
-    "who": "K. Phillips"
+    "team": "home",
+    "val": "1 CAR, -3 YDS",
+    "who": "J. Price"
    },
    {
     "cat": "REC",
-    "team": "away",
-    "val": "21 REC, 355 YDS, 3 TD",
-    "who": "B. Jenkins"
+    "team": "home",
+    "val": "1 REC, 3 YDS",
+    "who": "X. Turner-Bradshaw"
    }
   ],
-  "line_away": [],
-  "line_home": [],
+  "line_away": [
+   0.0
+  ],
+  "line_home": [
+   0.0
+  ],
   "neutral": false,
-  "period": 0,
-  "poss": null,
+  "period": 1,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "USA 10",
   "state": "WV",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "Joan C. Edwards Stadium"
  },
  "a493efd6ef737f676a45aacc0eaf7be8": {
@@ -3685,10 +3689,10 @@
   "away_rank": 99,
   "away_short": "MTSU",
   "city": "Miami",
-  "clock": "5:39",
+  "clock": "3:39",
   "conf_comp": true,
-  "detail": "5:39 - 1st",
-  "down": null,
+  "detail": "3:39 - 1st",
+  "down": "2nd & Goal at FIU 2",
   "espn_id": "401871055",
   "final": false,
   "home_abbr": "FIU",
@@ -3705,9 +3709,9 @@
    },
    {
     "cat": "RUSH",
-    "team": "home",
-    "val": "3 CAR, 19 YDS",
-    "who": "D. Lyons"
+    "team": "away",
+    "val": "4 CAR, 32 YDS",
+    "who": "T. Brown"
    },
    {
     "cat": "REC",
@@ -3724,9 +3728,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": null,
-  "redzone": false,
-  "spot": null,
+  "poss": "away",
+  "redzone": true,
+  "spot": "FIU 2",
   "state": "FL",
   "status": "In Progress",
   "venue": "Pitbull Stadium"
@@ -4021,14 +4025,14 @@
  },
  "dc65142bf9a0e7652a252b2074037efa": {
   "away_abbr": "MOST",
-  "away_r": "7",
+  "away_r": "14",
   "away_rank": 99,
   "away_short": "Missouri St",
   "city": "Newark",
-  "clock": "2:02",
+  "clock": "0:44",
   "conf_comp": true,
-  "detail": "2:02 - 1st",
-  "down": "4th & 1 at DEL 45",
+  "detail": "0:44 - 1st",
+  "down": "2nd & 10 at DEL 35",
   "espn_id": "401871069",
   "final": false,
   "home_abbr": "DEL",
@@ -4057,7 +4061,7 @@
    }
   ],
   "line_away": [
-   7.0
+   14.0
   ],
   "line_home": [
    7.0
@@ -4066,7 +4070,7 @@
   "period": 1,
   "poss": "home",
   "redzone": false,
-  "spot": "DEL 45",
+  "spot": "DEL 35",
   "state": "DE",
   "status": "In Progress",
   "venue": "Delaware Stadium"
