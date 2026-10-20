@@ -3685,36 +3685,48 @@
   "away_rank": 99,
   "away_short": "MTSU",
   "city": "Miami",
-  "clock": "10:05",
+  "clock": "9:55",
   "conf_comp": true,
-  "detail": "10:05 - 1st",
-  "down": "1st & 10 at FIU 42",
+  "detail": "9:55 - 1st",
+  "down": null,
   "espn_id": "401871055",
   "final": false,
   "home_abbr": "FIU",
-  "home_r": "0",
+  "home_r": "6",
   "home_rank": 99,
   "home_short": "FIU",
   "in_play": true,
   "leaders": [
    {
+    "cat": "PASS",
+    "team": "home",
+    "val": "1/1, 49 YDS, 1 TD",
+    "who": "J. Kohl"
+   },
+   {
     "cat": "RUSH",
     "team": "home",
     "val": "3 CAR, 19 YDS",
     "who": "D. Lyons"
+   },
+   {
+    "cat": "REC",
+    "team": "home",
+    "val": "1 REC, 49 YDS, 1 TD",
+    "who": "K. McNeal"
    }
   ],
   "line_away": [
    0.0
   ],
   "line_home": [
-   0.0
+   6.0
   ],
   "neutral": false,
   "period": 1,
-  "poss": "home",
-  "redzone": false,
-  "spot": "FIU 42",
+  "poss": null,
+  "redzone": true,
+  "spot": null,
   "state": "FL",
   "status": "In Progress",
   "venue": "Pitbull Stadium"
@@ -4013,14 +4025,14 @@
   "away_rank": 99,
   "away_short": "Missouri St",
   "city": "Newark",
-  "clock": "8:37",
+  "clock": "8:19",
   "conf_comp": true,
-  "detail": "8:37 - 1st",
-  "down": "2nd & 12 at MOST 31",
+  "detail": "8:19 - 1st",
+  "down": "2nd & 2 at MOST 33",
   "espn_id": "401871069",
   "final": false,
   "home_abbr": "DEL",
-  "home_r": "0",
+  "home_r": "7",
   "home_rank": 99,
   "home_short": "Delaware",
   "in_play": true,
@@ -4028,7 +4040,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "4/4, 43 YDS",
+    "val": "5/5, 51 YDS",
     "who": "H. Belin IV"
    },
    {
@@ -4040,7 +4052,7 @@
    {
     "cat": "REC",
     "team": "away",
-    "val": "1 REC, 36 YDS",
+    "val": "2 REC, 44 YDS",
     "who": "I. Myers"
    }
   ],
@@ -4048,13 +4060,13 @@
    0.0
   ],
   "line_home": [
-   6.0
+   7.0
   ],
   "neutral": false,
   "period": 1,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "MOST 31",
+  "spot": "MOST 33",
   "state": "DE",
   "status": "In Progress",
   "venue": "Delaware Stadium"
