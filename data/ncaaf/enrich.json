@@ -629,10 +629,10 @@
   "away_rank": 99,
   "away_short": "Liberty",
   "city": "Kennesaw",
-  "clock": "0:31",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:31 - 2nd",
-  "down": null,
+  "detail": "Halftime",
+  "down": "2nd & 10 at LIB 24",
   "espn_id": "401871056",
   "final": false,
   "home_abbr": "KENN",
@@ -672,9 +672,9 @@
   "period": 2,
   "poss": null,
   "redzone": false,
-  "spot": null,
+  "spot": "LIB 24",
   "state": "GA",
-  "status": "In Progress",
+  "status": "Halftime",
   "venue": "Walens Family Field at Fifth Third Stadium"
  },
  "173057d32ff5946d42566a0d164de287": {
@@ -1931,10 +1931,10 @@
   "away_rank": 99,
   "away_short": "East Carolina",
   "city": "Memphis",
-  "clock": "0:00",
+  "clock": "14:07",
   "conf_comp": true,
-  "detail": "End of 1st",
-  "down": "3rd & 10 at ECU 16",
+  "detail": "14:07 - 2nd",
+  "down": "2nd & 9 at 50",
   "espn_id": "401862807",
   "final": false,
   "home_abbr": "MEM",
@@ -1963,18 +1963,20 @@
    }
   ],
   "line_away": [
-   10.0
+   10.0,
+   0.0
   ],
   "line_home": [
+   0.0,
    0.0
   ],
   "neutral": false,
-  "period": 1,
-  "poss": "away",
+  "period": 2,
+  "poss": "home",
   "redzone": false,
-  "spot": "ECU 16",
+  "spot": "50",
   "state": "TN",
-  "status": "End of Period",
+  "status": "In Progress",
   "venue": "Simmons Bank Liberty Stadium"
  },
  "5c082e013b5328e3db1def552628765f": {
@@ -4057,23 +4059,23 @@
   "away_rank": 99,
   "away_short": "James Madison",
   "city": "Boone",
-  "clock": "2:00",
+  "clock": "1:02",
   "conf_comp": true,
-  "detail": "2:00 - 2nd",
+  "detail": "1:02 - 2nd",
   "down": null,
   "espn_id": "401869845",
   "final": false,
   "home_abbr": "APP",
-  "home_r": "3",
+  "home_r": "9",
   "home_rank": 99,
   "home_short": "App State",
   "in_play": true,
   "leaders": [
    {
     "cat": "PASS",
-    "team": "away",
-    "val": "8/13, 103 YDS",
-    "who": "C. Coleman"
+    "team": "home",
+    "val": "12/18, 103 YDS, 1 TD",
+    "who": "M. Singleton"
    },
    {
     "cat": "RUSH",
@@ -4094,12 +4096,12 @@
   ],
   "line_home": [
    0.0,
-   3.0
+   9.0
   ],
   "neutral": false,
   "period": 2,
   "poss": null,
-  "redzone": false,
+  "redzone": true,
   "spot": null,
   "state": "NC",
   "status": "In Progress",
