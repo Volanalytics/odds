@@ -629,10 +629,10 @@
   "away_rank": 99,
   "away_short": "Liberty",
   "city": "Kennesaw",
-  "clock": "13:18",
+  "clock": "12:03",
   "conf_comp": true,
-  "detail": "13:18 - 4th",
-  "down": "1st & 10 at KENN 16",
+  "detail": "12:03 - 4th",
+  "down": "1st & 10 at LIB 48",
   "espn_id": "401871056",
   "final": false,
   "home_abbr": "KENN",
@@ -674,9 +674,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "KENN 16",
+  "spot": "LIB 48",
   "state": "GA",
   "status": "In Progress",
   "venue": "Walens Family Field at Fifth Third Stadium"
@@ -1935,10 +1935,10 @@
   "away_rank": 99,
   "away_short": "East Carolina",
   "city": "Memphis",
-  "clock": "0:00",
+  "clock": "14:31",
   "conf_comp": true,
-  "detail": "Halftime",
-  "down": "2nd & 10 at MEM 37",
+  "detail": "14:31 - 3rd",
+  "down": "2nd & 11 at MEM 24",
   "espn_id": "401862807",
   "final": false,
   "home_abbr": "MEM",
@@ -1968,19 +1968,21 @@
   ],
   "line_away": [
    10.0,
-   6.0
+   6.0,
+   0.0
   ],
   "line_home": [
    0.0,
-   3.0
+   3.0,
+   0.0
   ],
   "neutral": false,
-  "period": 2,
-  "poss": null,
+  "period": 3,
+  "poss": "home",
   "redzone": false,
-  "spot": "MEM 37",
+  "spot": "MEM 24",
   "state": "TN",
-  "status": "Halftime",
+  "status": "In Progress",
   "venue": "Simmons Bank Liberty Stadium"
  },
  "5c082e013b5328e3db1def552628765f": {
@@ -4063,14 +4065,14 @@
   "away_rank": 99,
   "away_short": "James Madison",
   "city": "Boone",
-  "clock": "0:00",
+  "clock": "13:15",
   "conf_comp": true,
-  "detail": "End of 3rd",
-  "down": "1st & 10 at JMU 39",
+  "detail": "13:15 - 4th",
+  "down": null,
   "espn_id": "401869845",
   "final": false,
   "home_abbr": "APP",
-  "home_r": "13",
+  "home_r": "21",
   "home_rank": 99,
   "home_short": "App State",
   "in_play": true,
@@ -4078,13 +4080,13 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "20/32, 199 YDS, 1 TD",
+    "val": "21/33, 214 YDS, 1 TD",
     "who": "M. Singleton"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "11 CAR, 72 YDS",
+    "val": "12 CAR, 74 YDS",
     "who": "J. Lewis"
    },
    {
@@ -4097,18 +4099,20 @@
   "line_away": [
    7.0,
    7.0,
-   7.0
+   7.0,
+   0.0
   ],
   "line_home": [
    0.0,
    10.0,
-   3.0
+   3.0,
+   8.0
   ],
   "neutral": false,
-  "period": 3,
-  "poss": "home",
-  "redzone": false,
-  "spot": "JMU 39",
+  "period": 4,
+  "poss": null,
+  "redzone": true,
+  "spot": null,
   "state": "NC",
   "status": "In Progress",
   "venue": "Kidd Brewer Stadium"
