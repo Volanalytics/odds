@@ -629,10 +629,10 @@
   "away_rank": 99,
   "away_short": "Liberty",
   "city": "Kennesaw",
-  "clock": "12:03",
+  "clock": "7:10",
   "conf_comp": true,
-  "detail": "12:03 - 4th",
-  "down": "1st & 10 at LIB 48",
+  "detail": "7:10 - 4th",
+  "down": "3rd & 1 at KENN 15",
   "espn_id": "401871056",
   "final": false,
   "home_abbr": "KENN",
@@ -675,8 +675,8 @@
   "neutral": false,
   "period": 4,
   "poss": "away",
-  "redzone": false,
-  "spot": "LIB 48",
+  "redzone": true,
+  "spot": "KENN 15",
   "state": "GA",
   "status": "In Progress",
   "venue": "Walens Family Field at Fifth Third Stadium"
@@ -1935,14 +1935,14 @@
   "away_rank": 99,
   "away_short": "East Carolina",
   "city": "Memphis",
-  "clock": "14:31",
+  "clock": "12:53",
   "conf_comp": true,
-  "detail": "14:31 - 3rd",
-  "down": "2nd & 11 at MEM 24",
+  "detail": "12:53 - 3rd",
+  "down": "3rd & 7 at ECU 28",
   "espn_id": "401862807",
   "final": false,
   "home_abbr": "MEM",
-  "home_r": "3",
+  "home_r": "10",
   "home_rank": 99,
   "home_short": "Memphis",
   "in_play": true,
@@ -1950,7 +1950,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "10/15, 69 YDS",
+    "val": "13/18, 145 YDS, 1 TD",
     "who": "M. Stokes"
    },
    {
@@ -1961,9 +1961,9 @@
    },
    {
     "cat": "REC",
-    "team": "away",
-    "val": "1 REC, 35 YDS",
-    "who": "T. Johnson"
+    "team": "home",
+    "val": "2 REC, 74 YDS, 1 TD",
+    "who": "J. Hayes"
    }
   ],
   "line_away": [
@@ -1974,13 +1974,13 @@
   "line_home": [
    0.0,
    3.0,
-   0.0
+   7.0
   ],
   "neutral": false,
   "period": 3,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "MEM 24",
+  "spot": "ECU 28",
   "state": "TN",
   "status": "In Progress",
   "venue": "Simmons Bank Liberty Stadium"
@@ -4065,10 +4065,10 @@
   "away_rank": 99,
   "away_short": "James Madison",
   "city": "Boone",
-  "clock": "13:15",
+  "clock": "12:01",
   "conf_comp": true,
-  "detail": "13:15 - 4th",
-  "down": null,
+  "detail": "12:01 - 4th",
+  "down": "2nd & 7 at JMU 49",
   "espn_id": "401869845",
   "final": false,
   "home_abbr": "APP",
@@ -4080,7 +4080,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "21/33, 214 YDS, 1 TD",
+    "val": "22/34, 219 YDS, 2 TD",
     "who": "M. Singleton"
    },
    {
@@ -4110,9 +4110,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": null,
-  "redzone": true,
-  "spot": null,
+  "poss": "away",
+  "redzone": false,
+  "spot": "JMU 49",
   "state": "NC",
   "status": "In Progress",
   "venue": "Kidd Brewer Stadium"
