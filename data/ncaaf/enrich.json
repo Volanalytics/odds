@@ -49,13 +49,13 @@
  },
  "027c66400a752f72c7a21ce15a3b1743": {
   "away_abbr": "NCSU",
-  "away_r": "0",
+  "away_r": "7",
   "away_rank": 99,
   "away_short": "NC State",
   "city": "Stanford",
-  "clock": "3:40",
+  "clock": "2:04",
   "conf_comp": true,
-  "detail": "3:40 - 1st",
+  "detail": "2:04 - 1st",
   "down": null,
   "espn_id": "401858272",
   "final": false,
@@ -85,7 +85,7 @@
    }
   ],
   "line_away": [
-   0.0
+   7.0
   ],
   "line_home": [
    14.0
@@ -585,10 +585,10 @@
   "away_rank": 99,
   "away_short": "Air Force",
   "city": "Laramie",
-  "clock": "6:53",
+  "clock": "4:53",
   "conf_comp": true,
-  "detail": "6:53 - 3rd",
-  "down": null,
+  "detail": "4:53 - 3rd",
+  "down": "1st & 10 at AF 28",
   "espn_id": "401864525",
   "final": false,
   "home_abbr": "WYO",
@@ -600,20 +600,20 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "8/14, 109 YDS, 2 TD",
+    "val": "8/15, 109 YDS, 2 TD",
     "who": "T. Hughes"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "5 CAR, 109 YDS, 1 TD",
+    "val": "7 CAR, 113 YDS, 1 TD",
     "who": "T. Hughes"
    },
    {
     "cat": "REC",
     "team": "home",
-    "val": "2 REC, 36 YDS, 1 TD",
-    "who": "J. Wilson"
+    "val": "1 REC, 99 YDS, 1 TD",
+    "who": "S. Harris"
    }
   ],
   "line_away": [
@@ -628,9 +628,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": null,
-  "redzone": true,
-  "spot": null,
+  "poss": "away",
+  "redzone": false,
+  "spot": "AF 28",
   "state": "WY",
   "status": "In Progress",
   "venue": "War Memorial Stadium"
@@ -1275,10 +1275,10 @@
   "away_rank": 99,
   "away_short": "Army",
   "city": "Tulsa",
-  "clock": "2:05",
+  "clock": "15:00",
   "conf_comp": true,
-  "detail": "2:05 - 3rd",
-  "down": "4th & 5 at ARMY 30",
+  "detail": "15:00 - 3rd",
+  "down": "1st & 10 at ARMY 18",
   "espn_id": "401862808",
   "final": false,
   "home_abbr": "TLSA",
@@ -1290,7 +1290,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "14/20, 154 YDS, 1 TD, 1 INT",
+    "val": "16/23, 181 YDS, 1 TD, 1 INT",
     "who": "B. Hayes"
    },
    {
@@ -1302,7 +1302,7 @@
    {
     "cat": "REC",
     "team": "home",
-    "val": "4 REC, 66 YDS, 1 TD",
+    "val": "5 REC, 84 YDS, 1 TD",
     "who": "J. Ross"
    }
   ],
@@ -1318,9 +1318,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "away",
-  "redzone": false,
-  "spot": "ARMY 30",
+  "poss": "home",
+  "redzone": true,
+  "spot": "ARMY 18",
   "state": "OK",
   "status": "In Progress",
   "venue": "H. A. Chapman Stadium"
