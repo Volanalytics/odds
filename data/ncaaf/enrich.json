@@ -107,14 +107,14 @@
  },
  "04db3b581ae63446a409f2ad30868e20": {
   "away_abbr": "VT",
-  "away_r": "0",
+  "away_r": "3",
   "away_rank": 99,
   "away_short": "Virginia Tech",
   "city": "Clemson",
-  "clock": "2:37",
+  "clock": "1:20",
   "conf_comp": true,
-  "detail": "2:37 - 1st",
-  "down": "2nd & Goal at CLEM 8",
+  "detail": "1:20 - 1st",
+  "down": "1st & 10 at CLEM 25",
   "espn_id": "401858276",
   "final": false,
   "home_abbr": "CLEM",
@@ -126,14 +126,14 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "4/7, 20 YDS",
+    "val": "4/7, 17 YDS",
     "who": "E. Grunkemeyer"
    },
    {
     "cat": "RUSH",
-    "team": "away",
-    "val": "3 CAR, 16 YDS",
-    "who": "E. Grunkemeyer"
+    "team": "home",
+    "val": "1 CAR, 12 YDS",
+    "who": "T. Brown"
    },
    {
     "cat": "REC",
@@ -143,16 +143,16 @@
    }
   ],
   "line_away": [
-   0.0
+   3.0
   ],
   "line_home": [
    0.0
   ],
   "neutral": false,
   "period": 1,
-  "poss": "away",
-  "redzone": true,
-  "spot": "CLEM 8",
+  "poss": null,
+  "redzone": false,
+  "spot": "CLEM 25",
   "state": "SC",
   "status": "In Progress",
   "venue": "Memorial Stadium (Clemson, SC)"
@@ -812,11 +812,11 @@
   "clock": "0:00",
   "conf_comp": true,
   "detail": "2OT",
-  "down": "2nd & Goal at BYU 10",
+  "down": null,
   "espn_id": "401856835",
   "final": false,
   "home_abbr": "UCF",
-  "home_r": "31",
+  "home_r": "39",
   "home_rank": 99,
   "home_short": "UCF",
   "in_play": true,
@@ -824,7 +824,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "24/39, 289 YDS, 2 TD",
+    "val": "25/41, 293 YDS, 3 TD",
     "who": "K. Jenkins"
    },
    {
@@ -854,13 +854,13 @@
    7.0,
    0.0,
    7.0,
-   0.0
+   8.0
   ],
   "neutral": false,
   "period": 6,
-  "poss": "home",
-  "redzone": true,
-  "spot": "BYU 10",
+  "poss": null,
+  "redzone": false,
+  "spot": null,
   "state": "FL",
   "status": "In Progress",
   "venue": "Acrisure Bounce House"
@@ -2627,10 +2627,10 @@
   "away_rank": 99,
   "away_short": "Old Dominion",
   "city": "Ruston",
-  "clock": "11:56",
+  "clock": "11:01",
   "conf_comp": true,
-  "detail": "11:56 - 4th",
-  "down": null,
+  "detail": "11:01 - 4th",
+  "down": "1st & 10 at ODU 25",
   "espn_id": "401871093",
   "final": false,
   "home_abbr": "LT",
@@ -2672,9 +2672,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "ODU 25",
   "state": "LA",
   "status": "In Progress",
   "venue": "Joe Aillet Stadium"
@@ -2877,10 +2877,10 @@
   "away_rank": 21,
   "away_short": "Boise St",
   "city": "Pullman",
-  "clock": "0:26",
+  "clock": "0:09",
   "conf_comp": true,
-  "detail": "0:26 - 2nd",
-  "down": null,
+  "detail": "0:09 - 2nd",
+  "down": "2nd & 8 at BOIS 37",
   "espn_id": "401860907",
   "final": false,
   "home_abbr": "WSU",
@@ -2892,7 +2892,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "6/11, 77 YDS",
+    "val": "7/12, 77 YDS",
     "who": "M. Madsen"
    },
    {
@@ -2918,9 +2918,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "BOIS 37",
   "state": "WA",
   "status": "In Progress",
   "venue": "Martin Stadium"
@@ -3071,14 +3071,14 @@
  },
  "8e7bee2f3b66bdb4f992e30400aca4cb": {
   "away_abbr": "UL",
-  "away_r": "27",
+  "away_r": "28",
   "away_rank": 99,
   "away_short": "Louisiana",
   "city": "Hattiesburg",
-  "clock": "2:16",
+  "clock": "0:52",
   "conf_comp": true,
-  "detail": "2:16 - 3rd",
-  "down": null,
+  "detail": "0:52 - 3rd",
+  "down": "3rd & 9 at UL 31",
   "espn_id": "401869967",
   "final": false,
   "home_abbr": "USM",
@@ -3109,7 +3109,7 @@
   "line_away": [
    7.0,
    14.0,
-   6.0
+   7.0
   ],
   "line_home": [
    7.0,
@@ -3118,9 +3118,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": null,
-  "redzone": true,
-  "spot": null,
+  "poss": "home",
+  "redzone": false,
+  "spot": "UL 31",
   "state": "MS",
   "status": "In Progress",
   "venue": "M. M. Roberts Stadium"
@@ -3343,10 +3343,10 @@
   "away_rank": 99,
   "away_short": "Colorado",
   "city": "Stillwater",
-  "clock": "5:42",
+  "clock": "2:48",
   "conf_comp": true,
-  "detail": "5:42 - 1st",
-  "down": "1st & 10 at COLO 29",
+  "detail": "2:48 - 1st",
+  "down": "2nd & 10 at OKST 25",
   "espn_id": "401856836",
   "final": false,
   "home_abbr": "OKST",
@@ -3357,21 +3357,21 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "3/3, 72 YDS, 1 TD",
-    "who": "D. Mestemaker"
+    "team": "away",
+    "val": "9/10, 98 YDS, 1 TD",
+    "who": "I. Wilson"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "3 CAR, 13 YDS",
+    "val": "5 CAR, 19 YDS",
     "who": "J. Smith"
    },
    {
     "cat": "REC",
-    "team": "home",
-    "val": "1 REC, 47 YDS, 1 TD",
-    "who": "M. Coleman"
+    "team": "away",
+    "val": "5 REC, 66 YDS",
+    "who": "J. Williams"
    }
   ],
   "line_away": [
@@ -3384,7 +3384,7 @@
   "period": 1,
   "poss": "away",
   "redzone": false,
-  "spot": "COLO 29",
+  "spot": "OKST 25",
   "state": "OK",
   "status": "In Progress",
   "venue": "Boone Pickens Stadium"
@@ -4003,46 +4003,38 @@
   "away_rank": 99,
   "away_short": "Utah State",
   "city": "San Marcos",
-  "clock": "0:00",
+  "clock": "14:17",
   "conf_comp": true,
-  "detail": "10/24 - 7:30 PM EDT",
-  "down": null,
+  "detail": "14:17 - 1st",
+  "down": "2nd & 7 at USU 28",
   "espn_id": "401860906",
   "final": false,
   "home_abbr": "TXST",
   "home_r": "0",
   "home_rank": 99,
   "home_short": "Texas St",
-  "in_play": false,
+  "in_play": true,
   "leaders": [
    {
-    "cat": "PASS",
-    "team": "home",
-    "val": "1439 YDS, 14 TD, 5 INT",
-    "who": "B. Jackson"
-   },
-   {
     "cat": "RUSH",
-    "team": "home",
-    "val": "108 CAR, 838 YDS, 5 TD",
-    "who": "T. Burgess Jr."
-   },
-   {
-    "cat": "REC",
     "team": "away",
-    "val": "36 REC, 472 YDS, 5 TD",
-    "who": "E. Wood"
+    "val": "1 CAR, 3 YDS",
+    "who": "J. Jacobs"
    }
   ],
-  "line_away": [],
-  "line_home": [],
+  "line_away": [
+   0.0
+  ],
+  "line_home": [
+   0.0
+  ],
   "neutral": false,
-  "period": 0,
-  "poss": null,
+  "period": 1,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "USU 28",
   "state": "TX",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "UFCU Stadium"
  },
  "c5223791e733b6bc0744618614b007b7": {
@@ -4051,10 +4043,10 @@
   "away_rank": 99,
   "away_short": "San Diego St",
   "city": "Fort Collins",
-  "clock": "13:34",
+  "clock": "11:36",
   "conf_comp": true,
-  "detail": "13:34 - 2nd",
-  "down": null,
+  "detail": "11:36 - 2nd",
+  "down": "1st & 10 at CSU 40",
   "espn_id": "401860905",
   "final": false,
   "home_abbr": "CSU",
@@ -4092,9 +4084,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "CSU 40",
   "state": "CO",
   "status": "In Progress",
   "venue": "Canvas Stadium"
@@ -4105,10 +4097,10 @@
   "away_rank": 99,
   "away_short": "Georgia St",
   "city": "Jonesboro",
-  "clock": "3:39",
+  "clock": "0:49",
   "conf_comp": true,
-  "detail": "3:39 - 1st",
-  "down": "2nd & 6 at GAST 28",
+  "detail": "0:49 - 1st",
+  "down": "2nd & 17 at ARST 34",
   "espn_id": "401869935",
   "final": false,
   "home_abbr": "ARST",
@@ -4126,7 +4118,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "4 CAR, 16 YDS",
+    "val": "5 CAR, 17 YDS",
     "who": "Q. Wiggins"
    },
    {
@@ -4144,9 +4136,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "GAST 28",
+  "spot": "ARST 34",
   "state": "AR",
   "status": "In Progress",
   "venue": "Centennial Bank Stadium"
@@ -4205,10 +4197,10 @@
   "away_rank": 99,
   "away_short": "San Jos\u00e9 St",
   "city": "Reno",
-  "clock": "0:00",
+  "clock": "13:25",
   "conf_comp": true,
-  "detail": "End of 3rd",
-  "down": "3rd & 4 at SJSU 24",
+  "detail": "13:25 - 4th",
+  "down": "1st & 10 at NEV 43",
   "espn_id": "401864528",
   "final": false,
   "home_abbr": "NEV",
@@ -4239,18 +4231,20 @@
   "line_away": [
    0.0,
    3.0,
+   0.0,
    0.0
   ],
   "line_home": [
    7.0,
    0.0,
-   7.0
+   7.0,
+   0.0
   ],
   "neutral": false,
-  "period": 3,
-  "poss": "away",
+  "period": 4,
+  "poss": "home",
   "redzone": false,
-  "spot": "SJSU 24",
+  "spot": "NEV 43",
   "state": "NV",
   "status": "In Progress",
   "venue": "Mackay Stadium"
