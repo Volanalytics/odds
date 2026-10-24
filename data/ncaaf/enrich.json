@@ -447,10 +447,10 @@
   "away_rank": 99,
   "away_short": "West Virginia",
   "city": "Fort Worth",
-  "clock": "10:54",
+  "clock": "10:00",
   "conf_comp": true,
-  "detail": "10:54 - 3rd",
-  "down": null,
+  "detail": "10:00 - 3rd",
+  "down": "1st & 10 at WVU 39",
   "espn_id": "401856841",
   "final": false,
   "home_abbr": "TCU",
@@ -490,9 +490,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "WVU 39",
   "state": "TX",
   "status": "In Progress",
   "venue": "Amon G. Carter Stadium"
@@ -547,14 +547,14 @@
  },
  "1388547b792afa0aa6769aa1b7645b28": {
   "away_abbr": "WMU",
-  "away_r": "14",
+  "away_r": "21",
   "away_rank": 99,
   "away_short": "W Michigan",
   "city": "Toledo",
-  "clock": "0:00",
+  "clock": "14:47",
   "conf_comp": true,
-  "detail": "Halftime",
-  "down": "2nd & 10 at WMU 30",
+  "detail": "14:47 - 3rd",
+  "down": null,
   "espn_id": "401866450",
   "final": false,
   "home_abbr": "TOL",
@@ -584,19 +584,21 @@
   ],
   "line_away": [
    0.0,
-   14.0
+   14.0,
+   7.0
   ],
   "line_home": [
    14.0,
-   17.0
+   17.0,
+   0.0
   ],
   "neutral": false,
-  "period": 2,
+  "period": 3,
   "poss": null,
   "redzone": false,
-  "spot": "WMU 30",
+  "spot": null,
   "state": "OH",
-  "status": "Halftime",
+  "status": "In Progress",
   "venue": "Glass Bowl"
  },
  "1612c641ab70fd57963596255b9cb69c": {
@@ -2399,10 +2401,10 @@
   "away_rank": 99,
   "away_short": "Miami OH",
   "city": "Mount Pleasant",
-  "clock": "9:20",
+  "clock": "5:48",
   "conf_comp": true,
-  "detail": "9:20 - 2nd",
-  "down": "3rd & 7 at CMU 32",
+  "detail": "5:48 - 2nd",
+  "down": "2nd & 10 at CMU 39",
   "espn_id": "401866476",
   "final": false,
   "home_abbr": "CMU",
@@ -2413,9 +2415,9 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "away",
-    "val": "6/11, 93 YDS, 1 INT",
-    "who": "C. Heavner"
+    "team": "home",
+    "val": "8/15, 105 YDS",
+    "who": "J. Glasser"
    },
    {
     "cat": "RUSH",
@@ -2426,7 +2428,7 @@
    {
     "cat": "REC",
     "team": "home",
-    "val": "4 REC, 75 YDS",
+    "val": "5 REC, 81 YDS",
     "who": "L. Lewis"
    }
   ],
@@ -2440,9 +2442,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "CMU 32",
+  "spot": "CMU 39",
   "state": "MI",
   "status": "In Progress",
   "venue": "Kelly/Shorts Stadium"
@@ -3077,10 +3079,10 @@
   "away_rank": 99,
   "away_short": "Rutgers",
   "city": "Evanston",
-  "clock": "0:00",
+  "clock": "12:26",
   "conf_comp": true,
-  "detail": "Halftime",
-  "down": "2nd & 10 at NU 28",
+  "detail": "12:26 - 3rd",
+  "down": "2nd & 9 at NU 37",
   "espn_id": "401858498",
   "final": false,
   "home_abbr": "NU",
@@ -3110,19 +3112,21 @@
   ],
   "line_away": [
    3.0,
-   3.0
+   3.0,
+   0.0
   ],
   "line_home": [
    21.0,
-   7.0
+   7.0,
+   0.0
   ],
   "neutral": false,
-  "period": 2,
-  "poss": null,
+  "period": 3,
+  "poss": "away",
   "redzone": false,
-  "spot": "NU 28",
+  "spot": "NU 37",
   "state": "IL",
-  "status": "Halftime",
+  "status": "In Progress",
   "venue": "Ryan Field"
  },
  "a195a61a5f2a3c5c0ed7ba7b313572e5": {
@@ -3487,10 +3491,10 @@
   "away_rank": 99,
   "away_short": "Baylor",
   "city": "Lawrence",
-  "clock": "7:40",
+  "clock": "6:07",
   "conf_comp": true,
-  "detail": "7:40 - 2nd",
-  "down": "1st & 10 at KU 34",
+  "detail": "6:07 - 2nd",
+  "down": "1st & 10 at 50",
   "espn_id": "401856834",
   "final": false,
   "home_abbr": "KU",
@@ -3502,13 +3506,13 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "7/11, 99 YDS, 1 TD, 1 INT",
+    "val": "7/12, 99 YDS, 1 TD, 1 INT",
     "who": "I. Marshall"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "9 CAR, 42 YDS",
+    "val": "11 CAR, 53 YDS",
     "who": "D. Edwards"
    },
    {
@@ -3530,7 +3534,7 @@
   "period": 2,
   "poss": "home",
   "redzone": false,
-  "spot": "KU 34",
+  "spot": "50",
   "state": "KS",
   "status": "In Progress",
   "venue": "David Booth Kansas Memorial Stadium"
@@ -4433,10 +4437,10 @@
   "away_rank": 99,
   "away_short": "Akron",
   "city": "Kent",
-  "clock": "9:06",
+  "clock": "5:47",
   "conf_comp": true,
-  "detail": "9:06 - 2nd",
-  "down": "1st & 10 at AKR 15",
+  "detail": "5:47 - 2nd",
+  "down": "3rd & 7 at KENT 38",
   "espn_id": "401866446",
   "final": false,
   "home_abbr": "KENT",
@@ -4454,13 +4458,13 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "9 CAR, 63 YDS, 1 TD",
+    "val": "11 CAR, 71 YDS, 1 TD",
     "who": "J. Gant"
    },
    {
     "cat": "REC",
     "team": "away",
-    "val": "2 REC, 45 YDS",
+    "val": "3 REC, 64 YDS",
     "who": "K. Mason"
    }
   ],
@@ -4476,7 +4480,7 @@
   "period": 2,
   "poss": "away",
   "redzone": false,
-  "spot": "AKR 15",
+  "spot": "KENT 38",
   "state": "OH",
   "status": "In Progress",
   "venue": "Zoeller Field at Dix Stadium"
@@ -4775,10 +4779,10 @@
   "away_rank": 99,
   "away_short": "Rice",
   "city": "Boca Raton",
-  "clock": "0:00",
+  "clock": "15:00",
   "conf_comp": true,
-  "detail": "Halftime",
-  "down": "2nd & 10 at RICE 25",
+  "detail": "15:00 - 3rd",
+  "down": "3rd & 4 at FAU 31",
   "espn_id": "401862809",
   "final": false,
   "home_abbr": "FAU",
@@ -4790,7 +4794,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "15/19, 131 YDS, 2 TD, 1 INT",
+    "val": "17/21, 137 YDS, 2 TD, 1 INT",
     "who": "C. Veltkamp"
    },
    {
@@ -4802,25 +4806,27 @@
    {
     "cat": "REC",
     "team": "home",
-    "val": "8 REC, 58 YDS, 1 TD",
+    "val": "9 REC, 57 YDS, 1 TD",
     "who": "E. Messer"
    }
   ],
   "line_away": [
    14.0,
-   7.0
+   7.0,
+   0.0
   ],
   "line_home": [
    7.0,
-   16.0
+   16.0,
+   0.0
   ],
   "neutral": false,
-  "period": 2,
-  "poss": null,
+  "period": 3,
+  "poss": "home",
   "redzone": false,
-  "spot": "RICE 25",
+  "spot": "FAU 31",
   "state": "FL",
-  "status": "Halftime",
+  "status": "In Progress",
   "venue": "Flagler Credit Union Stadium"
  },
  "fa98066b4b400fb6af0672e170cc584a": {
