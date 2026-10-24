@@ -584,7 +584,7 @@
   "clock": "11:00",
   "conf_comp": true,
   "detail": "11:00 - 1st",
-  "down": "2nd & 3 at AF 26",
+  "down": null,
   "espn_id": "401864525",
   "final": false,
   "home_abbr": "WYO",
@@ -596,13 +596,13 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "2/2, 17 YDS",
+    "val": "2/3, 17 YDS",
     "who": "T. Hughes"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "1 CAR, 68 YDS, 1 TD",
+    "val": "2 CAR, 73 YDS, 1 TD",
     "who": "T. Hughes"
    },
    {
@@ -620,9 +620,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": "home",
-  "redzone": false,
-  "spot": "AF 26",
+  "poss": null,
+  "redzone": true,
+  "spot": null,
   "state": "WY",
   "status": "In Progress",
   "venue": "War Memorial Stadium"
@@ -1267,14 +1267,14 @@
   "away_rank": 99,
   "away_short": "Army",
   "city": "Tulsa",
-  "clock": "12:59",
+  "clock": "11:48",
   "conf_comp": true,
-  "detail": "12:59 - 2nd",
-  "down": "3rd & 11 at ARMY 45",
+  "detail": "11:48 - 2nd",
+  "down": null,
   "espn_id": "401862808",
   "final": false,
   "home_abbr": "TLSA",
-  "home_r": "7",
+  "home_r": "14",
   "home_rank": 99,
   "home_short": "Tulsa",
   "in_play": true,
@@ -1282,7 +1282,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "7/10, 87 YDS",
+    "val": "8/11, 104 YDS, 1 TD",
     "who": "B. Hayes"
    },
    {
@@ -1293,9 +1293,9 @@
    },
    {
     "cat": "REC",
-    "team": "away",
-    "val": "1 REC, 45 YDS",
-    "who": "B. Anderson"
+    "team": "home",
+    "val": "3 REC, 58 YDS, 1 TD",
+    "who": "J. Ross"
    }
   ],
   "line_away": [
@@ -1304,13 +1304,13 @@
   ],
   "line_home": [
    7.0,
-   0.0
+   7.0
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "ARMY 45",
+  "spot": null,
   "state": "OK",
   "status": "In Progress",
   "venue": "H. A. Chapman Stadium"
@@ -3205,10 +3205,10 @@
   "away_rank": 99,
   "away_short": "Duke",
   "city": "Charlottesville",
-  "clock": "4:01",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "4:01 - 3rd",
-  "down": "2nd & 9 at DUKE 45",
+  "detail": "End of 3rd",
+  "down": "2nd & 10 at UVA 38",
   "espn_id": "401858271",
   "final": false,
   "home_abbr": "UVA",
@@ -3219,14 +3219,14 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "11/17, 107 YDS",
-    "who": "B. Pribula"
+    "team": "away",
+    "val": "8/14, 119 YDS, 1 INT",
+    "who": "W. Eget"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "17 CAR, 99 YDS, 1 TD",
+    "val": "19 CAR, 104 YDS, 1 TD",
     "who": "J. Middlebrook"
    },
    {
@@ -3248,11 +3248,11 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "DUKE 45",
+  "spot": "UVA 38",
   "state": "VA",
-  "status": "In Progress",
+  "status": "End of Period",
   "venue": "Scott Stadium"
  },
  "b04425f83695783f343344ca6d33261c": {
@@ -3655,10 +3655,10 @@
   "away_rank": 99,
   "away_short": "UMass",
   "city": "East Hartford",
-  "clock": "6:44",
+  "clock": "5:52",
   "conf_comp": false,
-  "detail": "6:44 - 3rd",
-  "down": null,
+  "detail": "5:52 - 3rd",
+  "down": "4th & 7 at MASS 28",
   "espn_id": "401861965",
   "final": false,
   "home_abbr": "CONN",
@@ -3698,9 +3698,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "MASS 28",
   "state": "CT",
   "status": "In Progress",
   "venue": "Pratt & Whitney Stadium"
