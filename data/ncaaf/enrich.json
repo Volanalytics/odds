@@ -53,10 +53,10 @@
   "away_rank": 99,
   "away_short": "NC State",
   "city": "Stanford",
-  "clock": "2:04",
+  "clock": "15:00",
   "conf_comp": true,
-  "detail": "2:04 - 1st",
-  "down": null,
+  "detail": "15:00 - 1st",
+  "down": "1st & 10 at NCSU 24",
   "espn_id": "401858272",
   "final": false,
   "home_abbr": "STAN",
@@ -68,13 +68,13 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "10/13, 130 YDS, 2 TD",
+    "val": "11/14, 152 YDS, 2 TD",
     "who": "D. Warren"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "6 CAR, 36 YDS",
+    "val": "9 CAR, 78 YDS",
     "who": "M. Ford"
    },
    {
@@ -92,9 +92,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "NCSU 24",
   "state": "CA",
   "status": "In Progress",
   "venue": "Stanford Stadium"
@@ -588,7 +588,7 @@
   "clock": "4:53",
   "conf_comp": true,
   "detail": "4:53 - 3rd",
-  "down": "1st & 10 at AF 28",
+  "down": "3rd & 3 at AF 46",
   "espn_id": "401864525",
   "final": false,
   "home_abbr": "WYO",
@@ -605,15 +605,15 @@
    },
    {
     "cat": "RUSH",
-    "team": "home",
-    "val": "7 CAR, 113 YDS, 1 TD",
-    "who": "T. Hughes"
+    "team": "away",
+    "val": "20 CAR, 119 YDS",
+    "who": "E. Medders"
    },
    {
     "cat": "REC",
     "team": "home",
-    "val": "1 REC, 99 YDS, 1 TD",
-    "who": "S. Harris"
+    "val": "2 REC, 36 YDS, 1 TD",
+    "who": "J. Wilson"
    }
   ],
   "line_away": [
@@ -630,7 +630,7 @@
   "period": 3,
   "poss": "away",
   "redzone": false,
-  "spot": "AF 28",
+  "spot": "AF 46",
   "state": "WY",
   "status": "In Progress",
   "venue": "War Memorial Stadium"
@@ -1275,10 +1275,10 @@
   "away_rank": 99,
   "away_short": "Army",
   "city": "Tulsa",
-  "clock": "15:00",
+  "clock": "13:35",
   "conf_comp": true,
-  "detail": "15:00 - 3rd",
-  "down": "1st & 10 at ARMY 18",
+  "detail": "13:35 - 4th",
+  "down": "2nd & Goal at ARMY 8",
   "espn_id": "401862808",
   "final": false,
   "home_abbr": "TLSA",
@@ -1290,7 +1290,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "16/23, 181 YDS, 1 TD, 1 INT",
+    "val": "16/24, 181 YDS, 1 TD, 1 INT",
     "who": "B. Hayes"
    },
    {
@@ -1309,18 +1309,20 @@
   "line_away": [
    10.0,
    10.0,
-   8.0
+   8.0,
+   0.0
   ],
   "line_home": [
    7.0,
    7.0,
-   14.0
+   14.0,
+   0.0
   ],
   "neutral": false,
-  "period": 3,
+  "period": 4,
   "poss": "home",
   "redzone": true,
-  "spot": "ARMY 18",
+  "spot": "ARMY 8",
   "state": "OK",
   "status": "In Progress",
   "venue": "H. A. Chapman Stadium"
