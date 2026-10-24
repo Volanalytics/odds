@@ -581,10 +581,10 @@
   "away_rank": 99,
   "away_short": "Air Force",
   "city": "Laramie",
-  "clock": "11:00",
+  "clock": "7:24",
   "conf_comp": true,
-  "detail": "11:00 - 1st",
-  "down": null,
+  "detail": "7:24 - 1st",
+  "down": "1st & 10 at AF 20",
   "espn_id": "401864525",
   "final": false,
   "home_abbr": "WYO",
@@ -596,7 +596,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "2/3, 17 YDS",
+    "val": "2/4, 17 YDS",
     "who": "T. Hughes"
    },
    {
@@ -620,9 +620,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": null,
-  "redzone": true,
-  "spot": null,
+  "poss": "away",
+  "redzone": false,
+  "spot": "AF 20",
   "state": "WY",
   "status": "In Progress",
   "venue": "War Memorial Stadium"
@@ -1267,10 +1267,10 @@
   "away_rank": 99,
   "away_short": "Army",
   "city": "Tulsa",
-  "clock": "11:48",
+  "clock": "8:43",
   "conf_comp": true,
-  "detail": "11:48 - 2nd",
-  "down": null,
+  "detail": "8:43 - 2nd",
+  "down": "3rd & 9 at TLSA 43",
   "espn_id": "401862808",
   "final": false,
   "home_abbr": "TLSA",
@@ -1308,9 +1308,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "TLSA 43",
   "state": "OK",
   "status": "In Progress",
   "venue": "H. A. Chapman Stadium"
@@ -3205,10 +3205,10 @@
   "away_rank": 99,
   "away_short": "Duke",
   "city": "Charlottesville",
-  "clock": "0:00",
+  "clock": "14:13",
   "conf_comp": true,
-  "detail": "End of 3rd",
-  "down": "2nd & 10 at UVA 38",
+  "detail": "14:13 - 4th",
+  "down": "4th & 18 at UVA 29",
   "espn_id": "401858271",
   "final": false,
   "home_abbr": "UVA",
@@ -3226,7 +3226,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "19 CAR, 104 YDS, 1 TD",
+    "val": "20 CAR, 102 YDS, 1 TD",
     "who": "J. Middlebrook"
    },
    {
@@ -3239,20 +3239,22 @@
   "line_away": [
    7.0,
    0.0,
-   3.0
+   3.0,
+   0.0
   ],
   "line_home": [
    7.0,
    6.0,
+   0.0,
    0.0
   ],
   "neutral": false,
-  "period": 3,
+  "period": 4,
   "poss": "home",
   "redzone": false,
-  "spot": "UVA 38",
+  "spot": "UVA 29",
   "state": "VA",
-  "status": "End of Period",
+  "status": "In Progress",
   "venue": "Scott Stadium"
  },
  "b04425f83695783f343344ca6d33261c": {
@@ -3655,10 +3657,10 @@
   "away_rank": 99,
   "away_short": "UMass",
   "city": "East Hartford",
-  "clock": "5:52",
+  "clock": "2:53",
   "conf_comp": false,
-  "detail": "5:52 - 3rd",
-  "down": "4th & 7 at MASS 28",
+  "detail": "2:53 - 3rd",
+  "down": "2nd & 10 at MASS 33",
   "espn_id": "401861965",
   "final": false,
   "home_abbr": "CONN",
@@ -3670,7 +3672,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "8/11, 131 YDS, 2 TD",
+    "val": "11/15, 150 YDS, 2 TD",
     "who": "K. Osborne"
    },
    {
@@ -3698,9 +3700,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "MASS 28",
+  "spot": "MASS 33",
   "state": "CT",
   "status": "In Progress",
   "venue": "Pratt & Whitney Stadium"
