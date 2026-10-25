@@ -1833,14 +1833,14 @@
   "away_rank": 14,
   "away_short": "Houston",
   "city": "Salt Lake City",
-  "clock": "0:00",
+  "clock": "12:50",
   "conf_comp": true,
-  "detail": "End of 3rd",
-  "down": "1st & 10 at HOU 29",
+  "detail": "12:50 - 4th",
+  "down": null,
   "espn_id": "401856837",
   "final": false,
   "home_abbr": "UTAH",
-  "home_r": "7",
+  "home_r": "13",
   "home_rank": 10,
   "home_short": "Utah",
   "in_play": true,
@@ -1854,7 +1854,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "11 CAR, 134 YDS, 1 TD",
+    "val": "13 CAR, 143 YDS, 1 TD",
     "who": "D. Dampier"
    },
    {
@@ -1867,18 +1867,20 @@
   "line_away": [
    0.0,
    3.0,
-   10.0
+   10.0,
+   0.0
   ],
   "line_home": [
    0.0,
    0.0,
-   7.0
+   7.0,
+   6.0
   ],
   "neutral": false,
-  "period": 3,
-  "poss": "home",
-  "redzone": false,
-  "spot": "HOU 29",
+  "period": 4,
+  "poss": null,
+  "redzone": true,
+  "spot": null,
   "state": "UT",
   "status": "In Progress",
   "venue": "Rice-Eccles Stadium"
@@ -4983,10 +4985,10 @@
   "away_rank": 99,
   "away_short": "N Dakota St",
   "city": "Albuquerque",
-  "clock": "14:54",
+  "clock": "12:10",
   "conf_comp": true,
-  "detail": "14:54 - 4th",
-  "down": "1st & 10 at NDSU 43",
+  "detail": "12:10 - 4th",
+  "down": "1st & 10 at NDSU 25",
   "espn_id": "401864527",
   "final": false,
   "home_abbr": "UNM",
@@ -5004,13 +5006,13 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "10 CAR, 80 YDS, 1 TD",
+    "val": "11 CAR, 81 YDS, 1 TD",
     "who": "K. Sibley"
    },
    {
     "cat": "REC",
     "team": "home",
-    "val": "4 REC, 48 YDS",
+    "val": "5 REC, 53 YDS",
     "who": "C. Keith"
    }
   ],
@@ -5028,9 +5030,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "NDSU 43",
+  "spot": "NDSU 25",
   "state": "NM",
   "status": "In Progress",
   "venue": "University Stadium (NM)"
