@@ -1525,10 +1525,10 @@
   "away_rank": 99,
   "away_short": "Iowa State",
   "city": "Tucson",
-  "clock": "3:44",
+  "clock": "2:00",
   "conf_comp": true,
-  "detail": "3:44 - 4th",
-  "down": "1st & 10 at ISU 23",
+  "detail": "2:00 - 4th",
+  "down": "1st & Goal at ISU 4",
   "espn_id": "401856838",
   "final": false,
   "home_abbr": "ARIZ",
@@ -1571,8 +1571,8 @@
   "neutral": false,
   "period": 4,
   "poss": "home",
-  "redzone": false,
-  "spot": "ISU 23",
+  "redzone": true,
+  "spot": "ISU 4",
   "state": "AZ",
   "status": "In Progress",
   "venue": "Casino Del Sol Stadium"
@@ -1633,15 +1633,15 @@
   "city": "Madison",
   "clock": "0:00",
   "conf_comp": true,
-  "detail": "End of 4th",
+  "detail": "Final",
   "down": null,
   "espn_id": "401858500",
-  "final": false,
+  "final": true,
   "home_abbr": "WIS",
   "home_r": "24",
   "home_rank": 99,
   "home_short": "Wisconsin",
-  "in_play": true,
+  "in_play": false,
   "leaders": [
    {
     "cat": "PASS",
@@ -1676,11 +1676,11 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
   "spot": null,
   "state": "WI",
-  "status": "In Progress",
+  "status": "Final",
   "venue": "Camp Randall Stadium"
  },
  "47595bd2a188e4dab8a27dce97c5b45d": {
@@ -1689,10 +1689,10 @@
   "away_rank": 14,
   "away_short": "Houston",
   "city": "Salt Lake City",
-  "clock": "5:46",
+  "clock": "3:57",
   "conf_comp": true,
-  "detail": "5:46 - 1st",
-  "down": "1st & 10 at UTAH 12",
+  "detail": "3:57 - 1st",
+  "down": "4th & 1 at UTAH 3",
   "espn_id": "401856837",
   "final": false,
   "home_abbr": "UTAH",
@@ -1704,13 +1704,13 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "5/5, 61 YDS",
+    "val": "5/6, 67 YDS",
     "who": "C. Weigman"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "4 CAR, 16 YDS",
+    "val": "5 CAR, 19 YDS",
     "who": "M. Hughes"
    },
    {
@@ -1729,8 +1729,8 @@
   "neutral": false,
   "period": 1,
   "poss": "away",
-  "redzone": true,
-  "spot": "UTAH 12",
+  "redzone": false,
+  "spot": "UTAH 3",
   "state": "UT",
   "status": "In Progress",
   "venue": "Rice-Eccles Stadium"
@@ -3869,10 +3869,10 @@
   "away_rank": 99,
   "away_short": "Utah State",
   "city": "San Marcos",
-  "clock": "0:30",
+  "clock": "0:05",
   "conf_comp": true,
-  "detail": "0:30 - 4th",
-  "down": "3rd & 2 at TXST 30",
+  "detail": "0:05 - 4th",
+  "down": null,
   "espn_id": "401860906",
   "final": false,
   "home_abbr": "TXST",
@@ -3884,7 +3884,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "20/33, 204 YDS",
+    "val": "21/36, 206 YDS",
     "who": "G. Brosterhous"
    },
    {
@@ -3914,9 +3914,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "TXST 30",
+  "spot": null,
   "state": "TX",
   "status": "In Progress",
   "venue": "UFCU Stadium"
@@ -4368,7 +4368,7 @@
   "espn_id": "401858275",
   "final": false,
   "home_abbr": "UNC",
-  "home_r": "23",
+  "home_r": "30",
   "home_rank": 99,
   "home_short": "North Carolina",
   "in_play": true,
@@ -4376,7 +4376,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "24/40, 247 YDS, 1 TD",
+    "val": "27/44, 271 YDS, 2 TD",
     "who": "B. Edwards Jr."
    },
    {
@@ -4404,12 +4404,12 @@
    3.0,
    7.0,
    3.0,
-   0.0
+   7.0
   ],
   "neutral": false,
   "period": 5,
-  "poss": "home",
-  "redzone": true,
+  "poss": null,
+  "redzone": false,
   "spot": null,
   "state": "NC",
   "status": "In Progress",
@@ -4421,10 +4421,10 @@
   "away_rank": 99,
   "away_short": "UTSA",
   "city": "New Orleans",
-  "clock": "15:00",
+  "clock": "12:06",
   "conf_comp": true,
-  "detail": "15:00 - 4th",
-  "down": "2nd & 10 at UTSA 12",
+  "detail": "12:06 - 4th",
+  "down": "2nd & 7 at TULN 14",
   "espn_id": "401862811",
   "final": false,
   "home_abbr": "TULN",
@@ -4442,7 +4442,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "10 CAR, 56 YDS, 1 TD",
+    "val": "12 CAR, 62 YDS, 1 TD",
     "who": "W. Henderson III"
    },
    {
@@ -4467,8 +4467,8 @@
   "neutral": false,
   "period": 4,
   "poss": "away",
-  "redzone": false,
-  "spot": "UTSA 12",
+  "redzone": true,
+  "spot": "TULN 14",
   "state": "LA",
   "status": "In Progress",
   "venue": "Yulman Stadium"
@@ -4479,10 +4479,10 @@
   "away_rank": 7,
   "away_short": "Ole Miss",
   "city": "Austin",
-  "clock": "12:03",
+  "clock": "10:36",
   "conf_comp": true,
-  "detail": "12:03 - 4th",
-  "down": "4th & 4 at MISS 39",
+  "detail": "10:36 - 4th",
+  "down": "1st & 10 at MISS 32",
   "espn_id": "401856732",
   "final": false,
   "home_abbr": "TEX",
@@ -4500,7 +4500,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "16 CAR, 70 YDS",
+    "val": "18 CAR, 118 YDS",
     "who": "R. Brown"
    },
    {
@@ -4524,9 +4524,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "MISS 39",
+  "spot": "MISS 32",
   "state": "TX",
   "status": "In Progress",
   "venue": "DKR-Texas Memorial Stadium"
@@ -4687,14 +4687,14 @@
  },
  "ebe9883d9cb488e233e6c45cfa009008": {
   "away_abbr": "NDSU",
-  "away_r": "0",
+  "away_r": "3",
   "away_rank": 99,
   "away_short": "N Dakota St",
   "city": "Albuquerque",
-  "clock": "5:45",
+  "clock": "3:53",
   "conf_comp": true,
-  "detail": "5:45 - 1st",
-  "down": "3rd & Goal at UNM 9",
+  "detail": "3:53 - 1st",
+  "down": "4th & 9 at UNM 36",
   "espn_id": "401864527",
   "final": false,
   "home_abbr": "UNM",
@@ -4712,7 +4712,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "2 CAR, 35 YDS, 1 TD",
+    "val": "4 CAR, 36 YDS, 1 TD",
     "who": "K. Sibley"
    },
    {
@@ -4723,16 +4723,16 @@
    }
   ],
   "line_away": [
-   0.0
+   3.0
   ],
   "line_home": [
    7.0
   ],
   "neutral": false,
   "period": 1,
-  "poss": "away",
-  "redzone": true,
-  "spot": "UNM 9",
+  "poss": "home",
+  "redzone": false,
+  "spot": "UNM 36",
   "state": "NM",
   "status": "In Progress",
   "venue": "University Stadium (NM)"
