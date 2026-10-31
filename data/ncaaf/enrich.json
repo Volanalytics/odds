@@ -459,14 +459,14 @@
   "away_rank": 99,
   "away_short": "Stanford",
   "city": "Louisville",
-  "clock": "11:55",
+  "clock": "11:25",
   "conf_comp": true,
-  "detail": "11:55 - 1st",
-  "down": "1st & Goal at STAN 5",
+  "detail": "11:25 - 1st",
+  "down": "1st & 10 at STAN 25",
   "espn_id": "401858283",
   "final": false,
   "home_abbr": "LOU",
-  "home_r": "0",
+  "home_r": "7",
   "home_rank": 99,
   "home_short": "Louisville",
   "in_play": true,
@@ -494,13 +494,13 @@
    0.0
   ],
   "line_home": [
-   0.0
+   7.0
   ],
   "neutral": false,
   "period": 1,
-  "poss": "home",
-  "redzone": true,
-  "spot": "STAN 5",
+  "poss": null,
+  "redzone": false,
+  "spot": "STAN 25",
   "state": "KY",
   "status": "In Progress",
   "venue": "L&N Federal Credit Union Stadium"
@@ -799,10 +799,10 @@
   "away_rank": 22,
   "away_short": "Arizona",
   "city": "Lubbock",
-  "clock": "1:48",
+  "clock": "0:25",
   "conf_comp": true,
-  "detail": "1:48 - 4th",
-  "down": "1st & 10 at ARIZ 42",
+  "detail": "0:25 - 4th",
+  "down": "3rd & 10 at TTU 12",
   "espn_id": "401856842",
   "final": false,
   "home_abbr": "TTU",
@@ -814,7 +814,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "27/36, 359 YDS, 1 TD",
+    "val": "33/45, 410 YDS, 1 TD",
     "who": "N. Fifita"
    },
    {
@@ -845,8 +845,8 @@
   "neutral": false,
   "period": 4,
   "poss": "away",
-  "redzone": false,
-  "spot": "ARIZ 42",
+  "redzone": true,
+  "spot": "TTU 12",
   "state": "TX",
   "status": "In Progress",
   "venue": "Galaxy Stadium"
@@ -857,14 +857,14 @@
   "away_rank": 19,
   "away_short": "SMU",
   "city": "Syracuse",
-  "clock": "0:17",
+  "clock": "0:02",
   "conf_comp": true,
-  "detail": "0:17 - 4th",
+  "detail": "0:02 - 4th",
   "down": null,
   "espn_id": "401858278",
   "final": false,
   "home_abbr": "SYR",
-  "home_r": "23",
+  "home_r": "30",
   "home_rank": 99,
   "home_short": "Syracuse",
   "in_play": true,
@@ -872,7 +872,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "28/34, 349 YDS, 2 TD",
+    "val": "28/35, 349 YDS, 2 TD",
     "who": "K. Jennings"
    },
    {
@@ -898,12 +898,12 @@
    7.0,
    13.0,
    0.0,
-   3.0
+   10.0
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
-  "redzone": true,
+  "poss": null,
+  "redzone": false,
   "spot": null,
   "state": "NY",
   "status": "In Progress",
@@ -1021,9 +1021,9 @@
   "away_rank": 99,
   "away_short": "Auburn",
   "city": "Oxford",
-  "clock": "12:53",
+  "clock": "12:17",
   "conf_comp": true,
-  "detail": "12:53 - 4th",
+  "detail": "12:17 - 4th",
   "down": null,
   "espn_id": "401856735",
   "final": false,
@@ -1066,7 +1066,7 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
   "spot": null,
   "state": "MS",
@@ -1233,14 +1233,14 @@
   "away_rank": 99,
   "away_short": "Coastal",
   "city": "Atlanta",
-  "clock": "0:33",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:33 - 2nd",
-  "down": null,
+  "detail": "Halftime",
+  "down": "1st & 9 at CCU 15",
   "espn_id": "401869944",
   "final": false,
   "home_abbr": "GAST",
-  "home_r": "3",
+  "home_r": "6",
   "home_rank": 99,
   "home_short": "Georgia St",
   "in_play": true,
@@ -1270,15 +1270,15 @@
   ],
   "line_home": [
    3.0,
-   0.0
+   3.0
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
-  "redzone": true,
-  "spot": null,
+  "poss": null,
+  "redzone": false,
+  "spot": "CCU 15",
   "state": "GA",
-  "status": "In Progress",
+  "status": "Halftime",
   "venue": "Center Parc Stadium"
  },
  "49aa48a7dbcd6563f389ae4232707d64": {
@@ -1527,14 +1527,14 @@
   "away_rank": 99,
   "away_short": "UConn",
   "city": "USAF Academy",
-  "clock": "4:41",
+  "clock": "1:35",
   "conf_comp": false,
-  "detail": "4:41 - 1st",
-  "down": "3rd & 8 at AF 32",
+  "detail": "1:35 - 1st",
+  "down": "2nd & 5 at AF 38",
   "espn_id": "401861966",
   "final": false,
   "home_abbr": "AFA",
-  "home_r": "7",
+  "home_r": "13",
   "home_rank": 99,
   "home_short": "Air Force",
   "in_play": true,
@@ -1542,13 +1542,13 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "2/7, 23 YDS",
+    "val": "3/8, 29 YDS",
     "who": "K. Osborne"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "6 CAR, 23 YDS",
+    "val": "7 CAR, 28 YDS",
     "who": "O. Allen"
    },
    {
@@ -1562,13 +1562,13 @@
    0.0
   ],
   "line_home": [
-   7.0
+   13.0
   ],
   "neutral": false,
   "period": 1,
   "poss": "home",
   "redzone": false,
-  "spot": "AF 32",
+  "spot": "AF 38",
   "state": "CO",
   "status": "In Progress",
   "venue": "Falcon Stadium"
@@ -2251,46 +2251,50 @@
   "away_rank": 99,
   "away_short": "Southern Miss",
   "city": "Monroe",
-  "clock": "0:00",
+  "clock": "13:15",
   "conf_comp": true,
-  "detail": "10/31 - 3:30 PM EDT",
-  "down": null,
+  "detail": "13:15 - 1st",
+  "down": "2nd & 3 at ULM 43",
   "espn_id": "401871095",
   "final": false,
   "home_abbr": "ULM",
   "home_r": "0",
   "home_rank": 99,
   "home_short": "UL Monroe",
-  "in_play": false,
+  "in_play": true,
   "leaders": [
    {
     "cat": "PASS",
-    "team": "away",
-    "val": "1196 YDS, 7 TD, 4 INT",
-    "who": "L. Lyddy"
+    "team": "home",
+    "val": "2/2, 10 YDS",
+    "who": "A. Armenta"
    },
    {
     "cat": "RUSH",
-    "team": "away",
-    "val": "121 CAR, 577 YDS, 8 TD",
-    "who": "S. Robinson"
+    "team": "home",
+    "val": "1 CAR, 8 YDS",
+    "who": "D. Chaney"
    },
    {
     "cat": "REC",
-    "team": "away",
-    "val": "40 REC, 569 YDS, 5 TD",
-    "who": "M. Sanders"
+    "team": "home",
+    "val": "1 REC, 7 YDS",
+    "who": "D. Gilliam"
    }
   ],
-  "line_away": [],
-  "line_home": [],
+  "line_away": [
+   0.0
+  ],
+  "line_home": [
+   0.0
+  ],
   "neutral": false,
-  "period": 0,
-  "poss": null,
+  "period": 1,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "ULM 43",
   "state": "LA",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "Malone Stadium"
  },
  "78b3d38cdfa28649fdd2ca92829569ce": {
@@ -3013,46 +3017,31 @@
   "away_rank": 99,
   "away_short": "Colorado St",
   "city": "Logan",
-  "clock": "0:00",
+  "clock": "14:55",
   "conf_comp": true,
-  "detail": "10/31 - 3:30 PM EDT",
-  "down": null,
+  "detail": "14:55 - 1st",
+  "down": "2nd & 8 at USU 27",
   "espn_id": "401860910",
   "final": false,
   "home_abbr": "USU",
   "home_r": "0",
   "home_rank": 99,
   "home_short": "Utah State",
-  "in_play": false,
-  "leaders": [
-   {
-    "cat": "PASS",
-    "team": "home",
-    "val": "1120 YDS, 7 TD, 6 INT",
-    "who": "G. Brosterhous"
-   },
-   {
-    "cat": "RUSH",
-    "team": "away",
-    "val": "52 CAR, 454 YDS, 3 TD",
-    "who": "M. Brown"
-   },
-   {
-    "cat": "REC",
-    "team": "home",
-    "val": "37 REC, 479 YDS, 5 TD",
-    "who": "E. Wood"
-   }
+  "in_play": true,
+  "leaders": [],
+  "line_away": [
+   0.0
   ],
-  "line_away": [],
-  "line_home": [],
+  "line_home": [
+   0.0
+  ],
   "neutral": false,
-  "period": 0,
-  "poss": null,
+  "period": 1,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "USU 27",
   "state": "UT",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "Maverik Stadium"
  },
  "a195a61a5f2a3c5c0ed7ba7b313572e5": {
@@ -3817,10 +3806,10 @@
   "away_rank": 99,
   "away_short": "Michigan",
   "city": "Piscataway",
-  "clock": "4:11",
+  "clock": "2:18",
   "conf_comp": true,
-  "detail": "4:11 - 4th",
-  "down": "2nd & 10 at RUTG 40",
+  "detail": "2:18 - 4th",
+  "down": null,
   "espn_id": "401858507",
   "final": false,
   "home_abbr": "RUTG",
@@ -3832,7 +3821,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "21/26, 257 YDS, 1 TD",
+    "val": "22/27, 266 YDS, 1 TD",
     "who": "T. Carr"
    },
    {
@@ -3862,9 +3851,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "RUTG 40",
+  "spot": null,
   "state": "NJ",
   "status": "In Progress",
   "venue": "SHI Stadium"
@@ -3971,10 +3960,10 @@
   "away_rank": 99,
   "away_short": "Louisiana Tech",
   "city": "Mobile",
-  "clock": "7:01",
+  "clock": "4:08",
   "conf_comp": true,
-  "detail": "7:01 - 1st",
-  "down": "3rd & 15 at USA 20",
+  "detail": "4:08 - 1st",
+  "down": "2nd & 1 at LT 26",
   "espn_id": "401871097",
   "final": false,
   "home_abbr": "USA",
@@ -3985,15 +3974,15 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "away",
-    "val": "2/3, 72 YDS",
-    "who": "B. Baker"
+    "team": "home",
+    "val": "6/9, 72 YDS, 1 TD",
+    "who": "J. Hollins"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "1 CAR, 7 YDS",
-    "who": "P. Martin"
+    "val": "2 CAR, 15 YDS",
+    "who": "J. Hollins"
    },
    {
     "cat": "REC",
@@ -4012,7 +4001,7 @@
   "period": 1,
   "poss": "home",
   "redzone": false,
-  "spot": "USA 20",
+  "spot": "LT 26",
   "state": "AL",
   "status": "In Progress",
   "venue": "Hancock Whitney Stadium"
@@ -4071,46 +4060,38 @@
   "away_rank": 99,
   "away_short": "FIU",
   "city": "Lynchburg",
-  "clock": "0:00",
+  "clock": "14:40",
   "conf_comp": true,
-  "detail": "10/31 - 3:30 PM EDT",
-  "down": null,
+  "detail": "14:40 - 1st",
+  "down": "2nd & 7 at FIU 11",
   "espn_id": "401871059",
   "final": false,
   "home_abbr": "LIB",
   "home_r": "0",
   "home_rank": 99,
   "home_short": "Liberty",
-  "in_play": false,
+  "in_play": true,
   "leaders": [
    {
-    "cat": "PASS",
-    "team": "away",
-    "val": "1637 YDS, 10 TD, 8 INT",
-    "who": "J. Kohl"
-   },
-   {
     "cat": "RUSH",
-    "team": "home",
-    "val": "83 CAR, 583 YDS, 5 TD",
-    "who": "K. Davis"
-   },
-   {
-    "cat": "REC",
     "team": "away",
-    "val": "36 REC, 568 YDS, 4 TD",
-    "who": "M. Anderson"
+    "val": "2 CAR, 3 YDS",
+    "who": "D. Lyons"
    }
   ],
-  "line_away": [],
-  "line_home": [],
+  "line_away": [
+   0.0
+  ],
+  "line_home": [
+   0.0
+  ],
   "neutral": false,
-  "period": 0,
-  "poss": null,
+  "period": 1,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "FIU 11",
   "state": "VA",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "Williams Stadium (VA)"
  },
  "e7510e4cb4351947263e33b6dc6a0812": {
@@ -4163,14 +4144,14 @@
  },
  "e88d624c699646a03bac59eb193a09bf": {
   "away_abbr": "MRSH",
-  "away_r": "27",
+  "away_r": "30",
   "away_rank": 99,
   "away_short": "Marshall",
   "city": "Norfolk",
-  "clock": "7:55",
+  "clock": "6:41",
   "conf_comp": true,
-  "detail": "7:55 - 3rd",
-  "down": "4th & Goal at ODU 16",
+  "detail": "6:41 - 3rd",
+  "down": "2nd & 9 at ODU 26",
   "espn_id": "401871096",
   "final": false,
   "home_abbr": "ODU",
@@ -4201,7 +4182,7 @@
   "line_away": [
    17.0,
    10.0,
-   0.0
+   3.0
   ],
   "line_home": [
    7.0,
@@ -4210,9 +4191,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "away",
-  "redzone": true,
-  "spot": "ODU 16",
+  "poss": "home",
+  "redzone": false,
+  "spot": "ODU 26",
   "state": "VA",
   "status": "In Progress",
   "venue": "S.B. Ballard Stadium"
@@ -4377,14 +4358,14 @@
   "away_rank": 99,
   "away_short": "Temple",
   "city": "Greenville",
-  "clock": "1:38",
+  "clock": "1:19",
   "conf_comp": true,
-  "detail": "1:38 - 1st",
-  "down": "2nd & Goal at TEM 1",
+  "detail": "1:19 - 1st",
+  "down": null,
   "espn_id": "401862815",
   "final": false,
   "home_abbr": "ECU",
-  "home_r": "0",
+  "home_r": "7",
   "home_rank": 99,
   "home_short": "East Carolina",
   "in_play": true,
@@ -4412,13 +4393,13 @@
    0.0
   ],
   "line_home": [
-   0.0
+   7.0
   ],
   "neutral": false,
   "period": 1,
-  "poss": "home",
-  "redzone": true,
-  "spot": "TEM 1",
+  "poss": null,
+  "redzone": false,
+  "spot": null,
   "state": "NC",
   "status": "In Progress",
   "venue": "Dowdy-Ficklen Stadium"
