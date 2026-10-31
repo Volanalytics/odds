@@ -113,10 +113,10 @@
   "away_rank": 99,
   "away_short": "Illinois",
   "city": "College Park",
-  "clock": "0:00",
+  "clock": "13:43",
   "conf_comp": true,
-  "detail": "Halftime",
-  "down": null,
+  "detail": "13:43 - 3rd",
+  "down": "2nd & 7 at ILL 31",
   "espn_id": "401858503",
   "final": false,
   "home_abbr": "MD",
@@ -134,31 +134,33 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "12 CAR, 31 YDS",
+    "val": "13 CAR, 34 YDS",
     "who": "D. Williams"
    },
    {
     "cat": "REC",
-    "team": "away",
-    "val": "2 REC, 46 YDS",
-    "who": "C. Dixon"
+    "team": "home",
+    "val": "3 REC, 46 YDS",
+    "who": "K. Webb"
    }
   ],
   "line_away": [
    0.0,
-   7.0
-  ],
-  "line_home": [
    7.0,
    0.0
   ],
+  "line_home": [
+   7.0,
+   0.0,
+   0.0
+  ],
   "neutral": false,
-  "period": 2,
-  "poss": null,
+  "period": 3,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "ILL 31",
   "state": "MD",
-  "status": "Halftime",
+  "status": "In Progress",
   "venue": "SECU Stadium"
  },
  "0842fcd69fdf5061f6751f876ead09f2": {
@@ -1001,10 +1003,10 @@
   "away_rank": 99,
   "away_short": "Auburn",
   "city": "Oxford",
-  "clock": "5:19",
+  "clock": "2:31",
   "conf_comp": true,
-  "detail": "5:19 - 2nd",
-  "down": "1st & 10 at AUB 23",
+  "detail": "2:31 - 2nd",
+  "down": "2nd & Goal at AUB 1",
   "espn_id": "401856735",
   "final": false,
   "home_abbr": "MISS",
@@ -1016,13 +1018,13 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "8/12, 92 YDS, 1 INT",
+    "val": "9/15, 100 YDS, 1 INT",
     "who": "T. Chambliss"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "8 CAR, 46 YDS",
+    "val": "11 CAR, 54 YDS",
     "who": "S. Mills-Knight"
    },
    {
@@ -1043,8 +1045,8 @@
   "neutral": false,
   "period": 2,
   "poss": "home",
-  "redzone": false,
-  "spot": "AUB 23",
+  "redzone": true,
+  "spot": "AUB 1",
   "state": "MS",
   "status": "In Progress",
   "venue": "Vaught-Hemingway Stadium"
@@ -2920,7 +2922,7 @@
   "clock": "0:00",
   "conf_comp": true,
   "detail": "Halftime",
-  "down": "1st & 3 at WIS 23",
+  "down": "1st & 10 at WIS 25",
   "espn_id": "401858502",
   "final": false,
   "home_abbr": "IOWA",
@@ -2960,7 +2962,7 @@
   "period": 2,
   "poss": null,
   "redzone": false,
-  "spot": "WIS 23",
+  "spot": "WIS 25",
   "state": "IA",
   "status": "Halftime",
   "venue": "Kinnick Stadium"
@@ -3765,10 +3767,10 @@
   "away_rank": 99,
   "away_short": "Michigan",
   "city": "Piscataway",
-  "clock": "1:54",
+  "clock": "0:59",
   "conf_comp": true,
-  "detail": "1:54 - 2nd",
-  "down": "2nd & 19 at MICH 16",
+  "detail": "0:59 - 2nd",
+  "down": "4th & 6 at RUTG 34",
   "espn_id": "401858507",
   "final": false,
   "home_abbr": "RUTG",
@@ -3780,13 +3782,13 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "12/14, 177 YDS, 1 TD",
+    "val": "12/15, 177 YDS, 1 TD",
     "who": "T. Carr"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "8 CAR, 28 YDS",
+    "val": "9 CAR, 32 YDS",
     "who": "A. Raymond"
    },
    {
@@ -3806,9 +3808,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "MICH 16",
+  "spot": "RUTG 34",
   "state": "NJ",
   "status": "In Progress",
   "venue": "SHI Stadium"
@@ -4107,10 +4109,10 @@
   "away_rank": 99,
   "away_short": "Marshall",
   "city": "Norfolk",
-  "clock": "1:27",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "1:27 - 1st",
-  "down": "4th & 6 at ODU 16",
+  "detail": "End of 1st",
+  "down": "2nd & 10 at MRSH 26",
   "espn_id": "401871096",
   "final": false,
   "home_abbr": "ODU",
@@ -4122,7 +4124,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "6/12, 103 YDS",
+    "val": "7/14, 109 YDS",
     "who": "J. Potter"
    },
    {
@@ -4134,12 +4136,12 @@
    {
     "cat": "REC",
     "team": "home",
-    "val": "4 REC, 56 YDS",
+    "val": "5 REC, 62 YDS",
     "who": "J. Rodriguez"
    }
   ],
   "line_away": [
-   14.0
+   17.0
   ],
   "line_home": [
    7.0
@@ -4147,8 +4149,8 @@
   "neutral": false,
   "period": 1,
   "poss": "away",
-  "redzone": true,
-  "spot": "ODU 16",
+  "redzone": false,
+  "spot": "MRSH 26",
   "state": "VA",
   "status": "In Progress",
   "venue": "S.B. Ballard Stadium"
@@ -4159,10 +4161,10 @@
   "away_rank": 5,
   "away_short": "Notre Dame",
   "city": "Foxborough",
-  "clock": "0:00",
+  "clock": "14:00",
   "conf_comp": false,
-  "detail": "Halftime",
-  "down": null,
+  "detail": "14:00 - 3rd",
+  "down": "1st & 10 at NAVY 48",
   "espn_id": "401859185",
   "final": false,
   "home_abbr": "NAVY",
@@ -4174,7 +4176,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "7/14, 80 YDS, 1 TD",
+    "val": "8/15, 88 YDS, 1 TD",
     "who": "C. Carr"
    },
    {
@@ -4192,19 +4194,21 @@
   ],
   "line_away": [
    7.0,
-   7.0
+   7.0,
+   0.0
   ],
   "line_home": [
    3.0,
-   10.0
+   10.0,
+   0.0
   ],
   "neutral": true,
-  "period": 2,
-  "poss": null,
+  "period": 3,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "NAVY 48",
   "state": "MA",
-  "status": "Halftime",
+  "status": "In Progress",
   "venue": "Gillette Stadium"
  },
  "ea19c798fc1f9c5f8c38a3a60be9448f": {
@@ -4405,10 +4409,10 @@
   "away_rank": 99,
   "away_short": "Bowling Green",
   "city": "Kalamazoo",
-  "clock": "14:07",
+  "clock": "10:52",
   "conf_comp": true,
-  "detail": "14:07 - 3rd",
-  "down": "3rd & 10 at BGSU 36",
+  "detail": "10:52 - 3rd",
+  "down": "4th & 1 at WMU 49",
   "espn_id": "401866452",
   "final": false,
   "home_abbr": "WMU",
@@ -4419,9 +4423,9 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "away",
-    "val": "11/18, 76 YDS, 1 TD",
-    "who": "J. Kastantin"
+    "team": "home",
+    "val": "5/8, 86 YDS, 1 TD",
+    "who": "B. Lowry"
    },
    {
     "cat": "RUSH",
@@ -4431,9 +4435,9 @@
    },
    {
     "cat": "REC",
-    "team": "away",
-    "val": "4 REC, 41 YDS",
-    "who": "E. Jacon-Duffy"
+    "team": "home",
+    "val": "2 REC, 55 YDS",
+    "who": "A. Chenault"
    }
   ],
   "line_away": [
@@ -4448,9 +4452,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "BGSU 36",
+  "spot": "WMU 49",
   "state": "MI",
   "status": "In Progress",
   "venue": "Waldo Stadium"
