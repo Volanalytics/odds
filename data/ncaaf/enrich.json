@@ -791,14 +791,14 @@
   "away_rank": 22,
   "away_short": "Arizona",
   "city": "Lubbock",
-  "clock": "0:23",
+  "clock": "0:22",
   "conf_comp": true,
-  "detail": "0:23 - 2nd",
-  "down": null,
+  "detail": "0:22 - 2nd",
+  "down": "2nd & 10 at ARIZ 24",
   "espn_id": "401856842",
   "final": false,
   "home_abbr": "TTU",
-  "home_r": "7",
+  "home_r": "10",
   "home_rank": 13,
   "home_short": "Texas Tech",
   "in_play": true,
@@ -828,13 +828,13 @@
   ],
   "line_home": [
    7.0,
-   0.0
+   3.0
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
-  "redzone": true,
-  "spot": null,
+  "poss": "away",
+  "redzone": false,
+  "spot": "ARIZ 24",
   "state": "TX",
   "status": "In Progress",
   "venue": "Galaxy Stadium"
@@ -845,10 +845,10 @@
   "away_rank": 19,
   "away_short": "SMU",
   "city": "Syracuse",
-  "clock": "0:09",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:09 - 2nd",
-  "down": "1st & 10 at SYR 45",
+  "detail": "Halftime",
+  "down": "3rd & 5 at SYR 40",
   "espn_id": "401858278",
   "final": false,
   "home_abbr": "SYR",
@@ -860,7 +860,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "15/18, 184 YDS, 1 TD",
+    "val": "15/19, 184 YDS, 1 TD",
     "who": "K. Jennings"
    },
    {
@@ -886,11 +886,11 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "SYR 45",
+  "spot": "SYR 40",
   "state": "NY",
-  "status": "In Progress",
+  "status": "Halftime",
   "venue": "JMA Wireless Dome"
  },
  "320a213c475110f032710dcd06c94e8e": {
@@ -947,10 +947,10 @@
   "away_rank": 99,
   "away_short": "UAB",
   "city": "Tampa",
-  "clock": "0:37",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:37 - 2nd",
-  "down": null,
+  "detail": "End of 2nd",
+  "down": "3rd & 10 at UAB 26",
   "espn_id": "401862816",
   "final": false,
   "home_abbr": "USF",
@@ -988,23 +988,23 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "UAB 26",
   "state": "FL",
   "status": "In Progress",
   "venue": "Raymond James Stadium"
  },
  "3f36c41ee29e9339f71fada56d832914": {
   "away_abbr": "AUB",
-  "away_r": "0",
+  "away_r": "6",
   "away_rank": 99,
   "away_short": "Auburn",
   "city": "Oxford",
-  "clock": "10:09",
+  "clock": "7:59",
   "conf_comp": true,
-  "detail": "10:09 - 2nd",
-  "down": "3rd & 7 at MISS 30",
+  "detail": "7:59 - 2nd",
+  "down": null,
   "espn_id": "401856735",
   "final": false,
   "home_abbr": "MISS",
@@ -1016,7 +1016,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "13/14, 64 YDS",
+    "val": "15/16, 90 YDS, 1 TD",
     "who": "B. Brown"
    },
    {
@@ -1028,13 +1028,13 @@
    {
     "cat": "REC",
     "team": "away",
-    "val": "3 REC, 41 YDS",
+    "val": "4 REC, 62 YDS, 1 TD",
     "who": "C. Nimrod"
    }
   ],
   "line_away": [
    0.0,
-   0.0
+   6.0
   ],
   "line_home": [
    0.0,
@@ -1042,9 +1042,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "MISS 30",
+  "spot": null,
   "state": "MS",
   "status": "In Progress",
   "venue": "Vaught-Hemingway Stadium"
@@ -2517,10 +2517,10 @@
   "away_rank": 99,
   "away_short": "Boston College",
   "city": "Durham",
-  "clock": "1:56",
+  "clock": "1:03",
   "conf_comp": true,
-  "detail": "1:56 - 2nd",
-  "down": "1st & 10 at BC 37",
+  "detail": "1:03 - 2nd",
+  "down": "1st & 10 at DUKE 30",
   "espn_id": "401858279",
   "final": false,
   "home_abbr": "DUKE",
@@ -2558,9 +2558,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "BC 37",
+  "spot": "DUKE 30",
   "state": "NC",
   "status": "In Progress",
   "venue": "Wallace Wade Stadium"
@@ -3069,7 +3069,7 @@
   "city": "Raleigh",
   "clock": "0:00",
   "conf_comp": true,
-  "detail": "End of 2nd",
+  "detail": "Halftime",
   "down": null,
   "espn_id": "401858277",
   "final": false,
@@ -3081,9 +3081,9 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "5/14, 76 YDS, 1 TD",
-    "who": "C. Bailey"
+    "team": "away",
+    "val": "12/18, 86 YDS, 1 TD",
+    "who": "J. Sagapolutele"
    },
    {
     "cat": "RUSH",
@@ -3112,7 +3112,7 @@
   "redzone": false,
   "spot": null,
   "state": "NC",
-  "status": "In Progress",
+  "status": "Halftime",
   "venue": "Carter-Finley Stadium"
  },
  "b02a5444929be961896a4db9742a01fa": {
@@ -3765,10 +3765,10 @@
   "away_rank": 99,
   "away_short": "Michigan",
   "city": "Piscataway",
-  "clock": "7:50",
+  "clock": "4:45",
   "conf_comp": true,
-  "detail": "7:50 - 2nd",
-  "down": "1st & 10 at RUTG 30",
+  "detail": "4:45 - 2nd",
+  "down": "2nd & 8 at MICH 20",
   "espn_id": "401858507",
   "final": false,
   "home_abbr": "RUTG",
@@ -3785,9 +3785,9 @@
    },
    {
     "cat": "RUSH",
-    "team": "away",
-    "val": "5 CAR, 22 YDS",
-    "who": "S. Hiter"
+    "team": "home",
+    "val": "7 CAR, 22 YDS",
+    "who": "A. Raymond"
    },
    {
     "cat": "REC",
@@ -3807,8 +3807,8 @@
   "neutral": false,
   "period": 2,
   "poss": "home",
-  "redzone": false,
-  "spot": "RUTG 30",
+  "redzone": true,
+  "spot": "MICH 20",
   "state": "NJ",
   "status": "In Progress",
   "venue": "SHI Stadium"
@@ -4107,10 +4107,10 @@
   "away_rank": 99,
   "away_short": "Marshall",
   "city": "Norfolk",
-  "clock": "6:42",
+  "clock": "4:19",
   "conf_comp": true,
-  "detail": "6:42 - 1st",
-  "down": null,
+  "detail": "4:19 - 1st",
+  "down": "1st & Goal at MRSH 6",
   "espn_id": "401871096",
   "final": false,
   "home_abbr": "ODU",
@@ -4122,7 +4122,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "2/8, 29 YDS",
+    "val": "6/12, 103 YDS",
     "who": "J. Potter"
    },
    {
@@ -4134,8 +4134,8 @@
    {
     "cat": "REC",
     "team": "home",
-    "val": "1 REC, 33 YDS",
-    "who": "K. Harris"
+    "val": "4 REC, 56 YDS",
+    "who": "J. Rodriguez"
    }
   ],
   "line_away": [
@@ -4146,9 +4146,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": null,
-  "redzone": false,
-  "spot": null,
+  "poss": "home",
+  "redzone": true,
+  "spot": "MRSH 6",
   "state": "VA",
   "status": "In Progress",
   "venue": "S.B. Ballard Stadium"
