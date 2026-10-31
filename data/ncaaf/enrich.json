@@ -219,10 +219,10 @@
   "away_rank": 99,
   "away_short": "South Carolina",
   "city": "Norman",
-  "clock": "8:08",
+  "clock": "5:58",
   "conf_comp": true,
-  "detail": "8:08 - 4th",
-  "down": "1st & 10 at SC 35",
+  "detail": "5:58 - 4th",
+  "down": "1st & 10 at OU 16",
   "espn_id": "401856736",
   "final": false,
   "home_abbr": "OU",
@@ -264,9 +264,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "SC 35",
+  "spot": "OU 16",
   "state": "OK",
   "status": "In Progress",
   "venue": "Memorial Stadium (Norman, OK)"
@@ -2031,17 +2031,17 @@
   "away_rank": 99,
   "away_short": "Nevada",
   "city": "Pasadena",
-  "clock": "0:45",
+  "clock": "0:00",
   "conf_comp": false,
-  "detail": "0:45 - 4th",
-  "down": "4th & 8 at 50",
+  "detail": "Final",
+  "down": null,
   "espn_id": "401858508",
-  "final": false,
+  "final": true,
   "home_abbr": "UCLA",
   "home_r": "27",
   "home_rank": 7,
   "home_short": "UCLA",
-  "in_play": true,
+  "in_play": false,
   "leaders": [
    {
     "cat": "PASS",
@@ -2076,11 +2076,11 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "50",
+  "spot": null,
   "state": "CA",
-  "status": "In Progress",
+  "status": "Final",
   "venue": "Rose Bowl"
  },
  "6474599b7377102869153e25af140533": {
@@ -2133,14 +2133,14 @@
  },
  "6519cc9dfbff22ca11d607a9f246da2c": {
   "away_abbr": "CLEM",
-  "away_r": "0",
+  "away_r": "7",
   "away_rank": 99,
   "away_short": "Clemson",
   "city": "Tallahassee",
-  "clock": "10:47",
+  "clock": "9:27",
   "conf_comp": true,
-  "detail": "10:47 - 1st",
-  "down": "1st & 10 at FSU 30",
+  "detail": "9:27 - 1st",
+  "down": "4th & 10 at FSU 25",
   "espn_id": "401858280",
   "final": false,
   "home_abbr": "FSU",
@@ -2151,34 +2151,34 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "1/3, 5 YDS",
-    "who": "A. Daniels"
+    "team": "away",
+    "val": "3/4, 28 YDS, 1 TD",
+    "who": "T. Reynolds"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "2 CAR, 2 YDS",
+    "val": "3 CAR, 2 YDS",
     "who": "Q. Wisner"
    },
    {
     "cat": "REC",
-    "team": "home",
-    "val": "1 REC, 5 YDS",
-    "who": "M. Danzy"
+    "team": "away",
+    "val": "1 REC, 18 YDS, 1 TD",
+    "who": "C. Bentancur"
    }
   ],
   "line_away": [
-   0.0
+   7.0
   ],
   "line_home": [
    0.0
   ],
   "neutral": false,
   "period": 1,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "FSU 30",
+  "spot": "FSU 25",
   "state": "FL",
   "status": "In Progress",
   "venue": "Doak Campbell Stadium"
@@ -2615,17 +2615,17 @@
   "away_rank": 99,
   "away_short": "Purdue",
   "city": "University Park",
-  "clock": "1:50",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "1:50 - 4th",
-  "down": "1st & 10 at PUR 38",
+  "detail": "Final",
+  "down": null,
   "espn_id": "401858506",
-  "final": false,
+  "final": true,
   "home_abbr": "PSU",
   "home_r": "31",
   "home_rank": 99,
   "home_short": "Penn State",
-  "in_play": true,
+  "in_play": false,
   "leaders": [
    {
     "cat": "PASS",
@@ -2660,11 +2660,11 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "PUR 38",
+  "spot": null,
   "state": "PA",
-  "status": "In Progress",
+  "status": "Final",
   "venue": "Beaver Stadium"
  },
  "807f73b612ed07bda8d1835550ddbd43": {
@@ -3565,14 +3565,14 @@
  },
  "c1fd3e172f0617a0d8543b8fd67fc2ce": {
   "away_abbr": "WSU",
-  "away_r": "0",
+  "away_r": "7",
   "away_rank": 99,
   "away_short": "Washington St",
   "city": "San Diego",
-  "clock": "5:28",
+  "clock": "2:19",
   "conf_comp": true,
-  "detail": "5:28 - 1st",
-  "down": "1st & 10 at SDSU 45",
+  "detail": "2:19 - 1st",
+  "down": null,
   "espn_id": "401860909",
   "final": false,
   "home_abbr": "SDSU",
@@ -3584,7 +3584,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "6/8, 61 YDS",
+    "val": "9/11, 97 YDS",
     "who": "O. Eshelman"
    },
    {
@@ -3596,21 +3596,21 @@
    {
     "cat": "REC",
     "team": "away",
-    "val": "2 REC, 38 YDS",
+    "val": "3 REC, 53 YDS",
     "who": "B. Ganashamoorthy"
    }
   ],
   "line_away": [
-   0.0
+   7.0
   ],
   "line_home": [
    7.0
   ],
   "neutral": false,
   "period": 1,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "SDSU 45",
+  "spot": null,
   "state": "CA",
   "status": "In Progress",
   "venue": "Snapdragon Stadium"
@@ -4095,10 +4095,10 @@
   "away_rank": 24,
   "away_short": "Oklahoma St",
   "city": "Ames",
-  "clock": "6:33",
+  "clock": "6:22",
   "conf_comp": true,
-  "detail": "6:33 - 1st",
-  "down": null,
+  "detail": "6:22 - 1st",
+  "down": "1st & 10 at ISU 27",
   "espn_id": "401856847",
   "final": false,
   "home_abbr": "ISU",
@@ -4134,9 +4134,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "ISU 27",
   "state": "IA",
   "status": "In Progress",
   "venue": "Jack Trice Stadium"
@@ -4311,14 +4311,14 @@
   "away_rank": 99,
   "away_short": "App State",
   "city": "Statesboro",
-  "clock": "8:01",
+  "clock": "7:14",
   "conf_comp": true,
-  "detail": "8:01 - 2nd",
+  "detail": "7:14 - 2nd",
   "down": null,
   "espn_id": "401869846",
   "final": false,
   "home_abbr": "GASO",
-  "home_r": "3",
+  "home_r": "9",
   "home_rank": 99,
   "home_short": "GA Southern",
   "in_play": true,
@@ -4332,8 +4332,8 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "4 CAR, 14 YDS",
-    "who": "T. Woodgett"
+    "val": "3 CAR, 16 YDS, 1 TD",
+    "who": "T. Todd"
    },
    {
     "cat": "REC",
@@ -4348,7 +4348,7 @@
   ],
   "line_home": [
    0.0,
-   3.0
+   9.0
   ],
   "neutral": false,
   "period": 2,
