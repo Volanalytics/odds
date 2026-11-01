@@ -535,10 +535,10 @@
   "away_rank": 99,
   "away_short": "N Illinois",
   "city": "Las Vegas",
-  "clock": "2:31",
+  "clock": "0:55",
   "conf_comp": true,
-  "detail": "2:31 - 2nd",
-  "down": "3rd & 2 at UNLV 37",
+  "detail": "0:55 - 2nd",
+  "down": "1st & 10 at NIU 23",
   "espn_id": "401864530",
   "final": false,
   "home_abbr": "UNLV",
@@ -550,19 +550,19 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "8/12, 186 YDS, 2 TD, 1 INT",
+    "val": "11/15, 221 YDS, 2 TD, 1 INT",
     "who": "J. Arnold"
    },
    {
     "cat": "RUSH",
-    "team": "away",
-    "val": "5 CAR, 46 YDS, 1 TD",
-    "who": "T. Johnson Jr."
+    "team": "home",
+    "val": "8 CAR, 47 YDS",
+    "who": "J. Arnold"
    },
    {
     "cat": "REC",
     "team": "home",
-    "val": "1 REC, 75 YDS, 1 TD",
+    "val": "2 REC, 97 YDS, 1 TD",
     "who": "K. McGee"
    }
   ],
@@ -578,7 +578,7 @@
   "period": 2,
   "poss": "home",
   "redzone": false,
-  "spot": "UNLV 37",
+  "spot": "NIU 23",
   "state": "NV",
   "status": "In Progress",
   "venue": "Allegiant Stadium"
@@ -3387,14 +3387,14 @@
   "away_rank": 99,
   "away_short": "Texas St",
   "city": "Boise",
-  "clock": "0:08",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:08 - 2nd",
-  "down": "2nd & 10 at TXST 12",
+  "detail": "Halftime",
+  "down": null,
   "espn_id": "401860908",
   "final": false,
   "home_abbr": "BOIS",
-  "home_r": "21",
+  "home_r": "28",
   "home_rank": 20,
   "home_short": "Boise St",
   "in_play": true,
@@ -3402,7 +3402,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "17/20, 190 YDS",
+    "val": "18/21, 202 YDS, 1 TD",
     "who": "M. Madsen"
    },
    {
@@ -3424,15 +3424,15 @@
   ],
   "line_home": [
    7.0,
-   14.0
+   21.0
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
-  "redzone": true,
-  "spot": "TXST 12",
+  "poss": null,
+  "redzone": false,
+  "spot": null,
   "state": "ID",
-  "status": "In Progress",
+  "status": "Halftime",
   "venue": "Albertsons Stadium"
  },
  "b0f68c9265402a825cbbf7954b726339": {
@@ -3933,10 +3933,10 @@
   "away_rank": 99,
   "away_short": "Oregon St",
   "city": "Fresno",
-  "clock": "1:47",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "1:47 - 1st",
-  "down": null,
+  "detail": "End of 1st",
+  "down": "1st & 10 at FRES 31",
   "espn_id": "401860924",
   "final": false,
   "home_abbr": "FRES",
@@ -3948,7 +3948,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "3/6, 30 YDS",
+    "val": "4/8, 49 YDS",
     "who": "B. Atkinson"
    },
    {
@@ -3972,9 +3972,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "FRES 31",
   "state": "CA",
   "status": "In Progress",
   "venue": "Valley Children's Stadium"
