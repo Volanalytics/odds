@@ -1275,14 +1275,14 @@
  },
  "49aa48a7dbcd6563f389ae4232707d64": {
   "away_abbr": "GT",
-  "away_r": "0",
+  "away_r": "3",
   "away_rank": 99,
   "away_short": "Georgia Tech",
   "city": "Pittsburgh",
-  "clock": "0:00",
+  "clock": "12:54",
   "conf_comp": true,
-  "detail": "Halftime",
-  "down": "2nd & 10 at PITT 24",
+  "detail": "12:54 - 3rd",
+  "down": "2nd & 9 at PITT 44",
   "espn_id": "401858281",
   "final": false,
   "home_abbr": "PITT",
@@ -1300,7 +1300,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "17 CAR, 112 YDS, 1 TD",
+    "val": "18 CAR, 113 YDS, 1 TD",
     "who": "D. Ferguson Jr."
    },
    {
@@ -1312,19 +1312,21 @@
   ],
   "line_away": [
    0.0,
+   3.0,
    0.0
   ],
   "line_home": [
    3.0,
-   14.0
+   14.0,
+   0.0
   ],
   "neutral": false,
-  "period": 2,
-  "poss": null,
+  "period": 3,
+  "poss": "home",
   "redzone": false,
-  "spot": "PITT 24",
+  "spot": "PITT 44",
   "state": "PA",
-  "status": "Halftime",
+  "status": "In Progress",
   "venue": "Acrisure Stadium"
  },
  "4aac00e6cc06b8905659f911419540d2": {
@@ -2131,10 +2133,10 @@
   "away_rank": 99,
   "away_short": "Clemson",
   "city": "Tallahassee",
-  "clock": "8:00",
+  "clock": "5:32",
   "conf_comp": true,
-  "detail": "8:00 - 3rd",
-  "down": null,
+  "detail": "5:32 - 3rd",
+  "down": "2nd & 2 at CLEM 25",
   "espn_id": "401858280",
   "final": false,
   "home_abbr": "FSU",
@@ -2145,15 +2147,15 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "away",
-    "val": "16/27, 156 YDS, 2 TD",
-    "who": "T. Reynolds"
+    "team": "home",
+    "val": "9/16, 162 YDS, 1 TD, 2 INT",
+    "who": "A. Daniels"
    },
    {
     "cat": "RUSH",
-    "team": "away",
-    "val": "9 CAR, 35 YDS",
-    "who": "G. Davidson"
+    "team": "home",
+    "val": "10 CAR, 35 YDS",
+    "who": "Q. Wisner"
    },
    {
     "cat": "REC",
@@ -2174,9 +2176,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "CLEM 25",
   "state": "FL",
   "status": "In Progress",
   "venue": "Doak Campbell Stadium"
@@ -2835,14 +2837,14 @@
   "away_rank": 1,
   "away_short": "Miami",
   "city": "Chapel Hill",
-  "clock": "12:36",
+  "clock": "10:51",
   "conf_comp": true,
-  "detail": "12:36 - 3rd",
-  "down": "1st & 10 at MIA 38",
+  "detail": "10:51 - 3rd",
+  "down": null,
   "espn_id": "401858282",
   "final": false,
   "home_abbr": "UNC",
-  "home_r": "14",
+  "home_r": "21",
   "home_rank": 99,
   "home_short": "North Carolina",
   "in_play": true,
@@ -2850,7 +2852,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "16/21, 183 YDS, 2 TD",
+    "val": "19/24, 221 YDS, 3 TD",
     "who": "B. Edwards Jr."
    },
    {
@@ -2861,9 +2863,9 @@
    },
    {
     "cat": "REC",
-    "team": "away",
-    "val": "3 REC, 55 YDS",
-    "who": "C. Barkate"
+    "team": "home",
+    "val": "4 REC, 60 YDS, 2 TD",
+    "who": "J. Thurman"
    }
   ],
   "line_away": [
@@ -2874,13 +2876,13 @@
   "line_home": [
    0.0,
    14.0,
-   0.0
+   7.0
   ],
   "neutral": false,
   "period": 3,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "MIA 38",
+  "spot": null,
   "state": "NC",
   "status": "In Progress",
   "venue": "Kenan Stadium"
@@ -3475,10 +3477,10 @@
   "away_rank": 2,
   "away_short": "Ohio State",
   "city": "Los Angeles",
-  "clock": "12:54",
+  "clock": "6:38",
   "conf_comp": true,
-  "detail": "12:54 - 3rd",
-  "down": "2nd & 6 at USC 33",
+  "detail": "6:38 - 3rd",
+  "down": "4th & 10 at OSU 5",
   "espn_id": "401858509",
   "final": false,
   "home_abbr": "USC",
@@ -3490,7 +3492,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "11/16, 148 YDS, 1 TD",
+    "val": "12/17, 151 YDS, 1 TD",
     "who": "J. Maiava"
    },
    {
@@ -3518,9 +3520,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "USC 33",
+  "spot": "OSU 5",
   "state": "CA",
   "status": "In Progress",
   "venue": "Los Angeles Memorial Coliseum"
@@ -3637,14 +3639,14 @@
   "away_rank": 99,
   "away_short": "Washington St",
   "city": "San Diego",
-  "clock": "10:45",
+  "clock": "9:47",
   "conf_comp": true,
-  "detail": "10:45 - 4th",
-  "down": "3rd & Goal at WSU 1",
+  "detail": "9:47 - 4th",
+  "down": null,
   "espn_id": "401860909",
   "final": false,
   "home_abbr": "SDSU",
-  "home_r": "20",
+  "home_r": "26",
   "home_rank": 99,
   "home_short": "San Diego St",
   "in_play": true,
@@ -3658,7 +3660,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "17 CAR, 116 YDS",
+    "val": "18 CAR, 115 YDS",
     "who": "L. Sutton"
    },
    {
@@ -3678,13 +3680,13 @@
    7.0,
    10.0,
    3.0,
-   0.0
+   6.0
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
+  "poss": null,
   "redzone": true,
-  "spot": "WSU 1",
+  "spot": null,
   "state": "CA",
   "status": "In Progress",
   "venue": "Snapdragon Stadium"
@@ -4061,14 +4063,14 @@
  },
  "e2ffa742b36678caf388ca70fdd4878c": {
   "away_abbr": "MSST",
-  "away_r": "0",
+  "away_r": "3",
   "away_rank": 99,
   "away_short": "Mississippi St",
   "city": "Austin",
-  "clock": "10:35",
+  "clock": "8:58",
   "conf_comp": true,
-  "detail": "10:35 - 3rd",
-  "down": "1st & 10 at TEX 14",
+  "detail": "8:58 - 3rd",
+  "down": null,
   "espn_id": "401856737",
   "final": false,
   "home_abbr": "TEX",
@@ -4099,7 +4101,7 @@
   "line_away": [
    0.0,
    0.0,
-   0.0
+   3.0
   ],
   "line_home": [
    7.0,
@@ -4110,7 +4112,7 @@
   "period": 3,
   "poss": "away",
   "redzone": true,
-  "spot": "TEX 14",
+  "spot": null,
   "state": "TX",
   "status": "In Progress",
   "venue": "DKR-Texas Memorial Stadium"
@@ -4121,14 +4123,14 @@
   "away_rank": 24,
   "away_short": "Oklahoma St",
   "city": "Ames",
-  "clock": "2:31",
+  "clock": "1:18",
   "conf_comp": true,
-  "detail": "2:31 - 3rd",
-  "down": "1st & 10 at ISU 47",
+  "detail": "1:18 - 3rd",
+  "down": null,
   "espn_id": "401856847",
   "final": false,
   "home_abbr": "ISU",
-  "home_r": "31",
+  "home_r": "38",
   "home_rank": 99,
   "home_short": "Iowa State",
   "in_play": true,
@@ -4136,7 +4138,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "15/23, 222 YDS, 2 TD, 1 INT",
+    "val": "16/24, 262 YDS, 3 TD, 1 INT",
     "who": "J. Raynor"
    },
    {
@@ -4160,13 +4162,13 @@
   "line_home": [
    7.0,
    17.0,
-   7.0
+   14.0
   ],
   "neutral": false,
   "period": 3,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "ISU 47",
+  "spot": null,
   "state": "IA",
   "status": "In Progress",
   "venue": "Jack Trice Stadium"
@@ -4341,9 +4343,9 @@
   "away_rank": 99,
   "away_short": "App State",
   "city": "Statesboro",
-  "clock": "4:53",
+  "clock": "3:02",
   "conf_comp": true,
-  "detail": "4:53 - 4th",
+  "detail": "3:02 - 4th",
   "down": null,
   "espn_id": "401869846",
   "final": false,
@@ -4386,7 +4388,7 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
   "spot": null,
   "state": "GA",
