@@ -535,10 +535,10 @@
   "away_rank": 99,
   "away_short": "N Illinois",
   "city": "Las Vegas",
-  "clock": "0:00",
+  "clock": "14:42",
   "conf_comp": true,
-  "detail": "Halftime",
-  "down": null,
+  "detail": "14:42 - 3rd",
+  "down": "2nd & 1 at NIU 41",
   "espn_id": "401864530",
   "final": false,
   "home_abbr": "UNLV",
@@ -568,19 +568,21 @@
   ],
   "line_away": [
    14.0,
-   3.0
+   3.0,
+   0.0
   ],
   "line_home": [
    10.0,
-   14.0
+   14.0,
+   0.0
   ],
   "neutral": false,
-  "period": 2,
-  "poss": null,
+  "period": 3,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "NIU 41",
   "state": "NV",
-  "status": "Halftime",
+  "status": "In Progress",
   "venue": "Allegiant Stadium"
  },
  "1e591733bae48534963359a9cff13701": {
@@ -3383,14 +3385,14 @@
  },
  "b02a5444929be961896a4db9742a01fa": {
   "away_abbr": "TXST",
-  "away_r": "3",
+  "away_r": "9",
   "away_rank": 99,
   "away_short": "Texas St",
   "city": "Boise",
-  "clock": "10:50",
+  "clock": "9:21",
   "conf_comp": true,
-  "detail": "10:50 - 3rd",
-  "down": "1st & 10 at TXST 16",
+  "detail": "9:21 - 3rd",
+  "down": null,
   "espn_id": "401860908",
   "final": false,
   "home_abbr": "BOIS",
@@ -3413,15 +3415,15 @@
    },
    {
     "cat": "REC",
-    "team": "home",
-    "val": "6 REC, 67 YDS",
-    "who": "M. Wagner"
+    "team": "away",
+    "val": "4 REC, 71 YDS, 1 TD",
+    "who": "C. Dawn Jr."
    }
   ],
   "line_away": [
    0.0,
    3.0,
-   0.0
+   6.0
   ],
   "line_home": [
    7.0,
@@ -3430,9 +3432,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "away",
-  "redzone": false,
-  "spot": "TXST 16",
+  "poss": null,
+  "redzone": true,
+  "spot": null,
   "state": "ID",
   "status": "In Progress",
   "venue": "Albertsons Stadium"
@@ -3935,10 +3937,10 @@
   "away_rank": 99,
   "away_short": "Oregon St",
   "city": "Fresno",
-  "clock": "5:57",
+  "clock": "3:39",
   "conf_comp": true,
-  "detail": "5:57 - 2nd",
-  "down": null,
+  "detail": "3:39 - 2nd",
+  "down": "1st & 10 at ORST 31",
   "espn_id": "401860924",
   "final": false,
   "home_abbr": "FRES",
@@ -3956,7 +3958,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "7 CAR, 98 YDS, 1 TD",
+    "val": "8 CAR, 101 YDS, 1 TD",
     "who": "B. Donelson"
    },
    {
@@ -3976,9 +3978,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "ORST 31",
   "state": "CA",
   "status": "In Progress",
   "venue": "Valley Children's Stadium"
