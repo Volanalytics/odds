@@ -159,10 +159,10 @@
   "away_rank": 99,
   "away_short": "South Carolina",
   "city": "Norman",
-  "clock": "1:31",
+  "clock": "0:49",
   "conf_comp": true,
-  "detail": "1:31 - 4th",
-  "down": "3rd & 2 at OU 43",
+  "detail": "0:49 - 4th",
+  "down": "3rd & Goal at SC 9",
   "espn_id": "401856736",
   "final": false,
   "home_abbr": "OU",
@@ -205,8 +205,8 @@
   "neutral": false,
   "period": 4,
   "poss": "home",
-  "redzone": false,
-  "spot": "OU 43",
+  "redzone": true,
+  "spot": "SC 9",
   "state": "OK",
   "status": "In Progress",
   "venue": "Memorial Stadium (Norman, OK)"
@@ -1279,10 +1279,10 @@
   "away_rank": 99,
   "away_short": "Georgia Tech",
   "city": "Pittsburgh",
-  "clock": "5:24",
+  "clock": "2:56",
   "conf_comp": true,
-  "detail": "5:24 - 1st",
-  "down": "1st & 10 at PITT 14",
+  "detail": "2:56 - 1st",
+  "down": "1st & 10 at GT 45",
   "espn_id": "401858281",
   "final": false,
   "home_abbr": "PITT",
@@ -1293,21 +1293,21 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "away",
-    "val": "3/3, 14 YDS",
-    "who": "A. Mendoza"
+    "team": "home",
+    "val": "3/6, 32 YDS",
+    "who": "H. Geriner"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "6 CAR, 47 YDS",
+    "val": "9 CAR, 57 YDS",
     "who": "D. Ferguson Jr."
    },
    {
     "cat": "REC",
-    "team": "away",
-    "val": "1 REC, 12 YDS",
-    "who": "J. Allen"
+    "team": "home",
+    "val": "2 REC, 19 YDS",
+    "who": "C. Hicks"
    }
   ],
   "line_away": [
@@ -1320,7 +1320,7 @@
   "period": 1,
   "poss": "home",
   "redzone": false,
-  "spot": "PITT 14",
+  "spot": "GT 45",
   "state": "PA",
   "status": "In Progress",
   "venue": "Acrisure Stadium"
@@ -2081,10 +2081,10 @@
   "away_rank": 99,
   "away_short": "Clemson",
   "city": "Tallahassee",
-  "clock": "12:54",
+  "clock": "11:39",
   "conf_comp": true,
-  "detail": "12:54 - 2nd",
-  "down": null,
+  "detail": "11:39 - 2nd",
+  "down": "2nd & 15 at CLEM 34",
   "espn_id": "401858280",
   "final": false,
   "home_abbr": "FSU",
@@ -2122,9 +2122,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "CLEM 34",
   "state": "FL",
   "status": "In Progress",
   "venue": "Doak Campbell Stadium"
@@ -2688,26 +2688,7 @@
   "home_rank": 99,
   "home_short": "Cincinnati",
   "in_play": false,
-  "leaders": [
-   {
-    "cat": "PASS",
-    "team": "home",
-    "val": "16/30, 263 YDS, 1 INT",
-    "who": "J. French IV"
-   },
-   {
-    "cat": "RUSH",
-    "team": "home",
-    "val": "14 CAR, 131 YDS, 1 TD",
-    "who": "C. Tabb"
-   },
-   {
-    "cat": "REC",
-    "team": "away",
-    "val": "5 REC, 112 YDS, 1 TD",
-    "who": "H. Andrews"
-   }
-  ],
+  "leaders": [],
   "line_away": [
    14.0,
    28.0,
@@ -2735,10 +2716,10 @@
   "away_rank": 1,
   "away_short": "Miami",
   "city": "Chapel Hill",
-  "clock": "8:23",
+  "clock": "5:05",
   "conf_comp": true,
-  "detail": "8:23 - 1st",
-  "down": "3rd & 10 at UNC 25",
+  "detail": "5:05 - 1st",
+  "down": null,
   "espn_id": "401858282",
   "final": false,
   "home_abbr": "UNC",
@@ -2749,9 +2730,9 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "away",
-    "val": "4/5, 27 YDS, 1 TD",
-    "who": "D. Mensah"
+    "team": "home",
+    "val": "2/4, 31 YDS",
+    "who": "B. Edwards Jr."
    },
    {
     "cat": "RUSH",
@@ -2774,9 +2755,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "UNC 25",
+  "spot": null,
   "state": "NC",
   "status": "In Progress",
   "venue": "Kenan Stadium"
@@ -2787,46 +2768,50 @@
   "away_rank": 99,
   "away_short": "Washington",
   "city": "Lincoln",
-  "clock": "0:00",
+  "clock": "12:36",
   "conf_comp": true,
-  "detail": "10/31 - 8:00 PM EDT",
-  "down": null,
+  "detail": "12:36 - 1st",
+  "down": "3rd & 5 at NEB 40",
   "espn_id": "401858504",
   "final": false,
   "home_abbr": "NEB",
   "home_r": "0",
   "home_rank": 99,
   "home_short": "Nebraska",
-  "in_play": false,
+  "in_play": true,
   "leaders": [
    {
     "cat": "PASS",
     "team": "home",
-    "val": "1570 YDS, 14 TD, 4 INT",
+    "val": "2/2, 8 YDS",
     "who": "A. Colandrea"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "60 CAR, 391 YDS, 5 TD",
-    "who": "J. Rule"
+    "val": "2 CAR, 5 YDS",
+    "who": "A. Colandrea"
    },
    {
     "cat": "REC",
     "team": "home",
-    "val": "38 REC, 492 YDS, 7 TD",
-    "who": "K. Gilmer"
+    "val": "1 REC, 8 YDS",
+    "who": "L. Lindenmeyer"
    }
   ],
-  "line_away": [],
-  "line_home": [],
+  "line_away": [
+   0.0
+  ],
+  "line_home": [
+   0.0
+  ],
   "neutral": false,
-  "period": 0,
-  "poss": null,
+  "period": 1,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "NEB 40",
   "state": "NE",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "Memorial Stadium (Lincoln, NE)"
  },
  "8916ba5e623a0a1d97dd0e7f50e4a205": {
@@ -3365,10 +3350,10 @@
   "away_rank": 2,
   "away_short": "Ohio State",
   "city": "Los Angeles",
-  "clock": "4:23",
+  "clock": "4:04",
   "conf_comp": true,
-  "detail": "4:23 - 1st",
-  "down": "4th & 4 at USC 37",
+  "detail": "4:04 - 1st",
+  "down": "1st & 10 at USC 25",
   "espn_id": "401858509",
   "final": false,
   "home_abbr": "USC",
@@ -3404,9 +3389,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "USC 37",
+  "spot": "USC 25",
   "state": "CA",
   "status": "In Progress",
   "venue": "Los Angeles Memorial Coliseum"
@@ -3523,10 +3508,10 @@
   "away_rank": 99,
   "away_short": "Washington St",
   "city": "San Diego",
-  "clock": "6:16",
+  "clock": "4:43",
   "conf_comp": true,
-  "detail": "6:16 - 2nd",
-  "down": "2nd & 10 at SDSU 35",
+  "detail": "4:43 - 2nd",
+  "down": null,
   "espn_id": "401860909",
   "final": false,
   "home_abbr": "SDSU",
@@ -3566,7 +3551,7 @@
   "period": 2,
   "poss": "home",
   "redzone": false,
-  "spot": "SDSU 35",
+  "spot": null,
   "state": "CA",
   "status": "In Progress",
   "venue": "Snapdragon Stadium"
@@ -3673,10 +3658,10 @@
   "away_rank": 23,
   "away_short": "Missouri",
   "city": "Fayetteville",
-  "clock": "13:05",
+  "clock": "10:11",
   "conf_comp": true,
-  "detail": "13:05 - 1st",
-  "down": "4th & 10 at ARK 45",
+  "detail": "10:11 - 1st",
+  "down": "1st & 10 at ARK 40",
   "espn_id": "401856733",
   "final": false,
   "home_abbr": "ARK",
@@ -3687,9 +3672,9 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "2/5, 20 YDS",
-    "who": "K. Jackson"
+    "team": "away",
+    "val": "3/4, 25 YDS",
+    "who": "A. Simmons"
    },
    {
     "cat": "RUSH",
@@ -3714,7 +3699,7 @@
   "period": 1,
   "poss": "home",
   "redzone": false,
-  "spot": "ARK 45",
+  "spot": "ARK 40",
   "state": "AR",
   "status": "In Progress",
   "venue": "Donald W. Reynolds Razorback Stadium"
@@ -3891,10 +3876,10 @@
   "away_rank": 99,
   "away_short": "Mississippi St",
   "city": "Austin",
-  "clock": "4:25",
+  "clock": "3:50",
   "conf_comp": true,
-  "detail": "4:25 - 1st",
-  "down": "3rd & 5 at TEX 25",
+  "detail": "3:50 - 1st",
+  "down": null,
   "espn_id": "401856737",
   "final": false,
   "home_abbr": "TEX",
@@ -3906,7 +3891,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "4/5, 68 YDS, 1 TD",
+    "val": "4/6, 68 YDS, 1 TD",
     "who": "A. Manning"
    },
    {
@@ -3930,9 +3915,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "TEX 25",
+  "spot": null,
   "state": "TX",
   "status": "In Progress",
   "venue": "DKR-Texas Memorial Stadium"
@@ -3946,11 +3931,11 @@
   "clock": "12:17",
   "conf_comp": true,
   "detail": "12:17 - 2nd",
-  "down": "2nd & Goal at OKST 2",
+  "down": null,
   "espn_id": "401856847",
   "final": false,
   "home_abbr": "ISU",
-  "home_r": "7",
+  "home_r": "14",
   "home_rank": 99,
   "home_short": "Iowa State",
   "in_play": true,
@@ -3980,13 +3965,13 @@
   ],
   "line_home": [
    7.0,
-   0.0
+   7.0
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
-  "redzone": true,
-  "spot": "OKST 2",
+  "poss": null,
+  "redzone": false,
+  "spot": null,
   "state": "IA",
   "status": "In Progress",
   "venue": "Jack Trice Stadium"
