@@ -535,14 +535,14 @@
   "away_rank": 99,
   "away_short": "N Illinois",
   "city": "Las Vegas",
-  "clock": "10:15",
+  "clock": "7:04",
   "conf_comp": true,
-  "detail": "10:15 - 2nd",
+  "detail": "7:04 - 2nd",
   "down": null,
   "espn_id": "401864530",
   "final": false,
   "home_abbr": "UNLV",
-  "home_r": "10",
+  "home_r": "16",
   "home_rank": 99,
   "home_short": "UNLV",
   "in_play": true,
@@ -550,7 +550,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "5/8, 133 YDS, 1 TD, 1 INT",
+    "val": "8/11, 186 YDS, 2 TD, 1 INT",
     "who": "J. Arnold"
    },
    {
@@ -572,12 +572,12 @@
   ],
   "line_home": [
    10.0,
-   0.0
+   6.0
   ],
   "neutral": false,
   "period": 2,
   "poss": null,
-  "redzone": false,
+  "redzone": true,
   "spot": null,
   "state": "NV",
   "status": "In Progress",
@@ -1285,10 +1285,10 @@
   "away_rank": 99,
   "away_short": "Georgia Tech",
   "city": "Pittsburgh",
-  "clock": "1:46",
+  "clock": "0:54",
   "conf_comp": true,
-  "detail": "1:46 - 4th",
-  "down": null,
+  "detail": "0:54 - 4th",
+  "down": "4th & Goal at PITT 3",
   "espn_id": "401858281",
   "final": false,
   "home_abbr": "PITT",
@@ -1331,8 +1331,8 @@
   "neutral": false,
   "period": 4,
   "poss": "away",
-  "redzone": false,
-  "spot": null,
+  "redzone": true,
+  "spot": "PITT 3",
   "state": "PA",
   "status": "In Progress",
   "venue": "Acrisure Stadium"
@@ -2901,13 +2901,13 @@
  },
  "877d5834acad37b6142a835438c23001": {
   "away_abbr": "WASH",
-  "away_r": "3",
+  "away_r": "17",
   "away_rank": 99,
   "away_short": "Washington",
   "city": "Lincoln",
-  "clock": "5:17",
+  "clock": "0:35",
   "conf_comp": true,
-  "detail": "5:17 - 4th",
+  "detail": "0:35 - 4th",
   "down": "3rd & 8 at NEB 22",
   "espn_id": "401858504",
   "final": false,
@@ -2940,7 +2940,7 @@
    0.0,
    3.0,
    0.0,
-   0.0
+   14.0
   ],
   "line_home": [
    7.0,
@@ -3390,11 +3390,11 @@
   "clock": "4:13",
   "conf_comp": true,
   "detail": "4:13 - 2nd",
-  "down": null,
+  "down": "1st & 10 at TXST 25",
   "espn_id": "401860908",
   "final": false,
   "home_abbr": "BOIS",
-  "home_r": "20",
+  "home_r": "21",
   "home_rank": 20,
   "home_short": "Boise St",
   "in_play": true,
@@ -3402,7 +3402,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "12/14, 161 YDS, 1 TD",
+    "val": "12/14, 160 YDS",
     "who": "M. Madsen"
    },
    {
@@ -3424,13 +3424,13 @@
   ],
   "line_home": [
    7.0,
-   13.0
+   14.0
   ],
   "neutral": false,
   "period": 2,
   "poss": null,
-  "redzone": true,
-  "spot": null,
+  "redzone": false,
+  "spot": "TXST 25",
   "state": "ID",
   "status": "In Progress",
   "venue": "Albertsons Stadium"
@@ -3769,17 +3769,17 @@
   "away_rank": 99,
   "away_short": "Army",
   "city": "Memphis",
-  "clock": "0:02",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:02 - 4th",
+  "detail": "Final",
   "down": null,
   "espn_id": "401862814",
-  "final": false,
+  "final": true,
   "home_abbr": "MEM",
   "home_r": "49",
   "home_rank": 99,
   "home_short": "Memphis",
-  "in_play": true,
+  "in_play": false,
   "leaders": [
    {
     "cat": "PASS",
@@ -3814,11 +3814,11 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
   "spot": null,
   "state": "TN",
-  "status": "In Progress",
+  "status": "Final",
   "venue": "Simmons Bank Liberty Stadium"
  },
  "c6533cfcdfb0860d723a5fd9b9381098": {
@@ -3933,10 +3933,10 @@
   "away_rank": 99,
   "away_short": "Oregon St",
   "city": "Fresno",
-  "clock": "11:36",
+  "clock": "9:29",
   "conf_comp": true,
-  "detail": "11:36 - 1st",
-  "down": "1st & 10 at FRES 3",
+  "detail": "9:29 - 1st",
+  "down": null,
   "espn_id": "401860924",
   "final": false,
   "home_abbr": "FRES",
@@ -3954,8 +3954,8 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "1 CAR, 5 YDS",
-    "who": "R. Luke"
+    "val": "3 CAR, 8 YDS",
+    "who": "B. Donelson"
    },
    {
     "cat": "REC",
@@ -3972,9 +3972,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "FRES 3",
+  "spot": null,
   "state": "CA",
   "status": "In Progress",
   "venue": "Valley Children's Stadium"
