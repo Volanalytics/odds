@@ -535,10 +535,10 @@
   "away_rank": 99,
   "away_short": "N Illinois",
   "city": "Las Vegas",
-  "clock": "15:00",
+  "clock": "12:04",
   "conf_comp": true,
-  "detail": "15:00 - 2nd",
-  "down": "3rd & 9 at UNLV 30",
+  "detail": "12:04 - 2nd",
+  "down": "1st & Goal at UNLV 6",
   "espn_id": "401864530",
   "final": false,
   "home_abbr": "UNLV",
@@ -550,13 +550,13 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "5/7, 133 YDS, 1 TD",
+    "val": "5/8, 133 YDS, 1 TD, 1 INT",
     "who": "J. Arnold"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "5 CAR, 34 YDS",
+    "val": "6 CAR, 36 YDS",
     "who": "E. Porter"
    },
    {
@@ -576,9 +576,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
-  "redzone": false,
-  "spot": "UNLV 30",
+  "poss": "away",
+  "redzone": true,
+  "spot": "UNLV 6",
   "state": "NV",
   "status": "In Progress",
   "venue": "Allegiant Stadium"
@@ -1285,10 +1285,10 @@
   "away_rank": 99,
   "away_short": "Georgia Tech",
   "city": "Pittsburgh",
-  "clock": "3:28",
+  "clock": "1:58",
   "conf_comp": true,
-  "detail": "3:28 - 4th",
-  "down": null,
+  "detail": "1:58 - 4th",
+  "down": "4th & 14 at GT 38",
   "espn_id": "401858281",
   "final": false,
   "home_abbr": "PITT",
@@ -1330,9 +1330,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "GT 38",
   "state": "PA",
   "status": "In Progress",
   "venue": "Acrisure Stadium"
@@ -2905,9 +2905,9 @@
   "away_rank": 99,
   "away_short": "Washington",
   "city": "Lincoln",
-  "clock": "5:54",
+  "clock": "5:17",
   "conf_comp": true,
-  "detail": "5:54 - 4th",
+  "detail": "5:17 - 4th",
   "down": "2nd & 6 at NEB 24",
   "espn_id": "401858504",
   "final": false,
@@ -2920,7 +2920,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "18/35, 207 YDS, 1 TD, 2 INT",
+    "val": "19/36, 207 YDS, 1 TD, 2 INT",
     "who": "A. Colandrea"
    },
    {
@@ -3387,10 +3387,10 @@
   "away_rank": 99,
   "away_short": "Texas St",
   "city": "Boise",
-  "clock": "7:33",
+  "clock": "7:24",
   "conf_comp": true,
-  "detail": "7:33 - 2nd",
-  "down": null,
+  "detail": "7:24 - 2nd",
+  "down": "2nd & 5 at BOIS 30",
   "espn_id": "401860908",
   "final": false,
   "home_abbr": "BOIS",
@@ -3402,7 +3402,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "9/10, 117 YDS",
+    "val": "9/11, 117 YDS",
     "who": "M. Madsen"
    },
    {
@@ -3428,9 +3428,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "BOIS 30",
   "state": "ID",
   "status": "In Progress",
   "venue": "Albertsons Stadium"
@@ -3769,14 +3769,14 @@
   "away_rank": 99,
   "away_short": "Army",
   "city": "Memphis",
-  "clock": "2:00",
+  "clock": "1:35",
   "conf_comp": true,
-  "detail": "2:00 - 4th",
+  "detail": "1:35 - 4th",
   "down": null,
   "espn_id": "401862814",
   "final": false,
   "home_abbr": "MEM",
-  "home_r": "42",
+  "home_r": "49",
   "home_rank": 99,
   "home_short": "Memphis",
   "in_play": true,
@@ -3810,12 +3810,12 @@
    14.0,
    14.0,
    7.0,
-   7.0
+   14.0
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
-  "redzone": true,
+  "poss": null,
+  "redzone": false,
   "spot": null,
   "state": "TN",
   "status": "In Progress",
@@ -3929,14 +3929,14 @@
  },
  "d0126c335a51772c70c76e17ca06afb3": {
   "away_abbr": "ORST",
-  "away_r": "0",
+  "away_r": "6",
   "away_rank": 99,
   "away_short": "Oregon St",
   "city": "Fresno",
-  "clock": "14:16",
+  "clock": "12:23",
   "conf_comp": true,
-  "detail": "14:16 - 1st",
-  "down": "1st & 10 at FRES 30",
+  "detail": "12:23 - 1st",
+  "down": null,
   "espn_id": "401860924",
   "final": false,
   "home_abbr": "FRES",
@@ -3947,19 +3947,25 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "1, 0 YDS, 1 INT",
-    "who": "J. Mandal"
+    "team": "away",
+    "val": "2/3, 26 YDS",
+    "who": "B. Atkinson"
    },
    {
     "cat": "RUSH",
     "team": "home",
     "val": "1 CAR, 5 YDS",
     "who": "R. Luke"
+   },
+   {
+    "cat": "REC",
+    "team": "away",
+    "val": "1 REC, 23 YDS",
+    "who": "J. Legree"
    }
   ],
   "line_away": [
-   0.0
+   6.0
   ],
   "line_home": [
    0.0
@@ -3968,7 +3974,7 @@
   "period": 1,
   "poss": "away",
   "redzone": false,
-  "spot": "FRES 30",
+  "spot": null,
   "state": "CA",
   "status": "In Progress",
   "venue": "Valley Children's Stadium"
