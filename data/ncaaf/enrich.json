@@ -535,10 +535,10 @@
   "away_rank": 99,
   "away_short": "N Illinois",
   "city": "Las Vegas",
-  "clock": "2:29",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "2:29 - 3rd",
-  "down": "1st & 10 at NIU 1",
+  "detail": "End of 3rd",
+  "down": "3rd & 1 at UNLV 43",
   "espn_id": "401864530",
   "final": false,
   "home_abbr": "UNLV",
@@ -562,7 +562,7 @@
    {
     "cat": "REC",
     "team": "away",
-    "val": "5 REC, 122 YDS, 1 TD",
+    "val": "6 REC, 122 YDS, 1 TD",
     "who": "G. Dimopoulos"
    }
   ],
@@ -580,7 +580,7 @@
   "period": 3,
   "poss": "away",
   "redzone": false,
-  "spot": "NIU 1",
+  "spot": "UNLV 43",
   "state": "NV",
   "status": "In Progress",
   "venue": "Allegiant Stadium"
@@ -3581,10 +3581,10 @@
   "away_rank": 99,
   "away_short": "Texas St",
   "city": "Boise",
-  "clock": "13:48",
+  "clock": "12:25",
   "conf_comp": true,
-  "detail": "13:48 - 4th",
-  "down": null,
+  "detail": "12:25 - 4th",
+  "down": "4th & 12 at BOIS 23",
   "espn_id": "401860908",
   "final": false,
   "home_abbr": "BOIS",
@@ -3602,7 +3602,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "18 CAR, 61 YDS, 1 TD",
+    "val": "19 CAR, 66 YDS, 1 TD",
     "who": "D. Riley"
    },
    {
@@ -3626,9 +3626,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "BOIS 23",
   "state": "ID",
   "status": "In Progress",
   "venue": "Albertsons Stadium"
@@ -4131,10 +4131,10 @@
   "away_rank": 99,
   "away_short": "Oregon St",
   "city": "Fresno",
-  "clock": "0:00",
+  "clock": "10:00",
   "conf_comp": true,
-  "detail": "Halftime",
-  "down": "3rd & 8 at ORST 28",
+  "detail": "10:00 - 3rd",
+  "down": "4th & 5 at ORST 12",
   "espn_id": "401860924",
   "final": false,
   "home_abbr": "FRES",
@@ -4146,13 +4146,13 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "16/30, 171 YDS",
+    "val": "16/31, 171 YDS",
     "who": "B. Atkinson"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "9 CAR, 100 YDS, 1 TD",
+    "val": "10 CAR, 103 YDS, 1 TD",
     "who": "B. Donelson"
    },
    {
@@ -4164,19 +4164,21 @@
   ],
   "line_away": [
    3.0,
-   6.0
+   6.0,
+   0.0
   ],
   "line_home": [
    7.0,
-   14.0
+   14.0,
+   0.0
   ],
   "neutral": false,
-  "period": 2,
-  "poss": null,
-  "redzone": false,
-  "spot": "ORST 28",
+  "period": 3,
+  "poss": "home",
+  "redzone": true,
+  "spot": "ORST 12",
   "state": "CA",
-  "status": "Halftime",
+  "status": "In Progress",
   "venue": "Valley Children's Stadium"
  },
  "d19dbab4071552441b056ccd2e23ca59": {
