@@ -585,15 +585,15 @@
   "city": "Las Vegas",
   "clock": "0:00",
   "conf_comp": true,
-  "detail": "End of 4th",
+  "detail": "Final",
   "down": null,
   "espn_id": "401864530",
-  "final": false,
+  "final": true,
   "home_abbr": "UNLV",
   "home_r": "31",
   "home_rank": 99,
   "home_short": "UNLV",
-  "in_play": true,
+  "in_play": false,
   "leaders": [
    {
     "cat": "PASS",
@@ -628,11 +628,11 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
-  "redzone": true,
+  "poss": null,
+  "redzone": false,
   "spot": null,
   "state": "NV",
-  "status": "In Progress",
+  "status": "Final",
   "venue": "Allegiant Stadium"
  },
  "1e591733bae48534963359a9cff13701": {
@@ -3775,10 +3775,10 @@
   "away_rank": 99,
   "away_short": "Texas St",
   "city": "Boise",
-  "clock": "2:40",
+  "clock": "2:00",
   "conf_comp": true,
-  "detail": "2:40 - 4th",
-  "down": null,
+  "detail": "2:00 - 4th",
+  "down": "4th & 3 at TXST 32",
   "espn_id": "401860908",
   "final": false,
   "home_abbr": "BOIS",
@@ -3790,7 +3790,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "22/34, 320 YDS, 4 TD",
+    "val": "23/37, 327 YDS, 4 TD",
     "who": "B. Jackson"
    },
    {
@@ -3820,9 +3820,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": null,
-  "redzone": true,
-  "spot": null,
+  "poss": "away",
+  "redzone": false,
+  "spot": "TXST 32",
   "state": "ID",
   "status": "In Progress",
   "venue": "Albertsons Stadium"
@@ -4325,10 +4325,10 @@
   "away_rank": 99,
   "away_short": "Oregon St",
   "city": "Fresno",
-  "clock": "9:21",
+  "clock": "8:33",
   "conf_comp": true,
-  "detail": "9:21 - 4th",
-  "down": "1st & 10 at FRES 21",
+  "detail": "8:33 - 4th",
+  "down": "2nd & 9 at FRES 22",
   "espn_id": "401860924",
   "final": false,
   "home_abbr": "FRES",
@@ -4346,7 +4346,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "13 CAR, 109 YDS, 1 TD",
+    "val": "14 CAR, 109 YDS, 1 TD",
     "who": "B. Donelson"
    },
    {
@@ -4372,7 +4372,7 @@
   "period": 4,
   "poss": "home",
   "redzone": false,
-  "spot": "FRES 21",
+  "spot": "FRES 22",
   "state": "CA",
   "status": "In Progress",
   "venue": "Valley Children's Stadium"
