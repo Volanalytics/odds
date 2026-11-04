@@ -2069,46 +2069,50 @@
   "away_rank": 99,
   "away_short": "Buffalo",
   "city": "Oxford",
-  "clock": "0:00",
+  "clock": "13:00",
   "conf_comp": true,
-  "detail": "11/3 - 8:00 PM EST",
-  "down": null,
+  "detail": "13:00 - 1st",
+  "down": "2nd & 6 at M-OH 28",
   "espn_id": "401866454",
   "final": false,
   "home_abbr": "M-OH",
   "home_r": "0",
   "home_rank": 99,
   "home_short": "Miami OH",
-  "in_play": false,
+  "in_play": true,
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "1121 YDS, 7 TD, 1 INT",
-    "who": "D. McComb"
+    "team": "away",
+    "val": "1/1, 35 YDS",
+    "who": "J. Wright"
    },
    {
     "cat": "RUSH",
-    "team": "away",
-    "val": "151 CAR, 845 YDS, 5 TD",
-    "who": "M. Burch"
+    "team": "home",
+    "val": "1 CAR, 5 YDS",
+    "who": "R. Nelson"
    },
    {
     "cat": "REC",
     "team": "away",
-    "val": "41 REC, 480 YDS, 6 TD",
-    "who": "C. Morrow"
+    "val": "1 REC, 35 YDS",
+    "who": "D. Early Jr."
    }
   ],
-  "line_away": [],
-  "line_home": [],
+  "line_away": [
+   0.0
+  ],
+  "line_home": [
+   0.0
+  ],
   "neutral": false,
-  "period": 0,
-  "poss": null,
+  "period": 1,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "M-OH 28",
   "state": "OH",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "Yager Stadium"
  },
  "6bfae12b9d44d12ca7dde4f4f4aedc7d": {
@@ -3077,10 +3081,10 @@
   "away_rank": 99,
   "away_short": "Ohio",
   "city": "Akron",
-  "clock": "7:12",
+  "clock": "4:17",
   "conf_comp": true,
-  "detail": "7:12 - 2nd",
-  "down": "3rd & 1 at AKR 23",
+  "detail": "4:17 - 2nd",
+  "down": null,
   "espn_id": "401866453",
   "final": false,
   "home_abbr": "AKR",
@@ -3092,13 +3096,13 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "11/14, 91 YDS, 1 INT",
+    "val": "13/17, 128 YDS, 1 INT",
     "who": "C. Broughton"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "9 CAR, 64 YDS",
+    "val": "10 CAR, 67 YDS",
     "who": "J. Gant"
    },
    {
@@ -3120,7 +3124,7 @@
   "period": 2,
   "poss": "home",
   "redzone": false,
-  "spot": "AKR 23",
+  "spot": null,
   "state": "OH",
   "status": "In Progress",
   "venue": "InfoCision Stadium"
