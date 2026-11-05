@@ -2855,10 +2855,10 @@
   "away_rank": 99,
   "away_short": "Toledo",
   "city": "Sacramento",
-  "clock": "0:00",
+  "clock": "11:40",
   "conf_comp": true,
-  "detail": "Halftime",
-  "down": "2nd & 11 at TOL 30",
+  "detail": "11:40 - 3rd",
+  "down": "2nd & 11 at SAC 2",
   "espn_id": "401866457",
   "final": false,
   "home_abbr": "SAC",
@@ -2876,7 +2876,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "13 CAR, 40 YDS",
+    "val": "13 CAR, 45 YDS",
     "who": "C. Miller"
    },
    {
@@ -2888,19 +2888,21 @@
   ],
   "line_away": [
    7.0,
+   0.0,
    0.0
   ],
   "line_home": [
    3.0,
-   7.0
+   7.0,
+   0.0
   ],
   "neutral": false,
-  "period": 2,
-  "poss": null,
+  "period": 3,
+  "poss": "home",
   "redzone": false,
-  "spot": "TOL 30",
+  "spot": "SAC 2",
   "state": "CA",
-  "status": "Halftime",
+  "status": "In Progress",
   "venue": "Hornet Stadium"
  },
  "841d7821e82447f8a7d8592ec4584eec": {
@@ -4115,14 +4117,14 @@
  },
  "e5c8c0aaad6dc26e9ede547783d854d2": {
   "away_abbr": "CMU",
-  "away_r": "20",
+  "away_r": "21",
   "away_rank": 99,
   "away_short": "C Michigan",
   "city": "Detroit",
-  "clock": "1:48",
+  "clock": "0:46",
   "conf_comp": true,
-  "detail": "1:48 - 2nd",
-  "down": null,
+  "detail": "0:46 - 2nd",
+  "down": "2nd & 18 at EMU 34",
   "espn_id": "401866456",
   "final": false,
   "home_abbr": "EMU",
@@ -4152,7 +4154,7 @@
   ],
   "line_away": [
    7.0,
-   13.0
+   14.0
   ],
   "line_home": [
    0.0,
@@ -4160,9 +4162,9 @@
   ],
   "neutral": true,
   "period": 2,
-  "poss": null,
-  "redzone": true,
-  "spot": null,
+  "poss": "home",
+  "redzone": false,
+  "spot": "EMU 34",
   "state": "MI",
   "status": "In Progress",
   "venue": "Ford Field"
