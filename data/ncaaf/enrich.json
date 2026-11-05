@@ -2465,14 +2465,14 @@
   "away_rank": 99,
   "away_short": "Ball State",
   "city": "Amherst",
-  "clock": "3:42",
+  "clock": "1:25",
   "conf_comp": true,
-  "detail": "3:42 - 3rd",
-  "down": "1st & 10 at BALL 42",
+  "detail": "1:25 - 3rd",
+  "down": "3rd & 3 at MASS 49",
   "espn_id": "401866455",
   "final": false,
   "home_abbr": "MASS",
-  "home_r": "14",
+  "home_r": "21",
   "home_rank": 99,
   "home_short": "UMass",
   "in_play": true,
@@ -2480,7 +2480,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "11/17, 160 YDS, 1 TD",
+    "val": "12/18, 201 YDS, 1 TD",
     "who": "W. Watson III"
    },
    {
@@ -2504,13 +2504,13 @@
   "line_home": [
    0.0,
    14.0,
-   0.0
+   7.0
   ],
   "neutral": false,
   "period": 3,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "BALL 42",
+  "spot": "MASS 49",
   "state": "MA",
   "status": "In Progress",
   "venue": "Warren McGuirk Alumni Stadium"
@@ -2857,10 +2857,10 @@
   "away_rank": 99,
   "away_short": "Toledo",
   "city": "Sacramento",
-  "clock": "0:00",
+  "clock": "12:52",
   "conf_comp": true,
-  "detail": "End of 3rd",
-  "down": "4th & 14 at SAC 33",
+  "detail": "12:52 - 4th",
+  "down": "1st & 10 at SAC 14",
   "espn_id": "401866457",
   "final": false,
   "home_abbr": "SAC",
@@ -2878,7 +2878,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "19 CAR, 106 YDS",
+    "val": "22 CAR, 115 YDS",
     "who": "C. Miller"
    },
    {
@@ -2891,20 +2891,22 @@
   "line_away": [
    7.0,
    0.0,
-   10.0
+   10.0,
+   0.0
   ],
   "line_home": [
    3.0,
    7.0,
+   0.0,
    0.0
   ],
   "neutral": false,
-  "period": 3,
+  "period": 4,
   "poss": "home",
   "redzone": false,
-  "spot": "SAC 33",
+  "spot": "SAC 14",
   "state": "CA",
-  "status": "End of Period",
+  "status": "In Progress",
   "venue": "Hornet Stadium"
  },
  "841d7821e82447f8a7d8592ec4584eec": {
@@ -4123,10 +4125,10 @@
   "away_rank": 99,
   "away_short": "C Michigan",
   "city": "Detroit",
-  "clock": "13:09",
+  "clock": "10:58",
   "conf_comp": true,
-  "detail": "13:09 - 3rd",
-  "down": "2nd & 7 at CMU 13",
+  "detail": "10:58 - 3rd",
+  "down": null,
   "espn_id": "401866456",
   "final": false,
   "home_abbr": "EMU",
@@ -4138,7 +4140,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "10/13, 144 YDS, 1 TD",
+    "val": "11/15, 148 YDS, 1 TD",
     "who": "J. Glasser"
    },
    {
@@ -4168,7 +4170,7 @@
   "period": 3,
   "poss": "away",
   "redzone": false,
-  "spot": "CMU 13",
+  "spot": null,
   "state": "MI",
   "status": "In Progress",
   "venue": "Ford Field"
