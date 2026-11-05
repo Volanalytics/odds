@@ -2465,10 +2465,10 @@
   "away_rank": 99,
   "away_short": "Ball State",
   "city": "Amherst",
-  "clock": "0:00",
+  "clock": "14:08",
   "conf_comp": true,
-  "detail": "End of 3rd",
-  "down": "4th & 15 at BALL 43",
+  "detail": "14:08 - 4th",
+  "down": "1st & 10 at MASS 25",
   "espn_id": "401866455",
   "final": false,
   "home_abbr": "MASS",
@@ -2480,7 +2480,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "12/18, 201 YDS, 1 TD",
+    "val": "13/19, 215 YDS, 1 TD",
     "who": "W. Watson III"
    },
    {
@@ -2492,27 +2492,29 @@
    {
     "cat": "REC",
     "team": "home",
-    "val": "6 REC, 70 YDS",
-    "who": "T.Y. Harding"
+    "val": "2 REC, 78 YDS, 1 TD",
+    "who": "J. Lewis"
    }
   ],
   "line_away": [
    7.0,
    3.0,
-   7.0
+   7.0,
+   0.0
   ],
   "line_home": [
    0.0,
    14.0,
-   7.0
+   7.0,
+   0.0
   ],
   "neutral": false,
-  "period": 3,
-  "poss": "away",
+  "period": 4,
+  "poss": "home",
   "redzone": false,
-  "spot": "BALL 43",
+  "spot": "MASS 25",
   "state": "MA",
-  "status": "End of Period",
+  "status": "In Progress",
   "venue": "Warren McGuirk Alumni Stadium"
  },
  "6ffa2c2d3470751aa022854ec50dcce6": {
@@ -2857,10 +2859,10 @@
   "away_rank": 99,
   "away_short": "Toledo",
   "city": "Sacramento",
-  "clock": "0:00",
+  "clock": "9:45",
   "conf_comp": true,
-  "detail": "End of 4th",
-  "down": "1st & 10 at TOL 48",
+  "detail": "9:45 - 4th",
+  "down": "2nd & 10 at SAC 44",
   "espn_id": "401866457",
   "final": false,
   "home_abbr": "SAC",
@@ -2904,7 +2906,7 @@
   "period": 4,
   "poss": "away",
   "redzone": false,
-  "spot": "TOL 48",
+  "spot": "SAC 44",
   "state": "CA",
   "status": "In Progress",
   "venue": "Hornet Stadium"
@@ -4121,14 +4123,14 @@
  },
  "e5c8c0aaad6dc26e9ede547783d854d2": {
   "away_abbr": "CMU",
-  "away_r": "21",
+  "away_r": "27",
   "away_rank": 99,
   "away_short": "C Michigan",
   "city": "Detroit",
-  "clock": "8:48",
+  "clock": "5:33",
   "conf_comp": true,
-  "detail": "8:48 - 3rd",
-  "down": "2nd & 8 at EMU 27",
+  "detail": "5:33 - 3rd",
+  "down": null,
   "espn_id": "401866456",
   "final": false,
   "home_abbr": "EMU",
@@ -4146,7 +4148,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "16 CAR, 103 YDS, 2 TD",
+    "val": "19 CAR, 122 YDS, 3 TD",
     "who": "N. Woodford"
    },
    {
@@ -4159,7 +4161,7 @@
   "line_away": [
    7.0,
    14.0,
-   0.0
+   6.0
   ],
   "line_home": [
    0.0,
@@ -4168,9 +4170,9 @@
   ],
   "neutral": true,
   "period": 3,
-  "poss": "away",
-  "redzone": false,
-  "spot": "EMU 27",
+  "poss": null,
+  "redzone": true,
+  "spot": null,
   "state": "MI",
   "status": "In Progress",
   "venue": "Ford Field"
