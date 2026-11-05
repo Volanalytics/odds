@@ -2465,10 +2465,10 @@
   "away_rank": 99,
   "away_short": "Ball State",
   "city": "Amherst",
-  "clock": "2:00",
+  "clock": "0:52",
   "conf_comp": true,
-  "detail": "2:00 - 2nd",
-  "down": null,
+  "detail": "0:52 - 2nd",
+  "down": "1st & Goal at MASS 10",
   "espn_id": "401866455",
   "final": false,
   "home_abbr": "MASS",
@@ -2480,7 +2480,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "4/9, 85 YDS, 1 TD",
+    "val": "5/11, 99 YDS, 1 TD",
     "who": "K. Luster"
    },
    {
@@ -2507,8 +2507,8 @@
   "neutral": false,
   "period": 2,
   "poss": "away",
-  "redzone": false,
-  "spot": null,
+  "redzone": true,
+  "spot": "MASS 10",
   "state": "MA",
   "status": "In Progress",
   "venue": "Warren McGuirk Alumni Stadium"
@@ -2855,10 +2855,10 @@
   "away_rank": 99,
   "away_short": "Toledo",
   "city": "Sacramento",
-  "clock": "0:54",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:54 - 2nd",
-  "down": "4th & 16 at TOL 24",
+  "detail": "End of 2nd",
+  "down": null,
   "espn_id": "401866457",
   "final": false,
   "home_abbr": "SAC",
@@ -2896,9 +2896,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "TOL 24",
+  "spot": null,
   "state": "CA",
   "status": "In Progress",
   "venue": "Hornet Stadium"
@@ -4115,14 +4115,14 @@
  },
  "e5c8c0aaad6dc26e9ede547783d854d2": {
   "away_abbr": "CMU",
-  "away_r": "7",
+  "away_r": "14",
   "away_rank": 99,
   "away_short": "C Michigan",
   "city": "Detroit",
-  "clock": "12:54",
+  "clock": "10:25",
   "conf_comp": true,
-  "detail": "12:54 - 2nd",
-  "down": "3rd & 13 at EMU 49",
+  "detail": "10:25 - 2nd",
+  "down": null,
   "espn_id": "401866456",
   "final": false,
   "home_abbr": "EMU",
@@ -4134,13 +4134,13 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "7/10, 114 YDS, 1 TD",
+    "val": "9/12, 141 YDS, 1 TD",
     "who": "J. Glasser"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "6 CAR, 25 YDS",
+    "val": "8 CAR, 47 YDS, 1 TD",
     "who": "N. Woodford"
    },
    {
@@ -4152,7 +4152,7 @@
   ],
   "line_away": [
    7.0,
-   0.0
+   7.0
   ],
   "line_home": [
    0.0,
@@ -4160,9 +4160,9 @@
   ],
   "neutral": true,
   "period": 2,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "EMU 49",
+  "spot": null,
   "state": "MI",
   "status": "In Progress",
   "venue": "Ford Field"
