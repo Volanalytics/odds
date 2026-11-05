@@ -2465,10 +2465,10 @@
   "away_rank": 99,
   "away_short": "Ball State",
   "city": "Amherst",
-  "clock": "2:10",
+  "clock": "0:03",
   "conf_comp": true,
-  "detail": "2:10 - 1st",
-  "down": "2nd & 15 at BALL 48",
+  "detail": "0:03 - 1st",
+  "down": "2nd & 14 at 50",
   "espn_id": "401866455",
   "final": false,
   "home_abbr": "MASS",
@@ -2504,9 +2504,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "BALL 48",
+  "spot": "50",
   "state": "MA",
   "status": "In Progress",
   "venue": "Warren McGuirk Alumni Stadium"
@@ -2853,10 +2853,10 @@
   "away_rank": 99,
   "away_short": "Toledo",
   "city": "Sacramento",
-  "clock": "2:46",
+  "clock": "15:00",
   "conf_comp": true,
-  "detail": "2:46 - 1st",
-  "down": "2nd & 5 at TOL 6",
+  "detail": "15:00 - 1st",
+  "down": "3rd & 11 at TOL 24",
   "espn_id": "401866457",
   "final": false,
   "home_abbr": "SAC",
@@ -2874,7 +2874,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "7 CAR, 20 YDS",
+    "val": "9 CAR, 31 YDS",
     "who": "C. Miller"
    },
    {
@@ -2894,7 +2894,7 @@
   "period": 1,
   "poss": "away",
   "redzone": false,
-  "spot": "TOL 6",
+  "spot": "TOL 24",
   "state": "CA",
   "status": "In Progress",
   "venue": "Hornet Stadium"
@@ -4115,46 +4115,50 @@
   "away_rank": 99,
   "away_short": "C Michigan",
   "city": "Detroit",
-  "clock": "0:00",
+  "clock": "11:20",
   "conf_comp": true,
-  "detail": "11/4 - 7:30 PM EST",
-  "down": null,
+  "detail": "11:20 - 1st",
+  "down": "3rd & 2 at EMU 15",
   "espn_id": "401866456",
   "final": false,
   "home_abbr": "EMU",
   "home_r": "0",
   "home_rank": 99,
   "home_short": "E Michigan",
-  "in_play": false,
+  "in_play": true,
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "1678 YDS, 11 TD, 4 INT",
-    "who": "N. Kim"
+    "team": "away",
+    "val": "3/3, 49 YDS",
+    "who": "J. Glasser"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "128 CAR, 618 YDS, 4 TD",
-    "who": "A. Flores"
+    "val": "3 CAR, 11 YDS",
+    "who": "J. Clerveaux"
    },
    {
     "cat": "REC",
-    "team": "home",
-    "val": "42 REC, 383 YDS, 2 TD",
-    "who": "J. Long"
+    "team": "away",
+    "val": "3 REC, 49 YDS",
+    "who": "J. Ruffin Jr."
    }
   ],
-  "line_away": [],
-  "line_home": [],
+  "line_away": [
+   0.0
+  ],
+  "line_home": [
+   0.0
+  ],
   "neutral": true,
-  "period": 0,
-  "poss": null,
-  "redzone": false,
-  "spot": null,
+  "period": 1,
+  "poss": "away",
+  "redzone": true,
+  "spot": "EMU 15",
   "state": "MI",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "Ford Field"
  },
  "ea19c798fc1f9c5f8c38a3a60be9448f": {
