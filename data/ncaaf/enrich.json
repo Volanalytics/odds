@@ -341,10 +341,10 @@
   "away_rank": 99,
   "away_short": "Virginia Tech",
   "city": "Dallas",
-  "clock": "0:00",
+  "clock": "12:43",
   "conf_comp": true,
-  "detail": "End of 3rd",
-  "down": "3rd & 6 at SMU 45",
+  "detail": "12:43 - 4th",
+  "down": "3rd & 1 at VT 22",
   "espn_id": "401858288",
   "final": false,
   "home_abbr": "SMU",
@@ -356,7 +356,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "21/26, 284 YDS, 2 TD",
+    "val": "21/27, 284 YDS, 2 TD",
     "who": "K. Jennings"
    },
    {
@@ -375,18 +375,20 @@
   "line_away": [
    0.0,
    14.0,
+   0.0,
    0.0
   ],
   "line_home": [
    10.0,
    13.0,
-   14.0
+   14.0,
+   0.0
   ],
   "neutral": false,
-  "period": 3,
+  "period": 4,
   "poss": "home",
   "redzone": false,
-  "spot": "SMU 45",
+  "spot": "VT 22",
   "state": "TX",
   "status": "In Progress",
   "venue": "Gerald J. Ford Stadium"
@@ -1165,10 +1167,10 @@
   "away_rank": 99,
   "away_short": "New Mexico",
   "city": "Reno",
-  "clock": "0:59",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:59 - 1st",
-  "down": "2nd & 9 at UNM 49",
+  "detail": "End of 1st",
+  "down": "2nd & 10 at UNM 20",
   "espn_id": "401864533",
   "final": false,
   "home_abbr": "NEV",
@@ -1180,13 +1182,13 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "6/8, 35 YDS",
+    "val": "6/10, 35 YDS",
     "who": "A. Bianco"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "4 CAR, 40 YDS, 1 TD",
+    "val": "5 CAR, 40 YDS, 1 TD",
     "who": "S. Humphrey"
    },
    {
@@ -1204,9 +1206,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "UNM 49",
+  "spot": "UNM 20",
   "state": "NV",
   "status": "In Progress",
   "venue": "Mackay Stadium"
@@ -1553,14 +1555,14 @@
   "away_rank": 99,
   "away_short": "South Florida",
   "city": "Greenville",
-  "clock": "9:54",
+  "clock": "6:24",
   "conf_comp": true,
-  "detail": "9:54 - 3rd",
-  "down": "2nd & 11 at ECU 31",
+  "detail": "6:24 - 3rd",
+  "down": null,
   "espn_id": "401862818",
   "final": false,
   "home_abbr": "ECU",
-  "home_r": "10",
+  "home_r": "17",
   "home_rank": 99,
   "home_short": "East Carolina",
   "in_play": true,
@@ -1573,14 +1575,14 @@
    },
    {
     "cat": "RUSH",
-    "team": "away",
-    "val": "12 CAR, 62 YDS",
-    "who": "D.J. Crowther"
+    "team": "home",
+    "val": "10 CAR, 77 YDS",
+    "who": "A. Gray"
    },
    {
     "cat": "REC",
     "team": "home",
-    "val": "10 REC, 104 YDS, 1 TD",
+    "val": "12 REC, 117 YDS, 2 TD",
     "who": "L. Sides"
    }
   ],
@@ -1592,13 +1594,13 @@
   "line_home": [
    0.0,
    10.0,
-   0.0
+   7.0
   ],
   "neutral": false,
   "period": 3,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "ECU 31",
+  "spot": null,
   "state": "NC",
   "status": "In Progress",
   "venue": "Dowdy-Ficklen Stadium"
@@ -1705,10 +1707,10 @@
   "away_rank": 99,
   "away_short": "Nebraska",
   "city": "Champaign",
-  "clock": "0:21",
+  "clock": "0:01",
   "conf_comp": true,
-  "detail": "0:21 - 2nd",
-  "down": null,
+  "detail": "0:01 - 2nd",
+  "down": "3rd & 5 at ILL 41",
   "espn_id": "401858510",
   "final": false,
   "home_abbr": "ILL",
@@ -1720,7 +1722,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "10/14, 130 YDS, 1 TD",
+    "val": "11/16, 135 YDS, 1 TD",
     "who": "K. Houser"
    },
    {
@@ -1746,9 +1748,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "ILL 41",
   "state": "IL",
   "status": "In Progress",
   "venue": "Gies Memorial Stadium"
