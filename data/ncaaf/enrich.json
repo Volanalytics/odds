@@ -337,14 +337,14 @@
  },
  "11da04c7d3fba48caf11a5d8b66b8ccd": {
   "away_abbr": "VT",
-  "away_r": "14",
+  "away_r": "22",
   "away_rank": 99,
   "away_short": "Virginia Tech",
   "city": "Dallas",
-  "clock": "7:03",
+  "clock": "6:29",
   "conf_comp": true,
-  "detail": "7:03 - 4th",
-  "down": "2nd & 10 at SMU 16",
+  "detail": "6:29 - 4th",
+  "down": null,
   "espn_id": "401858288",
   "final": false,
   "home_abbr": "SMU",
@@ -362,7 +362,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "12 CAR, 121 YDS, 1 TD",
+    "val": "13 CAR, 123 YDS, 2 TD",
     "who": "J. Overton Jr."
    },
    {
@@ -376,7 +376,7 @@
    0.0,
    14.0,
    0.0,
-   0.0
+   8.0
   ],
   "line_home": [
    10.0,
@@ -386,9 +386,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
+  "poss": null,
   "redzone": true,
-  "spot": "SMU 16",
+  "spot": null,
   "state": "TX",
   "status": "In Progress",
   "venue": "Gerald J. Ford Stadium"
@@ -1167,10 +1167,10 @@
   "away_rank": 99,
   "away_short": "New Mexico",
   "city": "Reno",
-  "clock": "10:00",
+  "clock": "8:05",
   "conf_comp": true,
-  "detail": "10:00 - 2nd",
-  "down": "1st & 15 at NEV 48",
+  "detail": "8:05 - 2nd",
+  "down": "1st & 10 at NEV 15",
   "espn_id": "401864533",
   "final": false,
   "home_abbr": "NEV",
@@ -1182,7 +1182,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "8/10, 56 YDS",
+    "val": "9/11, 56 YDS",
     "who": "T. Fa'avae"
    },
    {
@@ -1208,9 +1208,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "NEV 48",
+  "spot": "NEV 15",
   "state": "NV",
   "status": "In Progress",
   "venue": "Mackay Stadium"
@@ -1557,10 +1557,10 @@
   "away_rank": 99,
   "away_short": "South Florida",
   "city": "Greenville",
-  "clock": "1:30",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "1:30 - 3rd",
-  "down": "2nd & 2 at USF 38",
+  "detail": "End of 3rd",
+  "down": "2nd & 10 at ECU 48",
   "espn_id": "401862818",
   "final": false,
   "home_abbr": "ECU",
@@ -1572,7 +1572,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "13/16, 128 YDS, 1 TD",
+    "val": "14/17, 136 YDS, 1 TD",
     "who": "L. Kromenhoek"
    },
    {
@@ -1602,9 +1602,9 @@
   "period": 3,
   "poss": "away",
   "redzone": false,
-  "spot": "USF 38",
+  "spot": "ECU 48",
   "state": "NC",
-  "status": "In Progress",
+  "status": "End of Period",
   "venue": "Dowdy-Ficklen Stadium"
  },
  "5304671601ad3064a66a332cbb09313f": {
@@ -1852,64 +1852,6 @@
   "state": "NC",
   "status": "Scheduled",
   "venue": "Carter-Finley Stadium"
- },
- "5af84fe49ccd4f304f9af0dce0a0db56": {
-  "away_abbr": "UTSA",
-  "away_r": "29",
-  "away_rank": 99,
-  "away_short": "UTSA",
-  "city": "Boca Raton",
-  "clock": "0:00",
-  "conf_comp": true,
-  "detail": "Final",
-  "down": null,
-  "espn_id": "401862817",
-  "final": true,
-  "home_abbr": "FAU",
-  "home_r": "60",
-  "home_rank": 99,
-  "home_short": "FAU",
-  "in_play": false,
-  "leaders": [
-   {
-    "cat": "PASS",
-    "team": "away",
-    "val": "20/35, 265 YDS, 3 TD",
-    "who": "O. McCown"
-   },
-   {
-    "cat": "RUSH",
-    "team": "home",
-    "val": "12 CAR, 126 YDS, 1 TD",
-    "who": "L. Farrow"
-   },
-   {
-    "cat": "REC",
-    "team": "away",
-    "val": "6 REC, 117 YDS, 2 TD",
-    "who": "M. Anderson"
-   }
-  ],
-  "line_away": [
-   7.0,
-   15.0,
-   7.0,
-   0.0
-  ],
-  "line_home": [
-   21.0,
-   14.0,
-   15.0,
-   10.0
-  ],
-  "neutral": false,
-  "period": 4,
-  "poss": null,
-  "redzone": false,
-  "spot": null,
-  "state": "FL",
-  "status": "Final",
-  "venue": "Flagler Credit Union Stadium"
  },
  "5b00e6b226dce4274d819d5d1818e703": {
   "away_abbr": "MSST",
@@ -3948,64 +3890,6 @@
   "state": "OH",
   "status": "Scheduled",
   "venue": "Doyt L. Perry Stadium"
- },
- "c93b343bc3151a39a9541c0af3b22123": {
-  "away_abbr": "JMU",
-  "away_r": "54",
-  "away_rank": 99,
-  "away_short": "James Madison",
-  "city": "Hattiesburg",
-  "clock": "0:00",
-  "conf_comp": true,
-  "detail": "Final",
-  "down": null,
-  "espn_id": "401869964",
-  "final": true,
-  "home_abbr": "USM",
-  "home_r": "23",
-  "home_rank": 99,
-  "home_short": "Southern Miss",
-  "in_play": false,
-  "leaders": [
-   {
-    "cat": "PASS",
-    "team": "home",
-    "val": "22/35, 266 YDS, 1 TD",
-    "who": "J. White"
-   },
-   {
-    "cat": "RUSH",
-    "team": "away",
-    "val": "10 CAR, 56 YDS",
-    "who": "S. Cromwell"
-   },
-   {
-    "cat": "REC",
-    "team": "away",
-    "val": "6 REC, 138 YDS",
-    "who": "C. Scott"
-   }
-  ],
-  "line_away": [
-   10.0,
-   6.0,
-   14.0,
-   24.0
-  ],
-  "line_home": [
-   0.0,
-   14.0,
-   0.0,
-   9.0
-  ],
-  "neutral": false,
-  "period": 4,
-  "poss": null,
-  "redzone": false,
-  "spot": null,
-  "state": "MS",
-  "status": "Final",
-  "venue": "M. M. Roberts Stadium"
  },
  "ca349dad8e0e573b453654d24b63e3d1": {
   "away_abbr": "TEM",
