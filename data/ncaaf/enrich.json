@@ -1167,10 +1167,10 @@
   "away_rank": 99,
   "away_short": "New Mexico",
   "city": "Reno",
-  "clock": "8:45",
+  "clock": "7:10",
   "conf_comp": true,
-  "detail": "8:45 - 3rd",
-  "down": null,
+  "detail": "7:10 - 3rd",
+  "down": "4th & 14 at NEV 21",
   "espn_id": "401864533",
   "final": false,
   "home_abbr": "NEV",
@@ -1182,7 +1182,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "12/24, 99 YDS",
+    "val": "13/25, 99 YDS",
     "who": "A. Bianco"
    },
    {
@@ -1210,9 +1210,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "NEV 21",
   "state": "NV",
   "status": "In Progress",
   "venue": "Mackay Stadium"
@@ -1713,10 +1713,10 @@
   "away_rank": 99,
   "away_short": "Nebraska",
   "city": "Champaign",
-  "clock": "7:51",
+  "clock": "6:35",
   "conf_comp": true,
-  "detail": "7:51 - 4th",
-  "down": null,
+  "detail": "6:35 - 4th",
+  "down": "3rd & 3 at NEB 28",
   "espn_id": "401858510",
   "final": false,
   "home_abbr": "ILL",
@@ -1758,9 +1758,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "NEB 28",
   "state": "IL",
   "status": "In Progress",
   "venue": "Gies Memorial Stadium"
@@ -2657,10 +2657,10 @@
   "away_rank": 99,
   "away_short": "TCU",
   "city": "Tucson",
-  "clock": "0:13",
+  "clock": "14:50",
   "conf_comp": true,
-  "detail": "0:13 - 1st",
-  "down": "2nd & 10 at ARIZ 24",
+  "detail": "14:50 - 2nd",
+  "down": "4th & 1 at ARIZ 15",
   "espn_id": "401856855",
   "final": false,
   "home_abbr": "ARIZ",
@@ -2689,16 +2689,18 @@
    }
   ],
   "line_away": [
+   0.0,
    0.0
   ],
   "line_home": [
-   10.0
+   10.0,
+   0.0
   ],
   "neutral": false,
-  "period": 1,
+  "period": 2,
   "poss": "away",
-  "redzone": false,
-  "spot": "ARIZ 24",
+  "redzone": true,
+  "spot": "ARIZ 15",
   "state": "AZ",
   "status": "In Progress",
   "venue": "Casino Del Sol Stadium"
