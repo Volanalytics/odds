@@ -827,14 +827,14 @@
  },
  "3582b30b32fb23939161eb280cc5ca97": {
   "away_abbr": "UNC",
-  "away_r": "28",
+  "away_r": "31",
   "away_rank": 99,
   "away_short": "North Carolina",
   "city": "East Hartford",
-  "clock": "6:41",
+  "clock": "5:54",
   "conf_comp": false,
-  "detail": "6:41 - 3rd",
-  "down": "3rd & 4 at CONN 9",
+  "detail": "5:54 - 3rd",
+  "down": "2nd & 8 at CONN 9",
   "espn_id": "401858292",
   "final": false,
   "home_abbr": "CONN",
@@ -865,7 +865,7 @@
   "line_away": [
    7.0,
    21.0,
-   0.0
+   3.0
   ],
   "line_home": [
    0.0,
@@ -874,8 +874,8 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "away",
-  "redzone": true,
+  "poss": "home",
+  "redzone": false,
   "spot": "CONN 9",
   "state": "CT",
   "status": "In Progress",
@@ -887,10 +887,10 @@
   "away_rank": 99,
   "away_short": "Florida St",
   "city": "Chestnut Hill",
-  "clock": "9:03",
+  "clock": "5:31",
   "conf_comp": true,
-  "detail": "9:03 - 3rd",
-  "down": null,
+  "detail": "5:31 - 3rd",
+  "down": "3rd & 3 at FSU 20",
   "espn_id": "401858289",
   "final": false,
   "home_abbr": "BC",
@@ -902,14 +902,14 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "13/20, 148 YDS, 1 TD, 1 INT",
+    "val": "14/21, 164 YDS, 1 TD, 1 INT",
     "who": "M. McKenzie"
    },
    {
     "cat": "RUSH",
-    "team": "away",
-    "val": "11 CAR, 58 YDS",
-    "who": "Q. Wisner"
+    "team": "home",
+    "val": "12 CAR, 64 YDS, 1 TD",
+    "who": "B. MacCormack III"
    },
    {
     "cat": "REC",
@@ -930,9 +930,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "away",
-  "redzone": false,
-  "spot": null,
+  "poss": "home",
+  "redzone": true,
+  "spot": "FSU 20",
   "state": "MA",
   "status": "In Progress",
   "venue": "Alumni Stadium (Chestnut Hill, MA)"
@@ -991,14 +991,14 @@
   "away_rank": 99,
   "away_short": "Arkansas",
   "city": "Auburn",
-  "clock": "0:46",
+  "clock": "0:03",
   "conf_comp": true,
-  "detail": "0:46 - 2nd",
-  "down": "3rd & 3 at ARK 22",
+  "detail": "0:03 - 2nd",
+  "down": null,
   "espn_id": "401856738",
   "final": false,
   "home_abbr": "AUB",
-  "home_r": "0",
+  "home_r": "3",
   "home_rank": 99,
   "home_short": "Auburn",
   "in_play": true,
@@ -1006,7 +1006,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "11/16, 79 YDS",
+    "val": "13/20, 91 YDS",
     "who": "B. Brown"
    },
    {
@@ -1028,13 +1028,13 @@
   ],
   "line_home": [
    0.0,
-   0.0
+   3.0
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "ARK 22",
+  "spot": null,
   "state": "AL",
   "status": "In Progress",
   "venue": "Jordan-Hare Stadium"
@@ -1141,10 +1141,10 @@
   "away_rank": 7,
   "away_short": "Texas",
   "city": "Columbia",
-  "clock": "10:59",
+  "clock": "8:31",
   "conf_comp": true,
-  "detail": "10:59 - 3rd",
-  "down": "3rd & 7 at TEX 27",
+  "detail": "8:31 - 3rd",
+  "down": "3rd & 3 at MIZ 10",
   "espn_id": "401856743",
   "final": false,
   "home_abbr": "MIZ",
@@ -1155,9 +1155,9 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "14/28, 147 YDS, 1 TD",
-    "who": "A. Simmons"
+    "team": "away",
+    "val": "16/21, 177 YDS, 1 TD",
+    "who": "A. Manning"
    },
    {
     "cat": "RUSH",
@@ -1167,9 +1167,9 @@
    },
    {
     "cat": "REC",
-    "team": "home",
-    "val": "7 REC, 69 YDS",
-    "who": "C. Lee"
+    "team": "away",
+    "val": "5 REC, 85 YDS",
+    "who": "E. Mosley V"
    }
   ],
   "line_away": [
@@ -1184,9 +1184,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "home",
-  "redzone": false,
-  "spot": "TEX 27",
+  "poss": "away",
+  "redzone": true,
+  "spot": "MIZ 10",
   "state": "MO",
   "status": "In Progress",
   "venue": "Memorial Stadium"
@@ -1847,13 +1847,13 @@
  },
  "59263b8c355e171b2bcd5c1827a36b7e": {
   "away_abbr": "DUKE",
-  "away_r": "24",
+  "away_r": "31",
   "away_rank": 99,
   "away_short": "Duke",
   "city": "Raleigh",
-  "clock": "0:02",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:02 - 2nd",
+  "detail": "Halftime",
   "down": null,
   "espn_id": "401858286",
   "final": false,
@@ -1884,7 +1884,7 @@
   ],
   "line_away": [
    7.0,
-   17.0
+   24.0
   ],
   "line_home": [
    3.0,
@@ -1892,11 +1892,11 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
   "spot": null,
   "state": "NC",
-  "status": "In Progress",
+  "status": "Halftime",
   "venue": "Carter-Finley Stadium"
  },
  "5af84fe49ccd4f304f9af0dce0a0db56": {
@@ -2007,14 +2007,14 @@
  },
  "5b05bf2ff27508703418dcf70079a22f": {
   "away_abbr": "UCLA",
-  "away_r": "10",
+  "away_r": "17",
   "away_rank": 8,
   "away_short": "UCLA",
   "city": "Minneapolis",
-  "clock": "11:16",
+  "clock": "9:07",
   "conf_comp": true,
-  "detail": "11:16 - 3rd",
-  "down": "1st & 10 at UCLA 38",
+  "detail": "9:07 - 3rd",
+  "down": null,
   "espn_id": "401858512",
   "final": false,
   "home_abbr": "MINN",
@@ -2026,14 +2026,14 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "5/12, 126 YDS, 1 INT",
+    "val": "6/13, 153 YDS, 1 TD, 1 INT",
     "who": "T. Dieffenbach"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "5 CAR, 36 YDS",
-    "who": "T. Dieffenbach"
+    "val": "8 CAR, 44 YDS, 1 TD",
+    "who": "W. Knight"
    },
    {
     "cat": "REC",
@@ -2045,7 +2045,7 @@
   "line_away": [
    10.0,
    0.0,
-   0.0
+   7.0
   ],
   "line_home": [
    0.0,
@@ -2054,9 +2054,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "UCLA 38",
+  "spot": null,
   "state": "MN",
   "status": "In Progress",
   "venue": "Huntington Bank Stadium"
@@ -2163,10 +2163,10 @@
   "away_rank": 99,
   "away_short": "Old Dominion",
   "city": "Conway",
-  "clock": "2:51",
+  "clock": "2:25",
   "conf_comp": true,
-  "detail": "2:51 - 2nd",
-  "down": "3rd & 17 at CCU 33",
+  "detail": "2:25 - 2nd",
+  "down": "1st & 10 at ODU 35",
   "espn_id": "401869945",
   "final": false,
   "home_abbr": "CCU",
@@ -2178,7 +2178,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "6/12, 72 YDS",
+    "val": "7/14, 89 YDS",
     "who": "D. Bailey"
    },
    {
@@ -2206,7 +2206,7 @@
   "period": 2,
   "poss": "home",
   "redzone": false,
-  "spot": "CCU 33",
+  "spot": "ODU 35",
   "state": "SC",
   "status": "In Progress",
   "venue": "Brooks Stadium (SC)"
@@ -2767,23 +2767,23 @@
   "away_rank": 99,
   "away_short": "Iowa State",
   "city": "Waco",
-  "clock": "11:13",
+  "clock": "10:16",
   "conf_comp": true,
-  "detail": "11:13 - 3rd",
-  "down": "3rd & 18 at ISU 28",
+  "detail": "10:16 - 3rd",
+  "down": null,
   "espn_id": "401856853",
   "final": false,
   "home_abbr": "BAY",
-  "home_r": "21",
+  "home_r": "27",
   "home_rank": 99,
   "home_short": "Baylor",
   "in_play": true,
   "leaders": [
    {
     "cat": "PASS",
-    "team": "away",
-    "val": "10/18, 142 YDS, 1 TD",
-    "who": "J. Raynor"
+    "team": "home",
+    "val": "12/21, 177 YDS, 2 TD",
+    "who": "D. Lagway"
    },
    {
     "cat": "RUSH",
@@ -2806,13 +2806,13 @@
   "line_home": [
    0.0,
    21.0,
-   0.0
+   6.0
   ],
   "neutral": false,
   "period": 3,
-  "poss": "away",
-  "redzone": false,
-  "spot": "ISU 28",
+  "poss": null,
+  "redzone": true,
+  "spot": null,
   "state": "TX",
   "status": "In Progress",
   "venue": "McLane Stadium"
@@ -3076,7 +3076,7 @@
   "clock": "0:00",
   "conf_comp": true,
   "detail": "Halftime",
-  "down": "1st & 10 at MD 25",
+  "down": "2nd & 8 at PUR 45",
   "espn_id": "401858515",
   "final": false,
   "home_abbr": "PUR",
@@ -3099,9 +3099,9 @@
    },
    {
     "cat": "REC",
-    "team": "home",
-    "val": "1 REC, 37 YDS",
-    "who": "A. Waseem"
+    "team": "away",
+    "val": "3 REC, 40 YDS",
+    "who": "C. Durr Jr."
    }
   ],
   "line_away": [
@@ -3116,7 +3116,7 @@
   "period": 2,
   "poss": null,
   "redzone": false,
-  "spot": "MD 25",
+  "spot": "PUR 45",
   "state": "IN",
   "status": "Halftime",
   "venue": "Ross-Ade Stadium"
@@ -3267,14 +3267,14 @@
  },
  "8d5eeb24eeb0ac7ff32325a8a8c4b371": {
   "away_abbr": "TLSA",
-  "away_r": "39",
+  "away_r": "46",
   "away_rank": 99,
   "away_short": "Tulsa",
   "city": "New Orleans",
-  "clock": "6:33",
+  "clock": "4:10",
   "conf_comp": true,
-  "detail": "6:33 - 3rd",
-  "down": "1st & 10 at TULN 18",
+  "detail": "4:10 - 3rd",
+  "down": null,
   "espn_id": "401862822",
   "final": false,
   "home_abbr": "TULN",
@@ -3286,14 +3286,14 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "25/30, 321 YDS, 4 TD",
+    "val": "25/32, 321 YDS, 4 TD",
     "who": "B. Hayes"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "7 CAR, 42 YDS",
-    "who": "T. Jones"
+    "val": "14 CAR, 52 YDS, 1 TD",
+    "who": "D. Alston"
    },
    {
     "cat": "REC",
@@ -3305,7 +3305,7 @@
   "line_away": [
    7.0,
    25.0,
-   7.0
+   14.0
   ],
   "line_home": [
    0.0,
@@ -3314,9 +3314,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "away",
-  "redzone": true,
-  "spot": "TULN 18",
+  "poss": null,
+  "redzone": false,
+  "spot": null,
   "state": "LA",
   "status": "In Progress",
   "venue": "Yulman Stadium"
@@ -3327,10 +3327,10 @@
   "away_rank": 9,
   "away_short": "BYU",
   "city": "Salt Lake City",
-  "clock": "8:47",
+  "clock": "7:14",
   "conf_comp": true,
-  "detail": "8:47 - 3rd",
-  "down": "1st & 10 at BYU 10",
+  "detail": "7:14 - 3rd",
+  "down": "1st & 10 at UTAH 47",
   "espn_id": "401856849",
   "final": false,
   "home_abbr": "UTAH",
@@ -3342,7 +3342,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "17/23, 245 YDS, 1 TD, 2 INT",
+    "val": "17/24, 245 YDS, 1 TD, 2 INT",
     "who": "B. Bachmeier"
    },
    {
@@ -3370,9 +3370,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "BYU 10",
+  "spot": "UTAH 47",
   "state": "UT",
   "status": "In Progress",
   "venue": "Rice-Eccles Stadium"
@@ -4611,10 +4611,10 @@
   "away_rank": 99,
   "away_short": "Oklahoma St",
   "city": "Manhattan",
-  "clock": "8:26",
+  "clock": "6:50",
   "conf_comp": true,
-  "detail": "8:26 - 2nd",
-  "down": null,
+  "detail": "6:50 - 2nd",
+  "down": "4th & 2 at OKST 38",
   "espn_id": "401856854",
   "final": false,
   "home_abbr": "KSU",
@@ -4652,9 +4652,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "OKST 38",
   "state": "KS",
   "status": "In Progress",
   "venue": "Bill Snyder Family Stadium"
