@@ -341,14 +341,14 @@
   "away_rank": 99,
   "away_short": "Virginia Tech",
   "city": "Dallas",
-  "clock": "6:16",
+  "clock": "6:09",
   "conf_comp": true,
-  "detail": "6:16 - 2nd",
-  "down": "3rd & 10 at VT 46",
+  "detail": "6:09 - 2nd",
+  "down": null,
   "espn_id": "401858288",
   "final": false,
   "home_abbr": "SMU",
-  "home_r": "13",
+  "home_r": "20",
   "home_rank": 99,
   "home_short": "SMU",
   "in_play": true,
@@ -356,7 +356,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "15/17, 164 YDS",
+    "val": "16/18, 210 YDS, 1 TD",
     "who": "K. Jennings"
    },
    {
@@ -378,13 +378,13 @@
   ],
   "line_home": [
    10.0,
-   3.0
+   10.0
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "VT 46",
+  "spot": null,
   "state": "TX",
   "status": "In Progress",
   "venue": "Gerald J. Ford Stadium"
@@ -1547,10 +1547,10 @@
   "away_rank": 99,
   "away_short": "South Florida",
   "city": "Greenville",
-  "clock": "5:23",
+  "clock": "1:54",
   "conf_comp": true,
-  "detail": "5:23 - 1st",
-  "down": "3rd & 11 at USF 23",
+  "detail": "1:54 - 1st",
+  "down": "3rd & 13 at ECU 34",
   "espn_id": "401862818",
   "final": false,
   "home_abbr": "ECU",
@@ -1586,9 +1586,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "USF 23",
+  "spot": "ECU 34",
   "state": "NC",
   "status": "In Progress",
   "venue": "Dowdy-Ficklen Stadium"
@@ -1695,46 +1695,50 @@
   "away_rank": 99,
   "away_short": "Nebraska",
   "city": "Champaign",
-  "clock": "0:00",
+  "clock": "14:07",
   "conf_comp": true,
-  "detail": "11/6 - 8:00 PM EST",
-  "down": null,
+  "detail": "14:07 - 1st",
+  "down": "2nd & 5 at NEB 43",
   "espn_id": "401858510",
   "final": false,
   "home_abbr": "ILL",
   "home_r": "0",
   "home_rank": 99,
   "home_short": "Illinois",
-  "in_play": false,
+  "in_play": true,
   "leaders": [
    {
     "cat": "PASS",
     "team": "away",
-    "val": "1825 YDS, 15 TD, 7 INT",
+    "val": "2/2, 13 YDS",
     "who": "A. Colandrea"
    },
    {
     "cat": "RUSH",
-    "team": "home",
-    "val": "89 CAR, 560 YDS, 2 TD",
-    "who": "A. Laughery"
+    "team": "away",
+    "val": "1 CAR, 5 YDS",
+    "who": "J. Rule"
    },
    {
     "cat": "REC",
-    "team": "home",
-    "val": "60 REC, 781 YDS, 10 TD",
-    "who": "C. Dixon"
+    "team": "away",
+    "val": "1 REC, 13 YDS",
+    "who": "K. Gilmer"
    }
   ],
-  "line_away": [],
-  "line_home": [],
+  "line_away": [
+   0.0
+  ],
+  "line_home": [
+   0.0
+  ],
   "neutral": false,
-  "period": 0,
-  "poss": null,
+  "period": 1,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "NEB 43",
   "state": "IL",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "Gies Memorial Stadium"
  },
  "591a88cc16d9c5830bef16d7f522bc8a": {
