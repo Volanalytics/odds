@@ -987,10 +987,10 @@
   "away_rank": 99,
   "away_short": "Arkansas",
   "city": "Auburn",
-  "clock": "10:06",
+  "clock": "8:30",
   "conf_comp": true,
-  "detail": "10:06 - 2nd",
-  "down": "1st & 20 at AUB 39",
+  "detail": "8:30 - 2nd",
+  "down": "1st & 10 at ARK 20",
   "espn_id": "401856738",
   "final": false,
   "home_abbr": "AUB",
@@ -1028,9 +1028,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "AUB 39",
+  "spot": "ARK 20",
   "state": "AL",
   "status": "In Progress",
   "venue": "Jordan-Hare Stadium"
@@ -1841,14 +1841,14 @@
  },
  "59263b8c355e171b2bcd5c1827a36b7e": {
   "away_abbr": "DUKE",
-  "away_r": "14",
+  "away_r": "17",
   "away_rank": 99,
   "away_short": "Duke",
   "city": "Raleigh",
-  "clock": "4:14",
+  "clock": "3:09",
   "conf_comp": true,
-  "detail": "4:14 - 2nd",
-  "down": "4th & 4 at NCSU 22",
+  "detail": "3:09 - 2nd",
+  "down": "1st & 10 at NCSU 19",
   "espn_id": "401858286",
   "final": false,
   "home_abbr": "NCSU",
@@ -1860,13 +1860,13 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "15/19, 133 YDS",
+    "val": "15/20, 133 YDS",
     "who": "W. Eget"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "11 CAR, 139 YDS, 2 TD",
+    "val": "12 CAR, 138 YDS, 2 TD",
     "who": "N. Sheppard"
    },
    {
@@ -1878,7 +1878,7 @@
   ],
   "line_away": [
    7.0,
-   7.0
+   10.0
   ],
   "line_home": [
    3.0,
@@ -1886,9 +1886,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "NCSU 22",
+  "spot": "NCSU 19",
   "state": "NC",
   "status": "In Progress",
   "venue": "Carter-Finley Stadium"
@@ -2005,14 +2005,14 @@
   "away_rank": 8,
   "away_short": "UCLA",
   "city": "Minneapolis",
-  "clock": "0:22",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:22 - 2nd",
-  "down": "3rd & 10 at UCLA 25",
+  "detail": "Halftime",
+  "down": null,
   "espn_id": "401858512",
   "final": false,
   "home_abbr": "MINN",
-  "home_r": "7",
+  "home_r": "10",
   "home_rank": 99,
   "home_short": "Minnesota",
   "in_play": true,
@@ -2042,15 +2042,15 @@
   ],
   "line_home": [
    0.0,
-   7.0
+   10.0
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "UCLA 25",
+  "spot": null,
   "state": "MN",
-  "status": "In Progress",
+  "status": "Halftime",
   "venue": "Huntington Bank Stadium"
  },
  "5b6989e8ecca343c4de3e7d285b70aa3": {
@@ -2155,10 +2155,10 @@
   "away_rank": 99,
   "away_short": "Old Dominion",
   "city": "Conway",
-  "clock": "14:52",
+  "clock": "11:42",
   "conf_comp": true,
-  "detail": "14:52 - 2nd",
-  "down": "1st & 10 at CCU 37",
+  "detail": "11:42 - 2nd",
+  "down": "3rd & 1 at CCU 49",
   "espn_id": "401869945",
   "final": false,
   "home_abbr": "CCU",
@@ -2170,7 +2170,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "5/6, 46 YDS",
+    "val": "6/9, 51 YDS",
     "who": "J. Potter"
    },
    {
@@ -2187,16 +2187,18 @@
    }
   ],
   "line_away": [
-   14.0
+   14.0,
+   0.0
   ],
   "line_home": [
+   0.0,
    0.0
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "CCU 37",
+  "spot": "CCU 49",
   "state": "SC",
   "status": "In Progress",
   "venue": "Brooks Stadium (SC)"
@@ -3061,14 +3063,14 @@
   "away_rank": 99,
   "away_short": "Maryland",
   "city": "West Lafayette",
-  "clock": "1:50",
+  "clock": "0:35",
   "conf_comp": true,
-  "detail": "1:50 - 2nd",
-  "down": null,
+  "detail": "0:35 - 2nd",
+  "down": "3rd & 3 at MD 32",
   "espn_id": "401858515",
   "final": false,
   "home_abbr": "PUR",
-  "home_r": "9",
+  "home_r": "12",
   "home_rank": 99,
   "home_short": "Purdue",
   "in_play": true,
@@ -3076,7 +3078,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "10/16, 92 YDS",
+    "val": "11/17, 99 YDS",
     "who": "R. Browne"
    },
    {
@@ -3098,13 +3100,13 @@
   ],
   "line_home": [
    3.0,
-   6.0
+   9.0
   ],
   "neutral": false,
   "period": 2,
   "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "MD 32",
   "state": "IN",
   "status": "In Progress",
   "venue": "Ross-Ade Stadium"
@@ -4589,14 +4591,14 @@
  },
  "f3d964c6b45c36f9e6009c47e64f96db": {
   "away_abbr": "OKST",
-  "away_r": "21",
+  "away_r": "28",
   "away_rank": 99,
   "away_short": "Oklahoma St",
   "city": "Manhattan",
-  "clock": "3:30",
+  "clock": "0:50",
   "conf_comp": true,
-  "detail": "3:30 - 1st",
-  "down": "3rd & 1 at KSU 34",
+  "detail": "0:50 - 1st",
+  "down": null,
   "espn_id": "401856854",
   "final": false,
   "home_abbr": "KSU",
@@ -4608,13 +4610,13 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "7/7, 115 YDS, 1 TD",
+    "val": "8/8, 118 YDS, 2 TD",
     "who": "D. Mestemaker"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "6 CAR, 96 YDS, 2 TD",
+    "val": "7 CAR, 97 YDS, 2 TD",
     "who": "C. Hawkins"
    },
    {
@@ -4625,16 +4627,16 @@
    }
   ],
   "line_away": [
-   21.0
+   28.0
   ],
   "line_home": [
    7.0
   ],
   "neutral": false,
   "period": 1,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "KSU 34",
+  "spot": null,
   "state": "KS",
   "status": "In Progress",
   "venue": "Bill Snyder Family Stadium"
