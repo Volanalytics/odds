@@ -341,10 +341,10 @@
   "away_rank": 99,
   "away_short": "Virginia Tech",
   "city": "Dallas",
-  "clock": "6:29",
+  "clock": "4:21",
   "conf_comp": true,
-  "detail": "6:29 - 4th",
-  "down": null,
+  "detail": "4:21 - 4th",
+  "down": "3rd & 5 at SMU 18",
   "espn_id": "401858288",
   "final": false,
   "home_abbr": "SMU",
@@ -356,7 +356,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "23/30, 300 YDS, 3 TD",
+    "val": "23/31, 300 YDS, 3 TD, 1 INT",
     "who": "K. Jennings"
    },
    {
@@ -386,9 +386,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": null,
+  "poss": "away",
   "redzone": true,
-  "spot": null,
+  "spot": "SMU 18",
   "state": "TX",
   "status": "In Progress",
   "venue": "Gerald J. Ford Stadium"
@@ -1167,10 +1167,10 @@
   "away_rank": 99,
   "away_short": "New Mexico",
   "city": "Reno",
-  "clock": "8:05",
+  "clock": "3:48",
   "conf_comp": true,
-  "detail": "8:05 - 2nd",
-  "down": "1st & 10 at NEV 15",
+  "detail": "3:48 - 2nd",
+  "down": "3rd & 12 at NEV 42",
   "espn_id": "401864533",
   "final": false,
   "home_abbr": "NEV",
@@ -1182,20 +1182,20 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "9/11, 56 YDS",
+    "val": "10/12, 84 YDS",
     "who": "T. Fa'avae"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "5 CAR, 40 YDS, 1 TD",
+    "val": "6 CAR, 35 YDS, 1 TD",
     "who": "S. Humphrey"
    },
    {
     "cat": "REC",
     "team": "away",
-    "val": "2 REC, 17 YDS",
-    "who": "B. George"
+    "val": "3 REC, 38 YDS",
+    "who": "C. Keith"
    }
   ],
   "line_away": [
@@ -1208,9 +1208,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "NEV 15",
+  "spot": "NEV 42",
   "state": "NV",
   "status": "In Progress",
   "venue": "Mackay Stadium"
@@ -1557,10 +1557,10 @@
   "away_rank": 99,
   "away_short": "South Florida",
   "city": "Greenville",
-  "clock": "0:00",
+  "clock": "13:28",
   "conf_comp": true,
-  "detail": "End of 3rd",
-  "down": "2nd & 10 at ECU 48",
+  "detail": "13:28 - 4th",
+  "down": "1st & 10 at ECU 15",
   "espn_id": "401862818",
   "final": false,
   "home_abbr": "ECU",
@@ -1591,20 +1591,22 @@
   "line_away": [
    7.0,
    3.0,
+   0.0,
    0.0
   ],
   "line_home": [
    0.0,
    10.0,
-   7.0
+   7.0,
+   0.0
   ],
   "neutral": false,
-  "period": 3,
-  "poss": "away",
+  "period": 4,
+  "poss": "home",
   "redzone": false,
-  "spot": "ECU 48",
+  "spot": "ECU 15",
   "state": "NC",
-  "status": "End of Period",
+  "status": "In Progress",
   "venue": "Dowdy-Ficklen Stadium"
  },
  "5304671601ad3064a66a332cbb09313f": {
@@ -1712,7 +1714,7 @@
   "clock": "0:00",
   "conf_comp": true,
   "detail": "Halftime",
-  "down": null,
+  "down": "2nd & 10 at ILL 47",
   "espn_id": "401858510",
   "final": false,
   "home_abbr": "ILL",
@@ -1724,7 +1726,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "11/17, 135 YDS, 1 TD",
+    "val": "12/19, 152 YDS, 1 TD",
     "who": "K. Houser"
    },
    {
@@ -1752,7 +1754,7 @@
   "period": 2,
   "poss": null,
   "redzone": false,
-  "spot": null,
+  "spot": "ILL 47",
   "state": "IL",
   "status": "Halftime",
   "venue": "Gies Memorial Stadium"
@@ -1852,6 +1854,64 @@
   "state": "NC",
   "status": "Scheduled",
   "venue": "Carter-Finley Stadium"
+ },
+ "5af84fe49ccd4f304f9af0dce0a0db56": {
+  "away_abbr": "UTSA",
+  "away_r": "29",
+  "away_rank": 99,
+  "away_short": "UTSA",
+  "city": "Boca Raton",
+  "clock": "0:00",
+  "conf_comp": true,
+  "detail": "Final",
+  "down": null,
+  "espn_id": "401862817",
+  "final": true,
+  "home_abbr": "FAU",
+  "home_r": "60",
+  "home_rank": 99,
+  "home_short": "FAU",
+  "in_play": false,
+  "leaders": [
+   {
+    "cat": "PASS",
+    "team": "away",
+    "val": "20/35, 265 YDS, 3 TD",
+    "who": "O. McCown"
+   },
+   {
+    "cat": "RUSH",
+    "team": "home",
+    "val": "12 CAR, 126 YDS, 1 TD",
+    "who": "L. Farrow"
+   },
+   {
+    "cat": "REC",
+    "team": "away",
+    "val": "6 REC, 117 YDS, 2 TD",
+    "who": "M. Anderson"
+   }
+  ],
+  "line_away": [
+   7.0,
+   15.0,
+   7.0,
+   0.0
+  ],
+  "line_home": [
+   21.0,
+   14.0,
+   15.0,
+   10.0
+  ],
+  "neutral": false,
+  "period": 4,
+  "poss": null,
+  "redzone": false,
+  "spot": null,
+  "state": "FL",
+  "status": "Final",
+  "venue": "Flagler Credit Union Stadium"
  },
  "5b00e6b226dce4274d819d5d1818e703": {
   "away_abbr": "MSST",
@@ -3890,6 +3950,64 @@
   "state": "OH",
   "status": "Scheduled",
   "venue": "Doyt L. Perry Stadium"
+ },
+ "c93b343bc3151a39a9541c0af3b22123": {
+  "away_abbr": "JMU",
+  "away_r": "54",
+  "away_rank": 99,
+  "away_short": "James Madison",
+  "city": "Hattiesburg",
+  "clock": "0:00",
+  "conf_comp": true,
+  "detail": "Final",
+  "down": null,
+  "espn_id": "401869964",
+  "final": true,
+  "home_abbr": "USM",
+  "home_r": "23",
+  "home_rank": 99,
+  "home_short": "Southern Miss",
+  "in_play": false,
+  "leaders": [
+   {
+    "cat": "PASS",
+    "team": "home",
+    "val": "22/35, 266 YDS, 1 TD",
+    "who": "J. White"
+   },
+   {
+    "cat": "RUSH",
+    "team": "away",
+    "val": "10 CAR, 56 YDS",
+    "who": "S. Cromwell"
+   },
+   {
+    "cat": "REC",
+    "team": "away",
+    "val": "6 REC, 138 YDS",
+    "who": "C. Scott"
+   }
+  ],
+  "line_away": [
+   10.0,
+   6.0,
+   14.0,
+   24.0
+  ],
+  "line_home": [
+   0.0,
+   14.0,
+   0.0,
+   9.0
+  ],
+  "neutral": false,
+  "period": 4,
+  "poss": null,
+  "redzone": false,
+  "spot": null,
+  "state": "MS",
+  "status": "Final",
+  "venue": "M. M. Roberts Stadium"
  },
  "ca349dad8e0e573b453654d24b63e3d1": {
   "away_abbr": "TEM",
