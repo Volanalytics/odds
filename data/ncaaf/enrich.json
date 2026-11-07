@@ -987,10 +987,10 @@
   "away_rank": 99,
   "away_short": "Arkansas",
   "city": "Auburn",
-  "clock": "8:30",
+  "clock": "5:47",
   "conf_comp": true,
-  "detail": "8:30 - 2nd",
-  "down": "1st & 10 at ARK 20",
+  "detail": "5:47 - 2nd",
+  "down": "4th & 2 at AUB 45",
   "espn_id": "401856738",
   "final": false,
   "home_abbr": "AUB",
@@ -1002,7 +1002,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "4/11, 48 YDS",
+    "val": "5/13, 52 YDS, 1 INT",
     "who": "K. Jackson"
    },
    {
@@ -1014,7 +1014,7 @@
    {
     "cat": "REC",
     "team": "away",
-    "val": "2 REC, 27 YDS",
+    "val": "3 REC, 31 YDS",
     "who": "C. Marshall"
    }
   ],
@@ -1028,9 +1028,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "ARK 20",
+  "spot": "AUB 45",
   "state": "AL",
   "status": "In Progress",
   "venue": "Jordan-Hare Stadium"
@@ -1845,10 +1845,10 @@
   "away_rank": 99,
   "away_short": "Duke",
   "city": "Raleigh",
-  "clock": "3:09",
+  "clock": "2:10",
   "conf_comp": true,
-  "detail": "3:09 - 2nd",
-  "down": "1st & 10 at NCSU 19",
+  "detail": "2:10 - 2nd",
+  "down": "1st & 10 at NCSU 32",
   "espn_id": "401858286",
   "final": false,
   "home_abbr": "NCSU",
@@ -1886,9 +1886,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": "NCSU 19",
+  "spot": "NCSU 32",
   "state": "NC",
   "status": "In Progress",
   "venue": "Carter-Finley Stadium"
@@ -2155,10 +2155,10 @@
   "away_rank": 99,
   "away_short": "Old Dominion",
   "city": "Conway",
-  "clock": "11:42",
+  "clock": "9:23",
   "conf_comp": true,
-  "detail": "11:42 - 2nd",
-  "down": "3rd & 1 at CCU 49",
+  "detail": "9:23 - 2nd",
+  "down": "2nd & 11 at ODU 17",
   "espn_id": "401869945",
   "final": false,
   "home_abbr": "CCU",
@@ -2169,21 +2169,21 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "away",
-    "val": "6/9, 51 YDS",
-    "who": "J. Potter"
+    "team": "home",
+    "val": "5/9, 62 YDS",
+    "who": "D. Bailey"
    },
    {
     "cat": "RUSH",
-    "team": "away",
-    "val": "3 CAR, 13 YDS, 1 TD",
-    "who": "Q. Henicle"
+    "team": "home",
+    "val": "1 CAR, 16 YDS",
+    "who": "J. Allen-Hendrix"
    },
    {
     "cat": "REC",
-    "team": "away",
-    "val": "2 REC, 26 YDS",
-    "who": "L. Haughton Jr."
+    "team": "home",
+    "val": "3 REC, 48 YDS",
+    "who": "C. Coppock Jr."
    }
   ],
   "line_away": [
@@ -2197,8 +2197,8 @@
   "neutral": false,
   "period": 2,
   "poss": "home",
-  "redzone": false,
-  "spot": "CCU 49",
+  "redzone": true,
+  "spot": "ODU 17",
   "state": "SC",
   "status": "In Progress",
   "venue": "Brooks Stadium (SC)"
@@ -3063,10 +3063,10 @@
   "away_rank": 99,
   "away_short": "Maryland",
   "city": "West Lafayette",
-  "clock": "0:35",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:35 - 2nd",
-  "down": "3rd & 3 at MD 32",
+  "detail": "Halftime",
+  "down": null,
   "espn_id": "401858515",
   "final": false,
   "home_abbr": "PUR",
@@ -3078,7 +3078,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "11/17, 99 YDS",
+    "val": "11/18, 99 YDS",
     "who": "R. Browne"
    },
    {
@@ -3104,11 +3104,11 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "MD 32",
+  "spot": null,
   "state": "IN",
-  "status": "In Progress",
+  "status": "Halftime",
   "venue": "Ross-Ade Stadium"
  },
  "88407c59161b47299b7d8f5d730f916c": {
@@ -3261,10 +3261,10 @@
   "away_rank": 99,
   "away_short": "Tulsa",
   "city": "New Orleans",
-  "clock": "0:00",
+  "clock": "14:21",
   "conf_comp": true,
-  "detail": "Halftime",
-  "down": null,
+  "detail": "14:21 - 3rd",
+  "down": "3rd & 12 at TULN 23",
   "espn_id": "401862822",
   "final": false,
   "home_abbr": "TULN",
@@ -3294,19 +3294,21 @@
   ],
   "line_away": [
    7.0,
-   25.0
+   25.0,
+   0.0
   ],
   "line_home": [
+   0.0,
    0.0,
    0.0
   ],
   "neutral": false,
-  "period": 2,
-  "poss": null,
+  "period": 3,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "TULN 23",
   "state": "LA",
-  "status": "Halftime",
+  "status": "In Progress",
   "venue": "Yulman Stadium"
  },
  "8db5a11826fc84a5a6506c9b85979e70": {
@@ -3900,7 +3902,7 @@
   "clock": "0:00",
   "conf_comp": true,
   "detail": "Halftime",
-  "down": null,
+  "down": "2nd & 4 at SYR 31",
   "espn_id": "401858285",
   "final": false,
   "home_abbr": "SYR",
@@ -3940,7 +3942,7 @@
   "period": 2,
   "poss": null,
   "redzone": false,
-  "spot": null,
+  "spot": "SYR 31",
   "state": "NY",
   "status": "Halftime",
   "venue": "JMA Wireless Dome"
@@ -4595,10 +4597,10 @@
   "away_rank": 99,
   "away_short": "Oklahoma St",
   "city": "Manhattan",
-  "clock": "0:50",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:50 - 1st",
-  "down": null,
+  "detail": "End of 1st",
+  "down": "1st & 10 at KSU 37",
   "espn_id": "401856854",
   "final": false,
   "home_abbr": "KSU",
@@ -4634,9 +4636,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "KSU 37",
   "state": "KS",
   "status": "In Progress",
   "venue": "Bill Snyder Family Stadium"
