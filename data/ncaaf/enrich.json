@@ -2753,14 +2753,14 @@
   "away_rank": 99,
   "away_short": "West Virginia",
   "city": "Lubbock",
-  "clock": "5:22",
+  "clock": "2:42",
   "conf_comp": true,
-  "detail": "5:22 - 4th",
-  "down": "3rd & 3 at TTU 48",
+  "detail": "2:42 - 4th",
+  "down": null,
   "espn_id": "401856856",
   "final": false,
   "home_abbr": "TTU",
-  "home_r": "44",
+  "home_r": "51",
   "home_rank": 15,
   "home_short": "Texas Tech",
   "in_play": true,
@@ -2768,13 +2768,13 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "14/22, 324 YDS, 4 TD",
+    "val": "17/26, 358 YDS, 5 TD",
     "who": "T. Castellanos"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "18 CAR, 158 YDS, 1 TD",
+    "val": "19 CAR, 160 YDS, 1 TD",
     "who": "J. Williams"
    },
    {
@@ -2794,13 +2794,13 @@
    14.0,
    27.0,
    0.0,
-   3.0
+   10.0
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "TTU 48",
+  "spot": null,
   "state": "TX",
   "status": "In Progress",
   "venue": "Galaxy Stadium"
@@ -2811,10 +2811,10 @@
   "away_rank": 99,
   "away_short": "Wyoming",
   "city": "Las Vegas",
-  "clock": "10:00",
+  "clock": "7:57",
   "conf_comp": true,
-  "detail": "10:00 - 3rd",
-  "down": "2nd & 10 at UNLV 28",
+  "detail": "7:57 - 3rd",
+  "down": "2nd & 6 at UNLV 45",
   "espn_id": "401864535",
   "final": false,
   "home_abbr": "UNLV",
@@ -2854,9 +2854,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "UNLV 28",
+  "spot": "UNLV 45",
   "state": "NV",
   "status": "In Progress",
   "venue": "Allegiant Stadium"
@@ -4631,10 +4631,10 @@
   "away_rank": 99,
   "away_short": "Texas St",
   "city": "Corvallis",
-  "clock": "11:07",
+  "clock": "9:14",
   "conf_comp": true,
-  "detail": "11:07 - 3rd",
-  "down": "2nd & 6 at TXST 20",
+  "detail": "9:14 - 3rd",
+  "down": "1st & Goal at TXST 4",
   "espn_id": "401860912",
   "final": false,
   "home_abbr": "ORST",
@@ -4645,21 +4645,21 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "away",
-    "val": "12/16, 160 YDS, 1 INT",
-    "who": "B. Jackson"
+    "team": "home",
+    "val": "18/28, 165 YDS, 1 INT",
+    "who": "B. Atkinson"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "12 CAR, 78 YDS, 2 TD",
+    "val": "12 CAR, 79 YDS, 2 TD",
     "who": "D. Jackson"
    },
    {
     "cat": "REC",
-    "team": "away",
-    "val": "2 REC, 67 YDS",
-    "who": "Z. Sample"
+    "team": "home",
+    "val": "7 REC, 90 YDS",
+    "who": "J. Legree"
    }
   ],
   "line_away": [
@@ -4674,9 +4674,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "away",
-  "redzone": false,
-  "spot": "TXST 20",
+  "poss": "home",
+  "redzone": true,
+  "spot": "TXST 4",
   "state": "OR",
   "status": "In Progress",
   "venue": "Reser Stadium"
@@ -5063,17 +5063,17 @@
   "away_rank": 99,
   "away_short": "Hawai'i",
   "city": "El Paso",
-  "clock": "0:28",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:28 - 4th",
-  "down": "4th & 24 at UTEP 35",
+  "detail": "Final",
+  "down": null,
   "espn_id": "401864532",
-  "final": false,
+  "final": true,
   "home_abbr": "UTEP",
   "home_r": "14",
   "home_rank": 99,
   "home_short": "UTEP",
-  "in_play": true,
+  "in_play": false,
   "leaders": [
    {
     "cat": "PASS",
@@ -5108,11 +5108,11 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "UTEP 35",
+  "spot": null,
   "state": "TX",
-  "status": "In Progress",
+  "status": "Final",
   "venue": "Sun Bowl"
  },
  "eeabb482a0e7e71332a5202a7e370e88": {
