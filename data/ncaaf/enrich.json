@@ -2753,10 +2753,10 @@
   "away_rank": 99,
   "away_short": "West Virginia",
   "city": "Lubbock",
-  "clock": "9:03",
+  "clock": "8:08",
   "conf_comp": true,
-  "detail": "9:03 - 4th",
-  "down": "4th & 10 at WVU 40",
+  "detail": "8:08 - 4th",
+  "down": null,
   "espn_id": "401856856",
   "final": false,
   "home_abbr": "TTU",
@@ -2768,13 +2768,13 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "13/21, 314 YDS, 4 TD",
+    "val": "13/20, 314 YDS, 4 TD",
     "who": "T. Castellanos"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "16 CAR, 157 YDS, 1 TD",
+    "val": "17 CAR, 157 YDS, 1 TD",
     "who": "J. Williams"
    },
    {
@@ -2799,8 +2799,8 @@
   "neutral": false,
   "period": 4,
   "poss": "home",
-  "redzone": false,
-  "spot": "WVU 40",
+  "redzone": true,
+  "spot": null,
   "state": "TX",
   "status": "In Progress",
   "venue": "Galaxy Stadium"
@@ -2811,10 +2811,10 @@
   "away_rank": 99,
   "away_short": "Wyoming",
   "city": "Las Vegas",
-  "clock": "0:00",
+  "clock": "14:23",
   "conf_comp": true,
-  "detail": "Halftime",
-  "down": null,
+  "detail": "14:23 - 3rd",
+  "down": "2nd & 4 at WYO 31",
   "espn_id": "401864535",
   "final": false,
   "home_abbr": "UNLV",
@@ -2844,19 +2844,21 @@
   ],
   "line_away": [
    10.0,
-   24.0
+   24.0,
+   0.0
   ],
   "line_home": [
    7.0,
-   14.0
+   14.0,
+   0.0
   ],
   "neutral": false,
-  "period": 2,
-  "poss": null,
+  "period": 3,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "WYO 31",
   "state": "NV",
-  "status": "Halftime",
+  "status": "In Progress",
   "venue": "Allegiant Stadium"
  },
  "6ffa2c2d3470751aa022854ec50dcce6": {
@@ -4779,10 +4781,10 @@
   "away_rank": 99,
   "away_short": "Fresno St",
   "city": "Logan",
-  "clock": "2:23",
+  "clock": "1:48",
   "conf_comp": true,
-  "detail": "2:23 - 4th",
-  "down": "2nd & 10 at USU 23",
+  "detail": "1:48 - 4th",
+  "down": "2nd & Goal at USU 12",
   "espn_id": "401860913",
   "final": false,
   "home_abbr": "USU",
@@ -4794,7 +4796,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "21/38, 243 YDS",
+    "val": "21/38, 250 YDS",
     "who": "J. Mandal"
    },
    {
@@ -4806,7 +4808,7 @@
    {
     "cat": "REC",
     "team": "away",
-    "val": "7 REC, 107 YDS",
+    "val": "8 REC, 114 YDS",
     "who": "J. Freeman"
    }
   ],
@@ -4825,8 +4827,8 @@
   "neutral": false,
   "period": 4,
   "poss": "away",
-  "redzone": false,
-  "spot": "USU 23",
+  "redzone": true,
+  "spot": "USU 12",
   "state": "UT",
   "status": "In Progress",
   "venue": "Maverik Stadium"
@@ -5059,10 +5061,10 @@
   "away_rank": 99,
   "away_short": "Hawai'i",
   "city": "El Paso",
-  "clock": "6:57",
+  "clock": "4:11",
   "conf_comp": true,
-  "detail": "6:57 - 4th",
-  "down": null,
+  "detail": "4:11 - 4th",
+  "down": "2nd & 11 at UTEP 47",
   "espn_id": "401864532",
   "final": false,
   "home_abbr": "UTEP",
@@ -5074,14 +5076,14 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "21/34, 262 YDS, 1 TD, 1 INT",
+    "val": "23/37, 285 YDS, 1 TD, 1 INT",
     "who": "M. Alejado"
    },
    {
     "cat": "RUSH",
-    "team": "home",
-    "val": "11 CAR, 63 YDS, 1 TD",
-    "who": "L. Sperling"
+    "team": "away",
+    "val": "15 CAR, 64 YDS",
+    "who": "C. Barfield"
    },
    {
     "cat": "REC",
@@ -5104,9 +5106,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "UTEP 47",
   "state": "TX",
   "status": "In Progress",
   "venue": "Sun Bowl"
