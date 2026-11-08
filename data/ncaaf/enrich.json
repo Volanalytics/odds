@@ -2749,14 +2749,14 @@
  },
  "6bfae12b9d44d12ca7dde4f4f4aedc7d": {
   "away_abbr": "WVU",
-  "away_r": "27",
+  "away_r": "34",
   "away_rank": 99,
   "away_short": "West Virginia",
   "city": "Lubbock",
-  "clock": "13:12",
+  "clock": "11:15",
   "conf_comp": true,
-  "detail": "13:12 - 3rd",
-  "down": "2nd & 2 at WVU 46",
+  "detail": "11:15 - 3rd",
+  "down": null,
   "espn_id": "401856856",
   "final": false,
   "home_abbr": "TTU",
@@ -2779,15 +2779,15 @@
    },
    {
     "cat": "REC",
-    "team": "home",
-    "val": "3 REC, 77 YDS, 2 TD",
-    "who": "T. Carter Jr."
+    "team": "away",
+    "val": "2 REC, 94 YDS, 1 TD",
+    "who": "T. Francis"
    }
   ],
   "line_away": [
    17.0,
    10.0,
-   0.0
+   7.0
   ],
   "line_home": [
    14.0,
@@ -2796,9 +2796,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "WVU 46",
+  "spot": null,
   "state": "TX",
   "status": "In Progress",
   "venue": "Galaxy Stadium"
@@ -2809,10 +2809,10 @@
   "away_rank": 99,
   "away_short": "Wyoming",
   "city": "Las Vegas",
-  "clock": "6:42",
+  "clock": "4:59",
   "conf_comp": true,
-  "detail": "6:42 - 2nd",
-  "down": null,
+  "detail": "4:59 - 2nd",
+  "down": "2nd & 7 at WYO 36",
   "espn_id": "401864535",
   "final": false,
   "home_abbr": "UNLV",
@@ -2850,9 +2850,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "WYO 36",
   "state": "NV",
   "status": "In Progress",
   "venue": "Allegiant Stadium"
@@ -4623,13 +4623,13 @@
  },
  "d4334cec8f2060f3b8491ca9c7325892": {
   "away_abbr": "TXST",
-  "away_r": "20",
+  "away_r": "21",
   "away_rank": 99,
   "away_short": "Texas St",
   "city": "Corvallis",
-  "clock": "9:36",
+  "clock": "9:20",
   "conf_comp": true,
-  "detail": "9:36 - 2nd",
+  "detail": "9:20 - 2nd",
   "down": null,
   "espn_id": "401860912",
   "final": false,
@@ -4642,13 +4642,13 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "10/12, 148 YDS, 1 TD, 1 INT",
+    "val": "10/12, 147 YDS, 1 INT",
     "who": "B. Jackson"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "9 CAR, 73 YDS, 1 TD",
+    "val": "10 CAR, 74 YDS, 2 TD",
     "who": "D. Jackson"
    },
    {
@@ -4660,7 +4660,7 @@
   ],
   "line_away": [
    14.0,
-   6.0
+   7.0
   ],
   "line_home": [
    7.0,
@@ -4669,7 +4669,7 @@
   "neutral": false,
   "period": 2,
   "poss": null,
-  "redzone": true,
+  "redzone": false,
   "spot": null,
   "state": "OR",
   "status": "In Progress",
@@ -4729,10 +4729,10 @@
   "away_rank": 99,
   "away_short": "Fresno St",
   "city": "Logan",
-  "clock": "4:07",
+  "clock": "1:29",
   "conf_comp": true,
-  "detail": "4:07 - 3rd",
-  "down": "1st & 10 at FRES 8",
+  "detail": "1:29 - 3rd",
+  "down": "3rd & 2 at FRES 26",
   "espn_id": "401860913",
   "final": false,
   "home_abbr": "USU",
@@ -4744,7 +4744,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "10/21, 109 YDS",
+    "val": "13/24, 127 YDS",
     "who": "J. Mandal"
    },
    {
@@ -4756,7 +4756,7 @@
    {
     "cat": "REC",
     "team": "away",
-    "val": "3 REC, 77 YDS",
+    "val": "5 REC, 95 YDS",
     "who": "J. Freeman"
    }
   ],
@@ -4774,7 +4774,7 @@
   "period": 3,
   "poss": "away",
   "redzone": false,
-  "spot": "FRES 8",
+  "spot": "FRES 26",
   "state": "UT",
   "status": "In Progress",
   "venue": "Maverik Stadium"
@@ -5007,10 +5007,10 @@
   "away_rank": 99,
   "away_short": "Hawai'i",
   "city": "El Paso",
-  "clock": "7:44",
+  "clock": "5:05",
   "conf_comp": true,
-  "detail": "7:44 - 3rd",
-  "down": null,
+  "detail": "5:05 - 3rd",
+  "down": "3rd & 12 at UTEP 26",
   "espn_id": "401864532",
   "final": false,
   "home_abbr": "UTEP",
@@ -5028,7 +5028,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "8 CAR, 60 YDS, 1 TD",
+    "val": "10 CAR, 59 YDS, 1 TD",
     "who": "L. Sperling"
    },
    {
@@ -5052,7 +5052,7 @@
   "period": 3,
   "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "UTEP 26",
   "state": "TX",
   "status": "In Progress",
   "venue": "Sun Bowl"
