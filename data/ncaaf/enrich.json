@@ -773,14 +773,14 @@
  },
  "2dd995baa931f5b063cb50ddbe821d74": {
   "away_abbr": "LIB",
-  "away_r": "23",
+  "away_r": "29",
   "away_rank": 99,
   "away_short": "Liberty",
   "city": "Las Cruces",
-  "clock": "0:03",
+  "clock": "1:03",
   "conf_comp": true,
-  "detail": "0:03 - 4th",
-  "down": "1st & Goal at NMSU 5",
+  "detail": "1:03 - 4th",
+  "down": null,
   "espn_id": "401870795",
   "final": false,
   "home_abbr": "NMSU",
@@ -798,7 +798,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "14 CAR, 63 YDS, 1 TD",
+    "val": "15 CAR, 63 YDS, 1 TD",
     "who": "K. Davis"
    },
    {
@@ -812,7 +812,7 @@
    3.0,
    13.0,
    0.0,
-   7.0
+   13.0
   ],
   "line_home": [
    7.0,
@@ -822,9 +822,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
+  "poss": null,
   "redzone": true,
-  "spot": "NMSU 5",
+  "spot": null,
   "state": "NM",
   "status": "In Progress",
   "venue": "Aggie Memorial Stadium"
@@ -2753,10 +2753,10 @@
   "away_rank": 99,
   "away_short": "West Virginia",
   "city": "Lubbock",
-  "clock": "0:56",
+  "clock": "0:02",
   "conf_comp": true,
-  "detail": "0:56 - 2nd",
-  "down": "4th & 10 at WVU 25",
+  "detail": "0:02 - 2nd",
+  "down": "2nd & 10 at TTU 35",
   "espn_id": "401856856",
   "final": false,
   "home_abbr": "TTU",
@@ -2768,13 +2768,13 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "9/11, 274 YDS, 4 TD",
+    "val": "10/13, 287 YDS, 4 TD",
     "who": "T. Castellanos"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "5 CAR, 97 YDS, 1 TD",
+    "val": "6 CAR, 99 YDS, 1 TD",
     "who": "J. Williams"
    },
    {
@@ -2794,9 +2794,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "WVU 25",
+  "spot": "TTU 35",
   "state": "TX",
   "status": "In Progress",
   "venue": "Galaxy Stadium"
@@ -2807,10 +2807,10 @@
   "away_rank": 99,
   "away_short": "Wyoming",
   "city": "Las Vegas",
-  "clock": "3:32",
+  "clock": "15:00",
   "conf_comp": true,
-  "detail": "3:32 - 1st",
-  "down": "4th & 17 at UNLV 2",
+  "detail": "15:00 - 2nd",
+  "down": "1st & 10 at UNLV 19",
   "espn_id": "401864535",
   "final": false,
   "home_abbr": "UNLV",
@@ -2822,13 +2822,13 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "2/4, 51 YDS, 1 TD",
+    "val": "3/5, 65 YDS, 1 TD",
     "who": "T. Hughes"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "5 CAR, 53 YDS",
+    "val": "7 CAR, 61 YDS",
     "who": "T. Hughes"
    },
    {
@@ -2839,16 +2839,18 @@
    }
   ],
   "line_away": [
-   10.0
+   10.0,
+   0.0
   ],
   "line_home": [
-   7.0
+   7.0,
+   0.0
   ],
   "neutral": false,
-  "period": 1,
-  "poss": "home",
-  "redzone": false,
-  "spot": "UNLV 2",
+  "period": 2,
+  "poss": "away",
+  "redzone": true,
+  "spot": "UNLV 19",
   "state": "NV",
   "status": "In Progress",
   "venue": "Allegiant Stadium"
@@ -4575,10 +4577,10 @@
   "away_rank": 99,
   "away_short": "Texas St",
   "city": "Corvallis",
-  "clock": "3:13",
+  "clock": "1:18",
   "conf_comp": true,
-  "detail": "3:13 - 1st",
-  "down": null,
+  "detail": "1:18 - 1st",
+  "down": "1st & 10 at TXST 15",
   "espn_id": "401860912",
   "final": false,
   "home_abbr": "ORST",
@@ -4601,9 +4603,9 @@
    },
    {
     "cat": "REC",
-    "team": "away",
-    "val": "1 REC, 37 YDS",
-    "who": "D. Jackson"
+    "team": "home",
+    "val": "5 REC, 62 YDS",
+    "who": "J. Legree"
    }
   ],
   "line_away": [
@@ -4614,9 +4616,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": null,
-  "redzone": false,
-  "spot": null,
+  "poss": "home",
+  "redzone": true,
+  "spot": "TXST 15",
   "state": "OR",
   "status": "In Progress",
   "venue": "Reser Stadium"
