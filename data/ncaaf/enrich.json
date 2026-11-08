@@ -59,14 +59,14 @@
  },
  "028ce5ee2c58281cf935f06edc90d671": {
   "away_abbr": "VAN",
-  "away_r": "22",
+  "away_r": "25",
   "away_rank": 99,
   "away_short": "Vanderbilt",
   "city": "Starkville",
-  "clock": "1:46",
+  "clock": "0:55",
   "conf_comp": true,
-  "detail": "1:46 - 4th",
-  "down": null,
+  "detail": "0:55 - 4th",
+  "down": "1st & 10 at VAN 38",
   "espn_id": "401856742",
   "final": false,
   "home_abbr": "MSST",
@@ -78,7 +78,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "18/30, 179 YDS, 1 TD, 1 INT",
+    "val": "21/34, 216 YDS, 1 TD, 1 INT",
     "who": "A. Swann"
    },
    {
@@ -98,7 +98,7 @@
    3.0,
    13.0,
    3.0,
-   3.0
+   6.0
   ],
   "line_home": [
    0.0,
@@ -108,9 +108,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "VAN 38",
   "state": "MS",
   "status": "In Progress",
   "venue": "Davis Wade Stadium"
@@ -633,15 +633,15 @@
   "city": "Madison",
   "clock": "0:00",
   "conf_comp": true,
-  "detail": "End of 4th",
+  "detail": "Final",
   "down": null,
   "espn_id": "401858517",
-  "final": false,
+  "final": true,
   "home_abbr": "WIS",
   "home_r": "31",
   "home_rank": 99,
   "home_short": "Wisconsin",
-  "in_play": true,
+  "in_play": false,
   "leaders": [
    {
     "cat": "PASS",
@@ -676,11 +676,11 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
   "spot": null,
   "state": "WI",
-  "status": "In Progress",
+  "status": "Final",
   "venue": "Camp Randall Stadium"
  },
  "2c3f80e228a486e04f6f7a38e4f00fb4": {
@@ -1787,14 +1787,14 @@
   "away_rank": 99,
   "away_short": "Rice",
   "city": "Denton",
-  "clock": "2:00",
+  "clock": "1:55",
   "conf_comp": true,
-  "detail": "2:00 - 4th",
+  "detail": "1:55 - 4th",
   "down": null,
   "espn_id": "401862821",
   "final": false,
   "home_abbr": "UNT",
-  "home_r": "45",
+  "home_r": "52",
   "home_rank": 99,
   "home_short": "North Texas",
   "in_play": true,
@@ -1828,11 +1828,11 @@
    10.0,
    0.0,
    21.0,
-   14.0
+   21.0
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
   "spot": null,
   "state": "TX",
@@ -2569,15 +2569,15 @@
   "city": "Troy",
   "clock": "0:00",
   "conf_comp": true,
-  "detail": "End of 4th",
-  "down": "1st & 10 at TROY 45",
+  "detail": "Final",
+  "down": null,
   "espn_id": "401871098",
-  "final": false,
+  "final": true,
   "home_abbr": "TROY",
   "home_r": "17",
   "home_rank": 99,
   "home_short": "Troy",
-  "in_play": true,
+  "in_play": false,
   "leaders": [
    {
     "cat": "PASS",
@@ -2612,11 +2612,11 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "TROY 45",
+  "spot": null,
   "state": "AL",
-  "status": "In Progress",
+  "status": "Final",
   "venue": "Veterans Memorial Stadium (AL)"
  },
  "6bfae12b9d44d12ca7dde4f4f4aedc7d": {
@@ -2895,10 +2895,10 @@
   "away_rank": 6,
   "away_short": "Kentucky",
   "city": "Knoxville",
-  "clock": "6:06",
+  "clock": "5:26",
   "conf_comp": true,
-  "detail": "6:06 - 2nd",
-  "down": "1st & 10 at UK 33",
+  "detail": "5:26 - 2nd",
+  "down": "3rd & 11 at UK 49",
   "espn_id": "401856745",
   "final": false,
   "home_abbr": "TENN",
@@ -2936,9 +2936,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "UK 33",
+  "spot": "UK 49",
   "state": "TN",
   "status": "In Progress",
   "venue": "Neyland Stadium"
@@ -3517,10 +3517,10 @@
   "away_rank": 99,
   "away_short": "Sam Houston",
   "city": "Jacksonville",
-  "clock": "6:24",
+  "clock": "2:20",
   "conf_comp": true,
-  "detail": "6:24 - 1st",
-  "down": "3rd & 8 at JXST 48",
+  "detail": "2:20 - 1st",
+  "down": "4th & 6 at JXST 46",
   "espn_id": "401871075",
   "final": false,
   "home_abbr": "JXST",
@@ -3532,7 +3532,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "3/6, 39 YDS",
+    "val": "4/7, 39 YDS",
     "who": "C. Creel"
    },
    {
@@ -3558,7 +3558,7 @@
   "period": 1,
   "poss": "away",
   "redzone": false,
-  "spot": "JXST 48",
+  "spot": "JXST 46",
   "state": "AL",
   "status": "In Progress",
   "venue": "AmFirst Stadium"
@@ -3675,10 +3675,10 @@
   "away_rank": 99,
   "away_short": "Missouri St",
   "city": "Miami",
-  "clock": "1:47",
+  "clock": "0:56",
   "conf_comp": true,
-  "detail": "1:47 - 4th",
-  "down": null,
+  "detail": "0:56 - 4th",
+  "down": "2nd & 10 at MOST 32",
   "espn_id": "401871074",
   "final": false,
   "home_abbr": "FIU",
@@ -3689,9 +3689,9 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "16/24, 183 YDS, 1 INT",
-    "who": "J. Kohl"
+    "team": "away",
+    "val": "16/32, 185 YDS, 1 INT",
+    "who": "H. Belin IV"
    },
    {
     "cat": "RUSH",
@@ -3701,9 +3701,9 @@
    },
    {
     "cat": "REC",
-    "team": "home",
-    "val": "3 REC, 58 YDS",
-    "who": "K. McNeal"
+    "team": "away",
+    "val": "5 REC, 67 YDS",
+    "who": "I. Myers"
    }
   ],
   "line_away": [
@@ -3720,9 +3720,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "MOST 32",
   "state": "FL",
   "status": "In Progress",
   "venue": "Pitbull Stadium"
@@ -3781,10 +3781,10 @@
   "away_rank": 25,
   "away_short": "Boise St",
   "city": "Fort Collins",
-  "clock": "2:00",
+  "clock": "0:34",
   "conf_comp": true,
-  "detail": "2:00 - 2nd",
-  "down": null,
+  "detail": "0:34 - 2nd",
+  "down": "3rd & 10 at CSU 34",
   "espn_id": "401860911",
   "final": false,
   "home_abbr": "CSU",
@@ -3822,9 +3822,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "CSU 34",
   "state": "CO",
   "status": "In Progress",
   "venue": "Canvas Stadium"
@@ -3931,17 +3931,17 @@
   "away_rank": 23,
   "away_short": "Oregon",
   "city": "Columbus",
-  "clock": "0:44",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:44 - 4th",
+  "detail": "Final",
   "down": null,
   "espn_id": "401858514",
-  "final": false,
+  "final": true,
   "home_abbr": "OSU",
   "home_r": "28",
   "home_rank": 12,
   "home_short": "Ohio State",
-  "in_play": true,
+  "in_play": false,
   "leaders": [
    {
     "cat": "PASS",
@@ -3977,10 +3977,10 @@
   "neutral": false,
   "period": 4,
   "poss": null,
-  "redzone": true,
+  "redzone": false,
   "spot": null,
   "state": "OH",
-  "status": "In Progress",
+  "status": "Final",
   "venue": "Ohio Stadium"
  },
  "c3e23ea05d6570fdb90c3ddb225fd3e4": {
@@ -4416,6 +4416,54 @@
   "state": "OR",
   "status": "Scheduled",
   "venue": "Reser Stadium"
+ },
+ "d466840e3c50d2fdad6fd7e799fdf921": {
+  "away_abbr": "MINN",
+  "away_r": "0",
+  "away_rank": 99,
+  "away_short": "Minnesota",
+  "city": "University Park",
+  "clock": "0:00",
+  "conf_comp": true,
+  "detail": "11/14 - 7:00 PM EST",
+  "down": null,
+  "espn_id": "401858524",
+  "final": false,
+  "home_abbr": "PSU",
+  "home_r": "0",
+  "home_rank": 99,
+  "home_short": "Penn State",
+  "in_play": false,
+  "leaders": [
+   {
+    "cat": "PASS",
+    "team": "home",
+    "val": "1839 YDS, 13 TD, 5 INT",
+    "who": "R. Becht"
+   },
+   {
+    "cat": "RUSH",
+    "team": "away",
+    "val": "63 CAR, 379 YDS, 1 TD",
+    "who": "T. Thomas"
+   },
+   {
+    "cat": "REC",
+    "team": "home",
+    "val": "34 REC, 510 YDS, 3 TD",
+    "who": "C. Sowell"
+   }
+  ],
+  "line_away": [],
+  "line_home": [],
+  "neutral": false,
+  "period": 0,
+  "poss": null,
+  "redzone": false,
+  "spot": null,
+  "state": "PA",
+  "status": "Scheduled",
+  "venue": "Beaver Stadium"
  },
  "d74a875341a00e77cf86ecfb7569edd3": {
   "away_abbr": "FRES",
@@ -4991,10 +5039,10 @@
   "away_rank": 99,
   "away_short": "South Alabama",
   "city": "Lafayette",
-  "clock": "3:18",
+  "clock": "3:12",
   "conf_comp": true,
-  "detail": "3:18 - 3rd",
-  "down": null,
+  "detail": "3:12 - 3rd",
+  "down": "1st & 10 at UL 44",
   "espn_id": "401869968",
   "final": false,
   "home_abbr": "UL",
@@ -5012,7 +5060,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "6 CAR, 110 YDS, 1 TD",
+    "val": "7 CAR, 114 YDS, 1 TD",
     "who": "J. Garner"
    },
    {
@@ -5034,9 +5082,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": null,
-  "redzone": true,
-  "spot": null,
+  "poss": "home",
+  "redzone": false,
+  "spot": "UL 44",
   "state": "LA",
   "status": "In Progress",
   "venue": "Our Lady of Lourdes Stadium"
