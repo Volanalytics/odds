@@ -63,17 +63,17 @@
   "away_rank": 99,
   "away_short": "Vanderbilt",
   "city": "Starkville",
-  "clock": "0:24",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:24 - 4th",
-  "down": "2nd & 11 at MSST 46",
+  "detail": "Final",
+  "down": null,
   "espn_id": "401856742",
-  "final": false,
+  "final": true,
   "home_abbr": "MSST",
   "home_r": "23",
   "home_rank": 99,
   "home_short": "Mississippi St",
-  "in_play": true,
+  "in_play": false,
   "leaders": [
    {
     "cat": "PASS",
@@ -108,11 +108,11 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "MSST 46",
+  "spot": null,
   "state": "MS",
-  "status": "In Progress",
+  "status": "Final",
   "venue": "Davis Wade Stadium"
  },
  "0842fcd69fdf5061f6751f876ead09f2": {
@@ -1383,10 +1383,10 @@
   "away_rank": 1,
   "away_short": "Miami",
   "city": "Notre Dame",
-  "clock": "13:31",
+  "clock": "9:38",
   "conf_comp": false,
-  "detail": "13:31 - 1st",
-  "down": "3rd & 10 at ND 42",
+  "detail": "9:38 - 1st",
+  "down": "4th & 3 at MIA 25",
   "espn_id": "401858291",
   "final": false,
   "home_abbr": "ND",
@@ -1398,20 +1398,20 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "2/4, 5 YDS",
+    "val": "4/7, 24 YDS",
     "who": "C. Carr"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "1 CAR, 12 YDS",
+    "val": "4 CAR, 21 YDS",
     "who": "N. James Jr."
    },
    {
     "cat": "REC",
     "team": "home",
-    "val": "1 REC, 5 YDS",
-    "who": "J. Faison"
+    "val": "1 REC, 9 YDS",
+    "who": "M. Gilbert"
    }
   ],
   "line_away": [
@@ -1424,7 +1424,7 @@
   "period": 1,
   "poss": "home",
   "redzone": false,
-  "spot": "ND 42",
+  "spot": "MIA 25",
   "state": "IN",
   "status": "In Progress",
   "venue": "Notre Dame Stadium"
@@ -1579,46 +1579,31 @@
   "away_rank": 99,
   "away_short": "Colorado",
   "city": "Tempe",
-  "clock": "0:00",
+  "clock": "14:55",
   "conf_comp": true,
-  "detail": "11/7 - 7:30 PM EST",
-  "down": null,
+  "detail": "14:55 - 1st",
+  "down": "2nd & 6 at COLO 29",
   "espn_id": "401856852",
   "final": false,
   "home_abbr": "ASU",
   "home_r": "0",
   "home_rank": 99,
   "home_short": "Arizona St",
-  "in_play": false,
-  "leaders": [
-   {
-    "cat": "PASS",
-    "team": "home",
-    "val": "1360 YDS, 13 TD, 5 INT",
-    "who": "C. Boley"
-   },
-   {
-    "cat": "RUSH",
-    "team": "home",
-    "val": "78 CAR, 523 YDS, 6 TD",
-    "who": "C. Mack"
-   },
-   {
-    "cat": "REC",
-    "team": "home",
-    "val": "48 REC, 804 YDS, 8 TD",
-    "who": "R. Harris"
-   }
+  "in_play": true,
+  "leaders": [],
+  "line_away": [
+   0.0
   ],
-  "line_away": [],
-  "line_home": [],
+  "line_home": [
+   0.0
+  ],
   "neutral": false,
-  "period": 0,
-  "poss": null,
+  "period": 1,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "COLO 29",
   "state": "AZ",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "Mountain America Stadium"
  },
  "5129a94416920cd3c476cd56af387f47": {
@@ -1787,21 +1772,21 @@
  },
  "55e2553780b7d3d06d1fe7a4ffa9474b": {
   "away_abbr": "RICE",
-  "away_r": "17",
+  "away_r": "23",
   "away_rank": 99,
   "away_short": "Rice",
   "city": "Denton",
-  "clock": "0:24",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:24 - 4th",
-  "down": "1st & 10 at UNT 11",
+  "detail": "Final",
+  "down": null,
   "espn_id": "401862821",
-  "final": false,
+  "final": true,
   "home_abbr": "UNT",
   "home_r": "52",
   "home_rank": 99,
   "home_short": "North Texas",
-  "in_play": true,
+  "in_play": false,
   "leaders": [
    {
     "cat": "PASS",
@@ -1826,7 +1811,7 @@
    0.0,
    7.0,
    10.0,
-   0.0
+   6.0
   ],
   "line_home": [
    10.0,
@@ -1836,11 +1821,11 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
-  "redzone": true,
-  "spot": "UNT 11",
+  "poss": null,
+  "redzone": false,
+  "spot": null,
   "state": "TX",
-  "status": "In Progress",
+  "status": "Final",
   "venue": "DATCU Stadium"
  },
  "59047d3be974c2ec05c7e6282752287b": {
@@ -2899,10 +2884,10 @@
   "away_rank": 6,
   "away_short": "Kentucky",
   "city": "Knoxville",
-  "clock": "2:48",
+  "clock": "2:00",
   "conf_comp": true,
-  "detail": "2:48 - 2nd",
-  "down": "2nd & 10 at UK 22",
+  "detail": "2:00 - 2nd",
+  "down": null,
   "espn_id": "401856745",
   "final": false,
   "home_abbr": "TENN",
@@ -2914,7 +2899,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "13/16, 82 YDS, 1 INT",
+    "val": "14/17, 115 YDS, 1 INT",
     "who": "K. Minchey"
    },
    {
@@ -2925,9 +2910,9 @@
    },
    {
     "cat": "REC",
-    "team": "home",
-    "val": "1 REC, 36 YDS",
-    "who": "R. Jackson"
+    "team": "away",
+    "val": "6 REC, 54 YDS",
+    "who": "K. Darby"
    }
   ],
   "line_away": [
@@ -2942,7 +2927,7 @@
   "period": 2,
   "poss": "away",
   "redzone": false,
-  "spot": "UK 22",
+  "spot": null,
   "state": "TN",
   "status": "In Progress",
   "venue": "Neyland Stadium"
@@ -3521,10 +3506,10 @@
   "away_rank": 99,
   "away_short": "Sam Houston",
   "city": "Jacksonville",
-  "clock": "0:04",
+  "clock": "15:00",
   "conf_comp": true,
-  "detail": "0:04 - 1st",
-  "down": "1st & 10 at JXST 49",
+  "detail": "15:00 - 2nd",
+  "down": "2nd & 12 at JXST 40",
   "espn_id": "401871075",
   "final": false,
   "home_abbr": "JXST",
@@ -3542,7 +3527,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "5 CAR, 43 YDS",
+    "val": "6 CAR, 46 YDS",
     "who": "L. Brown"
    },
    {
@@ -3553,16 +3538,18 @@
    }
   ],
   "line_away": [
+   0.0,
    0.0
   ],
   "line_home": [
+   0.0,
    0.0
   ],
   "neutral": false,
-  "period": 1,
+  "period": 2,
   "poss": "away",
   "redzone": false,
-  "spot": "JXST 49",
+  "spot": "JXST 40",
   "state": "AL",
   "status": "In Progress",
   "venue": "AmFirst Stadium"
@@ -3679,10 +3666,10 @@
   "away_rank": 99,
   "away_short": "Missouri St",
   "city": "Miami",
-  "clock": "0:32",
+  "clock": "0:03",
   "conf_comp": true,
-  "detail": "0:32 - 4th",
-  "down": "2nd & 1 at MOST 41",
+  "detail": "0:03 - 4th",
+  "down": "3rd & 5 at FIU 40",
   "espn_id": "401871074",
   "final": false,
   "home_abbr": "FIU",
@@ -3694,7 +3681,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "17/32, 194 YDS, 1 INT",
+    "val": "18/34, 213 YDS, 1 INT",
     "who": "H. Belin IV"
    },
    {
@@ -3706,7 +3693,7 @@
    {
     "cat": "REC",
     "team": "away",
-    "val": "5 REC, 67 YDS",
+    "val": "5 REC, 81 YDS",
     "who": "J. Robinson"
    }
   ],
@@ -3726,7 +3713,7 @@
   "period": 4,
   "poss": "away",
   "redzone": false,
-  "spot": "MOST 41",
+  "spot": "FIU 40",
   "state": "FL",
   "status": "In Progress",
   "venue": "Pitbull Stadium"
@@ -4581,46 +4568,50 @@
   "away_rank": 99,
   "away_short": "Louisville",
   "city": "Atlanta",
-  "clock": "0:00",
+  "clock": "11:52",
   "conf_comp": true,
-  "detail": "11/7 - 7:30 PM EST",
-  "down": null,
+  "detail": "11:52 - 1st",
+  "down": "3rd & 8 at GT 31",
   "espn_id": "401858287",
   "final": false,
   "home_abbr": "GT",
   "home_r": "0",
   "home_rank": 99,
   "home_short": "Georgia Tech",
-  "in_play": false,
+  "in_play": true,
   "leaders": [
    {
     "cat": "PASS",
     "team": "away",
-    "val": "2094 YDS, 12 TD, 3 INT",
+    "val": "2/3, 23 YDS",
     "who": "L. Kienholz"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "92 CAR, 707 YDS, 7 TD",
-    "who": "I. Brown"
+    "val": "3 CAR, 21 YDS",
+    "who": "K. Brown"
    },
    {
     "cat": "REC",
     "team": "away",
-    "val": "40 REC, 633 YDS, 2 TD",
-    "who": "T. Richardson"
+    "val": "1 REC, 18 YDS",
+    "who": "J. Skinner"
    }
   ],
-  "line_away": [],
-  "line_home": [],
+  "line_away": [
+   0.0
+  ],
+  "line_home": [
+   0.0
+  ],
   "neutral": false,
-  "period": 0,
-  "poss": null,
+  "period": 1,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "GT 31",
   "state": "GA",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "Bobby Dodd Stadium"
  },
  "deb5de88acb22f9a3e969c137fd65cb3": {
@@ -5043,10 +5034,10 @@
   "away_rank": 99,
   "away_short": "South Alabama",
   "city": "Lafayette",
-  "clock": "0:00",
+  "clock": "14:55",
   "conf_comp": true,
-  "detail": "End of 3rd",
-  "down": "4th & 6 at UL 39",
+  "detail": "14:55 - 4th",
+  "down": "1st & 20 at USA 28",
   "espn_id": "401869968",
   "final": false,
   "home_abbr": "UL",
@@ -5077,18 +5068,20 @@
   "line_away": [
    7.0,
    10.0,
-   6.0
+   6.0,
+   0.0
   ],
   "line_home": [
    7.0,
    14.0,
-   7.0
+   7.0,
+   0.0
   ],
   "neutral": false,
-  "period": 3,
-  "poss": "home",
+  "period": 4,
+  "poss": "away",
   "redzone": false,
-  "spot": "UL 39",
+  "spot": "USA 28",
   "state": "LA",
   "status": "In Progress",
   "venue": "Our Lady of Lourdes Stadium"
