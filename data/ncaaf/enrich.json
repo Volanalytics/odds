@@ -2849,17 +2849,17 @@
   "away_rank": 99,
   "away_short": "West Virginia",
   "city": "Lubbock",
-  "clock": "1:14",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "1:14 - 4th",
-  "down": "1st & 10 at WVU 31",
+  "detail": "Final",
+  "down": null,
   "espn_id": "401856856",
-  "final": false,
+  "final": true,
   "home_abbr": "TTU",
   "home_r": "53",
   "home_rank": 15,
   "home_short": "Texas Tech",
-  "in_play": true,
+  "in_play": false,
   "leaders": [
    {
     "cat": "PASS",
@@ -2896,9 +2896,9 @@
   "period": 4,
   "poss": null,
   "redzone": false,
-  "spot": "WVU 31",
+  "spot": null,
   "state": "TX",
-  "status": "In Progress",
+  "status": "Final",
   "venue": "Galaxy Stadium"
  },
  "6ce85b1067e9e85cd0d8b3242905ecd7": {
@@ -2907,10 +2907,10 @@
   "away_rank": 99,
   "away_short": "Wyoming",
   "city": "Las Vegas",
-  "clock": "0:22",
+  "clock": "15:00",
   "conf_comp": true,
-  "detail": "0:22 - 3rd",
-  "down": null,
+  "detail": "15:00 - 4th",
+  "down": "2nd & 10 at WYO 38",
   "espn_id": "401864535",
   "final": false,
   "home_abbr": "UNLV",
@@ -2928,7 +2928,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "11 CAR, 90 YDS, 2 TD",
+    "val": "12 CAR, 93 YDS, 2 TD",
     "who": "S. Harris"
    },
    {
@@ -2941,18 +2941,20 @@
   "line_away": [
    10.0,
    24.0,
-   7.0
+   7.0,
+   0.0
   ],
   "line_home": [
    7.0,
    14.0,
-   7.0
+   7.0,
+   0.0
   ],
   "neutral": false,
-  "period": 3,
-  "poss": null,
+  "period": 4,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "WYO 38",
   "state": "NV",
   "status": "In Progress",
   "venue": "Allegiant Stadium"
@@ -4823,10 +4825,10 @@
   "away_rank": 99,
   "away_short": "Texas St",
   "city": "Corvallis",
-  "clock": "0:33",
+  "clock": "14:54",
   "conf_comp": true,
-  "detail": "0:33 - 3rd",
-  "down": "1st & 10 at TXST 14",
+  "detail": "14:54 - 4th",
+  "down": "1st & 10 at ORST 23",
   "espn_id": "401860912",
   "final": false,
   "home_abbr": "ORST",
@@ -4844,8 +4846,8 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "16 CAR, 95 YDS, 3 TD",
-    "who": "D. Jackson"
+    "val": "20 CAR, 148 YDS, 1 TD",
+    "who": "T. Burgess Jr."
    },
    {
     "cat": "REC",
@@ -4857,18 +4859,20 @@
   "line_away": [
    14.0,
    7.0,
-   7.0
+   7.0,
+   0.0
   ],
   "line_home": [
    7.0,
    0.0,
+   0.0,
    0.0
   ],
   "neutral": false,
-  "period": 3,
+  "period": 4,
   "poss": "away",
   "redzone": false,
-  "spot": "TXST 14",
+  "spot": "ORST 23",
   "state": "OR",
   "status": "In Progress",
   "venue": "Reser Stadium"
