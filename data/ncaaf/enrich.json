@@ -2753,14 +2753,14 @@
   "away_rank": 99,
   "away_short": "West Virginia",
   "city": "Lubbock",
-  "clock": "8:08",
+  "clock": "6:25",
   "conf_comp": true,
-  "detail": "8:08 - 4th",
-  "down": null,
+  "detail": "6:25 - 4th",
+  "down": "4th & 1 at WVU 34",
   "espn_id": "401856856",
   "final": false,
   "home_abbr": "TTU",
-  "home_r": "41",
+  "home_r": "44",
   "home_rank": 15,
   "home_short": "Texas Tech",
   "in_play": true,
@@ -2768,7 +2768,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "13/20, 314 YDS, 4 TD",
+    "val": "13/21, 314 YDS, 4 TD",
     "who": "T. Castellanos"
    },
    {
@@ -2794,13 +2794,13 @@
    14.0,
    27.0,
    0.0,
-   0.0
+   3.0
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
-  "redzone": true,
-  "spot": null,
+  "poss": "away",
+  "redzone": false,
+  "spot": "WVU 34",
   "state": "TX",
   "status": "In Progress",
   "venue": "Galaxy Stadium"
@@ -2811,10 +2811,10 @@
   "away_rank": 99,
   "away_short": "Wyoming",
   "city": "Las Vegas",
-  "clock": "14:23",
+  "clock": "12:10",
   "conf_comp": true,
-  "detail": "14:23 - 3rd",
-  "down": "2nd & 4 at WYO 31",
+  "detail": "12:10 - 3rd",
+  "down": "1st & 10 at WYO 46",
   "espn_id": "401864535",
   "final": false,
   "home_abbr": "UNLV",
@@ -2856,7 +2856,7 @@
   "period": 3,
   "poss": "away",
   "redzone": false,
-  "spot": "WYO 31",
+  "spot": "WYO 46",
   "state": "NV",
   "status": "In Progress",
   "venue": "Allegiant Stadium"
@@ -4631,10 +4631,10 @@
   "away_rank": 99,
   "away_short": "Texas St",
   "city": "Corvallis",
-  "clock": "0:00",
+  "clock": "12:30",
   "conf_comp": true,
-  "detail": "Halftime",
-  "down": null,
+  "detail": "12:30 - 3rd",
+  "down": "3rd & 9 at ORST 38",
   "espn_id": "401860912",
   "final": false,
   "home_abbr": "ORST",
@@ -4664,19 +4664,21 @@
   ],
   "line_away": [
    14.0,
-   7.0
-  ],
-  "line_home": [
    7.0,
    0.0
   ],
+  "line_home": [
+   7.0,
+   0.0,
+   0.0
+  ],
   "neutral": false,
-  "period": 2,
-  "poss": null,
+  "period": 3,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "ORST 38",
   "state": "OR",
-  "status": "Halftime",
+  "status": "In Progress",
   "venue": "Reser Stadium"
  },
  "d466840e3c50d2fdad6fd7e799fdf921": {
@@ -4777,14 +4779,14 @@
  },
  "d74a875341a00e77cf86ecfb7569edd3": {
   "away_abbr": "FRES",
-  "away_r": "3",
+  "away_r": "10",
   "away_rank": 99,
   "away_short": "Fresno St",
   "city": "Logan",
-  "clock": "1:48",
+  "clock": "0:29",
   "conf_comp": true,
-  "detail": "1:48 - 4th",
-  "down": "2nd & Goal at USU 12",
+  "detail": "0:29 - 4th",
+  "down": "4th & 14 at USU 47",
   "espn_id": "401860913",
   "final": false,
   "home_abbr": "USU",
@@ -4796,7 +4798,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "21/38, 250 YDS",
+    "val": "22/39, 262 YDS, 1 TD",
     "who": "J. Mandal"
    },
    {
@@ -4816,7 +4818,7 @@
    0.0,
    0.0,
    3.0,
-   0.0
+   7.0
   ],
   "line_home": [
    0.0,
@@ -4826,9 +4828,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
-  "redzone": true,
-  "spot": "USU 12",
+  "poss": "home",
+  "redzone": false,
+  "spot": "USU 47",
   "state": "UT",
   "status": "In Progress",
   "venue": "Maverik Stadium"
@@ -5061,10 +5063,10 @@
   "away_rank": 99,
   "away_short": "Hawai'i",
   "city": "El Paso",
-  "clock": "4:11",
+  "clock": "2:12",
   "conf_comp": true,
-  "detail": "4:11 - 4th",
-  "down": "2nd & 11 at UTEP 47",
+  "detail": "2:12 - 4th",
+  "down": null,
   "espn_id": "401864532",
   "final": false,
   "home_abbr": "UTEP",
@@ -5076,7 +5078,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "23/37, 285 YDS, 1 TD, 1 INT",
+    "val": "25/39, 297 YDS, 1 TD, 1 INT",
     "who": "M. Alejado"
    },
    {
@@ -5088,8 +5090,8 @@
    {
     "cat": "REC",
     "team": "away",
-    "val": "4 REC, 101 YDS",
-    "who": "A. Harris"
+    "val": "10 REC, 103 YDS, 1 TD",
+    "who": "T. Lacaden"
    }
   ],
   "line_away": [
@@ -5108,7 +5110,7 @@
   "period": 4,
   "poss": "away",
   "redzone": false,
-  "spot": "UTEP 47",
+  "spot": null,
   "state": "TX",
   "status": "In Progress",
   "venue": "Sun Bowl"
