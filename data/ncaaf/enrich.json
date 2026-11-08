@@ -719,17 +719,17 @@
   "away_rank": 99,
   "away_short": "Michigan St",
   "city": "Ann Arbor",
-  "clock": "1:34",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "1:34 - 4th",
+  "detail": "Final",
   "down": null,
   "espn_id": "401858511",
-  "final": false,
+  "final": true,
   "home_abbr": "MICH",
   "home_r": "6",
   "home_rank": 99,
   "home_short": "Michigan",
-  "in_play": true,
+  "in_play": false,
   "leaders": [
    {
     "cat": "PASS",
@@ -765,10 +765,10 @@
   "neutral": false,
   "period": 4,
   "poss": null,
-  "redzone": true,
+  "redzone": false,
   "spot": null,
   "state": "MI",
-  "status": "In Progress",
+  "status": "Final",
   "venue": "Michigan Stadium"
  },
  "2dd995baa931f5b063cb50ddbe821d74": {
@@ -777,10 +777,10 @@
   "away_rank": 99,
   "away_short": "Liberty",
   "city": "Las Cruces",
-  "clock": "3:23",
+  "clock": "0:03",
   "conf_comp": true,
-  "detail": "3:23 - 4th",
-  "down": "2nd & 3 at LIB 46",
+  "detail": "0:03 - 4th",
+  "down": "1st & Goal at NMSU 5",
   "espn_id": "401870795",
   "final": false,
   "home_abbr": "NMSU",
@@ -791,14 +791,14 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "17/26, 225 YDS, 2 TD, 1 INT",
-    "who": "T. Hedden"
+    "team": "away",
+    "val": "19/28, 252 YDS, 1 TD",
+    "who": "D. Purdie"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "14 CAR, 57 YDS, 1 TD",
+    "val": "14 CAR, 63 YDS, 1 TD",
     "who": "K. Davis"
    },
    {
@@ -823,8 +823,8 @@
   "neutral": false,
   "period": 4,
   "poss": "away",
-  "redzone": false,
-  "spot": "LIB 46",
+  "redzone": true,
+  "spot": "NMSU 5",
   "state": "NM",
   "status": "In Progress",
   "venue": "Aggie Memorial Stadium"
@@ -2753,14 +2753,14 @@
   "away_rank": 99,
   "away_short": "West Virginia",
   "city": "Lubbock",
-  "clock": "1:14",
+  "clock": "0:56",
   "conf_comp": true,
-  "detail": "1:14 - 2nd",
-  "down": "1st & Goal at WVU 1",
+  "detail": "0:56 - 2nd",
+  "down": "4th & 10 at WVU 25",
   "espn_id": "401856856",
   "final": false,
   "home_abbr": "TTU",
-  "home_r": "35",
+  "home_r": "41",
   "home_rank": 15,
   "home_short": "Texas Tech",
   "in_play": true,
@@ -2790,27 +2790,27 @@
   ],
   "line_home": [
    14.0,
-   21.0
+   27.0
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
-  "redzone": true,
-  "spot": "WVU 1",
+  "poss": "away",
+  "redzone": false,
+  "spot": "WVU 25",
   "state": "TX",
   "status": "In Progress",
   "venue": "Galaxy Stadium"
  },
  "6ce85b1067e9e85cd0d8b3242905ecd7": {
   "away_abbr": "WYO",
-  "away_r": "7",
+  "away_r": "10",
   "away_rank": 99,
   "away_short": "Wyoming",
   "city": "Las Vegas",
-  "clock": "5:07",
+  "clock": "3:32",
   "conf_comp": true,
-  "detail": "5:07 - 1st",
-  "down": "4th & 2 at UNLV 25",
+  "detail": "3:32 - 1st",
+  "down": "4th & 17 at UNLV 2",
   "espn_id": "401864535",
   "final": false,
   "home_abbr": "UNLV",
@@ -2839,16 +2839,16 @@
    }
   ],
   "line_away": [
-   7.0
+   10.0
   ],
   "line_home": [
    7.0
   ],
   "neutral": false,
   "period": 1,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "UNLV 25",
+  "spot": "UNLV 2",
   "state": "NV",
   "status": "In Progress",
   "venue": "Allegiant Stadium"
@@ -4571,14 +4571,14 @@
  },
  "d4334cec8f2060f3b8491ca9c7325892": {
   "away_abbr": "TXST",
-  "away_r": "7",
+  "away_r": "14",
   "away_rank": 99,
   "away_short": "Texas St",
   "city": "Corvallis",
-  "clock": "5:17",
+  "clock": "3:13",
   "conf_comp": true,
-  "detail": "5:17 - 1st",
-  "down": "1st & 10 at ORST 47",
+  "detail": "3:13 - 1st",
+  "down": null,
   "espn_id": "401860912",
   "final": false,
   "home_abbr": "ORST",
@@ -4590,33 +4590,33 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "5/6, 50 YDS, 1 INT",
+    "val": "6/8, 87 YDS, 1 INT",
     "who": "B. Jackson"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "6 CAR, 26 YDS",
+    "val": "8 CAR, 31 YDS, 1 TD",
     "who": "T. Burgess Jr."
    },
    {
     "cat": "REC",
     "team": "away",
-    "val": "1 REC, 20 YDS",
-    "who": "Z. Sample"
+    "val": "1 REC, 37 YDS",
+    "who": "D. Jackson"
    }
   ],
   "line_away": [
-   7.0
+   14.0
   ],
   "line_home": [
    0.0
   ],
   "neutral": false,
   "period": 1,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "ORST 47",
+  "spot": null,
   "state": "OR",
   "status": "In Progress",
   "venue": "Reser Stadium"
@@ -4953,7 +4953,7 @@
   "city": "El Paso",
   "clock": "0:00",
   "conf_comp": true,
-  "detail": "End of 2nd",
+  "detail": "Halftime",
   "down": null,
   "espn_id": "401864532",
   "final": false,
@@ -4992,11 +4992,11 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
   "spot": null,
   "state": "TX",
-  "status": "In Progress",
+  "status": "Halftime",
   "venue": "Sun Bowl"
  },
  "eeabb482a0e7e71332a5202a7e370e88": {
