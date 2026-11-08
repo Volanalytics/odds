@@ -2753,10 +2753,10 @@
   "away_rank": 99,
   "away_short": "West Virginia",
   "city": "Lubbock",
-  "clock": "0:00",
+  "clock": "13:12",
   "conf_comp": true,
-  "detail": "Halftime",
-  "down": null,
+  "detail": "13:12 - 3rd",
+  "down": "2nd & 2 at WVU 46",
   "espn_id": "401856856",
   "final": false,
   "home_abbr": "TTU",
@@ -2773,9 +2773,9 @@
    },
    {
     "cat": "RUSH",
-    "team": "home",
-    "val": "7 CAR, 118 YDS, 1 TD",
-    "who": "J. Williams"
+    "team": "away",
+    "val": "18 CAR, 129 YDS",
+    "who": "C. Cook"
    },
    {
     "cat": "REC",
@@ -2786,31 +2786,33 @@
   ],
   "line_away": [
    17.0,
-   10.0
+   10.0,
+   0.0
   ],
   "line_home": [
    14.0,
-   27.0
+   27.0,
+   0.0
   ],
   "neutral": false,
-  "period": 2,
-  "poss": null,
+  "period": 3,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "WVU 46",
   "state": "TX",
-  "status": "Halftime",
+  "status": "In Progress",
   "venue": "Galaxy Stadium"
  },
  "6ce85b1067e9e85cd0d8b3242905ecd7": {
   "away_abbr": "WYO",
-  "away_r": "17",
+  "away_r": "24",
   "away_rank": 99,
   "away_short": "Wyoming",
   "city": "Las Vegas",
-  "clock": "8:35",
+  "clock": "6:42",
   "conf_comp": true,
-  "detail": "8:35 - 2nd",
-  "down": "1st & 10 at UNLV 49",
+  "detail": "6:42 - 2nd",
+  "down": null,
   "espn_id": "401864535",
   "final": false,
   "home_abbr": "UNLV",
@@ -2822,7 +2824,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "3/5, 65 YDS, 1 TD",
+    "val": "3/6, 65 YDS, 1 TD",
     "who": "T. Hughes"
    },
    {
@@ -2834,13 +2836,13 @@
    {
     "cat": "REC",
     "team": "away",
-    "val": "1 REC, 38 YDS",
+    "val": "2 REC, 56 YDS, 1 TD",
     "who": "J. Wilson"
    }
   ],
   "line_away": [
    10.0,
-   7.0
+   14.0
   ],
   "line_home": [
    7.0,
@@ -2848,9 +2850,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "UNLV 49",
+  "spot": null,
   "state": "NV",
   "status": "In Progress",
   "venue": "Allegiant Stadium"
@@ -3086,6 +3088,54 @@
   "state": "TN",
   "status": "Final",
   "venue": "Neyland Stadium"
+ },
+ "73d83d88b3a35eeb4bcf8462ff2070b2": {
+  "away_abbr": "HOU",
+  "away_r": "0",
+  "away_rank": 17,
+  "away_short": "Houston",
+  "city": "Boulder",
+  "clock": "0:00",
+  "conf_comp": true,
+  "detail": "11/13 - 10:15 PM EST",
+  "down": null,
+  "espn_id": "401856860",
+  "final": false,
+  "home_abbr": "COLO",
+  "home_r": "0",
+  "home_rank": 99,
+  "home_short": "Colorado",
+  "in_play": false,
+  "leaders": [
+   {
+    "cat": "PASS",
+    "team": "away",
+    "val": "2053 YDS, 20 TD, 2 INT",
+    "who": "C. Weigman"
+   },
+   {
+    "cat": "RUSH",
+    "team": "away",
+    "val": "117 CAR, 516 YDS, 4 TD",
+    "who": "M. Hughes"
+   },
+   {
+    "cat": "REC",
+    "team": "home",
+    "val": "51 REC, 732 YDS, 5 TD",
+    "who": "J. Williams"
+   }
+  ],
+  "line_away": [],
+  "line_home": [],
+  "neutral": false,
+  "period": 0,
+  "poss": null,
+  "redzone": false,
+  "spot": null,
+  "state": "CO",
+  "status": "Scheduled",
+  "venue": "Folsom Field"
  },
  "796b0be4ed0d775756eff53b5803125a": {
   "away_abbr": "NIU",
@@ -4573,14 +4623,14 @@
  },
  "d4334cec8f2060f3b8491ca9c7325892": {
   "away_abbr": "TXST",
-  "away_r": "14",
+  "away_r": "20",
   "away_rank": 99,
   "away_short": "Texas St",
   "city": "Corvallis",
-  "clock": "12:00",
+  "clock": "9:36",
   "conf_comp": true,
-  "detail": "12:00 - 2nd",
-  "down": "1st & 10 at TXST 38",
+  "detail": "9:36 - 2nd",
+  "down": null,
   "espn_id": "401860912",
   "final": false,
   "home_abbr": "ORST",
@@ -4592,14 +4642,14 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "9/11, 144 YDS, 1 INT",
+    "val": "10/12, 148 YDS, 1 TD, 1 INT",
     "who": "B. Jackson"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "10 CAR, 39 YDS, 1 TD",
-    "who": "T. Burgess Jr."
+    "val": "9 CAR, 73 YDS, 1 TD",
+    "who": "D. Jackson"
    },
    {
     "cat": "REC",
@@ -4610,7 +4660,7 @@
   ],
   "line_away": [
    14.0,
-   0.0
+   6.0
   ],
   "line_home": [
    7.0,
@@ -4618,9 +4668,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
-  "redzone": false,
-  "spot": "TXST 38",
+  "poss": null,
+  "redzone": true,
+  "spot": null,
   "state": "OR",
   "status": "In Progress",
   "venue": "Reser Stadium"
@@ -4679,10 +4729,10 @@
   "away_rank": 99,
   "away_short": "Fresno St",
   "city": "Logan",
-  "clock": "7:02",
+  "clock": "4:07",
   "conf_comp": true,
-  "detail": "7:02 - 3rd",
-  "down": "2nd & 5 at USU 30",
+  "detail": "4:07 - 3rd",
+  "down": "1st & 10 at FRES 8",
   "espn_id": "401860913",
   "final": false,
   "home_abbr": "USU",
@@ -4722,9 +4772,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "USU 30",
+  "spot": "FRES 8",
   "state": "UT",
   "status": "In Progress",
   "venue": "Maverik Stadium"
@@ -4957,10 +5007,10 @@
   "away_rank": 99,
   "away_short": "Hawai'i",
   "city": "El Paso",
-  "clock": "10:27",
+  "clock": "7:44",
   "conf_comp": true,
-  "detail": "10:27 - 3rd",
-  "down": "2nd & 1 at HAW 30",
+  "detail": "7:44 - 3rd",
+  "down": null,
   "espn_id": "401864532",
   "final": false,
   "home_abbr": "UTEP",
@@ -4972,7 +5022,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "16/24, 194 YDS, 1 TD, 1 INT",
+    "val": "17/27, 195 YDS, 1 TD, 1 INT",
     "who": "M. Alejado"
    },
    {
@@ -5000,9 +5050,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "HAW 30",
+  "spot": null,
   "state": "TX",
   "status": "In Progress",
   "venue": "Sun Bowl"
