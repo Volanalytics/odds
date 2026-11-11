@@ -1493,10 +1493,10 @@
   "away_rank": 99,
   "away_short": "W Michigan",
   "city": "Akron",
-  "clock": "1:47",
+  "clock": "0:50",
   "conf_comp": true,
-  "detail": "1:47 - 2nd",
-  "down": "1st & 10 at AKR 28",
+  "detail": "0:50 - 2nd",
+  "down": null,
   "espn_id": "401866458",
   "final": false,
   "home_abbr": "AKR",
@@ -1534,9 +1534,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": "AKR 28",
+  "spot": null,
   "state": "OH",
   "status": "In Progress",
   "venue": "InfoCision Stadium"
@@ -2459,46 +2459,38 @@
   "away_rank": 99,
   "away_short": "Ohio",
   "city": "Oxford",
-  "clock": "0:00",
+  "clock": "12:21",
   "conf_comp": true,
-  "detail": "11/10 - 8:00 PM EST",
-  "down": null,
+  "detail": "12:21 - 1st",
+  "down": "1st & Goal at M-OH 10",
   "espn_id": "401866460",
   "final": false,
   "home_abbr": "M-OH",
   "home_r": "0",
   "home_rank": 99,
   "home_short": "Miami OH",
-  "in_play": false,
+  "in_play": true,
   "leaders": [
-   {
-    "cat": "PASS",
-    "team": "home",
-    "val": "1121 YDS, 7 TD, 1 INT",
-    "who": "D. McComb"
-   },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "91 CAR, 463 YDS, 4 TD",
+    "val": "3 CAR, 24 YDS",
     "who": "D. Brune"
-   },
-   {
-    "cat": "REC",
-    "team": "away",
-    "val": "41 REC, 551 YDS, 5 TD",
-    "who": "R. Neer"
    }
   ],
-  "line_away": [],
-  "line_home": [],
+  "line_away": [
+   0.0
+  ],
+  "line_home": [
+   0.0
+  ],
   "neutral": false,
-  "period": 0,
-  "poss": null,
-  "redzone": false,
-  "spot": null,
+  "period": 1,
+  "poss": "away",
+  "redzone": true,
+  "spot": "M-OH 10",
   "state": "OH",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "Yager Stadium"
  },
  "9d463c4686f84c78b890f0fcf2ac90c5": {
@@ -3035,14 +3027,14 @@
   "away_rank": 99,
   "away_short": "Kent State",
   "city": "Bowling Green",
-  "clock": "3:44",
+  "clock": "2:25",
   "conf_comp": true,
-  "detail": "3:44 - 2nd",
-  "down": "1st & 10 at KENT 29",
+  "detail": "2:25 - 2nd",
+  "down": "2nd & 6 at KENT 29",
   "espn_id": "401866459",
   "final": false,
   "home_abbr": "BGSU",
-  "home_r": "7",
+  "home_r": "14",
   "home_rank": 99,
   "home_short": "Bowling Green",
   "in_play": true,
@@ -3056,7 +3048,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "8 CAR, 30 YDS",
+    "val": "8 CAR, 36 YDS",
     "who": "N. Amachree"
    },
    {
@@ -3072,11 +3064,11 @@
   ],
   "line_home": [
    7.0,
-   0.0
+   7.0
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
   "spot": "KENT 29",
   "state": "OH",
