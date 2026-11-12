@@ -1207,7 +1207,7 @@
   "city": "Toledo",
   "clock": "0:00",
   "conf_comp": true,
-  "detail": "End of 2nd",
+  "detail": "End of 3rd",
   "down": null,
   "espn_id": "401866463",
   "final": false,
@@ -1238,14 +1238,16 @@
   ],
   "line_away": [
    0.0,
+   0.0,
    0.0
   ],
   "line_home": [
    7.0,
-   17.0
+   17.0,
+   0.0
   ],
   "neutral": false,
-  "period": 2,
+  "period": 3,
   "poss": "home",
   "redzone": false,
   "spot": null,
@@ -2469,14 +2471,14 @@
   "away_rank": 99,
   "away_short": "Sacramento St",
   "city": "Mount Pleasant",
-  "clock": "6:23",
+  "clock": "5:42",
   "conf_comp": true,
-  "detail": "6:23 - 3rd",
-  "down": null,
+  "detail": "5:42 - 3rd",
+  "down": "3rd & 7 at SAC 28",
   "espn_id": "401866462",
   "final": false,
   "home_abbr": "CMU",
-  "home_r": "20",
+  "home_r": "21",
   "home_rank": 99,
   "home_short": "C Michigan",
   "in_play": true,
@@ -2484,7 +2486,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "9/14, 87 YDS, 1 INT",
+    "val": "9/15, 87 YDS, 1 INT",
     "who": "B. Salazar Jr."
    },
    {
@@ -2508,13 +2510,13 @@
   "line_home": [
    7.0,
    7.0,
-   6.0
+   7.0
   ],
   "neutral": false,
   "period": 3,
-  "poss": null,
-  "redzone": true,
-  "spot": null,
+  "poss": "away",
+  "redzone": false,
+  "spot": "SAC 28",
   "state": "MI",
   "status": "In Progress",
   "venue": "Kelly/Shorts Stadium"
@@ -2967,10 +2969,10 @@
   "away_rank": 99,
   "away_short": "Buffalo",
   "city": "Muncie",
-  "clock": "14:17",
+  "clock": "10:21",
   "conf_comp": true,
-  "detail": "14:17 - 3rd",
-  "down": "2nd & 9 at BUF 26",
+  "detail": "10:21 - 3rd",
+  "down": "1st & 10 at BUF 22",
   "espn_id": "401866461",
   "final": false,
   "home_abbr": "BALL",
@@ -2982,19 +2984,19 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "11/18, 55 YDS",
+    "val": "13/20, 72 YDS",
     "who": "K. Luster"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "13 CAR, 49 YDS",
+    "val": "13 CAR, 52 YDS",
     "who": "M. Burch"
    },
    {
     "cat": "REC",
     "team": "home",
-    "val": "5 REC, 48 YDS",
+    "val": "6 REC, 54 YDS",
     "who": "D. Hamilton"
    }
   ],
@@ -3010,9 +3012,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "BUF 26",
+  "spot": "BUF 22",
   "state": "IN",
   "status": "In Progress",
   "venue": "Scheumann Stadium"
