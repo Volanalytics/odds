@@ -2469,14 +2469,14 @@
   "away_rank": 99,
   "away_short": "Sacramento St",
   "city": "Mount Pleasant",
-  "clock": "10:05",
+  "clock": "6:23",
   "conf_comp": true,
-  "detail": "10:05 - 3rd",
-  "down": "3rd & 4 at CMU 38",
+  "detail": "6:23 - 3rd",
+  "down": null,
   "espn_id": "401866462",
   "final": false,
   "home_abbr": "CMU",
-  "home_r": "14",
+  "home_r": "20",
   "home_rank": 99,
   "home_short": "C Michigan",
   "in_play": true,
@@ -2508,13 +2508,13 @@
   "line_home": [
    7.0,
    7.0,
-   0.0
+   6.0
   ],
   "neutral": false,
   "period": 3,
-  "poss": "home",
-  "redzone": false,
-  "spot": "CMU 38",
+  "poss": null,
+  "redzone": true,
+  "spot": null,
   "state": "MI",
   "status": "In Progress",
   "venue": "Kelly/Shorts Stadium"
@@ -2967,10 +2967,10 @@
   "away_rank": 99,
   "away_short": "Buffalo",
   "city": "Muncie",
-  "clock": "0:00",
+  "clock": "14:17",
   "conf_comp": true,
-  "detail": "End of 2nd",
-  "down": null,
+  "detail": "14:17 - 3rd",
+  "down": "2nd & 9 at BUF 26",
   "espn_id": "401866461",
   "final": false,
   "home_abbr": "BALL",
@@ -2988,7 +2988,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "11 CAR, 48 YDS",
+    "val": "13 CAR, 49 YDS",
     "who": "M. Burch"
    },
    {
@@ -3000,17 +3000,19 @@
   ],
   "line_away": [
    0.0,
-   7.0
-  ],
-  "line_home": [
    7.0,
    0.0
   ],
+  "line_home": [
+   7.0,
+   0.0,
+   0.0
+  ],
   "neutral": false,
-  "period": 2,
+  "period": 3,
   "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "BUF 26",
   "state": "IN",
   "status": "In Progress",
   "venue": "Scheumann Stadium"
