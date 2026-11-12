@@ -1205,10 +1205,10 @@
   "away_rank": 99,
   "away_short": "UMass",
   "city": "Toledo",
-  "clock": "8:56",
+  "clock": "7:31",
   "conf_comp": true,
-  "detail": "8:56 - 2nd",
-  "down": "3rd & 10 at MASS 34",
+  "detail": "7:31 - 2nd",
+  "down": "1st & 10 at TOL 32",
   "espn_id": "401866463",
   "final": false,
   "home_abbr": "TOL",
@@ -1220,7 +1220,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "6/9, 82 YDS",
+    "val": "7/10, 114 YDS",
     "who": "J. Richter"
    },
    {
@@ -1246,9 +1246,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "MASS 34",
+  "spot": "TOL 32",
   "state": "OH",
   "status": "In Progress",
   "venue": "Glass Bowl"
@@ -2469,10 +2469,10 @@
   "away_rank": 99,
   "away_short": "Sacramento St",
   "city": "Mount Pleasant",
-  "clock": "1:36",
+  "clock": "1:04",
   "conf_comp": true,
-  "detail": "1:36 - 2nd",
-  "down": "1st & 10 at SAC 32",
+  "detail": "1:04 - 2nd",
+  "down": "2nd & 8 at SAC 10",
   "espn_id": "401866462",
   "final": false,
   "home_abbr": "CMU",
@@ -2490,13 +2490,13 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "13 CAR, 80 YDS",
+    "val": "14 CAR, 80 YDS",
     "who": "N. Woodford"
    },
    {
     "cat": "REC",
     "team": "home",
-    "val": "2 REC, 52 YDS",
+    "val": "2 REC, 50 YDS",
     "who": "N. Williams"
    }
   ],
@@ -2511,8 +2511,8 @@
   "neutral": false,
   "period": 2,
   "poss": "home",
-  "redzone": false,
-  "spot": "SAC 32",
+  "redzone": true,
+  "spot": "SAC 10",
   "state": "MI",
   "status": "In Progress",
   "venue": "Kelly/Shorts Stadium"
@@ -2961,14 +2961,14 @@
  },
  "a8f5a967982255fd6be0435c3b213b0f": {
   "away_abbr": "BUFF",
-  "away_r": "0",
+  "away_r": "7",
   "away_rank": 99,
   "away_short": "Buffalo",
   "city": "Muncie",
-  "clock": "8:16",
+  "clock": "4:04",
   "conf_comp": true,
-  "detail": "8:16 - 2nd",
-  "down": "4th & 1 at BALL 41",
+  "detail": "4:04 - 2nd",
+  "down": null,
   "espn_id": "401866461",
   "final": false,
   "home_abbr": "BALL",
@@ -2980,14 +2980,14 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "3/7, 35 YDS",
+    "val": "4/8, 49 YDS, 1 TD",
     "who": "J. Wright"
    },
    {
     "cat": "RUSH",
-    "team": "home",
-    "val": "6 CAR, 39 YDS",
-    "who": "T. Horton"
+    "team": "away",
+    "val": "10 CAR, 50 YDS",
+    "who": "M. Burch"
    },
    {
     "cat": "REC",
@@ -2998,7 +2998,7 @@
   ],
   "line_away": [
    0.0,
-   0.0
+   7.0
   ],
   "line_home": [
    7.0,
@@ -3006,9 +3006,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "BALL 41",
+  "spot": null,
   "state": "IN",
   "status": "In Progress",
   "venue": "Scheumann Stadium"
