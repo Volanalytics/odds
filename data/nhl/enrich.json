@@ -146,7 +146,7 @@
    1.0,
    0.0,
    0.0,
-   1.0
+   0.0
   ],
   "period": 5,
   "status": "Final"
@@ -203,8 +203,8 @@
  },
  "78267bbb84304764c453515236c3ccce": {
   "away_r": "0",
-  "clock": "2:25",
-  "detail": "2:25 - 1st",
+  "clock": "0:00",
+  "detail": "End of 1st",
   "espn_id": "401892692",
   "final": false,
   "home_r": "0",
@@ -217,16 +217,16 @@
    0.0
   ],
   "period": 1,
-  "status": "In Progress"
+  "status": "End of Period"
  },
  "79041ec71c97248859299c4b6211cc17": {
   "away_r": "8",
-  "clock": "0:12",
-  "detail": "0:12 - 3rd",
+  "clock": "0:00",
+  "detail": "Final",
   "espn_id": "401892690",
-  "final": false,
+  "final": true,
   "home_r": "3",
-  "in_play": true,
+  "in_play": false,
   "leaders": [],
   "line_away": [
    2.0,
@@ -239,21 +239,25 @@
    1.0
   ],
   "period": 3,
-  "status": "In Progress"
+  "status": "Final"
  },
  "81ee484309522975fbb4df2f859fa136": {
   "away_r": "0",
-  "clock": "0:00",
-  "detail": "11/11 - 9:30 PM EST",
+  "clock": "19:01",
+  "detail": "19:01 - 1st",
   "espn_id": "401892693",
   "final": false,
   "home_r": "0",
-  "in_play": false,
+  "in_play": true,
   "leaders": [],
-  "line_away": [],
-  "line_home": [],
-  "period": 0,
-  "status": "Scheduled"
+  "line_away": [
+   0.0
+  ],
+  "line_home": [
+   0.0
+  ],
+  "period": 1,
+  "status": "In Progress"
  },
  "89806a3740a856eb0cb991e427d5dcfa": {
   "away_r": "0",
@@ -379,8 +383,8 @@
  },
  "d6fb69c3f844f53b1bb2619066cd7947": {
   "away_r": "2",
-  "clock": "17:49",
-  "detail": "17:49 - 3rd",
+  "clock": "14:06",
+  "detail": "14:06 - 3rd",
   "espn_id": "401892691",
   "final": false,
   "home_r": "0",
@@ -388,9 +392,11 @@
   "leaders": [],
   "line_away": [
    0.0,
-   2.0
+   2.0,
+   0.0
   ],
   "line_home": [
+   0.0,
    0.0,
    0.0
   ],
