@@ -1205,10 +1205,10 @@
   "away_rank": 99,
   "away_short": "UMass",
   "city": "Toledo",
-  "clock": "0:00",
+  "clock": "12:59",
   "conf_comp": true,
-  "detail": "End of 1st",
-  "down": "3rd & 10 at MASS 31",
+  "detail": "12:59 - 2nd",
+  "down": "4th & Goal at MASS 9",
   "espn_id": "401866463",
   "final": false,
   "home_abbr": "TOL",
@@ -1220,7 +1220,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "5/7, 59 YDS",
+    "val": "6/9, 82 YDS",
     "who": "J. Richter"
    },
    {
@@ -1232,21 +1232,23 @@
    {
     "cat": "REC",
     "team": "home",
-    "val": "3 REC, 53 YDS",
+    "val": "4 REC, 76 YDS",
     "who": "A. Dabbs"
    }
   ],
   "line_away": [
+   0.0,
    0.0
   ],
   "line_home": [
-   7.0
+   7.0,
+   0.0
   ],
   "neutral": false,
-  "period": 1,
+  "period": 2,
   "poss": "home",
-  "redzone": false,
-  "spot": "MASS 31",
+  "redzone": true,
+  "spot": "MASS 9",
   "state": "OH",
   "status": "In Progress",
   "venue": "Glass Bowl"
@@ -2467,10 +2469,10 @@
   "away_rank": 99,
   "away_short": "Sacramento St",
   "city": "Mount Pleasant",
-  "clock": "8:32",
+  "clock": "6:21",
   "conf_comp": true,
-  "detail": "8:32 - 2nd",
-  "down": "1st & 10 at SAC 28",
+  "detail": "6:21 - 2nd",
+  "down": null,
   "espn_id": "401866462",
   "final": false,
   "home_abbr": "CMU",
@@ -2482,13 +2484,13 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "3/6, 62 YDS",
+    "val": "4/7, 65 YDS",
     "who": "J. Glasser"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "9 CAR, 49 YDS",
+    "val": "10 CAR, 49 YDS",
     "who": "N. Woodford"
    },
    {
@@ -2508,9 +2510,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "SAC 28",
+  "spot": null,
   "state": "MI",
   "status": "In Progress",
   "venue": "Kelly/Shorts Stadium"
@@ -2963,10 +2965,10 @@
   "away_rank": 99,
   "away_short": "Buffalo",
   "city": "Muncie",
-  "clock": "0:00",
+  "clock": "14:47",
   "conf_comp": true,
-  "detail": "End of 1st",
-  "down": "4th & 9 at BUF 32",
+  "detail": "14:47 - 2nd",
+  "down": "2nd & 6 at BALL 47",
   "espn_id": "401866461",
   "final": false,
   "home_abbr": "BALL",
@@ -2984,7 +2986,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "5 CAR, 35 YDS",
+    "val": "6 CAR, 39 YDS",
     "who": "T. Horton"
    },
    {
@@ -2995,16 +2997,18 @@
    }
   ],
   "line_away": [
+   0.0,
    0.0
   ],
   "line_home": [
-   7.0
+   7.0,
+   0.0
   ],
   "neutral": false,
-  "period": 1,
-  "poss": "away",
+  "period": 2,
+  "poss": "home",
   "redzone": false,
-  "spot": "BUF 32",
+  "spot": "BALL 47",
   "state": "IN",
   "status": "In Progress",
   "venue": "Scheumann Stadium"
