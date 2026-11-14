@@ -5,10 +5,10 @@
   "away_rank": 99,
   "away_short": "East Carolina",
   "city": "Charlotte",
-  "clock": "3:18",
+  "clock": "2:15",
   "conf_comp": true,
-  "detail": "3:18 - 1st",
-  "down": null,
+  "detail": "2:15 - 1st",
+  "down": "1st & 10 at ECU 38",
   "espn_id": "401862825",
   "final": false,
   "home_abbr": "CLT",
@@ -20,14 +20,14 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "6/7, 40 YDS",
+    "val": "7/8, 40 YDS",
     "who": "E. Williams"
    },
    {
     "cat": "RUSH",
-    "team": "home",
-    "val": "4 CAR, 6 YDS",
-    "who": "H. Rutledge"
+    "team": "away",
+    "val": "2 CAR, 8 YDS",
+    "who": "A. Gray"
    },
    {
     "cat": "REC",
@@ -44,9 +44,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "ECU 38",
   "state": "NC",
   "status": "In Progress",
   "venue": "Jerry Richardson Stadium"
@@ -153,10 +153,10 @@
   "away_rank": 99,
   "away_short": "Cincinnati",
   "city": "Ames",
-  "clock": "0:20",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:20 - 2nd",
-  "down": "2nd & 10 at ISU 48",
+  "detail": "Halftime",
+  "down": null,
   "espn_id": "401856859",
   "final": false,
   "home_abbr": "ISU",
@@ -168,13 +168,13 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "7/11, 138 YDS, 1 TD, 1 INT",
+    "val": "7/12, 138 YDS, 1 TD, 1 INT",
     "who": "J. Raynor"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "16 CAR, 152 YDS, 3 TD",
+    "val": "17 CAR, 161 YDS, 3 TD",
     "who": "A. Flora"
    },
    {
@@ -194,11 +194,11 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "ISU 48",
+  "spot": null,
   "state": "IA",
-  "status": "In Progress",
+  "status": "Halftime",
   "venue": "Jack Trice Stadium"
  },
  "0a1027a4edb364b492a3fee67086e8bc": {
@@ -639,10 +639,10 @@
   "away_rank": 99,
   "away_short": "Nebraska",
   "city": "Piscataway",
-  "clock": "6:52",
+  "clock": "3:15",
   "conf_comp": true,
-  "detail": "6:52 - 2nd",
-  "down": "1st & 10 at NEB 10",
+  "detail": "3:15 - 2nd",
+  "down": "1st & 10 at NEB 45",
   "espn_id": "401858525",
   "final": false,
   "home_abbr": "RUTG",
@@ -654,13 +654,13 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "4/8, 52 YDS, 1 TD",
+    "val": "5/9, 54 YDS, 1 TD",
     "who": "A. Colandrea"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "11 CAR, 51 YDS",
+    "val": "14 CAR, 51 YDS",
     "who": "J. Rule"
    },
    {
@@ -682,7 +682,7 @@
   "period": 2,
   "poss": "away",
   "redzone": false,
-  "spot": "NEB 10",
+  "spot": "NEB 45",
   "state": "NJ",
   "status": "In Progress",
   "venue": "SHI Stadium"
@@ -1077,10 +1077,10 @@
   "away_rank": 99,
   "away_short": "Northwestern",
   "city": "Columbus",
-  "clock": "0:35",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:35 - 2nd",
-  "down": "1st & 10 at OSU 10",
+  "detail": "Halftime",
+  "down": null,
   "espn_id": "401858522",
   "final": false,
   "home_abbr": "OSU",
@@ -1110,19 +1110,21 @@
   ],
   "line_away": [
    3.0,
-   3.0
+   3.0,
+   0.0
   ],
   "line_home": [
    0.0,
-   14.0
+   14.0,
+   0.0
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "OSU 10",
+  "spot": null,
   "state": "OH",
-  "status": "In Progress",
+  "status": "Halftime",
   "venue": "Ohio Stadium"
  },
  "4c15d7c4261fa1d8b75615a46d4d2ea7": {
@@ -2011,14 +2013,14 @@
  },
  "6f50a1eb0425d8adc1f4914bf27289d0": {
   "away_abbr": "UAB",
-  "away_r": "0",
+  "away_r": "7",
   "away_rank": 99,
   "away_short": "UAB",
   "city": "Philadelphia",
-  "clock": "4:25",
+  "clock": "2:53",
   "conf_comp": true,
-  "detail": "4:25 - 1st",
-  "down": null,
+  "detail": "2:53 - 1st",
+  "down": "1st & 10 at TEM 25",
   "espn_id": "401862829",
   "final": false,
   "home_abbr": "TEM",
@@ -2029,9 +2031,9 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "3/7, 15 YDS, 1 TD",
-    "who": "A. Sheppard"
+    "team": "away",
+    "val": "2/4, 69 YDS, 1 INT",
+    "who": "R. Burton"
    },
    {
     "cat": "RUSH",
@@ -2041,13 +2043,13 @@
    },
    {
     "cat": "REC",
-    "team": "home",
-    "val": "1 REC, 12 YDS, 1 TD",
-    "who": "J. Bermudez"
+    "team": "away",
+    "val": "1 REC, 67 YDS",
+    "who": "S. Isacks"
    }
   ],
   "line_away": [
-   0.0
+   7.0
   ],
   "line_home": [
    7.0
@@ -2056,7 +2058,7 @@
   "period": 1,
   "poss": null,
   "redzone": false,
-  "spot": null,
+  "spot": "TEM 25",
   "state": "PA",
   "status": "In Progress",
   "venue": "Lincoln Financial Field"
@@ -2111,14 +2113,14 @@
  },
  "72e1af72402c489444f89a8600abb23f": {
   "away_abbr": "ARST",
-  "away_r": "0",
+  "away_r": "7",
   "away_rank": 99,
   "away_short": "Arkansas St",
   "city": "Conway",
-  "clock": "3:28",
+  "clock": "3:12",
   "conf_comp": true,
-  "detail": "3:28 - 1st",
-  "down": "4th & 8 at ARST 38",
+  "detail": "3:12 - 1st",
+  "down": null,
   "espn_id": "401869937",
   "final": false,
   "home_abbr": "CCU",
@@ -2135,9 +2137,9 @@
    },
    {
     "cat": "RUSH",
-    "team": "home",
-    "val": "2 CAR, 12 YDS",
-    "who": "D. Bailey"
+    "team": "away",
+    "val": "2 CAR, 21 YDS, 1 TD",
+    "who": "C. Cobb"
    },
    {
     "cat": "REC",
@@ -2147,16 +2149,16 @@
    }
   ],
   "line_away": [
-   0.0
+   7.0
   ],
   "line_home": [
    7.0
   ],
   "neutral": false,
   "period": 1,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "ARST 38",
+  "spot": null,
   "state": "SC",
   "status": "In Progress",
   "venue": "Brooks Stadium (SC)"
@@ -2465,10 +2467,10 @@
   "away_rank": 99,
   "away_short": "Georgia Tech",
   "city": "Clemson",
-  "clock": "11:51",
+  "clock": "9:02",
   "conf_comp": true,
-  "detail": "11:51 - 2nd",
-  "down": "2nd & 5 at GT 45",
+  "detail": "9:02 - 2nd",
+  "down": "3rd & 7 at CLEM 30",
   "espn_id": "401858297",
   "final": false,
   "home_abbr": "CLEM",
@@ -2480,14 +2482,14 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "5/5, 80 YDS",
+    "val": "5/6, 80 YDS",
     "who": "A. Mendoza"
    },
    {
     "cat": "RUSH",
-    "team": "home",
-    "val": "1 CAR, 24 YDS",
-    "who": "T. Reynolds"
+    "team": "away",
+    "val": "5 CAR, 37 YDS",
+    "who": "J. Haynes"
    },
    {
     "cat": "REC",
@@ -2508,7 +2510,7 @@
   "period": 2,
   "poss": "away",
   "redzone": false,
-  "spot": "GT 45",
+  "spot": "CLEM 30",
   "state": "SC",
   "status": "In Progress",
   "venue": "Memorial Stadium (Clemson, SC)"
@@ -2519,10 +2521,10 @@
   "away_rank": 99,
   "away_short": "James Madison",
   "city": "East Hartford",
-  "clock": "0:32",
+  "clock": "0:01",
   "conf_comp": false,
-  "detail": "0:32 - 2nd",
-  "down": "1st & 10 at CONN 41",
+  "detail": "0:01 - 2nd",
+  "down": null,
   "espn_id": "401861967",
   "final": false,
   "home_abbr": "CONN",
@@ -2540,8 +2542,8 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "7 CAR, 47 YDS",
-    "who": "C. Bowers"
+    "val": "10 CAR, 65 YDS",
+    "who": "K. Osborne"
    },
    {
     "cat": "REC",
@@ -2562,7 +2564,7 @@
   "period": 2,
   "poss": "home",
   "redzone": false,
-  "spot": "CONN 41",
+  "spot": null,
   "state": "CT",
   "status": "In Progress",
   "venue": "Pratt & Whitney Stadium"
@@ -2573,10 +2575,10 @@
   "away_rank": 99,
   "away_short": "Wisconsin",
   "city": "College Park",
-  "clock": "0:16",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:16 - 2nd",
-  "down": "2nd & 10 at WIS 2",
+  "detail": "Halftime",
+  "down": null,
   "espn_id": "401858520",
   "final": false,
   "home_abbr": "MD",
@@ -2614,11 +2616,11 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "WIS 2",
+  "spot": null,
   "state": "MD",
-  "status": "In Progress",
+  "status": "Halftime",
   "venue": "SECU Stadium"
  },
  "873a763cc258ad94bac35324c66e361c": {
@@ -3031,10 +3033,10 @@
   "away_rank": 99,
   "away_short": "Duke",
   "city": "Miami Gardens",
-  "clock": "1:27",
+  "clock": "0:44",
   "conf_comp": true,
-  "detail": "1:27 - 2nd",
-  "down": "2nd & 2 at DUKE 41",
+  "detail": "0:44 - 2nd",
+  "down": null,
   "espn_id": "401858296",
   "final": false,
   "home_abbr": "MIA",
@@ -3046,7 +3048,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "14/18, 150 YDS",
+    "val": "17/22, 179 YDS",
     "who": "D. Mensah"
    },
    {
@@ -3074,7 +3076,7 @@
   "period": 2,
   "poss": "home",
   "redzone": false,
-  "spot": "DUKE 41",
+  "spot": null,
   "state": "FL",
   "status": "In Progress",
   "venue": "Hard Rock Stadium"
@@ -3331,14 +3333,14 @@
  },
  "b7d77aed1f8f75da7679a059e627dfee": {
   "away_abbr": "WAKE",
-  "away_r": "35",
+  "away_r": "42",
   "away_rank": 13,
   "away_short": "Wake Forest",
   "city": "Dallas",
-  "clock": "4:20",
+  "clock": "2:01",
   "conf_comp": true,
-  "detail": "4:20 - 2nd",
-  "down": "3rd & 7 at SMU 18",
+  "detail": "2:01 - 2nd",
+  "down": "1st & 10 at SMU 25",
   "espn_id": "401858301",
   "final": false,
   "home_abbr": "SMU",
@@ -3350,13 +3352,13 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "7/15, 114 YDS, 1 TD",
+    "val": "7/16, 114 YDS, 1 TD",
     "who": "G. Lopez"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "6 CAR, 63 YDS, 1 TD",
+    "val": "7 CAR, 66 YDS, 1 TD",
     "who": "T. Clark III"
    },
    {
@@ -3368,7 +3370,7 @@
   ],
   "line_away": [
    14.0,
-   21.0
+   28.0
   ],
   "line_home": [
    0.0,
@@ -3376,9 +3378,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
-  "redzone": true,
-  "spot": "SMU 18",
+  "poss": null,
+  "redzone": false,
+  "spot": "SMU 25",
   "state": "TX",
   "status": "In Progress",
   "venue": "Gerald J. Ford Stadium"
@@ -4423,10 +4425,10 @@
   "away_rank": 3,
   "away_short": "Alabama",
   "city": "Nashville",
-  "clock": "12:54",
+  "clock": "9:23",
   "conf_comp": true,
-  "detail": "12:54 - 2nd",
-  "down": "2nd & 7 at ALA 41",
+  "detail": "9:23 - 2nd",
+  "down": "1st & 10 at ALA 46",
   "espn_id": "401856889",
   "final": false,
   "home_abbr": "VAN",
@@ -4438,7 +4440,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "10/11, 66 YDS",
+    "val": "11/12, 81 YDS",
     "who": "K. Russell"
    },
    {
@@ -4450,8 +4452,8 @@
    {
     "cat": "REC",
     "team": "away",
-    "val": "2 REC, 18 YDS",
-    "who": "R. Scott"
+    "val": "4 REC, 31 YDS",
+    "who": "R. Coleman-Williams"
    }
   ],
   "line_away": [
@@ -4464,9 +4466,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "ALA 41",
+  "spot": "ALA 46",
   "state": "TN",
   "status": "In Progress",
   "venue": "FirstBank Stadium"
