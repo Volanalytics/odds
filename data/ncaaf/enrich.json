@@ -2137,46 +2137,50 @@
   "away_rank": 14,
   "away_short": "Houston",
   "city": "Boulder",
-  "clock": "0:00",
+  "clock": "11:36",
   "conf_comp": true,
-  "detail": "11/13 - 10:15 PM EST",
-  "down": null,
+  "detail": "11:36 - 1st",
+  "down": "1st & 10 at COLO 35",
   "espn_id": "401856860",
   "final": false,
   "home_abbr": "COLO",
   "home_r": "0",
   "home_rank": 99,
   "home_short": "Colorado",
-  "in_play": false,
+  "in_play": true,
   "leaders": [
    {
     "cat": "PASS",
     "team": "away",
-    "val": "2280 YDS, 22 TD, 2 INT",
+    "val": "4/4, 36 YDS",
     "who": "C. Weigman"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "129 CAR, 606 YDS, 4 TD",
-    "who": "M. Hughes"
+    "val": "3 CAR, 4 YDS",
+    "who": "R. Sanford II"
    },
    {
     "cat": "REC",
-    "team": "home",
-    "val": "58 REC, 853 YDS, 6 TD",
-    "who": "J. Williams"
+    "team": "away",
+    "val": "1 REC, 16 YDS",
+    "who": "T. Walker"
    }
   ],
-  "line_away": [],
-  "line_home": [],
+  "line_away": [
+   0.0
+  ],
+  "line_home": [
+   0.0
+  ],
   "neutral": false,
-  "period": 0,
-  "poss": null,
+  "period": 1,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "COLO 35",
   "state": "CO",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "Folsom Field"
  },
  "7585fb8b12453a68ca1195319ae44c78": {
@@ -3319,14 +3323,14 @@
   "away_rank": 99,
   "away_short": "Illinois",
   "city": "Pasadena",
-  "clock": "1:36",
+  "clock": "1:26",
   "conf_comp": true,
-  "detail": "1:36 - 2nd",
-  "down": "3rd & Goal at ILL 2",
+  "detail": "1:26 - 2nd",
+  "down": null,
   "espn_id": "401858526",
   "final": false,
   "home_abbr": "UCLA",
-  "home_r": "7",
+  "home_r": "10",
   "home_rank": 4,
   "home_short": "UCLA",
   "in_play": true,
@@ -3340,7 +3344,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "8 CAR, 37 YDS",
+    "val": "9 CAR, 37 YDS",
     "who": "W. Knight"
    },
    {
@@ -3356,13 +3360,13 @@
   ],
   "line_home": [
    7.0,
-   0.0
+   3.0
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
-  "redzone": true,
-  "spot": "ILL 2",
+  "poss": null,
+  "redzone": false,
+  "spot": null,
   "state": "CA",
   "status": "In Progress",
   "venue": "Rose Bowl"
@@ -4141,10 +4145,10 @@
   "away_rank": 99,
   "away_short": "Florida St",
   "city": "Pittsburgh",
-  "clock": "1:07",
+  "clock": "0:31",
   "conf_comp": true,
-  "detail": "1:07 - 4th",
-  "down": "4th & 5 at PITT 31",
+  "detail": "0:31 - 4th",
+  "down": "2nd & 12 at FSU 46",
   "espn_id": "401858293",
   "final": false,
   "home_abbr": "PITT",
@@ -4162,7 +4166,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "8 CAR, 50 YDS",
+    "val": "9 CAR, 58 YDS",
     "who": "C. Dailey"
    },
    {
@@ -4186,9 +4190,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "PITT 31",
+  "spot": "FSU 46",
   "state": "PA",
   "status": "In Progress",
   "venue": "Acrisure Stadium"
