@@ -145,13 +145,13 @@
  },
  "0431ccbcda08ef99781fee8c341c8932": {
   "away_abbr": "CIN",
-  "away_r": "0",
+  "away_r": "6",
   "away_rank": 99,
   "away_short": "Cincinnati",
   "city": "Ames",
-  "clock": "0:00",
+  "clock": "13:31",
   "conf_comp": true,
-  "detail": "11/14 - 12:00 PM EST",
+  "detail": "13:31 - 1st",
   "down": null,
   "espn_id": "401856859",
   "final": false,
@@ -159,36 +159,40 @@
   "home_r": "0",
   "home_rank": 99,
   "home_short": "Iowa State",
-  "in_play": false,
+  "in_play": true,
   "leaders": [
    {
     "cat": "PASS",
     "team": "away",
-    "val": "1990 YDS, 15 TD, 3 INT",
+    "val": "2/2, 9 YDS, 1 TD",
     "who": "J. French IV"
    },
    {
     "cat": "RUSH",
-    "team": "home",
-    "val": "157 CAR, 1119 YDS, 9 TD",
-    "who": "A. Flora"
+    "team": "away",
+    "val": "1 CAR, 66 YDS",
+    "who": "C. Tabb"
    },
    {
     "cat": "REC",
     "team": "away",
-    "val": "39 REC, 515 YDS, 4 TD",
-    "who": "J. Gibson"
+    "val": "1 REC, 5 YDS",
+    "who": "L. Fenner"
    }
   ],
-  "line_away": [],
-  "line_home": [],
+  "line_away": [
+   6.0
+  ],
+  "line_home": [
+   0.0
+  ],
   "neutral": false,
-  "period": 0,
+  "period": 1,
   "poss": null,
-  "redzone": false,
+  "redzone": true,
   "spot": null,
   "state": "IA",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "Jack Trice Stadium"
  },
  "0a1027a4edb364b492a3fee67086e8bc": {
@@ -2483,46 +2487,50 @@
   "away_rank": 99,
   "away_short": "James Madison",
   "city": "East Hartford",
-  "clock": "0:00",
+  "clock": "14:11",
   "conf_comp": false,
-  "detail": "11/14 - 12:00 PM EST",
-  "down": null,
+  "detail": "14:11 - 1st",
+  "down": "1st & 10 at CONN 42",
   "espn_id": "401861967",
   "final": false,
   "home_abbr": "CONN",
   "home_r": "0",
   "home_rank": 99,
   "home_short": "UConn",
-  "in_play": false,
+  "in_play": true,
   "leaders": [
    {
     "cat": "PASS",
     "team": "home",
-    "val": "2102 YDS, 16 TD, 4 INT",
+    "val": "1/2, 15 YDS",
     "who": "K. Osborne"
    },
    {
     "cat": "RUSH",
-    "team": "away",
-    "val": "124 CAR, 824 YDS, 8 TD",
-    "who": "G. Pettaway"
+    "team": "home",
+    "val": "1 CAR, 2 YDS",
+    "who": "C. Bowers"
    },
    {
     "cat": "REC",
-    "team": "away",
-    "val": "33 REC, 524 YDS, 5 TD",
-    "who": "C. Scott"
+    "team": "home",
+    "val": "1 REC, 15 YDS",
+    "who": "S. Porter"
    }
   ],
-  "line_away": [],
-  "line_home": [],
+  "line_away": [
+   0.0
+  ],
+  "line_home": [
+   0.0
+  ],
   "neutral": false,
-  "period": 0,
-  "poss": null,
+  "period": 1,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "CONN 42",
   "state": "CT",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "Pratt & Whitney Stadium"
  },
  "862cc541ca98da17b20a964513c18435": {
@@ -2531,46 +2539,44 @@
   "away_rank": 99,
   "away_short": "Wisconsin",
   "city": "College Park",
-  "clock": "0:00",
+  "clock": "14:46",
   "conf_comp": true,
-  "detail": "11/14 - 12:00 PM EST",
-  "down": null,
+  "detail": "14:46 - 1st",
+  "down": "2nd & 4 at MD 31",
   "espn_id": "401858520",
   "final": false,
   "home_abbr": "MD",
   "home_r": "0",
   "home_rank": 99,
   "home_short": "Maryland",
-  "in_play": false,
+  "in_play": true,
   "leaders": [
    {
     "cat": "PASS",
     "team": "home",
-    "val": "2058 YDS, 11 TD, 8 INT",
-    "who": "M. Washington"
-   },
-   {
-    "cat": "RUSH",
-    "team": "home",
-    "val": "71 CAR, 437 YDS, 5 TD",
-    "who": "D. Williams"
+    "val": "1/1, 6 YDS",
+    "who": "C. Williams"
    },
    {
     "cat": "REC",
     "team": "home",
-    "val": "62 REC, 765 YDS, 5 TD",
+    "val": "1 REC, 6 YDS",
     "who": "C. Durr Jr."
    }
   ],
-  "line_away": [],
-  "line_home": [],
+  "line_away": [
+   0.0
+  ],
+  "line_home": [
+   0.0
+  ],
   "neutral": false,
-  "period": 0,
-  "poss": null,
+  "period": 1,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "MD 31",
   "state": "MD",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "SECU Stadium"
  },
  "873a763cc258ad94bac35324c66e361c": {
@@ -3281,46 +3287,31 @@
   "away_rank": 13,
   "away_short": "Wake Forest",
   "city": "Dallas",
-  "clock": "0:00",
+  "clock": "14:57",
   "conf_comp": true,
-  "detail": "11/14 - 12:00 PM EST",
-  "down": null,
+  "detail": "14:57 - 1st",
+  "down": "1st & 20 at SMU 35",
   "espn_id": "401858301",
   "final": false,
   "home_abbr": "SMU",
   "home_r": "0",
   "home_rank": 99,
   "home_short": "SMU",
-  "in_play": false,
-  "leaders": [
-   {
-    "cat": "PASS",
-    "team": "home",
-    "val": "2764 YDS, 25 TD, 6 INT",
-    "who": "K. Jennings"
-   },
-   {
-    "cat": "RUSH",
-    "team": "home",
-    "val": "150 CAR, 755 YDS, 10 TD",
-    "who": "K. Raphael"
-   },
-   {
-    "cat": "REC",
-    "team": "away",
-    "val": "61 REC, 945 YDS, 7 TD",
-    "who": "C. Hernandez"
-   }
+  "in_play": true,
+  "leaders": [],
+  "line_away": [
+   0.0
   ],
-  "line_away": [],
-  "line_home": [],
+  "line_home": [
+   0.0
+  ],
   "neutral": false,
-  "period": 0,
+  "period": 1,
   "poss": null,
   "redzone": false,
-  "spot": null,
+  "spot": "SMU 35",
   "state": "TX",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "Gerald J. Ford Stadium"
  },
  "bc528be865b10cd4a63a9e642c90d554": {
@@ -3627,46 +3618,50 @@
   "away_rank": 99,
   "away_short": "Syracuse",
   "city": "Raleigh",
-  "clock": "0:00",
+  "clock": "13:04",
   "conf_comp": true,
-  "detail": "11/14 - 12:00 PM EST",
-  "down": null,
+  "detail": "13:04 - 1st",
+  "down": "1st & 10 at SYR 44",
   "espn_id": "401858300",
   "final": false,
   "home_abbr": "NCSU",
   "home_r": "0",
   "home_rank": 99,
   "home_short": "NC State",
-  "in_play": false,
+  "in_play": true,
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "2078 YDS, 13 TD, 4 INT",
-    "who": "C. Bailey"
+    "team": "away",
+    "val": "2/2, 12 YDS",
+    "who": "S. Angeli"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "100 CAR, 531 YDS, 1 TD",
-    "who": "T. Hill"
+    "val": "1 CAR, 9 YDS",
+    "who": "C. Russell III"
    },
    {
     "cat": "REC",
     "team": "away",
-    "val": "62 REC, 964 YDS, 8 TD",
-    "who": "U. Hatcher"
+    "val": "2 REC, 12 YDS",
+    "who": "C. Russell III"
    }
   ],
-  "line_away": [],
-  "line_home": [],
+  "line_away": [
+   0.0
+  ],
+  "line_home": [
+   0.0
+  ],
   "neutral": false,
-  "period": 0,
-  "poss": null,
+  "period": 1,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "SYR 44",
   "state": "NC",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "Carter-Finley Stadium"
  },
  "d0327c5775ed8cc9854411f8e077af93": {
