@@ -917,14 +917,14 @@
  },
  "21c985dda7b6b34cc9820a76dfad6172": {
   "away_abbr": "WYO",
-  "away_r": "20",
+  "away_r": "21",
   "away_rank": 99,
   "away_short": "Wyoming",
   "city": "El Paso",
-  "clock": "8:26",
+  "clock": "5:22",
   "conf_comp": true,
-  "detail": "8:26 - 2nd",
-  "down": null,
+  "detail": "5:22 - 2nd",
+  "down": "3rd & 11 at UTEP 38",
   "espn_id": "401864540",
   "final": false,
   "home_abbr": "UTEP",
@@ -942,7 +942,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "6 CAR, 118 YDS, 1 TD",
+    "val": "8 CAR, 124 YDS, 1 TD",
     "who": "R. Moore III"
    },
    {
@@ -954,7 +954,7 @@
   ],
   "line_away": [
    14.0,
-   6.0
+   7.0
   ],
   "line_home": [
    6.0,
@@ -962,9 +962,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
-  "redzone": true,
-  "spot": null,
+  "poss": "home",
+  "redzone": false,
+  "spot": "UTEP 38",
   "state": "TX",
   "status": "In Progress",
   "venue": "Sun Bowl"
@@ -1033,10 +1033,10 @@
   "away_rank": 12,
   "away_short": "Texas Tech",
   "city": "Stillwater",
-  "clock": "2:00",
+  "clock": "0:49",
   "conf_comp": true,
-  "detail": "2:00 - 2nd",
-  "down": null,
+  "detail": "0:49 - 2nd",
+  "down": "2nd & Goal at TTU 2",
   "espn_id": "401856863",
   "final": false,
   "home_abbr": "OKST",
@@ -1047,9 +1047,9 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "away",
-    "val": "8/13, 178 YDS, 2 TD",
-    "who": "T. Castellanos"
+    "team": "home",
+    "val": "18/26, 186 YDS, 1 TD, 1 INT",
+    "who": "D. Mestemaker"
    },
    {
     "cat": "RUSH",
@@ -1075,8 +1075,8 @@
   "neutral": false,
   "period": 2,
   "poss": "home",
-  "redzone": false,
-  "spot": null,
+  "redzone": true,
+  "spot": "TTU 2",
   "state": "OK",
   "status": "In Progress",
   "venue": "Boone Pickens Stadium"
@@ -1839,17 +1839,17 @@
   "away_rank": 6,
   "away_short": "Texas",
   "city": "Baton Rouge",
-  "clock": "0:02",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:02 - 4th",
+  "detail": "Final",
   "down": null,
   "espn_id": "401856885",
-  "final": false,
+  "final": true,
   "home_abbr": "LSU",
   "home_r": "21",
   "home_rank": 21,
   "home_short": "LSU",
-  "in_play": true,
+  "in_play": false,
   "leaders": [
    {
     "cat": "PASS",
@@ -1885,10 +1885,10 @@
   "neutral": false,
   "period": 4,
   "poss": null,
-  "redzone": true,
+  "redzone": false,
   "spot": null,
   "state": "LA",
-  "status": "In Progress",
+  "status": "Final",
   "venue": "Tiger Stadium (LA)"
  },
  "5f74ef6944e660a91381ecf388633c69": {
@@ -2539,14 +2539,14 @@
  },
  "7b3c2958dadc616a19ce7b9b1dd2a7e4": {
   "away_abbr": "UTAH",
-  "away_r": "0",
+  "away_r": "3",
   "away_rank": 2,
   "away_short": "Utah",
   "city": "Tucson",
-  "clock": "15:00",
+  "clock": "13:52",
   "conf_comp": true,
-  "detail": "15:00 - 1st",
-  "down": "4th & 11 at ARIZ 35",
+  "detail": "13:52 - 2nd",
+  "down": "3rd & 3 at ARIZ 32",
   "espn_id": "401856864",
   "final": false,
   "home_abbr": "ARIZ",
@@ -2558,7 +2558,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "9/11, 83 YDS",
+    "val": "11/14, 90 YDS",
     "who": "N. Fifita"
    },
    {
@@ -2575,16 +2575,18 @@
    }
   ],
   "line_away": [
-   0.0
+   0.0,
+   3.0
   ],
   "line_home": [
-   7.0
+   7.0,
+   0.0
   ],
   "neutral": false,
-  "period": 1,
-  "poss": "away",
+  "period": 2,
+  "poss": "home",
   "redzone": false,
-  "spot": "ARIZ 35",
+  "spot": "ARIZ 32",
   "state": "AZ",
   "status": "In Progress",
   "venue": "Casino Del Sol Stadium"
@@ -3707,10 +3709,10 @@
   "away_rank": 99,
   "away_short": "Colorado St",
   "city": "Pullman",
-  "clock": "0:55",
+  "clock": "15:00",
   "conf_comp": true,
-  "detail": "0:55 - 1st",
-  "down": null,
+  "detail": "15:00 - 1st",
+  "down": "2nd & 10 at CSU 25",
   "espn_id": "401860917",
   "final": false,
   "home_abbr": "WSU",
@@ -3746,9 +3748,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "CSU 25",
   "state": "WA",
   "status": "In Progress",
   "venue": "Martin Stadium"
@@ -3817,10 +3819,10 @@
   "away_rank": 99,
   "away_short": "N Dakota St",
   "city": "Honolulu",
-  "clock": "9:50",
+  "clock": "7:18",
   "conf_comp": true,
-  "detail": "9:50 - 1st",
-  "down": "4th & 2 at HAW 28",
+  "detail": "7:18 - 1st",
+  "down": null,
   "espn_id": "401864537",
   "final": false,
   "home_abbr": "HAW",
@@ -3858,7 +3860,7 @@
   "period": 1,
   "poss": "away",
   "redzone": false,
-  "spot": "HAW 28",
+  "spot": null,
   "state": "HI",
   "status": "In Progress",
   "venue": "Clarence T.C. Ching Athletics Complex"
@@ -4043,17 +4045,17 @@
   "away_rank": 17,
   "away_short": "South Carolina",
   "city": "Fayetteville",
-  "clock": "0:39",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:39 - 4th",
-  "down": "2nd & 12 at SC 27",
+  "detail": "Final",
+  "down": null,
   "espn_id": "401856882",
-  "final": false,
+  "final": true,
   "home_abbr": "ARK",
   "home_r": "34",
   "home_rank": 99,
   "home_short": "Arkansas",
-  "in_play": true,
+  "in_play": false,
   "leaders": [
    {
     "cat": "PASS",
@@ -4088,11 +4090,11 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "SC 27",
+  "spot": null,
   "state": "AR",
-  "status": "In Progress",
+  "status": "Final",
   "venue": "Donald W. Reynolds Razorback Stadium"
  },
  "d466840e3c50d2fdad6fd7e799fdf921": {
@@ -4377,10 +4379,10 @@
   "away_rank": 99,
   "away_short": "North Texas",
   "city": "San Antonio",
-  "clock": "8:49",
+  "clock": "6:56",
   "conf_comp": true,
-  "detail": "8:49 - 3rd",
-  "down": null,
+  "detail": "6:56 - 3rd",
+  "down": "1st & 10 at UNT 23",
   "espn_id": "401862827",
   "final": false,
   "home_abbr": "UTSA",
@@ -4420,9 +4422,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "UNT 23",
   "state": "TX",
   "status": "In Progress",
   "venue": "Alamodome"
