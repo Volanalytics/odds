@@ -921,10 +921,10 @@
   "away_rank": 99,
   "away_short": "Wyoming",
   "city": "El Paso",
-  "clock": "13:10",
+  "clock": "11:06",
   "conf_comp": true,
-  "detail": "13:10 - 3rd",
-  "down": null,
+  "detail": "11:06 - 3rd",
+  "down": "1st & 10 at WYO 21",
   "espn_id": "401864540",
   "final": false,
   "home_abbr": "UTEP",
@@ -936,7 +936,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "9/13, 159 YDS, 1 TD",
+    "val": "10/14, 162 YDS, 1 TD",
     "who": "L. Sims"
    },
    {
@@ -948,7 +948,7 @@
    {
     "cat": "REC",
     "team": "away",
-    "val": "3 REC, 110 YDS",
+    "val": "4 REC, 113 YDS",
     "who": "K. Frendt"
    }
   ],
@@ -966,7 +966,7 @@
   "period": 3,
   "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "WYO 21",
   "state": "TX",
   "status": "In Progress",
   "venue": "Sun Bowl"
@@ -1035,10 +1035,10 @@
   "away_rank": 12,
   "away_short": "Texas Tech",
   "city": "Stillwater",
-  "clock": "7:51",
+  "clock": "6:11",
   "conf_comp": true,
-  "detail": "7:51 - 3rd",
-  "down": "3rd & 13 at OKST 49",
+  "detail": "6:11 - 3rd",
+  "down": "1st & 10 at OKST 3",
   "espn_id": "401856863",
   "final": false,
   "home_abbr": "OKST",
@@ -1078,9 +1078,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "OKST 49",
+  "spot": "OKST 3",
   "state": "OK",
   "status": "In Progress",
   "venue": "Boone Pickens Stadium"
@@ -2597,7 +2597,7 @@
   "city": "Tucson",
   "clock": "0:00",
   "conf_comp": true,
-  "detail": "End of 2nd",
+  "detail": "Halftime",
   "down": null,
   "espn_id": "401856864",
   "final": false,
@@ -2636,11 +2636,11 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
   "spot": null,
   "state": "AZ",
-  "status": "In Progress",
+  "status": "Halftime",
   "venue": "Casino Del Sol Stadium"
  },
  "7da02c5fd7efe20c2f61f665def9cbef": {
@@ -3757,13 +3757,13 @@
  },
  "c3c46d55350226dd82d83ecf0b52891a": {
   "away_abbr": "CSU",
-  "away_r": "6",
+  "away_r": "7",
   "away_rank": 99,
   "away_short": "Colorado St",
   "city": "Pullman",
-  "clock": "0:38",
+  "clock": "0:19",
   "conf_comp": true,
-  "detail": "0:38 - 2nd",
+  "detail": "0:19 - 2nd",
   "down": null,
   "espn_id": "401860917",
   "final": false,
@@ -3794,7 +3794,7 @@
   ],
   "line_away": [
    0.0,
-   6.0
+   7.0
   ],
   "line_home": [
    14.0,
@@ -3802,8 +3802,8 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
-  "redzone": true,
+  "poss": "home",
+  "redzone": false,
   "spot": null,
   "state": "WA",
   "status": "In Progress",
@@ -3921,10 +3921,10 @@
   "away_rank": 99,
   "away_short": "N Dakota St",
   "city": "Honolulu",
-  "clock": "9:17",
+  "clock": "5:14",
   "conf_comp": true,
-  "detail": "9:17 - 2nd",
-  "down": "1st & 10 at HAW 32",
+  "detail": "5:14 - 2nd",
+  "down": "1st & 10 at NDSU 5",
   "espn_id": "401864537",
   "final": false,
   "home_abbr": "HAW",
@@ -3962,9 +3962,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "HAW 32",
+  "spot": "NDSU 5",
   "state": "HI",
   "status": "In Progress",
   "venue": "Clarence T.C. Ching Athletics Complex"
@@ -4429,10 +4429,10 @@
   "away_rank": 99,
   "away_short": "Utah State",
   "city": "San Diego",
-  "clock": "15:00",
+  "clock": "13:13",
   "conf_comp": true,
-  "detail": "15:00 - 4th",
-  "down": "2nd & 10 at USU 45",
+  "detail": "13:13 - 4th",
+  "down": "3rd & 5 at USU 33",
   "espn_id": "401860915",
   "final": false,
   "home_abbr": "SDSU",
@@ -4444,7 +4444,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "13/28, 159 YDS, 1 INT",
+    "val": "16/32, 167 YDS, 1 INT",
     "who": "S. Saunders"
    },
    {
@@ -4456,7 +4456,7 @@
    {
     "cat": "REC",
     "team": "home",
-    "val": "5 REC, 71 YDS",
+    "val": "8 REC, 79 YDS",
     "who": "N. Acevedo"
    }
   ],
@@ -4476,7 +4476,7 @@
   "period": 4,
   "poss": "home",
   "redzone": false,
-  "spot": "USU 45",
+  "spot": "USU 33",
   "state": "CA",
   "status": "In Progress",
   "venue": "Snapdragon Stadium"
@@ -4487,10 +4487,10 @@
   "away_rank": 99,
   "away_short": "North Texas",
   "city": "San Antonio",
-  "clock": "6:57",
+  "clock": "5:37",
   "conf_comp": true,
-  "detail": "6:57 - 4th",
-  "down": "1st & 10 at UTSA 49",
+  "detail": "5:37 - 4th",
+  "down": "4th & 6 at UTSA 45",
   "espn_id": "401862827",
   "final": false,
   "home_abbr": "UTSA",
@@ -4534,7 +4534,7 @@
   "period": 4,
   "poss": "away",
   "redzone": false,
-  "spot": "UTSA 49",
+  "spot": "UTSA 45",
   "state": "TX",
   "status": "In Progress",
   "venue": "Alamodome"
