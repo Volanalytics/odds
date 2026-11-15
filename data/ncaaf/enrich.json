@@ -921,10 +921,10 @@
   "away_rank": 99,
   "away_short": "Wyoming",
   "city": "El Paso",
-  "clock": "7:00",
+  "clock": "5:44",
   "conf_comp": true,
-  "detail": "7:00 - 3rd",
-  "down": null,
+  "detail": "5:44 - 3rd",
+  "down": "1st & 10 at UTEP 28",
   "espn_id": "401864540",
   "final": false,
   "home_abbr": "UTEP",
@@ -942,7 +942,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "8 CAR, 124 YDS, 1 TD",
+    "val": "9 CAR, 127 YDS, 1 TD",
     "who": "R. Moore III"
    },
    {
@@ -966,7 +966,7 @@
   "period": 3,
   "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "UTEP 28",
   "state": "TX",
   "status": "In Progress",
   "venue": "Sun Bowl"
@@ -1035,10 +1035,10 @@
   "away_rank": 12,
   "away_short": "Texas Tech",
   "city": "Stillwater",
-  "clock": "3:16",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "3:16 - 3rd",
-  "down": "3rd & 9 at OKST 26",
+  "detail": "End of 3rd",
+  "down": "1st & 10 at OKST 30",
   "espn_id": "401856863",
   "final": false,
   "home_abbr": "OKST",
@@ -1055,9 +1055,9 @@
    },
    {
     "cat": "RUSH",
-    "team": "home",
-    "val": "17 CAR, 90 YDS",
-    "who": "C. Hawkins"
+    "team": "away",
+    "val": "15 CAR, 102 YDS, 1 TD",
+    "who": "J. Williams"
    },
    {
     "cat": "REC",
@@ -1078,9 +1078,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "OKST 26",
+  "spot": "OKST 30",
   "state": "OK",
   "status": "In Progress",
   "venue": "Boone Pickens Stadium"
@@ -4065,10 +4065,10 @@
   "away_rank": 99,
   "away_short": "N Dakota St",
   "city": "Honolulu",
-  "clock": "2:00",
+  "clock": "0:35",
   "conf_comp": true,
-  "detail": "2:00 - 2nd",
-  "down": null,
+  "detail": "0:35 - 2nd",
+  "down": "4th & 1 at NDSU 15",
   "espn_id": "401864537",
   "final": false,
   "home_abbr": "HAW",
@@ -4079,9 +4079,9 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "away",
-    "val": "9/12, 58 YDS, 1 TD",
-    "who": "N. Hayes"
+    "team": "home",
+    "val": "14/19, 98 YDS, 1 INT",
+    "who": "M. Alejado"
    },
    {
     "cat": "RUSH",
@@ -4091,9 +4091,9 @@
    },
    {
     "cat": "REC",
-    "team": "away",
-    "val": "4 REC, 34 YDS, 1 TD",
-    "who": "M. Collins"
+    "team": "home",
+    "val": "5 REC, 50 YDS",
+    "who": "K. Carvalho"
    }
   ],
   "line_away": [
@@ -4107,8 +4107,8 @@
   "neutral": false,
   "period": 2,
   "poss": "home",
-  "redzone": false,
-  "spot": null,
+  "redzone": true,
+  "spot": "NDSU 15",
   "state": "HI",
   "status": "In Progress",
   "venue": "Clarence T.C. Ching Athletics Complex"
@@ -4573,10 +4573,10 @@
   "away_rank": 99,
   "away_short": "Utah State",
   "city": "San Diego",
-  "clock": "10:41",
+  "clock": "8:24",
   "conf_comp": true,
-  "detail": "10:41 - 4th",
-  "down": "2nd & 10 at SDSU 46",
+  "detail": "8:24 - 4th",
+  "down": "3rd & 8 at SDSU 18",
   "espn_id": "401860915",
   "final": false,
   "home_abbr": "SDSU",
@@ -4619,8 +4619,8 @@
   "neutral": false,
   "period": 4,
   "poss": "away",
-  "redzone": false,
-  "spot": "SDSU 46",
+  "redzone": true,
+  "spot": "SDSU 18",
   "state": "CA",
   "status": "In Progress",
   "venue": "Snapdragon Stadium"
@@ -4631,14 +4631,14 @@
   "away_rank": 99,
   "away_short": "North Texas",
   "city": "San Antonio",
-  "clock": "1:58",
+  "clock": "1:00",
   "conf_comp": true,
-  "detail": "1:58 - 4th",
-  "down": "1st & 10 at UTSA 47",
+  "detail": "1:00 - 4th",
+  "down": null,
   "espn_id": "401862827",
   "final": false,
   "home_abbr": "UTSA",
-  "home_r": "28",
+  "home_r": "35",
   "home_rank": 99,
   "home_short": "UTSA",
   "in_play": true,
@@ -4652,7 +4652,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "10 CAR, 133 YDS, 3 TD",
+    "val": "11 CAR, 179 YDS, 4 TD",
     "who": "A. Peterson"
    },
    {
@@ -4672,13 +4672,13 @@
    7.0,
    14.0,
    0.0,
-   7.0
+   14.0
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "UTSA 47",
+  "spot": null,
   "state": "TX",
   "status": "In Progress",
   "venue": "Alamodome"
