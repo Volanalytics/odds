@@ -921,9 +921,9 @@
   "away_rank": 99,
   "away_short": "Wyoming",
   "city": "El Paso",
-  "clock": "4:05",
+  "clock": "2:22",
   "conf_comp": true,
-  "detail": "4:05 - 4th",
+  "detail": "2:22 - 4th",
   "down": null,
   "espn_id": "401864540",
   "final": false,
@@ -936,7 +936,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "18/24, 282 YDS, 1 TD",
+    "val": "19/25, 289 YDS, 1 TD",
     "who": "L. Sims"
    },
    {
@@ -1037,17 +1037,17 @@
   "away_rank": 12,
   "away_short": "Texas Tech",
   "city": "Stillwater",
-  "clock": "0:53",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:53 - 4th",
+  "detail": "Final",
   "down": null,
   "espn_id": "401856863",
-  "final": false,
+  "final": true,
   "home_abbr": "OKST",
   "home_r": "27",
   "home_rank": 25,
   "home_short": "Oklahoma St",
-  "in_play": true,
+  "in_play": false,
   "leaders": [
    {
     "cat": "PASS",
@@ -1086,7 +1086,7 @@
   "redzone": false,
   "spot": null,
   "state": "OK",
-  "status": "In Progress",
+  "status": "Final",
   "venue": "Boone Pickens Stadium"
  },
  "3b677ea4fddccce26e4468faf7079768": {
@@ -2695,10 +2695,10 @@
   "away_rank": 2,
   "away_short": "Utah",
   "city": "Tucson",
-  "clock": "15:00",
+  "clock": "14:19",
   "conf_comp": true,
-  "detail": "15:00 - 3rd",
-  "down": "1st & Goal at ARIZ 10",
+  "detail": "14:19 - 4th",
+  "down": null,
   "espn_id": "401856864",
   "final": false,
   "home_abbr": "ARIZ",
@@ -2729,18 +2729,20 @@
   "line_away": [
    0.0,
    17.0,
-   7.0
+   7.0,
+   0.0
   ],
   "line_home": [
    7.0,
    7.0,
-   14.0
+   14.0,
+   0.0
   ],
   "neutral": false,
-  "period": 3,
+  "period": 4,
   "poss": "away",
   "redzone": true,
-  "spot": "ARIZ 10",
+  "spot": null,
   "state": "AZ",
   "status": "In Progress",
   "venue": "Casino Del Sol Stadium"
@@ -3959,10 +3961,10 @@
   "away_rank": 99,
   "away_short": "Colorado St",
   "city": "Pullman",
-  "clock": "0:00",
+  "clock": "13:31",
   "conf_comp": true,
-  "detail": "End of 3rd",
-  "down": "1st & 10 at CSU 25",
+  "detail": "13:31 - 4th",
+  "down": "3rd & 5 at CSU 7",
   "espn_id": "401860917",
   "final": false,
   "home_abbr": "WSU",
@@ -4003,10 +4005,10 @@
    0.0
   ],
   "neutral": false,
-  "period": 3,
+  "period": 4,
   "poss": "home",
-  "redzone": false,
-  "spot": "CSU 25",
+  "redzone": true,
+  "spot": "CSU 7",
   "state": "WA",
   "status": "In Progress",
   "venue": "Martin Stadium"
@@ -4123,10 +4125,10 @@
   "away_rank": 99,
   "away_short": "N Dakota St",
   "city": "Honolulu",
-  "clock": "5:58",
+  "clock": "3:58",
   "conf_comp": true,
-  "detail": "5:58 - 3rd",
-  "down": "4th & 17 at NDSU 1",
+  "detail": "3:58 - 3rd",
+  "down": "2nd & 17 at NDSU 21",
   "espn_id": "401864537",
   "final": false,
   "home_abbr": "HAW",
@@ -4138,14 +4140,14 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "19/27, 140 YDS, 1 INT",
+    "val": "21/31, 155 YDS, 1 INT",
     "who": "M. Alejado"
    },
    {
     "cat": "RUSH",
-    "team": "away",
-    "val": "10 CAR, 20 YDS",
-    "who": "D. Scott"
+    "team": "home",
+    "val": "4 CAR, 26 YDS, 1 TD",
+    "who": "D. Rice"
    },
    {
     "cat": "REC",
@@ -4166,9 +4168,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "NDSU 1",
+  "spot": "NDSU 21",
   "state": "HI",
   "status": "In Progress",
   "venue": "Clarence T.C. Ching Athletics Complex"
