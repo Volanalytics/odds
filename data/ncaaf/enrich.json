@@ -63,10 +63,10 @@
   "away_rank": 99,
   "away_short": "FAU",
   "city": "Tulsa",
-  "clock": "12:01",
+  "clock": "11:37",
   "conf_comp": true,
-  "detail": "12:01 - 1st",
-  "down": "1st & 10 at FAU 10",
+  "detail": "11:37 - 1st",
+  "down": "2nd & 10 at FAU 30",
   "espn_id": "401862826",
   "final": false,
   "home_abbr": "TLSA",
@@ -77,15 +77,21 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "1, 0 YDS",
-    "who": "B. Hayes"
+    "team": "away",
+    "val": "1/1, 19 YDS",
+    "who": "C. Veltkamp"
    },
    {
     "cat": "RUSH",
     "team": "away",
     "val": "3 CAR, 5 YDS",
     "who": "L. Farrow"
+   },
+   {
+    "cat": "REC",
+    "team": "away",
+    "val": "1 REC, 19 YDS",
+    "who": "K. Valsin"
    }
   ],
   "line_away": [
@@ -96,9 +102,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "FAU 10",
+  "spot": "FAU 30",
   "state": "OK",
   "status": "In Progress",
   "venue": "H. A. Chapman Stadium"
@@ -779,10 +785,10 @@
   "away_rank": 99,
   "away_short": "Southern Miss",
   "city": "Ruston",
-  "clock": "7:05",
+  "clock": "5:34",
   "conf_comp": true,
-  "detail": "7:05 - 3rd",
-  "down": "1st & 10 at USM 39",
+  "detail": "5:34 - 3rd",
+  "down": "2nd & Goal at LT 7",
   "espn_id": "401871099",
   "final": false,
   "home_abbr": "LT",
@@ -800,7 +806,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "6 CAR, 58 YDS, 1 TD",
+    "val": "9 CAR, 80 YDS, 1 TD",
     "who": "J. Wilder"
    },
    {
@@ -823,8 +829,8 @@
   "neutral": false,
   "period": 3,
   "poss": "away",
-  "redzone": false,
-  "spot": "USM 39",
+  "redzone": true,
+  "spot": "LT 7",
   "state": "LA",
   "status": "In Progress",
   "venue": "Joe Aillet Stadium"
@@ -1047,10 +1053,10 @@
   "away_rank": 99,
   "away_short": "Louisville",
   "city": "Chapel Hill",
-  "clock": "4:54",
+  "clock": "3:40",
   "conf_comp": true,
-  "detail": "4:54 - 1st",
-  "down": null,
+  "detail": "3:40 - 1st",
+  "down": "1st & 10 at LOU 44",
   "espn_id": "401858298",
   "final": false,
   "home_abbr": "UNC",
@@ -1061,9 +1067,9 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "4/6, 44 YDS",
-    "who": "B. Edwards Jr."
+    "team": "away",
+    "val": "5/7, 51 YDS",
+    "who": "L. Kienholz"
    },
    {
     "cat": "RUSH",
@@ -1086,9 +1092,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "LOU 44",
   "state": "NC",
   "status": "In Progress",
   "venue": "Kenan Stadium"
@@ -1481,13 +1487,13 @@
  },
  "558ce811ad052f49918a2855f3777baf": {
   "away_abbr": "APP",
-  "away_r": "3",
+  "away_r": "6",
   "away_rank": 99,
   "away_short": "App State",
   "city": "Huntington",
-  "clock": "0:38",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:38 - 2nd",
+  "detail": "End of 2nd",
   "down": null,
   "espn_id": "401869928",
   "final": false,
@@ -1518,7 +1524,7 @@
   ],
   "line_away": [
    3.0,
-   0.0
+   3.0
   ],
   "line_home": [
    3.0,
@@ -1683,10 +1689,10 @@
   "away_rank": 99,
   "away_short": "Baylor",
   "city": "Provo",
-  "clock": "7:04",
+  "clock": "5:01",
   "conf_comp": true,
-  "detail": "7:04 - 1st",
-  "down": "1st & 10 at BYU 14",
+  "detail": "5:01 - 1st",
+  "down": "1st & 10 at BYU 37",
   "espn_id": "401856858",
   "final": false,
   "home_abbr": "BYU",
@@ -1698,14 +1704,14 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "2/4, 29 YDS",
+    "val": "3/5, 41 YDS",
     "who": "B. Bachmeier"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "1 CAR, 11 YDS",
-    "who": "L. Martin"
+    "val": "2 CAR, 17 YDS, 1 TD",
+    "who": "B. Bachmeier"
    },
    {
     "cat": "REC",
@@ -1724,7 +1730,7 @@
   "period": 1,
   "poss": "home",
   "redzone": false,
-  "spot": "BYU 14",
+  "spot": "BYU 37",
   "state": "UT",
   "status": "In Progress",
   "venue": "LaVell Edwards Stadium"
@@ -3163,17 +3169,17 @@
   "away_rank": 99,
   "away_short": "Fresno St",
   "city": "San Marcos",
-  "clock": "0:56",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:56 - 4th",
-  "down": "2nd & 10 at FRES 25",
+  "detail": "Final",
+  "down": null,
   "espn_id": "401860916",
-  "final": false,
+  "final": true,
   "home_abbr": "TXST",
   "home_r": "37",
   "home_rank": 99,
   "home_short": "Texas St",
-  "in_play": true,
+  "in_play": false,
   "leaders": [
    {
     "cat": "PASS",
@@ -3208,11 +3214,11 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "FRES 25",
+  "spot": null,
   "state": "TX",
-  "status": "In Progress",
+  "status": "Final",
   "venue": "UFCU Stadium"
  },
  "aa1c9ee516cf122de53e75ffec017edd": {
@@ -3497,10 +3503,10 @@
   "away_rank": 99,
   "away_short": "Florida",
   "city": "Lexington",
-  "clock": "4:48",
+  "clock": "2:53",
   "conf_comp": true,
-  "detail": "4:48 - 2nd",
-  "down": "1st & 10 at FLA 41",
+  "detail": "2:53 - 2nd",
+  "down": "2nd & 7 at UK 7",
   "espn_id": "401856884",
   "final": false,
   "home_abbr": "UK",
@@ -3538,9 +3544,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "FLA 41",
+  "spot": "UK 7",
   "state": "KY",
   "status": "In Progress",
   "venue": "Kroger Field"
@@ -3657,10 +3663,10 @@
   "away_rank": 99,
   "away_short": "Troy",
   "city": "Mobile",
-  "clock": "5:49",
+  "clock": "3:44",
   "conf_comp": true,
-  "detail": "5:49 - 1st",
-  "down": "4th & 5 at TROY 33",
+  "detail": "3:44 - 1st",
+  "down": "4th & 1 at USA 39",
   "espn_id": "401871100",
   "final": false,
   "home_abbr": "USA",
@@ -3672,7 +3678,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "3/5, 14 YDS",
+    "val": "4/5, 23 YDS",
     "who": "G. Crowder"
    },
    {
@@ -3698,7 +3704,7 @@
   "period": 1,
   "poss": "away",
   "redzone": false,
-  "spot": "TROY 33",
+  "spot": "USA 39",
   "state": "AL",
   "status": "In Progress",
   "venue": "Hancock Whitney Stadium"
@@ -3873,10 +3879,10 @@
   "away_rank": 99,
   "away_short": "Tulane",
   "city": "Houston",
-  "clock": "5:01",
+  "clock": "2:37",
   "conf_comp": true,
-  "detail": "5:01 - 4th",
-  "down": null,
+  "detail": "2:37 - 4th",
+  "down": "4th & 1 at TULN 20",
   "espn_id": "401862828",
   "final": false,
   "home_abbr": "RICE",
@@ -3919,8 +3925,8 @@
   "neutral": false,
   "period": 4,
   "poss": "home",
-  "redzone": false,
-  "spot": null,
+  "redzone": true,
+  "spot": "TULN 20",
   "state": "TX",
   "status": "In Progress",
   "venue": "First Community Stadium"
@@ -3979,36 +3985,48 @@
   "away_rank": 99,
   "away_short": "Minnesota",
   "city": "University Park",
-  "clock": "7:05",
+  "clock": "5:15",
   "conf_comp": true,
-  "detail": "7:05 - 1st",
-  "down": "1st & 10 at MINN 33",
+  "detail": "5:15 - 1st",
+  "down": null,
   "espn_id": "401858524",
   "final": false,
   "home_abbr": "PSU",
-  "home_r": "7",
+  "home_r": "14",
   "home_rank": 99,
   "home_short": "Penn State",
   "in_play": true,
   "leaders": [
    {
+    "cat": "PASS",
+    "team": "home",
+    "val": "2/2, 25 YDS, 1 TD",
+    "who": "R. Becht"
+   },
+   {
     "cat": "RUSH",
     "team": "home",
-    "val": "4 CAR, 43 YDS",
+    "val": "6 CAR, 51 YDS",
     "who": "C. Hansen"
+   },
+   {
+    "cat": "REC",
+    "team": "home",
+    "val": "1 REC, 19 YDS, 1 TD",
+    "who": "B. Brahmer"
    }
   ],
   "line_away": [
    0.0
   ],
   "line_home": [
-   7.0
+   14.0
   ],
   "neutral": false,
   "period": 1,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "MINN 33",
+  "spot": null,
   "state": "PA",
   "status": "In Progress",
   "venue": "Beaver Stadium"
@@ -4019,10 +4037,10 @@
   "away_rank": 99,
   "away_short": "Auburn",
   "city": "Starkville",
-  "clock": "10:28",
+  "clock": "8:31",
   "conf_comp": true,
-  "detail": "10:28 - 4th",
-  "down": null,
+  "detail": "8:31 - 4th",
+  "down": "3rd & 9 at AUB 10",
   "espn_id": "401856886",
   "final": false,
   "home_abbr": "MSST",
@@ -4064,9 +4082,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
+  "poss": "home",
   "redzone": true,
-  "spot": null,
+  "spot": "AUB 10",
   "state": "MS",
   "status": "In Progress",
   "venue": "Davis Wade Stadium"
@@ -4077,10 +4095,10 @@
   "away_rank": 99,
   "away_short": "San Jos\u00e9 St",
   "city": "USAF Academy",
-  "clock": "11:16",
+  "clock": "9:31",
   "conf_comp": true,
-  "detail": "11:16 - 1st",
-  "down": "1st & 10 at SJSU 44",
+  "detail": "9:31 - 1st",
+  "down": "3rd & 15 at SJSU 39",
   "espn_id": "401864538",
   "final": false,
   "home_abbr": "AFA",
@@ -4090,10 +4108,22 @@
   "in_play": true,
   "leaders": [
    {
+    "cat": "PASS",
+    "team": "away",
+    "val": "1/1, 0 YDS",
+    "who": "D. Rolovich"
+   },
+   {
     "cat": "RUSH",
     "team": "home",
     "val": "2 CAR, 14 YDS",
     "who": "O. Allen"
+   },
+   {
+    "cat": "REC",
+    "team": "away",
+    "val": "1 REC, 7 YDS",
+    "who": "J. Bates"
    }
   ],
   "line_away": [
@@ -4106,7 +4136,7 @@
   "period": 1,
   "poss": "away",
   "redzone": false,
-  "spot": "SJSU 44",
+  "spot": "SJSU 39",
   "state": "CO",
   "status": "In Progress",
   "venue": "Falcon Stadium"
@@ -4463,10 +4493,10 @@
   "away_rank": 99,
   "away_short": "Oregon St",
   "city": "Boise",
-  "clock": "6:06",
+  "clock": "3:33",
   "conf_comp": true,
-  "detail": "6:06 - 2nd",
-  "down": "4th & 6 at BOIS 48",
+  "detail": "3:33 - 2nd",
+  "down": "1st & 10 at ORST 36",
   "espn_id": "401860914",
   "final": false,
   "home_abbr": "BOIS",
@@ -4478,14 +4508,14 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "12/18, 143 YDS, 1 TD, 1 INT",
+    "val": "12/19, 143 YDS, 1 TD, 1 INT",
     "who": "M. Murphy"
    },
    {
     "cat": "RUSH",
-    "team": "away",
-    "val": "8 CAR, 32 YDS, 1 TD",
-    "who": "C. Hatcher Jr."
+    "team": "home",
+    "val": "4 CAR, 37 YDS",
+    "who": "S. Gaines"
    },
    {
     "cat": "REC",
@@ -4506,7 +4536,7 @@
   "period": 2,
   "poss": "home",
   "redzone": false,
-  "spot": "BOIS 48",
+  "spot": "ORST 36",
   "state": "ID",
   "status": "In Progress",
   "venue": "Albertsons Stadium"
