@@ -921,14 +921,14 @@
   "away_rank": 99,
   "away_short": "Wyoming",
   "city": "El Paso",
-  "clock": "3:02",
+  "clock": "0:50",
   "conf_comp": true,
-  "detail": "3:02 - 3rd",
-  "down": "1st & 10 at WYO 31",
+  "detail": "0:50 - 3rd",
+  "down": null,
   "espn_id": "401864540",
   "final": false,
   "home_abbr": "UTEP",
-  "home_r": "6",
+  "home_r": "9",
   "home_rank": 99,
   "home_short": "UTEP",
   "in_play": true,
@@ -942,7 +942,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "10 CAR, 148 YDS, 1 TD",
+    "val": "11 CAR, 142 YDS, 1 TD",
     "who": "R. Moore III"
    },
    {
@@ -960,13 +960,13 @@
   "line_home": [
    6.0,
    0.0,
-   0.0
+   3.0
   ],
   "neutral": false,
   "period": 3,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "WYO 31",
+  "spot": null,
   "state": "TX",
   "status": "In Progress",
   "venue": "Sun Bowl"
@@ -1035,10 +1035,10 @@
   "away_rank": 12,
   "away_short": "Texas Tech",
   "city": "Stillwater",
-  "clock": "14:54",
+  "clock": "13:09",
   "conf_comp": true,
-  "detail": "14:54 - 4th",
-  "down": null,
+  "detail": "13:09 - 4th",
+  "down": "1st & 10 at OKST 43",
   "espn_id": "401856863",
   "final": false,
   "home_abbr": "OKST",
@@ -1049,9 +1049,9 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "away",
-    "val": "12/23, 263 YDS, 4 TD",
-    "who": "T. Castellanos"
+    "team": "home",
+    "val": "27/41, 277 YDS, 1 TD, 1 INT",
+    "who": "D. Mestemaker"
    },
    {
     "cat": "RUSH",
@@ -1080,9 +1080,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "OKST 43",
   "state": "OK",
   "status": "In Progress",
   "venue": "Boone Pickens Stadium"
@@ -2693,14 +2693,14 @@
   "away_rank": 2,
   "away_short": "Utah",
   "city": "Tucson",
-  "clock": "14:21",
+  "clock": "11:53",
   "conf_comp": true,
-  "detail": "14:21 - 3rd",
-  "down": "1st & Goal at UTAH 3",
+  "detail": "11:53 - 3rd",
+  "down": null,
   "espn_id": "401856864",
   "final": false,
   "home_abbr": "ARIZ",
-  "home_r": "14",
+  "home_r": "20",
   "home_rank": 23,
   "home_short": "Arizona",
   "in_play": true,
@@ -2708,7 +2708,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "19/28, 180 YDS, 1 INT",
+    "val": "21/30, 188 YDS, 1 TD, 1 INT",
     "who": "N. Fifita"
    },
    {
@@ -2732,13 +2732,13 @@
   "line_home": [
    7.0,
    7.0,
-   0.0
+   6.0
   ],
   "neutral": false,
   "period": 3,
-  "poss": "home",
+  "poss": null,
   "redzone": true,
-  "spot": "UTAH 3",
+  "spot": null,
   "state": "AZ",
   "status": "In Progress",
   "venue": "Casino Del Sol Stadium"
@@ -3912,7 +3912,7 @@
   "clock": "0:00",
   "conf_comp": true,
   "detail": "Halftime",
-  "down": null,
+  "down": "1st & 10 at WSU 22",
   "espn_id": "401860917",
   "final": false,
   "home_abbr": "WSU",
@@ -3952,7 +3952,7 @@
   "period": 2,
   "poss": null,
   "redzone": false,
-  "spot": null,
+  "spot": "WSU 22",
   "state": "WA",
   "status": "Halftime",
   "venue": "Martin Stadium"
@@ -4071,7 +4071,7 @@
   "city": "Honolulu",
   "clock": "0:00",
   "conf_comp": true,
-  "detail": "End of 2nd",
+  "detail": "Halftime",
   "down": null,
   "espn_id": "401864537",
   "final": false,
@@ -4114,7 +4114,7 @@
   "redzone": false,
   "spot": null,
   "state": "HI",
-  "status": "In Progress",
+  "status": "Halftime",
   "venue": "Clarence T.C. Ching Athletics Complex"
  },
  "cf67bd8ed20036fea0a72f8a0d5836e7": {
@@ -4577,10 +4577,10 @@
   "away_rank": 99,
   "away_short": "Utah State",
   "city": "San Diego",
-  "clock": "8:13",
+  "clock": "5:35",
   "conf_comp": true,
-  "detail": "8:13 - 4th",
-  "down": "1st & 10 at SDSU 26",
+  "detail": "5:35 - 4th",
+  "down": "2nd & 10 at SDSU 41",
   "espn_id": "401860915",
   "final": false,
   "home_abbr": "SDSU",
@@ -4598,7 +4598,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "15 CAR, 95 YDS",
+    "val": "17 CAR, 108 YDS",
     "who": "J. Kinnard"
    },
    {
@@ -4624,7 +4624,7 @@
   "period": 4,
   "poss": "home",
   "redzone": false,
-  "spot": "SDSU 26",
+  "spot": "SDSU 41",
   "state": "CA",
   "status": "In Progress",
   "venue": "Snapdragon Stadium"
