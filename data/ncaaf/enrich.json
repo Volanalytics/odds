@@ -344,7 +344,7 @@
   "clock": "0:00",
   "conf_comp": true,
   "detail": "Halftime",
-  "down": "1st & 10 at EMU 24",
+  "down": null,
   "espn_id": "401866465",
   "final": false,
   "home_abbr": "WMU",
@@ -384,7 +384,7 @@
   "period": 2,
   "poss": null,
   "redzone": false,
-  "spot": "EMU 24",
+  "spot": null,
   "state": "MI",
   "status": "Halftime",
   "venue": "Waldo Stadium"
@@ -1159,14 +1159,14 @@
  },
  "5840d479fc52ad2b83d7feb802d4dd23": {
   "away_abbr": "BALL",
-  "away_r": "9",
+  "away_r": "10",
   "away_rank": 99,
   "away_short": "Ball State",
   "city": "Athens",
   "clock": "7:14",
   "conf_comp": true,
   "detail": "7:14 - 2nd",
-  "down": null,
+  "down": "3rd & 1 at OHIO 34",
   "espn_id": "401866464",
   "final": false,
   "home_abbr": "OHIO",
@@ -1196,7 +1196,7 @@
   ],
   "line_away": [
    3.0,
-   6.0
+   7.0
   ],
   "line_home": [
    7.0,
@@ -1204,9 +1204,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
-  "redzone": true,
-  "spot": null,
+  "poss": "home",
+  "redzone": false,
+  "spot": "OHIO 34",
   "state": "OH",
   "status": "In Progress",
   "venue": "Peden Stadium"
@@ -1937,10 +1937,10 @@
   "away_rank": 99,
   "away_short": "Miami OH",
   "city": "Kent",
-  "clock": "11:07",
+  "clock": "6:46",
   "conf_comp": true,
-  "detail": "11:07 - 2nd",
-  "down": "2nd & 7 at M-OH 28",
+  "detail": "6:46 - 2nd",
+  "down": "2nd & 10 at KENT 12",
   "espn_id": "401866466",
   "final": false,
   "home_abbr": "KENT",
@@ -1952,14 +1952,14 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "5/5, 76 YDS",
+    "val": "6/8, 113 YDS",
     "who": "D. Bellisari"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "7 CAR, 45 YDS, 2 TD",
-    "who": "D. Jones"
+    "val": "10 CAR, 52 YDS",
+    "who": "R. Nelson"
    },
    {
     "cat": "REC",
@@ -1979,8 +1979,8 @@
   "neutral": false,
   "period": 2,
   "poss": "away",
-  "redzone": false,
-  "spot": "M-OH 28",
+  "redzone": true,
+  "spot": "KENT 12",
   "state": "OH",
   "status": "In Progress",
   "venue": "Zoeller Field at Dix Stadium"
