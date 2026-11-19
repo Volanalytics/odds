@@ -399,14 +399,14 @@
   "away_rank": 99,
   "away_short": "C Michigan",
   "city": "Buffalo",
-  "clock": "13:27",
+  "clock": "12:07",
   "conf_comp": true,
-  "detail": "13:27 - 2nd",
-  "down": "2nd & 10 at CMU 26",
+  "detail": "12:07 - 2nd",
+  "down": null,
   "espn_id": "401866469",
   "final": false,
   "home_abbr": "BUFF",
-  "home_r": "6",
+  "home_r": "13",
   "home_rank": 99,
   "home_short": "Buffalo",
   "in_play": true,
@@ -420,7 +420,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "10 CAR, 42 YDS",
+    "val": "13 CAR, 68 YDS, 1 TD",
     "who": "M. Burch"
    },
    {
@@ -436,13 +436,13 @@
   ],
   "line_home": [
    3.0,
-   3.0
+   10.0
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "CMU 26",
+  "spot": null,
   "state": "NY",
   "status": "In Progress",
   "venue": "Broadview Stadium"
@@ -3877,14 +3877,14 @@
  },
  "ef5f5ac74b2228e8521c289fdbc6af93": {
   "away_abbr": "AKR",
-  "away_r": "7",
+  "away_r": "14",
   "away_rank": 99,
   "away_short": "Akron",
   "city": "Amherst",
-  "clock": "6:21",
+  "clock": "5:07",
   "conf_comp": true,
-  "detail": "6:21 - 2nd",
-  "down": null,
+  "detail": "5:07 - 2nd",
+  "down": "1st & 10 at MASS 12",
   "espn_id": "401866467",
   "final": false,
   "home_abbr": "MASS",
@@ -3895,26 +3895,26 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "6/10, 50 YDS, 2 TD",
-    "who": "L. Inagawa"
+    "team": "away",
+    "val": "3/6, 53 YDS, 1 TD, 2 INT",
+    "who": "C. Broughton"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "8 CAR, 96 YDS, 1 TD",
+    "val": "9 CAR, 107 YDS, 1 TD",
     "who": "J. Gant"
    },
    {
     "cat": "REC",
-    "team": "home",
-    "val": "2 REC, 35 YDS",
-    "who": "J. Lewis"
+    "team": "away",
+    "val": "2 REC, 49 YDS, 1 TD",
+    "who": "M. Burris"
    }
   ],
   "line_away": [
    7.0,
-   0.0
+   7.0
   ],
   "line_home": [
    17.0,
@@ -3922,9 +3922,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "away",
   "redzone": true,
-  "spot": null,
+  "spot": "MASS 12",
   "state": "MA",
   "status": "In Progress",
   "venue": "Warren McGuirk Alumni Stadium"
