@@ -399,10 +399,10 @@
   "away_rank": 99,
   "away_short": "C Michigan",
   "city": "Buffalo",
-  "clock": "0:00",
+  "clock": "13:58",
   "conf_comp": true,
-  "detail": "End of 2nd",
-  "down": null,
+  "detail": "13:58 - 3rd",
+  "down": "1st & 10 at BUF 37",
   "espn_id": "401866469",
   "final": false,
   "home_abbr": "BUFF",
@@ -420,7 +420,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "13 CAR, 68 YDS, 1 TD",
+    "val": "16 CAR, 80 YDS, 1 TD",
     "who": "M. Burch"
    },
    {
@@ -432,17 +432,19 @@
   ],
   "line_away": [
    7.0,
-   7.0
+   7.0,
+   0.0
   ],
   "line_home": [
    3.0,
-   17.0
+   17.0,
+   0.0
   ],
   "neutral": false,
-  "period": 2,
-  "poss": "away",
+  "period": 3,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "BUF 37",
   "state": "NY",
   "status": "In Progress",
   "venue": "Broadview Stadium"
@@ -3877,14 +3879,14 @@
  },
  "ef5f5ac74b2228e8521c289fdbc6af93": {
   "away_abbr": "AKR",
-  "away_r": "24",
+  "away_r": "31",
   "away_rank": 99,
   "away_short": "Akron",
   "city": "Amherst",
-  "clock": "2:49",
+  "clock": "2:15",
   "conf_comp": true,
-  "detail": "2:49 - 3rd",
-  "down": "2nd & Goal at MASS 1",
+  "detail": "2:15 - 3rd",
+  "down": null,
   "espn_id": "401866467",
   "final": false,
   "home_abbr": "MASS",
@@ -3902,7 +3904,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "14 CAR, 137 YDS, 1 TD",
+    "val": "15 CAR, 138 YDS, 2 TD",
     "who": "J. Gant"
    },
    {
@@ -3915,7 +3917,7 @@
   "line_away": [
    7.0,
    10.0,
-   7.0
+   14.0
   ],
   "line_home": [
    17.0,
@@ -3924,9 +3926,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "away",
-  "redzone": true,
-  "spot": "MASS 1",
+  "poss": null,
+  "redzone": false,
+  "spot": null,
   "state": "MA",
   "status": "In Progress",
   "venue": "Warren McGuirk Alumni Stadium"
