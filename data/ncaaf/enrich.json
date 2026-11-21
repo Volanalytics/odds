@@ -1263,10 +1263,10 @@
   "away_rank": 13,
   "away_short": "Oregon",
   "city": "East Lansing",
-  "clock": "2:50",
+  "clock": "1:45",
   "conf_comp": true,
-  "detail": "2:50 - 3rd",
-  "down": null,
+  "detail": "1:45 - 3rd",
+  "down": "1st & 10 at MSU 19",
   "espn_id": "401858529",
   "final": false,
   "home_abbr": "MSU",
@@ -1278,13 +1278,13 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "13/22, 117 YDS",
+    "val": "14/23, 122 YDS",
     "who": "D. Raiola"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "9 CAR, 58 YDS, 1 TD",
+    "val": "11 CAR, 109 YDS, 1 TD",
     "who": "B. Smith"
    },
    {
@@ -1306,9 +1306,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": null,
-  "redzone": false,
-  "spot": null,
+  "poss": "away",
+  "redzone": true,
+  "spot": "MSU 19",
   "state": "MI",
   "status": "In Progress",
   "venue": "Spartan Stadium"
@@ -2529,10 +2529,10 @@
   "away_rank": 99,
   "away_short": "UTEP",
   "city": "USAF Academy",
-  "clock": "15:00",
+  "clock": "13:27",
   "conf_comp": true,
-  "detail": "15:00 - 3rd",
-  "down": "3rd & 9 at UTEP 16",
+  "detail": "13:27 - 4th",
+  "down": null,
   "espn_id": "401864545",
   "final": false,
   "home_abbr": "AFA",
@@ -2563,18 +2563,20 @@
   "line_away": [
    0.0,
    3.0,
+   0.0,
    0.0
   ],
   "line_home": [
    14.0,
    14.0,
-   17.0
+   17.0,
+   0.0
   ],
   "neutral": false,
-  "period": 3,
-  "poss": "away",
+  "period": 4,
+  "poss": "home",
   "redzone": false,
-  "spot": "UTEP 16",
+  "spot": null,
   "state": "CO",
   "status": "In Progress",
   "venue": "Falcon Stadium"
@@ -2681,14 +2683,14 @@
   "away_rank": 99,
   "away_short": "Bowling Green",
   "city": "Toledo",
-  "clock": "3:58",
+  "clock": "3:00",
   "conf_comp": true,
-  "detail": "3:58 - 4th",
-  "down": null,
+  "detail": "3:00 - 4th",
+  "down": "3rd & 17 at BGSU 47",
   "espn_id": "401866468",
   "final": false,
   "home_abbr": "TOL",
-  "home_r": "16",
+  "home_r": "19",
   "home_rank": 99,
   "home_short": "Toledo",
   "in_play": true,
@@ -2707,9 +2709,9 @@
    },
    {
     "cat": "REC",
-    "team": "home",
-    "val": "4 REC, 44 YDS",
-    "who": "C. Walendzak"
+    "team": "away",
+    "val": "3 REC, 60 YDS",
+    "who": "J. Saffold"
    }
   ],
   "line_away": [
@@ -2722,13 +2724,13 @@
    6.0,
    10.0,
    0.0,
-   0.0
+   3.0
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "BGSU 47",
   "state": "OH",
   "status": "In Progress",
   "venue": "Glass Bowl"
@@ -3709,10 +3711,10 @@
   "away_rank": 99,
   "away_short": "New Mexico",
   "city": "Laramie",
-  "clock": "1:53",
+  "clock": "1:09",
   "conf_comp": true,
-  "detail": "1:53 - 2nd",
-  "down": null,
+  "detail": "1:09 - 2nd",
+  "down": "1st & 10 at WYO 23",
   "espn_id": "401864542",
   "final": false,
   "home_abbr": "WYO",
@@ -3724,7 +3726,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "13/21, 157 YDS, 1 TD",
+    "val": "14/25, 169 YDS, 1 TD",
     "who": "L. Moga"
    },
    {
@@ -3736,7 +3738,7 @@
    {
     "cat": "REC",
     "team": "away",
-    "val": "3 REC, 51 YDS",
+    "val": "4 REC, 63 YDS",
     "who": "D. Darling"
    }
   ],
@@ -3750,9 +3752,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "WYO 23",
   "state": "WY",
   "status": "In Progress",
   "venue": "War Memorial Stadium"
@@ -4013,14 +4015,14 @@
   "away_rank": 99,
   "away_short": "Clemson",
   "city": "Durham",
-  "clock": "8:41",
+  "clock": "6:54",
   "conf_comp": true,
-  "detail": "8:41 - 4th",
-  "down": "2nd & 15 at DUKE 16",
+  "detail": "6:54 - 4th",
+  "down": null,
   "espn_id": "401858303",
   "final": false,
   "home_abbr": "DUKE",
-  "home_r": "7",
+  "home_r": "10",
   "home_rank": 99,
   "home_short": "Duke",
   "in_play": true,
@@ -4039,9 +4041,9 @@
    },
    {
     "cat": "REC",
-    "team": "away",
-    "val": "4 REC, 68 YDS",
-    "who": "T.J. Moore"
+    "team": "home",
+    "val": "6 REC, 87 YDS",
+    "who": "J. Nicholas"
    }
   ],
   "line_away": [
@@ -4054,13 +4056,13 @@
    0.0,
    0.0,
    7.0,
-   0.0
+   3.0
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "DUKE 16",
+  "spot": null,
   "state": "NC",
   "status": "In Progress",
   "venue": "Wallace Wade Stadium"
