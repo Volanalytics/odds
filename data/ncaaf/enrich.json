@@ -2527,23 +2527,23 @@
   "away_rank": 99,
   "away_short": "UTEP",
   "city": "USAF Academy",
-  "clock": "0:00",
+  "clock": "14:27",
   "conf_comp": true,
-  "detail": "Halftime",
+  "detail": "14:27 - 3rd",
   "down": null,
   "espn_id": "401864545",
   "final": false,
   "home_abbr": "AFA",
-  "home_r": "28",
+  "home_r": "34",
   "home_rank": 99,
   "home_short": "Air Force",
   "in_play": true,
   "leaders": [
    {
     "cat": "PASS",
-    "team": "away",
-    "val": "9/14, 69 YDS, 1 INT",
-    "who": "R. Moore III"
+    "team": "home",
+    "val": "3/4, 122 YDS, 2 TD",
+    "who": "E. Medders"
    },
    {
     "cat": "RUSH",
@@ -2554,25 +2554,27 @@
    {
     "cat": "REC",
     "team": "home",
-    "val": "1 REC, 31 YDS, 1 TD",
-    "who": "A. Hrynciw"
+    "val": "1 REC, 77 YDS, 1 TD",
+    "who": "J. Dawson"
    }
   ],
   "line_away": [
    0.0,
-   3.0
+   3.0,
+   0.0
   ],
   "line_home": [
    14.0,
-   14.0
+   14.0,
+   6.0
   ],
   "neutral": false,
-  "period": 2,
+  "period": 3,
   "poss": null,
-  "redzone": false,
+  "redzone": true,
   "spot": null,
   "state": "CO",
-  "status": "Halftime",
+  "status": "In Progress",
   "venue": "Falcon Stadium"
  },
  "9f3f8efae55dbb803964a5107350e263": {
@@ -2677,10 +2679,10 @@
   "away_rank": 99,
   "away_short": "Bowling Green",
   "city": "Toledo",
-  "clock": "6:46",
+  "clock": "4:31",
   "conf_comp": true,
-  "detail": "6:46 - 3rd",
-  "down": "1st & 10 at BGSU 42",
+  "detail": "4:31 - 3rd",
+  "down": "1st & 10 at TOL 20",
   "espn_id": "401866468",
   "final": false,
   "home_abbr": "TOL",
@@ -2698,7 +2700,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "16 CAR, 49 YDS",
+    "val": "17 CAR, 47 YDS",
     "who": "N. Amachree"
    },
    {
@@ -2720,9 +2722,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "BGSU 42",
+  "spot": "TOL 20",
   "state": "OH",
   "status": "In Progress",
   "venue": "Glass Bowl"
@@ -3703,10 +3705,10 @@
   "away_rank": 99,
   "away_short": "New Mexico",
   "city": "Laramie",
-  "clock": "0:59",
+  "clock": "15:00",
   "conf_comp": true,
-  "detail": "0:59 - 1st",
-  "down": null,
+  "detail": "15:00 - 2nd",
+  "down": "3rd & 8 at WYO 33",
   "espn_id": "401864542",
   "final": false,
   "home_abbr": "WYO",
@@ -3735,16 +3737,18 @@
    }
   ],
   "line_away": [
-   10.0
+   10.0,
+   0.0
   ],
   "line_home": [
+   0.0,
    0.0
   ],
   "neutral": false,
-  "period": 1,
-  "poss": null,
+  "period": 2,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "WYO 33",
   "state": "WY",
   "status": "In Progress",
   "venue": "War Memorial Stadium"
@@ -4001,14 +4005,14 @@
  },
  "f247efd606eabe7d3d87504bc3af43b4": {
   "away_abbr": "CLEM",
-  "away_r": "3",
+  "away_r": "10",
   "away_rank": 99,
   "away_short": "Clemson",
   "city": "Durham",
-  "clock": "6:47",
+  "clock": "6:04",
   "conf_comp": true,
-  "detail": "6:47 - 3rd",
-  "down": "2nd & 6 at DUKE 9",
+  "detail": "6:04 - 3rd",
+  "down": "1st & 10 at DUKE 25",
   "espn_id": "401858303",
   "final": false,
   "home_abbr": "DUKE",
@@ -4039,7 +4043,7 @@
   "line_away": [
    0.0,
    3.0,
-   0.0
+   7.0
   ],
   "line_home": [
    0.0,
@@ -4048,9 +4052,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "away",
-  "redzone": true,
-  "spot": "DUKE 9",
+  "poss": null,
+  "redzone": false,
+  "spot": "DUKE 25",
   "state": "NC",
   "status": "In Progress",
   "venue": "Wallace Wade Stadium"
