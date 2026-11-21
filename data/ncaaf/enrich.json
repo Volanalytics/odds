@@ -1263,10 +1263,10 @@
   "away_rank": 13,
   "away_short": "Oregon",
   "city": "East Lansing",
-  "clock": "11:26",
+  "clock": "9:21",
   "conf_comp": true,
-  "detail": "11:26 - 1st",
-  "down": null,
+  "detail": "9:21 - 1st",
+  "down": "4th & 10 at ORE 49",
   "espn_id": "401858529",
   "final": false,
   "home_abbr": "MSU",
@@ -1302,9 +1302,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "ORE 49",
   "state": "MI",
   "status": "In Progress",
   "venue": "Spartan Stadium"
@@ -2525,10 +2525,10 @@
   "away_rank": 99,
   "away_short": "UTEP",
   "city": "USAF Academy",
-  "clock": "13:17",
+  "clock": "8:22",
   "conf_comp": true,
-  "detail": "13:17 - 1st",
-  "down": "3rd & 5 at AF 34",
+  "detail": "8:22 - 1st",
+  "down": "1st & 10 at UTEP 13",
   "espn_id": "401864545",
   "final": false,
   "home_abbr": "AFA",
@@ -2538,16 +2538,10 @@
   "in_play": true,
   "leaders": [
    {
-    "cat": "PASS",
-    "team": "away",
-    "val": "1, 0 YDS",
-    "who": "R. Moore III"
-   },
-   {
     "cat": "RUSH",
     "team": "home",
-    "val": "1 CAR, 4 YDS",
-    "who": "O. Allen"
+    "val": "1 CAR, 22 YDS",
+    "who": "K. Sack"
    }
   ],
   "line_away": [
@@ -2559,8 +2553,8 @@
   "neutral": false,
   "period": 1,
   "poss": "home",
-  "redzone": false,
-  "spot": "AF 34",
+  "redzone": true,
+  "spot": "UTEP 13",
   "state": "CO",
   "status": "In Progress",
   "venue": "Falcon Stadium"
@@ -2667,10 +2661,10 @@
   "away_rank": 99,
   "away_short": "Bowling Green",
   "city": "Toledo",
-  "clock": "0:00",
+  "clock": "13:02",
   "conf_comp": true,
-  "detail": "End of 1st",
-  "down": "4th & 6 at BGSU 49",
+  "detail": "13:02 - 2nd",
+  "down": "4th & 1 at TOL 25",
   "espn_id": "401866468",
   "final": false,
   "home_abbr": "TOL",
@@ -2682,7 +2676,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "6/10, 53 YDS",
+    "val": "8/12, 66 YDS",
     "who": "J. Richter"
    },
    {
@@ -2699,16 +2693,18 @@
    }
   ],
   "line_away": [
+   0.0,
    0.0
   ],
   "line_home": [
-   6.0
+   6.0,
+   0.0
   ],
   "neutral": false,
-  "period": 1,
-  "poss": "away",
+  "period": 2,
+  "poss": "home",
   "redzone": false,
-  "spot": "BGSU 49",
+  "spot": "TOL 25",
   "state": "OH",
   "status": "In Progress",
   "venue": "Glass Bowl"
@@ -3291,14 +3287,14 @@
  },
  "c62889a44c822eaf71b9cd24f4eee875": {
   "away_abbr": "ISU",
-  "away_r": "16",
+  "away_r": "17",
   "away_rank": 99,
   "away_short": "Iowa State",
   "city": "Orlando",
-  "clock": "9:55",
+  "clock": "9:42",
   "conf_comp": true,
-  "detail": "9:55 - 3rd",
-  "down": null,
+  "detail": "9:42 - 3rd",
+  "down": "1st & 10 at UCF 25",
   "espn_id": "401856869",
   "final": false,
   "home_abbr": "UCF",
@@ -3329,7 +3325,7 @@
   "line_away": [
    3.0,
    7.0,
-   6.0
+   7.0
   ],
   "line_home": [
    3.0,
@@ -3339,8 +3335,8 @@
   "neutral": false,
   "period": 3,
   "poss": null,
-  "redzone": true,
-  "spot": null,
+  "redzone": false,
+  "spot": "UCF 25",
   "state": "FL",
   "status": "In Progress",
   "venue": "Acrisure Bounce House"
@@ -3985,10 +3981,10 @@
   "away_rank": 99,
   "away_short": "Clemson",
   "city": "Durham",
-  "clock": "0:00",
+  "clock": "14:06",
   "conf_comp": true,
-  "detail": "End of 1st",
-  "down": "3rd & 24 at CLEM 35",
+  "detail": "14:06 - 2nd",
+  "down": null,
   "espn_id": "401858303",
   "final": false,
   "home_abbr": "DUKE",
@@ -4000,7 +3996,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "4/7, 15 YDS",
+    "val": "4/9, 15 YDS",
     "who": "W. Eget"
    },
    {
@@ -4017,16 +4013,18 @@
    }
   ],
   "line_away": [
+   0.0,
    0.0
   ],
   "line_home": [
+   0.0,
    0.0
   ],
   "neutral": false,
-  "period": 1,
-  "poss": "away",
+  "period": 2,
+  "poss": "home",
   "redzone": false,
-  "spot": "CLEM 35",
+  "spot": null,
   "state": "NC",
   "status": "In Progress",
   "venue": "Wallace Wade Stadium"
