@@ -1283,9 +1283,9 @@
    },
    {
     "cat": "RUSH",
-    "team": "away",
-    "val": "5 CAR, 23 YDS",
-    "who": "D. Riggs"
+    "team": "home",
+    "val": "7 CAR, 23 YDS",
+    "who": "B. Tullis"
    },
    {
     "cat": "REC",
@@ -1304,7 +1304,7 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
   "spot": null,
   "state": "MI",
@@ -2527,10 +2527,10 @@
   "away_rank": 99,
   "away_short": "UTEP",
   "city": "USAF Academy",
-  "clock": "4:40",
+  "clock": "2:00",
   "conf_comp": true,
-  "detail": "4:40 - 2nd",
-  "down": "4th & 3 at UTEP 22",
+  "detail": "2:00 - 2nd",
+  "down": null,
   "espn_id": "401864545",
   "final": false,
   "home_abbr": "AFA",
@@ -2569,8 +2569,8 @@
   "neutral": false,
   "period": 2,
   "poss": "home",
-  "redzone": false,
-  "spot": "UTEP 22",
+  "redzone": true,
+  "spot": null,
   "state": "CO",
   "status": "In Progress",
   "venue": "Falcon Stadium"
@@ -3307,10 +3307,10 @@
   "away_rank": 99,
   "away_short": "Iowa State",
   "city": "Orlando",
-  "clock": "6:35",
+  "clock": "3:22",
   "conf_comp": true,
-  "detail": "6:35 - 4th",
-  "down": null,
+  "detail": "3:22 - 4th",
+  "down": "1st & 15 at ISU 31",
   "espn_id": "401856869",
   "final": false,
   "home_abbr": "UCF",
@@ -3328,7 +3328,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "19 CAR, 158 YDS, 2 TD",
+    "val": "20 CAR, 160 YDS, 2 TD",
     "who": "A. Flora"
    },
    {
@@ -3352,9 +3352,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "ISU 31",
   "state": "FL",
   "status": "In Progress",
   "venue": "Acrisure Bounce House"
@@ -3701,46 +3701,50 @@
   "away_rank": 99,
   "away_short": "New Mexico",
   "city": "Laramie",
-  "clock": "0:00",
+  "clock": "13:19",
   "conf_comp": true,
-  "detail": "11/20 - 9:00 PM EST",
-  "down": null,
+  "detail": "13:19 - 1st",
+  "down": "3rd & 10 at UNM 24",
   "espn_id": "401864542",
   "final": false,
   "home_abbr": "WYO",
   "home_r": "0",
   "home_rank": 99,
   "home_short": "Wyoming",
-  "in_play": false,
+  "in_play": true,
   "leaders": [
    {
     "cat": "PASS",
     "team": "home",
-    "val": "1238 YDS, 6 TD, 7 INT",
-    "who": "T. Hughes"
+    "val": "1/2, 7 YDS",
+    "who": "L. Sims"
    },
    {
     "cat": "RUSH",
-    "team": "away",
-    "val": "147 CAR, 736 YDS, 14 TD",
-    "who": "S. Humphrey"
+    "team": "home",
+    "val": "1 CAR, -5 YDS",
+    "who": "E. Richardson"
    },
    {
     "cat": "REC",
-    "team": "away",
-    "val": "30 REC, 384 YDS, 5 TD",
-    "who": "C. Keith"
+    "team": "home",
+    "val": "1 REC, 7 YDS",
+    "who": "M. Holman"
    }
   ],
-  "line_away": [],
-  "line_home": [],
+  "line_away": [
+   0.0
+  ],
+  "line_home": [
+   0.0
+  ],
   "neutral": false,
-  "period": 0,
-  "poss": null,
+  "period": 1,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "UNM 24",
   "state": "WY",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "War Memorial Stadium"
  },
  "e4bb95111547a00a8c70a0459ffbd861": {
