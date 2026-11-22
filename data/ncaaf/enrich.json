@@ -909,10 +909,10 @@
   "away_rank": 99,
   "away_short": "Hawai'i",
   "city": "Reno",
-  "clock": "0:25",
+  "clock": "15:00",
   "conf_comp": true,
-  "detail": "0:25 - 1st",
-  "down": "4th & 6 at HAW 41",
+  "detail": "15:00 - 2nd",
+  "down": "2nd & 10 at NEV 14",
   "espn_id": "401864541",
   "final": false,
   "home_abbr": "NEV",
@@ -941,16 +941,18 @@
    }
   ],
   "line_away": [
+   0.0,
    0.0
   ],
   "line_home": [
+   0.0,
    0.0
   ],
   "neutral": false,
-  "period": 1,
-  "poss": "away",
+  "period": 2,
+  "poss": "home",
   "redzone": false,
-  "spot": "HAW 41",
+  "spot": "NEV 14",
   "state": "NV",
   "status": "In Progress",
   "venue": "Mackay Stadium"
@@ -1885,10 +1887,10 @@
   "away_rank": 99,
   "away_short": "Utah State",
   "city": "Corvallis",
-  "clock": "5:41",
+  "clock": "2:25",
   "conf_comp": true,
-  "detail": "5:41 - 1st",
-  "down": "1st & 10 at USU 48",
+  "detail": "2:25 - 1st",
+  "down": "2nd & Goal at ORST 7",
   "espn_id": "401860919",
   "final": false,
   "home_abbr": "ORST",
@@ -1900,7 +1902,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "2/5, 41 YDS",
+    "val": "4/7, 57 YDS",
     "who": "M. Hillstead"
    },
    {
@@ -1912,7 +1914,7 @@
    {
     "cat": "REC",
     "team": "away",
-    "val": "1 REC, 33 YDS",
+    "val": "3 REC, 49 YDS",
     "who": "A. Garcia"
    }
   ],
@@ -1925,8 +1927,8 @@
   "neutral": false,
   "period": 1,
   "poss": "away",
-  "redzone": false,
-  "spot": "USU 48",
+  "redzone": true,
+  "spot": "ORST 7",
   "state": "OR",
   "status": "In Progress",
   "venue": "Reser Stadium"
@@ -2823,10 +2825,10 @@
   "away_rank": 99,
   "away_short": "UTSA",
   "city": "Birmingham",
-  "clock": "3:22",
+  "clock": "1:56",
   "conf_comp": true,
-  "detail": "3:22 - 4th",
-  "down": "1st & Goal at UAB 9",
+  "detail": "1:56 - 4th",
+  "down": null,
   "espn_id": "401862836",
   "final": false,
   "home_abbr": "UAB",
@@ -2844,7 +2846,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "21 CAR, 87 YDS",
+    "val": "23 CAR, 93 YDS",
     "who": "W. Henderson III"
    },
    {
@@ -2868,9 +2870,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
-  "redzone": true,
-  "spot": "UAB 9",
+  "poss": "home",
+  "redzone": false,
+  "spot": null,
   "state": "AL",
   "status": "In Progress",
   "venue": "Protective Stadium"
@@ -4279,10 +4281,10 @@
   "away_rank": 99,
   "away_short": "Oklahoma St",
   "city": "Tempe",
-  "clock": "14:45",
+  "clock": "13:22",
   "conf_comp": true,
-  "detail": "14:45 - 2nd",
-  "down": "2nd & 3 at ASU 18",
+  "detail": "13:22 - 2nd",
+  "down": "1st & 10 at OKST 23",
   "espn_id": "401856870",
   "final": false,
   "home_abbr": "ASU",
@@ -4320,22 +4322,22 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "ASU 18",
+  "spot": "OKST 23",
   "state": "AZ",
   "status": "In Progress",
   "venue": "Mountain America Stadium"
  },
  "f23bc59387b6db63ad3de8b6bcc541fc": {
   "away_abbr": "CSU",
-  "away_r": "34",
+  "away_r": "40",
   "away_rank": 99,
   "away_short": "Colorado St",
   "city": "Fresno",
-  "clock": "1:02",
+  "clock": "0:26",
   "conf_comp": true,
-  "detail": "1:02 - 4th",
+  "detail": "0:26 - 4th",
   "down": null,
   "espn_id": "401860918",
   "final": false,
@@ -4348,7 +4350,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "24/32, 365 YDS, 1 TD, 1 INT",
+    "val": "26/35, 403 YDS, 2 TD, 1 INT",
     "who": "H. Hejny"
    },
    {
@@ -4368,7 +4370,7 @@
    14.0,
    3.0,
    10.0,
-   7.0
+   13.0
   ],
   "line_home": [
    14.0,
@@ -4378,8 +4380,8 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
-  "redzone": false,
+  "poss": null,
+  "redzone": true,
   "spot": null,
   "state": "CA",
   "status": "In Progress",
