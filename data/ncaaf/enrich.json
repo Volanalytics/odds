@@ -63,10 +63,10 @@
   "away_rank": 99,
   "away_short": "San Diego St",
   "city": "Boise",
-  "clock": "1:45",
+  "clock": "1:01",
   "conf_comp": true,
-  "detail": "1:45 - 4th",
-  "down": null,
+  "detail": "1:01 - 4th",
+  "down": "3rd & 3 at BOIS 47",
   "espn_id": "401860925",
   "final": false,
   "home_abbr": "BOIS",
@@ -78,7 +78,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "22/34, 306 YDS, 1 TD, 2 INT",
+    "val": "23/35, 311 YDS, 1 TD, 2 INT",
     "who": "M. Madsen"
    },
    {
@@ -89,9 +89,9 @@
    },
    {
     "cat": "REC",
-    "team": "home",
-    "val": "5 REC, 89 YDS",
-    "who": "D. Riley"
+    "team": "away",
+    "val": "6 REC, 89 YDS, 1 TD",
+    "who": "J. Hawkins"
    }
   ],
   "line_away": [
@@ -108,9 +108,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": null,
-  "redzone": true,
-  "spot": null,
+  "poss": "away",
+  "redzone": false,
+  "spot": "BOIS 47",
   "state": "ID",
   "status": "In Progress",
   "venue": "Albertsons Stadium"
@@ -913,10 +913,10 @@
   "away_rank": 99,
   "away_short": "Hawai'i",
   "city": "Reno",
-  "clock": "4:54",
+  "clock": "1:21",
   "conf_comp": true,
-  "detail": "4:54 - 3rd",
-  "down": "1st & 10 at NEV 45",
+  "detail": "1:21 - 3rd",
+  "down": "2nd & 3 at HAW 35",
   "espn_id": "401864541",
   "final": false,
   "home_abbr": "NEV",
@@ -956,9 +956,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "NEV 45",
+  "spot": "HAW 35",
   "state": "NV",
   "status": "In Progress",
   "venue": "Mackay Stadium"
@@ -1941,10 +1941,10 @@
   "away_rank": 99,
   "away_short": "Utah State",
   "city": "Corvallis",
-  "clock": "6:53",
+  "clock": "5:18",
   "conf_comp": true,
-  "detail": "6:53 - 3rd",
-  "down": "3rd & 5 at ORST 22",
+  "detail": "5:18 - 3rd",
+  "down": "3rd & 5 at USU 42",
   "espn_id": "401860919",
   "final": false,
   "home_abbr": "ORST",
@@ -1956,7 +1956,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "14/22, 175 YDS, 1 TD, 1 INT",
+    "val": "14/23, 175 YDS, 1 TD, 1 INT",
     "who": "M. Murphy"
    },
    {
@@ -1984,9 +1984,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "ORST 22",
+  "spot": "USU 42",
   "state": "OR",
   "status": "In Progress",
   "venue": "Reser Stadium"
@@ -4339,14 +4339,14 @@
  },
  "ecfec2fe1db57f88e603f9947add1e26": {
   "away_abbr": "OKST",
-  "away_r": "14",
+  "away_r": "17",
   "away_rank": 99,
   "away_short": "Oklahoma St",
   "city": "Tempe",
-  "clock": "5:48",
+  "clock": "2:50",
   "conf_comp": true,
-  "detail": "5:48 - 3rd",
-  "down": "3rd & 17 at ASU 19",
+  "detail": "2:50 - 3rd",
+  "down": null,
   "espn_id": "401856870",
   "final": false,
   "home_abbr": "ASU",
@@ -4358,13 +4358,13 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "20/27, 197 YDS, 1 INT",
+    "val": "22/29, 206 YDS, 1 INT",
     "who": "D. Mestemaker"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "13 CAR, 55 YDS, 1 TD",
+    "val": "15 CAR, 57 YDS, 1 TD",
     "who": "C. Hawkins"
    },
    {
@@ -4377,7 +4377,7 @@
   "line_away": [
    7.0,
    0.0,
-   7.0
+   10.0
   ],
   "line_home": [
    7.0,
@@ -4386,9 +4386,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "ASU 19",
+  "spot": null,
   "state": "AZ",
   "status": "In Progress",
   "venue": "Mountain America Stadium"
