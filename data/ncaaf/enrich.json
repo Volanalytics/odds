@@ -63,10 +63,10 @@
   "away_rank": 99,
   "away_short": "San Diego St",
   "city": "Boise",
-  "clock": "0:00",
+  "clock": "13:34",
   "conf_comp": true,
-  "detail": "Halftime",
-  "down": null,
+  "detail": "13:34 - 3rd",
+  "down": "4th & 7 at BOIS 48",
   "espn_id": "401860925",
   "final": false,
   "home_abbr": "BOIS",
@@ -78,7 +78,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "11/17, 176 YDS, 2 INT",
+    "val": "13/20, 179 YDS, 2 INT",
     "who": "M. Madsen"
    },
    {
@@ -96,19 +96,21 @@
   ],
   "line_away": [
    0.0,
+   0.0,
    0.0
   ],
   "line_home": [
    0.0,
-   7.0
+   7.0,
+   0.0
   ],
   "neutral": false,
-  "period": 2,
-  "poss": null,
+  "period": 3,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "BOIS 48",
   "state": "ID",
-  "status": "Halftime",
+  "status": "In Progress",
   "venue": "Albertsons Stadium"
  },
  "03a07ec7a62fbc2d6bf4748aafd30303": {
@@ -909,10 +911,10 @@
   "away_rank": 99,
   "away_short": "Hawai'i",
   "city": "Reno",
-  "clock": "8:56",
+  "clock": "6:46",
   "conf_comp": true,
-  "detail": "8:56 - 2nd",
-  "down": null,
+  "detail": "6:46 - 2nd",
+  "down": "3rd & 13 at HAW 40",
   "espn_id": "401864541",
   "final": false,
   "home_abbr": "NEV",
@@ -924,7 +926,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "7/12, 62 YDS",
+    "val": "8/14, 75 YDS",
     "who": "M. Alejado"
    },
    {
@@ -950,9 +952,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "HAW 40",
   "state": "NV",
   "status": "In Progress",
   "venue": "Mackay Stadium"
@@ -1883,14 +1885,14 @@
  },
  "6e36f5c3c55edcb31749b0de4a146d14": {
   "away_abbr": "USU",
-  "away_r": "7",
+  "away_r": "14",
   "away_rank": 99,
   "away_short": "Utah State",
   "city": "Corvallis",
-  "clock": "14:03",
+  "clock": "12:39",
   "conf_comp": true,
-  "detail": "14:03 - 2nd",
-  "down": "1st & Goal at ORST 10",
+  "detail": "12:39 - 2nd",
+  "down": null,
   "espn_id": "401860919",
   "final": false,
   "home_abbr": "ORST",
@@ -1907,9 +1909,9 @@
    },
    {
     "cat": "RUSH",
-    "team": "home",
-    "val": "3 CAR, 20 YDS",
-    "who": "K. Glass"
+    "team": "away",
+    "val": "5 CAR, 23 YDS, 1 TD",
+    "who": "M. Hillstead"
    },
    {
     "cat": "REC",
@@ -1920,7 +1922,7 @@
   ],
   "line_away": [
    7.0,
-   0.0
+   7.0
   ],
   "line_home": [
    0.0,
@@ -1928,9 +1930,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
-  "redzone": true,
-  "spot": "ORST 10",
+  "poss": null,
+  "redzone": false,
+  "spot": null,
   "state": "OR",
   "status": "In Progress",
   "venue": "Reser Stadium"
@@ -2105,10 +2107,10 @@
   "away_rank": 2,
   "away_short": "Utah",
   "city": "Fort Worth",
-  "clock": "12:48",
+  "clock": "10:58",
   "conf_comp": true,
-  "detail": "12:48 - 3rd",
-  "down": "4th & 7 at UTAH 39",
+  "detail": "10:58 - 3rd",
+  "down": "2nd & 5 at TCU 37",
   "espn_id": "401856872",
   "final": false,
   "home_abbr": "TCU",
@@ -2148,9 +2150,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "UTAH 39",
+  "spot": "TCU 37",
   "state": "TX",
   "status": "In Progress",
   "venue": "Amon G. Carter Stadium"
@@ -2829,17 +2831,17 @@
   "away_rank": 99,
   "away_short": "UTSA",
   "city": "Birmingham",
-  "clock": "0:29",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:29 - 4th",
-  "down": "4th & 15 at UTSA 39",
+  "detail": "Final",
+  "down": null,
   "espn_id": "401862836",
-  "final": false,
+  "final": true,
   "home_abbr": "UAB",
   "home_r": "17",
   "home_rank": 99,
   "home_short": "UAB",
-  "in_play": true,
+  "in_play": false,
   "leaders": [
    {
     "cat": "PASS",
@@ -2874,11 +2876,11 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "UTSA 39",
+  "spot": null,
   "state": "AL",
-  "status": "In Progress",
+  "status": "Final",
   "venue": "Protective Stadium"
  },
  "a05c0d32b35dfd5cca63a61af28b9739": {
@@ -4285,14 +4287,14 @@
   "away_rank": 99,
   "away_short": "Oklahoma St",
   "city": "Tempe",
-  "clock": "8:26",
+  "clock": "7:04",
   "conf_comp": true,
-  "detail": "8:26 - 2nd",
+  "detail": "7:04 - 2nd",
   "down": null,
   "espn_id": "401856870",
   "final": false,
   "home_abbr": "ASU",
-  "home_r": "7",
+  "home_r": "14",
   "home_rank": 99,
   "home_short": "Arizona St",
   "in_play": true,
@@ -4305,9 +4307,9 @@
    },
    {
     "cat": "RUSH",
-    "team": "away",
-    "val": "4 CAR, 22 YDS, 1 TD",
-    "who": "W. Mason"
+    "team": "home",
+    "val": "6 CAR, 36 YDS",
+    "who": "C. Mack"
    },
    {
     "cat": "REC",
@@ -4322,11 +4324,11 @@
   ],
   "line_home": [
    7.0,
-   0.0
+   6.0
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
   "spot": null,
   "state": "AZ",
