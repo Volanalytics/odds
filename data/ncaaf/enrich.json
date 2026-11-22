@@ -63,10 +63,10 @@
   "away_rank": 99,
   "away_short": "San Diego St",
   "city": "Boise",
-  "clock": "15:00",
+  "clock": "13:44",
   "conf_comp": true,
-  "detail": "15:00 - 3rd",
-  "down": "2nd & 10 at SDSU 46",
+  "detail": "13:44 - 4th",
+  "down": "4th & 2 at SDSU 38",
   "espn_id": "401860925",
   "final": false,
   "home_abbr": "BOIS",
@@ -78,7 +78,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "18/27, 245 YDS, 2 INT",
+    "val": "20/29, 251 YDS, 2 INT",
     "who": "M. Madsen"
    },
    {
@@ -97,18 +97,20 @@
   "line_away": [
    0.0,
    0.0,
-   10.0
+   10.0,
+   0.0
   ],
   "line_home": [
    0.0,
    7.0,
-   3.0
+   3.0,
+   0.0
   ],
   "neutral": false,
-  "period": 3,
+  "period": 4,
   "poss": "home",
   "redzone": false,
-  "spot": "SDSU 46",
+  "spot": "SDSU 38",
   "state": "ID",
   "status": "In Progress",
   "venue": "Albertsons Stadium"
@@ -179,7 +181,7 @@
   "city": "Nashville",
   "clock": "0:00",
   "conf_comp": true,
-  "detail": "TBD",
+  "detail": "11/28 - 7:00 PM EST",
   "down": null,
   "espn_id": "401856765",
   "final": false,
@@ -1131,7 +1133,7 @@
   "city": "Winston-Salem",
   "clock": "0:00",
   "conf_comp": true,
-  "detail": "TBD",
+  "detail": "11/28 - 3:30 PM EST",
   "down": null,
   "espn_id": "401858312",
   "final": false,
@@ -1613,7 +1615,7 @@
   "city": "Tuscaloosa",
   "clock": "0:00",
   "conf_comp": true,
-  "detail": "TBD",
+  "detail": "11/28 - 7:30 PM EST",
   "down": null,
   "espn_id": "401856757",
   "final": false,
@@ -1725,7 +1727,7 @@
   "city": "Eugene",
   "clock": "0:00",
   "conf_comp": true,
-  "detail": "TBD",
+  "detail": "11/28 - 7:30 PM EST",
   "down": null,
   "espn_id": "401858541",
   "final": false,
@@ -1885,14 +1887,14 @@
  },
  "6e36f5c3c55edcb31749b0de4a146d14": {
   "away_abbr": "USU",
-  "away_r": "14",
+  "away_r": "17",
   "away_rank": 99,
   "away_short": "Utah State",
   "city": "Corvallis",
-  "clock": "0:31",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:31 - 2nd",
-  "down": "2nd & 1 at ORST 5",
+  "detail": "Halftime",
+  "down": null,
   "espn_id": "401860919",
   "final": false,
   "home_abbr": "ORST",
@@ -1904,13 +1906,13 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "10/17, 154 YDS",
+    "val": "11/18, 155 YDS",
     "who": "M. Hillstead"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "9 CAR, 37 YDS, 1 TD",
+    "val": "10 CAR, 38 YDS, 1 TD",
     "who": "M. Hillstead"
    },
    {
@@ -1922,7 +1924,7 @@
   ],
   "line_away": [
    7.0,
-   7.0
+   10.0
   ],
   "line_home": [
    0.0,
@@ -1930,11 +1932,11 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": null,
   "redzone": true,
-  "spot": "ORST 5",
+  "spot": null,
   "state": "OR",
-  "status": "In Progress",
+  "status": "Halftime",
   "venue": "Reser Stadium"
  },
  "725c6205de38f91b507a880c139eda54": {
@@ -2003,7 +2005,7 @@
   "city": "Lexington",
   "clock": "0:00",
   "conf_comp": false,
-  "detail": "TBD",
+  "detail": "11/28 - 12:00 PM EST",
   "down": null,
   "espn_id": "401856761",
   "final": false,
@@ -2107,10 +2109,10 @@
   "away_rank": 2,
   "away_short": "Utah",
   "city": "Fort Worth",
-  "clock": "13:17",
+  "clock": "10:12",
   "conf_comp": true,
-  "detail": "13:17 - 4th",
-  "down": "3rd & 13 at TCU 32",
+  "detail": "10:12 - 4th",
+  "down": "3rd & Goal at UTAH 18",
   "espn_id": "401856872",
   "final": false,
   "home_abbr": "TCU",
@@ -2128,7 +2130,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "9 CAR, 85 YDS, 2 TD",
+    "val": "12 CAR, 108 YDS, 2 TD",
     "who": "J. Payne"
    },
    {
@@ -2153,8 +2155,8 @@
   "neutral": false,
   "period": 4,
   "poss": "home",
-  "redzone": false,
-  "spot": "TCU 32",
+  "redzone": true,
+  "spot": "UTAH 18",
   "state": "TX",
   "status": "In Progress",
   "venue": "Amon G. Carter Stadium"
@@ -2225,7 +2227,7 @@
   "city": "Clemson",
   "clock": "0:00",
   "conf_comp": false,
-  "detail": "TBD",
+  "detail": "11/28 - 3:00 PM EST",
   "down": null,
   "espn_id": "401856764",
   "final": false,
@@ -2273,7 +2275,7 @@
   "city": "Bloomington",
   "clock": "0:00",
   "conf_comp": true,
-  "detail": "TBD",
+  "detail": "11/28 - 7:00 PM EST",
   "down": null,
   "espn_id": "401858538",
   "final": false,
