@@ -275,10 +275,10 @@
   "away_rank": 16,
   "away_short": "Kentucky",
   "city": "Columbia",
-  "clock": "2:00",
+  "clock": "1:07",
   "conf_comp": true,
-  "detail": "2:00 - 2nd",
-  "down": "2nd & 9 at UK 44",
+  "detail": "1:07 - 2nd",
+  "down": "1st & 10 at UK 8",
   "espn_id": "401856751",
   "final": false,
   "home_abbr": "MIZ",
@@ -290,7 +290,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "11/13, 164 YDS, 2 TD",
+    "val": "12/15, 178 YDS, 2 TD, 1 INT",
     "who": "A. Simmons"
    },
    {
@@ -316,9 +316,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "UK 44",
+  "spot": "UK 8",
   "state": "MO",
   "status": "In Progress",
   "venue": "Memorial Stadium"
@@ -735,10 +735,10 @@
   "away_rank": 99,
   "away_short": "Maryland",
   "city": "Los Angeles",
-  "clock": "0:46",
+  "clock": "14:55",
   "conf_comp": true,
-  "detail": "0:46 - 3rd",
-  "down": "2nd & 10 at MD 29",
+  "detail": "14:55 - 4th",
+  "down": "3rd & 9 at MD 16",
   "espn_id": "401858534",
   "final": false,
   "home_abbr": "USC",
@@ -750,7 +750,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "19/32, 226 YDS, 2 TD",
+    "val": "20/33, 227 YDS, 2 TD",
     "who": "J. Maiava"
    },
    {
@@ -769,18 +769,20 @@
   "line_away": [
    0.0,
    14.0,
+   0.0,
    0.0
   ],
   "line_home": [
    10.0,
    3.0,
-   7.0
+   7.0,
+   0.0
   ],
   "neutral": false,
-  "period": 3,
+  "period": 4,
   "poss": "home",
-  "redzone": false,
-  "spot": "MD 29",
+  "redzone": true,
+  "spot": "MD 16",
   "state": "CA",
   "status": "In Progress",
   "venue": "Los Angeles Memorial Coliseum"
@@ -1003,9 +1005,9 @@
   "away_rank": 99,
   "away_short": "Pitt",
   "city": "Louisville",
-  "clock": "9:18",
+  "clock": "7:11",
   "conf_comp": true,
-  "detail": "9:18 - 2nd",
+  "detail": "7:11 - 2nd",
   "down": null,
   "espn_id": "401858306",
   "final": false,
@@ -1018,7 +1020,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "9/18, 96 YDS, 1 TD",
+    "val": "11/21, 103 YDS, 1 TD, 1 INT",
     "who": "L. Kienholz"
    },
    {
@@ -1030,7 +1032,7 @@
    {
     "cat": "REC",
     "team": "home",
-    "val": "3 REC, 50 YDS",
+    "val": "5 REC, 57 YDS",
     "who": "T. Richardson"
    }
   ],
@@ -1201,14 +1203,14 @@
   "away_rank": 99,
   "away_short": "Stanford",
   "city": "Berkeley",
-  "clock": "2:00",
+  "clock": "0:45",
   "conf_comp": true,
-  "detail": "2:00 - 2nd",
+  "detail": "0:45 - 2nd",
   "down": null,
   "espn_id": "401858308",
   "final": false,
   "home_abbr": "CAL",
-  "home_r": "7",
+  "home_r": "13",
   "home_rank": 99,
   "home_short": "California",
   "in_play": true,
@@ -1227,9 +1229,9 @@
    },
    {
     "cat": "REC",
-    "team": "away",
+    "team": "home",
     "val": "3 REC, 39 YDS",
-    "who": "N. Brown"
+    "who": "M. Mini"
    }
   ],
   "line_away": [
@@ -1238,12 +1240,12 @@
   ],
   "line_home": [
    0.0,
-   7.0
+   13.0
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
-  "redzone": false,
+  "poss": null,
+  "redzone": true,
   "spot": null,
   "state": "CA",
   "status": "In Progress",
@@ -2771,14 +2773,14 @@
  },
  "9f3f8efae55dbb803964a5107350e263": {
   "away_abbr": "UTSA",
-  "away_r": "0",
+  "away_r": "13",
   "away_rank": 99,
   "away_short": "UTSA",
   "city": "Birmingham",
-  "clock": "13:59",
+  "clock": "13:44",
   "conf_comp": true,
-  "detail": "13:59 - 2nd",
-  "down": "4th & Goal at UAB 1",
+  "detail": "13:44 - 2nd",
+  "down": null,
   "espn_id": "401862836",
   "final": false,
   "home_abbr": "UAB",
@@ -2796,7 +2798,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "7 CAR, 29 YDS",
+    "val": "8 CAR, 30 YDS, 1 TD",
     "who": "A. Peterson"
    },
    {
@@ -2808,7 +2810,7 @@
   ],
   "line_away": [
    0.0,
-   0.0
+   13.0
   ],
   "line_home": [
    0.0,
@@ -2816,9 +2818,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": null,
   "redzone": true,
-  "spot": "UAB 1",
+  "spot": null,
   "state": "AL",
   "status": "In Progress",
   "venue": "Protective Stadium"
@@ -2829,10 +2831,10 @@
   "away_rank": 1,
   "away_short": "Georgia",
   "city": "Columbia",
-  "clock": "7:29",
+  "clock": "5:34",
   "conf_comp": true,
-  "detail": "7:29 - 2nd",
-  "down": "4th & 4 at SC 41",
+  "detail": "5:34 - 2nd",
+  "down": "2nd & 7 at UGA 26",
   "espn_id": "401856753",
   "final": false,
   "home_abbr": "SC",
@@ -2850,7 +2852,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "7 CAR, 34 YDS",
+    "val": "8 CAR, 37 YDS",
     "who": "N. Frazier"
    },
    {
@@ -2870,9 +2872,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "SC 41",
+  "spot": "UGA 26",
   "state": "SC",
   "status": "In Progress",
   "venue": "Williams-Brice Stadium"
@@ -2944,7 +2946,7 @@
   "clock": "0:00",
   "conf_comp": true,
   "detail": "Halftime",
-  "down": null,
+  "down": "1st & 10 at LT 25",
   "espn_id": "401869938",
   "final": false,
   "home_abbr": "LT",
@@ -2956,7 +2958,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "8/13, 168 YDS, 3 TD",
+    "val": "9/14, 168 YDS, 3 TD",
     "who": "B. Baker"
    },
    {
@@ -2984,7 +2986,7 @@
   "period": 2,
   "poss": null,
   "redzone": false,
-  "spot": null,
+  "spot": "LT 25",
   "state": "LA",
   "status": "Halftime",
   "venue": "Joe Aillet Stadium"
@@ -3659,10 +3661,10 @@
   "away_rank": 99,
   "away_short": "Washington St",
   "city": "San Marcos",
-  "clock": "12:22",
+  "clock": "11:11",
   "conf_comp": true,
-  "detail": "12:22 - 4th",
-  "down": null,
+  "detail": "11:11 - 4th",
+  "down": "4th & 5 at WSU 31",
   "espn_id": "401860920",
   "final": false,
   "home_abbr": "TXST",
@@ -3673,9 +3675,9 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "11/19, 122 YDS, 1 TD",
-    "who": "B. Jackson"
+    "team": "away",
+    "val": "16/28, 126 YDS, 1 TD",
+    "who": "O. Eshelman"
    },
    {
     "cat": "RUSH",
@@ -3704,9 +3706,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "WSU 31",
   "state": "TX",
   "status": "In Progress",
   "venue": "UFCU Stadium"
@@ -4267,10 +4269,10 @@
   "away_rank": 99,
   "away_short": "Colorado St",
   "city": "Fresno",
-  "clock": "8:30",
+  "clock": "7:21",
   "conf_comp": true,
-  "detail": "8:30 - 2nd",
-  "down": "2nd & 5 at CSU 45",
+  "detail": "7:21 - 2nd",
+  "down": "1st & 10 at CSU 36",
   "espn_id": "401860918",
   "final": false,
   "home_abbr": "FRES",
@@ -4288,7 +4290,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "6 CAR, 70 YDS",
+    "val": "7 CAR, 72 YDS",
     "who": "B. Donelson"
    },
    {
@@ -4310,7 +4312,7 @@
   "period": 2,
   "poss": "home",
   "redzone": false,
-  "spot": "CSU 45",
+  "spot": "CSU 36",
   "state": "CA",
   "status": "In Progress",
   "venue": "Valley Children's Stadium"
@@ -4533,10 +4535,10 @@
   "away_rank": 99,
   "away_short": "SMU",
   "city": "Notre Dame",
-  "clock": "5:28",
+  "clock": "4:33",
   "conf_comp": false,
-  "detail": "5:28 - 2nd",
-  "down": null,
+  "detail": "4:33 - 2nd",
+  "down": "3rd & 3 at ND 34",
   "espn_id": "401858307",
   "final": false,
   "home_abbr": "ND",
@@ -4554,7 +4556,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "3 CAR, 72 YDS",
+    "val": "4 CAR, 73 YDS",
     "who": "K. Raphael"
    },
    {
@@ -4574,9 +4576,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "ND 34",
   "state": "IN",
   "status": "In Progress",
   "venue": "Notre Dame Stadium"
