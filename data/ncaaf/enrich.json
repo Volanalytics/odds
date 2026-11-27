@@ -149,14 +149,14 @@
   "away_rank": 99,
   "away_short": "Tulsa",
   "city": "San Antonio",
-  "clock": "4:57",
+  "clock": "4:47",
   "conf_comp": true,
-  "detail": "4:57 - 4th",
-  "down": "3rd & 5 at TLSA 19",
+  "detail": "4:47 - 4th",
+  "down": null,
   "espn_id": "401862840",
   "final": false,
   "home_abbr": "UTSA",
-  "home_r": "25",
+  "home_r": "28",
   "home_rank": 99,
   "home_short": "UTSA",
   "in_play": true,
@@ -190,13 +190,13 @@
    14.0,
    11.0,
    0.0,
-   0.0
+   3.0
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
-  "redzone": true,
-  "spot": "TLSA 19",
+  "poss": null,
+  "redzone": false,
+  "spot": null,
   "state": "TX",
   "status": "In Progress",
   "venue": "Alamodome"
@@ -889,14 +889,14 @@
   "away_rank": 99,
   "away_short": "Toledo",
   "city": "Athens",
-  "clock": "8:08",
+  "clock": "4:55",
   "conf_comp": true,
-  "detail": "8:08 - 4th",
-  "down": null,
+  "detail": "4:55 - 4th",
+  "down": "1st & 10 at TOL 35",
   "espn_id": "401866473",
   "final": false,
   "home_abbr": "OHIO",
-  "home_r": "24",
+  "home_r": "31",
   "home_rank": 99,
   "home_short": "Ohio",
   "in_play": true,
@@ -904,14 +904,14 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "15/24, 283 YDS, 1 TD, 1 INT",
+    "val": "15/25, 283 YDS, 1 TD, 1 INT",
     "who": "L. Davis"
    },
    {
     "cat": "RUSH",
-    "team": "away",
-    "val": "10 CAR, 64 YDS",
-    "who": "C. Walendzak"
+    "team": "home",
+    "val": "16 CAR, 70 YDS, 2 TD",
+    "who": "L. Davis"
    },
    {
     "cat": "REC",
@@ -930,13 +930,13 @@
    0.0,
    10.0,
    7.0,
-   7.0
+   14.0
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "TOL 35",
   "state": "OH",
   "status": "In Progress",
   "venue": "Peden Stadium"
@@ -1043,10 +1043,10 @@
   "away_rank": 99,
   "away_short": "Mississippi St",
   "city": "Oxford",
-  "clock": "5:18",
+  "clock": "2:58",
   "conf_comp": true,
-  "detail": "5:18 - 4th",
-  "down": "2nd & 27 at MSST 8",
+  "detail": "2:58 - 4th",
+  "down": "1st & Goal at MSST 1",
   "espn_id": "401856762",
   "final": false,
   "home_abbr": "MISS",
@@ -1064,7 +1064,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "17 CAR, 104 YDS, 1 TD",
+    "val": "18 CAR, 129 YDS, 1 TD",
     "who": "F. Bothwell"
    },
    {
@@ -1088,9 +1088,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
-  "redzone": false,
-  "spot": "MSST 8",
+  "poss": "home",
+  "redzone": true,
+  "spot": "MSST 1",
   "state": "MS",
   "status": "In Progress",
   "venue": "Vaught-Hemingway Stadium"
@@ -1869,10 +1869,10 @@
   "away_rank": 25,
   "away_short": "Nebraska",
   "city": "Iowa City",
-  "clock": "2:07",
+  "clock": "0:25",
   "conf_comp": true,
-  "detail": "2:07 - 4th",
-  "down": "1st & 10 at IOWA 15",
+  "detail": "0:25 - 4th",
+  "down": "4th & 12 at IOWA 13",
   "espn_id": "401858536",
   "final": false,
   "home_abbr": "IOWA",
@@ -1916,7 +1916,7 @@
   "period": 4,
   "poss": "home",
   "redzone": false,
-  "spot": "IOWA 15",
+  "spot": "IOWA 13",
   "state": "IA",
   "status": "In Progress",
   "venue": "Kinnick Stadium"
@@ -2167,14 +2167,14 @@
   "away_rank": 99,
   "away_short": "App State",
   "city": "Mobile",
-  "clock": "10:51",
+  "clock": "8:08",
   "conf_comp": true,
-  "detail": "10:51 - 1st",
-  "down": "3rd & 2 at APP 19",
+  "detail": "8:08 - 1st",
+  "down": null,
   "espn_id": "401869930",
   "final": false,
   "home_abbr": "USA",
-  "home_r": "0",
+  "home_r": "7",
   "home_rank": 99,
   "home_short": "South Alabama",
   "in_play": true,
@@ -2182,7 +2182,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "1/1, 45 YDS",
+    "val": "3/3, 56 YDS, 1 TD",
     "who": "B. Davenport"
    },
    {
@@ -2194,7 +2194,7 @@
    {
     "cat": "REC",
     "team": "home",
-    "val": "1 REC, 45 YDS",
+    "val": "2 REC, 51 YDS, 1 TD",
     "who": "E. Hunter"
    }
   ],
@@ -2202,13 +2202,13 @@
    0.0
   ],
   "line_home": [
-   0.0
+   7.0
   ],
   "neutral": false,
   "period": 1,
-  "poss": "home",
-  "redzone": true,
-  "spot": "APP 19",
+  "poss": null,
+  "redzone": false,
+  "spot": null,
   "state": "AL",
   "status": "In Progress",
   "venue": "Hancock Whitney Stadium"
