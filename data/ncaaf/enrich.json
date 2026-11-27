@@ -539,13 +539,13 @@
  },
  "45d4d87e236a38e2feb11f57820ff03f": {
   "away_abbr": "AFA",
-  "away_r": "10",
+  "away_r": "13",
   "away_rank": 99,
   "away_short": "Air Force",
   "city": "Albuquerque",
-  "clock": "0:04",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:04 - 2nd",
+  "detail": "End of 2nd",
   "down": null,
   "espn_id": "401864546",
   "final": false,
@@ -558,7 +558,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "5/9, 115 YDS, 1 INT",
+    "val": "6/12, 122 YDS, 1 INT",
     "who": "E. Medders"
    },
    {
@@ -576,7 +576,7 @@
   ],
   "line_away": [
    7.0,
-   3.0
+   6.0
   ],
   "line_home": [
    14.0,
@@ -584,8 +584,8 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
-  "redzone": true,
+  "poss": "home",
+  "redzone": false,
   "spot": null,
   "state": "NM",
   "status": "In Progress",
@@ -1203,10 +1203,10 @@
   "away_rank": 99,
   "away_short": "N Dakota St",
   "city": "San Jose",
-  "clock": "6:53",
+  "clock": "4:56",
   "conf_comp": false,
-  "detail": "6:53 - 3rd",
-  "down": "2nd & 10 at NDSU 39",
+  "detail": "4:56 - 3rd",
+  "down": "3rd & 7 at NDSU 11",
   "espn_id": "401864549",
   "final": false,
   "home_abbr": "SJSU",
@@ -1218,7 +1218,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "14/27, 182 YDS, 1 TD, 1 INT",
+    "val": "14/29, 182 YDS, 1 TD, 1 INT",
     "who": "L. Weaver"
    },
    {
@@ -1247,8 +1247,8 @@
   "neutral": false,
   "period": 3,
   "poss": "home",
-  "redzone": false,
-  "spot": "NDSU 39",
+  "redzone": true,
+  "spot": "NDSU 11",
   "state": "CA",
   "status": "In Progress",
   "venue": "CEFCU Stadium"
@@ -1403,10 +1403,10 @@
   "away_rank": 20,
   "away_short": "Florida",
   "city": "Tallahassee",
-  "clock": "0:55",
+  "clock": "15:00",
   "conf_comp": false,
-  "detail": "0:55 - 3rd",
-  "down": "1st & 10 at FSU 36",
+  "detail": "15:00 - 4th",
+  "down": "2nd & 10 at FSU 28",
   "espn_id": "401856759",
   "final": false,
   "home_abbr": "FSU",
@@ -1424,7 +1424,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "14 CAR, 72 YDS, 1 TD",
+    "val": "15 CAR, 69 YDS, 1 TD",
     "who": "J. Baugh"
    },
    {
@@ -1437,18 +1437,20 @@
   "line_away": [
    7.0,
    3.0,
-   7.0
+   7.0,
+   0.0
   ],
   "line_home": [
    0.0,
    3.0,
-   7.0
+   7.0,
+   0.0
   ],
   "neutral": false,
-  "period": 3,
+  "period": 4,
   "poss": "away",
   "redzone": false,
-  "spot": "FSU 36",
+  "spot": "FSU 28",
   "state": "FL",
   "status": "In Progress",
   "venue": "Doak Campbell Stadium"
@@ -2191,15 +2193,15 @@
   "city": "Mobile",
   "clock": "0:00",
   "conf_comp": true,
-  "detail": "End of 4th",
+  "detail": "Final",
   "down": null,
   "espn_id": "401869930",
-  "final": false,
+  "final": true,
   "home_abbr": "USA",
   "home_r": "20",
   "home_rank": 99,
   "home_short": "South Alabama",
-  "in_play": true,
+  "in_play": false,
   "leaders": [
    {
     "cat": "PASS",
@@ -2234,11 +2236,11 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
   "spot": null,
   "state": "AL",
-  "status": "In Progress",
+  "status": "Final",
   "venue": "Hancock Whitney Stadium"
  },
  "a750f21dccb9df459196adc8dcf5ffe4": {
@@ -2247,10 +2249,10 @@
   "away_rank": 99,
   "away_short": "Temple",
   "city": "Memphis",
-  "clock": "13:59",
+  "clock": "13:39",
   "conf_comp": true,
-  "detail": "13:59 - 4th",
-  "down": null,
+  "detail": "13:39 - 4th",
+  "down": "2nd & 20 at MEM 15",
   "espn_id": "401862838",
   "final": false,
   "home_abbr": "MEM",
@@ -2292,9 +2294,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "MEM 15",
   "state": "TN",
   "status": "In Progress",
   "venue": "Simmons Bank Liberty Stadium"
