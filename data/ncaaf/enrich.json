@@ -145,7 +145,7 @@
  },
  "1f0a9e7f76830b196133518ae01bb113": {
   "away_abbr": "TLSA",
-  "away_r": "13",
+  "away_r": "15",
   "away_rank": 99,
   "away_short": "Tulsa",
   "city": "San Antonio",
@@ -184,7 +184,7 @@
    7.0,
    0.0,
    0.0,
-   6.0
+   8.0
   ],
   "line_home": [
    14.0,
@@ -889,14 +889,14 @@
   "away_rank": 99,
   "away_short": "Toledo",
   "city": "Athens",
-  "clock": "14:55",
+  "clock": "9:47",
   "conf_comp": true,
-  "detail": "14:55 - 4th",
-  "down": "1st & 10 at 50",
+  "detail": "9:47 - 4th",
+  "down": null,
   "espn_id": "401866473",
   "final": false,
   "home_abbr": "OHIO",
-  "home_r": "17",
+  "home_r": "23",
   "home_rank": 99,
   "home_short": "Ohio",
   "in_play": true,
@@ -904,7 +904,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "12/20, 267 YDS, 1 TD, 1 INT",
+    "val": "14/22, 277 YDS, 1 TD, 1 INT",
     "who": "L. Davis"
    },
    {
@@ -930,13 +930,13 @@
    0.0,
    10.0,
    7.0,
-   0.0
+   6.0
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
-  "redzone": false,
-  "spot": "50",
+  "poss": null,
+  "redzone": true,
+  "spot": null,
   "state": "OH",
   "status": "In Progress",
   "venue": "Peden Stadium"
@@ -1043,14 +1043,14 @@
   "away_rank": 99,
   "away_short": "Mississippi St",
   "city": "Oxford",
-  "clock": "10:35",
+  "clock": "10:27",
   "conf_comp": true,
-  "detail": "10:35 - 4th",
-  "down": "1st & 10 at MSST 1",
+  "detail": "10:27 - 4th",
+  "down": "1st & 10 at MSST 25",
   "espn_id": "401856762",
   "final": false,
   "home_abbr": "MISS",
-  "home_r": "20",
+  "home_r": "27",
   "home_rank": 22,
   "home_short": "Ole Miss",
   "in_play": true,
@@ -1084,13 +1084,13 @@
    3.0,
    3.0,
    14.0,
-   0.0
+   7.0
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
-  "redzone": true,
-  "spot": "MSST 1",
+  "poss": null,
+  "redzone": false,
+  "spot": "MSST 25",
   "state": "MS",
   "status": "In Progress",
   "venue": "Vaught-Hemingway Stadium"
@@ -1869,10 +1869,10 @@
   "away_rank": 25,
   "away_short": "Nebraska",
   "city": "Iowa City",
-  "clock": "9:22",
+  "clock": "7:50",
   "conf_comp": true,
-  "detail": "9:22 - 4th",
-  "down": "2nd & 10 at NEB 37",
+  "detail": "7:50 - 4th",
+  "down": "1st & 10 at NEB 46",
   "espn_id": "401858536",
   "final": false,
   "home_abbr": "IOWA",
@@ -1895,9 +1895,9 @@
    },
    {
     "cat": "REC",
-    "team": "home",
-    "val": "3 REC, 61 YDS, 1 TD",
-    "who": "D. Vonnahme"
+    "team": "away",
+    "val": "6 REC, 63 YDS",
+    "who": "L. Lindenmeyer"
    }
   ],
   "line_away": [
@@ -1914,9 +1914,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "NEB 37",
+  "spot": "NEB 46",
   "state": "IA",
   "status": "In Progress",
   "venue": "Kinnick Stadium"
@@ -3003,10 +3003,10 @@
   "away_rank": 99,
   "away_short": "Buffalo",
   "city": "Akron",
-  "clock": "3:28",
+  "clock": "1:30",
   "conf_comp": true,
-  "detail": "3:28 - 4th",
-  "down": null,
+  "detail": "1:30 - 4th",
+  "down": "1st & 10 at AKR 36",
   "espn_id": "401866472",
   "final": false,
   "home_abbr": "AKR",
@@ -3018,13 +3018,13 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "12/23, 192 YDS, 1 TD",
+    "val": "11/24, 192 YDS, 1 TD",
     "who": "C. Broughton"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "24 CAR, 130 YDS, 1 TD",
+    "val": "25 CAR, 130 YDS, 1 TD",
     "who": "M. Burch"
    },
    {
@@ -3048,9 +3048,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "AKR 36",
   "state": "OH",
   "status": "In Progress",
   "venue": "InfoCision Stadium"
