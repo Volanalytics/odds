@@ -149,10 +149,10 @@
   "away_rank": 99,
   "away_short": "Tulsa",
   "city": "San Antonio",
-  "clock": "0:55",
+  "clock": "15:00",
   "conf_comp": true,
-  "detail": "0:55 - 3rd",
-  "down": "3rd & 10 at TLSA 20",
+  "detail": "15:00 - 4th",
+  "down": "1st & 10 at UTSA 20",
   "espn_id": "401862840",
   "final": false,
   "home_abbr": "UTSA",
@@ -183,18 +183,20 @@
   "line_away": [
    7.0,
    0.0,
+   0.0,
    0.0
   ],
   "line_home": [
    14.0,
    11.0,
+   0.0,
    0.0
   ],
   "neutral": false,
-  "period": 3,
+  "period": 4,
   "poss": "away",
-  "redzone": false,
-  "spot": "TLSA 20",
+  "redzone": true,
+  "spot": "UTSA 20",
   "state": "TX",
   "status": "In Progress",
   "venue": "Alamodome"
@@ -883,14 +885,14 @@
  },
  "58cd1284193cd30679325c8494f546e6": {
   "away_abbr": "TOL",
-  "away_r": "17",
+  "away_r": "24",
   "away_rank": 99,
   "away_short": "Toledo",
   "city": "Athens",
-  "clock": "0:00",
+  "clock": "14:55",
   "conf_comp": true,
-  "detail": "End of 3rd",
-  "down": "3rd & 3 at OHIO 12",
+  "detail": "14:55 - 4th",
+  "down": null,
   "espn_id": "401866473",
   "final": false,
   "home_abbr": "OHIO",
@@ -921,18 +923,20 @@
   "line_away": [
    14.0,
    3.0,
-   0.0
+   0.0,
+   7.0
   ],
   "line_home": [
    0.0,
    10.0,
-   7.0
+   7.0,
+   0.0
   ],
   "neutral": false,
-  "period": 3,
-  "poss": "away",
-  "redzone": true,
-  "spot": "OHIO 12",
+  "period": 4,
+  "poss": null,
+  "redzone": false,
+  "spot": null,
   "state": "OH",
   "status": "In Progress",
   "venue": "Peden Stadium"
@@ -1039,10 +1043,10 @@
   "away_rank": 99,
   "away_short": "Mississippi St",
   "city": "Oxford",
-  "clock": "13:22",
+  "clock": "12:30",
   "conf_comp": true,
-  "detail": "13:22 - 4th",
-  "down": "1st & 10 at MISS 47",
+  "detail": "12:30 - 4th",
+  "down": "2nd & 1 at MSST 34",
   "espn_id": "401856762",
   "final": false,
   "home_abbr": "MISS",
@@ -1054,13 +1058,13 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "22/34, 217 YDS, 1 TD",
+    "val": "21/34, 202 YDS, 1 TD",
     "who": "T. Chambliss"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "16 CAR, 95 YDS, 1 TD",
+    "val": "18 CAR, 104 YDS, 1 TD",
     "who": "F. Bothwell"
    },
    {
@@ -1084,9 +1088,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "MISS 47",
+  "spot": "MSST 34",
   "state": "MS",
   "status": "In Progress",
   "venue": "Vaught-Hemingway Stadium"
@@ -1865,14 +1869,14 @@
   "away_rank": 25,
   "away_short": "Nebraska",
   "city": "Iowa City",
-  "clock": "12:51",
+  "clock": "10:33",
   "conf_comp": true,
-  "detail": "12:51 - 4th",
-  "down": "2nd & 4 at NEB 25",
+  "detail": "10:33 - 4th",
+  "down": null,
   "espn_id": "401858536",
   "final": false,
   "home_abbr": "IOWA",
-  "home_r": "17",
+  "home_r": "24",
   "home_rank": 13,
   "home_short": "Iowa",
   "in_play": true,
@@ -1880,7 +1884,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "10/15, 151 YDS",
+    "val": "13/18, 173 YDS, 1 TD",
     "who": "H. Brown"
    },
    {
@@ -1891,9 +1895,9 @@
    },
    {
     "cat": "REC",
-    "team": "away",
-    "val": "5 REC, 53 YDS",
-    "who": "L. Lindenmeyer"
+    "team": "home",
+    "val": "3 REC, 61 YDS, 1 TD",
+    "who": "D. Vonnahme"
    }
   ],
   "line_away": [
@@ -1906,13 +1910,13 @@
    7.0,
    3.0,
    7.0,
-   0.0
+   7.0
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "NEB 25",
+  "spot": null,
   "state": "IA",
   "status": "In Progress",
   "venue": "Kinnick Stadium"
@@ -3002,7 +3006,7 @@
   "clock": "3:28",
   "conf_comp": true,
   "detail": "3:28 - 4th",
-  "down": "1st & 10 at AKR 20",
+  "down": "1st & 10 at AKR 31",
   "espn_id": "401866472",
   "final": false,
   "home_abbr": "AKR",
@@ -3014,7 +3018,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "10/20, 183 YDS, 1 TD",
+    "val": "11/21, 192 YDS, 1 TD",
     "who": "C. Broughton"
    },
    {
@@ -3046,7 +3050,7 @@
   "period": 4,
   "poss": "home",
   "redzone": false,
-  "spot": "AKR 20",
+  "spot": "AKR 31",
   "state": "OH",
   "status": "In Progress",
   "venue": "InfoCision Stadium"
