@@ -149,14 +149,14 @@
   "away_rank": 99,
   "away_short": "Tulsa",
   "city": "San Antonio",
-  "clock": "14:14",
+  "clock": "12:01",
   "conf_comp": true,
-  "detail": "14:14 - 1st",
-  "down": null,
+  "detail": "12:01 - 1st",
+  "down": "1st & 10 at UTSA 38",
   "espn_id": "401862840",
   "final": false,
   "home_abbr": "UTSA",
-  "home_r": "6",
+  "home_r": "7",
   "home_rank": 99,
   "home_short": "UTSA",
   "in_play": true,
@@ -166,6 +166,12 @@
     "team": "home",
     "val": "2/2, 75 YDS, 1 TD",
     "who": "O. McCown"
+   },
+   {
+    "cat": "RUSH",
+    "team": "away",
+    "val": "2 CAR, 14 YDS",
+    "who": "D. Alston"
    },
    {
     "cat": "REC",
@@ -178,13 +184,13 @@
    0.0
   ],
   "line_home": [
-   6.0
+   7.0
   ],
   "neutral": false,
   "period": 1,
-  "poss": null,
-  "redzone": true,
-  "spot": null,
+  "poss": "away",
+  "redzone": false,
+  "spot": "UTSA 38",
   "state": "TX",
   "status": "In Progress",
   "venue": "Alamodome"
@@ -877,10 +883,10 @@
   "away_rank": 99,
   "away_short": "Toledo",
   "city": "Athens",
-  "clock": "15:00",
+  "clock": "13:26",
   "conf_comp": true,
-  "detail": "15:00 - 1st",
-  "down": "3rd & 2 at TOL 33",
+  "detail": "13:26 - 1st",
+  "down": "4th & 2 at TOL 29",
   "espn_id": "401866473",
   "final": false,
   "home_abbr": "OHIO",
@@ -890,10 +896,22 @@
   "in_play": true,
   "leaders": [
    {
+    "cat": "PASS",
+    "team": "home",
+    "val": "3/4, 34 YDS",
+    "who": "N. Poulos"
+   },
+   {
     "cat": "RUSH",
     "team": "away",
-    "val": "3 CAR, 8 YDS",
+    "val": "3 CAR, 9 YDS",
     "who": "C. Miller"
+   },
+   {
+    "cat": "REC",
+    "team": "home",
+    "val": "1 REC, 15 YDS",
+    "who": "P. Bowman"
    }
   ],
   "line_away": [
@@ -904,9 +922,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "TOL 33",
+  "spot": "TOL 29",
   "state": "OH",
   "status": "In Progress",
   "venue": "Peden Stadium"
@@ -1013,46 +1031,50 @@
   "away_rank": 99,
   "away_short": "Mississippi St",
   "city": "Oxford",
-  "clock": "0:00",
+  "clock": "13:39",
   "conf_comp": true,
-  "detail": "11/27 - 12:00 PM EST",
-  "down": null,
+  "detail": "13:39 - 1st",
+  "down": "3rd & 16 at MSST 19",
   "espn_id": "401856762",
   "final": false,
   "home_abbr": "MISS",
   "home_r": "0",
   "home_rank": 22,
   "home_short": "Ole Miss",
-  "in_play": false,
+  "in_play": true,
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "2853 YDS, 24 TD, 9 INT",
-    "who": "T. Chambliss"
+    "team": "away",
+    "val": "2/2, YDS",
+    "who": "P. Puckett"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "134 CAR, 649 YDS, 3 TD",
+    "val": "1 CAR, -2 YDS",
     "who": "F. Bothwell"
    },
    {
     "cat": "REC",
     "team": "away",
-    "val": "73 REC, 929 YDS, 6 TD",
-    "who": "A. Evans III"
+    "val": "1 REC, 0 YDS",
+    "who": "F. Bothwell"
    }
   ],
-  "line_away": [],
-  "line_home": [],
+  "line_away": [
+   0.0
+  ],
+  "line_home": [
+   0.0
+  ],
   "neutral": false,
-  "period": 0,
-  "poss": null,
+  "period": 1,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "MSST 19",
   "state": "MS",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "Vaught-Hemingway Stadium"
  },
  "5f57756fa0d07d889a7a6727b6f5da2d": {
@@ -1829,46 +1851,31 @@
   "away_rank": 25,
   "away_short": "Nebraska",
   "city": "Iowa City",
-  "clock": "0:00",
+  "clock": "14:56",
   "conf_comp": true,
-  "detail": "11/27 - 12:08 PM EST",
-  "down": null,
+  "detail": "14:56 - 1st",
+  "down": "1st & 10 at IOWA 18",
   "espn_id": "401858536",
   "final": false,
   "home_abbr": "IOWA",
   "home_r": "0",
   "home_rank": 13,
   "home_short": "Iowa",
-  "in_play": false,
-  "leaders": [
-   {
-    "cat": "PASS",
-    "team": "away",
-    "val": "2497 YDS, 21 TD, 7 INT",
-    "who": "A. Colandrea"
-   },
-   {
-    "cat": "RUSH",
-    "team": "away",
-    "val": "133 CAR, 705 YDS, 5 TD",
-    "who": "J. Rule"
-   },
-   {
-    "cat": "REC",
-    "team": "away",
-    "val": "53 REC, 676 YDS, 8 TD",
-    "who": "K. Gilmer"
-   }
+  "in_play": true,
+  "leaders": [],
+  "line_away": [
+   0.0
   ],
-  "line_away": [],
-  "line_home": [],
+  "line_home": [
+   0.0
+  ],
   "neutral": false,
-  "period": 0,
+  "period": 1,
   "poss": null,
   "redzone": false,
-  "spot": null,
+  "spot": "IOWA 18",
   "state": "IA",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "Kinnick Stadium"
  },
  "a0fe49c990d1497e1cb34eb9c2b73ef1": {
@@ -2956,7 +2963,7 @@
   "clock": "15:00",
   "conf_comp": true,
   "detail": "15:00 - 1st",
-  "down": "1st & 10 at AKR 41",
+  "down": "3rd & Goal at BUF 8",
   "espn_id": "401866472",
   "final": false,
   "home_abbr": "AKR",
@@ -2968,20 +2975,20 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "1/1, 13 YDS",
+    "val": "2/3, 47 YDS",
     "who": "C. Broughton"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "1 CAR, 3 YDS",
-    "who": "J. Gant"
+    "val": "1 CAR, 8 YDS",
+    "who": "K. Mason"
    },
    {
     "cat": "REC",
     "team": "home",
-    "val": "1 REC, 13 YDS",
-    "who": "K. Mason"
+    "val": "1 REC, 34 YDS",
+    "who": "M. Burris"
    }
   ],
   "line_away": [
@@ -2993,8 +3000,8 @@
   "neutral": false,
   "period": 1,
   "poss": "home",
-  "redzone": false,
-  "spot": "AKR 41",
+  "redzone": true,
+  "spot": "BUF 8",
   "state": "OH",
   "status": "In Progress",
   "venue": "InfoCision Stadium"
