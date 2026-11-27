@@ -149,17 +149,17 @@
   "away_rank": 99,
   "away_short": "Tulsa",
   "city": "San Antonio",
-  "clock": "1:56",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "1:56 - 4th",
+  "detail": "Final",
   "down": null,
   "espn_id": "401862840",
-  "final": false,
+  "final": true,
   "home_abbr": "UTSA",
   "home_r": "28",
   "home_rank": 99,
   "home_short": "UTSA",
-  "in_play": true,
+  "in_play": false,
   "leaders": [
    {
     "cat": "PASS",
@@ -170,7 +170,7 @@
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "15 CAR, 55 YDS",
+    "val": "16 CAR, 105 YDS",
     "who": "W. Henderson III"
    },
    {
@@ -194,11 +194,11 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
   "spot": null,
   "state": "TX",
-  "status": "In Progress",
+  "status": "Final",
   "venue": "Alamodome"
  },
  "200466f41d944b2706e404635298ebf6": {
@@ -892,7 +892,7 @@
   "clock": "0:44",
   "conf_comp": true,
   "detail": "0:44 - 4th",
-  "down": "1st & 10 at TOL 30",
+  "down": null,
   "espn_id": "401866473",
   "final": false,
   "home_abbr": "OHIO",
@@ -910,7 +910,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "14 CAR, 97 YDS, 2 TD",
+    "val": "15 CAR, 109 YDS, 2 TD",
     "who": "C. Miller"
    },
    {
@@ -935,8 +935,8 @@
   "neutral": false,
   "period": 4,
   "poss": "away",
-  "redzone": false,
-  "spot": "TOL 30",
+  "redzone": true,
+  "spot": null,
   "state": "OH",
   "status": "In Progress",
   "venue": "Peden Stadium"
@@ -1197,46 +1197,44 @@
   "away_rank": 99,
   "away_short": "N Dakota St",
   "city": "San Jose",
-  "clock": "0:00",
+  "clock": "13:47",
   "conf_comp": false,
-  "detail": "11/27 - 3:30 PM EST",
-  "down": null,
+  "detail": "13:47 - 1st",
+  "down": "4th & 6 at SJSU 29",
   "espn_id": "401864549",
   "final": false,
   "home_abbr": "SJSU",
   "home_r": "0",
   "home_rank": 99,
   "home_short": "San Jos\u00e9 St",
-  "in_play": false,
+  "in_play": true,
   "leaders": [
    {
     "cat": "PASS",
     "team": "home",
-    "val": "2198 YDS, 13 TD, 9 INT",
+    "val": "1, 0 YDS",
     "who": "L. Weaver"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "175 CAR, 716 YDS, 1 TD",
+    "val": "2 CAR, 4 YDS",
     "who": "J. Bates"
-   },
-   {
-    "cat": "REC",
-    "team": "home",
-    "val": "75 REC, 848 YDS, 6 TD",
-    "who": "C. Clark"
    }
   ],
-  "line_away": [],
-  "line_home": [],
+  "line_away": [
+   0.0
+  ],
+  "line_home": [
+   0.0
+  ],
   "neutral": false,
-  "period": 0,
-  "poss": null,
+  "period": 1,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "SJSU 29",
   "state": "CA",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "CEFCU Stadium"
  },
  "61a2b3c7f905b33b86e1ea178a885325": {
@@ -2167,10 +2165,10 @@
   "away_rank": 99,
   "away_short": "App State",
   "city": "Mobile",
-  "clock": "2:46",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "2:46 - 1st",
-  "down": null,
+  "detail": "End of 1st",
+  "down": "3rd & 15 at USA 43",
   "espn_id": "401869930",
   "final": false,
   "home_abbr": "USA",
@@ -2187,9 +2185,9 @@
    },
    {
     "cat": "RUSH",
-    "team": "home",
-    "val": "2 CAR, 11 YDS",
-    "who": "B. Davenport"
+    "team": "away",
+    "val": "4 CAR, 13 YDS",
+    "who": "H. Hasselbeck"
    },
    {
     "cat": "REC",
@@ -2206,9 +2204,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "USA 43",
   "state": "AL",
   "status": "In Progress",
   "venue": "Hancock Whitney Stadium"
