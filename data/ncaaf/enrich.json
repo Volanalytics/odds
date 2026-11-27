@@ -543,10 +543,10 @@
   "away_rank": 99,
   "away_short": "Air Force",
   "city": "Albuquerque",
-  "clock": "0:32",
+  "clock": "0:04",
   "conf_comp": true,
-  "detail": "0:32 - 2nd",
-  "down": "3rd & 10 at AF 22",
+  "detail": "0:04 - 2nd",
+  "down": null,
   "espn_id": "401864546",
   "final": false,
   "home_abbr": "UNM",
@@ -557,9 +557,9 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "7/11, 97 YDS, 1 TD, 1 INT",
-    "who": "L. Moga"
+    "team": "away",
+    "val": "5/9, 115 YDS, 1 INT",
+    "who": "E. Medders"
    },
    {
     "cat": "RUSH",
@@ -584,9 +584,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
-  "redzone": false,
-  "spot": "AF 22",
+  "poss": "away",
+  "redzone": true,
+  "spot": null,
   "state": "NM",
   "status": "In Progress",
   "venue": "University Stadium (NM)"
@@ -1203,10 +1203,10 @@
   "away_rank": 99,
   "away_short": "N Dakota St",
   "city": "San Jose",
-  "clock": "7:11",
+  "clock": "6:53",
   "conf_comp": false,
-  "detail": "7:11 - 3rd",
-  "down": null,
+  "detail": "6:53 - 3rd",
+  "down": "2nd & 10 at NDSU 39",
   "espn_id": "401864549",
   "final": false,
   "home_abbr": "SJSU",
@@ -1218,7 +1218,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "14/26, 182 YDS, 1 TD, 1 INT",
+    "val": "14/27, 182 YDS, 1 TD, 1 INT",
     "who": "L. Weaver"
    },
    {
@@ -1246,9 +1246,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": null,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "NDSU 39",
   "state": "CA",
   "status": "In Progress",
   "venue": "CEFCU Stadium"
@@ -1403,10 +1403,10 @@
   "away_rank": 20,
   "away_short": "Florida",
   "city": "Tallahassee",
-  "clock": "2:47",
+  "clock": "0:55",
   "conf_comp": false,
-  "detail": "2:47 - 3rd",
-  "down": "2nd & 6 at FLA 31",
+  "detail": "0:55 - 3rd",
+  "down": "1st & 10 at FSU 36",
   "espn_id": "401856759",
   "final": false,
   "home_abbr": "FSU",
@@ -1424,7 +1424,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "14 CAR, 73 YDS, 1 TD",
+    "val": "14 CAR, 72 YDS, 1 TD",
     "who": "J. Baugh"
    },
    {
@@ -1448,7 +1448,7 @@
   "period": 3,
   "poss": "away",
   "redzone": false,
-  "spot": "FLA 31",
+  "spot": "FSU 36",
   "state": "FL",
   "status": "In Progress",
   "venue": "Doak Campbell Stadium"
@@ -2189,9 +2189,9 @@
   "away_rank": 99,
   "away_short": "App State",
   "city": "Mobile",
-  "clock": "0:29",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:29 - 4th",
+  "detail": "End of 4th",
   "down": null,
   "espn_id": "401869930",
   "final": false,
@@ -2204,7 +2204,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "21/26, 214 YDS, 1 INT",
+    "val": "22/28, 240 YDS, 2 INT",
     "who": "M. Singleton"
    },
    {
@@ -2234,7 +2234,7 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
   "spot": null,
   "state": "AL",
@@ -2243,14 +2243,14 @@
  },
  "a750f21dccb9df459196adc8dcf5ffe4": {
   "away_abbr": "TEM",
-  "away_r": "14",
+  "away_r": "21",
   "away_rank": 99,
   "away_short": "Temple",
   "city": "Memphis",
-  "clock": "14:15",
+  "clock": "13:59",
   "conf_comp": true,
-  "detail": "14:15 - 4th",
-  "down": "1st & 10 at MEM 40",
+  "detail": "13:59 - 4th",
+  "down": null,
   "espn_id": "401862838",
   "final": false,
   "home_abbr": "MEM",
@@ -2262,7 +2262,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "11/14, 245 YDS, 2 TD",
+    "val": "11/15, 245 YDS, 2 TD, 1 INT",
     "who": "M. Stokes"
    },
    {
@@ -2282,7 +2282,7 @@
    7.0,
    0.0,
    7.0,
-   0.0
+   7.0
   ],
   "line_home": [
    14.0,
@@ -2292,9 +2292,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "MEM 40",
+  "spot": null,
   "state": "TN",
   "status": "In Progress",
   "venue": "Simmons Bank Liberty Stadium"
