@@ -543,10 +543,10 @@
   "away_rank": 99,
   "away_short": "Air Force",
   "city": "Albuquerque",
-  "clock": "10:15",
+  "clock": "10:06",
   "conf_comp": true,
-  "detail": "10:15 - 2nd",
-  "down": null,
+  "detail": "10:06 - 2nd",
+  "down": "1st & 10 at UNM 25",
   "espn_id": "401864546",
   "final": false,
   "home_abbr": "UNM",
@@ -586,7 +586,7 @@
   "period": 2,
   "poss": null,
   "redzone": false,
-  "spot": null,
+  "spot": "UNM 25",
   "state": "NM",
   "status": "In Progress",
   "venue": "University Stadium (NM)"
@@ -1203,10 +1203,10 @@
   "away_rank": 99,
   "away_short": "N Dakota St",
   "city": "San Jose",
-  "clock": "0:00",
+  "clock": "14:55",
   "conf_comp": false,
-  "detail": "Halftime",
-  "down": null,
+  "detail": "14:55 - 3rd",
+  "down": "1st & 10 at NDSU 28",
   "espn_id": "401864549",
   "final": false,
   "home_abbr": "SJSU",
@@ -1236,19 +1236,21 @@
   ],
   "line_away": [
    14.0,
-   10.0
+   10.0,
+   0.0
   ],
   "line_home": [
    7.0,
-   7.0
+   7.0,
+   0.0
   ],
   "neutral": false,
-  "period": 2,
+  "period": 3,
   "poss": null,
   "redzone": false,
-  "spot": null,
+  "spot": "NDSU 28",
   "state": "CA",
-  "status": "Halftime",
+  "status": "In Progress",
   "venue": "CEFCU Stadium"
  },
  "61a2b3c7f905b33b86e1ea178a885325": {
@@ -1401,10 +1403,10 @@
   "away_rank": 20,
   "away_short": "Florida",
   "city": "Tallahassee",
-  "clock": "0:00",
+  "clock": "12:38",
   "conf_comp": false,
-  "detail": "Halftime",
-  "down": null,
+  "detail": "12:38 - 3rd",
+  "down": "1st & 10 at FSU 13",
   "espn_id": "401856759",
   "final": false,
   "home_abbr": "FSU",
@@ -1415,14 +1417,14 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "10/16, 105 YDS",
-    "who": "A. Daniels"
+    "team": "away",
+    "val": "9/12, 127 YDS",
+    "who": "A. Philo"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "9 CAR, 52 YDS, 1 TD",
+    "val": "11 CAR, 57 YDS, 1 TD",
     "who": "J. Baugh"
    },
    {
@@ -1434,19 +1436,21 @@
   ],
   "line_away": [
    7.0,
-   3.0
+   3.0,
+   0.0
   ],
   "line_home": [
    0.0,
-   3.0
+   3.0,
+   0.0
   ],
   "neutral": false,
-  "period": 2,
-  "poss": null,
-  "redzone": false,
-  "spot": null,
+  "period": 3,
+  "poss": "away",
+  "redzone": true,
+  "spot": "FSU 13",
   "state": "FL",
-  "status": "Halftime",
+  "status": "In Progress",
   "venue": "Doak Campbell Stadium"
  },
  "6f8b860fa7f8ce3ef4dd841450840e5f": {
@@ -2185,10 +2189,10 @@
   "away_rank": 99,
   "away_short": "App State",
   "city": "Mobile",
-  "clock": "9:14",
+  "clock": "5:43",
   "conf_comp": true,
-  "detail": "9:14 - 4th",
-  "down": "3rd & 15 at APP 37",
+  "detail": "5:43 - 4th",
+  "down": "1st & 10 at USA 27",
   "espn_id": "401869930",
   "final": false,
   "home_abbr": "USA",
@@ -2199,20 +2203,20 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "12/20, 160 YDS, 1 TD, 1 INT",
-    "who": "B. Davenport"
+    "team": "away",
+    "val": "17/21, 167 YDS, 1 INT",
+    "who": "M. Singleton"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "21 CAR, 83 YDS, 1 TD",
+    "val": "24 CAR, 92 YDS, 1 TD",
     "who": "J. Lewis"
    },
    {
     "cat": "REC",
     "team": "away",
-    "val": "4 REC, 72 YDS",
+    "val": "5 REC, 79 YDS",
     "who": "D. Fugitt"
    }
   ],
@@ -2230,9 +2234,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "APP 37",
+  "spot": "USA 27",
   "state": "AL",
   "status": "In Progress",
   "venue": "Hancock Whitney Stadium"
@@ -2243,10 +2247,10 @@
   "away_rank": 99,
   "away_short": "Temple",
   "city": "Memphis",
-  "clock": "10:35",
+  "clock": "9:16",
   "conf_comp": true,
-  "detail": "10:35 - 3rd",
-  "down": null,
+  "detail": "9:16 - 3rd",
+  "down": "1st & 20 at TEM 25",
   "espn_id": "401862838",
   "final": false,
   "home_abbr": "MEM",
@@ -2258,7 +2262,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "9/11, 225 YDS, 2 TD",
+    "val": "9/12, 225 YDS, 2 TD",
     "who": "M. Stokes"
    },
    {
@@ -2286,9 +2290,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "TEM 25",
   "state": "TN",
   "status": "In Progress",
   "venue": "Simmons Bank Liberty Stadium"
