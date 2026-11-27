@@ -145,14 +145,14 @@
  },
  "1f0a9e7f76830b196133518ae01bb113": {
   "away_abbr": "TLSA",
-  "away_r": "0",
+  "away_r": "7",
   "away_rank": 99,
   "away_short": "Tulsa",
   "city": "San Antonio",
-  "clock": "12:01",
+  "clock": "11:21",
   "conf_comp": true,
-  "detail": "12:01 - 1st",
-  "down": "1st & 10 at UTSA 38",
+  "detail": "11:21 - 1st",
+  "down": null,
   "espn_id": "401862840",
   "final": false,
   "home_abbr": "UTSA",
@@ -181,16 +181,16 @@
    }
   ],
   "line_away": [
-   0.0
+   7.0
   ],
   "line_home": [
    7.0
   ],
   "neutral": false,
   "period": 1,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "UTSA 38",
+  "spot": null,
   "state": "TX",
   "status": "In Progress",
   "venue": "Alamodome"
@@ -883,10 +883,10 @@
   "away_rank": 99,
   "away_short": "Toledo",
   "city": "Athens",
-  "clock": "13:26",
+  "clock": "10:48",
   "conf_comp": true,
-  "detail": "13:26 - 1st",
-  "down": "4th & 2 at TOL 29",
+  "detail": "10:48 - 1st",
+  "down": "1st & 10 at OHIO 43",
   "espn_id": "401866473",
   "final": false,
   "home_abbr": "OHIO",
@@ -922,9 +922,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "TOL 29",
+  "spot": "OHIO 43",
   "state": "OH",
   "status": "In Progress",
   "venue": "Peden Stadium"
@@ -1031,10 +1031,10 @@
   "away_rank": 99,
   "away_short": "Mississippi St",
   "city": "Oxford",
-  "clock": "13:39",
+  "clock": "9:47",
   "conf_comp": true,
-  "detail": "13:39 - 1st",
-  "down": "3rd & 16 at MSST 19",
+  "detail": "9:47 - 1st",
+  "down": "3rd & 8 at MSST 36",
   "espn_id": "401856762",
   "final": false,
   "home_abbr": "MISS",
@@ -1045,21 +1045,21 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "away",
-    "val": "2/2, YDS",
-    "who": "P. Puckett"
+    "team": "home",
+    "val": "4/5, 51 YDS",
+    "who": "T. Chambliss"
    },
    {
     "cat": "RUSH",
-    "team": "away",
-    "val": "1 CAR, -2 YDS",
-    "who": "F. Bothwell"
+    "team": "home",
+    "val": "3 CAR, 6 YDS",
+    "who": "J. Dye"
    },
    {
     "cat": "REC",
-    "team": "away",
-    "val": "1 REC, 0 YDS",
-    "who": "F. Bothwell"
+    "team": "home",
+    "val": "2 REC, 40 YDS",
+    "who": "H. Fields"
    }
   ],
   "line_away": [
@@ -1070,9 +1070,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "MSST 19",
+  "spot": "MSST 36",
   "state": "MS",
   "status": "In Progress",
   "venue": "Vaught-Hemingway Stadium"
@@ -1851,10 +1851,10 @@
   "away_rank": 25,
   "away_short": "Nebraska",
   "city": "Iowa City",
-  "clock": "14:56",
+  "clock": "12:16",
   "conf_comp": true,
-  "detail": "14:56 - 1st",
-  "down": "1st & 10 at IOWA 18",
+  "detail": "12:16 - 1st",
+  "down": "1st & 10 at NEB 25",
   "espn_id": "401858536",
   "final": false,
   "home_abbr": "IOWA",
@@ -1862,7 +1862,26 @@
   "home_rank": 13,
   "home_short": "Iowa",
   "in_play": true,
-  "leaders": [],
+  "leaders": [
+   {
+    "cat": "PASS",
+    "team": "home",
+    "val": "1/2, 9 YDS",
+    "who": "H. Brown"
+   },
+   {
+    "cat": "RUSH",
+    "team": "home",
+    "val": "1 CAR, 2 YDS",
+    "who": "H. Brown"
+   },
+   {
+    "cat": "REC",
+    "team": "home",
+    "val": "1 REC, 9 YDS",
+    "who": "L.J. Phillips Jr."
+   }
+  ],
   "line_away": [
    0.0
   ],
@@ -1871,9 +1890,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": "IOWA 18",
+  "spot": "NEB 25",
   "state": "IA",
   "status": "In Progress",
   "venue": "Kinnick Stadium"
@@ -2960,10 +2979,10 @@
   "away_rank": 99,
   "away_short": "Buffalo",
   "city": "Akron",
-  "clock": "15:00",
+  "clock": "9:18",
   "conf_comp": true,
-  "detail": "15:00 - 1st",
-  "down": "3rd & Goal at BUF 8",
+  "detail": "9:18 - 1st",
+  "down": "3rd & 4 at BUF 26",
   "espn_id": "401866472",
   "final": false,
   "home_abbr": "AKR",
@@ -2975,7 +2994,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "2/3, 47 YDS",
+    "val": "2/4, 47 YDS",
     "who": "C. Broughton"
    },
    {
@@ -2999,9 +3018,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": "home",
-  "redzone": true,
-  "spot": "BUF 8",
+  "poss": "away",
+  "redzone": false,
+  "spot": "BUF 26",
   "state": "OH",
   "status": "In Progress",
   "venue": "InfoCision Stadium"
