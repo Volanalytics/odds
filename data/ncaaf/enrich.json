@@ -543,10 +543,10 @@
   "away_rank": 99,
   "away_short": "Air Force",
   "city": "Albuquerque",
-  "clock": "1:32",
+  "clock": "0:32",
   "conf_comp": true,
-  "detail": "1:32 - 2nd",
-  "down": "2nd & 10 at AF 36",
+  "detail": "0:32 - 2nd",
+  "down": "3rd & 10 at AF 22",
   "espn_id": "401864546",
   "final": false,
   "home_abbr": "UNM",
@@ -558,7 +558,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "7/8, 97 YDS, 1 TD",
+    "val": "7/11, 97 YDS, 1 TD, 1 INT",
     "who": "L. Moga"
    },
    {
@@ -584,9 +584,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "AF 36",
+  "spot": "AF 22",
   "state": "NM",
   "status": "In Progress",
   "venue": "University Stadium (NM)"
@@ -1199,13 +1199,13 @@
  },
  "5fc40a6a68f1652a38d2844a90358df2": {
   "away_abbr": "NDSU",
-  "away_r": "24",
+  "away_r": "31",
   "away_rank": 99,
   "away_short": "N Dakota St",
   "city": "San Jose",
-  "clock": "8:50",
+  "clock": "7:11",
   "conf_comp": false,
-  "detail": "8:50 - 3rd",
+  "detail": "7:11 - 3rd",
   "down": null,
   "espn_id": "401864549",
   "final": false,
@@ -1218,26 +1218,26 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "14/25, 182 YDS, 1 TD",
+    "val": "14/26, 182 YDS, 1 TD, 1 INT",
     "who": "L. Weaver"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "12 CAR, 74 YDS, 2 TD",
+    "val": "13 CAR, 76 YDS, 2 TD",
     "who": "D. Scott"
    },
    {
     "cat": "REC",
     "team": "away",
-    "val": "6 REC, 115 YDS, 1 TD",
+    "val": "7 REC, 117 YDS, 1 TD",
     "who": "J. Williams"
    }
   ],
   "line_away": [
    14.0,
    10.0,
-   0.0
+   7.0
   ],
   "line_home": [
    7.0,
@@ -1246,7 +1246,7 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
   "spot": null,
   "state": "CA",
@@ -1403,10 +1403,10 @@
   "away_rank": 20,
   "away_short": "Florida",
   "city": "Tallahassee",
-  "clock": "3:01",
+  "clock": "2:47",
   "conf_comp": false,
-  "detail": "3:01 - 3rd",
-  "down": null,
+  "detail": "2:47 - 3rd",
+  "down": "2nd & 6 at FLA 31",
   "espn_id": "401856759",
   "final": false,
   "home_abbr": "FSU",
@@ -1424,7 +1424,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "13 CAR, 69 YDS, 1 TD",
+    "val": "14 CAR, 73 YDS, 1 TD",
     "who": "J. Baugh"
    },
    {
@@ -1446,9 +1446,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": null,
-  "redzone": true,
-  "spot": null,
+  "poss": "away",
+  "redzone": false,
+  "spot": "FLA 31",
   "state": "FL",
   "status": "In Progress",
   "venue": "Doak Campbell Stadium"
@@ -2189,9 +2189,9 @@
   "away_rank": 99,
   "away_short": "App State",
   "city": "Mobile",
-  "clock": "0:46",
+  "clock": "0:29",
   "conf_comp": true,
-  "detail": "0:46 - 4th",
+  "detail": "0:29 - 4th",
   "down": null,
   "espn_id": "401869930",
   "final": false,
@@ -2203,9 +2203,9 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "15/25, 211 YDS, 1 TD, 1 INT",
-    "who": "B. Davenport"
+    "team": "away",
+    "val": "21/26, 214 YDS, 1 INT",
+    "who": "M. Singleton"
    },
    {
     "cat": "RUSH",
@@ -2247,10 +2247,10 @@
   "away_rank": 99,
   "away_short": "Temple",
   "city": "Memphis",
-  "clock": "0:00",
+  "clock": "14:15",
   "conf_comp": true,
-  "detail": "End of 3rd",
-  "down": "1st & 10 at TEM 48",
+  "detail": "14:15 - 4th",
+  "down": "1st & 10 at MEM 40",
   "espn_id": "401862838",
   "final": false,
   "home_abbr": "MEM",
@@ -2268,7 +2268,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "12 CAR, 85 YDS, 1 TD",
+    "val": "13 CAR, 85 YDS, 1 TD",
     "who": "D. Young"
    },
    {
@@ -2281,18 +2281,20 @@
   "line_away": [
    7.0,
    0.0,
-   7.0
+   7.0,
+   0.0
   ],
   "line_home": [
    14.0,
    3.0,
-   14.0
+   14.0,
+   0.0
   ],
   "neutral": false,
-  "period": 3,
-  "poss": "away",
+  "period": 4,
+  "poss": "home",
   "redzone": false,
-  "spot": "TEM 48",
+  "spot": "MEM 40",
   "state": "TN",
   "status": "In Progress",
   "venue": "Simmons Bank Liberty Stadium"
