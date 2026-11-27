@@ -885,21 +885,21 @@
  },
  "58cd1284193cd30679325c8494f546e6": {
   "away_abbr": "TOL",
-  "away_r": "31",
+  "away_r": "34",
   "away_rank": 99,
   "away_short": "Toledo",
   "city": "Athens",
-  "clock": "0:44",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "0:44 - 4th",
+  "detail": "Final",
   "down": null,
   "espn_id": "401866473",
-  "final": false,
+  "final": true,
   "home_abbr": "OHIO",
   "home_r": "31",
   "home_rank": 99,
   "home_short": "Ohio",
-  "in_play": true,
+  "in_play": false,
   "leaders": [
    {
     "cat": "PASS",
@@ -924,7 +924,7 @@
    14.0,
    3.0,
    0.0,
-   14.0
+   17.0
   ],
   "line_home": [
    0.0,
@@ -934,11 +934,11 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": "away",
-  "redzone": true,
+  "poss": null,
+  "redzone": false,
   "spot": null,
   "state": "OH",
-  "status": "In Progress",
+  "status": "Final",
   "venue": "Peden Stadium"
  },
  "591a88cc16d9c5830bef16d7f522bc8a": {
@@ -1193,14 +1193,14 @@
  },
  "5fc40a6a68f1652a38d2844a90358df2": {
   "away_abbr": "NDSU",
-  "away_r": "0",
+  "away_r": "7",
   "away_rank": 99,
   "away_short": "N Dakota St",
   "city": "San Jose",
-  "clock": "13:47",
+  "clock": "11:40",
   "conf_comp": false,
-  "detail": "13:47 - 1st",
-  "down": "4th & 6 at SJSU 29",
+  "detail": "11:40 - 1st",
+  "down": null,
   "espn_id": "401864549",
   "final": false,
   "home_abbr": "SJSU",
@@ -1211,28 +1211,34 @@
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "1, 0 YDS",
-    "who": "L. Weaver"
+    "team": "away",
+    "val": "2/2, 57 YDS, 1 TD",
+    "who": "P. Brown"
    },
    {
     "cat": "RUSH",
-    "team": "home",
-    "val": "2 CAR, 4 YDS",
-    "who": "J. Bates"
+    "team": "away",
+    "val": "1 CAR, 7 YDS",
+    "who": "C. Kiel"
+   },
+   {
+    "cat": "REC",
+    "team": "away",
+    "val": "1 REC, 49 YDS, 1 TD",
+    "who": "J. Williams"
    }
   ],
   "line_away": [
-   0.0
+   7.0
   ],
   "line_home": [
    0.0
   ],
   "neutral": false,
   "period": 1,
-  "poss": "home",
+  "poss": null,
   "redzone": false,
-  "spot": "SJSU 29",
+  "spot": null,
   "state": "CA",
   "status": "In Progress",
   "venue": "CEFCU Stadium"
@@ -2165,10 +2171,10 @@
   "away_rank": 99,
   "away_short": "App State",
   "city": "Mobile",
-  "clock": "0:00",
+  "clock": "14:10",
   "conf_comp": true,
-  "detail": "End of 1st",
-  "down": "3rd & 15 at USA 43",
+  "detail": "14:10 - 2nd",
+  "down": "1st & 10 at USA 9",
   "espn_id": "401869930",
   "final": false,
   "home_abbr": "USA",
@@ -2197,16 +2203,18 @@
    }
   ],
   "line_away": [
+   0.0,
    0.0
   ],
   "line_home": [
-   10.0
+   10.0,
+   0.0
   ],
   "neutral": false,
-  "period": 1,
-  "poss": "away",
+  "period": 2,
+  "poss": "home",
   "redzone": false,
-  "spot": "USA 43",
+  "spot": "USA 9",
   "state": "AL",
   "status": "In Progress",
   "venue": "Hancock Whitney Stadium"
@@ -2217,46 +2225,50 @@
   "away_rank": 99,
   "away_short": "Temple",
   "city": "Memphis",
-  "clock": "0:00",
+  "clock": "11:17",
   "conf_comp": true,
-  "detail": "11/27 - 3:30 PM EST",
-  "down": null,
+  "detail": "11:17 - 1st",
+  "down": "3rd & 4 at MEM 32",
   "espn_id": "401862838",
   "final": false,
   "home_abbr": "MEM",
   "home_r": "0",
   "home_rank": 99,
   "home_short": "Memphis",
-  "in_play": false,
+  "in_play": true,
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "3047 YDS, 28 TD, 7 INT",
-    "who": "M. Stokes"
+    "team": "away",
+    "val": "2/2, 11 YDS",
+    "who": "J. Smolik"
    },
    {
     "cat": "RUSH",
-    "team": "home",
-    "val": "195 CAR, 1267 YDS, 15 TD",
-    "who": "J. Carter"
+    "team": "away",
+    "val": "3 CAR, 23 YDS",
+    "who": "D. Young"
    },
    {
     "cat": "REC",
-    "team": "home",
-    "val": "31 REC, 588 YDS, 7 TD",
-    "who": "J. Davis"
+    "team": "away",
+    "val": "1 REC, 14 YDS",
+    "who": "D. Young"
    }
   ],
-  "line_away": [],
-  "line_home": [],
+  "line_away": [
+   0.0
+  ],
+  "line_home": [
+   0.0
+  ],
   "neutral": false,
-  "period": 0,
-  "poss": null,
+  "period": 1,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "MEM 32",
   "state": "TN",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "Simmons Bank Liberty Stadium"
  },
  "a82769fe54a0f8c714667b8720b67449": {
