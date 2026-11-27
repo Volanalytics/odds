@@ -543,14 +543,14 @@
   "away_rank": 99,
   "away_short": "Air Force",
   "city": "Albuquerque",
-  "clock": "3:20",
+  "clock": "2:26",
   "conf_comp": true,
-  "detail": "3:20 - 1st",
+  "detail": "2:26 - 1st",
   "down": null,
   "espn_id": "401864546",
   "final": false,
   "home_abbr": "UNM",
-  "home_r": "7",
+  "home_r": "14",
   "home_rank": 99,
   "home_short": "New Mexico",
   "in_play": true,
@@ -578,7 +578,7 @@
    7.0
   ],
   "line_home": [
-   7.0
+   14.0
   ],
   "neutral": false,
   "period": 1,
@@ -1201,10 +1201,10 @@
   "away_rank": 99,
   "away_short": "N Dakota St",
   "city": "San Jose",
-  "clock": "0:32",
+  "clock": "0:00",
   "conf_comp": false,
-  "detail": "0:32 - 2nd",
-  "down": "3rd & 2 at SJSU 29",
+  "detail": "Halftime",
+  "down": null,
   "espn_id": "401864549",
   "final": false,
   "home_abbr": "SJSU",
@@ -1216,7 +1216,7 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "10/15, 173 YDS, 1 TD",
+    "val": "10/16, 173 YDS, 1 TD",
     "who": "P. Brown"
    },
    {
@@ -1228,7 +1228,7 @@
    {
     "cat": "REC",
     "team": "away",
-    "val": "5 REC, 107 YDS, 1 TD",
+    "val": "6 REC, 115 YDS, 1 TD",
     "who": "J. Williams"
    }
   ],
@@ -1242,11 +1242,11 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "SJSU 29",
+  "spot": null,
   "state": "CA",
-  "status": "In Progress",
+  "status": "Halftime",
   "venue": "CEFCU Stadium"
  },
  "61a2b3c7f905b33b86e1ea178a885325": {
@@ -2183,10 +2183,10 @@
   "away_rank": 99,
   "away_short": "App State",
   "city": "Mobile",
-  "clock": "1:04",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "1:04 - 3rd",
-  "down": null,
+  "detail": "End of 3rd",
+  "down": "2nd & 10 at USA 44",
   "espn_id": "401869930",
   "final": false,
   "home_abbr": "USA",
@@ -2210,7 +2210,7 @@
    {
     "cat": "REC",
     "team": "away",
-    "val": "3 REC, 58 YDS",
+    "val": "4 REC, 72 YDS",
     "who": "D. Fugitt"
    }
   ],
@@ -2226,9 +2226,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "USA 44",
   "state": "AL",
   "status": "In Progress",
   "venue": "Hancock Whitney Stadium"
@@ -2239,14 +2239,14 @@
   "away_rank": 99,
   "away_short": "Temple",
   "city": "Memphis",
-  "clock": "0:00",
+  "clock": "12:40",
   "conf_comp": true,
-  "detail": "Halftime",
+  "detail": "12:40 - 3rd",
   "down": null,
   "espn_id": "401862838",
   "final": false,
   "home_abbr": "MEM",
-  "home_r": "17",
+  "home_r": "23",
   "home_rank": 99,
   "home_short": "Memphis",
   "in_play": true,
@@ -2254,7 +2254,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "6/8, 164 YDS, 1 TD",
+    "val": "9/11, 225 YDS, 2 TD",
     "who": "M. Stokes"
    },
    {
@@ -2266,25 +2266,27 @@
    {
     "cat": "REC",
     "team": "home",
-    "val": "3 REC, 96 YDS, 1 TD",
+    "val": "4 REC, 110 YDS, 1 TD",
     "who": "S. Burnside"
    }
   ],
   "line_away": [
    7.0,
+   0.0,
    0.0
   ],
   "line_home": [
    14.0,
-   3.0
+   3.0,
+   6.0
   ],
   "neutral": false,
-  "period": 2,
+  "period": 3,
   "poss": null,
-  "redzone": false,
+  "redzone": true,
   "spot": null,
   "state": "TN",
-  "status": "Halftime",
+  "status": "In Progress",
   "venue": "Simmons Bank Liberty Stadium"
  },
  "a82769fe54a0f8c714667b8720b67449": {
