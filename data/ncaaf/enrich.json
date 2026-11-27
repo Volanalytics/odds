@@ -149,10 +149,10 @@
   "away_rank": 99,
   "away_short": "Tulsa",
   "city": "San Antonio",
-  "clock": "1:16",
+  "clock": "0:00",
   "conf_comp": true,
-  "detail": "1:16 - 2nd",
-  "down": "4th & 1 at UTSA 24",
+  "detail": "End of 2nd",
+  "down": null,
   "espn_id": "401862840",
   "final": false,
   "home_abbr": "UTSA",
@@ -170,7 +170,7 @@
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "6 CAR, 25 YDS",
+    "val": "7 CAR, 40 YDS",
     "who": "D. Alston"
    },
    {
@@ -190,9 +190,9 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "home",
-  "redzone": false,
-  "spot": "UTSA 24",
+  "poss": "away",
+  "redzone": true,
+  "spot": null,
   "state": "TX",
   "status": "In Progress",
   "venue": "Alamodome"
@@ -887,8 +887,8 @@
   "city": "Athens",
   "clock": "0:00",
   "conf_comp": true,
-  "detail": "End of 2nd",
-  "down": null,
+  "detail": "Halftime",
+  "down": "2nd & 11 at TOL 27",
   "espn_id": "401866473",
   "final": false,
   "home_abbr": "OHIO",
@@ -926,11 +926,11 @@
   ],
   "neutral": false,
   "period": 2,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": null,
+  "spot": "TOL 27",
   "state": "OH",
-  "status": "In Progress",
+  "status": "Halftime",
   "venue": "Peden Stadium"
  },
  "591a88cc16d9c5830bef16d7f522bc8a": {
@@ -2987,10 +2987,10 @@
   "away_rank": 99,
   "away_short": "Buffalo",
   "city": "Akron",
-  "clock": "0:00",
+  "clock": "13:27",
   "conf_comp": true,
-  "detail": "Halftime",
-  "down": "4th & 8 at BUF 32",
+  "detail": "13:27 - 3rd",
+  "down": "1st & 10 at BUF 35",
   "espn_id": "401866472",
   "final": false,
   "home_abbr": "AKR",
@@ -3002,37 +3002,39 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "7/10, 120 YDS, 1 TD",
+    "val": "9/13, 144 YDS, 1 TD",
     "who": "C. Broughton"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "11 CAR, 35 YDS",
+    "val": "12 CAR, 45 YDS",
     "who": "J. Gant"
    },
    {
     "cat": "REC",
     "team": "home",
-    "val": "2 REC, 52 YDS, 1 TD",
-    "who": "M. Burris"
+    "val": "3 REC, 56 YDS",
+    "who": "K. Mason"
    }
   ],
   "line_away": [
    0.0,
-   7.0
+   7.0,
+   0.0
   ],
   "line_home": [
    0.0,
-   6.0
+   6.0,
+   0.0
   ],
   "neutral": false,
-  "period": 2,
-  "poss": null,
+  "period": 3,
+  "poss": "home",
   "redzone": false,
-  "spot": "BUF 32",
+  "spot": "BUF 35",
   "state": "OH",
-  "status": "Halftime",
+  "status": "In Progress",
   "venue": "InfoCision Stadium"
  },
  "e55fde0bfbebc4cfd4ccc010b0e858b4": {
