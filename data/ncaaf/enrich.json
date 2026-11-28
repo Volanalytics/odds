@@ -543,10 +543,10 @@
   "away_rank": 99,
   "away_short": "Air Force",
   "city": "Albuquerque",
-  "clock": "1:46",
+  "clock": "0:21",
   "conf_comp": true,
-  "detail": "1:46 - 4th",
-  "down": "2nd & 1 at AF 16",
+  "detail": "0:21 - 4th",
+  "down": "2nd & 8 at UNM 24",
   "espn_id": "401864546",
   "final": false,
   "home_abbr": "UNM",
@@ -590,7 +590,7 @@
   "period": 4,
   "poss": "away",
   "redzone": false,
-  "spot": "AF 16",
+  "spot": "UNM 24",
   "state": "NM",
   "status": "In Progress",
   "venue": "University Stadium (NM)"
@@ -697,10 +697,10 @@
   "away_rank": 3,
   "away_short": "Texas",
   "city": "College Station",
-  "clock": "15:00",
+  "clock": "11:36",
   "conf_comp": true,
-  "detail": "15:00 - 1st",
-  "down": "1st & 10 at TA&M 25",
+  "detail": "11:36 - 1st",
+  "down": "2nd & 10 at TEX 20",
   "espn_id": "401856756",
   "final": false,
   "home_abbr": "TA&M",
@@ -708,7 +708,26 @@
   "home_rank": 99,
   "home_short": "Texas A&M",
   "in_play": true,
-  "leaders": [],
+  "leaders": [
+   {
+    "cat": "PASS",
+    "team": "home",
+    "val": "2/3, 14 YDS",
+    "who": "B. Hart"
+   },
+   {
+    "cat": "RUSH",
+    "team": "home",
+    "val": "2 CAR, 6 YDS",
+    "who": "J. Morrow"
+   },
+   {
+    "cat": "REC",
+    "team": "home",
+    "val": "2 REC, 14 YDS",
+    "who": "M. Craver"
+   }
+  ],
   "line_away": [
    0.0
   ],
@@ -717,9 +736,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": "TA&M 25",
+  "spot": "TEX 20",
   "state": "TX",
   "status": "In Progress",
   "venue": "Kyle Field"
@@ -3072,14 +3091,14 @@
  },
  "e6a3c909a8cfc7b2c666252e246418c7": {
   "away_abbr": "MINN",
-  "away_r": "0",
+  "away_r": "3",
   "away_rank": 99,
   "away_short": "Minnesota",
   "city": "Madison",
-  "clock": "12:55",
+  "clock": "9:23",
   "conf_comp": true,
-  "detail": "12:55 - 1st",
-  "down": "1st & 10 at MINN 40",
+  "detail": "9:23 - 1st",
+  "down": null,
   "espn_id": "401858544",
   "final": false,
   "home_abbr": "WIS",
@@ -3104,20 +3123,20 @@
     "cat": "REC",
     "team": "home",
     "val": "1 REC, 24 YDS",
-    "who": "Team"
+    "who": "D. Dupree"
    }
   ],
   "line_away": [
-   0.0
+   3.0
   ],
   "line_home": [
    0.0
   ],
   "neutral": false,
   "period": 1,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "MINN 40",
+  "spot": null,
   "state": "WI",
   "status": "In Progress",
   "venue": "Camp Randall Stadium"
