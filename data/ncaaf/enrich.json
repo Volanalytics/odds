@@ -399,46 +399,50 @@
   "away_rank": 99,
   "away_short": "Louisiana Tech",
   "city": "Statesboro",
-  "clock": "0:00",
+  "clock": "13:19",
   "conf_comp": true,
-  "detail": "11/28 - 12:00 PM EST",
-  "down": null,
+  "detail": "13:19 - 1st",
+  "down": "3rd & 2 at GASO 34",
   "espn_id": "401869954",
   "final": false,
   "home_abbr": "GASO",
   "home_r": "0",
   "home_rank": 99,
   "home_short": "GA Southern",
-  "in_play": false,
+  "in_play": true,
   "leaders": [
    {
     "cat": "PASS",
-    "team": "home",
-    "val": "2625 YDS, 20 TD, 3 INT",
-    "who": "M. Johnson"
+    "team": "away",
+    "val": "2/2, 35 YDS",
+    "who": "B. Baker"
    },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "103 CAR, 414 YDS, 4 TD",
-    "who": "A. Burnette"
+    "val": "1 CAR, 5 YDS",
+    "who": "T. Kukuk"
    },
    {
     "cat": "REC",
     "team": "away",
-    "val": "61 REC, 805 YDS, 5 TD",
-    "who": "J. Mickens"
+    "val": "2 REC, 35 YDS",
+    "who": "E. Finley"
    }
   ],
-  "line_away": [],
-  "line_home": [],
+  "line_away": [
+   0.0
+  ],
+  "line_home": [
+   0.0
+  ],
   "neutral": false,
-  "period": 0,
-  "poss": null,
+  "period": 1,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "GASO 34",
   "state": "GA",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "Allen E. Paulson Stadium"
  },
  "2e180a350fe1c67db1b12cf36a1c1324": {
@@ -851,36 +855,48 @@
   "away_rank": 99,
   "away_short": "UConn",
   "city": "Laramie",
-  "clock": "14:17",
+  "clock": "11:19",
   "conf_comp": false,
-  "detail": "14:17 - 1st",
-  "down": "3rd & 8 at CONN 20",
+  "detail": "11:19 - 1st",
+  "down": null,
   "espn_id": "401861969",
   "final": false,
   "home_abbr": "WYO",
-  "home_r": "0",
+  "home_r": "3",
   "home_rank": 99,
   "home_short": "Wyoming",
   "in_play": true,
   "leaders": [
    {
+    "cat": "PASS",
+    "team": "home",
+    "val": "2/3, 29 YDS",
+    "who": "L. Sims"
+   },
+   {
     "cat": "RUSH",
-    "team": "away",
-    "val": "2 CAR, 2 YDS",
-    "who": "C. Bowers"
+    "team": "home",
+    "val": "1 CAR, 5 YDS",
+    "who": "S. Harris"
+   },
+   {
+    "cat": "REC",
+    "team": "home",
+    "val": "1 REC, 25 YDS",
+    "who": "E. Richardson"
    }
   ],
   "line_away": [
    0.0
   ],
   "line_home": [
-   0.0
+   3.0
   ],
   "neutral": false,
   "period": 1,
-  "poss": "away",
+  "poss": null,
   "redzone": false,
-  "spot": "CONN 20",
+  "spot": null,
   "state": "WY",
   "status": "In Progress",
   "venue": "War Memorial Stadium"
@@ -1555,10 +1571,10 @@
   "away_rank": 19,
   "away_short": "Louisville",
   "city": "Lexington",
-  "clock": "14:53",
+  "clock": "13:07",
   "conf_comp": false,
-  "detail": "14:53 - 1st",
-  "down": "1st & 10 at LOU 24",
+  "detail": "13:07 - 1st",
+  "down": "2nd & 4 at LOU 49",
   "espn_id": "401856761",
   "final": false,
   "home_abbr": "UK",
@@ -1566,7 +1582,14 @@
   "home_rank": 99,
   "home_short": "Kentucky",
   "in_play": true,
-  "leaders": [],
+  "leaders": [
+   {
+    "cat": "RUSH",
+    "team": "away",
+    "val": "2 CAR, 16 YDS",
+    "who": "K. Brown"
+   }
+  ],
   "line_away": [
    0.0
   ],
@@ -1575,9 +1598,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": "LOU 24",
+  "spot": "LOU 49",
   "state": "KY",
   "status": "In Progress",
   "venue": "Kroger Field"
@@ -2030,10 +2053,10 @@
   "away_rank": 99,
   "away_short": "NC State",
   "city": "Chapel Hill",
-  "clock": "14:15",
+  "clock": "10:43",
   "conf_comp": true,
-  "detail": "14:15 - 1st",
-  "down": "3rd & 1 at NCSU 34",
+  "detail": "10:43 - 1st",
+  "down": "3rd & 2 at UNC 10",
   "espn_id": "401858313",
   "final": false,
   "home_abbr": "UNC",
@@ -2045,14 +2068,14 @@
    {
     "cat": "PASS",
     "team": "away",
-    "val": "1/1, 7 YDS",
+    "val": "1/3, 7 YDS",
     "who": "C. Bailey"
    },
    {
     "cat": "RUSH",
-    "team": "away",
-    "val": "1 CAR, 2 YDS",
-    "who": "D. Gause"
+    "team": "home",
+    "val": "2 CAR, 8 YDS",
+    "who": "D. June"
    },
    {
     "cat": "REC",
@@ -2069,9 +2092,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": "away",
+  "poss": "home",
   "redzone": false,
-  "spot": "NCSU 34",
+  "spot": "UNC 10",
   "state": "NC",
   "status": "In Progress",
   "venue": "Kenan Stadium"
@@ -2640,10 +2663,10 @@
   "away_rank": 99,
   "away_short": "Navy",
   "city": "Charlotte",
-  "clock": "13:08",
+  "clock": "12:05",
   "conf_comp": true,
-  "detail": "13:08 - 1st",
-  "down": "2nd & 10 at CLT 35",
+  "detail": "12:05 - 1st",
+  "down": "1st & 10 at NAVY 27",
   "espn_id": "401862842",
   "final": false,
   "home_abbr": "CLT",
@@ -2655,13 +2678,13 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "1/2, 5 YDS",
+    "val": "1/3, 5 YDS",
     "who": "C. Harrell"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "1 CAR, 3 YDS",
+    "val": "2 CAR, 5 YDS",
     "who": "K. Alexander"
    },
    {
@@ -2679,9 +2702,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "CLT 35",
+  "spot": "NAVY 27",
   "state": "NC",
   "status": "In Progress",
   "venue": "Jerry Richardson Stadium"
@@ -2846,10 +2869,10 @@
   "away_rank": 99,
   "away_short": "C Michigan",
   "city": "Muncie",
-  "clock": "13:59",
+  "clock": "11:42",
   "conf_comp": true,
-  "detail": "13:59 - 1st",
-  "down": "3rd & 7 at CMU 28",
+  "detail": "11:42 - 1st",
+  "down": null,
   "espn_id": "401866474",
   "final": false,
   "home_abbr": "BALL",
@@ -2858,6 +2881,12 @@
   "home_short": "Ball State",
   "in_play": true,
   "leaders": [
+   {
+    "cat": "PASS",
+    "team": "home",
+    "val": "2, 0 YDS",
+    "who": "K. Luster"
+   },
    {
     "cat": "RUSH",
     "team": "away",
@@ -2875,7 +2904,7 @@
   "period": 1,
   "poss": "away",
   "redzone": false,
-  "spot": "CMU 28",
+  "spot": null,
   "state": "IN",
   "status": "In Progress",
   "venue": "Scheumann Stadium"
@@ -2934,46 +2963,38 @@
   "away_rank": 4,
   "away_short": "Notre Dame",
   "city": "Syracuse",
-  "clock": "0:00",
+  "clock": "14:01",
   "conf_comp": false,
-  "detail": "11/28 - 12:00 PM EST",
-  "down": null,
+  "detail": "14:01 - 1st",
+  "down": "1st & 10 at SYR 44",
   "espn_id": "401858314",
   "final": false,
   "home_abbr": "SYR",
   "home_r": "0",
   "home_rank": 99,
   "home_short": "Syracuse",
-  "in_play": false,
+  "in_play": true,
   "leaders": [
    {
-    "cat": "PASS",
-    "team": "away",
-    "val": "2697 YDS, 24 TD, 3 INT",
-    "who": "C. Carr"
-   },
-   {
     "cat": "RUSH",
-    "team": "away",
-    "val": "135 CAR, 742 YDS, 11 TD",
-    "who": "N. James Jr."
-   },
-   {
-    "cat": "REC",
     "team": "home",
-    "val": "77 REC, 1257 YDS, 9 TD",
-    "who": "U. Hatcher"
+    "val": "2 CAR, 19 YDS",
+    "who": "A. Miller"
    }
   ],
-  "line_away": [],
-  "line_home": [],
+  "line_away": [
+   0.0
+  ],
+  "line_home": [
+   0.0
+  ],
   "neutral": false,
-  "period": 0,
-  "poss": null,
+  "period": 1,
+  "poss": "home",
   "redzone": false,
-  "spot": null,
+  "spot": "SYR 44",
   "state": "NY",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "JMA Wireless Dome"
  },
  "c8b7cbe64e2914e579ab55c34db57da2": {
@@ -3338,46 +3359,38 @@
   "away_rank": 99,
   "away_short": "Boston College",
   "city": "Miami Gardens",
-  "clock": "0:00",
+  "clock": "13:30",
   "conf_comp": true,
-  "detail": "11/28 - 12:00 PM EST",
-  "down": null,
+  "detail": "13:30 - 1st",
+  "down": "3rd & 2 at BC 38",
   "espn_id": "401858311",
   "final": false,
   "home_abbr": "MIA",
   "home_r": "0",
   "home_rank": 7,
   "home_short": "Miami",
-  "in_play": false,
+  "in_play": true,
   "leaders": [
-   {
-    "cat": "PASS",
-    "team": "home",
-    "val": "3317 YDS, 29 TD, 4 INT",
-    "who": "D. Mensah"
-   },
    {
     "cat": "RUSH",
     "team": "away",
-    "val": "165 CAR, 718 YDS, 5 TD",
+    "val": "1 CAR, 5 YDS",
     "who": "M. McKenzie"
-   },
-   {
-    "cat": "REC",
-    "team": "home",
-    "val": "73 REC, 1027 YDS, 13 TD",
-    "who": "M. Toney"
    }
   ],
-  "line_away": [],
-  "line_home": [],
+  "line_away": [
+   0.0
+  ],
+  "line_home": [
+   0.0
+  ],
   "neutral": false,
-  "period": 0,
-  "poss": null,
+  "period": 1,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "BC 38",
   "state": "FL",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "Hard Rock Stadium"
  },
  "f6a2121d820ed6135db2f9ea131c3115": {
