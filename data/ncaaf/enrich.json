@@ -693,14 +693,14 @@
  },
  "4c69ecf41bb2d36dfeedeae23acc5b86": {
   "away_abbr": "TEX",
-  "away_r": "10",
+  "away_r": "13",
   "away_rank": 3,
   "away_short": "Texas",
   "city": "College Station",
-  "clock": "9:09",
+  "clock": "8:07",
   "conf_comp": true,
-  "detail": "9:09 - 3rd",
-  "down": null,
+  "detail": "8:07 - 3rd",
+  "down": "1st & 10 at TA&M 41",
   "espn_id": "401856756",
   "final": false,
   "home_abbr": "TA&M",
@@ -731,7 +731,7 @@
   "line_away": [
    3.0,
    7.0,
-   0.0
+   3.0
   ],
   "line_home": [
    0.0,
@@ -740,9 +740,9 @@
   ],
   "neutral": false,
   "period": 3,
-  "poss": "away",
-  "redzone": true,
-  "spot": null,
+  "poss": "home",
+  "redzone": false,
+  "spot": "TA&M 41",
   "state": "TX",
   "status": "In Progress",
   "venue": "Kyle Field"
@@ -2705,14 +2705,14 @@
   "away_rank": 99,
   "away_short": "West Virginia",
   "city": "Salt Lake City",
-  "clock": "0:00",
+  "clock": "14:50",
   "conf_comp": true,
-  "detail": "End of 1st",
-  "down": "2nd & 10 at WVU 11",
+  "detail": "14:50 - 2nd",
+  "down": null,
   "espn_id": "401856880",
   "final": false,
   "home_abbr": "UTAH",
-  "home_r": "10",
+  "home_r": "17",
   "home_rank": 2,
   "home_short": "Utah",
   "in_play": true,
@@ -2720,7 +2720,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "7/9, 123 YDS, 1 TD",
+    "val": "8/10, 144 YDS, 2 TD",
     "who": "D. Dampier"
    },
    {
@@ -2737,16 +2737,18 @@
    }
   ],
   "line_away": [
+   0.0,
    0.0
   ],
   "line_home": [
-   10.0
+   10.0,
+   7.0
   ],
   "neutral": false,
-  "period": 1,
-  "poss": "home",
-  "redzone": true,
-  "spot": "WVU 11",
+  "period": 2,
+  "poss": null,
+  "redzone": false,
+  "spot": null,
   "state": "UT",
   "status": "In Progress",
   "venue": "Rice-Eccles Stadium"
@@ -3103,10 +3105,10 @@
   "away_rank": 99,
   "away_short": "Minnesota",
   "city": "Madison",
-  "clock": "5:38",
+  "clock": "1:33",
   "conf_comp": true,
-  "detail": "5:38 - 3rd",
-  "down": "3rd & 3 at WIS 16",
+  "detail": "1:33 - 3rd",
+  "down": "1st & Goal at MINN 2",
   "espn_id": "401858544",
   "final": false,
   "home_abbr": "WIS",
@@ -3118,20 +3120,20 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "9/14, 145 YDS, 1 TD, 1 INT",
+    "val": "12/17, 217 YDS, 1 TD, 1 INT",
     "who": "C. Joseph"
    },
    {
     "cat": "RUSH",
     "team": "home",
-    "val": "10 CAR, 68 YDS, 1 TD",
+    "val": "11 CAR, 73 YDS, 1 TD",
     "who": "C. Joseph"
    },
    {
     "cat": "REC",
     "team": "home",
-    "val": "2 REC, 42 YDS",
-    "who": "J. Harris"
+    "val": "2 REC, 59 YDS",
+    "who": "E. Hilton Jr."
    }
   ],
   "line_away": [
@@ -3147,8 +3149,8 @@
   "neutral": false,
   "period": 3,
   "poss": "home",
-  "redzone": false,
-  "spot": "WIS 16",
+  "redzone": true,
+  "spot": "MINN 2",
   "state": "WI",
   "status": "In Progress",
   "venue": "Camp Randall Stadium"
