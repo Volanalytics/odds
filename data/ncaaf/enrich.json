@@ -543,10 +543,10 @@
   "away_rank": 99,
   "away_short": "Air Force",
   "city": "Albuquerque",
-  "clock": "1:58",
+  "clock": "1:46",
   "conf_comp": true,
-  "detail": "1:58 - 4th",
-  "down": null,
+  "detail": "1:46 - 4th",
+  "down": "2nd & 1 at AF 16",
   "espn_id": "401864546",
   "final": false,
   "home_abbr": "UNM",
@@ -588,9 +588,9 @@
   ],
   "neutral": false,
   "period": 4,
-  "poss": null,
+  "poss": "away",
   "redzone": false,
-  "spot": null,
+  "spot": "AF 16",
   "state": "NM",
   "status": "In Progress",
   "venue": "University Stadium (NM)"
@@ -697,46 +697,31 @@
   "away_rank": 3,
   "away_short": "Texas",
   "city": "College Station",
-  "clock": "0:00",
+  "clock": "15:00",
   "conf_comp": true,
-  "detail": "11/27 - 7:30 PM EST",
-  "down": null,
+  "detail": "15:00 - 1st",
+  "down": "1st & 10 at TA&M 25",
   "espn_id": "401856756",
   "final": false,
   "home_abbr": "TA&M",
   "home_r": "0",
   "home_rank": 99,
   "home_short": "Texas A&M",
-  "in_play": false,
-  "leaders": [
-   {
-    "cat": "PASS",
-    "team": "away",
-    "val": "2485 YDS, 21 TD, 10 INT",
-    "who": "A. Manning"
-   },
-   {
-    "cat": "RUSH",
-    "team": "away",
-    "val": "129 CAR, 585 YDS, 6 TD",
-    "who": "R. Brown"
-   },
-   {
-    "cat": "REC",
-    "team": "away",
-    "val": "54 REC, 659 YDS, 4 TD",
-    "who": "R. Wingo"
-   }
+  "in_play": true,
+  "leaders": [],
+  "line_away": [
+   0.0
   ],
-  "line_away": [],
-  "line_home": [],
+  "line_home": [
+   0.0
+  ],
   "neutral": false,
-  "period": 0,
+  "period": 1,
   "poss": null,
   "redzone": false,
-  "spot": null,
+  "spot": "TA&M 25",
   "state": "TX",
-  "status": "Scheduled",
+  "status": "In Progress",
   "venue": "Kyle Field"
  },
  "559227d3ba70769111dd09490258af44": {
@@ -3091,10 +3076,10 @@
   "away_rank": 99,
   "away_short": "Minnesota",
   "city": "Madison",
-  "clock": "14:04",
+  "clock": "12:55",
   "conf_comp": true,
-  "detail": "14:04 - 1st",
-  "down": "2nd & 25 at WIS 25",
+  "detail": "12:55 - 1st",
+  "down": "1st & 10 at MINN 40",
   "espn_id": "401858544",
   "final": false,
   "home_abbr": "WIS",
@@ -3106,7 +3091,7 @@
    {
     "cat": "PASS",
     "team": "home",
-    "val": "1, 0 YDS",
+    "val": "1/3, 24 YDS, 1 INT",
     "who": "C. Joseph"
    },
    {
@@ -3114,6 +3099,12 @@
     "team": "home",
     "val": "1 CAR, 15 YDS",
     "who": "C. Joseph"
+   },
+   {
+    "cat": "REC",
+    "team": "home",
+    "val": "1 REC, 24 YDS",
+    "who": "Team"
    }
   ],
   "line_away": [
@@ -3124,9 +3115,9 @@
   ],
   "neutral": false,
   "period": 1,
-  "poss": "home",
+  "poss": "away",
   "redzone": false,
-  "spot": "WIS 25",
+  "spot": "MINN 40",
   "state": "WI",
   "status": "In Progress",
   "venue": "Camp Randall Stadium"
